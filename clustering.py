@@ -58,4 +58,4 @@ if __name__ == '__main__':
     graph_data = {}
     get_graph(root, graph_data, depth)
     G = nx.Graph(graph_data)
-    print(get_clusters(G, depth_level))
+    print(get_clustered_graph(G, depth_level))
