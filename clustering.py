@@ -3,6 +3,8 @@
 # Query format: python -m clustering "[User query here]" depth (put 1 for testing)
 #---- End Must Install ----
 
+#TODO: Make the graph weighted
+
 import sys
 import s2
 import networkx as nx
