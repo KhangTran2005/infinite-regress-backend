@@ -1,0 +1,302 @@
+
+
+Nevanlinna-Pick spaces and hyponormality
+Michael Hartz
+Nevanlinna-Pick spaces with hyponormal multiplication operators
+Michael Hartz
+Department of Pure Mathematics, University of Waterloo, Waterloo, ON N2L 3G1, Canadamphartz@uwaterloo.ca
+The author is partially supported by an Ontario Trillium Scholarship.Primary 46E22; Secondary 47B32, 47B20
+Reproducing kernel Hilbert spaces, Nevanlinna-Pick kernels
+
+We show that the Hardy space on the unit disk is the only non-trivial irreducible reproducing kernel Hilbert
+space which satisfies the complete Nevanlinna-Pick property and hyponormality of all multiplication operators.
+
+Introduction
+Let FORMULA  be a reproducing kernel Hilbert space on a set FORMULA  with kernel FORMULA .
+In this short note, we study the relationship between two possible properties of FORMULA :
+the complete Nevanlinna-Pick property and hyponormality of multiplication operators.
+Recall that FORMULA  is said to be a Nevanlinna-Pick space if, given
+FORMULA  and FORMULA , positivity of the matrix
+FORMULA 
+is not only a necessary, but also a sufficient condition for the existence of a multiplier
+FORMULA  on FORMULA  of norm at most 1 with
+FORMULA 
+If the analogous result
+for matrix-valued interpolation holds, then FORMULA  is called a complete Nevanlinna-Pick space (compare Chapter 5 in {{cite:00978e01-7bfa-42e4-9749-6ea6578e68d5}}).
+Spaces with this property have attracted a lot of attention, and it is known that they admit
+appropriate versions of some classical theorems for the Hardy space FORMULA  on the disk,
+such as the commutant lifting theorem {{cite:232074e2-1e54-465f-a738-c6c8b06bad61}} (see also {{cite:62b75e5a-08e0-4512-94aa-8d7ed5e32f64}}), the Toeplitz-corona theorem {{cite:00978e01-7bfa-42e4-9749-6ea6578e68d5}} and Beurling's theorem {{cite:00978e01-7bfa-42e4-9749-6ea6578e68d5}}.
+The second property we consider is hyponormality of multiplication operators, that is, the property that for every
+multiplier FORMULA  on FORMULA , the corresponding multiplication operator FORMULA 
+is hyponormal. While multiplication operators are not normal in typical examples,
+they are subnormal and hence hyponormal for
+a number of reproducing kernel Hilbert spaces, including Hardy and Bergman spaces on domains
+in FORMULA .
+Two results concerning weighted Hardy spaces serve as a motivation for the study of the relationship between the two properties.
+Suppose for a moment that FORMULA  is a reproducing kernel Hilbert space on the open unit disk FORMULA  with kernel FORMULA  of the form
+FORMULA 
+where FORMULA  is a sequence of positive numbers with FORMULA .
+Note that the classical Hardy space FORMULA  corresponds
+to the choice FORMULA  for all FORMULA , in which case we recover the Szegő kernel FORMULA .
+We assume that multiplication by the coordinate
+function FORMULA  induces a bounded multiplication operator FORMULA  on FORMULA .
+Equivalently, the sequence FORMULA  is bounded.
+Then the operator FORMULA  is hyponormal if and only if
+FORMULA 
+(see Section 7 in {{cite:e8ec4b39-a1e6-4e69-893a-4942a0a67344}}, and note that the sequence FORMULA  there is related to FORMULA  via
+FORMULA ).
+On the other hand, a sufficient condition for FORMULA  being a complete Nevanlinna-Pick space is that the reverse inequalities
+FORMULA 
+hold (see Lemma 7.38 and Theorem 7.33 in {{cite:00978e01-7bfa-42e4-9749-6ea6578e68d5}}).
+Since this condition is not necessary, the two results do not immediately tell us anything new about
+weighted Hardy spaces satisfying both the Nevanlinna-Pick property and hyponormality
+of multiplication operators.
+Nevertheless, they seem to indicate that the presence of both properties is special.
+The aim of this note is to show that the Hardy space is essentially the only complete Nevanlinna-Pick space whose
+multiplication operators are hyponormal. Recall that a reproducing kernel Hilbert space FORMULA  with kernel FORMULA  on a set FORMULA  is called
+irreducible if FORMULA  is never zero
+for FORMULA  and if FORMULA  and FORMULA  are linearly independent for different FORMULA .
+We call a set FORMULA  a set of uniqueness for FORMULA  if the only element
+of FORMULA  which vanishes on FORMULA  is the zero function.
+The main result now reads as follows.
+Theorem 1.1 
+Let FORMULA  be an irreducible complete Nevanlinna-Pick space on a set FORMULA  with kernel FORMULA 
+such that all
+multiplication operators on FORMULA  are hyponormal. Then one of the following possibilities holds:
+
+FORMULA  is a singleton and FORMULA .
+
+There is a set of uniqueness FORMULA  for FORMULA ,
+a bijection FORMULA  and a nowhere vanishing function FORMULA 
+such that
+FORMULA 
+where FORMULA  denotes the Szegő kernel.
+Hence,
+FORMULA 
+is a unitary operator. If FORMULA  is endowed with a topology such that FORMULA  is separately continuous on FORMULA ,
+then FORMULA  is continuous. If FORMULA  and FORMULA  is holomorphic in the first variable,
+then FORMULA  is holomorphic.
+
+
+Since the Hardy space FORMULA  is a complete Nevanlinna-Pick space whose multiplication operators
+are hyponormal, it is easy to see
+that the same is true for every space as in part (2).
+Hence, this result characterizes Hilbert function spaces with these two properties.
+Remark 1.2 (a)
+It is well known that sets of uniqueness for FORMULA  are characterized by the Blaschke condition (see, for example,
+{{cite:184365b5-a780-42da-9de9-dd2ed63b0710}}):
+A set FORMULA  is a set of uniqueness for FORMULA  if and only if
+FORMULA 
+(b)
+The condition that FORMULA  is never zero is not very restrictive. Indeed, if we drop this condition,
+then FORMULA  can be partitioned into sets FORMULA  such that the restriction of FORMULA  to each FORMULA  (compare the next section)
+is an irreducible complete Nevanlinna-Pick space (see {{cite:00978e01-7bfa-42e4-9749-6ea6578e68d5}}).
+This yields a decomposition of FORMULA  into an orthogonal direct
+sum of irreducible complete Nevanlinna-Pick spaces FORMULA .
+It is not hard to see that this decomposition is reducing for multiplication operators.
+Hence, all multiplication operators on FORMULA  are hyponormal if and only if
+this is true for each summand.
+We omit the details.
+
+Before we come to the proof of the main result, let us consider an application to Hilbert function spaces
+in higher dimensions. In particular, this applies to holomorphic Hilbert function spaces on the open unit ball
+in FORMULA  for FORMULA .
+Standard examples of such spaces either have the property that all multiplication
+operators are hyponormal (such as Hardy and Bergman space)
+or have the Nevanlinna-Pick property (such as the Drury-Arveson space, see the next section), but not both.
+This is not a coincidence.
+Corollary 1.3 Let FORMULA  be a natural number, and let FORMULA  be an open set. Then there is no irreducible
+complete Nevanlinna-Pick space on FORMULA  which consists of continuous functions and whose
+multiplication operators are all hyponormal.
+
+Assume toward a contradiction that FORMULA  is such a Hilbert functions space, and let FORMULA  be its kernel. Since
+the functions in FORMULA  are continuous, it follows that FORMULA  is separately continuous. Hence, Theorem REF 
+implies that there is a continuous injection FORMULA . But this is impossible if FORMULA 
+due to Brouwer's domain invariance theorem {{cite:c11c4d77-a6c7-41b6-a0b9-056d2e60173e}}.
+
+Embedding into Drury-Arveson space
+As a first step in the proof of the main result, we will embed the complete Nevanlinna-Pick
+space FORMULA  into the Drury-Arveson space.
+Given a cardinal FORMULA , we write FORMULA  for the open unit ball in FORMULA . The Drury-Arveson
+space FORMULA  is the reproducing kernel Hilbert space on FORMULA  with kernel
+FORMULA 
+If FORMULA , this is the Hardy space FORMULA . For FORMULA ,
+Arveson {{cite:baeaf726-1436-4bf4-89f0-56d0ccad9821}} exhibited multipliers on FORMULA  which are not hyponormal by
+showing that their spectral radius is strictly less then their multiplier norm. Indeed, if FORMULA  and FORMULA  denote
+the coordinate functions on FORMULA , then FORMULA  is not
+hyponormal on FORMULA , as
+FORMULA 
+(see {{cite:baeaf726-1436-4bf4-89f0-56d0ccad9821}}). This observation readily generalizes to FORMULA .
+Given a subset FORMULA , we write
+FORMULA  for the reproducing kernel Hilbert space on FORMULA  with kernel
+FORMULA . A well-known result about Hilbert function spaces asserts that
+FORMULA 
+and that the restriction map FORMULA  is a coisometry. Hence, if
+FORMULA 
+denotes the kernel of the restriction map, then
+FORMULA 
+is a unitary. The following theorem due to
+Agler and McCarthy provides the desired embedding of FORMULA  into the Drury-Arveson space.
+Theorem 2.1 
+Let FORMULA  be an irreducible complete Nevanlinna-Pick space on a set FORMULA  with kernel FORMULA .
+Assume that FORMULA  is normalized at FORMULA  in
+the sense that FORMULA  for all FORMULA . Then
+there is a cardinal FORMULA  and an injection FORMULA  with FORMULA  such that
+FORMULA 
+Hence,
+FORMULA 
+is a unitary operator, where FORMULA .
+
+See {{cite:7dd9008a-524f-42ad-80fd-c6b98c1dfc1f}}, or Theorem 8.2 and Theorem 7.31 in {{cite:00978e01-7bfa-42e4-9749-6ea6578e68d5}}. To deduce the second part from
+the first one, note that the identity for the kernels implies that
+FORMULA 
+is unitary. Therefore, the composition of this map with the unitary operator in (REF )
+is unitary as well.
+In the above setting, let FORMULA . This space is co-invariant under multiplication operators.
+Clearly, every FORMULA  restricts to a multiplier on FORMULA , and hence
+gives rise to the multiplier FORMULA  on FORMULA . If FORMULA  denotes the unitary operator
+in Theorem REF , then
+FORMULA 
+Thus, if we assume that all multiplication operators on FORMULA  are hyponormal, then all operators appearing
+on the right-hand side of the last identity are hyponormal as well. We will use this fact to show that FORMULA 
+can be identified with FORMULA .
+
+Proof of the main result
+The discussion at the end of the last section suggests studying compressions of multiplication
+operators to co-invariant subspaces such that the compressed operator is hyponormal.
+We need the following simple observation.
+Lemma 3.1 
+Let FORMULA  be a Hilbert space,
+let FORMULA  and let FORMULA  be a co-invariant subspace for FORMULA . Suppose
+that the compression of FORMULA  to FORMULA  is hyponormal. If FORMULA  with FORMULA ,
+then FORMULA .
+
+Since FORMULA  is co-invariant under FORMULA , and since FORMULA  is hyponormal, we have
+FORMULA 
+Consequently, FORMULA , and hence FORMULA .
+We will apply this observation to multiplication operators on FORMULA . Since the coordinate functions FORMULA 
+are multipliers on FORMULA , it follows from unitary invariance of the Drury-Arveson space that
+all functions of the form FORMULA  for FORMULA  are multipliers on FORMULA .
+Lemma 3.2 
+Suppose that FORMULA  is a closed subspace which is co-invariant under multiplication operators
+and that for every FORMULA , the compression
+FORMULA  is hyponormal. Then the following assertions hold.
+
+If FORMULA  and
+FORMULA  for some FORMULA , then FORMULA .
+
+If FORMULA , then
+FORMULA  for all FORMULA .
+
+
+(a) Let
+FORMULA 
+where the series converges in FORMULA . From
+FORMULA 
+we deduce that
+FORMULA 
+On the other hand, using that FORMULA  is orthogonal to FORMULA  if FORMULA , we see that
+FORMULA 
+Lemma REF  implies that FORMULA  contains the element
+FORMULA , and thus also
+FORMULA 
+(b)
+The proof is by induction on FORMULA . The base case FORMULA  holds by assumption. Suppose that FORMULA  and the assertion
+is true for FORMULA . It is well known that if FORMULA ,
+FORMULA 
+from which we deduce that
+FORMULA 
+On the other hand,
+FORMULA 
+so that
+FORMULA 
+by Lemma REF .
+Given FORMULA , it can happen that there is a larger set FORMULA  such that every function in FORMULA 
+extends uniquely to a function in FORMULA . To account for that, we define
+FORMULA 
+Then FORMULA  is the largest set which contains FORMULA  and satisfies this extension property. Moreover,
+it is easy to see that
+FORMULA 
+Lemma 3.3 
+Let FORMULA  be a set with FORMULA , and set
+FORMULA . If the compression
+FORMULA  is hyponormal for
+every FORMULA , then FORMULA  is a complex ball, that is,
+FORMULA 
+for some closed subspace FORMULA  of FORMULA .
+
+Let FORMULA  be the closed linear span of FORMULA .
+Observe that for all FORMULA , we have FORMULA . Since FORMULA ,
+part (a) of Lemma REF  implies that
+FORMULA 
+for all FORMULA . It follows that
+FORMULA 
+as FORMULA  is a conjugate linear isometry.
+Using part (b) of Lemma REF , we deduce that
+FORMULA 
+for all FORMULA . This argument shows that FORMULA , and the reverse
+inclusion is trivial.
+We can now prove the main result.
+If FORMULA  is a singleton, there is nothing to prove. Otherwise, fix FORMULA . Since FORMULA  is an irreducible
+kernel, it is nowhere zero, so we can consider the normalized kernel defined by
+FORMULA 
+where
+FORMULA 
+Then FORMULA  for all FORMULA . Moreover, if FORMULA  denotes the reproducing kernel
+Hilbert space with kernel FORMULA , then
+FORMULA 
+is a unitary operator.
+It is easy to see that FORMULA  also
+satisfies the hypotheses of Theorem REF , so we will work with FORMULA  instead of FORMULA .
+We will show that FORMULA  can be identified with FORMULA  for a suitable
+cardinal FORMULA . It will then follow that FORMULA  is necessarily 1.
+By Theorem REF , there is an injection FORMULA  for some cardinal FORMULA 
+such that FORMULA  and such that
+FORMULA 
+holds for all FORMULA .
+Define FORMULA  and FORMULA , and
+note that FORMULA .
+The discussion at the end of Section  now shows that FORMULA 
+satisfies the hypotheses of Lemma REF , hence
+FORMULA 
+for some closed subspace FORMULA . Let FORMULA  be the dimension of the Hilbert space FORMULA . As FORMULA  is not a singleton, FORMULA .
+Clearly, FORMULA , so that the restriction map from
+FORMULA  into FORMULA  is unitary.
+If FORMULA  is an isometry from FORMULA  onto FORMULA , we have
+FORMULA 
+Therefore,
+FORMULA 
+is a unitary operator as well. Combining this map with the unitary from Theorem REF ,
+we obtain a unitary
+FORMULA 
+where FORMULA .
+By assumption, all multiplication operators on FORMULA  are hyponormal,
+hence the same is true for FORMULA . This is only possible if
+FORMULA  (see the discussion at the beginning of Section ), so that the last operator is in fact
+a unitary from FORMULA  onto FORMULA . Injectivity of this operator implies that FORMULA  is a set
+of uniqueness for FORMULA . Combining the identities for the various kernels, we see that
+FORMULA 
+as asserted.
+To prove the additional assertion, let FORMULA . Then FORMULA , so rearranging
+equation (REF ), we obtain for FORMULA  the formula
+FORMULA 
+Taking the definition of FORMULA  into account, it follows that FORMULA  is continuous (respectively holomorphic)
+whenever FORMULA  is.
+Remark 3.4 
+For the most part of the proof of Theorem REF , we only used hyponormality of operators
+of the form FORMULA  for FORMULA  (notation as above).
+If FORMULA  is an irreducible complete Nevanlinna-Pick space with kernel FORMULA , normalized at some point FORMULA , then
+these operators correspond to multiplication operators on FORMULA  with
+multipliers of the form
+FORMULA 
+where FORMULA  is the injection from Theorem REF .
+These multipliers play the role of coordinate functions for Nevanlinna-Pick spaces (see the discussion
+preceding Beurling's theorem for Nevanlinna-Pick spaces {{cite:00978e01-7bfa-42e4-9749-6ea6578e68d5}}).
+The only argument which requires hyponormality of more general multiplication operators is the proof that FORMULA .
+Thus, if we only require hyponormality of multiplication operators corresponding to functions as in
+(REF ) in Theorem REF ,
+then FORMULA  will be equivalent to FORMULA  (in the sense
+of part (2) of Theorem REF ) for some cardinal FORMULA .
+
+Acknowledgements The author would like to thank his advisor, Ken Davidson, for his advice and support.
+

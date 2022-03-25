@@ -1,0 +1,428 @@
+
+Bulk phase behaviour of binary hard platelet mixtures from density functional theory
+Jonathan PhillipsFORMULA 
+jon.phillips@bristol.ac.uk
+Matthias SchmidtFORMULA 
+
+We investigate isotropic-isotropic, isotropic-nematic and nematic-nematic phase coexistence in binary mixtures of circular platelets with vanishing thickness, continuous rotational degrees of freedom and radial size ratios FORMULA  up to 5. A fundamental measure density functional theory, previously used for the one-component model, is proposed and results are compared against those from Onsager theory as a benchmark. For FORMULA  the system displays isotropic-nematic phase coexistence with a widening of the biphasic region for increasing values of FORMULA . For size ratios FORMULA , we find demixing into two nematic states becomes stable and an isotropic-nematic-nematic triple point can occur. Fundamental measure theory gives a smaller isotropic-nematic biphasic region than Onsager theory and locates the transition at lower densities. Furthermore, nematic-nematic demixing occurs over a larger range of compositions at a given value of FORMULA  than found in Onsager theory. Both theories predict the same topologies of the phase diagrams. The partial nematic order parameters vary strongly with composition and indicate that the larger particles are more strongly ordered than the smaller particles.
+
+64.60.Cn,05.20.Jj,64.70.Md,82.70.Dd,64.75.+g
+
+FORMULA H.H. Wills Physics Laboratory, Bristol University, Royal Fort, Tyndall Avenue, Bristol BS8 1TL, United Kingdom
+FORMULA Theoretische Physik II, Universität Bayreuth, Universitätsstraße 30, D-95440 Bayreuth, Germany
+
+January 29, 2009
+Introduction
+There is a wide range of colloidal particles with platelet-like shape, including materials such as gibbsite {{cite:fe296b4a-abab-4107-828e-c3a6867e1694}} and certain clays including montmorillonite, laponite and hydrotalcite {{cite:9ddd949d-3dbb-4b06-af63-431fe00ea1e7}}, {{cite:2880d51d-ffce-4441-8dfd-400c0c07f479}}, {{cite:90c99238-b731-4692-92cb-11e64754b338}}, {{cite:148005a1-aa25-490e-98cb-e34b1c0af450}}, {{cite:738d859c-d263-471a-9772-66c422738bf6}}, {{cite:6494f4a4-1ab8-4152-8fe7-cacbe5db5ea3}}. Clays are some of the most abundant minerals on the Earth's surface and are used as pharmaceuticals, cosmetics and catalysts. There is much current interest in the use of platelets in nanocomposite materials, e.g. the nematic phase of sterically stabilised gibbsite platelets may be used as a template for gibbsite-polymer nanocomposites with nematic order {{cite:870d4997-31a1-4d4f-a6fb-3880514631c0}}. Interest in platelet dispersions is also present in geophysics {{cite:336f0ba8-4d91-4183-a3cf-ef63703b438c}}, biomedicine {{cite:c8c505f8-5915-42ee-8fa7-48c800d9d116}} and liquid crystal display (LCD) technology {{cite:19953df1-45c9-4c0e-95c8-be182f19fda6}}.
+Understanding the liquid crystalline phase behaviour of systems of non-spherical particles {{cite:de698227-b4ec-48b6-b563-94d381b117aa}}, {{cite:ba8c3d07-681c-4abb-8ab1-7c436a4bb7ba}}, {{cite:c4ac3b80-791e-4660-9076-a49848ddb050}} is an important topic in modern condensed matter physics. One of the most celebrated cases of a phase transition in such systems is the isotropic-nematic (I-N) transition. For athermal model systems, where the particle interactions are hard core, phase transitions arise purely from entropic contributions to the free energy and the phase behaviour is governed solely by density and is independent of temperature. Such models can be used to describe lyotropic liquid crystals and phase transitions such as the I-N transition.
+Onsager showed how the formation of liquid crystalline phases can be understood on the basis of pair interactions between the constituents of the material {{cite:28703544-7b19-420f-84d8-8248095a23d8}}, {{cite:540e4a5d-7556-4ce0-aed8-43c6645c111a}}, {{cite:21c8062b-cf1a-463a-8406-58b60c1486df}}. He considered the hard platelet fluid but we know that unlike the case of rod-like particles, his second-virial theory does not produce quantitatively correct results for the equation of state and the I-N coexistence densities. Onsager himself noted that higher virial contributions are important for obtaining reliable results, estimating the ratio FORMULA  at FORMULA , with FORMULA  and FORMULA  being the second and third virial coefficients, respectively.
+Nevertheless, the second-virial theory has been employed to investigate the monodisperse platelet system {{cite:5a8f1c46-e603-493d-8bfa-a8750c660f13}}, {{cite:54ef6d77-06c2-4fa0-a369-929258333bff}}. In Ref. {{cite:5a8f1c46-e603-493d-8bfa-a8750c660f13}} a numerical approach was used to calculate the phase diagram of platelets for varying thickness, including the case of zero thickness. This is complemented by a calculation for the equation of state in both the I and N phases for vanishingly thin platelets in Ref. {{cite:54ef6d77-06c2-4fa0-a369-929258333bff}}. The first off-lattice simulation study of the I-N transition for infinitely thin platelets was carried out in Ref. {{cite:fb9180db-dde1-401c-b9b4-1a6b433131b9}}. This showed that the phase diagram differs substantially from the Onsager prediction and that the I-N transition is actually much more weakly first order and occurs at lower densities than predicted theoretically. The authors also carried out a fifth order virial calculation for the equation of state. More accurate predictions of the higher virial contributions for disks were presented in Ref. {{cite:974a105c-b1fb-42bd-9113-5f33e8fcf2b4}}, where simulation results are reported for hard cut spheres and more recently in Ref. {{cite:c29ee8c2-029c-46a4-8f8d-8b1787052d90}}. Later simulation work was carried out on polydisperse platelet systems {{cite:23726bf3-4cff-48c0-bedb-b5932f364000}} and systems of platelets with different polygonal shapes (e.g. hexagons, triangles) {{cite:ea7b41c1-dca2-48d5-a3f0-ccbc8eaa8a87}}. Further simulation results of model circular platelets were reported in Ref. {{cite:c6a0467a-9958-4d8f-8491-db32b1b7de82}} and simulations alongside an integral equation approach for mixtures of rods and disks were carried out in Ref. {{cite:28b13f43-4424-4a7b-bd4d-d5a94dd8c273}}. Simulations of binary platelet systems have not yet been carried out.
+Binary mixtures of particles of different shape and/or size are interesting due to the richness of the phase diagrams they may exhibit. Binary rod mixtures form a prominent example. Studies include mixtures of thick and thin rods {{cite:b193d326-0be2-4afc-abf9-a56c134b9fe0}} and long and short rods {{cite:0145e286-18ee-4131-84e8-d601b557c3dc}} using Onsager theory as well as using Parsons-Lee scaling {{cite:52f6dac8-c2b3-4db5-9f66-fc46216e40d6}}. The phase behaviour in binary mixtures can include: the fractionation effect, whereby the larger particles go preferentially into the nematic phase; widening of the biphasic region; a re-entrant FORMULA  phenomenon on increasing density; the possibility of demixing into two different isotropic states and/or two different nematic states and triphasic equilibria (see e.g. Ref. {{cite:b193d326-0be2-4afc-abf9-a56c134b9fe0}} for examples of these phenomena). Nematic-nematic (N-N) demixing, at high enough pressures, can be viewed as a result of competition between orientational entropy of the smaller platelets favouring mixing, and the entropy of mixing {{cite:b193d326-0be2-4afc-abf9-a56c134b9fe0}}. The N-N phase separation for binary mixtures of rods, including the high density regime, is studied in detail in Ref. {{cite:95ee03b6-6d85-4055-9595-1943e1af4e3c}}.
+Binary mixtures of thin and thick platelets have been investigated {{cite:e56641a4-ef9d-4f87-b11d-0f8829f532e6}}, {{cite:137b4727-04f2-4197-a3c6-f60f9b46d50a}} with the Parsons-Lee scaling of the Onsager functional {{cite:eb3cc13f-8962-45f8-bf24-7d623931e177}}, {{cite:fe8b2a2c-da44-4f6a-a998-4c999fb68afa}}, {{cite:6e62af57-1b4a-4193-ae36-9f819ed19c85}}. Studies based on the Zwanzig model for binary hard platelets, where the particles are restricted to occupy only three mutually perpendicular directions, have been carried out for the bulk and interfacial properties of the demixed phases. Rich phase diagrams, involving isotropic and nematic phases have been reported in Refs. {{cite:7d6c623d-2d40-4cae-9cbe-96efd781e369}}, {{cite:c17e29c3-9fb0-4b63-bfca-e60ff3a224f4}}, {{cite:2ecd4122-f889-4257-8730-05b9a67295a1}}. A recent review {{cite:1e1e9d46-28fd-4afb-b7f8-79b777edd131}} of platelet fluids contains a summary of these results. Recently Verhoeff et al. {{cite:50fda19c-1582-445d-8515-3cb83cc647cf}} have investigated experimentally and theoretically the phase behaviour of colloidal platelets with bimodal shape distribution. Their theory is based on the Onsager-Parsons free energy and a cell approach for the columnar (Col) state {{cite:0a4fca50-87b4-4532-925e-ea9e48f83294}}. The authors find agreement between their experimental findings and theoretical predictions for sufficiently large thickness ratios. The phase diagram features an I-N density inversion and triphasic I-N-Col equilibrium.
+Fundamental measure theory (FMT) is an approximate non-perturbative density functional theory (DFT) {{cite:1136e09f-37cd-46b4-9b98-e3a876efd73b}}, originally proposed by Rosenfeld for additive hard sphere mixtures {{cite:d0d6e5f9-643f-4b66-94ec-d23e5fe5761e}}, {{cite:866f1b36-c15c-449a-a6ba-d702887c182b}}. The approach was later generalised to other convex shapes {{cite:9ecf4eb9-12ac-48eb-a2de-0c3c4fb9b575}}, {{cite:ffb64742-1611-4d18-b304-1e25b1b95222}}, which led to subsequent work {{cite:427e8763-d7d9-46f0-a8b3-170e101a0dcf}}, {{cite:37c45357-5bf6-41bf-b9f4-56209acf9ace}}. The bulk I-N coexistence densities (scaled by the cube of the platelet radius) and nematic order parameter at the transition (FORMULA  and FORMULA , respectively) were calculated by Frenkel and Eppenga in Ref. {{cite:fb9180db-dde1-401c-b9b4-1a6b433131b9}} by simulation; for more recent simulation results see Ref. {{cite:010cad82-b627-4669-9fa0-c22a7812419e}}. The values previously obtained from FMT are FORMULA , FORMULA  and FORMULA  {{cite:010cad82-b627-4669-9fa0-c22a7812419e}}, which are in agreement with the present study. Recently {{cite:f8df56c5-78bd-46a8-b5d0-ae513d7a7698}} these values were improved using the same method but with increased resolution to FORMULA , FORMULA  and FORMULA  {{cite:3d5327d1-6fdb-441b-b811-c63325cbdbcf}}. The FMT functional for pure platelets was later utilised to study inhomogeneous situations including the I-N interface and wetting at a hard wall {{cite:ecb9fc79-b6c6-4560-be14-05b378c392dd}}, {{cite:c6a0467a-9958-4d8f-8491-db32b1b7de82}} and capillary nematisation of platelets between two parallel walls {{cite:010cad82-b627-4669-9fa0-c22a7812419e}}.
+Generalising the theory for the corresponding one-component system {{cite:2ffe0707-908a-46a5-adf5-c7459875ddf7}}, we here propose a functional to describe binary mixtures of vanishingly thin circular platelets. Our theory features the exact virial second order term in density and an approximate term of third order in density. We investigate three types of demixing phase behaviour in the case of binary platelets with varying size ratio, finding I-N and N-N phase coexistence. We do not find stable I-I demixing (as could be driven by the depletion effect {{cite:951f700d-890d-437f-a11f-0e42ff11d0a5}}) for the regimes considered in the present work. We restrict our attention to uniaxial arrangements of the (uniaxial) platelets, as we do not expect biaxial arrangement of the particles to occur. We study a range of size ratios in this investigation, ranging between FORMULA  and 5. We present the phase diagrams in different representations to facilitate comparison with simulations which may be performed in different ensembles or experiments. We expect the phase diagrams from FMT to be quantitatively more accurate than those from Onsager theory, which we calculate as a reference. The topologies of the phase diagrams are the same in both theories for our chosen values of the size ratio between two species. Although the integral kernel, which represents the pair excluded volume term, is the same for long thin rods as it is for platelets of vanishing thickness, the results from Onsager theory cannot be obtained by simple scaling of literature results for binary mixtures of rods.
+This paper is organised as follows. In Sec.  we define the model, outline the density functional theory and the conditions for thermodynamic stability and phase coexistence. In Sec.  we present results for the phase behaviour of binary platelet mixtures. In Sec.  we provide conclusions and an outlook on possible future work.
+
+Density Functional Theory for Binary Hard Platelet Mixtures
+Pair Interactions and Model Parameters
+We consider a binary mixture of hard circular platelets with vanishing thickness and continuous positional and orientational degrees of freedom. Species 1 and species 2 have radii FORMULA  and FORMULA  respectively, with FORMULA . The pair potential FORMULA  between two particles FORMULA  and FORMULA , where FORMULA , is infinite if the geometrical shapes of the two platelets overlap and zero otherwise and is hence given by
+FORMULA 
+where FORMULA  and FORMULA  are the positions of the particle centres and FORMULA  and FORMULA  are unit vectors indicating the particle orientations (normal to the particle surface). The size ratio
+FORMULA 
+characterises the radial bidispersity and is the only control parameter in the model. We characterise the thermodynamic state by two dimensionless densities FORMULA  and FORMULA , where FORMULA  and FORMULA  are the number densities of the two species, FORMULA , where FORMULA  is the number of particles of species FORMULA  and FORMULA  is the system volume.
+The composition (mole fraction) of the (larger) species 2 is FORMULA  and the total dimensionless concentration is FORMULA .
+
+Grand Potential Functional and Minimisation Principle
+Density functional theory (DFT) is formulated on the one-body level of the density distributions FORMULA . The variational principle {{cite:1136e09f-37cd-46b4-9b98-e3a876efd73b}} states that the true equilibrium density profile is the one which minimises the grand potential functional FORMULA  and so obeys
+FORMULA 
+where FORMULA  is the chemical potential of species FORMULA  and FORMULA  is absolute temperature. The grand potential functional can be decomposed as
+
+
+([1,2],1,2,V,T)= Fid([1,2],V,T)
++ Fexc([1,2],V,T) + i=12d r d  i (Vexti(r,)-i),
+
+where the spatial integral (over FORMULA ) is over the system volume FORMULA  and the angular integral (over FORMULA ) is over the unit sphere; FORMULA  is an external potential acting on species FORMULA ; FORMULA  is the excess (over ideal gas) contribution to the Helmholtz free energy and describes the inter-particle interactions. The free energy functional for a binary ideal gas of uniaxial rotators is given by
+
+
+Fid([1,2],V,T) = i=12drdi(r,)
+[(i(r,)i3)-1],
+
+where FORMULA  is the (irrelevant) thermal wavelength of species FORMULA  and FORMULA , where FORMULA  is the Boltzmann constant. We let FORMULA , which is equivalent to fixing an additive constant to the chemical potential and hence does not affect any observable properties of the system. One systematic way to express the excess free energy functional is to expand it in a virial series in density {{cite:540e4a5d-7556-4ce0-aed8-43c6645c111a}}. Onsager theory is based entirely on the second-virial level. FMT (as described in Sec. REF  below) approximates higher order terms using single particle geometries. Nevertheless we find it useful to give the terms in the virial expansion up to third order in density explicitly: the second and third order contributions to the (exact) virial series for the excess free energy FORMULA  are given respectively by
+FORMULA 
+FORMULA 
+where each line in the diagrams represents a Mayer function FORMULA , which equals FORMULA  if the two particles overlap and zero otherwise. The shaded circles, field points, indicate multiplication by the one-body density FORMULA  and integration over the coordinates FORMULA  and FORMULA  {{cite:540e4a5d-7556-4ce0-aed8-43c6645c111a}}. The number alongside each field point represents the species FORMULA . Here we consider only spatially homogeneous states, such that the one-body density does not depend on position FORMULA  and, for the case of uniaxial nematic states considered in this paper, depends only on the polar angle FORMULA  of FORMULA  with respect to the nematic director. Hence the one-body densities factorise as FORMULA  where FORMULA  is the orientational distribution function (ODF) and FORMULA  the number density of species FORMULA . Before laying out the FMT we focus on the second-virial level.
+
+Onsager Second-Virial Theory for Binary Platelets
+The diagrams in Eq. (REF ), using the fact that FORMULA  for spatially homogeneous states, become
+FORMULA 
+where we have renamed FORMULA . The spatial integral over the Mayer bond yields (minus) the excluded volume FORMULA  between two particles of species FORMULA  and FORMULA , as a function of the angle FORMULA  between FORMULA  and FORMULA . Hence
+FORMULA 
+Therefore
+FORMULA 
+
+FORMULA 
+The integrals in Eq. (REF ) (omitting the prefactor) can be written as
+
+
+02 d 0 d 02 d '0 d '
+ 1()1('),
+
+where FORMULA  and FORMULA  are the polar angles of two platelets with respect to the nematic director and FORMULA  and FORMULA  are the azimuthal angles. Due to the inversion symmetry of the nematic state FORMULA . In order to deal with the azimuthal integral we introduce the kernel FORMULA  via
+
+
+K(,')=02d=02d1- ( ')2
+ =02d1-(' + ' )2,
+
+where we have renamed FORMULA  as the difference between the azimuthal angles of the two platelets.
+Adding all three terms and multiplying by FORMULA  yields the Onsager contribution to the excess free energy in the dimensionless form
+
+
+Fexc(2)VR13 =16 2c2 02 d02 d ' ' K(, ')
+[(1-x)21()1(') +x232()2(')
+    +x(1-x)(2+)1()2(') ],
+
+where the superscript of FORMULA  represents the order in density of the excess free energy.
+
+Fundamental Measure Theory for Binary Platelet Mixtures
+We generalise the monodisperse functional to the case of binary mixtures using an approximate term at third order in density which is based on the FMT developed in Ref. {{cite:2ffe0707-908a-46a5-adf5-c7459875ddf7}}. Our theory contains the exact second order Onsager term and instead of using any higher order terms from the series, such as the exact third virial level (REF ), an approximate term which is of third order in density is used {{cite:bcb14bf5-550f-440c-875a-709ba2fef3c9}}. This term is nonvanishing (and constant) for cases with common triple intersection of the three platelets involved. There are no higher order terms due to the scaled-particle roots {{cite:9ce2505e-e1d9-477f-b61c-cb6378b6e2a7}} of the approach; the vanishing volume of the platelets truncates the series. Global prefactors are used to compensate for lost cases {{cite:99f8fcd1-dfb2-4e95-adec-2bf6ecb1f873}}, {{cite:b4b06b48-1efb-41a8-8b0d-66e7102c9fdc}}. We postulate the excess free energy
+
+
+Fexc([1,2],V)=d r d  d ' [nDD1(r,) n2D(r,')
++ 124  n2D(r,) n2DDD(r,,') n2D(r,') ],
+
+(where the right hand side is independent of FORMULA ). The first term of the sum in Eq. (REF ) is equivalent to the Onsager contribution to the excess free energy and the second is the FMT contribution. The weighted densities are related to the bare one-body densities, FORMULA , via
+
+
+n1DD(r, ) = i=12 d 'w1DDi(r, ',)*i(r, '),
+
+n2D(r, )= i=12w2Di(r,)*i(r, ),
+
+n2DDD(r, ,')= i=12 d ”w2DDDi(r, ,',”)*i(r, ”),
+
+where FORMULA  represents the three-dimensional convolution FORMULA . We have kept the notation of Ref. {{cite:2ffe0707-908a-46a5-adf5-c7459875ddf7}} where the upper index FORMULA  (disk) is indicative of the number of particle orientations that appear in the weight function (below) or weighted density. The weight functions for species FORMULA  are given by
+
+
+w1Di(r, )= (Ri-|r|)(r )/8,
+
+w2Di(r, ) = 2 (Ri- |r|) (r ),
+
+w1DDi(r, , ') = 2Ri |  ( ' r)| w1Di(r, ),
+
+w2DDDi(r, , ',”) = 8 |  ( ' ”)| w2Di(r, ),
+where FORMULA  is the Dirac delta distribution, FORMULA  is the Heaviside step function and FORMULA  denotes the vector product, such that FORMULA  is the triple scalar product. Note the modulus in Eqs. (REF ) and (REF ). For spatially homogeneous states, Eq. (REF ) becomes
+
+
+Fexc ([1,2])V = d   d ' [n1DD() n2D(')
++ 124  n2D() n2DDD(,') n2D(') ].
+
+Inserting the definitions of the weighted densities (REF )-(REF ) into the excess free energy (REF ) we obtain
+FORMULA 
+FORMULA 
+The fundamental measures of a platelet of species FORMULA  are the integral mean curvature FORMULA  and the surface FORMULA . The first term of Eq. (REF ) may be expressed as
+
+
+A'(,')=4[1IMC1S121()1(') +2IMC2S222()2(')
++(2IMC1S+1IMC2S)1()2(')/2],
+
+remembering that FORMULA  for uniaxial nematics. Eq. (REF ) is simply the fundamental measures interpretation {{cite:2ffe0707-908a-46a5-adf5-c7459875ddf7}} of the Onsager contribution to the free energy. Note that the term which represents the excluded volume between two particles of different species is given by FORMULA . This leads to a scaling of the excluded volume by FORMULA , which is quite different from the scaling that occurs for binary mixtures of rods. The second term in Eq. (REF ) is the FMT contribution to the excess free energy. This is given by
+
+F(3)excV= d  d ' d ” B'(,',”)
+where
+
+B'(,',”)=|  ( ' ”)|32[(1S)3131()1(')1(”)
++(2S)3232()2(')2(”)
++3(1S)22S1221()1(')2(”)
++31S(2S)21221()2(')2(”)].
+
+We choose coordinates such that FORMULA , FORMULA  and FORMULA  where FORMULA  and FORMULA  are the polar angles of three platelets. The third order contribution in density to the FMT excess free energy in these coordinates is given by
+
+
+
+Fexc(3)V R13= 12823c3 02 d02 d ' ' 02 d” ” L(, ',”)
+[(1-x)31()1(')1(”) +x362()2(')2(”)
+ +3x(1-x)221()1(')2(”) +3x2(1-x)41()2(')2(”) ],
+
+
+where the kernel FORMULA  is
+
+
+L(,', ”)=02 02 d' d” |  ( ' ”)|
+=02 02 d' d” |(' ' ”
+    +' ” ” )+(' ' ” ”
+    - ' ' ” ”)|.
+
+The full form of the excess free energy, as used in the calculations described below, is given by the sum of Eqs. (REF ) and (REF ). In practice, along with Eqs. (REF ) and (REF ), these require numerical computation on a grid as described in the following.
+
+Self-consistency equations for the orientational distribution functions
+The minimisation principle (REF ) together with the FMT approximation (REF ) for FORMULA  leads to two coupled Euler-Lagrange equations for the ODFs:
+
+
+
+1() = 1Z1 [ -8c 02 d ' ' K(, ')[(1-x) 1(') + 12x(2 + )2(') ]
+ -32c2 02 d ' ' 02 d ” ” L(, ', ”)
+ [(1-x)21(')1(”)+2x(1-x)21(')2(”)+x242(')2(”) ] ],
+
+
+
+2() = 1Z2 [ -8 c 02 d ' ' K(, ')[x 32(') + 12(1-x) (2 + )1(')]
+ -32c2 02 d ' ' 02 d ” ” L(, ', ”)
+ [x2 62(')2(”)+2x(1-x)41(')2(”)+(1-x)221(')1(”) ] ],
+
+
+where the constants FORMULA  and FORMULA  are such that the normalisation FORMULA , for FORMULA . Neglecting terms of order FORMULA  in the exponentials, the equations for FMT reduce to the Euler-Lagrange equations of Onsager theory. We solve Eqs. (REF ) and (REF ) numerically with a straightforward extension to the iterative procedure given in Ref. {{cite:69b53f7c-b32a-4dd3-9cda-8664d81e7389}} and numerical techniques similar to those described in Ref. {{cite:9dfdc644-1272-4c61-9631-005eb8a42469}}. The FORMULA - and FORMULA -grids are defined on FORMULA  and FORMULA  respectively. The FORMULA -grid is divided into 200 equal steps on [0,FORMULA ], where the ODF changes most rapidly in the nematic phase and into 50 equal steps on [FORMULA ,FORMULA ] where the ODF is almost zero. The FORMULA -grid is divided into 200 equally spaced intervals on [0,FORMULA ]. We start the iteration with two initial trial distributions, for example a normalized Gaussian FORMULA  or a constant distribution FORMULA . The choice of the constant distribution is more efficient at low densities where the system is expected to be isotropic. These guesses are substituted into the right hand sides of Eqs. (REF ) and (REF ) to obtain a new pair of ODFs, FORMULA . This procedure is repeated until FORMULA , FORMULA , where FORMULA  is the tolerance given by the magnitude of the largest acceptable deviation to the ODF of the previous step: FORMULA . We set FORMULA . For FMT the solutions take a longer time to converge than for Onsager theory, as each step has a slower execution time due to the increased complexity of the coupled equations (REF ) and (REF ).
+
+Conditions for Phase Coexistence
+Once we have found the ODFs we solve the phase coexistence equations. The requirements for phase coexistence between two phases A and B are the mechanical and chemical equilibria between the phases as well as the equality of temperature in the two coexisting phases (which is trivial in hard-body systems). Hence we have the non-trivial conditions
+FORMULA 
+and
+FORMULA 
+where FORMULA  again labels the species.
+We calculate the the total Helmholtz free energy FORMULA  numerically by inserting FORMULA  into Eqs. (REF ), (REF ) and (REF ). Likewise, the pressure can be obtained numerically as
+FORMULA 
+and the chemical potentials as
+FORMULA 
+We define a reduced pressure FORMULA  and reduced chemical potentials FORMULA . Eqs. (REF ) and (REF ) are three equations for four unknowns (two state points each characterised by two densities). Therefore, regions of two-phase coexistence depend parametrically on one free parameter. Eqs. (REF ) and (REF ) are solved numerically with a Newton-Raphson procedure {{cite:717f61bb-ebbb-4efc-a017-759ddb530f8a}}. The resulting set of solutions yields the binodal. I-N-N triple points are located where the I-N and N-N coexistence curves cross. Therefore, regions of two-phase coexistence depend parametrically on one free parameter (which can be chosen arbitrarily, e.g. as the value of concentration FORMULA  in one of the phases).
+
+Equation of State for the Isotropic Phase
+Analytic expressions for the free energy, pressure and chemical potentials for the isotropic phase may be found on insertion of FORMULA  into the ideal (REF ) and excess (REF ) parts of free energy functional. For this purpose, we use
+FORMULA 
+and
+FORMULA 
+where the integrals FORMULA  and FORMULA  are calculated in Appendix A. The expressions for the FMT isotropic free energy, FORMULA , pressure, FORMULA  and chemical potentials FORMULA  are
+
+
+FisoVR13 = c(1-x)( c(1-x)4) + cx( cx4)-c
+ +22c2[(1-x)2+x23+x(1-x)(2+) ]
+ + 23c3[(1-x)3+x36+3x(1-x)22+3x2(1-x)4 ],
+
+
+
+p*iso= c + c222[(1-x)2+x23+(2+)(x-x2) ]
+ +22c33[x36+3(x2-x3)4
+ +3(x-2x2+x3)2
++(1-x)3 ],
+
+
+
+*1,iso =  (c(1-x)4) +c22[2(1-x)+x(2+)]
+ + c22[(1-x)2+2x(1-x)2+x24],
+
+
+
+*2,iso=  (cx4) +c22[2x3+(1-x)(2+)]
+ +c22[x26+2x(1-x)4+(1-x)22].
+
+The Onsager versions of these equations are given by the same expressions but without the final bracketed term in FORMULA  for FORMULA  and FORMULA  and FORMULA  for FORMULA . The authors of Ref. {{cite:5ee37375-2518-4311-8b41-2669a0fa75cf}} claim that inclusion of the exact third virial term along with the Onsager term, at least for monodisperse platelets, would give a worse equation of state in the isotropic phase than the Onsager term alone.
+
+Isotropic-Nematic Bifurcation Analysis
+On increasing the density in the isotropic state, a point is reached known as the bifurcation density, where an infinitesimal nematic perturbation destabilises the system. The first I-N bifurcation analysis for a liquid crystalline system was performed in Ref. {{cite:d17c052d-598a-449e-9913-17825a016855}}. This was extended to a class of liquid crystal models in Ref. {{cite:ac514fe4-8f55-45f4-b999-289468149adb}}. The bifurcation concentration lies inside the coexistence region for the monodisperse case of platelets {{cite:28b13f43-4424-4a7b-bd4d-d5a94dd8c273}} but as we will see, this is not always true in the binary case. We insert FORMULA  and FORMULA  into the free energy (REF ) and (REF ), where FORMULA  and FORMULA  are small parameters measuring the strengths of the nematic perturbation and FORMULA  is the second degree Legendre polynomial in FORMULA . We then extract all second order terms, i.e. those proportional to FORMULA , FORMULA  and FORMULA , respectively. The coefficients of these terms are denoted by FORMULA , FORMULA  and FORMULA , respectively. These involve integrals of Legendre polynomials and are obtained using the integrals FORMULA  defined in Appendix A. One then solves FORMULA  {{cite:951f700d-890d-437f-a11f-0e42ff11d0a5}} where
+FORMULA 
+Here
+
+
+a1(c) =  c10(1-x)-280c2(1-x)2
+-240c3(1-x)3-240c3x(1-x)22,
+
+
+
+a2(c) =  cx10-280c23x2
+-2406c3x3-240c3x2(1-x)4,
+
+
+
+a12(c)2=-2160c2x(1-x)(2+)
+-240c3x(1-x)22-240c3x2(1-x)4.
+
+The results for the spinodals were checked by running the self-consistency program for the solutions of the coupled ODFs (REF ) and (REF ) with the trial functions FORMULA ; the locus of FORMULA  values (for a given value of FORMULA ) for which the maximum number of iterations occured was found to agree numerically very well to the I-N spinodal. To calculate the spinodals in the FORMULA  representation we insert the FORMULA  values which form the spinodal into the expression for the isotropic pressure (REF ). In the monodisperse limit, one needs to solve the following cubic polynomial to calculate the bifurcation point  FORMULA
+FORMULA 
+where the bifurcation concentration is FORMULA  for Onsager theory and FORMULA  for FMT, the latter much closer to the limit of stability of the isotropic phase as observed in simulations {{cite:28b13f43-4424-4a7b-bd4d-d5a94dd8c273}}.
+
+Symmetry-Conserved Demixing Spinodals
+A thermodynamic phase is locally stable if the determinant of the Hessian matrix of the Helmholtz free energy density with respect to the species densities is positive. The spinodal is the limit of stability, defined by FORMULA , where
+FORMULA 
+For the I-I spinodals, we insert FORMULA  into the free energy (REF ). This yields an analytic solution of Eq. (REF ) for Onsager theory, given by
+FORMULA 
+and for FMT by
+
+
+(2+221+2222+11 )
+ (23+2226+2124+12)
+ - ( 21
+22+2224
+) 2=0.
+
+I-I demixing never occurs for the values of FORMULA  considered here; indeed solutions of Eq. (REF ) only begin to exist at about FORMULA . For the N-N spinodals, there are no such analytic equations (for the Zwanzig model, see Ref. {{cite:2ecd4122-f889-4257-8730-05b9a67295a1}}). For practical reasons we rather solve
+FORMULA 
+which is equivalent {{cite:951f700d-890d-437f-a11f-0e42ff11d0a5}} to solving FORMULA . In order to calculate the N-N spinodals we have to numerically evaluate the left hand side of Eq. (REF ). Exchanging the species labels in Eq. (REF ) one obtains the same results. The N-N spinodals are calculated to give an idea of the location of the N-N phase boundaries. For cases where there is N-N coexistence closed by critical point, the spinodal and the binodal coincide at the critical point.
+
+Results
+We have calculated the phase diagrams of binary platelet mixtures for seven different size ratios, FORMULA  and 5. Fig. 1a shows the results for the slightly asymmetric case FORMULA  in the FORMULA  representation. The I-N transition is the only type of transition which we find for this size ratio. The FMT results show that the I-N transition concentrations at FORMULA  are FORMULA  and FORMULA  respectively, in agreement with the monodisperse results {{cite:c6a0467a-9958-4d8f-8491-db32b1b7de82}}. At FORMULA , the coexistence values are FORMULA  and FORMULA . The coexistence curves interpolate smoothly from FORMULA  to FORMULA . The tie lines joining coexisting isotropic and nematic phases are naturally vertical at FORMULA  (corresponding to the cases of the pure systems of small and big platelets, respectively) whereas between FORMULA  and FORMULA  they vary in gradient, leaning with large positive gradient as FORMULA  increases from zero composition, less so at about 50% composition and then more so again on approaching FORMULA . Therefore, there is stronger fractionation at 50% composition than towards FORMULA  and FORMULA , such that the isotropic phase is dominated by particles of species 1 (smaller species) and the nematic phase by particles of species 2 (larger species). The biphasic region, where there is coexistence between the isotropic and nematic phase, is very narrow in FMT. At zero composition, Onsager theory predicts a density jump of FORMULA  whereas this is only FORMULA  for FMT, which agrees more closely to simulation results of 8% {{cite:5ee37375-2518-4311-8b41-2669a0fa75cf}}. The bifurcation concentration for FMT is FORMULA  at FORMULA  and FORMULA  at FORMULA . The spinodal for FMT lies closer to the isotropic phase boundary than the nematic phase boundary (whereas the converse is true for Onsager theory). Fig. 1b shows the same results but in the FORMULA  representation. The results for both theories again interpolate smoothly between the two pure limits. The two branches of the binodal in this representation move from the FORMULA -axis to the FORMULA -axis with increasing composition. Hence the tie lines move from being horizontal on the FORMULA -axis to vertical on the FORMULA -axis. In the FORMULA  representation (Fig. 1c) the tie lines are horizontal due to the requirement of equal pressure in the coexisting phases. The spinodal lies above the nematic branch of the binodal in this representation because it is obtained by inserting the bifurcation densities into the isotropic equation of state, which yields a higher pressure than the coexistence value. The binodal obtained from FMT is located at significantly smaller densities as compared to that from Onsager theory. The isotropic end of the tie line is at a lower composition than the nematic end of the tie line. For Onsager theory at zero composition, the isotropic branch of the binodal intersects the FORMULA -axis at FORMULA  and the nematic branch intersects at FORMULA , in agreement with the monodisperse limit found in earlier work {{cite:2ffe0707-908a-46a5-adf5-c7459875ddf7}}. The binodals interpolate smoothly from FORMULA  to FORMULA  where the values of FORMULA  corresponding to the I-N coexistence concentrations are FORMULA  and FORMULA . The nature of the tie lines is similar to FMT. The I-N spinodal lies between the two branches of the binodal and interpolates smoothly from zero composition, where FORMULA  to FORMULA  where FORMULA .
+The nematic phase of a mixture of two components can be characterised by two partial nematic order parameters, FORMULA  and FORMULA  defined by
+FORMULA 
+The total nematic order parameter is the weighted average
+FORMULA 
+
+Here we investigate the behaviour of these quantities at I-N and N-N coexistence. We have chosen FORMULA  to be a simple weighted average of
+the FORMULA . As such, each particle contributes to FORMULA 
+independently of its size. Of course there are other
+suitable choices which may be appropriate to certain applications; the
+FORMULA  in the sum for the total order may be weighted by the surface
+area of the platelet, for example. Due to the absence of particles of species 2 at FORMULA , FORMULA  and FORMULA  take the same value. Similarly at FORMULA , FORMULA  and FORMULA  take the same value. As FORMULA  increases from 0 to 1, FORMULA  changes smoothly. In Fig. 1d the FMT values for FORMULA , FORMULA  and FORMULA  are smaller than those obtained from Onsager theory, which places the values much higher. However FMT predicts that the difference between FORMULA  and FORMULA  to be bigger than Onsager theory does. FORMULA  at FORMULA  takes the same value FORMULA  as previous work (and agrees well with simulation {{cite:c6a0467a-9958-4d8f-8491-db32b1b7de82}}) in the monodisperse case and the the order parameters vary smoothly in the same manner as for Onsager theory.
+In Fig. 2 we show the results for FORMULA . There is a widening of the biphasic region between the two pure components, clearly seen in Fig. 2a where we show the phase diagram in the FORMULA  representation. FMT again predicts that the mixture undergoes I-N phase separation at lower densities than Onsager theory. The tie lines become less steep with a smaller positive gradient than for FORMULA  for intermediate values of composition indicating that there is larger difference in mole fraction between coexisting isotropic and nematic states. The widening of the biphasic gap is even more noticeable in the (FORMULA ) representation (Fig. 2b), especially for the case of Onsager theory. In the FORMULA  representation (Fig. 2c), the spinodal again lies above the nematic binodal for Onsager theory. However, for FMT we see that while the spinodal is above the nematic branch of the binodal close to FORMULA  and FORMULA  the curve enters the biphasic region in between about FORMULA  and FORMULA . FORMULA  is smaller than FORMULA  and their difference has increased for both theories, with FMT still possessing the larger difference suggesting that the particles of species 2 are significantly more ordered than species 1 for a given mole fraction at coexistence.
+In Fig. 3 we plot the graphs for FORMULA . The I-N biphasic gap becomes even more pronounced. The results for FMT (Fig. 3a) show that tracing along the nematic branch of the binodal as FORMULA  increases leads to an increase in FORMULA . At approximately FORMULA , FORMULA  then decreases and near FORMULA  bends back on itself before approaching FORMULA . This bending of the binodal constitutes a re-entrant phenomenon. There is also a large range of compositions between about FORMULA  and FORMULA  for which the biphasic I-N phase overlaps for both theories, which is also seen clearly in the (FORMULA ) representation (Fig. 3b). In the FORMULA  representation (Fig. 3c) both theories predict a region of composition values for which the spinodal lies inside the biphasic region. For illustration of the re-entrant part of the phase diagram one should keep a constant fluid composition near FORMULA  but increases the pressure from FORMULA  to FORMULA : the state changes from I FORMULA  I+N FORMULA FORMULA  N FORMULA  I+N FORMULA FORMULA  N where N FORMULA is a nematic phase composed mostly of particles of species 2. The order parameters along the nematic branch of the binodal are shown in Fig. 3d. FORMULA  remains lower than FORMULA  for a given composition, again suggesting that the particles of species 2 are more ordered than those of species 1 at coexistence. When the re-entrant feature occurs at about FORMULA , FORMULA , FORMULA  and FORMULA  drop sharply. The difference between FORMULA  and FORMULA  along the nematic branch of the binodal has become much larger than for FORMULA .
+In Fig. 4 we present the phase diagrams for FORMULA . The most striking feature after increasing the size ratio to FORMULA  is the stable N-N coexistence region. For FMT the FORMULA  representation (Fig. 4a) reveals that this region is in the form of an almost symmetric hump suggesting that the fractionation between the two distinct nematic phases becomes less with increasing density. There is also a triple point which is in the form of a triangle connecting a low composition isotropic phase, a nematic phase composed mostly of particles of species 1 (N FORMULA) and a nematic phase composed mostly of particles of species 2 (N FORMULA). The symmetric N-N coexistence region is more clearly seen in the FORMULA  representation (Fig. 4c) between FORMULA  just greater than 0 and FORMULA  ending in a critical point at FORMULA . In the FORMULA  representation the triple point collapses onto a line and the pressure at the triple point is approximately FORMULA . The I-N biphasic region has become increasingly pronounced. The topology of the phase diagrams is the same as that obtained in Onsager theory results (Fig. 4b and Fig. 4d). The re-entrant feature obtained from Onsager theory is less pronounced than in FMT. The N-N phase separation occurs over a larger range of composition values (up to near FORMULA ) and the triple point occurs at approximately a unit of reduced pressure higher than the triple point predicted by FMT, nevertheless, as we emphasise, the topologies predicted by both theories are the same. The I-N spinodal enters the biphasic region for both theories. We postpone the discussion of the order parameters for FORMULA  and higher size ratios until the end of this section.
+In Fig. 5 we show the results for FORMULA . There is N-N demixing in the system, as is observed for FORMULA , however there is a big difference in the toplogy of the phase diagrams in that the demixing now does not end in a critical point. For FMT in the (FORMULA ) representation (Fig. 5a) the N-N region opens up and the two branches of the binodal extend outwards suggesting that the demixing extends to arbitrarily high density. No critical point is observed up to the densities we examine; we follow the phase boundaries up to FORMULA  for FMT and FORMULA  for Onsager theory. A similar splaying of the phase boundaries is observed in Fig. 5b in the (FORMULA ) for Onsager theory, suggesting that the topology obtained with FMT is correct. Also, the I-NFORMULA  region has shrunk to a tiny region close to zero composition, making the triple region mostly dominated by the nematic state rich in species 2. In the FORMULA  representation for FMT (Fig. 5c) the re-entrant feature has become extremely pronounced, extending as low as approximately FORMULA  in the FORMULA  representation and the triple point occurs at approximately FORMULA . In the (FORMULA ) representation for Onsager theory (Fig. 5d), the re-entrant feature has also become more pronounced but less so than for FMT. The triple line extends over approximately the same composition range (FORMULA ) as for FMT but occurs at just over a unit of reduced pressure higher than for FMT.
+In Fig. 6 we present the phase diagrams for FORMULA . In the FORMULA  representation for FMT (Fig. 6a) the strength of the I-NFORMULA  fractionation effect becomes very large. The N-N separation is very wide giving a huge immiscibility gap, hence we do not show it. Fig. 6b also shows a large immiscibility gap in the (FORMULA ) representation for Onsager theory. We again have confidence that the results from FMT are quantitatively more accurate than those from Onsager theory. At concentrations FORMULA  the coexisting compositions already approach closely the FORMULA  axes highlighting that coexisting compositions are close to FORMULA  as is clearly seen in the FORMULA  representation (Fig. 6c for FMT and Fig. 6d for Onsager theory). The general trend of the re-entrant bend moving to lower composition with increasing FORMULA  has continued here, reaching as low as about FORMULA  for FMT and near FORMULA  for Onsager theory.
+In Fig. 7 we plot the results for FORMULA . In the (FORMULA ) representation for FMT (Fig. 7a) the I-NFORMULA  coexistence region is very pronounced. The larger platelets have an area twenty-five times that of the smaller platelet so the asymmetry of the mixture is large. The I-N spinodal remains close to the isotropic branch of the binodal; more so than in Fig. 7b, the (FORMULA ) representation of Onsager theory. The FORMULA  representation for FMT (Fig. 5c) shows that the general trend of the re-entrant bend moving to lower composition has continued, here reaching as low as about FORMULA  for FMT. There is a very narrow region of coexistence between the isotropic and nematic state of species 2 up to about FORMULA , suggesting that up to this pressure there is only a small fractionation effect. This fractionation becomes wider on increasing the pressure beyond this point, with the phase boundaries almost reaching FORMULA  by FORMULA . The re-entrant bend is also a dominating feature of the phase diagram in Fig. 7d for Onsager theory suggesting the FMT phase behaviour is correct, however it is not as pronounced as for FMT and the narrow I-NFORMULA  handle present at low pressures for FMT is wider for Onsager theory.
+In Fig. 8 we show the partial nematic order parameters FORMULA 
+in the coexisting nematic phase(s) for FORMULA  and
+5, as obtained from FMT. For FORMULA  (Fig. 8a) FORMULA  and
+FORMULA  both rise rapidly near zero composition to near
+unity. FORMULA  takes on smaller values than FORMULA  for a given
+mole fraction as has already been observed for the lower size ratios. Hence the (smaller)
+particles of species 1 are much less ordered than particles of species 2 at a given
+composition, since the particles of species 2 are high in
+number and there is more freedom for the smaller particles to
+rotate in the dense system. Both partial order parameters
+remain close to unity as the composition FORMULA  is increased from
+0 to about 0.5. The system is at N-N
+coexistence over this range (see Fig. 4c for the corresponding
+phase diagram). FORMULA  reaches as low as about 0.5
+and FORMULA  becomes as small as 0.2 at FORMULA . For FORMULA  (Fig. 8b) the N-N coexistence does not
+end at a critical point, leaving an interval (in composition)
+that the curves FORMULA  do not enter. For FORMULA 
+(Fig. 8c) FORMULA  varies between about 0.3 and
+almost 1. This range of FORMULA  increases further
+for FORMULA  (Fig. 8d) where it reaches as low as about
+0.2. For FORMULA , FORMULA  also increases more
+rapidly as the composition increases than is the case for the
+lower size ratios. At high compositions, the (small) particles
+of species 1 possess very low nematic order, reaching less
+than 0.1 due to the larger size difference between the two
+species.
+Our phase diagrams share several features with those reported in
+previous studies of binary mixtures of anisometric hard core
+particles. Widening of the I-N phase coexistence region upon
+increasing the bidispersity parameter was found in binary
+mixtures of thick and thin rods {{cite:b193d326-0be2-4afc-abf9-a56c134b9fe0}}, long and
+short rods {{cite:0145e286-18ee-4131-84e8-d601b557c3dc}}, mixtures of rods and
+platelets {{cite:d9699a87-eab9-42e8-808a-68238db66880}}, as well as in binary mixtures
+of platelets using both the Parons-Lee scaling of the Onsager
+functional {{cite:e56641a4-ef9d-4f87-b11d-0f8829f532e6}}, {{cite:137b4727-04f2-4197-a3c6-f60f9b46d50a}} and the Zwanzig model
+{{cite:c17e29c3-9fb0-4b63-bfca-e60ff3a224f4}}, {{cite:2ecd4122-f889-4257-8730-05b9a67295a1}}. N-N phase coexistence
+ending in an upper critical point, as we find for an intermediate
+range of values of size ratios FORMULA , occurs in certain regimes for binary mixtures of rods and
+platelets. A notable difference to other studies of platelet
+mixtures {{cite:137b4727-04f2-4197-a3c6-f60f9b46d50a}} is that we do not find N-N coexistence
+ending in a lower critical point, at least not for the range of
+densities and size ratios that we explored. Similar results to
+ours, where N-N coexistence ends in an upper critical point were
+obtained using Onsager theory for mixtures of thick and thin rods
+{{cite:b193d326-0be2-4afc-abf9-a56c134b9fe0}}. This system of rods also displays
+isotropic-isotropic phase coexistence at high enough values of
+the diameter ratio, which we do not find to be stable in the
+present study.
+
+Conclusions and Outlook
+We have studied the bulk phase behaviour of binary mixtures of hard platelets, including isotropic and nematic states. The platelets are assumed to have circular shape and vanishing thickness. We have not considered positionally ordered phases such as columnar and crystalline phases, which are not expected to occur for the present model of particles with zero volume and zero packing fraction. Note that a first order N-Col transition was found at non-zero packing fraction in the limit of vanishing thickness {{cite:c96efdd0-eae5-4602-9632-85c81b7de8bd}}; simulations in this limit are possible because the model can be mapped onto a system of particles with finite volume but variable shape. Also, platelets with non-zero thickness exhibit a N-Col transition {{cite:aac29966-5f5e-41f8-bee6-e3a2dbb45491}}; this was also reported for the Zwanzig model {{cite:7d6c623d-2d40-4cae-9cbe-96efd781e369}}.
+For a variety of size ratios, we have compared the results of Onsager theory and FMT. In the monodisperse limit we find that Onsager theory overestimates the I-N transition densities and predicts a larger biphasic gap than FMT; the results for FMT in this limit compare quantitatively well with those from simulation. Both theories predict a first order I-N phase transition. We expect that Onsager theory overestimates the density jump at coexistence and also overestimates the size of the biphasic gap. The FMT results show the appearance of re-entrant phenomena at a lower size ratio than for Onsager theory. FMT results also show a larger range of compositions for which N-N demixing at a given size ratio occurs. The N-N demixing occurs at FORMULA , where it is closed by an upper critical point. For FORMULA  there is no critical point up to the densities we consider. In an experimental system of platelets with nonzero volume, one would expect a positionally ordered phase to be favoured before any possible remixing into a homogeneous nematic phase. We also examine the degree of nematic ordering along the phase boundaries for a selection of size ratios up to FORMULA  where N-N demixing ends in an upper critical point. The partial nematic order parameters FORMULA , FORMULA  vary smoothly with increasing composition and hence so does FORMULA . Where a re-entrant feature occurs, all three order parameters along the nematic branch of the binodal drop sharply. As FORMULA  increases, FORMULA  becomes smaller at FORMULA , reaching FORMULA  for FORMULA . We do not find any stable I-I demixing for the range of FORMULA  in this investigation.
+Through the range of FORMULA  values considered, a striking observation is that whilst FMT predicts the occurence of phase boundaries at locations quantitatively different from Onsager theory, the topology of the phase diagrams for a particular choice of FORMULA  is the same as for Onsager theory. Coupled with the fact that the I-N transition for the monodisperse case agrees well with simulation results {{cite:c6a0467a-9958-4d8f-8491-db32b1b7de82}}, we gain confidence that the phase diagrams predicted by FMT are quantitatively more reliable since we assume that Onsager theory predicts the correct physics qualitatively. Furthermore, we have confidence that the order parameter profiles predicted by FMT are closer to those that would be observed from simulation studies, since the monodisperse limit in the present theory yields results for the I-N transition and nematic order parameter that is in good agreement with simulation results. Whether the differences to the true transition densities for the case of binary mixtures increases remains to be seen.
+The results from Onsager theory cannot be obtained by some scaling of the results that exist for binary mixtures of rods (thick and thin {{cite:b193d326-0be2-4afc-abf9-a56c134b9fe0}} or long and short {{cite:0145e286-18ee-4131-84e8-d601b557c3dc}}). For example, for there to be a mapping between thick and thin rods {{cite:b193d326-0be2-4afc-abf9-a56c134b9fe0}} and the present system, we would require simultaneously that FORMULA  and FORMULA , where FORMULA  is the diameter ratio of the thick and thin rods. These requirements are obtained from consideration of the free energy for thick and thin rods (compare Eq. (2) of Ref. {{cite:b193d326-0be2-4afc-abf9-a56c134b9fe0}} with Eq. (REF ) of the present investigation). Clearly these conditions cannot be satisfied simultaneously except for the trivial case FORMULA . In the monodisperse limit, the mapping of concentrations from rods to platelets is FORMULA  where FORMULA  is the conventional dimensionless concentration for rods (FORMULA  is the rod length, FORMULA  is the rod diameter). Clearly, simulation results for the systems studied in the present paper are most desirable. The predictions of the present work could also be tested experimentally. For example, for gibbsite (having typical experimental radius of approximately 100nm) and hydrotalcite (typically between about 25 and 75 nm) {{cite:870d4997-31a1-4d4f-a6fb-3880514631c0}} one has values of FORMULA  between FORMULA  and 4, which are in the range of the present work. We have taken mean radii here. Of course in experiments there will be effects due to polydispersity and our model ignores effects of finite platelet thickness.
+Interesting future work could involve examining the phase behaviour of binary mixtures of polarizable platelets, that is particles that interact with some external applied magnetic field, as has been investigated for binary rod mixtures {{cite:fc7cc3c8-101e-459f-9f17-c3593e705b73}}, {{cite:1bf7b49f-da4a-4b41-be85-36e20a66e6b7}}. Also, binary mixtures of rods and platelets could be investigated {{cite:dd44d08d-23bc-4405-9a5a-243c486b5e8c}}, {{cite:72cd8942-3189-4503-b864-87ab4ffa55e6}}, {{cite:d554bd60-a989-46e7-b254-87fe189cb88e}}, {{cite:2f95499a-3ec0-478f-a912-d20dc9d0a307}}, {{cite:e597f55b-67d4-45b5-a64a-acaa69052645}}. Another line of investigation would be to incorporate polydispersity into the model since many platelet systems often have a significant polydispersity, see for example {{cite:fe296b4a-abab-4107-828e-c3a6867e1694}}. This would lead to an extension of the work by Speranza and Sollich and others on rod-like particles, {{cite:c301e067-0e58-4bb2-a84c-9cefc8e0dfeb}}, {{cite:ec6ab929-4209-45f5-9189-6c716d7ff2e8}}, {{cite:abe0a3d8-ac07-4b08-b9cb-82d8a9979323}} and by Wensink and Vroege on thickness-polydisperse platelets {{cite:577576a9-ad11-46da-94cf-8e056a583f0b}}.
+
+Calculation of Relevant Integrals
+Here we evaluate some integrals that are important in the bifurcation analysis. The first, FORMULA , is a standard integral in excluded volume calculations
+FORMULA 
+Without loss of generality, let FORMULA  in the integrand, where FORMULA  is the unit vector in the FORMULA -direction (the symmetry axis for the system). Now we have
+FORMULA 
+Remembering that in our coordinate system FORMULA ,
+
+I1=d ' d 1-2
+=d ' 02d0d 2
+=2d ' = 43
+
+as required.
+The second integral arises in FMT. We wish to integrate the triple scalar product over three unit orientation vectors,  FORMULA
+FORMULA 
+Similar to the FORMULA  calculation, let FORMULA  in the integrand.
+FORMULA 
+Remembering that in our coordinate system FORMULA  and FORMULA ,
+
+I2=d ” d  d ' | ( ccc
+0
+) ( ccc' '
+-' '
+0) |
+=d ” d  d ' |' '|
+=d ” 2 3=84
+
+as required. (Here the inner two integrals alone give FORMULA  which can be found straightforwardly).
+There are three further integrals required for the bifurcation analysis.
+FORMULA  trivially.
+Let us turn our attention to
+FORMULA 
+We expand FORMULA  as
+FORMULA 
+with coefficients
+FORMULA 
+where the double factorial is defined by
+FORMULA 
+Therefore the inner integral of (REF ) becomes
+
+d '  P2(') = d 'n=0c2nP2n() P2(')
+=02d ' 0d ' 'n=0c2nP2n() P2(').
+
+We now utilise the addition formula for Legendre polynomials,
+
+P2n() =P2n()P2n(') +2m=12n(2n-m)!(2n+m)!
+P2nm() P2nm(')m(-').
+
+Hence
+
+d '  P2(') = 202' d '
+n=0c2nP2n()P2n(')P2()
+
+where the sum involving associated Legendre functions of the first kind vanish in the integration over FORMULA .
+Now we introduce the notation
+FORMULA 
+So
+FORMULA 
+with FORMULA . From the orhogonality conditions of Legendre polynomials {{cite:78e3932d-5beb-4dfa-8cc0-5abbc27c2717}} we have that FORMULA  where FORMULA  is the Kronecker-FORMULA  symbol.
+Here, FORMULA  and, given that FORMULA , we have
+FORMULA 
+Hence
+
+I4=d P2()[-22P2() ]
+ =-2302d [P2()]2 = -2315 = -310
+
+as required.
+The last integral to consider is
+
+
+I5 = d  d ' d ” |  ( ' ”)|[ P2()P2(')
++ P2()P2(”)+P2(')P2(”) ].
+
+We consider integrating the first term of (), namely
+
+
+I5 = d  d ' d ” |  ( ' ”)| P2()P2(').
+
+We let FORMULA  in the integrand so that
+
+I5 = d ” d  d ' | (n ez)| P2()P2('),
+
+where FORMULA  is the angle between FORMULA  and FORMULA  and FORMULA  is a unit vector perpendicular to both FORMULA  and FORMULA . Since FORMULA  is fixed, FORMULA . Hence
+
+I5 = d ” ” d  d ' P2()P2(')
+ = d ” ” I4 = 4(-310)=-45.
+
+FORMULA  comprises two other similar terms so by symmetry, FORMULA . Hence FORMULA  as required.
+We thank Chris Newton and Susanne Klein and the Liquid Crystals group of HP Labs, Bristol for useful discussions. We thank Peter Sollich for useful discussion regarding the structure of the third order term in the binary functional. Bob Evans, Paul Hopkins, Hendrik Reich, Robert Hales and Tom Smith are thanked for valuable comments on the manuscript. Financial support from the EPSRC and HP Labs, Bristol is gratefully acknowledged as well as through the SFB840/A3 of the DFG.
+FIGURE 
+FIGURE 
+FIGURE 
+FIGURE 
+FIGURE 
+FIGURE 
+FIGURE 
+FIGURE 

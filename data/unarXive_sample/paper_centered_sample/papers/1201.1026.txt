@@ -1,0 +1,368 @@
+
+Polynomials in algebraic analysisPiotr MultarzyńskiFaculty of Mathematics and Information ScienceWarsaw University of Technology 00-661 Warsaw, Pl. Politechniki 1, Polande-mail: multarz@mini.pw.edu.plThe concept of polynomials in the sense of algebraic analysis, for a single right invertible linear operator, was introduced and studied originally by D. Przeworska-Rolewicz {{cite:628c6b4b-c943-4f9e-a0ef-56d2a5fdfd4f}}. One of the elegant results corresponding with that notion is a purely algebraic version of the Taylor formula, being a generalization of its usual counterpart, well known for functions of one variable.
+In quantum calculus there are some specific discrete derivations analyzed, which are right invertible linear operators {{cite:124a6bab-1a4f-4a72-b17a-62652ccd1763}}. Hence, with such quantum derivations one can associate the corresponding concept of algebraic polynomials and consequently the quantum calculus version of Taylor formula {{cite:bd01c6dd-ecc1-41ad-8d85-f1ab8cd303d7}}. In the present paper we define and analyze, in the sense of algebraic analysis, polynomials corresponding with a given family of right invertible operators. Within this approach we generalize the usual polynomials of several variables.
+
+Keywords: algebraic analysis, right invertible operator, difference operator, Taylor formula, quantum calculus;
+MSC 2000: 12H10, 39A12, 39A70
+Introduction
+Algebraic analysis, founded and developed by D. Przeworska-Rolewicz {{cite:628c6b4b-c943-4f9e-a0ef-56d2a5fdfd4f}},
+is an algebra-based theory unifying many different generalizations of derivatives and integrals, not necessarily continuous. The main concepts of this algebraic formulation are right invertible linear operators, their right inverses and associated initial operators.
+Right invertible operators are considered to be algebraic counterparts of derivatives and their right inverses together with initial operators correspond with the idea of integration. Amongst many examples one can interpret in terms of algebraic analysis there are e.g. usual differential and integral calculus, generalized differential calculus in rings {{cite:ba3814f4-9c2f-45b2-ba65-e828ec602d0e}} and many different quantum calculi {{cite:124a6bab-1a4f-4a72-b17a-62652ccd1763}}, {{cite:4b681fc0-7269-4c64-b9f5-8d9400150ed7}}, {{cite:3fa8499d-5656-4d8b-938e-82d59d90b56a}}, {{cite:8428a26f-fe46-486f-9a9b-4dfbfc49cbcf}}. With a fixed right invertible operator FORMULA , defined in a linear space FORMULA , one can naturally associate the concept of FORMULA -polynomials and algebraically formulate Taylor formula {{cite:628c6b4b-c943-4f9e-a0ef-56d2a5fdfd4f}}, {{cite:bd01c6dd-ecc1-41ad-8d85-f1ab8cd303d7}}. However, the FORMULA -polynomials, Taylor formula, definite integrals associated with a single right invertible operator FORMULA  constitute the algebraic counterparts corresponding with mathematical analysis for functions of one variable. Therefore, there is a natural need to extend algebraic analysis in order to algebraically generalize ideas from mathematical analysis for functions of many variables. To begin this direction,
+we replace a single operator FORMULA  by a fixed family FORMULA  of right invertible operators and study the corresponding FORMULA -polynomials.
+
+Preliminaries
+Let FORMULA  be a linear space over a field FORMULA  and FORMULA 
+be the family of all linear mappings FORMULA , for any
+FORMULA , FORMULA  - linear subspaces of FORMULA . We shall use the notation
+FORMULA , FORMULA  and FORMULA  for the domain,
+codomain and image of FORMULA , correspondingly.
+Throughout this paper we use the notation
+FORMULA 
+Whenever FORMULA , we shall write
+FORMULA , for FORMULA , and additionally
+FORMULA .
+By the space of constants for FORMULA  we shall mean the family
+FORMULA 
+For any FORMULA  and FORMULA , we assume the
+notation
+FORMULA 
+Evidently, for any FORMULA 
+there is
+FORMULA 
+whenever FORMULA .
+Proposition 2.1 
+Let FORMULA , FORMULA , and FORMULA 
+for FORMULA . Then, any elements FORMULA , FORMULA , are linearly independent.
+
+Consider a linear combination FORMULA 
+and suppose that FORMULA  for some coefficients FORMULA . Hence we obtain the sequence of
+equations: FORMULA , for FORMULA . Step by step, from these
+equations we compute FORMULA .
+Let us define
+FORMULA 
+i.e. each element
+FORMULA  is considered to be a surjective mapping (onto its
+codomain). Thus, FORMULA  consists of all right invertible
+elements.
+Definition 2.2 
+An operator FORMULA  is said to be a right inverse of
+FORMULA  if FORMULA  and FORMULA .
+By FORMULA  we denote the family of all right inverses of FORMULA .
+
+In fact, FORMULA  is a nonempty family, since for each FORMULA  we can select an element FORMULA  and define
+FORMULA  such that FORMULA .
+The fundamental role in the calculus of right invertible operators
+play the so-called initial operators, projecting the domains of
+linear operators onto the corresponding space of their constants.
+Definition 2.3 
+Any operator FORMULA , such that FORMULA ,
+FORMULA  and FORMULA  is said to be an initial operator induced
+by FORMULA . We say that an initial operator FORMULA 
+corresponds to a right inverse FORMULA  whenever FORMULA  or
+equivalently if
+FORMULA 
+The family of all initial operators induced by FORMULA  will be denoted
+by FORMULA .
+
+The families FORMULA  and FORMULA  uniquely determine each
+other. Indeed, formula (REF ) characterizes initial operators
+by means of right inverses, whereas formula
+FORMULA 
+which is independent of FORMULA , characterizes right inverses by means
+of initial operators. Both families FORMULA  and FORMULA 
+are fully characterized by formulae
+FORMULA 
+FORMULA 
+where FORMULA  and FORMULA  are fixed
+arbitrarily.
+
+Let us illustrate the above concepts with two basic examples.
+Example 2.4  FORMULA  - the linear space of all
+functions, FORMULA  - usual derivative, i.e.
+FORMULA , with FORMULA  consisting of all differentiable functions.
+Then, for an arbitrarily fixed FORMULA , by formula
+FORMULA  one can define a right inverse FORMULA  and the initial operator FORMULA  corresponding to
+FORMULA  is given by FORMULA .
+
+Example 2.5  FORMULA  - the linear space of all sequences, FORMULA  - difference operator, i.e.
+FORMULA , for FORMULA . A right inverse FORMULA  is defined by the formulae FORMULA  and FORMULA  while
+FORMULA  defines the initial operator FORMULA  corresponding to FORMULA .
+
+An immediate consequence of Definition REF , for an
+invertible operator FORMULA , i.e. FORMULA , is that
+FORMULA . Therefore, the nontrivial initial operators do
+exist only for operators which are right invertible but not
+invertible. The family of all such operators is then
+FORMULA 
+Proposition 2.6 (Taylor Formula) 
+Suppose FORMULA  and let FORMULA  be an initial
+operator corresponding to FORMULA . Then the operator
+identity
+FORMULA 
+holds on FORMULA , for FORMULA .
+
+(Induction) See Ref.{{cite:628c6b4b-c943-4f9e-a0ef-56d2a5fdfd4f}}.
+
+Equivalent identity, expressed as
+FORMULA 
+for FORMULA  and FORMULA , is an algebraic
+counterpart of the Taylor expansion formula, commonly known in
+mathematical analysis, for functions of one variable. The first component of formula (REF )
+reflects the polynomial part while the second one can be viewed as
+the corresponding remainder.
+Example 2.7 To clearly demonstrate the resemblance of formula (REF )
+with the commonly used Taylor expression, we take FORMULA , FORMULA  and FORMULA 
+as in Example REF . Since there are many forms of the
+remainders in use, it is more interesting to calculate the polynomial
+part, which gives the well known result
+FORMULA ,
+for any function FORMULA .
+
+Proposition 2.8 
+Let FORMULA  and FORMULA . Then FORMULA  is not a
+nilpotent operator.
+
+Suppose that FORMULA  and FORMULA , for some FORMULA .
+Then FORMULA , a contradiction.
+Proposition 2.9 
+If FORMULA , then FORMULA , for any
+FORMULA .
+
+The relation FORMULA  is straightforward. Let
+FORMULA  and FORMULA  be arbitrarily chosen elements.
+Then, for any FORMULA , there is FORMULA .
+
+In algebraic analysis, with any right invertible operator FORMULA  we
+associate the following concept of FORMULA -polynomials.
+Definition 2.10 
+If FORMULA , then any element FORMULA  is said
+to be a FORMULA -polynomial of degree m, i.e. FORMULA , for
+FORMULA . We assign degree FORMULA  to the zero polynomial
+FORMULA .
+
+Proposition 2.11 
+If FORMULA  and FORMULA , then for any
+FORMULA -polynomial FORMULA  there exist elements FORMULA  such that
+FORMULA 
+
+By formula (REF ) we can write the
+identity FORMULA  since FORMULA  and
+FORMULA . Then we define elements FORMULA ,
+FORMULA , which ends the proof.
+Definition 2.12  Let FORMULA  and FORMULA .
+Then, any element FORMULA , for FORMULA , is said to
+be an FORMULA -homogeneous FORMULA -polynomial (or FORMULA -monomial) of degree
+FORMULA .
+
+Thus, any FORMULA -polynomial FORMULA , of degree FORMULA , is a sum of linearly independent FORMULA -homogeneous elements
+FORMULA , FORMULA . The linear space of all FORMULA -polynomials
+is then
+FORMULA 
+whereas
+FORMULA 
+is the linear space of all FORMULA -polynomials of degree at most
+FORMULA .
+Let us fix a basis
+FORMULA 
+of the linear space FORMULA , FORMULA , and define
+FORMULA 
+for FORMULA . Then
+FORMULA 
+Proposition 2.13 
+For an arbitrary right inverse FORMULA , the family
+FORMULA  is the basis of
+the linear space FORMULA . Naturally, FORMULA  forms the basis of the linear space FORMULA , for
+FORMULA .
+
+Let FORMULA ,
+FORMULA  and FORMULA  be finite subsets for
+FORMULA . Assume FORMULA  and calculate FORMULA , which implies FORMULA , for all FORMULA . Hence FORMULA  and analogously we get FORMULA , which implies FORMULA , for
+all FORMULA . Similarly we prove that FORMULA , for all
+FORMULA , FORMULA . Now, let FORMULA  be a
+polynomial of degree FORMULA . Then, on the
+strength of Proposition REF , we can write
+FORMULA , for some elements FORMULA . In turn, each element FORMULA  can be expressed as a linear
+combination FORMULA , for some finite
+subset of indices FORMULA . Hence we obtain
+FORMULA .
+With a right inverse FORMULA , FORMULA  and FORMULA , we shall associate the linearly independent family
+FORMULA  forming a basis of the
+linear space of FORMULA -homogeneous FORMULA -polynomials
+FORMULA 
+(independent of the choice of FORMULA ) of dimension
+FORMULA 
+being a linear subspace of FORMULA . Then, on the strength of
+Proposition REF , the linear space FORMULA  is a direct
+sum
+FORMULA 
+Corollary 2.14 If FORMULA , the following formula holds
+FORMULA 
+for any FORMULA .
+
+Naturally, one can extend formula (REF ) and define
+FORMULA 
+which is both FORMULA - and FORMULA -invariant subspace of FORMULA , i.e.
+FORMULA 
+FORMULA 
+Thus, FORMULA  turns out to be simultaneously FORMULA - and FORMULA -invariant
+linear subspace of FORMULA , since it can be decomposed as the following
+direct sum
+FORMULA 
+Since FORMULA  is a linear subspace of FORMULA , there exists
+(not uniquely) another linear subspace FORMULA  of FORMULA  such that
+FORMULA 
+Then, every linear mapping FORMULA  can be
+decomposed as the direct sum
+FORMULA 
+of two restrictions FORMULA  and
+FORMULA , i.e. for any FORMULA  and FORMULA  there is FORMULA . In
+particular, the mappings FORMULA , FORMULA 
+can be decomposed as direct sums FORMULA ,
+FORMULA  such that
+FORMULA 
+FORMULA 
+which allows for the decomposition of the initial operator FORMULA 
+corresponding to  FORMULA
+FORMULA 
+FORMULA 
+Proposition 2.15 Let FORMULA , FORMULA  be any right
+inverses and FORMULA  be the initial operators
+corresponding to FORMULA  and FORMULA , respectively. Then
+FORMULA  and FORMULA  corresponds to FORMULA .
+
+FORMULA 
+FORMULA 
+FORMULA 
+FORMULA 
+
+The last results allow one to combine right inverses and initial
+operators as direct sums of independent components.
+
+FORMULA -polynomials
+Originally, the main concepts of algebraic analysis have been defined for a single right invertible operator FORMULA . Such an approach one can recognize as an algebraic generalization of mathematical analysis dedicated to functions of one variable.
+In this section we propose to replace a single FORMULA  by a nonempty family FORMULA  and extend the notion of a polynomial in order to relate it with mathematical analysis of many variables. Since mathematical analysis of many variables forms a groundwork for differential geometry, there is a hope that the corresponding geometric ideas can also be studied in terms of algebraic analysis.
+By FORMULA  and FORMULA  we shall denote the families of all right inverses and all initial operators defined for a single FORMULA , correspondingly. This we understand as FORMULA , FORMULA , and FORMULA , FORMULA , FORMULA , for any FORMULA  and FORMULA .
+If the additional condition FORMULA  is fulfilled, we say that FORMULA  corresponds to FORMULA .
+Definition 3.1 
+For any family FORMULA  we define
+FORMULA 
+which is called the family of FORMULA -constants.
+In the trivial case, i.e. when FORMULA , we assume
+FORMULA 
+
+Obviously, for any two families FORMULA ,
+FORMULA 
+On the strength of formula (REF ) we notice that
+FORMULA 
+Definition 3.2 A family FORMULA  separates elements of FORMULA  if
+for any two different elements FORMULA  there exists FORMULA  such that FORMULA .
+
+In particular, FORMULA  separates elements of FORMULA  if there is an invertible element FORMULA .
+If a family FORMULA  separates elements of FORMULA , then FORMULA  becomes trivial, i.e. FORMULA .
+In the sequel we shall assume FORMULA  to be a family of right invertible operators which does not separate elements of FORMULA , i.e. FORMULA . In particular, from this assumption we notice that
+FORMULA  and any element FORMULA  is right invertible but not invertible, i.e. FORMULA .
+Definition 3.3 
+An initial operator for FORMULA  is any map FORMULA , satisfying FORMULA  and FORMULA . By FORMULA  we shall denote the family of all initial operators for FORMULA .
+
+To compare two notations, notice that FORMULA , when FORMULA .
+
+The immediate consequence of the above definition is that nontrivial initial operators for FORMULA  do exist only if
+FORMULA 
+Therefore, in the sequel we shall assume condition (REF ) to be fulfiled.
+Definition 3.4 Let FORMULA , FORMULA . We say that an initial operator FORMULA  corresponds with a family FORMULA  of right inverses FORMULA , if FORMULA , for any FORMULA .
+
+Proposition 3.5 Let FORMULA  and FORMULA . Then, for any initial operator FORMULA , the operator FORMULA  is also a right inverse of FORMULA .
+
+Indeed, FORMULA .
+
+In the particular case when FORMULA , FORMULA  and FORMULA , the right inverse FORMULA  is independent of FORMULA  (compare Ref. {{cite:628c6b4b-c943-4f9e-a0ef-56d2a5fdfd4f}}). However, if FORMULA  consists of more than one element, the operator FORMULA  depends on FORMULA , in general.
+Proposition 3.6 For any family FORMULA , FORMULA , an initial operator FORMULA  corresponds with the family FORMULA .
+
+Indeed, FORMULA , for any FORMULA .
+Definition 3.7 The linear subspace of FORMULA  defined as
+FORMULA 
+for any FORMULA , is called the space of FORMULA -polynomials of degree at most FORMULA . For the sake of convenience we assume
+FORMULA 
+for any FORMULA , in case when FORMULA ,.
+
+One can easily notice that
+FORMULA 
+Thus, we can build the linear subspace of  FORMULA
+FORMULA 
+called the linear space of all FORMULA -polynomials.
+Let us notice that formula (REF ) can be generalized as follows
+FORMULA 
+for any FORMULA .
+Consequently, for any two nonempty families FORMULA , we get the generalization of formula (REF ), namely
+FORMULA 
+If a family FORMULA  separates elements of FORMULA , we obtain FORMULA . Therefore, we shall be interested with families FORMULA  which do not separate elements of FORMULA .
+Definition 3.8 
+Define the families FORMULA  and
+FORMULA 
+for any FORMULA . Then, any element FORMULA  is said to be a FORMULA -polynomial of degree FORMULA . By definition, we shall assume FORMULA .
+
+Evidently, in case when FORMULA  separates elements of FORMULA , there are no nontrivial FORMULA -polynomials, i.e. FORMULA , for any FORMULA . On the strength of formula (REF ) and Definition (REF ) we can notice that
+FORMULA 
+i.e. all nonzero elements of FORMULA  are considered to be of degree 0, if FORMULA .
+Definition 3.9 
+Let FORMULA  be a family which does not separate elements of FORMULA . Then, FORMULA  is said to be effective if there extists a family, so-called FORMULA -proper family, FORMULA  of right inverses FORMULA , FORMULA , such that for any FORMULA , FORMULA ,
+FORMULA 
+By definition we assume that the empty family FORMULA  is effective.
+
+Proposition 3.10 Any subfamily FORMULA  of an effective family FORMULA  is effective as well.
+
+By definition, the empty subfamily FORMULA  is effective.
+Now, let
+FORMULA  and FORMULA  be an arbitrary subfamily. Since an effective family FORMULA  does not separate elements of FORMULA , the more so does not its subfamily FORMULA . With subfamilies FORMULA  we can associate the family FORMULA . Then, one can easily verify that FORMULA  and by formula (REF ), for any FORMULA , we obtain
+FORMULA 
+Proposition 3.11 If FORMULA  is a nonempty effective family which does not separate points of FORMULA , then FORMULA , for any FORMULA .
+
+Since FORMULA  does not separate points of FORMULA , we get FORMULA . Now, on the strength of Definition (REF ), we can take an arbitrary FORMULA , FORMULA , and by formula (REF ) we obtain
+FORMULA . Hence FORMULA , for any FORMULA .
+
+Below we formulate the concept of a weakly effective family FORMULA , which is also sufficient to produce nonempty sets of FORMULA -polynomials of degree FORMULA .
+Definition 3.12 Let FORMULA  and FORMULA .
+We say that FORMULA  is a regular element of FORMULA  (or FORMULA -regular, for short) if there exists a right inverse FORMULA  such that
+FORMULA 
+A right inverse FORMULA  is said to be FORMULA -proper if condition (REF ) is fulfilled.
+
+Definition 3.13 A family FORMULA  is said to be weakly effective if there exists a FORMULA -regular element FORMULA .
+
+Evidently, for any FORMULA , the family FORMULA  is weakly effective. Moreover, in such a case any element FORMULA  is a FORMULA -proper right inverse.
+Indeed, in this case FORMULA  and formula (REF ) is fulfilled trivially (by logic).
+Proposition 3.14 Suppose FORMULA  is a weakly effective family which does not separate elements of FORMULA . Then
+FORMULA , for any FORMULA .
+
+Since family FORMULA  does not separate elements of FORMULA , we get FORMULA 
+and consequently FORMULA .
+Now, let FORMULA  be a regular element of FORMULA  and FORMULA  be its FORMULA -proper right inverse. This means that, for any FORMULA  and FORMULA , there is FORMULA , for any FORMULA .
+On the other hand, FORMULA  and FORMULA , which means that
+FORMULA , for FORMULA  and FORMULA .
+
+The following statement shows the hierarchy relation between the two effectivity concepts, which motivates the term "weakly".
+Proposition 3.15 Any nonempty effective family FORMULA  is weakly effective.
+
+Let FORMULA  be a nonempty effective family. A singleton FORMULA  is evidently an efective family. Let us assume now that
+FORMULA , FORMULA , and FORMULA .
+Since FORMULA , by formula (REF ),
+for FORMULA , we obtain
+FORMULA . The last equality can be easily extended to
+FORMULA .
+Finally, because FORMULA , we can write FORMULA .
+Below we present two examples showing some effective families FORMULA  and their FORMULA -polynomials.
+In both examples use the notation FORMULA  and FORMULA , for any
+FORMULA .
+Example 3.16 Let FORMULA  be the linear space of functions FORMULA , for a fixed FORMULA , and let FORMULA  be the family of the generalized derivations {{cite:ba3814f4-9c2f-45b2-ba65-e828ec602d0e}}, i.e. FORMULA , FORMULA .
+The elements of FORMULA  are of the form FORMULA  and consequently
+FORMULA  consists of functions FORMULA ,
+where FORMULA  and FORMULA . Hence, FORMULA  and the family FORMULA  does not separate elements of FORMULA . The following formula defines a FORMULA -proper family of right inverses FORMULA ,
+FORMULA 
+for FORMULA . Hence, the family FORMULA  is effective. Since FORMULA , the polynomials of degree zero are simply functions FORMULA , where FORMULA  and FORMULA .
+In turn, if we apply formula (REF ) to FORMULA , we can obtain FORMULA -polynomials of higher degrees. For example FORMULA  are FORMULA -polynomials of degree 1, whereas FORMULA  or FORMULA , FORMULA , are FORMULA -polynomials of degree 2.
+
+Example 3.17 Let FORMULA  be a linear space of functions FORMULA , for a fixed FORMULA ,
+FORMULA , where FORMULA  and let us take the right inverses FORMULA  defined by FORMULA , FORMULA , for FORMULA . One can check that FORMULA  is a FORMULA -proper family, which means that the family FORMULA  of partial difference operators is effective.
+Evidently, the space FORMULA  consists of all constant functions, hence the elements of FORMULA  are nonzero constant functions. In turn, functions FORMULA , FORMULA , are the examples of FORMULA -polynomials of degree 1, whereas functions FORMULA  or FORMULA  are FORMULA -polynomials of degree 2.
+
+Remark. Effectivity property plays a significant role in the algebraic formulation of the Taylor formula specified for a family FORMULA  of many right invertible operators, which is the algebraic counterpart of the well known Taylor formula for functions of many variables.
+

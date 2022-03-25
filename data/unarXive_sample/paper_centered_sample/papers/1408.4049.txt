@@ -1,0 +1,403 @@
+
+A strengthened entropy power inequality for log-concave densitiesGiuseppe Toscani Department of Mathematics, University of Pavia, via Ferrata 1, 27100 Pavia, Italy.
+giuseppe.toscani@unipv.it 2018/12/10 04:23:14
+
+Abstract. We show that Shannon's entropy–power inequality admits a
+strengthened version in the case in which the densities are log-concave. In such a
+case, in fact, one can extend the Blachman–Stam argument {{cite:285c9c5e-90dc-435d-89bf-8a4d0225a2aa}}, {{cite:0703c9f5-7af0-45d3-bf93-7374dede4fa1}} to obtain a
+sharp inequality for the second derivative of Shannon's entropy functional with
+respect to the heat semigroup.
+Keywords. Entropy-power inequality, Blachman–Stam inequality.
+Introduction
+Given a random vector FORMULA  in FORMULA , FORMULA , with a smooth, rapidly decaying
+probability density FORMULA  such that FORMULA  has growth at most polynomial at
+infinity, consider the functional
+FORMULA 
+While the importance of the first identity in (), well-known in information
+theory with the name of DeBruijn's identity is well established {{cite:8df45a9a-389d-45ce-921f-34a1137cebb7}}, the role of the
+second identity in () seems to be restricted to its use in the proof of the
+concavity of entropy power {{cite:9f2b0087-874d-41ff-98eb-50d3f32c21ea}}, and to the so-called entropy-entropy methods
+{{cite:01976a1d-cc35-4019-9a75-ffb4dd9212b6}}, {{cite:ea78d193-e1bc-4767-9a31-6f8ef29e616f}}, where it has been shown highly useful in the proof of the
+logarithmic Sobolev inequality {{cite:f6d16b77-ffe0-407c-9f7e-0dd9b3a6fdb8}}.
+In this paper we study inequalities related to the functional FORMULA , when evaluated on
+convolutions.
+The main result is a new inequality for FORMULA , where
+FORMULA  and FORMULA  are independent random vectors in FORMULA , such that their probability
+densities FORMULA  and FORMULA  are log-concave, and FORMULA , FORMULA  are well defined. By
+resorting to an argument close to that used by Blachman {{cite:0703c9f5-7af0-45d3-bf93-7374dede4fa1}} in his original
+proof of entropy power inequality, for any given pair of positive constants FORMULA , we
+prove the bound
+FORMULA 
+where
+FORMULA 
+Note that, in one-dimension FORMULA  coincides with the product of the Fisher
+information of FORMULA  and FORMULA , FORMULA . Inequality (REF ) is sharp.
+Indeed, there is equality if and only if FORMULA  and FORMULA  are FORMULA -dimensional Gaussian
+vectors with covariance matrices proportional to FORMULA  and FORMULA  respectively, where
+FORMULA  is the identity matrix.
+Even if inequality (REF ) is restricted to the set of log-concave densities,
+this set includes many of the most commonly-encountered parametric families of
+probability density functions {{cite:e4d707f8-ac4e-4c44-aa74-12811dd60d27}}. Among other properties, log-concave densities are
+stable under convolution. If FORMULA  and FORMULA  are (possibly multidimensional) log-concave
+densities, then their convolution FORMULA  is log-concave.
+Optimizing over FORMULA  and FORMULA , one obtains from (REF ) the inequality
+FORMULA 
+where, also in this case, equality holds if and only if both FORMULA  and FORMULA  are Gaussian
+random vectors with proportional covariance matrices.
+Inequality (REF ) shows that, at least if applied to log-concave probability
+densities, the functional FORMULA  behaves with respect to convolutions like
+Shannon's entropy power {{cite:eef2b550-8b79-472d-b147-957ba940b5f0}}, {{cite:285c9c5e-90dc-435d-89bf-8a4d0225a2aa}} and Fisher information {{cite:285c9c5e-90dc-435d-89bf-8a4d0225a2aa}}, {{cite:0703c9f5-7af0-45d3-bf93-7374dede4fa1}}.
+Actually, Shannon's entropy power inequality, due to Shannon and Stam {{cite:eef2b550-8b79-472d-b147-957ba940b5f0}}, {{cite:285c9c5e-90dc-435d-89bf-8a4d0225a2aa}}
+(cf. also {{cite:9f2b0087-874d-41ff-98eb-50d3f32c21ea}}, {{cite:6e0c9fc5-6525-4388-9fcd-654d03664c0d}}, {{cite:0eb597bc-87b2-4ed4-b4c4-ccc8256f77ff}}, {{cite:5ee65841-8c2f-4734-9d6a-df3aa264128b}}, {{cite:b289faeb-5247-4b60-8050-89b518b560ed}} for other proofs and extensions) gives a lower bound on Shannon's entropy power of the sum of independent random
+variables FORMULA  with values in FORMULA  with densities
+FORMULA 
+with equality if and only FORMULA  and FORMULA  are Gaussian random vectors with proportional
+covariance matrices. In (REF ) the entropy-power of the random variable FORMULA  with
+values in FORMULA  is defined by
+FORMULA 
+With no doubts, this is one of the fundamental information theoretic inequalities
+{{cite:9cd3a447-be22-4849-9321-90ae10ec0aa0}}.
+Likewise, Blachman–Stam inequality {{cite:285c9c5e-90dc-435d-89bf-8a4d0225a2aa}}, {{cite:0703c9f5-7af0-45d3-bf93-7374dede4fa1}} gives a lower
+bound on the inverse of Fisher information of the sum of independent random vectors
+with (smooth) densities
+FORMULA 
+still with equality if and only FORMULA  and FORMULA  are Gaussian random vectors with
+proportional covariance matrices.
+The fact that inequalities (REF ), (REF ) and (REF ) share a common nature
+is clarified by noticing that, when evaluated in correspondence to a Gaussian vector
+FORMULA  with covariance matrix FORMULA , the three (related by ()) functionals
+FORMULA , FORMULA  and FORMULA  are linear functions of FORMULA .
+An interesting application of inequality (REF ) is linked to the evolution in
+time of the functional
+FORMULA 
+where, for a positive constant FORMULA , with FORMULA , FORMULA  (respectively
+FORMULA ) are the solutions to the heat equation () with diffusion constant
+FORMULA  (respectively FORMULA ), corresponding to the initial data FORMULA  and FORMULA  which are log-concave
+probability densities in FORMULA . Since, for  FORMULA
+FORMULA 
+the functional FORMULA  is dilation invariant, that is invariant with respect to the
+scaling
+FORMULA 
+In {{cite:c0a77403-4b43-407b-81cd-acfa4932b62b}} we proved that FORMULA  is monotonically decreasing in time from FORMULA  to
+FORMULA 
+which implies the inequality
+FORMULA 
+By optimizing over FORMULA , this inequality implies the entropy power inequality
+(REF ). By choosing now log-concave densities FORMULA  and FORMULA  as initial data in the
+heat equations, we can prove, in consequence of inequality (REF ), that the
+functional FORMULA  is a convex function of time, and this implies, optimizing
+over FORMULA , the strengthened entropy power inequality
+FORMULA 
+where the quantity FORMULA  can be interpreted as a measure of the
+non-Gaussianity of the two random vectors FORMULA . Indeed, FORMULA  if and
+only if both FORMULA  and FORMULA  are Gaussian random vectors.
+Inequality (REF ) describes a new property of convolutions of Gaussian densities.
+Among all solutions to the heat equation with log-concave densities as initial data,
+the Gaussian self-similar solutions are the unique ones for which the functional
+FORMULA  remains constant in time. In all the other cases FORMULA  is a
+convex function of time. This property is reminiscent of the well-known
+concavity of entropy power theorem, which asserts that, given the solution
+FORMULA  to the heat equation (),
+FORMULA 
+Inequality (REF ) is due to Costa {{cite:9f2b0087-874d-41ff-98eb-50d3f32c21ea}}. Later, the proof has been simplified
+in {{cite:61e22a14-8507-49b7-a4da-5c66fb90cd5d}}, {{cite:9cd3a447-be22-4849-9321-90ae10ec0aa0}}, by an argument based on the Blachman–Stam inequality {{cite:0703c9f5-7af0-45d3-bf93-7374dede4fa1}}.
+Moreover, a short and simple proof has been obtained by Villani {{cite:caebb004-7dc4-42a6-8b51-90d8cf9d967f}}, using
+ideas from the aforementioned McKean paper {{cite:473b9cc0-79ff-45d7-9071-2901b2211f12}}. It is interesting to notice
+that the concavity property has been extended to Renyi entropy power, when evaluated
+along the solution to a nonlinear diffusion equation {{cite:6310a0d7-c7ec-4ade-a543-7f1ae871af5c}}.
+These studies reveal that the heat equation (and, more in general, the nonlinear
+diffusion equations) are quite useful instruments to be used in connection with the
+proof of inequalities. In some recent papers {{cite:d8dec502-3804-45c8-ba66-1fa4563fa94c}}, {{cite:a822f9ab-9ded-40a6-9efa-f2ac246423ce}}, {{cite:c0a77403-4b43-407b-81cd-acfa4932b62b}}, this connection
+has been made evident by showing that, in addition to Shannon's entropy power
+inequality, a number of inequalities in sharp form, like the classical Young's
+inequality and its converse {{cite:d8abeb9b-c5fc-4b2b-b5d2-d909740c80d2}}, the Brascamp–Lieb type inequalities {{cite:d8abeb9b-c5fc-4b2b-b5d2-d909740c80d2}},
+Babenko's inequality {{cite:f23f0f87-6a1d-4b62-8f07-8339e4a1fc7d}}, Prékopa–Leindler inequality {{cite:06c00ca4-3624-437c-9f9b-405a2cebc62f}}, Nash's
+inequality and the logarithmic Sobolev inequality follow by monotonicity arguments of
+various Lyapunov functionals, when evaluated on solutions to the heat equation.
+A careful reading of Dembo's proof of the concavity of entropy power {{cite:61e22a14-8507-49b7-a4da-5c66fb90cd5d}}
+clarifies once more the connections among the functionals FORMULA  and FORMULA . Actually,
+Dembo proved inequality (REF ) in the equivalent form
+FORMULA 
+that is reminiscent of ().
+As already mentioned in this introduction, while the functional FORMULA  has been
+introduced in Shannon's theory in connection with the proof of the concavity of
+Shannon's entropy power, so that it appears in the related literature after Costa's
+paper {{cite:9f2b0087-874d-41ff-98eb-50d3f32c21ea}} in 1985, in one dimension of space, various properties of the
+FORMULA  functional were considered by McKean in its pioneering paper on Kac's
+caricature of Maxwell molecules in kinetic theory of rarefied gases {{cite:473b9cc0-79ff-45d7-9071-2901b2211f12}} in
+1965. In his paper, McKean investigated various connections between Fisher
+information () and its derivative FORMULA  along the heat flux, motivated by
+proving the old conjecture that subsequent derivatives of Shannon's entropy along the
+solution to the heat equation alternate in sign. McKean original inequalities for the
+functional FORMULA  were subsequently generalized to higher dimensions to give a new
+proof of the logarithmic Sobolev inequality with an explicit remainder {{cite:f6d16b77-ffe0-407c-9f7e-0dd9b3a6fdb8}}.
+In more details, Section  will be devoted to the proof of inequality
+(REF ). For the sake of clarity, we will present first the proof in one
+dimension of space. Then, a multi-dimensional version will be obtained resorting to
+some additional result. In Section  we will show how inequality
+(REF ) could be fruitfully used to obtain, for log-concave densities, the
+strengthened version (REF ) of the entropy power inequality. Unfortunately, it
+seems quite difficult to express the additional term FORMULA  in (REF ) in the form
+of a distance of the involved densities from the Gaussian density, and we live
+we leave this question to future research.
+
+A new inequality for convolutions
+Log-concave functions and scores
+We recall that a function FORMULA  on FORMULA  is log-concave if it is of the
+form
+FORMULA 
+for some convex function FORMULA . A prime example is the Gaussian density,
+where FORMULA  is quadratic in FORMULA . Further, log-concave distributions include Gamma
+distributions with shape parameter at least one, FORMULA  distributions
+with FORMULA , Weibull distributions with shape parameter at least one,
+Gumbel, logistic and Laplace densities (see, for example, Marshall and Olkin
+{{cite:e4d707f8-ac4e-4c44-aa74-12811dd60d27}}). Log-concave functions have a number of properties that are desirable for
+modelling. Marginal distributions, convolutions and product measures of log-concave
+distributions and densities are again log-concave (cf. for example, Dharmadhikari and
+Joag-Dev {{cite:71ebd487-35bc-4429-95c9-787a0914ae0c}}).
+A main consequence of log-concavity, which is at the basis of most computations in this paper, is the following. Consider the heat
+equation () in FORMULA , FORMULA .
+If FORMULA  denotes the Gaussian density in FORMULA  with zero mean and covariance matrix  FORMULA
+FORMULA 
+the solution at time FORMULA  to the heat equation () coincides with FORMULA .
+Assume that the initial datum FORMULA  is a non-negative, log-concave integrable
+function. Then, at each subsequent time FORMULA , the solution FORMULA  to the heat
+equation, convolution of the log-concave functions FORMULA  and the Gaussian density
+FORMULA  defined in (REF ), is a non-negative integrable log-concave
+function. In other words, the heat equation propagates log-concavity.
+This simple remark, allows to proof things by using smooth functions with fast decay
+at infinity.
+It is interesting to notice that the expressions of Shannon's entropy FORMULA , Fisher
+information FORMULA  and Fisher's entropy production FORMULA  take a very simple form if
+evaluated in correspondence to log-concave densities FORMULA , when written as in
+(REF ). In this case, if FORMULA  is a random vector in FORMULA  with density FORMULA , these
+functionals can be easily recognized as moments of FORMULA  or of its derivatives. It
+is immediate to reckon that Shannon's entropy FORMULA  coincides with
+FORMULA 
+The Fisher information FORMULA  reads
+FORMULA 
+and, last, Fisher's entropy production FORMULA  takes the form
+FORMULA 
+Thus, the functionals are well-defined in terms of the convex function FORMULA 
+characterizing the log-concave function FORMULA .
+For the log-concave Gaussian density (REF )
+FORMULA 
+which implies, for  FORMULA
+FORMULA 
+where, as usual, FORMULA  is the Kronecker delta.
+According to the standard definition, given a random vector FORMULA  in FORMULA  distributed
+with with absolutely continuous probability density function  FORMULA
+FORMULA 
+denotes the (almost everywhere defined) score function of the random variable
+{{cite:f583648c-6ee5-495b-a91e-3e8ba61efaeb}} (cf. also {{cite:e977ebbe-a5d9-4b39-a250-d412faf444d2}} for further details). The score has zero mean, and its
+variance is just the Fisher information. For log-concave densities, which are
+expressed in the form (REF )
+FORMULA 
+In view of definition (REF ) and (REF ) one can think to introduce the concept
+of second-order score of a random vector FORMULA  in FORMULA , defined by the symmetric
+Hessian matrix FORMULA  of FORMULA , with elements
+FORMULA 
+Then, as the Fisher information coincides the second moment of the score function, the
+functional FORMULA  in (REF ) is expressed by the moment of the trace of the product
+matrix FORMULA . For a log-concave function, the element
+FORMULA  of the Hessian matrix FORMULA  defining the second-order score
+function takes the simple expression
+FORMULA 
+Note that a Gaussian vector FORMULA  is uniquely defined by a linear score function FORMULA  and by a constant second-order score matrix FORMULA .
+
+The one-dimensional case
+For the moment, let us fix FORMULA . In the rest of this section, we will only consider smooth log-concave
+probability densities FORMULA  (cf. definition (REF )) such that FORMULA  has growth at most polynomial at infinity. In order not to worry about derivatives of
+logarithms, which will often appear in the proof, we may also impose that FORMULA  for some positive constant FORMULA . The general case will easily follow by a density argument {{cite:bc5af89d-e0e9-49be-8b78-9bc897e0c33f}}.
+Let
+FORMULA 
+The main argument here is due to Blachman {{cite:0703c9f5-7af0-45d3-bf93-7374dede4fa1}}, who proved in this way
+inequality (REF ). Since for any pair of positive constants FORMULA  we have the
+identity
+FORMULA 
+dividing by FORMULA  we obtain
+FORMULA 
+FORMULA 
+We denoted
+FORMULA 
+Note that, for every FORMULA , FORMULA  is a unit measure on FORMULA .
+Consequently, by Jensen's inequality
+FORMULA 
+FORMULA 
+On the other hand, by analogous argument, for any pair of positive constants FORMULA  we have the identity
+FORMULA 
+Thus, dividing again by FORMULA  we obtain
+FORMULA 
+If we subtract identity (REF ) from inequality (REF ) we conclude with the inequality
+FORMULA 
+Theorem 1  Let FORMULA  and FORMULA  be log-concave probability density
+functions with values in FORMULA , such that both FORMULA  and FORMULA , as given by
+() are bounded. Then, also FORMULA  is bounded, and for any pair of positive
+constants  FORMULA
+FORMULA 
+Moreover, there is equality in (REF ) if and only if, up to translation and
+dilation FORMULA  and FORMULA  are Gaussian densities, FORMULA  and FORMULA .
+
+Remark 2 The condition of log-concavity enters into the proof of Lemma REF  when we pass from inequality (REF ) to inequality (). Without the condition of log-concavity, in fact, the left-hand side of (REF ) has no sign, and () does not hold true. Of course, this fact does not exclude the possibility that inequality (REF ) could hold also for other classes of probability densities, but if any, another method of proof has to be found, or a counterexample is needed.
+
+Theorem REF  allows to prove inequality (REF ). To this aim, note that, for any pair of positive constants  FORMULA
+FORMULA 
+Moreover, as proven first by Dembo {{cite:61e22a14-8507-49b7-a4da-5c66fb90cd5d}}, and later on by Villani {{cite:caebb004-7dc4-42a6-8b51-90d8cf9d967f}} with a proof based on McKean ideas {{cite:473b9cc0-79ff-45d7-9071-2901b2211f12}} (REF ) implies
+FORMULA 
+Remark 3 The proof of (REF ) is immediate and enlightening. Given the random variable FORMULA  distributed with a sufficiently smooth density FORMULA , consider the (almost everywhere defined) second-order score variable (cf. definition (REF ))
+FORMULA 
+Then, denoting with FORMULA  the mathematical expectation of the random variable FORMULA , it holds
+FORMULA 
+Then, (REF ) coincides with the standard inequality FORMULA . Note moreover that equality in (REF ) holds if and only if FORMULA  is constant, or, what is the same, if
+FORMULA 
+As observed in the proof of Theorem REF  this implies that FORMULA  is a Gaussian variable.
+
+Grace to inequality (REF )
+FORMULA 
+Using (REF ) to bound from above the last term in inequality (REF ) we obtain
+FORMULA 
+Optimizing over FORMULA , with FORMULA , one finds that the minimum of the right-hand side is obtained
+when
+FORMULA 
+which implies
+inequality (REF ). Thus we proved
+Corollary 4 
+Let FORMULA  and FORMULA  be independent random variables with log-concave probability density
+functions with values in FORMULA , such that both FORMULA  and FORMULA , as given by () are bounded. Then
+FORMULA 
+Moreover, there is equality if and only if, up to translation and dilation FORMULA  and
+FORMULA  are Gaussian variables.
+
+Remark 5 Inequality (REF ) implies in general a stronger inequality. In fact, to obtain
+inequality (REF ) we discarded the (non-positive) term
+FORMULA 
+By evaluating the value of FORMULA  in FORMULA , one shows that inequality
+(REF ) is improved by the following
+FORMULA 
+where
+FORMULA 
+As before, FORMULA  if and only if FORMULA  and FORMULA  are Gaussian random
+variables.
+Note that the non-negative remainder FORMULA  can be bounded from below in terms
+of other expressions. In particular, one of these bounds is particularly
+significative. Adding and subtracting to the right-hand side of (REF ) the positive
+quantity FORMULA  one obtains the bound
+FORMULA 
+This implies that (REF ) can be improved by the following
+FORMULA 
+The general case
+With few variants, the proof in the multi-dimensional case follows along the same
+lines of the one-dimensional one. Let FORMULA  and FORMULA , with FORMULA  be
+multidimensional log-concave functions, and let FORMULA  be their log-concave
+convolution. In addition, let us suppose that both FORMULA  and FORMULA  are sufficiently
+smooth and decay at infinity in such a way to justify computations. To simplify
+notations, given a function FORMULA , with FORMULA , FORMULA , we denote its partial derivatives as
+FORMULA 
+For any given vector FORMULA , and positive constants FORMULA  we have the identity
+FORMULA 
+where now, for every  FORMULA
+FORMULA 
+is a unit measure on FORMULA . Therefore, by Jensen's inequality
+FORMULA 
+FORMULA 
+Likewise, thanks to the identity
+FORMULA 
+we have
+FORMULA 
+FORMULA 
+Finally, for any given vector FORMULA , and positive constants FORMULA  we obtain the inequality
+FORMULA 
+Theorem 6  Let FORMULA  and FORMULA  be log-concave probability density
+functions with values in FORMULA , with FORMULA , such that both FORMULA  and FORMULA , as
+given by (REF ) are bounded. Then, FORMULA  is bounded, and for any pair of positive
+constants  FORMULA
+FORMULA 
+where
+FORMULA 
+Moreover, there is equality in (REF ) if and only if, up to translation and dilation FORMULA  and FORMULA  are Gaussian densities, FORMULA  and FORMULA .
+
+As for the one-dimensional case, given the random vector FORMULA  distributed with density FORMULA , FORMULA , consider the generic element of the second-order score function FORMULA , given by (REF )
+FORMULA 
+Then, for each pair of FORMULA  it holds the identity
+FORMULA 
+Then, the standard inequality FORMULA 
+gives
+FORMULA 
+Using the Cauchy-Schwarz inequality, (REF ) gives
+FORMULA 
+Corollary 7 
+Let FORMULA  and FORMULA  be independent multi-dimensional random variables with log-concave probability density functions with values in FORMULA , such that both FORMULA  and FORMULA , as given by (REF ) are bounded. Then
+FORMULA 
+Moreover, there is equality if and only if, up to translation and dilation FORMULA  and FORMULA  are Gaussian densities.
+
+
+A strengthened entropy power inequality
+In this section, we will study the evolution in time of the functional FORMULA  defined in (REF ), that is
+FORMULA 
+Here, FORMULA  is a positive constant, with FORMULA , while FORMULA  (respectively
+FORMULA ) are the solutions to the heat equation () with diffusion constant
+FORMULA  (respectively FORMULA ), corresponding to the initial data FORMULA  and FORMULA , log-concave
+probability densities in FORMULA . It is a simple exercise to verify that FORMULA  is dilation invariant. This property allows to identify the limit, as FORMULA  of the functional FORMULA .
+For large times, the solution to the heat equation approaches the fundamental
+solution. This large-time behaviour can be better specified by saying that the
+solution to the heat equation () satisfies a property which can be defined as
+the central limit property. Suppose the initial density FORMULA  in equation () is such
+that FORMULA  for some constant FORMULA  (typically
+FORMULA ). Then, if
+FORMULA 
+FORMULA  tends in FORMULA  towards a limit function as time goes to infinity, and
+this limit function is a Gaussian function
+FORMULA 
+This convergence property, as well as convergence in other stronger norms, can be
+achieved easily by resorting to Fourier transform, or by exploiting the relationship
+between the heat equation and the Fokker–Planck equation {{cite:827f42e9-f5df-4508-ba57-b1c44e522733}}, {{cite:206e7d81-4d28-4778-977c-5b5c3b0388bb}} (cf. also
+{{cite:22ad154a-3b73-4955-b005-f9f7d6ccc07d}} for recent results and references). We note that the passage FORMULA  defined by (REF ) is dilation invariant, so that
+FORMULA 
+Coupling the dilation invariance of FORMULA  with the central limit property, and remarking that FORMULA , gives
+FORMULA 
+Differentiating again with respect to time, from () we obtain
+FORMULA 
+Therefore, by inequality (REF ), if FORMULA  and FORMULA  are log-concave, FORMULA , and the convexity property of FORMULA  follows.
+On the other hand, proceeding as in the proof of Corollary REF , we obtain from inequality (REF ) the bound
+FORMULA 
+where
+FORMULA 
+in view of inequality (REF ). In addition, equality to zero holds if and only if both FORMULA  and FORMULA  are Gaussian densities.
+Integrating (REF ) from FORMULA  to FORMULA , we obtain for the Fisher information of two log-concave densities the strengthened inequality
+FORMULA 
+In fact, by the central limit property,
+FORMULA 
+FORMULA 
+Last, integrating (REF ) from 0 to FORMULA  we obtain for Shannon's entropy of
+the two log-concave densities the strengthened inequality
+FORMULA 
+where
+FORMULA 
+Choosing now FORMULA  as given by () we end up with inequality (REF ), where
+FORMULA 
+Note that the term FORMULA  is related to the second-order score of the random vectors FORMULA  and FORMULA . Consequently, FORMULA  if and only if both FORMULA  and FORMULA  are Gaussian random vectors.
+Remark 8 In general, the expression of the term FORMULA  is very complicated, due to the fact
+that it is given in terms of integrals of nonlinear functionals evaluated along
+solutions to the heat equations which depart from the densities of FORMULA  and FORMULA . It
+would be certainly interesting to be able to express the term FORMULA  (or to bound it
+from below) in terms of some distance of FORMULA  and FORMULA  from the space of Gaussian
+vectors. This problem is clearly easier in one dimension, where one can use the
+remainder as given by inequality (REF ), namely as the sum of the two
+contributions of the type FORMULA . In this case, one would know if, for some
+distance FORMULA  between two probability densities FORMULA  and FORMULA  and some positive
+constant  FORMULA
+FORMULA 
+where FORMULA  denotes the space of Gaussian densities.
+
+
+Conclusions
+In this paper, we analyzed various inequalities for convolutions for log-concave
+densities. The main discovery is that log-concave densities satisfy a new inequality
+for convolutions which appears as the natural generalization of Shannon's entropy
+power (REF ) and Blachman–Stam (REF ) inequalities. This inequality is sharp,
+and it is the starting point for deriving Shannon's entropy power and Blachman–Stam
+inequalities in a strengthened form. It results in a clear way from the present
+analysis, that the behavior of the log-concave density functions with respect to
+convolutions deserves further investigations.
+Acknowledgment: This work has been written within the activities of the National Group of Mathematical Physics of INDAM (National Institute of High Mathematics). The support of the project “Optimal mass
+transportation, geometrical and functional inequalities with applications”, financed by the Minister of University and Research, is kindly acknowledged.

@@ -1,0 +1,401 @@
+
+[12pt]article
+
+
+
+
+
+Locally Metric Spacetimes
+ Richard Atkins
+richard.atkins@twu.ca
+Department of Mathematics
+Trinity Western University
+7600 Glover Road
+Langley, BC, V2Y 1Y1 Canada
+
+
+
+
+
+
+
+Spacetimes have conventionally been described by a global Lorentzian
+metric on a differentiable four-manifold. Herein we explore
+the possibility of spacetimes defined by a connection, which is locally but
+not globally Levi-Civita. The general method of obtaining such
+connections is presented for the non-degenerate case followed by an
+example that modifies the Robertson-Walker spacetimes for flat
+spacelike hypersurfaces.
+
+Introduction
+Since its inception, general relativity has comprised two principal ingredients:
+a four-dimensional manifold FORMULA  and a Lorentzian metric
+defined on FORMULA . Other objects, such as gauge or matter fields may also be employed,
+serving to influence the geometry of gravitation through the field equations
+FORMULA 
+The four-dimensional manifold hypothesis has been the more flexible of the
+two key constituents of spacetime; Kaluza and Klein, for instance,
+have contemplated spaces of higher dimension,
+whose compactifications were thought to explain some of the features of the physical world
+(cf. {{cite:e3025a9b-6bf7-4abf-a3d0-b38c474edf9e}}, {{cite:3e2fa04f-a7ee-4441-a0f6-243ee2471a9d}}).
+On the other hand, the notion of a globally defined Lorentzian metric has remained,
+by and large, unmodified.
+The field equations (REF ) are covariant with respect to the diffeomorphism
+group Diff, of FORMULA . Early on, diffeomorphism covariance posed difficulties
+in the
+interpretation of general relativity, leading to the "hole" argument and its
+resolution by means of defining the gravitational state as a diffeomorphism class of
+solutions to (REF ). For certain systems, such as the massless scalar field
+or the vacuum, the energy-momentum tensor is invariant under the group Conf, of
+constant conformal rescalings of the metric:
+FORMULA , FORMULA  (cf. {{cite:d43ee660-ee55-43ef-85e1-c8c15adde703}}).
+Equations (REF ) are then also invariant
+under such transformations and so physical states would be defined as equivalence
+classes with respect to the enlarged group Diff FORMULA  Conf (cf. {{cite:0f85d7ac-2473-4795-ae3c-dbce5b04ba6d}}).
+These considerations suggest the possibility of spacetimes that are described by a
+locally metric connection. A connection FORMULA  on FORMULA  is
+locally metric if for each point FORMULA  there exists
+an open neighbourhood FORMULA  of FORMULA  and a metric on FORMULA  that is parallel with
+respect to FORMULA ; these locally defined parallel metrics might not piece together
+into a global metric on FORMULA  (cf. {{cite:f227c61f-887a-4efe-9180-32ae05287ebc}}).
+We shall be primarily concerned with such connections that are, moreover, non-degenerate
+in the sense that for each open subset FORMULA  of FORMULA  the vector space of parallel metrics on
+FORMULA  has dimension at most one; otherwise certain pathologies may arise
+with regard to the causal structure of spacetime.
+When the energy-momentum tensor is invariant under constant rescalings of the metric,
+the field equations (REF ) retain meaning in this context.
+In this case, the prospect arises that spacetime might be defined locally and not through
+a global Lorentzian structure.
+In the following section we develop a
+characterization of non-degenerate, locally metric connections.
+It is shown that such connections FORMULA  satisfy an equation
+FORMULA , where FORMULA  is a metric on FORMULA  and FORMULA  is a closed 1-form.
+Furthermore, FORMULA  is globally metric if and only if FORMULA  is exact.
+The final section investigates two examples. The first applies the methods
+of Section 2 for constructing non-globally metric spacetimes and the second examines
+a degenerate locally metric solution.
+
+Locally Metric Connections
+In this section we seek to determine the general structure of symmetric, non-degenerate,
+locally metric connections on a manifold FORMULA . They are
+described most succinctly in terms of a pair FORMULA  where FORMULA  is a metric and
+FORMULA  is a closed 1-form on FORMULA . From a practical perspective it is sometimes convenient to
+construct such connections by geometric considerations on the universal cover of FORMULA .
+We shall pursue both avenues below and the relation between them.
+Let FORMULA  be a non-degenerate, locally metric Lorentzian connection on a manifold FORMULA  of
+dimension greater than two. At this stage we do not assume that FORMULA  is symmetric.
+By non-degeneracy, the set of local parallel metrics for FORMULA  generates a line bundle
+FORMULA  over FORMULA .
+We may obtain a global non-vanishing section FORMULA  of FORMULA  by means of a partition of unity
+argument. Let FORMULA 
+be an open cover of FORMULA  such that FORMULA  is a trivial line
+bundle over FORMULA  for each FORMULA . Then on each FORMULA  there is a non-vanishing
+section FORMULA  with signature FORMULA .
+Consider any two such local sections FORMULA  and FORMULA  that are defined at some
+common point FORMULA .
+Since FORMULA  has rank one, FORMULA  and FORMULA  are non-zero
+multiples of each other. Furthermore, since FORMULA  FORMULA  and
+FORMULA  and FORMULA  have the same signature, they must be positive
+multiples of each other.
+Let
+FORMULA  with FORMULA  be a partition of unity
+subordinate to FORMULA : FORMULA  for each FORMULA  and
+FORMULA . Consider the sum
+FORMULA 
+Given any FORMULA  there are only finitely many indices FORMULA 
+for which FORMULA . As we have observed, the bilinear forms
+FORMULA  are positive multiples of each other and
+so
+FORMULA 
+is a non-degenerate bilinear form of signature FORMULA .
+It follows that FORMULA  is a non-vanishing section of FORMULA .
+Since FORMULA  is locally metric
+there exists, for each point FORMULA  in FORMULA , an open neighbourhood FORMULA  of FORMULA  and a parallel
+local section FORMULA  of signature FORMULA .
+In view of the fact that FORMULA  has rank one, FORMULA  and the restriction FORMULA 
+are conformally equivalent:
+FORMULA  for some function FORMULA .
+Taking the covariant derivative of FORMULA  gives
+FORMULA  on FORMULA .
+Since FORMULA : FORMULA  is an open cover of FORMULA , FORMULA 
+for some closed 1-form FORMULA  on FORMULA ; on FORMULA  FORMULA  restricts to FORMULA .
+Even though we have focused on locally metric Lorentzian connections above it is clear that
+the results apply to locally metric Riemannian connections as well. The theorem
+summarizes the discussion so far.
+Theorem 1                    
+Let FORMULA  be a non-degenerate, locally metric connection, which is Lorentzian on a manifold
+FORMULA  of dimension greater than two or Riemannian on a manifold of any dimension.
+Then there exists a metric FORMULA  and a closed 1-form
+FORMULA  on FORMULA  such that FORMULA  satisfies the equation
+FORMULA 
+
+A partial converse to the theorem is given by the following proposition.
+Proposition 2 
+Suppose FORMULA , where FORMULA 
+is a metric and FORMULA  is a closed 1-form on FORMULA . Then FORMULA  is locally metric.
+If FORMULA  on an open subset FORMULA  of FORMULA , for some
+FORMULA , then FORMULA .
+
+Proof:
+Since FORMULA  is a closed 1-form, for each FORMULA  there exists an open neighbourhood
+FORMULA  of FORMULA  such that FORMULA , for some FORMULA .
+On FORMULA ,
+FORMULA 
+ FORMULA
+Proposition 3 Suppose FORMULA , where FORMULA 
+is a metric and FORMULA  is a closed 1-form on FORMULA .
+(a) If FORMULA  is exact then FORMULA  is a (globally)
+metric connection on FORMULA .
+(b) If FORMULA  is a non-degenerate (globally) metric connection on FORMULA 
+then FORMULA  is exact.
+
+Proof:
+FORMULA 
+follows from Proposition REF  with FORMULA .
+FORMULA 
+Suppose that FORMULA  is a non-degenerate (globally) metric connection:
+FORMULA  for some metric FORMULA  on FORMULA .
+FORMULA  is locally conformally equivalent to a local parallel metric,
+by Proposition REF .
+The non-degeneracy of FORMULA  then implies that FORMULA  for some
+FORMULA . Thus FORMULA  is an exact 1-form on FORMULA .
+ FORMULA
+Corollary 4 A non-degenerate, locally metric connection satisfying FORMULA 
+is a (globally) metric connection if and only if FORMULA  is exact.
+
+Proposition 5 Let FORMULA  be a metric and FORMULA  a closed 1-form on FORMULA . Then
+the pair FORMULA  determines a unique symmetric connection FORMULA  on FORMULA  by the equation
+FORMULA 
+
+Proof:
+For each point FORMULA  in FORMULA  there exists a connected open neighbourhood FORMULA  and a
+function FORMULA , determined up to a positive constant multiple,
+such that FORMULA . Thus FORMULA  defines a unique symmetric
+connection FORMULA  on FORMULA  by the equations FORMULA , FORMULA .
+The proposition follows from the observation that the equations FORMULA ,
+FORMULA , are equivalent to FORMULA .
+ FORMULA
+This construction generalizes the Levi-Civita connection; if FORMULA  is exact, with
+FORMULA  for some FORMULA , then the symmetric connection
+defined by FORMULA  is the Levi-Civita connection of FORMULA .
+The symmetric connection FORMULA  determined by a pair FORMULA 
+is not necessarily non-degenerate. It is easy to create
+degenerate examples by considering product manifold structures. However, FORMULA  will
+be non-degenerate for a generic choice of FORMULA .
+Suppose FORMULA  is a symmetric, non-degenerate connection determined by both
+FORMULA  and FORMULA .
+By Proposition REF , FORMULA  and FORMULA  are locally conformally
+equivalent to local parallel metrics and so by non-degeneracy FORMULA  and FORMULA 
+are conformally equivalent to each other:
+FORMULA  for some function FORMULA .
+The equations FORMULA ,
+for FORMULA , give FORMULA . On the other hand, FORMULA  and
+FORMULA  define the same symmetric connection for any non-vanishing
+function FORMULA  on FORMULA .
+For the purpose of constructing locally metric connections it is often
+illuminating to carry the
+analysis to the universal cover FORMULA  of FORMULA .
+Let FORMULA  determine the locally metric connection FORMULA  on FORMULA .
+Pull FORMULA , FORMULA  and FORMULA  back to FORMULA ,
+FORMULA  and FORMULA  on
+FORMULA . Then
+FORMULA 
+FORMULA  is exact since it is a closed form on a simply-connected manifold and so there
+exists a function FORMULA  such that
+FORMULA .
+Put FORMULA . FORMULA  is the Levi-Civita
+connection of FORMULA :
+FORMULA 
+For any FORMULA  there exists a connected
+open neighbourhood FORMULA  of FORMULA  in FORMULA  such that
+FORMULA  is the disjoint union
+FORMULA 
+of sheets FORMULA  each naturally diffeomorphic to FORMULA .
+Given two points FORMULA  there exists
+a diffeomorphism FORMULA  defined by
+FORMULA 
+In particular, FORMULA . Now,
+FORMULA 
+Since the open sets FORMULA  and FORMULA  are required to be connected, it follows that
+FORMULA 
+for some constant FORMULA .
+Therefore
+FORMULA 
+Define the manifold
+FORMULA 
+We have shown that FORMULA  satisfies the following condition:
+FORMULA 
+for all FORMULA , where FORMULA 
+is a locally constant function.
+As the notation suggests, this condition does not depend upon the choice of
+connected open neighbourhoods FORMULA .
+We state this as a lemma.
+Lemma 6 
+Let FORMULA  be a locally metric connection on FORMULA  defined by a pair FORMULA .
+Then FORMULA  is the projection of the Levi-Civita connection FORMULA  of a
+metric FORMULA  on the universal cover FORMULA  of FORMULA , which
+satisfies condition (REF ).
+
+Conversely, suppose that FORMULA  is a metric on FORMULA 
+satisfying condition (REF ). Clearly, its Levi-Civita connection FORMULA 
+projects down to a locally metric connection FORMULA  on FORMULA . We shall demonstrate that
+the projected connection FORMULA  is, in fact,
+defined by a pair FORMULA . To this end we seek a function
+FORMULA  for which
+FORMULA 
+for all FORMULA .
+Let FORMULA  be such that FORMULA .
+From (REF ),
+FORMULA 
+Therefore
+FORMULA 
+For each FORMULA  fix some sheet FORMULA  in FORMULA . Define the function
+FORMULA  by
+FORMULA 
+where FORMULA  is the unique element in FORMULA  for which FORMULA .
+Suppose FORMULA , with FORMULA . Then
+FORMULA 
+That is,
+FORMULA 
+Therefore FORMULA  satisfies (REF ),
+but is only defined on an open subset of
+FORMULA . To find a positive, globally defined function FORMULA  we use a partition
+of unity FORMULA  subordinate to the cover FORMULA  of
+FORMULA : FORMULA , where
+FORMULA .
+Put
+FORMULA 
+Consider FORMULA  with FORMULA  and let FORMULA 
+be the indices in FORMULA  for which FORMULA . Then
+FORMULA , for FORMULA .
+FORMULA 
+as required.
+Therefore FORMULA  projects to a metric FORMULA  on FORMULA :
+FORMULA 
+To be more precise, define FORMULA  by the pullback
+FORMULA 
+for any FORMULA . To show that this is well-defined,
+consider FORMULA  such that FORMULA . Then
+FORMULA 
+By similarly pulling back the equation
+FORMULA 
+it follows that
+FORMULA 
+for some closed 1-form FORMULA  on FORMULA .
+Applying the previous lemma we arrive at the theorem below.
+Theorem 7 Let FORMULA  be a symmetric connection on FORMULA . FORMULA  is defined by a pair
+FORMULA  if and only if
+FORMULA  is the projection of the Levi-Civita connection FORMULA 
+of a metric FORMULA  on
+the universal cover FORMULA  of FORMULA , which satisfies condition (REF ).
+
+
+Examples
+In this section we consider two examples, both chosen for the purpose of illustration rather
+than physical realism. The first will apply the procedure for
+finding locally metric connections, developed in the previous section, to Robertson-Walker
+spacetimes. The second highlights some of the unusual features that can arise in the
+degenerate case.
+                  
+ Non-degenerate case  
+Consider FORMULA ,
+where FORMULA  is the 1-sphere or circle and FORMULA  is the Klein bottle.
+FORMULA  will parametrize time and FORMULA  will describe the topology of spacelike
+hypersurfaces. We begin by seeking the first de Rham cohomology group of FORMULA .
+The simplest case of the Poincaré Lemma is FORMULA  and
+FORMULA .
+Also, it is well known that FORMULA .
+Recall that the Klein bottle is obtained from the rectangle by identifying the edges
+in the manner indicated by the arrows in the following diagram:
+
+ FORMULA FORMULA FORMULA FORMULAThe base point FORMULA  of FORMULA  corresponds to the corners of the rectangle, which
+are all identified.
+By traversing the boundary of the rectangle in a counterclockwise direction we obtain a
+loop based at FORMULA , which is homotopic, relative to the base point,
+to the constant loop. Thus FORMULA  and the fundamental group of FORMULA  is
+FORMULA 
+that is, the group on two generators FORMULA  and FORMULA  subject to FORMULA .
+The abelianization of the fundamental group is the abelian group generated by FORMULA  and FORMULA 
+restricted by the relation FORMULA , i.e. FORMULA . Therefore
+FORMULA 
+The Hurewicz isomorphism then gives the first singular homology group of FORMULA  with integer
+coefficients: FORMULA . By a
+Universal Coefficient theorem we obtain the first singular cohomology group with coefficients
+in FORMULA :
+FORMULA 
+According to de Rham's theorem, FORMULA  is isomorphic to FORMULA .
+Hence
+FORMULA 
+Also, since FORMULA  is connected, FORMULA . The Künneth formula
+now provides the first de Rham cohomology of FORMULA :
+FORMULA 
+FORMULA  may also be obtained from FORMULA  by the identifications
+FORMULA 
+where FORMULA  and FORMULA  are non-zero constants.
+FORMULA  and FORMULA  on FORMULA  are independent,
+closed forms that project to FORMULA . Since FORMULA ,
+the general closed 1-form on FORMULA  is
+FORMULA 
+where FORMULA  and FORMULA  are constants and FORMULA  is a positive function on FORMULA .
+The Robertson-Walker spacetime for flat spacelike hypersurfaces has the form
+FORMULA 
+with FORMULA . It projects to a Lorentzian metric FORMULA 
+on FORMULA . The pair FORMULA  determines a unique symmetric connection FORMULA  on
+FORMULA  by the formula FORMULA . If FORMULA  then FORMULA  is the Levi-Civita
+connection of a (global) metric on FORMULA .
+From (REF ), FORMULA , for
+FORMULA 
+Therefore FORMULA  is the Levi-Civita connection of the local metric
+FORMULA 
+Let us consider the case FORMULA . On the spacelike hypersurfaces
+FORMULA , (REF ) reduces to FORMULA ,
+which defines a locally Levi-Civita connection
+FORMULA . The non-zero Christoffel symbols for FORMULA ,
+the pullback of FORMULA  to the universal cover FORMULA  of FORMULA , are
+FORMULA 
+These are invariant with respect to the transformations
+FORMULA 
+verifying that FORMULA  is, in fact, defined on FORMULA .
+It is worth pointing out that a similar exploration performed on FORMULA ,
+where FORMULA  signifies the 3-torus, underscores some further characteristics analogous
+to metric geometry. In this case, we find that given any two points on a spacelike
+hypersurface FORMULA , one can be mapped to the other by a translation on FORMULA ,
+which preserves the locally metric connection. This naturally extends the notion of
+homogeneity to locally metric spacetimes.
+                  
+ Degenerate case   Consider the Lorentzian metric
+FORMULA 
+on FORMULA , where
+FORMULA 
+and
+FORMULA 
+FORMULA  is the metric of a product of (pseudo-)Riemannian manifolds, so
+the Levi-Civita connection FORMULA  of FORMULA  is degenerate.
+Let FORMULA  be the quotient manifold of FORMULA  with respect to the
+identifications
+FORMULA 
+Topologically, FORMULA  is the product of an infinite cylinder with the plane.
+Since FORMULA , the connection FORMULA  projects
+down to a locally, but not globally, metric connection FORMULA  on FORMULA ; indeed,
+the non-zero Christoffel symbols
+FORMULA 
+of FORMULA  are invariant with respect to the transformation
+FORMULA  on FORMULA .
+FORMULA  is not defined by FORMULA  for any pair FORMULA .
+Were it so, there would exist a positive function FORMULA  and a parallel metric
+FORMULA 
+on the universal cover FORMULA  of FORMULA  such that FORMULA 
+projects to FORMULA  on FORMULA . The most general metric on FORMULA ,
+parallel with respect to FORMULA , is of the form
+FORMULA 
+for constants FORMULA  and FORMULA  satisfying FORMULA , FORMULA  and
+FORMULA .
+If FORMULA  were the pullback FORMULA  of a metric FORMULA  on FORMULA 
+then we would have FORMULA , implying FORMULA .
+Furthermore, the causal structure on FORMULA  is ambiguous. One might consider specifying a
+causal structure about a point FORMULA  on FORMULA  by a choice of parallel metric
+in a neighbourhood of FORMULA , given by (REF ).
+Following this metric along
+the loop FORMULA , for FORMULA ,
+results in a second causal structure about FORMULA  determined by
+FORMULA 

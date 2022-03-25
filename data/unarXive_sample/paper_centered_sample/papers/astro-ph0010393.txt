@@ -1,0 +1,355 @@
+
+Published in The Astrophysical Journal, 539:L101–L105,
+2000 August 20
+Received 2000 March 27; accepted 2000 June 21; published
+2000 August 16
+WATER ABUNDANCE IN MOLECULAR CLOUD CORES
+SNELL ET AL.
+Water Abundance in Molecular Cloud Cores
+R. L. Snell1,
+J. E. Howe1,
+M. L. N. Ashby2,
+E. A. Bergin2,
+G. Chin3,
+N. R. Erickson1,
+P. F. Goldsmith4,
+M. Harwit5,
+S. C. Kleiner2,
+D. G. Koch6,
+D. A. Neufeld7,
+B. M. Patten2,
+R. Plume2,
+R. Schieder8,
+J. R. Stauffer2,
+V. Tolls2,
+Z. Wang2,
+G. Winnewisser8,
+Y. F. Zhang2,
+and G. J. Melnick2
+1Department of Astronomy, University of Massachusetts,
+Amherst, MA 01003
+2Harvard-Smithsonian Center for Astrophysics, 60 Garden Street,
+Cambridge, MA 02138
+3NASA Goddard Spaceflight Center, Greenbelt, MD 20771
+4National Astronomy and Ionosphere Center, Department of
+Astronomy, Cornell University, Space Sciences Building,
+Ithaca, NY 14853-6801
+5511 H Street SW, Washington, DC 20024-2725; also Cornell
+University
+6NASA Ames Research Center, Moffett Field, CA 94035
+7Department of Physics and Astronomy, Johns Hopkins University,
+3400 North Charles Street, Baltimore, MD 21218
+8I. Physikalisches Institut, Universität zu Köln,
+Zülpicher Strasse 77, D-50937 Köln, Germany
+We present Submillimeter Wave Astronomy Satellite (SWAS)
+observations of the FORMULA  transition of ortho-HFORMULA O at 557 GHz toward 12 molecular cloud cores. The water emission was
+detected in NGC 7538, FORMULA  Oph A, NGC 2024, CRL 2591, W3, W3(OH), Mon
+R2, and W33, and was not detected in TMC-1, L134N, and B335. We also
+present a small map of the HFORMULA O emission in S140. Observations of the
+HFORMULA O line were obtained toward S140 and NGC 7538, but no emission
+was detected. The abundance of ortho-HFORMULA O relative to HFORMULA  in the
+giant molecular cloud cores was found to vary between FORMULA 
+and FORMULA . Five of the cloud cores in our sample have previous
+HFORMULA O detections; however, in all cases the emission is thought to
+arise from hot cores with small angular extents. The HFORMULA O abundance
+estimated for the hot core gas is at least 100 times larger than in the
+gas probed by SWAS. The most stringent upper limit on the ortho-HFORMULA O abundance in dark clouds is provided in TMC-1, where the 3FORMULA 
+upper limit on the ortho-HFORMULA O fractional abundance is FORMULA .
+ISM: abundances — ISM: clouds — ISM: molecules — radio
+lines: ISM
+Introduction
+The Submillimeter Wave Astronomy Satellite (SWAS) has detected spatially
+extended HFORMULA O emission associated with the quiescent dense molecular
+gas in Orion and M17 {{cite:e2f7c54f-bbab-4d47-83ca-97e1dca39b01}}, {{cite:1916264a-dcb8-4b7d-b16a-ca067d3db6f6}}. Based on these observations
+the relative abundance of ortho-HFORMULA O was found to be surprisingly
+small, ranging from only FORMULA  to FORMULA . We present
+here SWAS observations of the ortho-HFORMULA O transition at 557 GHz in
+the three dark cloud cores TMC-1, L134N and B335 and in the nine giant
+molecular cloud cores W3, W3(OH), Mon R2, FORMULA  Oph A, W33, CRL 2591,
+S140, and NGC 7538.
+Five of the cloud cores in our survey have had previously reported
+water detections. NGC 7538, S140, W3, and CRL 2591 were detected by
+the Infrared Space Observatory in the ro-vibrational lines of
+HFORMULA O from the FORMULA  bending mode at 6 FORMULA m in absorption
+against the dust continuum {{cite:0c428112-9e67-4c6d-bbb7-713f8d32d9cd}}, {{cite:8a299982-f32e-42d0-97b8-3aeee25728b2}}, {{cite:b03c2d6c-f400-4591-afce-907428772604}}. Water
+emission has also been detected in NGC 7538, W3, and W3(OH) from the
+FORMULA  transition of HFORMULA O at 183 GHz {{cite:22e5e551-37b1-45fd-ad50-18209816ff37}}
+and the FORMULA  transition of HFORMULA O at 203 GHz
+{{cite:e307ed61-7789-4605-8b62-a408b95911ed}}. The 183 GHz and 203 GHz lines arise from transitions
+with relatively high energies (FORMULA  K) and thus are likely
+produced in relatively warm gas. The 6 FORMULA m absorption features can
+arise from a range of gas temperatures, however the absorption seen
+in these sources is thought to be dominated by relatively warm gas.
+The relative abundance of HFORMULA O in the warm gas has been estimated
+to be FORMULA  to FORMULA . SWAS, on the other hand,
+can observe the lowest energy rotational transition of ortho-HFORMULA O permitting detection of HFORMULA O emission from the more extended, cold
+core gas. We estimate the abundance of ortho-water in the relatively
+cold (FORMULA  K) core gas and compare the abundance results with those
+for the warm gas and those for Orion and M17.
+
+Observations and Results
+The observations of HFORMULA O and HFORMULA O reported here were obtained by
+SWAS during the period 1998 December to 2000 January. The data were
+acquired by nodding the satellite alternatively between the cloud core
+and a reference position free of molecular emission. Details concerning
+data acquisition, calibration, and reduction with SWAS are presented
+in {{cite:02d19b2c-46e7-4792-be94-0bc5d1c79b5b}}. Observations of the FORMULA 
+transition of HFORMULA O at a frequency of 556.936 GHz were obtained
+toward the positions given in Table 1. Total integration times for
+these observations range from 17 hr for W3(OH) to 127 hr for L134N.
+In addition, we obtained a small 10-point map of the S140 cloud core with
+integration times per position of between 18 and 36 hr. The center
+positions of S140 and NGC 7538 were also observed in HFORMULA O at a
+frequency of 547.676 GHz for 189 and 36 hr respectively. The SWAS beam is elliptical, and at the frequency of the water transitions has
+angular dimensions of FORMULA . The data shown in
+this paper are in antenna temperature units and are not corrected for
+the measured SWAS main beam efficiency of 0.90. We also used the
+Five College Radio Astronomy Observatory (FCRAO) 14 m telescope to map the
+FORMULA  transition of CFORMULA O in an approximately FORMULA  region in each core to provide an estimate of the gas
+column density for use in our analysis of the HFORMULA O data.
+FIGURE 
+HFORMULA O emission was detected in all nine giant molecular cloud cores.
+However despite deep integrations, we were unable to detect HFORMULA O emission in any of the three dark cloud cores. The HFORMULA O spectra
+obtained for six of the cloud cores are shown in Figure 1. Spectra for
+five of the remaining six cores are shown in {{cite:0ca51463-4b53-4f11-8c3c-9759e43441af}}. The spectrum
+of B335, where no HFORMULA O emission was detected, is not shown. The HFORMULA O line profiles for the giant molecular cloud cores show a wide variety
+of shapes, ranging from relatively narrow single-peaked lines to broad,
+strongly self-absorbed lines. We have marked in Figure 1 the line
+center velocity of the FORMULA CO FORMULA  emission (J. Howe et
+al. 2000, in preparation) observed simultaneously with SWAS. In W3,
+Mon R2, and W33 it is obvious that the HFORMULA O line is self-absorbed,
+since the peak of the FORMULA CO emission corresponds to a minimum in the
+HFORMULA O emission. CRL 2591 is probably also self-absorbed, although in
+this case the situation is somewhat more ambiguous. More discussion about
+the HFORMULA O line profiles can be found in {{cite:0ca51463-4b53-4f11-8c3c-9759e43441af}}. The spectra
+for FORMULA  Oph A and NGC 7538 presented in {{cite:0ca51463-4b53-4f11-8c3c-9759e43441af}} show obvious
+broad wings, suggesting that some of the HFORMULA O emission probably arises
+in associated molecular outflows.
+A small map of the HFORMULA O emission in S140 is shown in Figure
+
+2. The emission toward the center of the core reveals a rela-
+
+
+ FIGURE
+Spectra of the FORMULA  transition of
+ortho-HFORMULA O from six cloud cores. The line center velocity of the
+FORMULA CO FORMULA  transition observed simultaneously with SWAS is indicated for W3, Mon R2, CRL 2591, and W33 by a dotted line. The
+coordinates of each core are given in Table 1.
+tively narrow (FORMULA  = 5.7 km sFORMULA ), single-peaked
+line. HFORMULA O emission was also detected at positions 32 to the
+north and south of center, however no emission was found east or west
+of center. The off-center spectra in general have rms noise of 0.02 K,
+about 2 times larger than the center position. During these observations
+the long axis of the SWAS beam was oriented approximately north-south,
+thus explaining the stronger emission detected in these directions.
+We failed to detect HFORMULA O emission in either S140 or NGC 7538.
+The rms noise achieved in the NGC 7538 observation of 0.03 K was not
+adequate to place a very useful limit on the HFORMULA O/HFORMULA O ratio.
+In S140, however, the HFORMULA O spectrum had an rms noise of only 0.01 K.
+In S140 we used the line width and line center velocity derived from a
+Gaussian fit to the HFORMULA O line (see Fig. 2) to constrain a Gaussian
+fit to the HFORMULA O spectra. From this constrained fit we derived
+a 1FORMULA  upper limit to the integrated intensity of 0.022 K km
+sFORMULA  leading to a 1FORMULA  lower limit on the intensity ratio of
+HFORMULA O/HFORMULA O of 70.
+
+Determination of the Water Abundance
+We have analyzed the HFORMULA O observations of the twelve cores
+
+ FIGURE
+10-position map of the FORMULA  transition
+of ortho-HFORMULA O obtained with SWAS toward S140. The spectra were
+obtained on a regular grid spaced by 32 and are shown in their
+correct relative positions on the sky. Offsets in arcminutes relative
+to the position of S140 given in Table 1 are indicated for each spectrum.
+in the same manner as reported for Orion and M17 (Snell et al. 2000a,
+2000b). Before reviewing this procedure, it is worth noting that
+the critical density for the 557 GHz transition of HFORMULA O observed
+by SWAS is of order FORMULA  cmFORMULA , much higher than the average
+density of gas in these cores. Therefore the probability of collisional
+deexcitation of this transition is very small, and photons produced
+by collisional excitations will all escape the cloud core, although
+they may be repeatedly absorbed and reemitted. A linear relation thus
+exists between the observed line integrated intensity and the product
+of the density and the ortho-HFORMULA O column density, independent of the
+optical depth of this transition {{cite:f38b349e-e153-4ca8-ab4e-7f6c57d34c84}}, {{cite:e2f7c54f-bbab-4d47-83ca-97e1dca39b01}}. The emission in
+this case is effectively optically thin. Although we did not use this
+analytical expression to derive abundances, it provides insight into the
+dependence of the water abundance on the physical properties of the cloud.
+We estimate the relative ortho-HFORMULA O abundance using a simple model of
+the temperature, density, column density, and velocity dispersion for the
+gas in each core. The gas column density distribution was determined
+from the CFORMULA O maps, sampled at 44 intervals, assuming LTE
+and a CFORMULA O/HFORMULA  abundance ratio of FORMULA . The SWAS beam filling factor is effectively the convolution of the column density
+distribution with the SWAS beam pattern. The velocity dispersion of
+the gas along each line of sight was determined from the CFORMULA O line width.
+Another important parameter in our modeling is the gas density. For five
+sources (W3, W3(OH), FORMULA  Oph, W33, and Mon R2) we have strip maps
+of the CS FORMULA  emission obtained at FCRAO and the FORMULA  and FORMULA  transitions obtained at KOSMA.
+Most of this data is unpublished, although the results for the core
+centers can be found in {{cite:6fd310d3-92f8-4359-b165-95b72f868465}}. The CS emission was found to
+be centrally peaked in these cores with detectable emission extending
+at least several arcminutes from the center. Modeling of these
+data suggests that even though the column density decreases rapidly
+away from the core center, the density remains relatively constant.
+We used the published density results for L134N {{cite:fbd5f1a2-e5d5-4084-8e2b-711086555705}}, TMC-1
+{{cite:088d5b90-8015-42a3-b761-12a255ef59d1}}, S140 {{cite:11aa9914-d73a-4063-a51b-b905e9990f20}}, {{cite:1564dea0-cba2-4970-8383-47f9cd931e2b}}, NGC 2024 {{cite:11aa9914-d73a-4063-a51b-b905e9990f20}}, {{cite:9fb1d7c5-3dca-4ba0-b013-6a70e7b3ffe1}},
+B335 {{cite:ebf9ab85-37f3-49d9-9470-24d08f18d0f1}}, NGC 7538 {{cite:8ce9bd82-63d0-471f-b601-2aea73df9355}} and CRL 2591 {{cite:74b25e82-fdc4-4916-b951-97e12af484b8}}, {{cite:3d3f8ef9-5e26-4ea2-98be-f961329ae258}}
+in our modeling. For L134N, TMC-1, S140, and NGC 2024 these authors
+have found that the density is relatively constant across the core.
+Thus for many of the cores the high column density gas, which dominates
+the SWAS emission, can be roughly characterized by a single density.
+We therefore assumed a constant density and temperature for the cores,
+and the values used are summarized in Table 1. Although a single density
+cannot apply to all of the gas within the SWAS beam, we believe that
+the use of this approximation should not lead to serious errors in our
+abundance determinations.
+The collisional excitation of HFORMULA O was computed using both the para- and
+ortho-HFORMULA  collision rates with ortho-HFORMULA O {{cite:c0b4465e-653d-474f-a3c1-4ca9105d529b}}, and assuming
+a ratio of ortho- to para-HFORMULA  given by LTE at the temperatures given in
+Table 1. We did not include dust in our model, however the calculations
+of {{cite:909f9313-9fd2-4514-b508-8233474547c3}} for S140 and FORMULA  Oph A indicate that the exclusion
+of the dust continuum emission will have only a minor impact on the
+determination of the water abundance. We do note that in W33, the line
+is clearly absorbing the dust continuum, and therefore some of the dust
+continuum photons are converted into line photons. For our analysis
+we have used the total integrated intensity including the negative
+contribution in the absorption feature, and thus, the integrated line
+intensity should be representative of the total number of line photons.
+We proceed in our analysis by guessing a relative ortho-HFORMULA O abundance
+for the core, then computing the emission distribution, and finally
+convolving that distribution with the SWAS beam. The abundance
+of HFORMULA O is varied until the modeled integrated intensity agrees
+with observations. We assume a constant HFORMULA O abundance across each
+source. For positions with no detections, we used the 3FORMULA  upper
+limit on the integrated intensity to establish a 3FORMULA  upper limit
+on the HFORMULA O abundance. The abundances and/or limits found for each
+core are given in Table 1. For S140 and FORMULA  Oph A our results agree
+well with the abundances derived by {{cite:909f9313-9fd2-4514-b508-8233474547c3}} using a more detailed
+3-dimensional model of the density and temperature profile within these
+sources. The uncertainty in our derived abundances is dominated by the
+uncertainties in the physical conditions, chiefly density. The accuracy
+of density determinations is of order a factor of three, thus leading to
+abundance uncertainties of the same magnitude. However, due to our use
+of a single density to characterize these cores, the gas density at the
+periphery of the cloud cores may be overestimated. This does not have a
+big impact on the abundance determination because the column density is
+low in these regions and does not contribute substantially to the HFORMULA O emission detected by SWAS. Nevertheless, the use of a single density
+slightly biases our abundance determinations toward lower values.
+In the giant molecular cloud cores the abundance of ortho-HFORMULA O relative to HFORMULA  varies from FORMULA  to FORMULA .
+The highest HFORMULA O abundances are derived for NGC 7538 and S140.
+The high HFORMULA O abundance found for NGC 7538 is in part a consequence of
+including emission arising from the molecular outflows, thus resulting
+in an overestimate of the core abundance. However, in S140, the line
+profile is relatively narrow and it is unlikely that the core emission
+is substantially contaminated by outflow emission.
+We have also analyzed the mapping data for S140 using the same model
+as used for the center position. The detected HFORMULA O emission at
+positions 32 north and 32 south of center is consistent
+with the predictions based on our cloud model using the abundance of
+HFORMULA O found for the core center. The cloud core is extended to the
+north-east, and the absence of HFORMULA O emission toward the positions east
+and north-east of the core center requires that either the abundance
+of ortho-HFORMULA O or the gas density be about 2 to 4 times smaller than
+toward the core center. The absence of extended emission in the higher
+rotational transitions of CS {{cite:11aa9914-d73a-4063-a51b-b905e9990f20}}, suggests that the lack of
+HFORMULA O emission is most likely explained by a lower density and not a
+lower abundance. The non-detections of HFORMULA O emission in the remaining
+positions is entirely consistent with our cloud model and the HFORMULA O abundance reported in Table 1.
+Although we believe that for most of the gas the HFORMULA O emission is
+effectively thin, it is possible that there are very small dense knots
+of gas that are not. In addition, a relatively thin layer of gas in an
+extended envelope surrounding the core could have sufficient HFORMULA O optical depth to scatter the line photons that arise from the core
+{{cite:e2f7c54f-bbab-4d47-83ca-97e1dca39b01}}. The HFORMULA O line should be less sensitive to these
+problems since it is optically thin, and therefore a more reliable
+estimator of the HFORMULA O abundance. We have used the HFORMULA O observations toward the S140 core to establish an upper limit to the
+fractional abundance of ortho-HFORMULA O. Using the same physical model
+described above, we derive a FORMULA  upper limit to the ortho-HFORMULA O abundance of FORMULA . Assuming a ratio of HFORMULA O/HFORMULA O
+of 500, this corresponds to a FORMULA  upper limit of FORMULA 
+for the abundance of ortho-HFORMULA O relative to HFORMULA . Comparing this
+result to our estimate of the HFORMULA O abundance obtained from the more
+common isotopic species, it is not surprising that we were unable to
+detect HFORMULA O in this core.
+We failed to detect HFORMULA O emission from the three dark cloud cores
+observed by SWAS. Although we achieved similar signal-to-noise ratio in
+all three cores, the higher density and column density in TMC-1 permit
+establishing a more stringent limit on the ortho-HFORMULA O abundance. In
+TMC-1, we find a FORMULA  upper limit on the fractional abundance of
+ortho-HFORMULA O of FORMULA . However, even in TMC-1 the water
+abundance limit is nearly two orders of magnitude larger than the typical
+giant molecular cloud core. The lower density and temperature in dark
+cloud cores make detection of HFORMULA O very difficult.
+
+Discussion and Summary
+SWAS has detected thermal water emission from nine giant molecular cloud
+cores which permit us to make the first estimate of the water abundance in
+the cold, dense core gas. The abundance of ortho-HFORMULA O relative to HFORMULA  in these cloud cores varies from FORMULA  to FORMULA .
+The relative ortho-HFORMULA O abundance in the majority of these cores is
+of order FORMULA , similar to the abundances found for M17SW
+{{cite:1916264a-dcb8-4b7d-b16a-ca067d3db6f6}}. In S140 the relative abundance of ortho-HFORMULA O is
+about ten times larger, closer to the average ortho-HFORMULA O abundance for
+Orion {{cite:e2f7c54f-bbab-4d47-83ca-97e1dca39b01}}. In general the relative abundance of ortho-HFORMULA O found in these cores is inconsistent with chemical equilibrium models
+of well-shielded regions of clouds {{cite:45c32cc9-59ad-42a1-bd66-eedcab5ddf9a}}, even considering the
+most extreme uncertainties that might arise in our modeling procedure.
+Possible explanations for this discrepancy are discussed in {{cite:848c3467-a949-4088-8988-eb4facf92102}}.
+Water has been previously detected from the hot gas in W3 IRS 5,
+W3(OH), CRL 2591, S140, and NGC 7538 IRS 1 via the 183 and 203 GHz
+emission lines and the ro-vibrational absorption lines at 6 FORMULA m
+{{cite:0c428112-9e67-4c6d-bbb7-713f8d32d9cd}}, {{cite:8a299982-f32e-42d0-97b8-3aeee25728b2}}, {{cite:e307ed61-7789-4605-8b62-a408b95911ed}}, {{cite:b03c2d6c-f400-4591-afce-907428772604}}. It it worth noting that the SWAS observation of W3 is centered about midway between IRS 4 and IRS 5,
+less than 1 from IRS 5; and the SWAS observation of NGC 7538
+is centered about 1 south of IRS 1. In both cases the regions
+probed via the 6 FORMULA m, 183 GHz, and 203 GHz transitions are well
+within the SWAS beam. The water emission and absorption in these
+cores is thought to arise from hot cores surrounding young, massive
+stars with angular extents of only a few arcseconds and gas temperatures
+FORMULA 300 K {{cite:b03c2d6c-f400-4591-afce-907428772604}}, {{cite:3d3f8ef9-5e26-4ea2-98be-f961329ae258}}. Abundance estimates for water
+in the hot cores range from FORMULA  to FORMULA ,
+several orders of magnitude greater than the abundance of water in the
+surrounding core gas. Even our limit on the HFORMULA O abundance based
+on HFORMULA O in S140 rules out the possibility that the large HFORMULA O abundance found for the warm gas applies to the general cloud core.
+At temperatures exceeding FORMULA 200-400 K, found in shocks and hot
+cores, a series of neutral-neutral reactions rapidly converts nearly
+all of the gas phase oxygen into water {{cite:eab81986-0e5f-4f16-b3cc-7a7ddbe6b263}}, {{cite:45c32cc9-59ad-42a1-bd66-eedcab5ddf9a}}. Thus, the
+substantial difference predicted by the gas-phase chemistry models for
+the water abundance in warm and cold gas is confirmed by our observations.
+SWAS, with a large beam size and the ability to observe a low excitation
+line of water, is most sensitive to the water emission from the extended,
+colder dense gas. However, if the water abundance in the cold gas is
+extremely small, then the hot cores may still contribute to the emission
+seen by SWAS. If we assume that the brightness temperature of the
+557 GHz emission from the hot core gas is 300 K (the same excitation
+temperature as implied by the absorption lines seen by Infrared
+Space Observatory) and that the core has an angular size of at most
+2, then the contribution to the observed SWAS HFORMULA O emission
+is negligible in most sources, except CRL 2591. Although {{cite:2343e2e0-cdb4-4824-9522-1f0e23f14c13}}
+suggest that the CRL 2591 hot core has an angular diameter much less than
+1, the extremely weak emission detected in this source could have a
+significant hot-core contribution. Further information on the temperature
+and angular size of the hot core is needed to evaluate this possibility.
+If a significant fraction of the water emission detected by SWAS in
+CRL 2591 is attributed to the hot core, then the abundance of HFORMULA O in the cold gas is even smaller than that quoted in Table 1.
+Only upper limits to the ortho-HFORMULA O abundance could be established
+for the dark cloud cores. If the abundance of water in these cores is
+as small as that found for the giant molecular cloud cores, it will
+be difficult to detect water emission in quiescent dark cloud cores.
+The most stringent limit on the ortho-HFORMULA O abundance is set in TMC-1,
+and in this core the 3FORMULA  upper limit on the HFORMULA O abundance
+is just marginally consistent with equilibrium gas-phase chemistry
+predictions {{cite:848c3467-a949-4088-8988-eb4facf92102}}. B335 is the site of a well-studied class
+0 protostar, while neither L134N nor TMC-1 are actively forming stars.
+Broad HFORMULA O emission has been detected by SWAS toward two other class
+0 protostellar cores, L1157 and NGC 1333 IRAS 4 {{cite:329d1476-580a-4f1b-9e7f-f4f23f599663}}. The HFORMULA O emission in these sources clearly arises from the molecular outflows
+associated with class 0 sources. The relative abundance of ortho-HFORMULA O in the outflow gas found by {{cite:329d1476-580a-4f1b-9e7f-f4f23f599663}} is of order FORMULA ,
+considerably larger than the limit set in the two non-star forming cores,
+L134N and TMC-1. {{cite:329d1476-580a-4f1b-9e7f-f4f23f599663}} suggests that the enhanced abundance is
+due to shocks that convert a large fraction of the gas-phase oxygen into
+water. B335 also has an associated molecular outflow, with a outflow
+mass between that of L1157 and NGC 1333 IRAS 4 {{cite:b93a8f0b-9915-491f-895d-dd2cec964687}}, {{cite:329d1476-580a-4f1b-9e7f-f4f23f599663}}.
+The absence of HFORMULA O emission in B335 is difficult to understand,
+unless either the density of the outflow gas is much lower than in L1157
+or NGC 1333 IRAS 4, or the shock velocities are sufficiently small that
+HFORMULA O formation by neutral-neutral reactions is inhibited.
+This work was supported by NASA's SWAS contract NAS5-30702 and NSF
+grant AST97-25951 to the Five College Radio Astronomy Observatory.
+R. Schieder and G. Winnewisser would like to acknowledge the generous
+support provided by the DLR through grants 50 0090 090 and 50 0099 011.

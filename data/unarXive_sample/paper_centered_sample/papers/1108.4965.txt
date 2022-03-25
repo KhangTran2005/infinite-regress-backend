@@ -1,0 +1,340 @@
+
+=1
+School of Mathematics, Statistics, and Operations Research,
+Victoria University of Wellington, PO Box 600, Wellington 6140, New Zealand
+kyle.tate@msor.vuw.ac.nz
+matt.visser@msor.vuw.ac.nz
+A key insight used in developing the theory of Causal Dynamical Triangulations (CDTs) is to use the causal (or light-cone) structure of Lorentzian manifolds to restrict the class of geometries appearing in the Quantum Gravity (QG) path integral. By exploiting this structure the models developed in CDTs differ from the analogous models developed in the Euclidean domain, models of (Euclidean) Dynamical Triangulations (DT), and the corresponding Lorentzian results are in many ways more “physical”.
+In this paper we use this insight to formulate a Lorentzian signature model that is analogous to the Quantum Regge Calculus (QRC) approach to Euclidean Quantum Gravity. We exploit another crucial fact about the structure of Lorentzian manifolds, namely that certain simplices are not constrained by the triangle inequalities present in Euclidean signature. We show that this model is not related to QRC by a naive Wick rotation; this serves as another demonstration that the sum over Lorentzian geometries is not simply related to the sum over Euclidean geometries. By removing the triangle inequality constraints, there is more freedom to perform analytical calculations, and in addition numerical simulations are more computationally efficient.
+We first formulate the model in 1+1 dimensions, and derive scaling relations for the pure gravity path integral on the torus using two different measures. It appears relatively easy to generate “large” universes, both in spatial and temporal extent. In addition, loop-to-loop amplitudes are discussed, and a transfer matrix is derived. We then also discuss the model in higher dimensions.
+24 August 2011; 15 October 2011; -ed 2018/12/11 22:33:02
+Quantum Regge Calculus, Causal Dynamical Triangulations, Lorentzian Simplices
+Fixed-Topology Lorentzian Triangulations: Quantum Regge Calculus in the Lorentzian DomainKyle Tate and Matt Visser2018/12/11 22:33:02
+
+Introduction
+Prior to the formulation of Causal Dynamical Triangulations (CDTs) in reference {{cite:ee8f641f-a9a8-4a85-b9c3-b98c175a295c}}, and further developed in {{cite:fee0fd03-f2f2-4058-ac79-db6960e28268}}, {{cite:29dbfd8e-5894-4bad-b943-757f3d9f3eec}}, {{cite:b0c642e5-c65c-40d7-bb14-5fe22ad06511}}, {{cite:c9f73aab-1cb2-41da-b6e9-333beb0ffd26}}, {{cite:102e63e6-71fa-4fd5-91a0-5e05cb47688c}}, the two main approaches to simplicial Quantum Gravity (QG) were those of (Euclidean) Dynamical Triangulations (DT) and the (Euclidean) Quantum Regge Calculus (QRC), also known as (Euclidean) Fixed Triangulations (FT). Both of these approaches are formulated in the Euclidean sector of QG, that is, they are sums over geometries which have Euclidean signature. In two dimensions, it is possible to completely solve the DT path integral by using matrix model techniques (see {{cite:ff7d51e5-4bbb-4783-8395-a4dafebfd81f}} and references within, and {{cite:026199aa-dea8-42e9-911f-c747ca2de5a0}} for the generalization to CDT), however the results are completely unphysical: There exist only two phases of the quantized geometry, a crumpled phase and a polymerized phase {{cite:98b16836-c564-40ef-9f2c-32c20a0b65d5}}; this rather strongly suggests that DT does not have a physically relevant classical limit. This problem was remedied in CDTs by shifting to a sum over Lorentzian-signature geometries which exhibit a “causal” structure. That is, one sums only over that subset of Euclidean geometries that is compatible with the existence of a Lorentzian signature metric. The key point is that CDTs exploit the causal structure present in Lorentzian geometry, and in so doing lead to a more physically realistic model of Quantum Gravity. (For related comments in continuum quantum gravity, and further background references, see {{cite:30d3eda2-e485-4f13-b0ee-e86efdaff297}}.)
+In counterpoint, the QRC approach to Euclidean QG is rather hard to work with analytically {{cite:cab2bcd5-26c2-413b-b8f0-107b74772f1b}} (except in the weak field approximation), owing to the fact that each simplex in the triangulation must satisfy generalized triangle inequalities. However, in the Lorentzian domain this difficulty disappears — completely so in 1+1 dimensions and largely so in higher dimensions — provided that the simplices in the triangulation are chosen such that there are both time-like and space-like edges. QRC in the Lorentzian domain has been discussed before in reference {{cite:381b73a9-8061-4b45-9ce1-e1edf1a017a3}}, where the inverse free propagator was calculated, however the disappearance of certain triangle inequality constraints was not noted or discussed.
+35pt
+In section , we demonstrate that for Lorentzian triangles with one space-like and two time-like edges (or vice-versa), the relative magnitudes of the edge lengths are completely unconstrained. The Lorentzian triangle inequalities are, in this particular context, vacuous. Exploiting this fact, in section  we formulate a model of Lorentzian quantum gravity in 1+1 dimensions and demonstrate that it is not simply related to the QRC model in 1+1 dimensions by Wick rotation. In section  we derive scaling relations for the pure gravity model on the torus using two different measures, one of them corresponding to the DeWitt measure in 2 dimensions. In section  we discuss loop-to-loop amplitudes and derive a transfer matrix for the model. In section  we will discuss the non-occurrence of spikes in this model. In section  we discuss the configuration space of the theory in higher dimensions. We then conclude with a brief discussion.
+
+Lorentzian Triangles
+In formulating the Lorentzian-signature Fixed-Topology Triangulation (LFT) model in 1+1 dimensions we consider Lorentzian triangles which have one space-like edge and two time-like edges. Unlike triangles in Euclidean space, these triangles (as well as ones with two space-like and one time-like edge) do not have their edge lengths constrained by inequalities. Without loss of generality consider a Lorentzian triangle with one space-like edge length FORMULA , and two time-like edges of lengths FORMULA  and FORMULA  in the coordinate system shown in figure REF . The third vertex of the triangle lies at the point FORMULA , which must be in the future light-cone of both of the other vertices, i.e. FORMULA  and FORMULA  (the case where it lies in the past light cone follows in an identical manner). Therefore we have
+FORMULA 
+FIGURE 
+These relations can be inverted to yield
+FORMULA 
+Both equations (REF ) and () have a real solution for any value of FORMULA  and FORMULA , FORMULA ; thus the edge lengths are completely unconstrained. For given values of FORMULA , FORMULA , and FORMULA , we note that in the coordinate system under consideration the third vertex is located at the intersection of the hyperbolae given in equations (REF ) and (). Using equation (REF ) we can easily find the area of a Lorentzian triangle in terms of the edge lengths FORMULA , FORMULA  and FORMULA :
+FORMULA 
+Equation () is closely related to, but not identical to, Heron's formula which describes the area of a Euclidean triangle in terms of its edge lengths FORMULA , FORMULA , FORMULA  by:
+FORMULA 
+The relation between these quantities is what one would expect by a simple Wick rotation, FORMULA :
+FORMULA 
+where the factor of FORMULA  is due to the fact that we should be multiplying Lorentzian area by a factor of FORMULA . Again, it is clear that these Lorentzian triangles are not constrained by inequalities, for while in equation (REF ) the area becomes pure imaginary if the Euclidean triangle inequalities are violated, in equation () the area is real for any choice of FORMULA , FORMULA , FORMULA .
+Another quantity that is of interest in studying simplicial gravity is the angle between two edge lengths. For the angle between two space-like edge lengths these are found using the standard trigonometric relations, however finding the angle between a space-like edge and a time-like edge or two time-like edges requires more care. For configurations such as in figure REF  these angles will be complex numbers (boosts). A consistent way of assigning angles to these triangles is described in reference {{cite:0c9086b7-78c4-48fb-b21d-ff4371dc3e8c}}. We denote the angle between FORMULA  and FORMULA  to be FORMULA , between FORMULA  and FORMULA  to be FORMULA , and the angle between FORMULA  and FORMULA  to be FORMULA . These angles are given by:
+
+1 = 12i ( S2-T12+T22ST1 ),    1 = 2ST1 AL(S,T1,T2),
+2 = 12i ( S2+T12-T22ST2 ),    2 = 2ST2 AL(S,T1,T2),
+= 12 ( S2+T12+T22T1T2 ),    = 2iT1T2 AL(S,T1,T2). 
+
+There are few things to notice here: First is that FORMULA  and FORMULA  are purely imaginary, and therefore FORMULA , and second is that FORMULA  so that FORMULA .
+Equipped with these notions of Lorentzian-signature triangles, we shall now define a theory of Lorentzian-signature Quantum Gravity in 1+1 dimensions, which will be closely analogous to QRC. However as we will soon demonstrate, these theories are not related by any simple Wick Rotation.
+
+1+1 Lorentzian Fixed Triangulations
+Classically two-dimensional Einstein gravity is trivial, since the action is a topological invariant, the Euler characteristic, and is therefore constant with respect to local degrees of freedom in the theory. This is equivalent to the fact that in two dimensions the Einstein tensor vanishes identically. However two-dimensional QG is non-trivial, and due to the topological nature of the Einstein-Hilbert term can often be solved analytically. Two dimensional simplicial QG was the framework within which CDT was first formulated {{cite:ee8f641f-a9a8-4a85-b9c3-b98c175a295c}}, and has also been investigated using QRC {{cite:c88eb8e6-1457-4162-919f-75c9e8e4a13e}}, {{cite:bfd6bdc1-99b7-4e46-83bb-2bd0e0d2b90a}}, {{cite:21dcdacf-4bc1-4ec8-97d8-44847ffc7cdd}}. Here we will consider pure two dimensional QG, that is, the path integral:
+FORMULA 
+In the Regge Calculus {{cite:1cb998ea-6f84-4aa3-8062-9a679ed9243c}}, {{cite:e8d54117-78d5-4a3a-a9f7-1b68d755d298}}, a discrete approach is taken in evaluating equations (REF ). The manifold is taken to be piecewise flat and is composed, in two dimensions, of triangles glued along shared edges. The metric degrees of freedom are described by the edge-lengths of each triangle, and curvature is localized at the vertices of the triangles. We shall consider a model in which the manifold under consideration either has cylindrical topology FORMULA , where the FORMULA  are space-like surfaces parameterized by “time”, or the toroidal topology FORMULA .
+Triangulations
+This manifold has a simple triangulation the “traditional” version of which (in analogy with common conventions in Euclidean signature) is shown in figure REF . Here the horizontal edges are taken to be space-like, and the diagonal and vertical lines are taken to be time-like. For the cylinder the time-like boundaries are identified, and for the torus the space-like boundaries are also identified. A physically equivalent but more “symmetric” version of the triangulation is presented in figure REF .
+FIGURE 
+FIGURE 
+The simplices in either of these triangulations are the Lorentzian-signature triangles described in section . We take there to be FORMULA  edge-lengths in the spatial direction, and FORMULA  in the time direction, for a total of FORMULA  triangles in the spacetime.
+Note that by adopting a fixed-topology triangulation of this type one is automatically excluding, at the kinematical level, the possibility of a polymerized phase. By this we mean that the polymer-like phase found in DT {{cite:98b16836-c564-40ef-9f2c-32c20a0b65d5}} is not realizable in this model, however this does not exclude the possibility of a “rough” phase, (that is, a “fractal” or “crumpled” phase), similar to that found in QRC {{cite:c88eb8e6-1457-4162-919f-75c9e8e4a13e}}, {{cite:bfd6bdc1-99b7-4e46-83bb-2bd0e0d2b90a}}, {{cite:21dcdacf-4bc1-4ec8-97d8-44847ffc7cdd}}. Before we rewrite equations (REF ) in their simplicial form we point out a few differences between two dimensional Euclidean and Lorentzian Regge calculus.
+
+Metric: traditional
+For Euclidean triangulations, the flat metric inside a triangle with edge lengths FORMULA , FORMULA , and FORMULA  (in a coordinate system where FORMULA  is the unit vector in the 1 direction and FORMULA  is the unit vector in the 2 direction) is given by:
+FORMULA 
+Note that this satisfies FORMULA .
+For Lorentzian triangulations, the analogous formula for a triangle with edge lengths FORMULA , FORMULA  and FORMULA  in a “traditional” coordinate system where FORMULA  is the unit vector in the 0 direction and FORMULA  is the unit vector in the 1 direction is:
+FORMULA 
+Note that this satisfies FORMULA .
+Again, we note that the metric in equation (REF ) switches signature if the triangle inequalities are violated, however equation (REF ) remains in Lorentzian signature for all real values of FORMULA , FORMULA , FORMULA . In Euclidean Regge calculus the deficit angle at a vertex is given by FORMULA , where the sum is over the interior angles FORMULA  of each triangle FORMULA  incident on that vertex. In this case the deficit angle is always a real number. By considering equations ()–() we see that for Lorentzian triangulations such as in figure REF  the angles summed around any vertex will be FORMULA . So now the deficit will be FORMULA  which is purely imaginary. Therefore curvature will be described by a pure boost, and this will be important in developing higher derivative 1+1 theories which we discuss in the conclusions. For any specific vertex FORMULA  the deficit angle is in general a complicated function of 12 edge lengths. However, in the limit in which all time-like edge lengths become null, (see figure REF  and section REF ), the deficit angle simplifies to {{cite:66579e22-6318-4ac3-9a84-85b4c17740c4}}:
+FORMULA 
+This limit is discussed in more detail in section REF .
+FIGURE 
+
+Metric: symmetric
+In terms of the “symmetric” version of the triangulation one proceeds as follows: As in section , choose an initial coordinate system in which the vertices at the ends of the space-like edge of length FORMULA  lie at FORMULA  and FORMULA  respectively. The third vertex is assumed to be in the forward lightcone of these two vertices at a point FORMULA . For this calculation the key result we need is:
+FORMULA 
+Now choose the time-like basis covector to be FORMULA , and the space-like basis covector to be
+FORMULA . The (flat) metric inside the triangle is given by:
+FORMULA 
+Calculating these out directly gives:
+
+g00 = -(t+S/2)2 + x2 = -12 ( 12 S2 +T12+T22 ),
+g01 = g10 = 12 x S = 14 (T22 - T12),
+g11 = 14 S2.
+
+So the metric in this “symmetric” coordinate system is:
+FORMULA 
+Note that this satisfies FORMULA . In general the deficit angle is quite complicated, however in the limit in which all time-like edge lengths become null, (see figure REF , and the discussion in section REF ), the deficit angle simplifies to {{cite:66579e22-6318-4ac3-9a84-85b4c17740c4}}:
+FORMULA 
+FIGURE 
+
+Action
+We can rewrite equations (REF ) in their simplicial form as:
+FORMULA 
+where FORMULA  denotes the set of all edge lengths in the triangulation, and FORMULA  is an index for each triangle in the triangulation. Furthermore FORMULA  is the set of edge lengths for the triangle FORMULA  (we will denote these FORMULA ) and FORMULA  is the measure on the set of edge lengths which we discuss later in the paper. It is instructive to compare equation (REF ) to the Euclidean path integral of QRC:
+FORMULA 
+where FORMULA  is an “indicator” function on the set of edge lengths which is 1 when every edge length satisfies the triangle inequalities and 0 otherwise. We can Wick rotate equation (REF ), FORMULA , to Euclidean signature to obtain:
+FORMULA 
+Here FORMULA  denotes the set of edge-length configurations in the Lorentzian theory which satisfy the Euclidean triangle inequalities, and FORMULA  denotes the set of configurations which explicitly violate them (possibly only one edge). FORMULA  is a pure imaginary number, and thus the Wick rotated Lorentzian path integral differs from the Euclidean path integral of QRC by
+FORMULA 
+The fact that Euclidean and Lorentzian quantum gravity are not related by a simple Wick rotation has been known for over a decade (see for example {{cite:ee8f641f-a9a8-4a85-b9c3-b98c175a295c}} and {{cite:fee0fd03-f2f2-4058-ac79-db6960e28268}}). Equation (REF ) explicitly demonstrates that in this approach finding the relation between the two is at least as hard as fully solving the theory itself.
+Taking the FORMULA  of equation (REF ) as primary, we still need some method akin to Wick rotation so that the integral in equation (REF ) converges. The way we do this is to Wick rotate the lattice cosmological constant: FORMULA  to give
+FORMULA 
+We note that this is analogous to the method used in CDT {{cite:ee8f641f-a9a8-4a85-b9c3-b98c175a295c}}; all results in the end will have to be analytically continued back in FORMULA .
+Note that with this prescription in Euclidean signature one still integrates over configurations satisfying the (vacuous) Lorentzian triangle inequalities weighted by the Lorentzian area functional.
+Analyzing equation (REF ) will be the focus of the next section.
+
+Analysis of the 1+1 Path Integral
+In QRC, the issue of which measure on edge lengths, FORMULA , to use has been the subject of some contention {{cite:90036759-215f-4bde-992f-a52ea7900a26}}, {{cite:261bb50a-c710-4879-ae82-0fb56fbca596}}. In this paper we will follow reference {{cite:90036759-215f-4bde-992f-a52ea7900a26}} and will consider measures of the form
+FORMULA 
+Here FORMULA  is the volume of the FORMULA -dimensional simplex FORMULA , (for the time being FORMULA ), and FORMULA  is a parameter of the theory related to quantum gravity in the continuum by
+FORMULA 
+where FORMULA  is determined by the norm chosen in the superspace of metrics:
+FORMULA 
+The case FORMULA  is called the DeWitt measure, and in FORMULA  corresponds to FORMULA . However, in FORMULA  we have FORMULA . There is no unique preferred way to choose FORMULA , therefore in this paper we consider two specific measures:
+
+the simplest possible case — the uniform measure FORMULA ;
+
+the DeWitt measure FORMULA .
+
+1+1 Lorentzian Fixed Triangulations with Uniform Measure
+Consider a triangulation of the torus which has FORMULA  triangles and FORMULA  edge lengths arranged as in figure REF . We wish to investigate equation (REF ) with the measure given in equation (REF ) for FORMULA :
+FORMULA 
+where FORMULA  is the area of the FORMULA  triangle in the triangulation. (Note that FORMULA , so FORMULA .) Consider the Lorentzian area function for one triangle with space-like edge length FORMULA , and time-like edge lengths FORMULA  and FORMULA :
+FORMULA 
+This can be rewritten, by expressing FORMULA  in standard spherical polar coordinates, as
+FORMULA 
+which has zeros at FORMULA  and FORMULA . The limits of integration for time-like edges are FORMULA , however the integral diverges if we allow the space-like edges to go to 0. This makes perfect sense, as the triangles remain well behaved when the time-like edges are 0, i.e. in the limit in which they become null. However, when the space-like edge goes to 0, the triangle becomes degenerate. Therefore we need to regulate the integration in such a way that the degenerate configurations are avoided. The simplest way to do this would be to place a lower limit on the space-like edge lengths; however, for our purposes it is more convenient to remove a thin wedge from the single triangle configuration space by only allowing the azimuthal angle FORMULA  to take values in FORMULA . We can make use of equation (REF ) by changing coordinates in the configuration space to FORMULA -dimensional hyperspherical coordinates, where FORMULA  is now determined by the edge lengths of all the triangles, FORMULA , by FORMULA . Equation (REF ) becomes:
+FORMULA 
+Here FORMULA  is a complicated function of the FORMULA  hyperspherical angles which has a zero only when all of the angles are chosen such that the area of every triangle is zero; these can be avoided provided we apply a regulation to the hyperspherical coordinates that is analogous to the one described above. For the uniform measure, the exact form of FORMULA  is unimportant in determining scaling relations since we can write:
+FORMULA 
+where we have used the topological fact FORMULA  (each of a triangle's 3 edges is shared by 2 triangles). We have introduced FORMULA  which is just a numerical factor depending on the UV cutoff FORMULA  given by:
+FORMULA 
+where the zero of FORMULA  is avoided by only integrating over the FORMULA  regulated surface FORMULA . The numerical constant is unimportant in calculating how the average area of a triangle scales with FORMULA :
+FORMULA 
+This scaling relation for the area is identical to that found in QRC {{cite:68a55035-b7c6-4769-bc41-5a5bbf019cb8}}, this is essentially because in both path integrals, every edge length can be rescaled by FORMULA . Thus, for the uniform measure, one must look beyond the average area scaling relation to find differences between the two theories.
+Note also that in view of the fixed topology, (of the triangulated manifold), and the Gauss-Bonnet theorem, we have
+FORMULA 
+This is a sum over all vertices FORMULA , and is guaranteed to vanish at the kinematical level for each individual geometry in the path integral. (It is very easy to verify this result explicitly for the limit where all timelike edges become null.) This implies an exact result for the spacetime average value of the Ricci scalar which holds for any choice of the measure:
+FORMULA 
+Causal Diamond Truncated Model
+We now discuss a simplifying truncation of the model which will also be of use in the next section, but is worth considering here: that is the limit in which all time-like edges become null. In this case the triangulation is made up of “causal diamonds” formed by the two triangles connected by each space-like slice; these causal diamonds have area:
+FORMULA 
+With reference to equation (REF ), the metric inside each causal diamond becomes
+FORMULA 
+where FORMULA  is acting like a conformal factor. With this truncation the integration in equation (REF ) is trivial:
+FORMULA 
+(There are FORMULA  spacelike edges.)
+This yields the simplified scaling relation
+FORMULA 
+It is also trivial to find the average length of the spatial slices in this truncation:
+FORMULA 
+Note that is is now very easy to generate spatially large universes — one just has to choose FORMULA  (and FORMULA ) appropriately. Geometrically each of these null-edged triangles extends a distance FORMULA  into the time direction, so the spacetime has temporal extent
+FORMULA 
+So it is also very easy to generate long-lived universes — one just has to choose FORMULA  (and FORMULA ) appropriately.
+Now observe
+FORMULA 
+This can be interpreted as saying that the “typical” geometry is not too crumpled, and suggests we are dealing with a relatively “smooth” phase.
+
+1+1 Lorentzian Fixed Triangulations with the DeWitt Measure
+The analysis in this section proceeds in an identical way to the previous section, except now with a non-trivial measure, specifically FORMULA . The path integral is now:
+FORMULA 
+We can again switch to hyperspherical coordinates, where now we denote FORMULA  as the hyperspherical angles for the edge lengths corresponding to the triangle FORMULA . With this we can write:
+FORMULA 
+where FORMULA  and FORMULA . Both these functions are more complicated than just products and sums of functions of the form FORMULA  in equation (REF ), due to the fact that the same angles will appear multiple times depending on the incidence matrix of the chosen triangulation. We also note that FORMULA  and FORMULA . We again make use of the relation FORMULA  to write:
+FORMULA 
+In contrast to equation (REF ) to ensure convergence we have now had to introduce an explicit ultraviolet cutoff in the FORMULA  integration, as well as the angular regulation introduced in section REF . This means that the smallest the space-like edge can become is FORMULA . Here FORMULA  is the incomplete Gamma function which has the series expansion:
+FORMULA 
+This converges for all FORMULA . Equation (REF ) is then given by:
+FORMULA 
+with
+FORMULA 
+Here FORMULA , FORMULA , and FORMULA  are numerical factors that depend on the ultraviolet cutoff FORMULA .
+In contrast to the situation for uniform measure, the scaling relation for the average area is now non-trivial:
+FORMULA 
+While this relation demonstrates that the case of the DeWitt measure is less trivial than the case of the uniform measure, it does not give much more information than that. It may be possible that for a fixed value of FORMULA  there is a value of FORMULA  where the average area vanishes or diverges, however (without knowing the precise values of the cutoff-dependent quantities FORMULA , FORMULA , and FORMULA ) determining if this can happen is impossible. Attempts at performing the integrals in equations (REF )–() will run into similar obstacles to those presented in the next section, therefore ultimately a numerical analysis will be necessary for further investigation of the full model.
+Causal Diamond Truncated Model
+To further investigate equation (REF ) we can look at it in the causal diamond truncation outlined in section REF . Again, the integration again becomes tractable, but still exhibits behavior similar to equation (REF ):
+FORMULA 
+FIGURE 
+The average area then scales as:
+FORMULA 
+This is a limiting case of equation (REF ) and is well behaved for all finite FORMULA  (see figure REF ), which suggests that equation (REF ) is as well. The average length of the spatial slices can also be computed by using FORMULA , while the average temporal extent of the spacetime is FORMULA , where it is easy to establish that
+FORMULA 
+(See figure REF .) In this situation we furthermore have
+FORMULA 
+(See figure REF .)
+As FORMULA  this blows up as FORMULA . In contrast as FORMULA  this smoothly tends to unity from above.
+FORMULA 
+There is no sign of any phase transition, and as FORMULA  becomes arbitrarily smooth.
+Again it is very easy to get arbitrarily large universes, both in spatial and temporal extent.
+FIGURE 
+
+Summary
+For both the uniform and DeWitt measure, the path integral seems to be well behaved in FORMULA , meaning that it does not exhibit critical behavior. (There do not seem to be any phase transitions.) The non existence of a critical point means that this model does not seem to have the usual continuum limit based on a 2nd order phase transition. The non-criticality of the pure 2D gravity QRC path integral was shown in {{cite:c88eb8e6-1457-4162-919f-75c9e8e4a13e}}, however once a higher derivative FORMULA  term was added to the action and the partition function was restricted to fixed area critical behavior was observed numerically {{cite:bfd6bdc1-99b7-4e46-83bb-2bd0e0d2b90a}}. Future numerical work might examine the analogous behavior for this Lorentzian model with an FORMULA  term in the action (see {{cite:a70bc80b-8f8f-498e-bba6-00b84113e80b}}, {{cite:bb06d579-8559-4ae1-9203-3ad80b223291}} for implementations in QRC and DT). As we mention in the discussion, there are reasons to believe the absence of a phase transition might actually be beneficial.
+
+Loop-to-Loop Amplitudes
+FIGURE 
+FORMULA -step Amplitude
+An important quantitiy we would like to be able to calculate in the model is the loop-to-loop amplitude, FORMULA , which is the amplitude for a loop of length FORMULA  to propagate to a loop of length FORMULA  in “time” FORMULA . It will be a sum over all interpolating geometries of the type shown in figure REF . This amplitude has been calculated for CDTs in {{cite:ee8f641f-a9a8-4a85-b9c3-b98c175a295c}} and in a continuum calculation in proper-time gauge in {{cite:e5970f7e-78a3-4c36-93f5-087c033ecb50}}.
+Unlike CDTs, in the current model there is no natural way to define the FORMULA  appearing in the loop-to-loop amplitude FORMULA . There is however a natural way to use the fixed triangulation to define the “FORMULA -step” loop-to-loop amplitude:
+FORMULA 
+This amplitude will be given by equation (REF ) for a triangulated cylinder, where the spatial boundary lengths are fixed to be FORMULA  and FORMULA . For an FORMULA  triangulation of the cylinder in the form of figure REF , let the space-like slices have length FORMULA  with FORMULA . The amplitude (REF ) (for the uniform measure) is then given by:
+FORMULA 
+where FORMULA  is acting as a single-step temporal transfer matrix which we will call the strip amplitude. To construct the strip amplitude, consider the triangulated strip shown in figure REF . The space-like edges are fixed to be FORMULA  and FORMULA , however the vertical time-like edges labelled FORMULA , and the diagonal time-like edges labelled FORMULA  with FORMULA , are dynamical degrees of freedom.
+FIGURE 
+The strip amplitude is then given by:
+FORMULA 
+This can now be rewritten in terms of single-step spatial transfer matrices, FORMULA  and FORMULA , by making the identification FORMULA , FORMULA , under which equation (REF ) becomes
+FORMULA 
+where
+FORMULA 
+Thus, finding the strip amplitude is reduced to finding the spectrum (in fact since we can take FORMULA  to be large, the largest eigenvalue) of the integral operator
+FORMULA 
+Here
+
+a = li+12 - x;    c = li2 -y;
+b = 2li+1x;    d = 2liy. 
+
+It is unclear if any explicit solution to equation (REF ) can be found in terms of special functions. However in the special case where FORMULA , the diagonal of FORMULA  can be readily computed:
+FORMULA 
+Here FORMULA  is an incomplete modified Bessel function of the second kind {{cite:b43c48d7-f0bb-40e2-bca4-e2cfd4e35956}}, {{cite:22483300-b71b-4ffe-ba61-0acd44d611b1}}.
+Despite the difficulty of the integral appearing in equation (REF ), we can make progress by investigating the integral operators FORMULA  and FORMULA  with kernels defined in equations (REF ) and () individually. Considered as operators on FORMULA , that is the space of all real square integrable functions on FORMULA , they are positive, symmetric and bounded. For purposes of the following calculation temporarily identify FORMULA , FORMULA , and FORMULA , and use the inequality
+FORMULA 
+which implies
+FORMULA 
+It is now easy to show that FORMULA  and FORMULA  are positive definite with respect to the FORMULA  inner product:
+FORMULA 
+In addition the trace of FORMULA  and FORMULA  are finite, so the operators are trace class, and the traces are given by:
+FORMULA 
+and
+FORMULA 
+These properties of FORMULA  and FORMULA  allow us to apply the Hilbert space generalization of the trace inequality {{cite:6c629d2d-2353-4430-9914-b85b8bf49929}}, {{cite:8bd7acdf-37ca-48cd-a3a0-275921d2142b}}:
+FORMULA 
+Thus, the strip amplitude is bounded above by:
+FORMULA 
+Note that equation (REF ) is well behaved for all finite values of FORMULA .
+
+Proper Time Amplitude
+As we mentioned above, there is no natural “proper time” parameter appearing in the model. We can however introduce one, and the most obvious way to do so is to fix the “vertical” time-like edge lengths of the triangulation of figure REF  to a fixed common value FORMULA . This can be done by fixing all FORMULA  in figure REF , while allowing the FORMULA  to remain dynamical. Once this is done, the flat space (Minkowski) solution for an FORMULA  triangulated cylinder with time-like length (height) FORMULA  and space-like length (radius) FORMULA  is clearly FORMULA , where FORMULA  is the time-like edge length of the vertical edges, FORMULA  is the space-like edge length of the horizontal edges, and FORMULA  is the time-like length of diagonal edges. Non-flat 1+1 geometries correspond to allowing FORMULA  to fluctuate from its Minkowski value. As above, to calculate the loop amplitude FORMULA  one must integrate over the diagonal edge lengths:
+FORMULA 
+where now we need to find the strip amplitude with fixed “vertical” time-like edges FORMULA . Notice that when the vertical edge lengths are fixed, the dynamical edge lengths only couple two neighboring triangles together, thus the strip amplitude factorizes:
+FORMULA 
+where
+FORMULA 
+Again, the integral found in equation (REF ) is of the same form as that in equation (REF ) and whether a closed form solution can be found is at this stage unclear. However, the diagonal elements of the strip amplitude can be found by solving the integral in equation (REF ) with FORMULA :
+FORMULA 
+The strip amplitude can also be estimated for large FORMULA  by performing a saddle point approximation. In this case, with FORMULA  for simplicity, the strip amplitude is approximated by:
+FORMULA 
+
+Summary
+The expressions derived above can be compared with the analgous expression in CDT {{cite:ee8f641f-a9a8-4a85-b9c3-b98c175a295c}}. The most important fact is that the CDT expression has a non-zero critical value for FORMULA , while we have shown that equation (REF ) is bounded above by an expression which is well behaved for all finite FORMULA . It should not be unexpected that the quantities calculated in the different theories should be different, perhaps radically different, at the discrete level. However, it is clear that while in CDT a continuum limit can be taken by looking at a scaling limit near the critical value of FORMULA , this does not seem to be possible for the current Lorentzian model. The only sensible way to compare the two theories is in their continuum limits, thus it is important that some way of taking a continuum limit be found for this model. As discussed in section  a possible way to do this would be to introduce an FORMULA  term into the action. That will be the topic of further research.
+
+The non-occurrence of spikes in LFT
+An problematic issue with Euclidean QRC, raised in reference {{cite:261bb50a-c710-4879-ae82-0fb56fbca596}}, is what can be called the “occurrence of spikes” — wherein “spiky” geometries dominate the path integral. Specifically, in (Euclidean) QRC for a fixed value of space-time area FORMULA  there exists a finite FORMULA  such that for any edge length in the triangulation
+FORMULA 
+We will now argue that in the full LFT model these spikes do not appear, and we will show by explicit calculation that they also do not appear in the Causal Diamond truncation.
+FIGURE 
+Because the triangulation introduced for our model is hexagonal (see figure REF ), we will focus on the analogous geometry in reference {{cite:261bb50a-c710-4879-ae82-0fb56fbca596}}. In the Euclidean model it is demonstrated that spikes appear by considering regions of the configuration space in which all of the incident edge lengths on some vertex become very large FORMULA . To keep the total area of the triangulation fixed all of the edge lengths of the boundary hexagon become correspondingly very small FORMULA . Due to the form of the Euclidean area function (REF ), one can take the limit FORMULA  and keep the total area of the triangulation fixed since the area of each triangle in the hexagon scales like
+FORMULA 
+However, this cannot occur in the Lorentzian model because due to the form of the Lorentzian area function () if one tries to take the same limit the now positive quartic terms dominate in four of the hexagon's six triangles:
+FORMULA 
+In two of the hexagon's triangles (the ones with both time-like edges FORMULA ) the quartic terms can be arranged to cancel and the areas remain bounded, however the total area of the hexagon must diverge. In fact, just one of the triangle areas diverging is enough to show that the hexagonal spikes that occur in Euclidean QRC cannot occur the LFT model.
+In fact, due to the form of () the space-like edge lengths FORMULA  of the triangulation can never go beyond a finite bound if the area is to remain fixed. As alluded to above, the only way one can scale the edge lengths of a Lorentzian triangle such that some edge lengths diverge while the total area remains fixed is to set FORMULA  and FORMULA , in which case the area scales like
+FORMULA 
+Note however that for the triangulation we have considered in this model, if we attempt to scale a triangle in this way then the areas of the adjacent triangles, that is, the ones to the left and right in the strip (see figure REF ), will diverge unless they are scaled in an identical manner. This argument then extends to every triangle in the strip which contains the original triangle. Thus these regions in configuration space correspond to “pinched” geometries, that is geometries in which the spatial extent of a strip shrinks to zero while the temporal extent diverges (see figure REF ).
+FIGURE 
+The extent to which these pinched geometries will contribute to the partition function will depend on the how the parameters of the theory are tuned. We note that geometries very similar to this are dominant in the so-called “FORMULA ” phase of CDT {{cite:5c1af465-3536-471a-b421-a73bc54cf0ed}}. It is possible then, perhaps only after adding an FORMULA  term to the action, that for fixed space-time area the general LFT model has phases where the pinched geometries are dominant and others where they are not.
+At any rate, these pinched geometries can be automatically regulated away by going to one of the two truncations introduced in the previous sections. In the proper time truncation, the pinched geometries clearly cannot appear since half of the time-like edges in the triangulation are by definition frozen to a fixed value. This means that the scaling procedure outlined above cannot be performed. Perhaps more interesting is the Causal Diamond truncation in which the quantity FORMULA  can be calculated exactly.
+In the Causal Diamond truncation with fixed space-time area we need to consider the partition function
+FORMULA 
+where FORMULA  is the number of space-like edge lengths and FORMULA  is the volume of a right-angled FORMULA  simplex (in configuration space) which has all of its right-angle edge lengths equal to FORMULA . Then
+FORMULA 
+One performs the iterated integration above by repeatedly making the linear change of variables FORMULA . Thus the expectation value is given by:
+FORMULA 
+This is finite for any finite FORMULA  and thus the appearance of spikes is completely removed from the Causal Diamond model. A quick sanity check with FORMULA  reveals:
+FORMULA 
+exactly as should be expected for a fixed area. Note also that
+FORMULA 
+so a variant of the scaling argument presented in the discussion following equation (37) of reference {{cite:261bb50a-c710-4879-ae82-0fb56fbca596}} implies that the fractal dimension for the Causal Diamond model is simply its topological dimension, namely 2.
+We remark that in the “thermodynamic limit”, where FORMULA  holding FORMULA  and FORMULA  fixed, we have the stronger result
+FORMULA 
+while the average area per triangle in this limit is simply FORMULA .
+In view of these comments, it is therefore clear that (at least in two particularly interesting truncations of the LFT model) the spikes which plague the Euclidean QRC simply do not occur. We have also argued that the QRC spikes cannot occur in the full model either, however there are still regions of the configuration space which correspond to “pinched” geometries. Whether these geometries will dominate the partition function (and if they do whether or not that would be pathological or interesting) will be the topic of further research.
+FIGURE 
+
+Higher Dimensions
+The model discussed in the previous sections can be extended into higher dimensions with a few modifications. The first is that in FORMULA  dimensions we now need to consider the Einstein–Hilbert term in the gravitational action {{cite:1c483325-8c7e-4785-95ae-abc151e96a77}}:
+FORMULA 
+where FORMULA  denotes the FORMULA  dimensional “hinges” in the triangulation along which curvature is concentrated, FORMULA  is the Lorentzian volume of a hinge, FORMULA  is the deficit angle of the hinge and FORMULA  is the Lorentzian volume of the FORMULA -dimensional simplices FORMULA .
+This model will differ from QRC in three ways: first, the volumes of the simplices will be determined by their Lorentzian formulas, which can be derived from the analogous Euclidean formulas in a way similar to equation (REF ); the exact procedure is outlined in the next section. Second, the nature of the deficit angle of a hinge will depend on whether that hinge is space-like, or time-like, or perhaps even null (see {{cite:0c9086b7-78c4-48fb-b21d-ff4371dc3e8c}}). Finally, there will be generalized triangle inequality constraints on the edge length configuration space, however these will not be the constraints found in the Euclidean theory as there will be certain simplices in the triangulation whose edge-lengths are constrained and others whose edge-lengths are not; we will derive the Lorentzian generalized triangle inequalities in FORMULA  dimensions below. The Euclidean and Lorentzian QRC models will be related in a manner similar to equation (REF ), which is clearly much more involved then a simple, naive Wick rotation. In light of this, studying the Lorentzian QRC calculus numerically will involve adapting previous studies of Euclidean QRC by implementing the changes described above. Analytic investigations will be mainly constrained by the same obstacles encountered in Euclidean QRC, and will therefore by strongly limited.
+In developing the model in 2+1 dimensions it will, in general, be impossible to triangulate the manifold in such a way that every face of the Lorentzian tetrahedron can be taken to be a Lorentzian triangle. There are 4 types of Lorentzian tetrahedron; two of them are very simply related to the Euclidean tetrahedron: one with all six edges space-like, i.e., the standard Euclidean tetrahedron itself with the usual Euclidean triangle inequalities, and the trivial generalization in which all six edge lengths are time-like, in this case all triangle inequalities are reversed (due to the FORMULA  in the metric) but the tetrahedral conditions are unchanged.
+As described in {{cite:ba7637b6-c711-4b01-8fde-03df9503df8a}}, for the types of manifolds we are interested in, there are two types of tetrahedra which need to be considered: the (3,1) type in which a Euclidean triangle in one time slice is connected to a vertex in a subsequent time slice by three time-like edges (see figure REF ); the other is the (2,2) type in which there are two space-like edges, each in a separate time slice, connected by four time-like edges (see figure REF ). As we will soon demonstrate the (3,1) tetrahedron is analogous to the Lorentzian triangle in that its time-like edge lengths are completely unconstrained (its space-like edge lengths form a Euclidean triangle and therefore must satisfy the Euclidean triangle inequalities); however, all edge lengths of the (2,2) tetrahedron must satisfy complicated constraints.
+(3,1) Lorentzian Tetrahedron
+The question is, under what conditions is the sextuplet FORMULA , where FORMULA  is opposite FORMULA , a (3,1) tetrahedron? First the tetrahedron has four faces, one is a standard Euclidean triangle with edge lengths FORMULA , FORMULA  and FORMULA , and the remaining three are Lorentzian triangles with one space-like edge and two time-like edges. Thus the only requirement on the faces is that the edges of the space-like triangle satisfy the Euclidean triangle inequalities:
+FORMULA 
+Note that having the faces satisfy these conditions only means that the 4 triangles formed by FORMULA  are at this stage merely a “facial net” in the language of {{cite:43edc85c-4aac-4ab6-8153-82f476e3ecbc}}. To form a Lorentzian tetrahedron the volume must be a positive real number, equivalently the Cayley–Menger determinant must be positive.
+The volume of a Euclidean FORMULA -simplex is given by:
+FORMULA 
+where FORMULA  is the FORMULA  matrix of squared Euclidean distances between the FORMULA  vertices FORMULA  and FORMULA  in the simplex, augmented with an additional row and column defined by FORMULA , FORMULA  and FORMULA . The determinant of this matrix is known as the Cayley–Menger determinant. For example, a triangle with side lengths FORMULA , FORMULA , and FORMULA , has area given by:
+FORMULA 
+which results in Heron's formula (REF ).
+Note that this determinant is positive iff (if and only if) FORMULA , FORMULA  and FORMULA  satisfy the triangle inequalities. To find the analogous formula for Lorentzian simplices we make use of the following observation. Given a Euclidean simplex with edge lengths FORMULA , if we partition this set into two sets FORMULA  and {FORMULA } then the analogous Lorentzian simplex, with time-like edge lengths FORMULA  and space-like edge lengths FORMULA , has volume given by:
+FORMULA 
+Thus, FORMULA , and therefore the volume of a Lorentzian FORMULA -simplex is given by:
+FORMULA 
+where FORMULA  is the now Lorentzian distance squared from vertex FORMULA  to FORMULA . Thus the area of a Lorentzian triangle with space-like edge length FORMULA  and time-like edge lengths FORMULA  and FORMULA  is given by
+FORMULA 
+which results in the formula we derived before, equation (). Note that this determinant is positive for any choice of FORMULA , FORMULA , FORMULA .
+Finally, we come to the volume formula for the FORMULA  tetrahedron with edge lengths as above:
+FORMULA 
+Remarkably (REF ) is positive for arbitrary real values of FORMULA , FORMULA , and FORMULA , provided that (REF ) is satisfied.
+That is, one need only apply triangle inequalities to the single Euclidean face, the three Lorentzian faces are unconstrained.
+A symmetric way of writing out the volume is:
+FORMULA 
+Another way to write out the volume, with FORMULA , FORMULA , FORMULA , and FORMULA , is:
+FORMULA 
+The formula for the cosine of the dihedral angles is found by making the appropriate substitutions into the formula for a Euclidean tetrahedron. For the Euclidean case, with edge lengths FORMULA  opposite to FORMULA , FORMULA  opposite to FORMULA , and FORMULA  opposite to FORMULA , and the four faces given by FORMULA , FORMULA , FORMULA , and FORMULA , the cosine of the dihedral angle at the edge FORMULA  is given by:
+FORMULA 
+In this case then the cosine of the dihedral angle at a space-like edge FORMULA  and the dihedral angle at a time-like edge FORMULA  are given by:
+FORMULA 
+The sine of the dihedral angle is much easier to find by using the Lorentzian analog of the Euclidean FORMULA -dimensional sine law:
+FORMULA 
+where FORMULA  is the volume of the FORMULA -simplex, FORMULA  is the volume of the hinge at which the dihedral angle is being considered, and FORMULA  and FORMULA  are the volumes of the two faces which share the hinge. From this we can derive the sine of the dihedral angle about a space-like edge length, FORMULA , and about a time-like edge length, FORMULA :
+FORMULA 
+We note that equations (REF ), (REF ), (), (REF ), and (), reproduce the results found in {{cite:ba7637b6-c711-4b01-8fde-03df9503df8a}} for the special case FORMULA  and FORMULA .
+
+(2,2) Lorentzian Tetrahedron
+The sextuple of edge lengths for the (2,2) tetrahedron is FORMULA , where FORMULA  is opposite FORMULA , FORMULA  is opposite FORMULA  and FORMULA  is opposite FORMULA . The volume is then given by:
+FORMULA 
+The constraints on the edge lengths are now much more complicated than simple triangle inequalities. If the edge lengths are considered as vectors, then one can derive FORMULA . That is, starting at the FORMULA  vertex in figure REF  one can follow the closed path defined by the previous equation. This implies that FORMULA , which is equivalent to saying the four time-like edges form a non-planar quadrilateral, and are therefore constrained — they cannot take on arbitrary values.Though we can easily solve this particular constraint by setting FORMULA  and FORMULA , this merely moves the problem elsewhere. We then have to constrain FORMULA , FORMULA , FORMULA  by demanding that FORMULA  and FORMULA  all be timelike. An example of a sextuple which is an impossible (2,2) tetrahedron is FORMULA . A symmetrical representation of the volume formula is:
+FORMULA 
+It appears that within the framework outlined in this paper the (2,2) tetrahedron re-introduces the difficulty of configuration space constraints on the time-like edge lengths. This will impede analytic calculations in the same way the Euclidean constraints impede calculations in QRC. Therefore studying this model in higher dimensions will best be done numerically.
+In the same manner as in section REF  we can find the cosine of the dihedral angles at a space-like edge length, FORMULA , and a time-like edge length, FORMULA :
+FORMULA 
+We can also find the sine of the dihedral angles at a space-like edge length, FORMULA , and a time-like edge length, FORMULA :
+FORMULA 
+Equations (REF )–() also reduce to the values found in reference {{cite:ba7637b6-c711-4b01-8fde-03df9503df8a}} for the specific values FORMULA  and FORMULA .
+
+FORMULA  and Beyond
+The procedure carried out in sections REF  and REF  can be applied in exactly the same way in any dimension FORMULA , however with increasing difficulty as the number of edge lengths grows like FORMULA . In FORMULA  dimensions there are again two types of 4-simplex that need to be considered: the (4,1) type which is the analog of the (3,1) tetrahedron, and the (3,2) type which is the analog of the (2,2) tetrahedron {{cite:ba7637b6-c711-4b01-8fde-03df9503df8a}}. Finding the volume and the sine of the dihedral angles is simply a matter of applying equations (REF ) and (REF ) respectively. Finding the cosine of the dihedral angle is more involved but can be done using the higher dimensional analog of the cosine law. Explicit formulas for these will simply be long cumbersome analogs of those presented above. One question that can be asked is what are the generalized Lorentzian signature triangle inequalities for these Lorentzian simplices? One can show that the (4,1) simplex has its 4 time-like edge lengths completely unconstrained, provided its Euclidean tetrahedron is realizable, while the (3,2) simplex has its edge lengths subject to complicated constraints {{cite:8bfa3be7-04b3-43c3-b340-14efa6dda069}}. Thus, it is safe to say that the constrained Lorentzian configuration space is very different from that of the Euclidean configuration space in any dimension.
+
+Conclusions
+We have formulated a model of simplicial Quantum Gravity which is analgous to the Quantum Regge Calculus, but in the Lorentzian domain. This model is formulated by using an insight from the development of CDTs, which is to use the structure of Lorentzian manifolds to guide which geometries appear in the path integral. It is interesting to note that in CDTs this results in decreasing the set of allowed geometries to those which have a causal structure; however in our model we increase the number of geometries by modifying and relaxing the triangle inequalities. In 1+1 dimensions the removal of the triangle inequalities allows every dynamical edge length in the model to be integrated over in a completely unconstrained fashion. This allows more freedom for analytical calculation, which we have used to derive scaling relations for the pure gravity theory. Unfortunately obstacles remain for both full calculation of the path integral and also for calculation of loop amplitudes. In calculating loop amplitudes, the integrals that arise have no known closed form solution and block us from deriving the full result. Unless explicit results for these integrals are found, further analytical work will have to proceed in different directions.
+Another aspect of this model is that, in contrast to CDT, the pure gravity path integral does not exhibit any critical behavior. This means that there is no way to take the usual sort of continuum limit of the model which could be compared to other approaches. This same aspect is found in the Euclidean version of the model, and this is resolved in that model by introducing higher derivative terms into the action {{cite:c88eb8e6-1457-4162-919f-75c9e8e4a13e}}. The exact same procedure can be done in this model by using the angle formulas given in equations ()–(). This modified model will most likely need to be studied numerically through Monte Carlo simulations, as analytical work will run into the same obstacles found in the preceding sections. On the other hand, the lack of phase transition could be interpreted as a plus: A potential polymerized phase is excluded kinematically, while in 1+1 dimensions the occurrence of a rough/ fractal/ crumpled phase seems unlikely given the exact result FORMULA  and the well-behaved nature of the causal diamond truncation. This strongly suggests the theory is always in a smooth phase. Large universes (with spatial size controlled by the number FORMULA  of triangles in the spatial direction, and temporal size controlled by the number FORMULA  of triangles in the temporal direction) seem to be the norm rather than the exception.
+There are prospects for further analytical work using the causal diamond truncation introduced in section . Because in pure 1+1 gravity the only degree of freedom is the Liouville field, the causal diamond truncation could be justified since the varying space-like edge lengths act like a simplicial version of the Liouville field. Future work could focus on calculating quantities in this truncation such as the string susceptibility FORMULA .
+The model is also safe from the occurrence of the spikes which trouble the Euclidean QRC. In both the proper-time and the Causal Diamond truncation of the model the partition function with fixed space-time area is well behaved with the appearance of spikes completely suppressed. In the full model, there are regions of the configuration space in which the geometry (while not spiky) can become “pinched”. These regions may or may not be important, however if they are it is not clear that they are pathological; instead they may correspond to an interesting phase of the model, perhaps only controllable by adding an FORMULA  term in the action.
+The model can be extended to higher dimensions, however generalized Lorentzian triangle inequalities are introduced, and difficulties analogous to the ones found in the Euclidean theory appear. The Lorentzian model in higher dimensions is not related to the Euclidean model by simple Wick rotation, as there are still sets of edge lengths which are unconstrained, and therefore the configuration space of the Lorentzian model is larger than that of the Euclidean one. The model in higher dimensions will need to investigated numerically, and it will be interesting to see how the results compare with those of CDT.
+In summary, in this paper we have demonstrated that Quantum Regge Calculus in the Lorentzian domain differs from that in the Euclidean domain in ways considerably more complicated than by a simple Wick rotation. This is a specific case of the general fact that Lorentzian and Euclidean quantum gravity are not trivially connected. In order to study Lorentzian quantum gravity using QRC it is therefore necessary to take into consideration the differences we have outlined in this paper.

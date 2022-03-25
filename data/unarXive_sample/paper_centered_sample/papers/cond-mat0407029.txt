@@ -1,0 +1,254 @@
+
+Noise and Full Counting Statistics of Incoherent Multiple Andreev Reflection
+S. Pilgram and P. Samuelsson
+Département de Physique Théorique, Universitè de Genéve, CH-1211, Genève 4, Switzerland
+2018/12/10 07:15:46
+We present a general theory for the full counting statistics of
+multiple Andreev reflections in incoherent
+superconducting-normal-superconducting contacts. The theory, based on
+a stochastic path integral approach, is applied to a
+superconductor-double barrier system. It is found that all cumulants
+of the current show a pronounced subharmonic gap structure at voltages
+FORMULA . For low voltages FORMULA , the counting
+statistics results from diffusion of multiple charges in energy space,
+giving the FORMULA th cumulant FORMULA ,
+diverging for FORMULA . We show that this low-voltage result holds
+for a large class of incoherent superconducting-normal-superconducting
+contacts.
+73.23.-b, 05.40.-a, 72.70.+m, 02.50.-r, 76.36.Kv
+Electrical transport in superconducting contacts is a subject of
+persistent interest. The basic mechanism of transport in voltage
+biased contacts, Multiple Andreev Reflections (MAR), was described by
+Klapwijk, Blonder and Tinkham {{cite:5a1a11f7-0cc4-4737-96a3-a60c114ba6d6}} twenty years ago. Since
+then, a large number of works have investigated the current-voltage
+characteristics in superconducting contacts. As a prominent example,
+experiments on superconducting atomic point contacts have been
+explained remarkably well by coherent MAR-theories {{cite:a55eda14-09d5-4ebb-bb47-f68391ab984f}}.
+Recently, interest has turned to the properties of current noise.
+Shot noise was measured in several types of superconducting contacts {{cite:a8599b85-17a3-42b9-a390-58d1b745bd92}}, {{cite:91a1dd4f-40c6-45f3-956a-43f15416f6bf}}, {{cite:4158057e-1fb2-4705-8dc1-1ea2b7f458bf}} and was theoretically studied in both the
+coherent {{cite:a193413a-3872-484c-9d72-e5f569535d74}}, {{cite:e4e8d69d-1358-4304-8e25-84d9439bfe14}} and incoherent limit {{cite:997a3c4b-2db3-4be9-85ba-ab96894a5ec1}}, {{cite:2e74cd29-6400-4c66-8feb-8533f408b04a}}, {{cite:db3378c8-a634-4b1e-8731-f9f9df41c615}}. Very recently,
+the full distribution of current fluctuations, the Full Counting
+Statistics (FCS) {{cite:a2e5cb7d-d2c4-4fb1-8b71-c734167c009a}} of MAR in coherent superconducting
+contacts was calculated {{cite:b21c3d33-839c-4955-ac6e-9fa6dc81d9ee}}, {{cite:f87bdeb7-2d7c-4e7e-bab9-b2b1618aeb10}}. The FCS revealed
+explicitly that charge in coherent
+superconducting-normal-superconducting (SNS) systems is transfered in
+multiples of the elementary charge. In diffusive SNS-systems, this
+leads to a characteristic power-law divergence of the shot noise at
+low voltages, FORMULA  {{cite:e4e8d69d-1358-4304-8e25-84d9439bfe14}}. However, in many
+experiments quantum coherence is suppressed {{cite:4158057e-1fb2-4705-8dc1-1ea2b7f458bf}}. Interestingly, calculations for incoherent diffusive
+structures {{cite:997a3c4b-2db3-4be9-85ba-ab96894a5ec1}}, {{cite:2e74cd29-6400-4c66-8feb-8533f408b04a}}, {{cite:db3378c8-a634-4b1e-8731-f9f9df41c615}} show
+that the low-voltage shot noise is well-behaved and can be explained
+in terms of an effective electron temperature of the order of the
+superconducting gap FORMULA . This naturally raises the question about
+the role of multiple charge transfer in incoherent SNS-systems.
+We address this question by developing a theory for the FCS of
+incoherent MAR in semiclassical SNS-systems, based on a stochastic
+path integral {{cite:6f412e77-aaf9-414d-9b15-5befef67412c}}, {{cite:c588bf6f-bdfc-4ac0-a3c9-34fa63ffb645}} approach. As an illustrative
+example, we investigate the superconducting double-barrier model of
+Octavio et al. (OTBK) {{cite:772656b6-663c-481e-a486-a364d66be9e8}}, focusing on the voltage
+dependence of the FCS. For a generic incoherent SNS-system, we show
+that for low voltage, FORMULA , the generating function is
+FORMULA 
+with FORMULA  the measurement time, FORMULA  the counting field and FORMULA 
+the linear, low-voltage conductance. This result, an effect of
+diffusive motion of the quasiparticles in energy space, is just the
+FCS for a metallic diffusive wire {{cite:c588bf6f-bdfc-4ac0-a3c9-34fa63ffb645}}, {{cite:6b017623-3dae-49d3-b741-3f21930e973f}} with an
+effective voltage dependent charge FORMULA . Unlike coherent diffusive systems {{cite:e4e8d69d-1358-4304-8e25-84d9439bfe14}},
+the cumulants FORMULA  diverge only for FORMULA . The
+successful measurement of the third cumulant FORMULA  in
+normal conducting tunnel junctions {{cite:e6c17605-1e1b-4bf2-bd92-875b5ae2196e}} shows that an
+experimental test of our prediction is feasible.
+FIGURE 
+The model – The studied geometry is shown in Fig. REF . Two superconducting electrodes (S) with gaps FORMULA 
+are connected via a ballistic normal conducting region (N) with FORMULA 
+transport modes. The NS-interfaces, with equal mode-independent
+normal state transparencies FORMULA , are characterized by energy
+dependent probabilities {{cite:4f2ac924-f7dd-4f99-9924-736844d73379}} for normal/Andreev reflection
+and transmission FORMULA . A voltage FORMULA  is applied
+between the two superconductors. For FORMULA , transport of
+quasiparticles across the gap takes place via MAR along the energy
+ladder shown in Fig. REF .
+In contrast to previous works on FCS of MAR
+{{cite:f87bdeb7-2d7c-4e7e-bab9-b2b1618aeb10}}, {{cite:b21c3d33-839c-4955-ac6e-9fa6dc81d9ee}}, we will consider the incoherent limit,
+i.e. with suppressed proximity and dc/ac-Josephson effect. This
+experimentally interesting limit {{cite:4158057e-1fb2-4705-8dc1-1ea2b7f458bf}} is relevant for
+strong dephasing in the normal region (for incoherent transport in
+diffusive NS-systems, see Refs. {{cite:f71bbafc-a270-41ab-8231-3c71ab9b7e5f}}). We assume low
+temperature, FORMULA , and negligible relaxation due to
+electron-electron or electron-phonon scattering. Furthermore, we focus on
+semiclassical systems with FORMULA .
+In this situation, following OTBK {{cite:772656b6-663c-481e-a486-a364d66be9e8}}, the state of the
+normal region is described by energy, space and direction dependent
+occupation functions FORMULA  for
+left- and right-going particles (FORMULA  even) and holes (FORMULA  odd) [see
+Fig. REF ]. The average current through the junction is
+obtained from a set of coupled linear equations, the OBTK-equations,
+for the occupation functions on different rungs of the energy
+ladder. In the present work, we show how to extend the OBTK-equations
+to determine the current noise and the FCS in the system. We however
+emphasize that incoherent diffusive {{cite:997a3c4b-2db3-4be9-85ba-ab96894a5ec1}}, {{cite:2e74cd29-6400-4c66-8feb-8533f408b04a}}, {{cite:db3378c8-a634-4b1e-8731-f9f9df41c615}} or chaotic
+contacts {{cite:76b4e63f-76f2-4434-b4a7-b9dc5ed0cdd4}} can be treated in a very similar
+fashion. Below we put FORMULA .
+Introduced by Levitov and Lesovik {{cite:a2e5cb7d-d2c4-4fb1-8b71-c734167c009a}}, the FCS
+FORMULA 
+is the distribution giving the probability that a certain charge FORMULA 
+flows through an electrical conductor during the time interval
+FORMULA . It describes entirely the low-frequency current
+fluctuations, if FORMULA  is chosen longer than any intrinsic time
+scale. The Fourier transform of the probability distribution FORMULA 
+yields the generating function FORMULA  of irreducible cumulants and gives the mean
+current FORMULA , the current noise FORMULA , the third cumulant FORMULA  describing the asymmetry of the distribution, etc.
+Formal Solution – The FCS of a single NS-interface is a
+multinomial process and can be fully described {{cite:62994f62-de16-44a6-8e14-230cdefe99d2}}
+by the reflection and transmission probabilities
+FORMULA . Inside the gap, FORMULA , the generating
+function is
+FORMULA 
+
+FORMULA 
+where FORMULA  are the particle and hole occupation functions in the
+normal region. A similar expression accounts for reflection and
+transmission outside the gap, FORMULA . The SNS-junction can be
+considered as a series of two NS-interfaces sharing the same
+occupation functions. In the incoherent semiclassical limit, the FCS
+of such a compound system can be calculated with the stochastic path
+integral formalism {{cite:6f412e77-aaf9-414d-9b15-5befef67412c}}, {{cite:c588bf6f-bdfc-4ac0-a3c9-34fa63ffb645}}. The key ingredient in
+this formalism is a separation of time scales for fast collision
+events (the Andreev reflections) and for the slow evolution of the
+occupation functions. This separation allows one to integrate out the
+fast fluctuations and to express the generating function FORMULA  by
+an action in terms of slow collective variables as,
+FORMULA 
+where the integral is over the different ladders, contributing
+independently to the action. The actions FORMULA  evaluated
+at FORMULA  (see Fig. REF ) are generalizations of Eq. (REF ) which distinguish left- and right-going
+currents. E.g. for the left interface (FORMULA  even), for
+FORMULA  we find
+FORMULA 
+
+FORMULA 
+
+FORMULA 
+
+FORMULA 
+In addition to the occupation functions
+FORMULA  we introduce internal
+counting fields FORMULA 
+which are Lagrange multipliers preventing charge accumulation inside
+the normal region. The action (REF ) has to be varied
+over all possible configurations of FORMULA 's and FORMULA 's {{cite:6f412e77-aaf9-414d-9b15-5befef67412c}}. In the semiclassical regime, we may calculate the
+action in the saddle point approximation using the equations of
+motion {{cite:6f412e77-aaf9-414d-9b15-5befef67412c}},
+FORMULA 
+These equations form an infinite system of coupled nonlinear equations
+which have to be solved for arbitrary FORMULA  [the occupation of
+incoming quasiparticles is unity (zero) at FORMULA 
+FORMULA ]. The solutions are then substituted back into Eq. (REF ) to obtain FORMULA . The Fourier transform (REF ) yielding the probability
+distribution FORMULA  can be carried out in the stationary phase
+approximation. The relation to the OBTK equations becomes clear if we
+calculate the average current FORMULA . For
+this purpose, it is sufficient to solve the saddle point equations for
+FORMULA , giving
+FORMULA . The
+first two derivatives in Eq. (REF ) then
+become exactly the OBTK equations for the occupation functions. For
+the noise FORMULA , this procedure is
+no longer adequate and the saddle point equations then have to be
+solved to first order in FORMULA .
+FIGURE 
+Numerical Results – In general, the FCS has to be calculated
+numerically. A typical distribution function FORMULA  is shown in Fig. REF : the FCS is asymmetric, bounded from the left
+side, FORMULA  (since charge may not flow against the bias) and exhibits a long
+tail on the right side (since the overall probability to undergo MAR and to
+climb up the energy ladder is small). Saddle point solutions for the FORMULA 's
+belonging to different points of the probability distribution show
+characteristic structures at FORMULA  due to the cusps in the
+Andreev reflection probability (see Fig. REF ). The occupation
+functions FORMULA  can be interpreted as the
+most probable configurations under the condition that a certain charge
+FORMULA  is transmitted. If
+the output is the mean charge FORMULA , the solution is exactly
+the one found by the OBTK equations. For a small amount of transmitted charge
+FORMULA , the difference FORMULA 
+becomes tiny (no net current). In the opposite limit FORMULA  FORMULA  FORMULA , this difference is large.
+The differential FCS, shown in Fig. REF , show a
+pronounced subharmonic gap structure, with cusps at voltages
+FORMULA . Note that the derivative of the probability
+distribution with respect to voltage is always negative, i.e. the
+distribution gets broader towards the low voltage limit and acquires a
+strong tail for FORMULA . The first three differential
+cumulants FORMULA  are plotted in
+Fig. REF  for transparencies FORMULA  and
+FORMULA . All cumulants show a subharmonic gap structure, more pronounced
+for the noise and third cumulant than for the current {{cite:c4a2b1d6-12b8-4367-a84b-e9541f1edc45}}.
+FIGURE 
+Voltage limits – For high voltages FORMULA , only
+quasiparticles traversing the junction once contribute to the
+differential transport statistics. The saddle point equations in (REF ) can then be solved analytically, giving
+the FCS [FORMULA ]
+FORMULA 
+the result for the double barrier system in Fig. REF  in
+the normal state {{cite:55fd4ea4-95a8-4ca6-835b-e97bfce8332f}}. Unlike the numerical result for
+intermediate voltages in Fig. REF , this high
+voltage result scales linearly with FORMULA  and is bounded from above
+FORMULA .
+For low voltage FORMULA , the quasiparticles injected below the gap
+traverse the junction a large number of times FORMULA  before being
+emitted above the gap. For sufficiently strong normal backscattering at the
+NS-interfaces, FORMULA , the motion in energy space, along the
+ladder in Fig. REF , becomes diffusive {{cite:2e74cd29-6400-4c66-8feb-8533f408b04a}}. We
+may introduce a scale FORMULA  with FORMULA  below which the motion is
+ballistic and described by an energy-dependent conductance per rung,
+FORMULA . On larger scales, one can apply a
+diffusion approximation FORMULA  and FORMULA  (and
+similarly for the FORMULA 's) to Eq. (REF ). Replacing
+the sum in Eq. (REF ) by an integral (putting FORMULA ), we
+obtain in analogy to the procedure for a normal diffusive wire {{cite:c588bf6f-bdfc-4ac0-a3c9-34fa63ffb645}} the action
+FORMULA 
+Changing variables FORMULA  and FORMULA  maps Eq. (REF ) onto the action of a
+normal diffusive wire {{cite:c588bf6f-bdfc-4ac0-a3c9-34fa63ffb645}} with renormalized, voltage
+dependent charge FORMULA . This gives directly
+the generating function in Eq. (REF ) with
+FORMULA .
+FIGURE 
+Consequently, for low voltages, the current FORMULA  is proportional
+to voltage, while the noise FORMULA  saturates a a constant
+value. All higher cumulants FORMULA  diverge as FORMULA .
+Generalization – Importantly, the stochastic path integral
+method presented here can be employed to any semiclassical, incoherent
+mesoscopic SNS-junction. In particular, Eq. (REF )
+gives the low voltage FCS of any SNS-junction with sufficient normal
+back-scattering. We emphasize that the FCS is characterized by a
+single parameter, the low-voltage conductance FORMULA . For a diffusive
+normal region with conductance FORMULA  we find for instance FORMULA . For
+negligible interface resistance, FORMULA , Eq. () then extends the shot-noise result of Refs. {{cite:2e74cd29-6400-4c66-8feb-8533f408b04a}}, {{cite:db3378c8-a634-4b1e-8731-f9f9df41c615}} to the FCS. The opposite limit
+FORMULA  corresponds to an incoherent chaotic cavity. One
+should however keep in mind that eventually, for sufficiently low
+voltage, inelastic electron-electron and electron-phonon scattering
+will dominate the transport and the low-voltage result in Eq. (REF ) will not apply.
+To access the FCS for the full voltage range, the numerical scheme
+presented for the OTBK-system has to be appropriately modified. E.g,
+for the normal region being a chaotic cavity, the only modification is
+to consider an isotropic occupation function
+FORMULA  (and
+FORMULA ) in
+Eq. (REF ). For a diffusive SNS-junction, one can
+directly extend the semiclassical approach for current and noise in
+Refs. {{cite:997a3c4b-2db3-4be9-85ba-ab96894a5ec1}}, {{cite:2e74cd29-6400-4c66-8feb-8533f408b04a}}, {{cite:db3378c8-a634-4b1e-8731-f9f9df41c615}} to the
+FCS. At a given voltage FORMULA , quasiparticles
+are transfered through the gap via FORMULA  or FORMULA  traversals across
+the junction, transporting FORMULA  or FORMULA  charges respectively. The
+transport is effectively through a diffusive wire of conductance
+FORMULA  or FORMULA . The action is then just the sum of the
+actions of these two diffusive transport processes, with appropriate
+weights,
+FORMULA 
+The two first cumulants {{cite:2e74cd29-6400-4c66-8feb-8533f408b04a}}, {{cite:db3378c8-a634-4b1e-8731-f9f9df41c615}}
+FORMULA  and FORMULA  are smooth functions of
+voltage. However, higher cumulants exhibit kinks at FORMULA .
+In conclusion, we have presented a theory for the full counting
+statistics of incoherent multiple Andreev reflection, based on the
+stochastic path integral approach. The charge is transfered in quantas
+of multiple electron charge, giving rise to a low-voltage divergence
+for cumulants of order three and higher.
+This work was supported by the Swiss NSF and the program MaNEP.

@@ -1,0 +1,328 @@
+
+Bound state in the continuum by spatially separated ensembles of atoms in a coupled cavity array
+P. T. Fong and C. K. Law
+
+Department of Physics and Institute of Theoretical Physics, The Chinese University of Hong Kong, Shatin, Hong Kong Special Administrative Region, China
+2018/12/12 03:26:02
+We present an analytic solution of bound states in the continuum (BICs) for photons and atoms
+in a one-dimensional coupled cavity array. These bound states are formed by
+two ensembles of two-level atoms confined in separated cavities of the array. We show that in the regime where the
+photon hopping rate between neighboring cavities is high compared with the collective Rabi frequency,
+the BIC corresponds to a subradiant collective atomic state in which the two ensembles of atoms are strongly entangled.
+On the other hand in the low photon hopping rate regime, the BIC behaves a quantum cavity in which photons can be
+trapped between the two ensemble of atoms.
+Introduction
+Bound states in the continuum (BICs) are spatially localized states with energies embedded in the continuous spectrum of a system.
+The first example of a BIC for a single quantum particle was
+proposed by Wigner and von Neumann {{cite:abde360f-8733-4e17-ab13-d97634093f0b}}. Later, Stillinger and Herrick explored the possibilities of BICs in two-electron systems {{cite:03feb3ed-4551-4df8-a5a9-4f3f8713f46d}}, {{cite:058706b5-e10c-4974-96fb-767ba784865c}}. A formal theory of BICs based on interfering resonances was developed
+by Friedrich and Wintgen {{cite:b0b6bd5e-aa4b-454a-bff4-16f9c340cf34}}. It is now known that BIC is a wave phenomenon that can be realized in a variety of physical wave systems {{cite:7007a441-2e47-4603-b7a9-2f8a51c3211f}}. In particular, BICs have been observed
+in various (classical) photonic systems such as waveguides {{cite:f3a79ba7-4bea-48f1-be3d-20599def126c}}, {{cite:a001ecfc-dca6-4129-b911-618eac27f0a3}}, photonic crystals {{cite:9bc6a39c-ad20-4009-a69f-8beea7c6d6a4}} and photonic lattices {{cite:4072b373-c74c-4887-94e7-9b797211a2a7}}, {{cite:a9d095a7-6ec5-428e-a048-3bb90a52a778}}. Since photonic BICs
+correspond to a high quality confinement of light at specific frequencies,
+they have useful applications in optical devices such as filters {{cite:8089c177-1f6e-476a-a262-c0f7542b8538}}
+and lasers {{cite:266b31cb-8c29-4bde-883c-cc9259170690}}.
+Although the concept of BIC was originally proposed as a solution of the Schrödinger equation, there have been relatively few
+studies of BICs in quantum systems. A difficulty is a lack of quantum systems
+processing such a kind of bound states in general. However, the recent investigations in waveguide QED have found interesting examples of
+BICs for dressed photon-atom systems {{cite:cf7f97f6-bd05-415c-8a99-c93eccd5187b}}, {{cite:a04f7517-9b28-4c27-ac20-8ccfc9e02478}}, {{cite:0be997a3-bdc0-4a41-ba2d-08fbb323e82a}}, {{cite:3e3dd23e-c355-4efa-b982-59b3044ff334}}, {{cite:6b62c652-eb29-4ba2-9c37-3e46f6043538}}, {{cite:0f5491c7-5cdc-462e-ba42-720905087880}}, {{cite:708a8c44-110a-4c41-b41d-e004fca89e7e}}, {{cite:446ab463-6b70-4539-a269-08cc656af002}}.
+Waveguide QED generally refers to photon-atom interactions in one-dimensional photonic structures, such as superconducting qubits in transmission lines {{cite:b74a6b6d-d45b-47f6-9628-3f846a1de734}}, {{cite:bd78042d-e9b3-48f8-9728-dde98ce17c71}}, and trapped atoms in a nanophotonic waveguide {{cite:ac6f4ba4-ce9f-46ef-a347-9e68827c2197}}, {{cite:c550bf78-905c-4d8d-8fa9-154545cc39b7}}. Since atoms can be strongly coupled to tightly confined waveguide modes, waveguide QED has been a useful platform for studying photon-photon interaction {{cite:5dcf08a5-3bc5-4227-9874-8f3885bc3e17}} and quantum information processing {{cite:a0373f7e-0940-4bbd-a186-130d224db0d6}}, {{cite:90912977-49a6-4be2-9f8c-89cf0435820c}}, {{cite:1c0e1617-c3a4-4a15-8047-343beba66e19}}. In particular, a coupled-cavity array can have energy bands
+equivalent to that of the tight-binding model, and interesting effects such as photon scattering {{cite:e907b80d-032a-448e-85b8-3146f4018e41}}, {{cite:988b9a8d-1141-434d-bccc-a29f9ea1a5ef}}, single-photon transport {{cite:d9913df7-7bc1-48c0-8241-fd6f53058939}}, {{cite:ac369c8d-2986-4cfc-a044-63f31ea13d9d}}, {{cite:118d7b17-ff87-444e-b930-9ee062c24dc9}},
+and photon-atom bound states outside the continuum {{cite:39576b7f-f54c-470d-b167-5c86e3f8e51a}}, {{cite:262b77ce-16df-469d-9a1b-9dac1c3a272c}} have been discussed in literature.
+We note that BICs comprising a single excitation (or photon) have
+been studied theoretically
+in a coupled cavity array {{cite:0f5491c7-5cdc-462e-ba42-720905087880}}, {{cite:708a8c44-110a-4c41-b41d-e004fca89e7e}}, {{cite:446ab463-6b70-4539-a269-08cc656af002}}. Such BICs are typically
+formed by two separated two-level atoms, such that a single photon at a resonance
+frequency can be perfectly trapped in the space between the two atoms. In this regard,
+the two atoms behave as a quantum cavity for a single photon.
+In this paper we show that BICs comprising multiple excitations or photons can be formed by two spatially
+ensembles of two-level atoms in a coupled cavity array. This extends the previous studies {{cite:0f5491c7-5cdc-462e-ba42-720905087880}}, {{cite:708a8c44-110a-4c41-b41d-e004fca89e7e}}, {{cite:446ab463-6b70-4539-a269-08cc656af002}}
+to situations of multiple photons. In particular, we find that BICs exhibit various features
+depending on the photon hopping rate between neighboring cavities and the photon-atom interaction strength.
+Apart from the quantum-cavity effect for multiple photons, there exists a subradiance regime where excitations are mostly stored in
+a collective atomic state that does not radiate. We note that subradiance is a collective quantum
+phenomenon that has attracted research interest recently in experimental {{cite:3ca2edd4-827d-4d19-be9b-e7140f545df2}}, {{cite:de729a53-0f50-48cf-a883-53e3d56b96e7}}, {{cite:6c53f356-8dca-492e-b3dd-d28c7b705f50}}
+and theoretical studies {{cite:bc8e0ba4-895f-4d75-8d9d-ae71b3024418}}, {{cite:6f75c104-b7ae-42e6-8757-aca57f44f6f9}}, {{cite:ae0f2247-4ab3-452a-a8ab-6e4b2dfd1b19}}, {{cite:7b08b1c3-9e70-48aa-8765-b10428026e7b}}, {{cite:76427086-ba6b-44c3-80c1-cb6518db7832}}. Our work here provides an example of subradiance by two
+ensembles of atoms.
+Our paper is organized as follows. We first describe the system and the corresponding Hamiltonian in Sec. II.
+Then by making use of a decoupling condition, we obtain an exact analytic solution of BICs with a general
+excitation number in Sec. III. In Sec. IV, we focus on the properties of BICs in
+a triple-cavity system. Such a system allows us to analyze the structures of BICs as well as their formation in detail.
+In particular, we indicate how subradiant states can be formed dynamically by free evolution in the subradiance regime.
+We also provide a linear theory of the system in the quantum cavity regime and determine how atomic decoherence
+affects the storage time of photons. The conclusions and remarks are given in Sec. V.
+
+The Model
+We consider a one-dimensional coupled-cavity array formed by FORMULA  (where FORMULA )
+cavities, in which the leftmost and rightmost cavities each contains FORMULA  identical
+two-level atoms (Fig. 1). We assume that each cavity mode has the same resonance
+frequency FORMULA  which is close to the atomic transition frequency FORMULA .
+The full Hamiltonian of the system is given by FORMULA 
+where (FORMULA ),
+FORMULA 
+Here FORMULA  describes the photon-atom interaction (second line)
+and tight binding type coupling between neighboring cavities (third and fourth line),
+and FORMULA  describes outside field modes and their interaction with the fields in
+the end cavities. Specifically, FORMULA  and FORMULA  are
+annihilation operators for the leftmost and rightmost cavity modes respectively, FORMULA  FORMULA 
+are annihilation operators associated with the cavities in the middle, and FORMULA  is the coupling constant between adjacent cavities. In our model,
+we assume that all atoms in the respective cavities experience the same photon-atom coupling strength FORMULA , and so atoms are treated collectively. For the FORMULA  atoms in the leftmost cavity,
+we define,
+FORMULA 
+Here FORMULA  and FORMULA  denote the excited and ground state of the FORMULA th atom.
+For the atoms in the rightmost cavity, FORMULA  and FORMULA  are defined similarly but with
+the summation index FORMULA  taken from FORMULA  to FORMULA . Finally for the FORMULA , we have used FORMULA  and FORMULA  respectively for the annihilation operators of continuous field modes at the frequency FORMULA  outside the leftmost and rightmost cavities, and FORMULA  and FORMULA  are coupling strengths.
+FIGURE 
+The Hamiltonian FORMULA  can be simplified by using the normal modes of the
+cavity chain (excluding the two end cavities). The annihilation operators associated with
+such normal modes are given by
+FORMULA 
+with FORMULA . Such operators satisfy FORMULA . In this way,
+FORMULA  reads,
+FORMULA 
+where
+FORMULA 
+are defined. For later purposes, we introduce the operator
+FORMULA 
+which corresponds to the total number of excitations stored in the cavity array and atoms.
+
+Solutions of BIC
+Owing to the coupling to the continuum, the full Hamiltonian FORMULA 
+has a continuous energy spectrum with energy FORMULA . A BIC represents a localized eigenstate with
+its energy embedded in the continuous energy spectrum. Here we
+adopt a strict localization condition that all excitation are trapped inside
+the atoms and the cavity array, while all the field modes outside [described by FORMULA  and FORMULA ]
+are in the vacuum state FORMULA . For a given excitation number FORMULA , the BIC takes the form:
+FORMULA 
+where FORMULA  is a trapped state describing the state of atoms and photons inside the cavity array.
+Specifically, FORMULA  is a common eigenvector of FORMULA  and FORMULA :
+FORMULA 
+where FORMULA  is an integer, and FORMULA  is the energy eigenvalue.
+In this paper we present a solution of FORMULA  with a given excitation number FORMULA  in the form:
+FORMULA 
+Here FORMULA  are some coefficients, and
+FORMULA  is the state in which all the field modes in the cavity array
+are in the vacuum state and all the atoms are in their FORMULA  state. In writing Eq. (14), we have assumed that
+there exists a mode described by FORMULA  which has the frequency FORMULA . For example, such a mode occurs
+when FORMULA  for an even FORMULA  and FORMULA .
+Noting that FORMULA  defined by Eq. (14) has zero photon in the end cavities, FORMULA 
+is an eigenvector of FORMULA  with the energy eigenvalue FORMULA  if the following conditions are satisfied:
+FORMULA 
+Physically, these two conditions can be interpreted as a destructive interference between the
+photon emission by atoms [described by FORMULA  in Eq. (6)] and the photon tunneling
+[described by FORMULA  in Eq. (6)]. Together with the vacuum field outside, the conditions (15-16)
+ensure that the fields in the end cavities remain in the vacuum state. Since the end cavity modes are never
+excited, no energy can escape to the continuum, and hence all the excitations are trapped
+in the atoms and the FORMULA  mode. We also note that FORMULA  is required in order to satisfy
+the conditions (15-16).
+To determine the explicit form of FORMULA , we rewrite Eq. (14) as
+FORMULA 
+where
+FORMULA  denotes the vacuum state of the two end cavities,
+FORMULA 's are coefficients and FORMULA  is a common eigenvector of FORMULA , FORMULA  and FORMULA  (FORMULA )
+such that,
+FORMULA 
+In words, FORMULA  is the photon number in the FORMULA  mode, and FORMULA  and FORMULA  are the number of excited atoms in the left and right end
+cavities respectively.
+By using the conditions (15) and (16), we obtain the recursive relations:
+FORMULA 
+This leads to the solution of FORMULA  given by,
+FORMULA 
+where the parameter FORMULA  (assumed positive) is defined by:
+FORMULA 
+and the value of FORMULA  is determined by the normalization condition.
+Note that FORMULA  depends on the integer mode index FORMULA .
+Eq. (23) is a main result of this paper. For a given FORMULA  and FORMULA , the structure of BIC is controlled by
+the parameter FORMULA  since the FORMULA -photon amplitude scales with FORMULA . In the following we discuss the
+features in FORMULA  and FORMULA  regimes.
+Subradiance regime 
+In the FORMULA  limit, the zero photon amplitudes FORMULA  contribute most to
+the BIC. Therefore the BIC is mainly formed by excited atoms in a collective state
+that does not radiate, i.e., a subradiance state.
+By keeping FORMULA  terms only, we have
+FORMULA 
+In particular,
+the state with the excitation number FORMULA  is a maximally entangled state in which the atomic excitations
+in the two ensembles are perfectly corrected,
+FORMULA 
+where FORMULA  and FORMULA  are for odd and even FORMULA  respectively. As we shall see in the next section
+the right side of Eq. (26) is a singlet state.
+We point out that the specific requirement of the smallness of FORMULA  for the subradiant regime
+depends on the excitation number FORMULA . By Eq. (22), it can be shown that FORMULA 
+where FORMULA  defined in Eq. (20). Noting that FORMULA  is bounded by FORMULA ,
+FORMULA  would need FORMULA  for FORMULA .
+On the other hand, FORMULA  is the condition for FORMULA .
+
+Quantum-cavity regime
+In the regime where FORMULA , FORMULA  in Eq. (23) is much larger than all other amplitudes.
+Hence FORMULA  is approximately a Fock state:
+FORMULA 
+which indicates that almost all excitations are stored as photons in the
+the field mode FORMULA . In other words, the two ensemble of atoms
+effectively form a quantum cavity for multiple photons.
+In Fig. 2, we illustrate the transition between two regimes by showing the expectation values of photon number
+in the mode FORMULA  and the atomic excitation number for the state FORMULA  as a function of FORMULA . For the case with the excitation number
+FORMULA  used in the figure, FORMULA  is sufficient to have more than FORMULA  of photonic excitations. On the other
+hand FORMULA  would give more than FORMULA  of excitation stored in the atoms.
+FIGURE 
+
+Triple-cavity configuration
+In this section we examine the BICs in a triple-cavity configuration
+(FORMULA  in Fig. 1) in which there is only one normal mode FORMULA  for the cavity in the middle.
+Such a configuration is conceptually simpler and it provides useful physical insights about
+the formation of BICs.
+Effective Hamiltonian in the subradiant regime
+First we introduce the following operators:
+FORMULA 
+which satisfy FORMULA , and
+FORMULA . These operators correspond to creation and
+annihilation operators associated with the normal modes of the three coupled cavities.
+Accordingly, the Hamiltonian FORMULA  in Eq. (1) can be rewritten as,
+FORMULA 
+Here we have defined FORMULA  and FORMULA ,
+with FORMULA  and FORMULA .
+Note that FORMULA  (FORMULA ) obey the commutation relations of angular momentum operators: FORMULA  and
+FORMULA . Since there are FORMULA  identical two-level atoms in each
+of the end cavity, FORMULA 's are equivalent to the addition of angular momentum operators for
+two spin-FORMULA  systems.
+Let FORMULA  be a common eigenvector of FORMULA  and FORMULA , then
+FORMULA 
+where the allowed quantum numbers are FORMULA  and FORMULA .
+Now returning to the Hamiltonian (30) and assuming FORMULA , we see that
+the atoms and FORMULA  modes are essentially uncoupled in the subradiance regime because
+the detunings FORMULA  are much larger than FORMULA  in magnitude. Therefore we may
+neglect the far off resonant interaction terms in the last line of the Eq. (30). Such an approximation
+is a type of rotating wave approximation when viewing the system in the interaction picture.
+By keeping resonant terms of Eq. (30),
+atoms and the FORMULA  mode photons are coupled via the effective Hamiltonian
+FORMULA 
+which is the Hamiltonian FORMULA  without FORMULA  modes. Since FORMULA , the quantum number FORMULA 
+is a constant of motion. We remark that FORMULA  is the Hamiltonian of the
+Tavis-Cummings model {{cite:646263c7-52ad-4cea-9854-d7b61d3b2d43}}, {{cite:82af65f4-2ef0-470d-aeee-6c8730543b8d}}.
+According to the effective Hamiltonian FORMULA ,
+FORMULA  is a subradiant state since
+atoms in such a collective state cannot emit a photon to
+the FORMULA  mode by lowering the quantum number FORMULA .
+In fact, it can be shown that
+the FORMULA  given in Eq. (25) can be rewritten as:
+FORMULA 
+where FORMULA  is the vacuum field state in the FORMULA  mode.
+For example, Eq. (26) corresponds to the singlet state with FORMULA .
+A general derivation of Eq. (34) can be obtained by using Eq. (25) with FORMULA 
+obtained in Eq. (23) and Clebsch-Gordan coefficients.
+
+Evolution to subradiant states
+Consider the system in the subradiance regime and atoms are initially prepared in a superposition of FORMULA 
+states and no photon in the cavities, the initial state is given by,
+FORMULA 
+where FORMULA  are some coefficients. As the system evolves,
+atoms would be de-excited by emitting
+a photon into the FORMULA  mode according to FORMULA , and hence the quantum number FORMULA  is lowered by one.
+Furthermore, since the FORMULA  mode is damped because of its coupling to
+the outside modes [governed by FORMULA  in Eq. (2)], de-excitation of atoms will continue until
+the quantum number FORMULA  reaches the lowest possible value FORMULA .
+Therefore the system would eventually be trapped as a mixture of FORMULA  for different FORMULA 's.
+In terms of the reduced density matrix FORMULA  obtained by taking the trace over the outside field modes,
+the final FORMULA  would be a mixed state:
+FORMULA 
+where
+FORMULA  and FORMULA  for brevity,
+To verify the above result, we calculate the time evolution of FORMULA  by the master equation method.
+Assuming that the coupling strengths FORMULA  and
+FORMULA  in Eq. (2) are frequency independent,
+the outside field modes are equivalent to Markovian oscillator baths at zero temperature. This leads to
+the usual Markovian master equation,
+FORMULA 
+where FORMULA  is the original Hamiltonian in Eq. (1) without using the approximation in the
+previous subsection, and the super-operator FORMULA  is defined by:
+FORMULA 
+In writing Eq. (37), we have used FORMULA , with
+FORMULA  being leakage rate of the end cavities.
+Note that decoherence effects on atoms
+due to interactions with non-cavity modes have been omitted in the master equation. This is justified
+as long as the relevant relaxation rates of atoms are sufficiently small so that the steady state of FORMULA  defined by
+Eq. (37) can be established before decoherence effects become significant.
+We have solved the master equation numerically for the FORMULA  case, and the numerical steady
+state agrees well with the approximation given in Eq. (36). Specifically, we consider
+the two atoms in the left (right) cavity are initially prepared in the excited (ground) states,
+and all the field modes are in the vacuum state. In this case, FORMULA  are allowed quantum
+numbers.
+In Fig. 3 we illustrate the numerical results by showing the time dependence of the probability in
+the trapped state FORMULA , which is FORMULA , obtained
+from the master equation.
+We see that FORMULA  is a constant because the initial system with an excitation number FORMULA 
+has a partial overlap with trapped state
+FORMULA , and it will remain a constant. As the system evolves,
+FORMULA  and FORMULA  increase from zero and become steady, and so the system is trapped in the lower states
+FORMULA  and FORMULA .
+Note that FORMULA  is just the trivial ground state of the system.
+For the parameters used in Fig. 3, we have verified that FORMULA  and FORMULA  are well
+approximated by Eq. (34) and the steady value of FORMULA  agrees well with FORMULA  defined after Eq. (36) within
+FORMULA  discrepancy.
+FIGURE 
+
+Linear analysis of the quantum cavity regime
+In this subsection we turn to the quantum-cavity
+regime where FORMULA .
+The fact that atoms are weakly excited in this regime allows us to
+make the following approximation:
+FORMULA 
+where FORMULA  and FORMULA  (FORMULA ) are annihilation and creation operators
+satisfying the bosonic commutation relation FORMULA .
+Such an approximation can be derived by keeping the leading term in the Holstein-Primakoff transformation {{cite:5e32314d-14d2-435e-874f-ad50212d0e52}}, which
+is justified because FORMULA  for BICs in the FORMULA  regime.
+By using approximation (39), FORMULA  in Eq. (1) can be expressed as:
+FORMULA 
+where FORMULA  is assumed, and
+FORMULA 
+are annihilation operators associated with three orthogonal polaritonic modes defined by the atomic oscillators and the middle cavity,
+and they satisfy the commutation relations
+FORMULA  for bosons. In addition, the coupling coefficients
+FORMULA  are given by FORMULA  and FORMULA .
+By Eq. (43), we see that the polaritonic mode FORMULA  does not couple to FORMULA  and FORMULA ,
+and hence FORMULA  is isolated from the continuous modes outside. The quantum cavity therefore refers to
+the FORMULA  mode in which energy can be confined. In particular, the FORMULA  mode is mainly photonic because
+FORMULA  in the FORMULA  limit.
+The performance of the quantum cavity is limited by various loss mechanisms. Here we
+examine the loss due to the spontaneous emission of photons from atoms into non-cavity
+modes. Assuming atoms experience a collective decay such that the damping does
+not break the symmetry of atoms in their respective cavities, then the damping can be introduced
+by adding an imaginary part to the atomic frequency. Specifically, we make use of the linearized
+Hamiltonian and replace
+FORMULA  by FORMULA , where FORMULA  the single-atom spontaneous decay rate
+(the factor FORMULA  is due to the collective spontaneous decay). Then by the
+Heisenberg's equations of motion, one can obtain a close set of differential equations for the expectation values of
+FORMULA  and FORMULA :
+FORMULA 
+where FORMULA  and the outside modes are assumed to be in the vacuum state. Alternatively, one can obtain these equations from the
+master equation with collective atomic damping included.
+The linear equations (44-46) can be solved analytically. Assuming FORMULA  and only the FORMULA  mode is excited initially,
+we have FORMULA . The effective damping rate
+takes a simple form FORMULA  when FORMULA .
+This shows that damping rate in the FORMULA  mode can be substantially smaller than the free cavity rate FORMULA .
+
+Conclusion Remarks
+To conclude we have obtained an analytic solution of a type of BIC formed by
+photons and atoms in a coupled cavity array. These BICs
+originate from a destructive quantum interference effect
+which prevents excitations from being coupled to outside field modes, even though the energy lies
+in the continuous spectrum of the whole system.
+In addition, we identify a subradiance regime and a quantum-cavity regime in which most excitations
+are respectively atomic and photonic.
+We have also examined the triple-cavity configuration in detail.
+In the subradiance regime we found that the dynamics is governed by
+to the Travis-Cummings Hamiltonian, which suggests that a mixture of subradiant states
+can be generated as a steady state of the free evolution problem. However, since subradiant
+states are generally fragile to decoherence, the realization requires
+atoms to have a sufficiently long coherence time. A possible candidate could be the
+laser-cooled Strontium atom which has an ultranarrow (dipole-forbidden) transition line.
+Such atoms have been used in recent studies of superradiant lasers {{cite:743ac52e-ba38-48eb-aead-a813df605840}}, {{cite:8bb33e36-d3ad-40f9-9c12-7165a836d8ae}}.
+For example, with the experimental parameters given in Ref. {{cite:8bb33e36-d3ad-40f9-9c12-7165a836d8ae}},
+the atomic decay rate FORMULA KHz can be much lower than collective
+Rabi frequency FORMULA MHz for FORMULA  atoms.
+One the other hand, since atoms are only weakly excited in the quantum-cavity regime,
+the BIC is less sensitive to spontaneous decay of atoms.
+We have analyzed the problem by using a linear Hamiltonian and obtained the photon storage time approximately when
+there is a collective atomic decay. In particular, we find that the photon storage time
+can be substantially longer than FORMULA , if FORMULA  is sufficiently large.
+We note that a strong photon-atom coupling is achievable in cavity QED {{cite:8302d290-2bff-45d9-b0ff-d05dd1a3f934}} and
+circuit QED {{cite:8242a26e-d034-450d-8bfe-71ee65181589}}. The efficient trapping of multiple photons suggested by our model
+may be used to explore quantum effects of photon-atom interactions and applications in these two areas.

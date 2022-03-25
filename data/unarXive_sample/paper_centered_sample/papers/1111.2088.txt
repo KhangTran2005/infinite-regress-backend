@@ -1,0 +1,683 @@
+
+accepted ApJ
+GX 301-2 with Suzaku
+Suchy et al.
+Broadband spectroscopy using two Suzaku observations of the HMXB GX 301FORMULA 2
+Slawomir Suchy1,
+Felix Fürst2,
+Katja Pottschmidt3,4,
+Isabel Caballero5,
+Ingo Kreykenbohm2,
+Jörn Wilms2,
+Alex Markowitz1,
+Richard E. Rothschild1
+1University of California, San Diego, Center for
+Astrophysics and Space Sciences, 9500 Gilman Dr., La Jolla, CA
+92093-0424, USA
+2Dr. Karl Remeis Sternwarte & Erlangen Center for Astroparticle Physics, Sternwartstr. 7, 96049 Bamberg, Germany
+3Center for Space Science and Technology, University of Maryland Baltimore County, 1000 Hilltop Circle, Baltimore, MD 21250, USA
+4CRESST and NASA Goddard Space Flight Center, Astrophysics Science Division, Code 661, Greenbelt, MD 20771, USA
+5CEA Saclay, DSM/IRFU/SAp- UMR AIM (7158), CNRS/CEA, University Paris 7, Diderot, Gif sur Yvette, France
+ssuchy@ucsd.edu
+We present the analysis of two Suzaku observations of GX 301FORMULA 2 at two orbital phases after the periastron passage.
+Variations in the column density of the line-of-sight absorber are observed, consistent with accretion from a clumpy wind.
+In addition to a CRSF, multiple fluorescence emission lines were detected in both observations.
+The variations in the pulse profiles and the CRSF throughout the pulse phase have a signature of a magnetic dipole field.
+Using a simple dipole model we calculated the expected magnetic field values for different pulse phases and were able to
+extract a set of geometrical angles, loosely constraining the dipole geometry in the neutron star. From the variation of the CRSF width and energy, we found a geometrical solution for the dipole, making the inclination consistent with
+previously published values.
+X-rays: stars — X-rays: binaries — stars: pulsars:
+individual (GX 301FORMULA 2) — stars: magnetic fields
+Introduction
+The High Mass X-ray Binary (HMXB) system GX 301FORMULA 2 was discovered in 1969 April during a
+balloon experiment {{cite:cee18c18-df38-46bc-816d-987753ae4896}}, {{cite:26d7ab5e-a808-4b1d-8098-2240ef18220a}}.
+The system consists of an accreting neutron star (NS) fed by
+the surrounding stellar wind of the B type emission line
+companion Wray 977 {{cite:ce4c4a3d-4c38-42aa-98e9-aa1c2a492f06}}.
+A recent luminosity estimate derived from atmospheric
+models puts its distance at FORMULA  kpc {{cite:ddc069ed-3d8a-4666-8829-bb2a28383084}},
+the value utilized in this paper.
+The orbital period was established to be FORMULA  days {{cite:7782cbc0-e17b-47be-953b-1edb103975dd}}
+using Ariel 5 observations and was refined with the
+Burst And Transient Source Experiment (BATSE) to
+FORMULA  days with an eccentricity of FORMULA  {{cite:cac426dc-4771-44e2-b970-38e827b58c62}}.
+{{cite:7391dede-56e5-4142-afbb-914629461dcc}} discussed a possible orbital evolution and determined
+an orbital period of FORMULA  d, assuming no change in orbital period.
+{{cite:ddc069ed-3d8a-4666-8829-bb2a28383084}} determined that the mass of the companion was
+in the range FORMULA  and the radius of Wray 977 was
+FORMULA 62 FORMULA , obtained by fitting atmosphere models.
+The X-ray flux is highly variable throughout an individual binary orbit
+but follows a distinct pattern when averaged over multiple orbits (see Figure REF ).
+Shortly before the periastron passage,
+the X-ray luminosity increases drastically in the energy band above FORMULA  keV, as
+seen in Rossi X-ray Timing Explorer (RXTE)/ All Sky Monitor (ASM) data {{cite:ef6a413b-bd59-4b49-b238-eea4b1301e52}}.
+The NS passes closest to the companion at a distance of FORMULA  {{cite:9f66cfb7-7026-49f7-ae94-90bce63a1743}}.
+Shortly after the periastron passage, FORMULA , the X-ray luminosity
+dips for a short period of time. {{cite:ef6a413b-bd59-4b49-b238-eea4b1301e52}} demonstrated that neither a simple
+spherical wind model nor a circumstellar disk model around Wray 977
+are sufficient to describe the observed variations in the folded
+RXTE/ASM data.
+An additional stream component is able to account for the sudden increase in X-ray
+luminosity, as the NS passes trough the stream shortly before periastron and accretes more material.
+This model also explains a slightly higher X-ray luminosity around FORMULA , when the
+NS passes through the accretion stream a second time.
+FIGURE 
+Pulsations with a period of FORMULA  s were discovered in the
+Ariel-5 observations {{cite:db7dd3a2-1103-4856-a4af-227412336998}}, making GX 301FORMULA 2 one of the slowest known pulsars. The pulse period has varied drastically
+throughout the last FORMULA  years {{cite:ddb39e04-edbe-4414-8d21-7626fd5c081d}}, {{cite:b84e7c41-f972-45ea-b702-af95e5a6774e}}.
+Prior to 1984, the pulse period stayed relatively constant at 695 sFORMULA 700 s
+and then spun up between 1985 and 1990 to FORMULA  s.
+From 1993 until the beginning of 2008, the change in the spin reversed again, showing a decline.
+Fermi/Galactic Burst Monitor (GBM) datahttp://www.batse.msfc.nasa.gov/gbm/science/
+have revealed that GX 301FORMULA 2 experienced
+another spin reversal and briefly spun-up with the pulse
+period decreasing from FORMULA  s to FORMULA  s between
+May 2008 and October 2010. Since October 2010, the pulse period has shown only small variations around FORMULA  s.
+Most recently, {{cite:16cdd694-f9b1-45ec-b3c6-7f634f3798c4}} discovered a peculiar 1 ks dip in the luminosity of GX 301FORMULA 2, where
+the pulsations disappeared for one spin cycle during the dip. Several such dips
+have been previously observed in Vela X-1 {{cite:c1f8e9f3-4c12-4c7c-920c-813d2e3db736}}, {{cite:51a48981-e20e-41fe-985b-7e214f30f388}}, where it is assumed
+that the accretion on the NS was interrupted for a short period of time.
+The pulse phase average spectrum of GX 301FORMULA 2 is described using a power law with a high energy cutoff.
+The continuum does not show a strong variation in the intrinsic parameters
+(FORMULA , and FORMULA ) throughout the orbit
+{{cite:7f0d876e-f73c-4107-b46a-488ac8b849de}}, as seen in two data sets from
+RXTE, taken in 1996 and 2000,
+sampling most phases of the binary orbit.
+One of the major characteristics of the
+X-ray spectrum of GX 301FORMULA 2 is the high and strongly variable
+column density of its line-of-sight absorber throughout the orbit,
+indicative of a clumpy stellar wind (FORMULA  cmFORMULA ).
+In addition to the high column density, a very bright Fe KFORMULA  emission line can be observed.
+This line has shown a strong
+correlation with the observed luminosity, indicating that the line is
+produced by local clumpy matter surrounding the neutron star {{cite:7f0d876e-f73c-4107-b46a-488ac8b849de}}.
+{{cite:26d58750-6290-4bf2-9f70-95c1129a64dc}} used the RXTE data set from 2000 to
+perform phase resolved spectroscopy and showed that an absorbed and partially
+covered pulsar continuum (power law with Fermi-Dirac cutoff) as well as a
+reflected and absorbed pulsar continuum were consistent with the data.
+A cyclotron resonance scattering feature (CRSF) at FORMULA  keV
+was first discovered with Ginga {{cite:844a23f9-f732-4b6c-8a3d-0cdf3a313e70}}.
+{{cite:ff3199ac-6b69-4be0-9072-89185b0846f0}} found systematic deviations from a power law continuum at FORMULA  and
+FORMULA  keV in BeppoSAX, where the former could not be
+confirmed as a CRSF due to the proximity of the continuum cutoff.
+{{cite:26d58750-6290-4bf2-9f70-95c1129a64dc}} excluded the existence of a CRSF
+at FORMULA  keV and showed that the CRSF centroid
+energy varies between 30–38 keV over the pulse rotation of the NS.
+Furthermore, they showed that the CRSF centroid energy and width
+are correlated.
+We report on two observations of GX 301FORMULA 2 performed with the Suzaku
+satellite in mid 2008 and early 2009. This paper is structured as follows: Section 2 discusses
+the observations and data reduction. Section 3 shows the phase
+averaged results. Section 4 discusses the pulse profiles and
+phase resolved spectra. Sections 5 and 6 discuss the results
+and conclusions, respectively.
+
+Observation and Data Reduction
+Suzaku observed GX 301FORMULA 2 on 2008 August 25 with an exposure time of
+FORMULA  ks (ObsID 403044010; hereafter Obs. 1). The observation was
+cut short by a set of target of opportunity observations and was continued on
+2009 January 5, acquiring an additional FORMULA  ks exposure time
+(ObsID 403044020; Obs. 2).
+Both main instruments, the X-ray Imaging Spectrometer {{cite:17011f2f-f7ba-4652-9832-c4c19b2e8f64}}
+and the Hard X-ray Detector {{cite:2e6155ee-56a1-415c-9284-517d4d3fb149}}
+were used in these observations. The two observations correspond to orbital
+phases of 0.19 (Obs. 1) and 0.38 (Obs. 2), where Obs. 1 falls into the
+lowest flux part of the binary orbit (see Figure REF ).
+The FORMULA  keV absorbed flux was FORMULA  erg cmFORMULA  sFORMULA  for Obs. 1 and
+FORMULA  erg cmFORMULA  sFORMULA  for Obs. 2 (see Table 1 for details).
+Both observations were performed using the HXD nominal pointing to
+enhance the sensitivity of the HXD detectors.
+The XIS detectors consist of two front illuminated (FI) CCDs XIS 0 and 3, and one back illuminated (BI) CCD, XIS 1.
+All three instruments are sensitive between FORMULA  keV and FORMULA  keV,
+although the two FI cameras have a higher sensitivity above FORMULA  keV, and the
+BI chip is more sensitive below FORMULA  keV.
+To minimize possible pile-up, the XIS instruments were operated with the 1/4 window option with
+a readout time of 2 s. Data were taken in both FORMULA  and FORMULA  editing modes,
+which were extracted individually with the Suzaku FTOOLS version 16 as part of HEASOFT 6.9.
+The unfiltered XIS data were reprocessed with the most recent calibration files available and then screened with the
+standard selection criteria as described by the Suzaku ABC
+guidehttp://heasarc.gsfc.nasa.gov/docs/suzaku/analysis/abc/. The response matrices
+(RMFs) and effective areas (ARFs) were weighted according to the exposure times of the
+different editing modes. The XIS data were then grouped with the number of
+channels per energy bin corresponding to the half width half maximum of the spectral
+resolution, i.e. grouped by 8, 12, 14, 16, 18, 20, and 22 channels starting at 0.5, 1, 2, 3,
+4, 5, 6, and 7 keV, respectively (M. A. Nowak, 2010, private communication).
+The XIS spectral data were used in the energy range of
+FORMULA  keV for reasons described below.
+The HXD consists of two non-imaging instruments:
+the PIN silicon diodes (sensitive between 12–60 keV) and the GSO/BGO phoswich
+counters (sensitive above FORMULA  keV). To determine the PIN background, the
+Suzaku HXD team provides
+the tuned PIN Non X-ray Background (NXB) for each individual observation.
+In addition, the cosmic X-ray Background (CXB) was simulated following
+the example in the ABC guide and both backgrounds were added together.
+The PIN data were grouped by a factor of 5 below and by a factor of 10 above 50 keV for Obs. 1.
+In Obs. 2 the channels were grouped by 3 throughout the whole energy range.
+GSO data were extracted and binned following the Suzaku ABC guide.
+The PIN data energy range of 15–60 keV and the GSO data energy range of FORMULA  keV were used
+for the phase averaged analysis. Due to the short exposure times,
+no GSO data were extracted in Obs. 1 and in the phase resolved analysis of Obs. 2.
+XIS Responses
+GX 301FORMULA 2 is a source with very large and highly variable photoelectric absorption in the line of sight as well as a very strong
+Fe KFORMULA  emission line. For spectral modeling, the calculated responses
+of the XIS detectors showed a `leakage' emission level {{cite:840661d7-e321-40f0-8c73-ea5e33121d48}},
+which stemmed from the instrument characteristics.
+That is, a small fraction of an event charge cloud is registered at energies below the peak energy,
+creating a 'low energy tail' in the spectrum. This `tail' is about three orders
+of magnitude weaker than the intensity of the peak count rate of the measured photon.
+The response to the Fe line is therefore described as a Gaussian plus a constant at
+lower energies, approximately three orders of magnitude below the
+peak value and extending to below 1 keV.
+Due to the strong Fe KFORMULA 
+line and the very strong absorption in this source, the constant level response of the Fe line
+extends above the measured flux below 2 keV. This results in significant residuals below FORMULA  keV, which
+seem to be stronger for the BI spectrum then for that of the FI CCD.
+Figure REF  shows the phase averaged spectrum from the second observation of GX 301FORMULA 2 and
+the best fit models using the HEASOFT generated XIS responses as detailed in section 3.
+FIGURE 
+Together with the Suzaku Guest Observer Facility (GOF), which provided for us an experimental response
+parameter file where the `low energy tail' is ignored, we studied this behavior in more detail.
+This new response for all three instruments was applied to the individual XIS spectra.
+Due to the fact that the new response completely excluded
+the missing `tail', we now observed an excess of the data with respect to the model below FORMULA keV. The
+introduction of additional power law and/or black body components could improve the
+fits at lower energies. Due to the fact that the true level of the tail is not known, these additional components cannot be interpreted
+physically, and we decided to use the original response matrix and confine the selected
+XIS energy range to above 2 keV.
+
+Phase averaged spectrum
+Spectral modeling
+Phase averaged broad band spectra in the 2–60 keV (Obs. 1)
+and 2–90 keV (Obs. 2) energy ranges were obtained.
+From the technical description of the XIS
+instrumentshttp://heasarc.nasa.gov/docs/suzaku/prop_tools/suzaku_td/,
+it is known that small discrepancies,
+e.g., in fitted power law slope, have been observed between FI and BI XIS instruments.
+A difference of FORMULA  in the power law index has been observed in calibration data and
+was also observed here. When modeling the FI and BI instruments
+with a common power law index, the residuals of the BI instrument show a systematic deviation.
+However, only the FI or BI instruments could be modeled together with the HXD instruments.
+Due to this fact and the higher sensitivity of the FI XIS instruments above 2 keV,
+we concentrated our discussion on the results obtained with the two FI instruments.
+Each data set, FI and BI, was modeled individually with the HXD data to compare the differences in the
+continuum. We found that when using the FI and BI instruments individually with the HXD instruments,
+in both observations the best fit spectral values are consistent with each other within error bars, indicating that the
+usage of the HXD reduced the observed discrepancies in the power law parameters.
+The continuum model for pulsars can so far only be modeled with empirical models, consisting of a powerlaw
+with a cutoff at higher energies, which is typical for this kind of source {{cite:97862e9c-1935-4682-bbc0-560e64134d63}}.
+Three empirical models are widely used: the simple high energy cutoff (highecut) and
+the Fermi-Dirac cutoff {{cite:a8ca16fa-21fa-41d1-87be-504f8ccd1850}} both are used in combination with a simple power law component.
+In addition, the negative-positive exponential powerlaw model NPEX {{cite:844a23f9-f732-4b6c-8a3d-0cdf3a313e70}}
+is a slightly more complicated model including the power law component.
+For the data analyzed in this work, the best results have been obtained with the fdcut model:
+FORMULA 
+where FORMULA  is the normalization at 1 keV, FORMULA  is the
+cutoff energy, and FORMULA  is the folding energy of the Fermi-Dirac cutoff.
+For the Obs. 1 and Obs. 2 FI data sets the best fit FORMULA 's were 260 and 542 with
+245 and 267 degrees of freedom (dof), respectively (see Figure REF 
+and REF ). Replacing the smoother Fermi-Dirac cutoff with the highecut
+model in Obs. 2,resulted in slightly worse residuals (FORMULA ) compared to the best fit results of the FD-cutoff model (Figure REF  d) and an emission line-like residual at FORMULA  keV, which is most likely due to the sharp break of the power law at the cutoff energy in this model.
+In comparison, the NPEX model shows even worse residuals (FORMULA ) and only results in reasonable fits
+when the exponential curvature at higher energies is independent in the partially and fully covered component.
+The best fit cutoff energy is very close to that of the observed CRSF feature (see below) and
+these two parameters are rather strongly correlated (see Figure REF ). To avoid a degeneracy of the
+CRSF values due to a changing cutoff energy, FORMULA  was frozen in all the fits to the best fit value from the Obs. 2 FI spectrum (29.2 keV).
+FIGURE 
+FIGURE 
+FIGURE 
+Previous observations of GX 301FORMULA 2 indicated the existence of clumps in the stellar wind
+{{cite:26d58750-6290-4bf2-9f70-95c1129a64dc}}, {{cite:7f0d876e-f73c-4107-b46a-488ac8b849de}}, which were modeled using partial
+covering absorption in addition to fully covered photoelectric absorption of the smooth stellar wind.
+In the present analysis, the low energy portion of the spectrum also required a partial covering component
+(Figure REF b and REF b), which was modeled
+using the TBnew model (Wilms et al., 2011, in prep.)http://pulsar.sternwarte.uni-erlangen.de/wilms/research/tbabs/,
+an updated version of the existing TBabs model {{cite:06fab9f9-9666-40b5-bdaf-a665f221dc33}}.
+In addition, a non-relativistic, optically-thin Compton scattering
+component cabs was included, as is necessary for column densities FORMULA  cmFORMULA ,
+where the plasma becomes Compton thick and part of the emission is scattered
+out of the line of sight.
+The FORMULA  values from TBabs and from the cabs component
+were set equal and treated as one model component for the smooth stellar wind
+(FORMULA  = TBabs1*cabs1) and a second component for the clumpy
+partial coverer (FORMULA  = TBabs2*cabs2). The FORMULA  and FORMULA 
+column densities were left independent of each other.
+For spectral fitting the abundances of {{cite:06fab9f9-9666-40b5-bdaf-a665f221dc33}} and the cross-sections
+{{cite:e8d32079-7ccd-412f-b9d4-cb204a70e58e}} were used in all data sets.
+Both observations show residuals to the continuum in the FORMULA  keV energy range, which we interpret as
+the previously observed CRSF {{cite:844a23f9-f732-4b6c-8a3d-0cdf3a313e70}}, {{cite:26d58750-6290-4bf2-9f70-95c1129a64dc}}.
+Modeling these residuals with an absorption line
+with a Gaussian optical depth (gabs) improved the residuals significantly in
+both observations (see Figures REF  and REF ).
+The best fit values of FORMULA  keV and FORMULA  keV for Obs. 1 and Obs. 2, respectively,
+are consistent within 90% confidence intervals. The widths of the CRSFs,
+FORMULA  keV (Obs. 1) and FORMULA  keV (Obs. 2),
+are also consistent within errors. An increase of FORMULA  with higher centroid energy, as previously observed in
+RXTE data {{cite:26d58750-6290-4bf2-9f70-95c1129a64dc}}, could not be detected, although the best fit values hint at such a behavior.
+Table REF  shows the best fit values for the continuum with a gabs CRSF line where the given errors are 90% confidence values.
+To calculate the significance of the CRSF in the first and weaker observation, the null hypothesis approach was applied,
+where 10,000 spectra were created with Monte Carlo simulations using the best fit parameters without the CRSF.
+Gaussian uncertainties were used for the individual model parameter.
+Each model was fitted with and without the
+CRSF line to compare how much an inclusion of the line actually improves the fit. In FORMULA  of all fits, no CRSF feature were observed with a larger optical depth than the observed lower limits of FORMULA , making the existence of the feature significant with FORMULA .
+Including the CRSF in the real data, the best fit improved by a FORMULA . A similar improvement of FORMULA  was only observed in FORMULA  (FORMULA ) of the simulated spectra, concluding that the observed line in the first observation is indeed real.
+For the second observation, the line was even more pronounced, where the exclusion of the CRSF increased the FORMULA  by FORMULA .
+TABLE 
+The CRSF can alternatively be described with the Lorenzian shaped
+cyclabs XSPEC model {{cite:7dd86d35-56f6-4e6d-9b68-dfe53f99f220}}.
+Cyclabs is described by the centroid energy FORMULA , the width FORMULA , and
+the resonance depth FORMULA , similar to the gabs parameters.
+The best fit continuum parameters are consistent with the
+best fit values determined with the gabs component. The cutoff energy
+with a best fit value of FORMULA  keV is consistent with the value obtained with the gabs model.
+The observed centroid energies of FORMULA  keV and
+FORMULA  keV are of the order of FORMULA  lower than the energies obtained with the gabs model.
+This discrepancy stems from a different calculation of the line centroid energy and is described in
+detail in {{cite:c4643c11-2577-4a3e-a86e-470e42648511}}. The width FORMULA  keV
+and FORMULA  keV for Obs. 1 and Obs. 2, respectively, is
+bigger than with the gabs model.
+The FORMULA  / dof
+values of 260 / 245 and 548 / 267 for the two observations using the cyclabs model and
+thus were not a better fit when compared to the gabs model.
+For the final discussion we use the values determined by the gabs model.
+Several emission features were observed in the residuals of the fits in both observations and were subsequentially modeled with
+Gaussian emission lines (see Figures REF  and REF , inlay). The width of each line was set equal to that of the
+Fe KFORMULA  emission line, while the intensities were left to vary
+independently. Energies were loosely constrained around the expected values of neutral material
+to avoid runaway of the line energies.
+A constant (const) was applied, taking small instrumental differences in the
+overall flux normalization into account. The constant was fixed at 1 for XIS 0 and was left
+free for the other instruments. FORMULA , FORMULA  and FORMULA  in Table 1 are the
+cross calibration constants with respect to XIS 0 for FI fits and with respect to XIS 1 for the BI fits.
+The final model had the form:
+const* FORMULA (PL1+  FORMULA*PL2)* fdcut*gabs+  FORMULAGaussians,
+where the power law indices of PL1 and PL2 are set to be equal to each other. The
+individual power law normalizations were independent and were used to calculate
+the fraction of the partial covering.
+Table REF  summarizes the best fit values for both observations and for the
+individual FI / BI data sets. For the interpretation we will concentrate on the FI data for both
+observations, for reasons mentioned above.
+
+Spectral results
+The best fit spectral parameters were generally consistent with previous observations, with the exception of the cutoff energy.
+With a value of FORMULA  keV, FORMULA  was significantly higher than the
+FORMULA  keV value measured in previous RXTE {{cite:7f0d876e-f73c-4107-b46a-488ac8b849de}} and BeppoSAX {{cite:654246d2-1da8-48b6-9d5a-a49f161bdca1}}
+observations, although these observations used slightly different spectral models for the cutoff energy.
+{{cite:26d58750-6290-4bf2-9f70-95c1129a64dc}} used also the here applied Fermi–Dirac cutoff, resulting in cutoff energies of FORMULA  keV.
+The folding energy for Obs. 1, FORMULA  keV, is consistent with values obtained for a similar
+orbital phase with BeppoSAX {{cite:654246d2-1da8-48b6-9d5a-a49f161bdca1}}. In Obs. 2, the value of FORMULA  keV is consistent with the RXTE data for the pre-periastron flare and the periastron passage {{cite:26d58750-6290-4bf2-9f70-95c1129a64dc}}.
+The observed column densities for the absorption due to the smooth stellar wind (FORMULA ) were consistent between both observations.
+A larger difference could be observed in the column density associated with the absorption due to the clumped wind (FORMULA ), where
+the best fit value of Obs. 1 is almost a factor three larger than that of Obs. 2. In addition to the H column density in the
+TBnew model, the relative Ca and Fe abundances were also left independent in Obs. 2. The best fit values are measured from the
+Ca and Fe K edges at FORMULA  keV and FORMULA  keV, respectively, and were slightly higher than solar abundances:
+FORMULA  for Ca and FORMULA  for Fe.
+For the first observation, the Ca and Fe
+abundances could not be well constrained and were fixed to 1.55 for Ca and 1.17 for Fe.
+The partial covering fractions can be calculated from the measured normalization values of the
+two power law components, FORMULA  and FORMULA :
+FORMULA 
+The factor is almost unity in both observations due to the dominance of the FORMULA  value.
+Similar large covering fractions have been observed in XMM-Newton data {{cite:500587ed-d55c-4d17-9b77-da5373f34d8f}} and
+in the RXTE data {{cite:7f0d876e-f73c-4107-b46a-488ac8b849de}}, indicating that the covering fraction does not change significantly
+for different parts of the orbit.
+The spectrum softened slightly from FORMULA  for Obs. 1 to FORMULA  for Obs. 2.
+The Fe KFORMULA  line was detected at FORMULA  keV (Obs. 2), which is, given the instrumental
+gain systematics, consistent with neutral Fe. In addition, the
+following lines have also been observed in both observations: S KFORMULA  line,
+Ar KFORMULA  line,
+Ca KFORMULA  line, Fe KFORMULA  line, and the Ni KFORMULA  line, all with energies consistent with neutral
+material {{cite:3fb880cb-d70d-494d-b269-38f97b4ba3e2}}. Note that the Ni KFORMULA  line was not detected in the fainter first observation.
+The observed line intensities are summarized in table REF  with 90% confidence errors.
+The values are consistent between the FI and BI instruments.
+The widths of the lines were set to be equal to the Fe KFORMULA  width within each observation,
+which was found to be FORMULA  eV for Obs. 1 and had an upper limit of 5 eV in Obs. 2 (FI values).
+The Compton shoulder to the Fe KFORMULA  line, as observed by the Chandra
+observatory {{cite:01c32377-5f9c-4106-b594-fa0e4d093969}}, was not significantly detected in
+either observation. The observation of {{cite:01c32377-5f9c-4106-b594-fa0e4d093969}} was performed in the
+pre-periastron phase, where the luminosity was higher than
+in the two Suzaku observations. A Compton shoulder has also been
+observed with XMM-Newton in data taken during another
+pre-periastron flare {{cite:500587ed-d55c-4d17-9b77-da5373f34d8f}}.
+
+Phase resolved analysis
+Barycentric and binary corrected light curves for different energy bands were extracted for both
+observations using the orbital parameters from {{cite:cac426dc-4771-44e2-b970-38e827b58c62}} with an updated orbital period and periastron time FORMULA  determined by {{cite:7391dede-56e5-4142-afbb-914629461dcc}}.
+Due to the strong variability of the pulse period on short time scales, individually determined pulse periods were used for
+each observation. An accurate pulse period could be established for
+Obs. 2, but not for Obs. 1 due to its short duration of 10 ks.
+For the second observation the calculated
+pulse period had a value of FORMULA  s. The
+Fermi/GBM instrument measures the pulse period of GX 301FORMULA 2 on a regular basis,
+resulting in values of FORMULA  s for Obs. 1 and FORMULA  s for Obs. 2 (Finger, 2011, priv. comm).
+To create the pulse profiles, the Fermi/GBM-provided pulse periods and epoch times for each observation
+were used.
+We studied the energy dependent pulse profiles for Obs. 1 and Obs. 2.
+Both pulse profiles are very similar, showing a double peak shape
+where the main peak (P1) is broader below 10 keV.
+The second peak (P2) stays rather constant in width, but increases its relative intensity toward higher energies.
+As an example, the pulse profile for Obs. 2 in different
+energy bands is shown in Figure REF .
+Comparing these pulse profiles with previous RXTE and BeppoSAX
+data showed that the general shape is consistent through all parts of the orbit.
+FIGURE 
+The data of the longer Obs. 2 were divided into 10 equally spaced phase bins and individual spectra were extracted
+for the XIS and PIN instruments. Figure REF  shows the individual phase bins in the lowest panel.
+This division resulted in an exposure time in each phase bin of FORMULA  ks for each individual instrument.
+No GSO data were used in this analysis due to the reduced exposure time per phase bin.
+For spectral analysis, the phase averaged model was applied to
+all phase bins, resulting in best fit values summarized in Table REF ,
+as well as Figure REF . Again the cutoff energy was frozen to
+the phase averaged value of 29.2 keV to avoid the previously discussed degeneracy
+with FORMULA .
+TABLE 
+FIGURE 
+The two absorbing components, FORMULA  from the smooth stellar wind and
+FORMULA  from the partial coverer vary between 20 and 40FORMULA  cmFORMULA ,
+but show an anti-correlated trend throughout the
+first peak. Although the error bars are rather big, one can see an indication that
+FORMULA  follows the flux in P1, whereas the FORMULA  value dips
+at the same time.
+In contrast to {{cite:26d58750-6290-4bf2-9f70-95c1129a64dc}}, the power law index FORMULA  is varying
+strongly throughout the pulse. The values are 0.9–1.3 throughout the first peak and
+drop suddenly to 0.6–0.8 for the second peak (Figure REF ).
+Measuring the second peak to be significantly harder than the first peak supports the
+behavior seen in the pulse profile, where the intensity of P2 increases at higher
+energies, becoming similar to the intensity in P1.
+Power law normalizations are relatively small and badly constrained for the first
+power law component. The partially covered power law normalization seems to
+follow the flux, showing a higher value throughout the first peak.
+The folding energy does not vary significantly throughout the orbit and shows values
+between 5 and 6 keV (not shown in Figure 7)
+The CRSF energy varies between 30–40 keV, similar to the values observed
+in the RXTE data {{cite:26d58750-6290-4bf2-9f70-95c1129a64dc}}.
+Table 2 shows that the addition of the CRSF in the individual spectra improved
+the FORMULA  for most of the phase bins, except in phase bin 6,
+which falls in the gap between both P1 and P2. Phase bins 1 and 7, also minima
+in the pulse profile, only show a small improvement in the best fit when the CRSF
+was included. The CRSF energy is not very well constrained in phase bins 1 and
+6 due to the lack of sufficient statistics. For the geometrical discussion below,
+these two phase bins are ignored.
+In all other phase bins the addition of the CRSF improves the fit.
+The energy changes very smoothly throughout the
+pulse and does not follow explicitly the observed flux in each phase bin. The
+CRSF energy increases during the main peak and reaches the maximum at the
+falling flank of P1. During P2 the CRSF energy decreases until it reaches a
+minimum at the dip between P2 and P1.
+To estimate the significance of the CRSF in the phase resolved analysis, again
+the null hypothesis method was applied in two out of the 8 remaining phase bins,
+which are good representatives of all data points. Phase bin 2 is a good example
+for a shallow CRSF, whereas phase bin 5 is an example for a phase bin with a
+higher flux. Similarly as with the phase averaged data, 10,000 spectra
+were simulated and modeled without and with the CRSF. The interpretation of
+the observed feature as being due to stochastic fluctuations with a depth similar
+to the observed values could be ruled out with a probability of over FORMULA 
+(FORMULA ) in both phase bins. This leads to the conclusion that the CRSF
+can be observed with sufficient significance to allow the interpretation below.
+
+Discussion
+Phase averaged continuum 
+In both observations very strong absorption can be observed. FORMULA , which is the absorption due to the
+smooth stellar wind, is consistent within both observations. FORMULA , the absorption from the partial coverer,
+is significantly stronger in the first observation, establishing the existence of an additional component in the line of sight.
+{{cite:b9bc0574-30ca-4f9c-b6be-999d97235010}} used RXTE/ASM and PCA data to show that a stellar wind and a stream model component can describe the
+observed count rate throughout the orbit and that the increase of the column density at orbital phase FORMULA  is mainly
+due to the stream component.
+The findings in both Suzaku observations are supportive of this theoretical picture.
+GX 301FORMULA 2 shows very strong luminosity variability on very short time scales {{cite:26d58750-6290-4bf2-9f70-95c1129a64dc}}, {{cite:500587ed-d55c-4d17-9b77-da5373f34d8f}}, where the
+column density increases to up to 50% in periods of lower activity. Both RXTE and XMM-Newton data showed
+a much higher column density in the pre-periastron flare than in the two data points observed with Suzaku.
+One possible explanation is that the wind is indeed so variable and clumpy that these variations are just not properly predictable, especially
+in times of high activity, such as the pre-periastron flare. {{cite:b9bc0574-30ca-4f9c-b6be-999d97235010}} investigated RXTE/PCA FORMULA  values of the absorbed component from
+archival observations for different parts of the orbit and found no increased column density in the pre-periastron flare.
+Observations throughout one full binary orbit could help to understand the variations in FORMULA  on time scales of days.
+The observed luminosity dependence of the power law index FORMULA  and the folding
+energy is similar to other sources, such as V0332+53 {{cite:266a609d-8aa7-43db-bb13-14b3e5462134}} and 4U0115+63
+{{cite:589733be-86e2-49fb-ac48-53115089405b}}. The power law index FORMULA  shows a hardening for
+the first observation, whereas the folding energy FORMULA  is slightly higher
+when compared to Obs. 2. {{cite:4d42caae-d614-48e8-82fb-edafcb04c5c2}} observed the FORMULA  variation
+in Her X-1 phase resolved HEAO-1 data and concluded that the parameter is
+dependent on the viewing angle of the accretion column and can be used to describe
+the plasma temperature of the system. In the case of GX 301FORMULA 2 the smaller FORMULA  value
+in Obs. 2 could indicate a lower plasma temperature which can be interpreted that the
+X-ray emission region is further up in the accretion column {{cite:3c621eef-7eea-4172-ae75-5283e5a41295}} (see also Section 5.2).
+The softening of the power law index FORMULA  with increased luminosity is also in agreement with the basic model of
+the accretion column that the plasma temperature decreases with increased height. With increased luminosity, the
+rate of accreted material would increase and the amount of soft photons created by the lateral walls of the
+relatively taller column would increase, leading to a softer spectrum, as is observed.
+For the second observation the abundances for Fe and Ca were left independent and a slight overabundance was observed.
+Taking into consideration that the abundances used in {{cite:06fab9f9-9666-40b5-bdaf-a665f221dc33}} are derived from
+the interstellar medium (ISM) a small overabundance from an evolved star may be expected.
+
+Variations in the CRSF parameters
+In both observations the CRSF was clearly observed and the gabs absorption component
+improved the overall fit significantly.
+Strong magnetic fields (FORMULA  G) exist close to the
+NS magnetic poles, where photons
+at energies close to the Landau levels are resonantly scattered from the line of sight
+and result in an absorption line-like feature in the spectrum. This feature
+provides a direct method to measure the magnetic field strength close to the
+NS surface, where the fundamental centroid energy can be described as
+FORMULA 
+where FORMULA  is the gravitational redshift at the scattering site, with FORMULA  for typical NS.
+Using the FORMULA  values obtained in the phase averaged spectra, the calculated magnetic field
+has a strength of FORMULA  G (Obs. 1) and FORMULA  G (Obs. 2) which
+is consistent within errors for both observations.
+The CRSF parameters are consistent with previous results using RXTE data and are lower than
+the observed BeppoSAX {{cite:654246d2-1da8-48b6-9d5a-a49f161bdca1}} and INTEGRAL {{cite:501a7874-d61f-4c84-b945-8c8a6986ecc3}}
+values of FORMULA  keV. These observations were obtained during pre-periastron outburst,
+where the luminosity of the source is much higher than in the two Suzaku observations presented in this paper.
+A luminosity dependence of the phase-averaged CRSF centroid energy
+is observed in multiple other sources, where an anti-correlation between CRSF and luminosity was observed in V 0332+53 and 4U 0115+63
+{{cite:fd4551c1-8515-4990-acf6-a2972bd01604}}, {{cite:29554645-9e45-4bb6-92ea-ee7c7beae85e}}, and a positive correlation was observed in Her X-1 {{cite:cc848ed9-421c-4cf0-ae83-2b1135008c5a}}.
+{{cite:6c84eb61-318e-4afc-9bfa-37a39277ec92}} have confirmed, from pulse to pulse variability studies, such correlations for V 0332+53, 4U 0115+63 and Her X-1, and also found an anti-correlation for A 0535+26.
+Although the CRSF values are consistent with a single value in both Suzaku observations,
+a hint of an anti-correlation can be seen in the data.
+Compared with the BeppoSAX and INTEGRAL data, the CRSF centroid energy
+might have a positive correlation.
+Parallel to the CRSF-luminosity correlation, {{cite:6c84eb61-318e-4afc-9bfa-37a39277ec92}} also observed in pulse to pulse data of four sources that the
+power law index FORMULA  shows an opposite luminosity
+dependence than the FORMULA . In the Suzaku observations discussed here,
+FORMULA  is observed to soften with increased luminosity, another indication that a possible negative CRSF-luminosity correlation exists.
+The two opposite scenarios seem to depend on the
+luminosity, i.e., if the observed luminosity is below or above a critical luminosity (CL) which can be derived from
+the Eddington luminosity of a system {{cite:22b6ea0f-cead-40a9-8288-f2fb69e36cf1}}. The CL is of order FORMULA  erg sFORMULA , but depends
+also on the accretion geometry (spherical or disc) as well as the height and diameter of the accretion column.
+Above the CL, the infalling proton density becomes so large that the protons
+begin to interact and decelerate, creating a radiation pressure dominated
+shock region above the magnetic pole. This region of increased density is
+most likely the region where the CRSF is created {{cite:2d0eaa70-01b5-464a-a728-0d12736a9cf1}}.
+With increasing luminosity, the shock region moves higher up
+in the accretion column, where a smaller local magnetic field value results in a
+lower observed CRSF centroid energy, as is observed in V 0332+53 or 4U 0115+63.
+The observed CRSF-luminosity dependence as well as the FORMULA -luminosity
+dependence in GX 301FORMULA 2 is very similar to the scenario described here.
+Below the CL, the accreting matter slows down via hydrodynamical shock, `Coulomb friction'
+or nuclear collision {{cite:2d0eaa70-01b5-464a-a728-0d12736a9cf1}}, {{cite:f5c1ee01-cb22-4ee4-8876-63112320de97}}.
+With increasing accretion rate, the luminosity increases and the deceleration region is pushed
+closer to the NS surface, where the magnetic fields are higher. This would result in a
+positive CRSF-luminosity correlation, as observed in Her X-1 and A 0535+26.
+With a distance of 3 kpc, the intrinsic unabsorbed FORMULA  keV luminosity of FORMULA  erg sFORMULA 
+is significantly below the typical CL of FORMULA  erg sFORMULA . Although it has been observed that
+sources with similar luminosities can show the opposite correlation {{cite:6c84eb61-318e-4afc-9bfa-37a39277ec92}} due to
+individual critical luminosity values, the large luminosity difference compared to CL puts this source
+in the same regime as Her X-1 and A 0535+26 and at odds with the notion of a well-defined CL.
+The observed variation in FORMULA  and possibly in FORMULA 
+would then stem from another mechanism.
+
+Emission lines
+The existence of multiple fluorescence emission lines, especially at lower energies, where the absorption is very
+dominant, indicates that the source of the emission originates from a region where the column density is not
+very large, i.e. the outer layers of the stellar wind in our line of sight {{cite:500587ed-d55c-4d17-9b77-da5373f34d8f}}. If the emission lines would be embedded deeper in
+the stellar wind, the lines, especially at lower energies would have to be significantly stronger, to
+be detected at all. On the other hand, if the line emitting region is in the
+outer layers of the wind, the incident soft X-ray flux would
+be drastically reduced, making the equivalent width very large, as observed
+in the low energy emission lines (Table 1). A possible explanation would be that the emission
+region is very large for the lines, and maybe spread over the entire surface of the stellar wind.
+The most dominant line emission stems from the Fe KFORMULA  transition at FORMULA  keV.
+The observed energies in both observations are consistent with the
+emission in neutral material. The ratio of the intensities of Fe KFORMULA /Fe KFORMULA  for both
+observations, FORMULA  for Obs. 1 and FORMULA  for Obs. 2, is consistent with the fluorescing
+material being neutral or only slightly ionized {{cite:3fb880cb-d70d-494d-b269-38f97b4ba3e2}}.
+The equivalent widths (EQW) of the two Fe KFORMULA  lines show that the intensity relative to the continuum
+is reduced by a factor of FORMULA  in the second observation.
+Based on emission line widths, {{cite:a025b307-286f-4a09-aeb8-d61540b2ed7f}} estimated in ASCA data that the Fe emission
+originates within FORMULA  cm of the continuum emission source.
+{{cite:500587ed-d55c-4d17-9b77-da5373f34d8f}} use XMM-Newton pulse by pulse observations to observe a correlation with
+increased flux of the source, showing that the Fe emission region is not far from the X-ray source.
+In the Suzaku observation, however, the Fe KFORMULA  line flux does not directly follow the observed luminosity.
+The increase in absorbed FORMULA  keV luminosity is a factor of FORMULA , whereas the increase in the fluorescence
+line intensities is only FORMULA . This difference in intensity change indicates that the distance between continuum and
+fluorescence emission lines is large, especially when compared to the proposed FORMULA  lt-s from {{cite:a025b307-286f-4a09-aeb8-d61540b2ed7f}}.
+In the 6 months' time between the two observations, however, the overall emission geometry could have changed,
+accounting for the difference in the fluorescence intensities. If the emission originates from a
+confined region in the stellar wind, observations taken during two different
+orbital phases would each yield a different distance to this region.
+In addition to the strong Fe KFORMULA  line, many other emission lines are observed
+in the XIS spectra in both observations. The observed intensities of these lines show
+the same behavior, where the flux for the second observation is FORMULA  or less compared to the
+first observation, although the observed uncertainties for the different lines, especially for
+S KFORMULA  and Ar KFORMULA , are very large. Furthermore, the S KFORMULA  line falls into an energy regime
+where calibration uncertainties have been previously observed {{cite:e857e543-1277-4cc7-81c3-1e891d0327e1}}, so that a
+detailed analysis is not possible at this time.
+
+Pulse profiles
+Historically, GX 301FORMULA 2 shows very strong pulse to pulse variations and an intensive flaring behavior on very short time
+scales {{cite:26d58750-6290-4bf2-9f70-95c1129a64dc}}, {{cite:500587ed-d55c-4d17-9b77-da5373f34d8f}}, e.g., throughout the pre-periastron flare.
+The observations obtained here do not show such flaring behavior,
+and only show the regular pulsation throughout the observation.
+A pulse period could only be established for Obs. 2 of the Suzaku data, which was consistent with Fermi/GBM data.
+With the GBM pulse period for the first observation, pulse profiles for both observations could be
+produced for different energy bands.
+The two peaked pulse profiles show a similar behavior for both observations, where the second peak
+is getting strong at higher energies. This behavior is in contrast to many similar sources, such as
+4U 0115+63 {{cite:589733be-86e2-49fb-ac48-53115089405b}}, V 0332+53 {{cite:fd4551c1-8515-4990-acf6-a2972bd01604}}, 4U 1909+07 {{cite:8edc3b4d-46fd-4b7a-b656-15a9864ab3d6}}, and 1A1118FORMULA 61 {{cite:e857e543-1277-4cc7-81c3-1e891d0327e1}},
+where the pulse profile turns into a single peak profile at higher energies. A reduction in the intensity of
+the second pulse has also been observed in BeppoSAX data for different parts of the orbit {{cite:654246d2-1da8-48b6-9d5a-a49f161bdca1}}.
+
+Geometrical constraints using a simple dipole model
+The phase resolved analysis of the second observation showed strong variations in several spectral parameters
+throughout the pulse profile. As previously observed by {{cite:26d58750-6290-4bf2-9f70-95c1129a64dc}}, the CRSF centroid energy
+varies by FORMULA  where the highest energy is detected at the peak and the
+falling flank of P1. Such behavior has been observed in multiple other
+sources, e.g., Vela X-1 {{cite:45322e68-ec0b-47a1-b90f-5323ca266f6b}}, 4U 0352+309 {{cite:97862e9c-1935-4682-bbc0-560e64134d63}},
+and Her X-1 {{cite:349f5c77-f09a-4155-b3fb-14e695405004}}. A model for the CRSF variations is based upon
+the change in the viewing angle throughout the pulse and thus
+different heights of the accretion column are probed, yielding a different local
+magnetic field observed for each phase bin.
+A simple approach to derive a possible geometry for the neutron star and the magnetic field uses
+the variation in the observed magnetic field throughout the pulse phase.
+In this case the very smooth and sinusoidal variation (Figure 8) can be modeled as a simple dipole
+where the total magnetic moment FORMULA  is calculated from the phase averaged CRSF energy value.
+The variation of the CRSF energy is then fitted by changing the geometrical angles of the system until a best fit converges.
+Appendix A discusses the model in detail, introducing the
+three free parameters: FORMULA , the viewing angle between line of sight and the NS spin axis,
+the inclination angle FORMULA  of the magnetic moment with respect to the spin axis, and the angle FORMULA ,
+indicating the 'lag' of the FORMULA -field plane with respect to the ephemeris, i.e.,
+the observed shift in pulse phase (see also Figure 9)
+The best fit values for FORMULA  were either FORMULA  or FORMULA , depending on the starting values of the fit (see Appendix A),
+where the latter value is equivalent to the former when the dipole polarity is flipped.
+FORMULA  and FORMULA  angles showed a very strong interdependence, and
+the best fit FORMULA  pairs were: FORMULA , FORMULA ,
+FORMULA , and FORMULA .
+All best fit values have a FORMULA  with 7 dof.
+These pairs do show a degeneracy of FORMULA  and FORMULA , which can be explained
+with a geometrical symmetry, when calculating the magnetic field for each individual phase bin.
+The first and last two pairs can be each treated as the same geometry, rotated by 180 degrees.
+Figure REF 
+shows the calculated magnetic field values from the CRSF centroid energies
+and the theoretical values for FORMULA  from the best fit angles for a simple dipole model with
+FORMULA , FORMULA  and FORMULA .
+FIGURE 
+The phase resolved energy and width of the CRSF show a strong correlation,
+where the width varies in phase with the CRSF energy (Figure. 7). {{cite:26d58750-6290-4bf2-9f70-95c1129a64dc}}
+observed a similar correlation,
+where the magnetic pole was observed under different viewing angles FORMULA , where FORMULA  is the angle
+between the line of sight and the magnetic axis.
+{{cite:0d870c2b-5ca5-46fa-a21f-3f8bb42c36c0}} showed that the anisotropic velocity field of the electrons
+in the accretion column leads to a fractional line width of:
+FORMULA 
+The FORMULA  ratios vary in the 0.16 – 0.24 range,
+corresponding to variations of FORMULA  throughout the pulse phase. The two
+outliers with large errors in phase bins 1 and 6 were ignored.
+The variation of FORMULA  can be estimated as FORMULA  and FORMULA  throughout one
+pulse phase, where the magnetic pole rotates around the NS spin axis,
+tilted by FORMULA  with respect to the line of sight.
+Using the average ratio of 0.2, we calculated the values of FORMULA  for the
+two geometries with FORMULA  (FORMULA ) and FORMULA  (FORMULA ).
+For each geometry, we used the variation of the FORMULA  ratio (FORMULA )
+to calculate the variation in FORMULA , resulting in values of FORMULA  and
+FORMULA . These variations are smaller then the values expected from the
+the geometrical discussion, but show a similar behavior, where the variation of the angle
+is larger for the smaller value of FORMULA .
+From Equation 4, we were also able to estimate a possible plasma temperature for the
+two geometries from the calculated values of FORMULA .
+The plasma temperature of FORMULA  keV for FORMULA 
+is very similar to the observed folding energy FORMULA , which is an indication
+of the plasma temperature {{cite:70afa5e4-e9af-4c99-9a66-a3c6368c8a24}}.
+The value of FORMULA  keV for the FORMULA  geometry is much larger and
+is not consistent with the observed FORMULA .
+Assuming that the NS spin axis is aligned with the inclination of the binary system, a value of FORMULA  would
+put the inclination at FORMULA , a value which is only marginally above the upper limit of FORMULA , as determined
+by {{cite:ddc069ed-3d8a-4666-8829-bb2a28383084}}.
+The strong Fe line was detected in all 10 phase bins. The measured line flux did
+not change significantly throughout the pulse phase, while the FORMULA  keV flux varied by more than a factor of 2.
+From this we conclude that the distance to the Fe fluorescence region is greater than FORMULA  lt-s
+(FORMULA  cm), from the NS. This is in conflict with the conclusion of {{cite:a025b307-286f-4a09-aeb8-d61540b2ed7f}}
+that the emission region must be closer than FORMULA  cm from the NS, based upon the width
+of the emission lines measured by ASCA. Their assumption is that the emission region is close to the NS
+and that the material free falls onto the NS surface, encountering much faster velocities, which caused the
+observed broadening of the lines.
+The smaller measured Fe KFORMULA  line width in the phase averaged spectra is more
+consistent with the assumption that the line broadening is due to the terminal velocity of FORMULA  km
+of the line driven wind {{cite:f6bf4948-418d-4211-8689-1440981ebe92}}.
+
+Summary
+We presented results of two Suzaku observations of GX 301FORMULA 2 taken shortly after the periastron passage.
+The spectra were modeled with a partially and fully covered power law with a Fermi-Dirac cutoff and a CRSF at FORMULA  keV.
+The column density of the smooth stellar component only marginally changed and the clumpy wind component significantly changed between both observations.
+Flux dependencies of the CRSF and FORMULA  were not significant, but do hint at similar correlations such as those observed in V 0332+53 and 4U 0115+63, although the observed luminosity is significantly below the calculated critical luminosity of this system. They are in the realm where one might expect the energy of the CRSF to decrease with decreasing flux.
+The variations in the pulse profiles and the CRSF throughout the pulse phase have a signature of a dipole magnetic field.
+Using a simple dipole model we calculated the expected magnetic field values for different pulse phases and
+were able to extract a set of geometrical angles, loosely constraining the dipole geometry in the NS.
+Model constraints derived using the observed ratio of FORMULA  to FORMULA , together with calculated plasma temperatures,
+favor a solution wherein the spin axis is tilted FORMULA  to our line of sight.
+SS acknowledges support by NASA contract NAS5-30720 and grant NNX08AX83G.
+FF is supported by DLR grant 50 OR 0808 and via a DAAD Fellowship.
+IC acknowledges financial support from the French Space Agency CNES through CNRS.
+This research has made use of data obtained from the Suzaku satellite, a collaborative mission
+between the space agencies of Japan (JAXA) and the USA (NASA).
+
+A. Geometrical dipole model
+The variability of the CRSF energy throughout the pulse phase can be used to understand the geometry of the
+neutron star. We assume a simple dipole magnetic field around a spherical neutron star, however
+we want to emphasize that these assumptions are very rudimentary, and effects such as
+the displacement of the dipole field from the neutron star center are not taken into account here.
+The total magnetic moment FORMULA  of the neutron star can be calculated with:
+FORMULA 
+using the average magnetic field from the phase averaged CRSF centroid energy (FORMULA  G)
+and a typical neutron star radius of FORMULA  km. The value of the last part, including the azimuthal angle FORMULA  of
+the magnetic pole was estimated to the average value of 1.54.
+FIGURE 
+The total average magnetic moment is divided into three components based on the
+cartesian coordinate system in
+Figure REF :
+FORMULA 
+where FORMULA  is the angle between the dipole field and the spin axis and FORMULA  is the rotation
+angle from the ephemeris, i.e. the x-axis.
+Next, the vector FORMULA  was calculated for each
+individual phase bin FORMULA  used in the phase resolved analysis.
+FORMULA 
+The individual components of FORMULA  are the projections of each phase bin on the three axes, as seen from the line of sight
+of the observer.
+The angle FORMULA  corresponds to the angle
+between the line of sight and the spin axis.
+For each of the individual phase bins, the magnetic field was calculated using the position vector FORMULA  indicating the
+position of the magnetic pole and the vector FORMULA , which indicates the magnetic moment:
+FORMULA 
+The calculated magnetic field values were then fitted to the measured magnetic field, varying the
+three angles FORMULA , FORMULA , and FORMULA  until the best fit converged.
+To avoid wrong solutions due to local minima, the starting parameter of all three angles were
+varied in steps of FORMULA  before the fit was started.
+The best fit solutions resulted in the
+values that are discussed in detail in section 5.5.

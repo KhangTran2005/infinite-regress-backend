@@ -1,0 +1,312 @@
+
+Anomalous Monopole In an Interacting Boson System
+Biao Wu
+Institute of Physics,
+Chinese Academy of Sciences, Beijing 100080, China
+Qi Zhang
+Department of Physics and Center for Computational
+Science and Engineering, National University of Singapore, 117542,
+Republic of Singapore
+Institute of Physics, Chinese Academy of Sciences,
+Beijing 100080, China
+Jie Liu
+Institute of Applied Physics and Computational
+Mathematics, Beijing 100088, China
+Feburary 19th, 2008
+
+Anomalous monopole of disk shape is found to exist in the semiclassical theory
+of a two-mode interacting boson system. The quantum origin of this anomaly
+is the collapsing or bundling of field lines of Berry curvature caused by
+the interaction between bosons in the semiclassical
+limit. The significance of this anomalous monopole
+is twofold: (1) it signals the failure of the von Neumann-Wigner theorem
+in the semiclassical limit; (2) it indicates a breakdown of
+the correspondence principle between quantum and classical dynamics.
+
+03.65.Sq,03.65.Vf, 05.45.Mt, 03.75.-b
+Magnetic monopole was first discussed by Dirac as a
+quantization condition for electric charge{{cite:6b1510f2-5621-4f5c-9e4a-cbc94e0caf6c}}.
+Although it has never been observed in experiment as an
+fundamental particle, the monopole has fascinated physicists
+ever since{{cite:e8d20963-05ff-4cec-b9f4-d34cc7ffa211}}.
+Interestingly, monopoles have attracted great attention
+in a very different context as degeneracies or diabolical
+points of energy levels in parameter
+space{{cite:6074ca9f-2a5a-45bd-a716-0476fb7c041b}}, {{cite:9e8f8a0c-3eca-4f4b-b646-9589973b4003}}, {{cite:9c79a075-4955-43c6-8c1d-6bc4886bdce4}}.
+The examples include the degeneracy of Bloch bands in the Brillouin
+zone{{cite:5823af59-ece7-4aca-8cea-10f9913f1dab}} and energy levels in molecular
+magnets{{cite:b0dc3b0e-fd82-4e2d-ac70-d614bdf0ed18}}, {{cite:95d3018b-749b-47c6-ae74-f3b70ae5184d}}.
+The monopoles in this context are found to be crucial to
+understanding these systems.
+In this work we study a two-mode interacting boson system that depends
+on three external parameters. For simplicity, we focus
+on its ground state, which is doubly degenerate at one isolated point
+in the parameter space. We find that the field lines of
+Berry curvature emanating from the point are curved due to
+the interaction between bosons. Moreover, at large FORMULA  limit,
+that is, when the number of bosons FORMULA  increases to infinity,
+the field lines collapse and bundle into a two-dimensional disk
+whose radius is determined by the interaction strength.
+At large FORMULA  limit, this boson system can be well described
+by a mean-field theory{{cite:bcac0e17-72c5-4909-993a-30a62b7f8435}}, {{cite:add80281-0202-4d3b-a15a-abc63f39cfd0}}.
+Since this boson system belongs to a class of quantum systems
+which become classical at large FORMULA  limit{{cite:cb442caa-5d46-43d2-8006-51085324f5a0}},
+this mean-field can be regarded as a semiclassical theory.
+We discover that the semiclassical (or mean-field) ground state
+of this boson system is degenerate at every point on the
+two-dimensional disk mentioned above. This means that the
+whole disk is a monopole. This is in stark contrast with what
+is demanded by the von Neumann-Wigner theorem{{cite:21fd8f65-5b62-40c1-8f86-87c4a22b0adf}}:
+the monopole in a three-dimensional parameter space is always a
+point-like object. Therefore, this anomalous monopole of disk shape
+indicates that the von Neumann-Wigner theorem fails in the semiclassical
+limit. Our further analysis shows that the magnetic charge
+is not uniformly distributed in the disk while its total charge is
+still FORMULA , the Chern number{{cite:9c79a075-4955-43c6-8c1d-6bc4886bdce4}}.
+In addition, this anomalous monopole is compared to an
+anomalous monopole that is formed in a trivial fashion.
+The Berry curvatures are computed for this system within
+the semiclassical theory and compared to the results in
+the quantum description. The matching becomes better
+as FORMULA  increases as expected from the correspondence principle
+between quantum and classical dynamics{{cite:bc3b03d3-a4aa-4ce4-b5c3-d7f6eda8ce48}}.
+However, on the monopole disk, the Berry curvature differs
+significantly between its semiclassical result and quantum
+result even in the large FORMULA  limit. This shows that
+the existence of the anomalous monopole
+indicates a breakdown of the correspondence principle.
+This breakdown is analyzed from a fresh perspective by regarding the
+three external parameters as the dynamical variables
+of a massive classical particle.
+The two-mode interacting boson system is described by
+the following second quantized Hamiltonian
+FORMULA 
+where FORMULA , FORMULA  and FORMULA , FORMULA 
+are bosonic operators for two different quantum states,
+respectively, FORMULA  is the interacting strength between
+bosons, and FORMULA  is the volume of the system.
+The three parameters, FORMULA ,FORMULA , and FORMULA , characterize the
+influence from environment or another system. This Hamiltonian
+has its root in modeling the Bose-Einstein condensates in a
+double-well potential{{cite:add80281-0202-4d3b-a15a-abc63f39cfd0}}. It also belongs to
+a class of Hamiltonians studied in Refs.{{cite:b0dc3b0e-fd82-4e2d-ac70-d614bdf0ed18}}, {{cite:95d3018b-749b-47c6-ae74-f3b70ae5184d}}
+for single molecule magnet if we introduce
+FORMULA ,
+FORMULA ,
+and FORMULA .
+The focus of studies in Refs.{{cite:b0dc3b0e-fd82-4e2d-ac70-d614bdf0ed18}}, {{cite:95d3018b-749b-47c6-ae74-f3b70ae5184d}} is
+on the pattern and topological property of the monopoles.
+In this work we examine the “magnetic” fields, i.e.,
+Berry curvatures, generated by the monopoles and
+their behavior in the semiclassical limit FORMULA .
+Note that large FORMULA  limit
+is always taken by keeping FORMULA  constant.
+For simplicity, we concentrate on the ground state of this system.
+At point FORMULA , we have FORMULA , whose
+ground state is either FORMULA 
+or FORMULA . This means
+that the ground state of this boson system is doubly degenerate
+at point FORMULA . The ground state
+is not degenerate elsewhere in the parameter space.
+FIGURE 
+This degenerate point or monopole at FORMULA  generates “magnetic”
+field FORMULA  (Berry curvature) in the parameter
+space spanned by FORMULA . As one usually uses field lines to illustrate
+a magnetic field, we have computed numerically the field lines of Berry
+curvature and plotted them in Fig.REF (a). For clarity, only
+the results for FORMULA  and FORMULA  are plotted. Nevertheless an
+interesting trend is clearly demonstrated: the field lines
+are curved towards a disk defined by FORMULA 
+and FORMULA ; the curving gets stronger as FORMULA  increases. In fact,
+our numerical results show that the field lines will collapse
+and bundle (or converge) into the disk when FORMULA  approaches infinity.
+As we know, a magnetic monopole (or an electric charge) can be
+viewed as the converging point or the emitting source of
+field lines. This collapsing (or converging) of field lines
+suggests that the whole disk become a monopole in the limit
+FORMULA . This is indeed the case as we shall show.
+At large FORMULA  limit, this boson system becomes “classical” and can
+be described by the following mean-field (or semiclassical)
+Hamiltonian{{cite:bcac0e17-72c5-4909-993a-30a62b7f8435}}, {{cite:add80281-0202-4d3b-a15a-abc63f39cfd0}},
+FORMULA 
+where FORMULA  and FORMULA  are complex amplitudes for the system in
+the two quantum modes. The normalization is one, i.e.,
+FORMULA . This kind of nonlinear Hamiltonian also
+appears in photoassociation systems{{cite:091a78a1-8065-41e0-ad44-ac48b06744d2}}, {{cite:8749210e-458a-4813-9411-a116cbbc6145}}.
+Within this semiclassical description, the ground state of this
+system is given by
+FORMULA 
+where FORMULA  is the solution of the following equation,
+FORMULA 
+This equation has one real root when FORMULA .
+When FORMULA , it can have three real roots. In
+particular, when FORMULA , two of the three real roots given by
+FORMULA  have the same energy
+and are for the ground states. This means that in the semiclassical
+description of the system, the ground state is degenerate on
+the disk given by FORMULA  and FORMULA . In other
+words, the whole disk is a monopole(see Fig.REF ).
+FIGURE 
+This anomalous disk-shaped monopole is very surprising.
+According to the von Neumann-Wigner theorem, the
+accidental degeneracy of a quantum system occurs only at isolated
+points in a three dimensional parameter space{{cite:21fd8f65-5b62-40c1-8f86-87c4a22b0adf}}.
+In other words, the monopole must be a point. This is indeed
+the case when our system is described by the second-quantized
+Hamiltonian: the ground state is degenerate
+only at point FORMULA  as we have already pointed out.
+However, in the semiclassical description,
+that is, at large FORMULA  limit, the monopole is a two-dimensional
+disk as the result of the curving and collapsing of field lines.
+This shows by example that the von Neumann-Wigner theorem does not hold
+in the semiclassical limit.
+The significance of this anomalous monopole can be appreciated
+from a different angle. We consider the highest eigenstate
+of this system. For this eigenstate, its semiclassical monopole is
+a line as shown in Fig.REF . However, this line-shaped
+monopole which appears also anomalous is trivial, not as significant as
+the disk-shaped monopole. The reason is as follows. In the second
+quantized model, the highest eigenstate has FORMULA  equally spaced degenerate
+points along FORMULA  axis between FORMULA  and FORMULA . As FORMULA  approaches infinity,
+these degenerate points merge into a line, forming
+in a trivial fashion the one dimensional monopole.
+Let us now examine this disk-shaped anomalous monopole in detail.
+Although the semiclassical Hamiltonian FORMULA  is nonlinear,
+the Berry curvature FORMULA  of this monopole can
+be computed as in a linear system{{cite:1a9b047c-b2e4-40db-849c-a607c0a5f24a}}. That is
+to compute the curl of the vector potential
+FORMULA 
+with FORMULA  given in Eq.(REF ).
+The Berry curvature FORMULA  is found to be
+FORMULA 
+where FORMULA  and FORMULA  is the unit vector for
+FORMULA  direction. This result
+is plotted as field lines in Fig.REF (b). It is
+apparent that these semiclassical field lines away from
+the monopole disk are very similar to the field lines
+obtained with the second quantized model. Note that
+FORMULA  has two different values on the monopole disk
+due to the double degeneracy of the ground state.
+By integrating FORMULA  over a closed surface
+around a small area in the disk, we find that the “magnetic”
+charge is not uniformly distributed over the disk. The charge
+distribution is
+FORMULA 
+The integration of this charge density over the whole disk
+gives us a Chern number of FORMULA . So, although the monopole has
+changed from a point to a disk as the semiclassical limit is
+approached, the total charge does not change. It is worthwhile to
+mention that the total charge of the line-shaped monopole is infinite
+as easily inferred from its trivial origin.
+Berry{{cite:bc3b03d3-a4aa-4ce4-b5c3-d7f6eda8ce48}} once established a semiclassical relation
+between Berry phase{{cite:9e8f8a0c-3eca-4f4b-b646-9589973b4003}} and Hannay's
+angle{{cite:317bf974-98c9-4dcd-82bf-d1b80b6c02f5}}, {{cite:ec42346a-67cc-4fbc-9a0c-9f82df68298f}}
+in accordance with the correspondence principle.
+This semiclassical relation basically says that the two-forms
+for Berry phase and Hannay's angle (the two-form for Berry
+phase is the usual Berry curvature) are the same in the semiclassical
+limit FORMULA . This semiclassical relation should
+hold in this interacting boson system. We
+define two pairs of conjugate variables,
+FORMULA , FORMULA  and
+FORMULA , FORMULA  for the
+semiclassical Hamiltonian{{cite:1c281710-6c88-4b47-9abe-8734b12ed174}}. The quantization is
+realized with the following commutators,
+FORMULA 
+One can obtain the second quantized Hamiltonian(REF )
+with the following substitution FORMULA ,
+FORMULA  and
+FORMULA , FORMULA .
+These commutators show why FORMULA  is
+the semiclassical limit. As a result, the semiclassical
+relation established by Berry{{cite:bc3b03d3-a4aa-4ce4-b5c3-d7f6eda8ce48}} for this boson system is
+FORMULA 
+Note that the Hannay's angle in the semiclassical system FORMULA  is
+just the Berry phase generalized for nonlinear quantum system
+in Ref.{{cite:1a9b047c-b2e4-40db-849c-a607c0a5f24a}} and
+the semiclassical Berry curvature FORMULA  is
+the two-form for this Hannay's angle.
+Our numerical results show that the relation (REF ) indeed
+holds almost everywhere in the parameter space except on
+the monopole disk. On the disk, the semiclassical Berry curvature
+FORMULA  has a non-zero FORMULA  component while the
+quantum FORMULA  always points radially in the FORMULA  plane.
+Furthermore, the quantum Berry curvature FORMULA  diverges
+exponentially with FORMULA  on the
+monopole disk while the in-plane component of the semiclassical
+FORMULA  does not. We define FORMULA , where
+the superscript FORMULA  denotes the component of the vector
+parallel to the FORMULA  plane. The difference FORMULA  is plotted
+in Fig.REF , where we see the
+difference FORMULA  increases exponentially with FORMULA .
+This diverging difference shows that the semiclassical relation
+in Eq.(REF ) is broken. Therefore, the disk-shaped
+monopole also signifies the breakdown of the corresponding
+principle between quantum mechanics and classical mechanics.
+In the following, we shall look into
+this breakdown from a very different angle, showing that
+some quantum effect remains in the semiclassical limit.
+FIGURE 
+We treat the three parameters, FORMULA , as dynamical
+variables of a massive and classical particle, whose Hamiltonian
+is FORMULA . In this way we obtain a
+Born-Oppenheimer type system where a fast quantum system is coupled
+to a heavy and slow classical system{{cite:1c281710-6c88-4b47-9abe-8734b12ed174}}
+FORMULA 
+where FORMULA  is a general wavevector for the boson system.
+It is reasonable to expect that at the large FORMULA  limit we can simplify
+the above Hamiltonian by replacing its first part by the semiclassical
+Hamiltonian in Eq.(REF ),
+FORMULA 
+However, in the following, we shall show that the two Hamiltonians
+FORMULA  and FORMULA  do not have the same dynamics even in the limit
+FORMULA . That is, there is a difference between
+the two Hamiltonians which does not vanish as FORMULA 
+increases.
+For a Born-Oppenheimer system, it is well known that the
+dynamics of the slow system FORMULA  is controlled by two forces,
+Born-Oppenheimer force and geometric
+force{{cite:1c281710-6c88-4b47-9abe-8734b12ed174}}, {{cite:9b429386-893e-4dc3-a0bb-a218735739f7}}, {{cite:9dde9af7-315a-4970-9cd5-b799221bd242}}. The
+Born-Oppenheimer force FORMULA  is the gradient of an eigenenergy of
+the fast system. If FORMULA  is
+the Berry curvature of the fast system, the dynamics of the slow
+system is then given by
+FORMULA 
+One can use either the second quantized Hamiltonian FORMULA 
+or the semiclassical Hamiltonian FORMULA  to compute both forces.
+We consider a special case, where the slow classical particle is set with
+the initial condition, FORMULA , FORMULA , FORMULA , and FORMULA , FORMULA 
+and FORMULA  while the fast boson system is kept in its ground
+state. We set up ourselves to a task to design a potential FORMULA 
+so that the slow particle stays in FORMULA  plane and makes a circular motion.
+When FORMULA  is large, one would feel safe to design FORMULA  by
+using the semiclassical Hamiltonian FORMULA  to
+compute FORMULA  and FORMULA .
+However, due to the exponential breakdown of Eq.(REF )
+discussed above, such designed FORMULA  will not be able to keep
+the classical particle in the FORMULA  plane: the strong parallel component
+of FORMULA  will kick the particle out of the plane.
+This shows that there is always some physical consequence which
+can not be counted in the semiclassical theory.
+It is interesting
+note that Berry and Robbins once pointed out that a kind of friction
+in a chaotic classical system does not exist in its corresponding quantum
+system and called it discordance{{cite:9dde9af7-315a-4970-9cd5-b799221bd242}}. What
+we observe here is similar to this discordance although our system
+is not chaotic in the semiclassical limit.
+In conclusion, we have found an anomalous monopole of disk shape in
+a two-mode interacting boson system. This kind
+of anomalous monopole should exit in a general interacting
+boson system. For example, if one manages to compute
+the Bloch bands of an interacting boson system in a three
+dimensional periodic
+potential, one should expect such an anomalous monopole
+in the Brillouin zone. We have further demonstrated that this
+anomalous monopole is an indication of the failure of the
+von Neumann-Wigner theorem in the semiclassical limit
+and the breakdown of the correspondence principle
+between quantum and classical dynamics.
+We thank the helpful discussion with Junren Shi and Qian Niu. This
+work is supported by the “BaiRen” program of Chinese Academy of
+Sciences, the NSF of China (10504040,10725521), and the 973 project of
+China(2005CB724500,2006CB921400).

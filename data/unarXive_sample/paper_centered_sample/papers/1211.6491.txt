@@ -1,0 +1,1222 @@
+
+ FORMULA
+Sum-Rate Optimal Multi-Code CDMA Systems: An Equivalence Result
+ FORMULA
+Yeo Hun Yun and Joon Ho Cho, Member, IEEE
+The material in this paper was presented in part at the 2010 Information Theory and Applications workshops (ITA 2010), San Diego, CA, Jan. 2010.
+The authors are with the Department of Electrical Engineering, Pohang University of Science and Technology (POSTECH), Pohang, Gyeongbuk 790-784, Korea (e-mail: {yhym205, jcho}@postech.ac.kr).
+
+
+
+In this paper, the sum rate of a multi-code CDMA system with asymmetric-power users is maximized, given a processing gain and a power profile of users.
+Unlike the sum-rate maximization for a single-code CDMA system, the optimization requires the joint optimal distribution of each user's power to its multiple data streams as well as the optimal design of signature sequences.
+The crucial step is to establish an equivalence of the multi-code CDMA system to restricted FDMA and TDMA systems.
+The CDMA system has upper limits on the numbers of multi-codes of users, while the FDMA and the TDMA systems have upper limits on the bandwidths and the duty cycles of users, respectively, in addition to total bandwidth constraint.
+The equivalence facilitates the complete characterization of the maximum sum rate of the multi-code CDMA system and also provides new insights into the single- and the multi-code CDMA systems in terms of the parameters of the equivalent FDMA and TDMA systems.
+
+
+code-division multiple-access, frequency-division multiple-access, Welch bound equality sequences, power distribution, signature sequence, sum capacity, time-division multiple-access.
+Introduction
+Time-division multiple-access (TDMA) and code-division multiple-access (CDMA) have been intensively studied for more than last three decades, and have been serving as the major multiple-access schemes for the second and the third generation wireless cellular systems, respectively {{cite:014d7762-01dd-4fea-9454-65e7e4a94ffc}}–{{cite:3e0be166-2029-4a9c-9f3f-6f5136ee0202}}.
+Recently, the fourth generation wireless cellular system has started to be deployed worldwide, for which the frequency-division multiple-access (FDMA) serves in the form of discrete Fourier transform-spread orthogonal frequency-division multiplexing, a.k.a., single-carrier FDMA {{cite:c889526c-bf8c-4a9c-ab3a-1f25bf69ff46}}.
+The main contribution of this paper is the complete characterization of the maximum sum rate of a multi-code CDMA system by establishing an equivalence among these three multiple-access schemes.
+Since the primary performance limiting factor of a CDMA system is multiple-access interference (MAI), a lot of research has been conducted to mitigate the detrimental effect of the MAI through system parameter optimizations {{cite:39680166-58ea-40fe-bf00-cc2ec236d06c}}, {{cite:92a4b3ea-4398-4578-9f85-8b326e2e4202}}.
+At the transmitter side, signature sequences have long been identified as important design parameters and hence optimized under various criteria {{cite:16aaa720-5806-4844-b290-e47a9ed563ec}}-{{cite:fb3594c3-3ed6-40de-af60-5ff0f31e8075}}.
+Particularly in {{cite:8092cf44-0876-45b1-97e6-32bf2c19a644}}-{{cite:3a884b63-43e1-4eaa-a355-86633054f460}}, the Shannon-theoretic sum rate is maximized through sequence optimization given a processing gain and a power profile of users in order to find the fundamental performance limit of the CDMA system that operates over the multiple-access channel (MAC) corrupted by additive white Gaussian noise (AWGN).
+In {{cite:8092cf44-0876-45b1-97e6-32bf2c19a644}}, the signature sequences are optimized to maximize the sum rate of a symbol-synchronous CDMA system with symmetric- or equal-power users.
+For convenience, let the system be called underloaded, critically-loaded, and overloaded, respectively, if the number of users is less than, equal to, and greater than the processing gain.
+Then, it is shown that orthogonal sequences are optimal for underloaded or critically-loaded systems, while Welch bound equality (WBE) sequences {{cite:4f8a68ab-0a07-48b6-8d8d-aa722d2c460d}} are optimal for overloaded systems.
+It is also shown that the maximum sum rate is less than the sum capacity of the MAC for underloaded systems, while they are equal for critically-loaded or overloaded systems.
+The sequence design problem considered in {{cite:8092cf44-0876-45b1-97e6-32bf2c19a644}} is generalized in {{cite:9e3ca95d-56ce-4a66-bf50-ca277e0d8736}} to accommodate asymmetric- or unequal-power users.
+Again for underloaded or critically-loaded systems, orthogonal sequences are optimal that completely remove the MAI.
+For overloaded systems, it is shown that orthogonal sequences are optimal for oversized users and generalized WBE (GWBE) sequences {{cite:ffbe59df-6517-41e8-8e40-7232c69ffe92}} are optimal for non-oversized users, where the oversized users are defined as the relatively strong-power users satisfying a certain condition in terms only of the processing gain and the power profile of users.
+It is also shown that the maximum sum rate becomes equal to the sum capacity of the MAC if and only if the system is overloaded without any oversized user or critically-loaded only with symmetric-power users.
+Thus, with asymmetric-power CDMA users, a strict loss in sum rate relative to unrestricted multiple-access achieving the sum capacity of the MAC is experienced not only by underloaded systems but also by critically-loaded and even by some overloaded systems.
+The results in {{cite:8092cf44-0876-45b1-97e6-32bf2c19a644}} and {{cite:9e3ca95d-56ce-4a66-bf50-ca277e0d8736}} are further extended in {{cite:3a884b63-43e1-4eaa-a355-86633054f460}} to a symbol-asynchronous but chip-synchronous system.
+Once again, orthogonal sequences are optimal for underloaded or critically-loaded systems.
+For overloaded systems, it is shown that orthogonal sequences having only one non-zero element are optimal for oversized users and generalized asynchronous WBE (GAWBE) sequences are optimal for non-oversized users, where the users are classified in the same way as the users in the symbol-synchronous system are.
+It is also shown that, if the asynchronous CDMA system has the same processing gain and the same power profile of users as the synchronous system does, the former has the same maximum sum rate and the same necessary and sufficient condition to achieve the sum capacity of the MAC as the latter does.
+Thus, the asynchronous CDMA with asymmetric-power users becomes an optimal multiple-access scheme only when the system is overloaded without any oversized user.
+In {{cite:fb3594c3-3ed6-40de-af60-5ff0f31e8075}}, it is pointed out that the sub-optimality of these CDMA systems in achieving the sum capacity of the MAC is due to the restriction that allows the transmission of only a single data stream of scalar symbols per user and that, consequently, a multi-dimensional signaling such as multi-carrier CDMA can significantly expand the capacity region.
+However, the sequence optimizations for the CDMA with multi-dimensional signaling have been limited so far to the sum-power minimization subject to the equal signal-to-interference-plus-noise ratio of users {{cite:c983286e-6c98-47df-b6e2-e4cae70d6447}} and the characterization of either the capacity region given a constraint on the total power of users or the power region given constraints on user rates {{cite:fb3594c3-3ed6-40de-af60-5ff0f31e8075}}.
+In {{cite:745b806d-2510-4e31-964d-bb14ee4a8e94}}, the asymptotic sum rate is derived for the CDMA with multi-dimensional signaling.
+However, isometric or random signature sequences are only employed without any sequence optimization.
+In this paper, we consider a multi-code CDMA system as a representative CDMA system with multi-dimensional signaling, and maximize its sum rate for asymmetric-power users.
+It is well known that the multi-code CDMA has an advantage over the single-code CDMA in that it can better exploit the system resources by naturally supporting various types of data with different rate requirements {{cite:c983286e-6c98-47df-b6e2-e4cae70d6447}}, {{cite:fb3594c3-3ed6-40de-af60-5ff0f31e8075}}.
+The crucial step is to establish an equivalence of the multi-code CDMA system to restricted FDMA and TDMA systems.
+The CDMA system has upper limits on the numbers of multi-codes of users, while the FDMA and the TDMA systems have upper limits on the bandwidths and the duty cycles of users, respectively, in addition to total bandwidth constraint.
+We classify the multi-code users into oversized, critically-sized, and undersized users.
+The equivalence then provides a physical meaning to this classification rule by using the power spectral densities (PSDs) of users in the equivalent FDMA and TDMA systems.
+Unlike the definition of an oversized user in {{cite:9e3ca95d-56ce-4a66-bf50-ca277e0d8736}} and {{cite:3a884b63-43e1-4eaa-a355-86633054f460}} for the single-code CDMA system, this classification rule for the multi-code system is applicable to any combination of the processing gain and the power profile of users.
+Note that, unlike the sum-rate maximization in {{cite:8092cf44-0876-45b1-97e6-32bf2c19a644}}–{{cite:3a884b63-43e1-4eaa-a355-86633054f460}} for the single-code CDMA system, the sum-rate maximization for the multi-code system requires the optimal distribution of each user's power to its multiple data streams as well as the optimal design of the signature sequences.
+We introduce the notions of FDMA-equivalent bandwidth and TDMA-equivalent duty cycle, and use them to find the optimal power distribution and to obtain an insight into how to allocate the signal dimension or the system bandwidth to the users.
+We derive the maximum sum rate of the multi-code CDMA system and show that it is the same as that of the equivalent FDMA and TDMA systems.
+We also derive the necessary and sufficient condition for the sum-rate optimal multi-code CDMA system to achieve the sum capacity of the MAC.
+The equivalence says that this condition is nothing but the condition for the equivalent FDMA and TDMA systems to achieve the sum capacity of the MAC by having a flat PSD for each user and equal PSDs for all users.
+It turns out that, unlike the single-code CDMA system, the multi-code system can achieve the sum capacity of the MAC even for underloaded systems if and only if there is no oversized multi-code user.
+We show that, similar to the single-code CDMA system, all optimal signature sequences of the oversized multi-code users are orthogonal sequences.
+Interestingly, we also show that even some signature sequences of the non-oversized users can be orthogonal sequences, though in general they are GWBE sequences.
+With the system complexity taken into account, we derive both the maximum number of orthogonal sequences and the minimum number of signature sequences that still retain the maximum sum rate given the upper limits on the numbers of multi-codes.
+We examine whether these apparently contradicting objectives of the maximization of the number of orthogonal sequences and the minimization of the number of signature sequences can be achieved at the same time or not.
+In addition, we find the minimal upper limit profile on the numbers of multi-codes to achieve the sum capacity of the MAC.
+The finiteness of this minimal upper limit profile shows that the CDMA as a multiple-access scheme is not inherently sub-optimal but just becomes sub-optimal when the excessive restriction is imposed on the numbers of multi-codes.
+We briefly discuss how to extend the results in this paper to the symbol-asynchronous but chip-synchronous system, which completes the generalization of the theory developed in {{cite:8092cf44-0876-45b1-97e6-32bf2c19a644}}–{{cite:3a884b63-43e1-4eaa-a355-86633054f460}} for the single-code CDMA systems to the multi-code systems.
+We also compare the spectral efficiency of the sum-rate optimal CDMA systems with that of the CDMA systems having random sequences {{cite:745b806d-2510-4e31-964d-bb14ee4a8e94}}–{{cite:b13638b1-ad3e-41f2-a179-59bb9deb2278}}, both in no fading and Rayleigh flat-fading channels.
+This way, the equivalence facilitates the complete characterization of the maximum sum rate of the multi-code CDMA system and also provides new insights into the single- and the multi-code CDMA systems in terms of the parameters of the equivalent FDMA and TDMA systems.
+The rest of this paper is organized as follows.
+In Section , the signal and system models are described and the optimization problems are formulated for the multi-code CDMA system.
+In Section , a detour is made to the optimal bandwidth allocation problem for the restricted FDMA system and the optimal duty cycle allocation problem for the restricted TDMA system, and their maximum sum rates are characterized.
+In Section , the optimal solutions to the optimization problems formulated in Section  are derived.
+Numerical results and discussions are provided in Section , and concluding remarks are offered in Section .
+
+Signal Model and Problem Formulation
+Suppose that there are FORMULA  active users transmitting to a single receiver over a MAC.
+Similar to {{cite:9e3ca95d-56ce-4a66-bf50-ca277e0d8736}}, it is assumed that the users are symbol synchronous, possibly have an asymmetric-power profile, and employ CDMA as a multiple-access scheme.
+Later in Section REF , we will consider the CDMA with symbol-asynchronous but chip-synchronous users like that in {{cite:3a884b63-43e1-4eaa-a355-86633054f460}}.
+The major difference from {{cite:8092cf44-0876-45b1-97e6-32bf2c19a644}}–{{cite:3a884b63-43e1-4eaa-a355-86633054f460}} is that the users in this paper are multi-code users that may transmit more than one data streams by using multiple signature sequences or codes.
+We model the received signal FORMULA  of this multi-code CDMA system by using an FORMULA -by-1 real-valued random vector
+FORMULA 
+where FORMULA  is called the processing gain, FORMULA  is the signal component from the FORMULA th multi-code user, and FORMULA  is the ambient AWGN component.
+The signal component FORMULA  is given by
+FORMULA 
+where FORMULA  is the number of active data streams of the FORMULA th multi-code user, and FORMULA  and FORMULA  are the data symbol and the associated signature sequence of the FORMULA th data stream of the FORMULA th user, respectively.
+The AWGN component
+FORMULA 
+is assumed to have mean zero and variance FORMULA  per dimension, where FORMULA  is the FORMULA -by-1 all-zero vector and FORMULA  is the FORMULA -by-FORMULA  identity matrix.
+With the signal model in (REF ), we solve the following problems in this paper.
+For convenience in comparing the results with those in {{cite:8092cf44-0876-45b1-97e6-32bf2c19a644}}–{{cite:3a884b63-43e1-4eaa-a355-86633054f460}} for the single-code CDMA system, the components of the received signal and the signature sequences are modeled to be real, though the extension to a complex-valued baseband model is straightforward for real-valued passband signaling.
+For consistency to {{cite:fb3594c3-3ed6-40de-af60-5ff0f31e8075}}, the single- or the multi-code CDMA system is called overloaded if the number of active users is greater than the processing gain.
+In this paper, we further classify the non-overloaded systems to have the following definition.
+Definition 1 A multi-code CDMA system with number of users FORMULA  and processing gain FORMULA  is called
+FORMULA 
+
+The first problem is to maximize the sum rate of the system, given the average signal power FORMULA  and the upper limit FORMULA  on the number of active data streams or, equivalently, active signature sequences of the FORMULA th multi-code user, i.e.,
+C
+1NE{xk2}=pk,
+and
+nknk,
+for FORMULA , where FORMULA  is the set of all natural numbers.
+As the definition of the sum rate, we adopt the total information rates of users per chip at which the users can transmit reliably.
+This system with upper limits on FORMULA  will be called a restricted multi-code CDMA system or, just simply, a multi-code CDMA system.
+Then, the system with no upper limit on some FORMULA  and that with no upper limit on all FORMULA , respectively, may be called a partially-restricted and an unrestricted multi-code CDMA system.
+We are mostly interested in the restricted and the unrestricted systems, but the extension of the results in this paper to the partially-restricted systems is straightforward.
+These upper limits may be imposed to prevent a small group of multi-code users from occupying most of the signal dimension or the system bandwidth.
+This will become clear once the notions of the FDMA-equivalent bandwidth and the TDMA-equivalent duty cycle are introduced and the necessary and sufficient condition for the multi-code CDMA system to achieve the sum capacity of the MAC is derived in Section .
+Unlike the sum-rate maximization in {{cite:8092cf44-0876-45b1-97e6-32bf2c19a644}}–{{cite:3a884b63-43e1-4eaa-a355-86633054f460}} for the single-code CDMA system, that for the multi-code system requires to find the optimal power distribution as well as the optimal sequence design, which will be shown shortly.
+The second problem is to find the multi-code CDMA systems that maximize the number of orthogonal signature sequences for each multi-code user, among the sum-rate optimal multi-code CDMA systems found in solving the first problem.
+To maximize the sum rate of a multiple-access scheme with non-orthogonal user signals, joint encoding and decoding are required that perform, e.g., time sharing or rate splitting combined with superposition encoding and successive interference cancelation decoding {{cite:558368a1-5be0-44db-9ad5-e0db9011e28e}}, {{cite:2fc5454b-22af-4caa-b9f0-48a2d9fe3750}}.
+Since orthogonal channelization among users significantly simplifies the encoding and the decoding procedures, this maximization of the number of orthogonal sequences may contribute a lot to reducing the overall system complexity.
+Recall that, in the sum-rate maximization for the single-code CDMA system {{cite:9e3ca95d-56ce-4a66-bf50-ca277e0d8736}}, a group of users called oversized users are allocated orthogonal signature sequences and non-oversized users are allocated GWBE sequence.
+In this paper, we show that all optimal signature sequences of the oversized or the critically-sized multi-code users are orthogonal sequences, and that some optimal signature sequences of the undersized multi-code users can also be orthogonal sequences.
+The third problem is to find the multi-code CDMA systems that minimize the number of active signature sequences for each multi-code user, among the sum-rate optimal multi-code CDMA systems found in solving the first problem.
+Since the constraint on the number of active signature sequences may be imposed not only to prevent a small group of multi-code users from occupying most of the signal dimension or the system bandwidth but also to limit the complexity of the transmitters and the receiver, this minimization may contribute to further reducing the overall system complexity.
+Interestingly, it turns out that the objectives of the second and the third problems can be achieved simultaneously.
+As mentioned in the Introduction, the major differences from {{cite:fb3594c3-3ed6-40de-af60-5ff0f31e8075}}, where the CDMA with multi-dimensional signaling is also considered, are that all the above problems are related to the maximum sum rate and that the upper limits on the numbers of multi-codes of users are given as the constraints.
+We also briefly discuss in Section REF  what is the minimal upper limit profile on the numbers of multi-codes to achieve the sum capacity of the MAC.
+The decision parameters of these optimization problems are the active signature sequences and their numbers, and the powers distributed to the multiple data streams of each user.
+For notational simplicity in formulating the problems, we define the signature-sequence matrix FORMULA , the data-symbol vector FORMULA , and the data-correlation matrix FORMULA  of the FORMULA th multi-code user as
+rCl
+Sk  [sk,1,sk,2,,sk,nk],
+dk  [dk,1,dk,2,,dk,nk]T, and
+Pk  E{dk dkT},
+
+respectively, where the superscript FORMULA  denotes the transposition.
+Then, since FORMULA , the power constraint () can be rewritten as
+FORMULA 
+where FORMULA  denotes the trace.
+Now, whenever FORMULA  is needed, the power of the data symbol FORMULA  can simply be set to zero for FORMULA , without loss of generality.
+It is well known {{cite:26ba8e15-3e99-4895-a218-954e1ab9640b}} that a zero-mean Gaussian input distribution maximizes the mutual information between the input and the output of a Gaussian MAC.
+Since FORMULA , this requires zero-mean Gaussianity of the data symbols.
+The data symbols from different multi-code users are assumed statistically independent in this MAC.
+Hence, we can obtain the maximum sum rate of this symbol-synchronous multi-code CDMA system by solving
+Problem 1 
+ll
+P,Smaximize12N(IN+12S P ST)
+subject to1Ntr(Sk Pk SkT)=pk,k,
+where the first decision parameter
+FORMULA 
+is a FORMULA -by-FORMULA  data-correlation matrix and the second parameter
+FORMULA 
+is an FORMULA -by-FORMULA  signature-sequence matrix.
+Throughout this paper, logarithmic functions have base 2, unless otherwise specified.
+Thus, the unit of the sum rate here is [bits/chip] or, equivalently, [bits/dimension].
+
+Note in (REF ) that, unlike the single-code CDMA system in {{cite:8092cf44-0876-45b1-97e6-32bf2c19a644}}–{{cite:3a884b63-43e1-4eaa-a355-86633054f460}}, the multi-code system requires the joint optimization of the data-correlation matrix FORMULA  and the signature-sequence matrix FORMULA  in order to maximize the sum rate.
+Note also that, for each FORMULA , the FORMULA -by-FORMULA  matrix FORMULA  is positive semi-definite but not necessarily diagonal at this point because the data symbols of the FORMULA th multi-code user may be correlated.
+Lemma 1 
+Without loss of generality, we can restrict the decision parameters of Problem REF , respectively, to a diagonal matrix FORMULA  with non-negative entries and to a rectangular matrix FORMULA  with column vectors of norm FORMULA .
+
+See Appendix A.
+In this paper, we completely characterize the maximum sum rate achievable by the multi-code CDMA system, but only derive the optimal solutions in the form described in Lemma REF  without loss of generality.
+Thus, the problem of designing FORMULA  for each FORMULA  becomes that of distributing FORMULA  to the FORMULA  multiple data streams of the FORMULA th user.
+Just remember that, once such an optimal pair of FORMULA  and FORMULA  is obtained for all FORMULA , any orthogonal matrix FORMULA  preserves the optimality of FORMULA  and FORMULA  as the optimal data-correlation and signature-sequence matrices of the FORMULA th multi-code user, respectively, because FORMULA .In this paper, the superscript FORMULA  denotes the optimality of the quantity not the complex conjugate of it.
+Thus, our solutions accommodate in effect a multi-code user that transmits a correlated vector symbol as well as that transmits a uncorrelated scalar symbol.
+Once the data-correlation matrix FORMULA  defined as () is chosen to be diagonal, it can be rewritten as
+FORMULA 
+in terms of the power FORMULA  of the FORMULA th data stream of the FORMULA th multi-code user for FORMULA .
+So, Problem REF  can be converted to an equivalent problem
+Problem 2 
+ll
+P,Smaximize12N(IN+12SPST)
+subject tol=1nkpk,l=pk,k,  and
+pk,l0, k, l,
+where the power matrix FORMULA  is diagonal with FORMULA  being the FORMULA th diagonal entry, and the signature-sequence matrix FORMULA  has FORMULA  of norm FORMULA  as the FORMULA th column vector.
+Here and henceforth, we adopt the convention that the sum FORMULA  is zero if the lower limit of the sum is greater than its upper limit.
+
+As mentioned just after Lemma REF , we consider only a diagonal matrix as a feasible power matrix FORMULA .
+So, the zero-mean Gaussian data symbols FORMULA  of the FORMULA th multi-code user become always statistically independent.
+Thus, the data streams of a multi-code user are not distinguishable from independent data streams of single-code users.
+This observation leads to the following definition.
+Definition 2 Given a feasible power matrix FORMULA , the FORMULA th multi-code user is effectively the collection of FORMULA  single-code users with power FORMULA  for each FORMULA .
+These users are called the virtual single-code users of the multi-code CDMA system.
+
+The notion of virtual users for CDMA with multi-dimensional signaling is originally introduced in {{cite:fb3594c3-3ed6-40de-af60-5ff0f31e8075}}.
+This view of a multi-code user as virtual single-code users motivates us to rewrite Problem REF  in the form of a double maximization given by
+Problem 3 
+ll
+Pmaximize {Smax 12N(IN+12SPST)}
+subject tol=1nkpk,l=pk,k,  and
+pk,l0, k, l.
+
+Now, the inner optimization problem over FORMULA  given FORMULA  is nothing but the sequence optimization problem considered in {{cite:9e3ca95d-56ce-4a66-bf50-ca277e0d8736}} for the single-code CDMA system, whose solution can be identified and constructed by using the results therein.
+For FORMULA  such that the virtual single-code CDMA system is not overloaded, i.e., the processing gain is no less than the number of active virtual single-code users, orthogonal sequences are optimal and the inner optimization leads to the sum rate FORMULA  {{cite:9e3ca95d-56ce-4a66-bf50-ca277e0d8736}}.
+For FORMULA  such that the virtual single-code CDMA system is overloaded, however, a glimpse at the optimal solution in {{cite:9e3ca95d-56ce-4a66-bf50-ca277e0d8736}} reveals that the maximum sum rate expressed in terms of FORMULA  turns out not to be mathematically tractable at all for the outer optimization over the diagonal entries of FORMULA .
+This is because the maximum sum rate involves, in effect, the determination of the largest virtual single-code user index of so-called oversized users after numbering the virtual single-code users in a non-increasing order of the signal power, which is a highly non-linear operation of FORMULA .
+Thus, this double-maximization approach cannot be taken as is.
+Instead, we make a detour to the sum-rate maximization for FDMA and TDMA systems in the next section.
+It will be shown later in Section  that this detour is well worth making not only to solve Problem REF  by non-trivially extending the results in {{cite:8092cf44-0876-45b1-97e6-32bf2c19a644}}–{{cite:3a884b63-43e1-4eaa-a355-86633054f460}} but also to obtain insights into the sum-rate optimal single- and multi-code CDMA systems.
+Both the maximum number of orthogonal sequences and the minimum number of signature sequences will also be found in Section  for the multi-code CDMA system to still satisfy the constraint on FORMULA  for all FORMULA  and, at the same time, retain the maximum sum rate.
+
+Maximum Sum Rates of Restricted FDMA and TDMA Systems
+In this section, we characterize the maximum sum rate achievable by a restricted FDMA system, where upper limits are imposed on the bandwidths of users, and that achievable by a restricted TDMA system, where upper limits are imposed on the duty cycles of users, both given a power profile of users and total available system bandwidth.
+It turns out that these two systems are equivalent in the sense that the sum-rate maximization problem for the FDMA system can be converted to that for the TDMA system, and vice versa, by the proper substitutions of system parameters.
+It will be shown in the next section that these impositions of the upper limits are analogous to limiting the numbers of multi-codes of users for the multi-code CDMA system considered in the previous section.
+Problem Formulation for FDMA System
+Suppose that there is a FORMULA -user FDMA system with total available system bandwidth FORMULA  [Hz] in real passband, two-sided PSD FORMULA  of the AWGN that corrupts the channel, and average power FORMULA  and upper limit FORMULA  on the bandwidth FORMULA  of the FORMULA th user for FORMULA .
+In what follows,
+rCl
+p  [p1, p2, , pK]
+and
+w  [w1, w2, , wK]
+respectively, denote the power profile of users and the bandwidth-constraint profile of users that consists of the bandwidth upper limits of users.
+Then, the maximum sum rate
+FORMULA 
+of this restricted FDMA system can be found by solving
+Problem 4 
+rll
+(wk)kmaximizek=1Kwk(1+pkN0wk)
+subject to 0wkwk, k, and 
+k=1Kwkwtot,
+
+where the decision parameter FORMULA  consists of the bandwidth FORMULA  to be allocated to the FORMULA th user for FORMULA .
+The objective function is the sum of the AWGN channel capacities of the users, so that the unit of the sum rate is [bits/second].
+It is straightforward to verify that the constraint set is convex.
+Throughout this paper, we follow the convention
+FORMULA 
+which makes the left side of (REF ) continuous at any FORMULA  and FORMULA .
+This also makes sense physically because if no bandwidth is allocated to a user then the user cannot transmit any signal and, hence, cannot increase the sum rate.
+By this convention, the objective function in (REF ) becomes a strictly concave function of FORMULA  well defined on the convex constraint set.
+Thus, Problem REF  is a standard convex optimization problem {{cite:ff77ba94-91ed-4dbb-ba55-c513bfef67ee}}, which allows us to use general-purpose convex programming routines to find its solution at least numerically.
+Instead, we provide in this section its unique optimal solution in a closed algorithmic expression, which will be used in the next section in characterizing the maximum sum rate of the multi-code CDMA system.
+It is well known {{cite:26ba8e15-3e99-4895-a218-954e1ab9640b}} that, if an unrestricted FDMA system is considered instead, i.e., if the constraint (REF ) of Problem REF  is replaced by FORMULA , the unique optimal solution allocates
+FORMULA 
+to the FORMULA th user as its bandwidth.
+Throughout this paper, we use the following term for this solution, which uses up all available system bandwidth FORMULA  and allocates the FORMULA th user the optimal bandwidth that is proportional to its signal power FORMULA .
+Definition 3 The optimal solution to the unrestricted FDMA problem is called the proportional-share bandwidth allocation scheme.
+
+It will be shown that this proportional-share bandwidth allocation scheme plays a crucial role in constructing the optimal solution also to Problem REF  having the bandwidth upper limits of users.
+Note that the FDMA system under the proportional-share bandwidth allocation has the sum rate equal to the sum capacity
+FORMULA 
+of the MAC and becomes one of the optimal multiple-access schemes.
+Note also that, under the proportional-share bandwidth allocation, the optimal PSD of the FORMULA th user becomes flat and given by
+FORMULA 
+which is not a function of FORMULA .
+Thus, it immediately follows that the sum capacity of the MAC is achieved by the FDMA system if and only if the PSD of the overall received signal is flat, i.e., all the frequency components in the system frequency band are loaded uniformly.
+In Section , this will be used to explain why the presence of an oversized user incurs a strict loss in the sum rate of the CDMA system.
+
+Problem Formulation for TDMA System
+Suppose that there is a FORMULA -user TDMA system with total available system bandwidth FORMULA  [Hz] in real passband, two-sided PSD FORMULA  of the AWGN that corrupts the channel, and average power FORMULA  and upper limit FORMULA  on the duty cycle FORMULA  of the FORMULA th user, for FORMULA .
+In particular, we consider the TDMA system with power control {{cite:558368a1-5be0-44db-9ad5-e0db9011e28e}}, where the transmission power of the FORMULA th user in its transmission period is FORMULA  because the average power is FORMULA  and the duty cycle is FORMULA .
+If we define
+FORMULA 
+as the upper-limit profile on the duty cycles of users, then the maximum sum rate
+FORMULA 
+of this restricted TDMA system can be found by solving
+Problem 5 
+rll
+(tk)kmaximizek=1Ktkwtot(1+pkN0tkwtot)
+subject to 0tktk, k, and 
+k=1Ktk1,
+
+where the decision parameter FORMULA  consists of the duty cycle FORMULA  to be allocated to the FORMULA th user for FORMULA , and their sum cannot exceed the unity.
+The objective function is the sum of the AWGN channel capacities of the users scaled by the unitless duty cycles, so that the unit of the sum rate is again [bits/second].
+It is straightforward to see that Problem REF  can be converted to Problem REF  and vice versa, by substituting FORMULA  and FORMULA  with FORMULA  and FORMULA , respectively, for all FORMULA , which implies
+FORMULA 
+Thus, in the rest of this section, we focus mostly on characterizing the maximum sum rate of the restricted FDMA system because the solution to Problem REF  can then be readily obtained from that to Problem REF  by the simple substitutions.
+Similar to the FDMA case in the previous subsection, if an unrestricted TDMA system is considered instead, i.e., if the constraint (REF ) of Problem REF  is replaced by FORMULA , the unique optimal solution allocates
+FORMULA 
+to the FORMULA th user as its duty cycle.
+Definition 4 The optimal solution to the unrestricted TDMA problem is called the proportional-share duty-cycle allocation scheme.
+
+By this equivalence, the proportional-share duty-cycle allocation scheme uses up all available transmission time and allocates the FORMULA th user the optimal duty cycle that is proportional to its signal power FORMULA .
+Thus, the maximum sum rate of the unrestricted TDMA system becomes exactly the same as (REF ).
+Note that, under this proportional-share duty-cycle allocation, the TDMA becomes one of the optimal multiple-access schemes that achieve the sum capacity of the MAC.
+Note also that the optimal PSD of the FORMULA th user in its transmission period becomes flat and is the same as (REF ).
+Thus, it immediately follows that the sum capacity of the MAC is achieved by the TDMA system if and only if the PSD of the overall received signal is flat over the entire transmission periods of users.Since the system is assumed band-limited, this argument approximately holds if the transmission period of each user is chosen sufficiently large.
+
+Optimal Solution to Restricted FDMA System
+In this subsection, we present the optimal solution to Problem REF  in a closed algorithmic expression with three steps.
+The derivation of the optimal solution to Problem REF  is then straightforward by the simple substitutions of FORMULA  and FORMULA  with FORMULA  and FORMULA , respectively, for all FORMULA .
+Consider the PSD FORMULA  of the FORMULA th user's signal in the FDMA system, along with the following definition.
+Definition 5 The quantity FORMULA  is called the minimal PSD of the FORMULA th user.
+
+The first step of the three-step algorithm to construct the optimal solution is to reorder the users in a non-increasing order of their minimal PSDs FORMULA .
+So, in what follows, we assume that the users are already numbered as
+FORMULA 
+Note that, due to the bandwidth constraint (REF ), the PSD of the FORMULA th user is lower bounded by its minimal PSD.
+The second step begins with classifying the users as follows.
+The physical meaning of this classification rule will be provided in the next subsection.
+Definition 6 
+The FORMULA th user is tested by the rule
+C
+wk(wtot-k'=1k-1wk')pkk'=kKpk'wk,
+and classified as
+rll
+(a)an oversized FDMA user,  if  wk>wk,
+(b)a critically-sized FDMA user,  if  wk=wk,  and      
+(c)an undersized FDMA user,  if  wk<wk.
+
+Note that this user classification is not affected by the noise level FORMULA , similar to the fact that the user classification for the overloaded single-code CDMA system in {{cite:9e3ca95d-56ce-4a66-bf50-ca277e0d8736}} is not affected by the noise variance but only by the processing gain and the power profile of users.
+In {{cite:9e3ca95d-56ce-4a66-bf50-ca277e0d8736}} and {{cite:ffbe59df-6517-41e8-8e40-7232c69ffe92}}, the term oversized user is introduced for the single-code CDMA system, but no further classification is made for non-oversized users.
+It will be shown that the above definition of the oversized FDMA user naturally extends that in {{cite:9e3ca95d-56ce-4a66-bf50-ca277e0d8736}} and {{cite:ffbe59df-6517-41e8-8e40-7232c69ffe92}} to the multi-code CDMA system.
+It will be also shown that the further classification in (REF ) of the non-oversized users into critically-sized and undersized users turns out to be very useful in finding the maximum number of orthogonal signature sequences and the minimum number of signature sequences in the sum-rate optimal multi-code CDMA system.
+Here follows a simple consequence of Definition REF .
+Lemma 2 
+There exists a unique integer FORMULA  such that every user with index FORMULA  is oversized, while every user with index FORMULA  is non-oversized, i.e.,
+rCl
+wk>wk,   for   1kK1,
+and
+
+wkwk,  for  K1<kK.
+
+See Appendix B.
+Thus, FORMULA  is the number of oversized users in the system.
+The final third step to construct the optimal solution is to allocate the system bandwidth to the users.
+Proposition 1 
+Given a power profile FORMULA , a bandwidth-constraint profile FORMULA , and a total system bandwidth FORMULA , the optimal solution FORMULA  to Problem REF  is given by
+FORMULA 
+Consequently, the maximum sum rate of the restricted FDMA system becomes
+ll
+CFDMA(p,w,wtot,N0)= k=1K1wk(1+pkN0wk)
+ +(wtot-k=1K1wk)(1+k=K1+1KpkN0(wtot-k=1K1wk)).
+
+See Appendix C.
+The proof in the appendix just verifies that the presented three-step algorithm indeed generates an optimal solution, without showing how it is derived.
+A detailed derivation can be found in {{cite:7e55203d-ce59-4cf5-89bd-0c3382e9bd78}}, which expands that in {{cite:27f16893-c0d9-40ed-9b7a-f0a2ac79516f}} of the sum-rate optimal restricted FDMA system with an equal upper limit on FORMULA .
+
+Remarks on Optimal Solution
+In this subsection, we make some remarks on the optimal solution (REF ) and the maximum sum rate (REF ).
+In particular, an iterative algorithm is presented, which alternatively constructs the optimal solution by repeatedly utilizing the proportional-share bandwidth allocation scheme.
+The properties of the user PSDs of the optimal solution are also examined, which turn out to be useful in finding the necessary and sufficient condition to achieve the sum capacity of the MAC and later in obtaining insights into the optimal solutions to the multi-code CDMA problem.
+We also extend the restricted FDMA problem to allow zero-power inactive users, which is needed in the next section.
+Again, the results in this subsection can also be applied to the restricted TDMA problem after the simple substitutions.
+Remark 1 
+The optimal solution to Problem REF  can also be constructed by using the iterative algorithm presented in TABLE REF .
+
+TABLE 
+The following is a case-by-case verification that the iterative algorithm in TABLE REF  indeed constructs the optimal solution in (REF ).
+There are three cases to consider.
+If FORMULA , then FORMULA  by Definition REF .
+Since FORMULA  is equal to the due shareIn what follows, `due share' and `due rate' are those computed under the proportional-share allocation. FORMULA  to the first user, the iterative algorithm allocates the due shares to all the users and removes them from the user list by the line 6 of TABLE REF .
+Then, it terminates because the condition in the line 7 is satisfied.
+It can be verified that the resultant allocation becomes identical to the optimal allocation described by Proposition REF  for FORMULA .
+If FORMULA , then FORMULA .
+Since FORMULA  is equal to the due share to the first user, the iterative algorithm allocates the bandwidth upper limit to the first user and removes it from the user list by the line 5 of TABLE REF .
+Then, it goes back to the line 2 because the condition in the line 7 is not yet satisfied.
+Now, suppose that the above procedure is repeated FORMULA  times.
+Similarly, it can be shown that the iterative algorithm allocates the bandwidth upper limit to the renumbered first user, removes this first user from the user list, and goes back to the line 2.
+Suppose that the above procedure is repeated FORMULA  times.
+Since FORMULA  of the original FORMULA th user is not greater than the user's bandwidth upper limit by assumption, the algorithm performs the proportional-share bandwidth allocation to all the users remaining in the user list, removes them from the user list, and terminates.
+It can be verified again that the resultant allocation becomes identical to the optimal allocation for FORMULA .
+If FORMULA , then FORMULA .
+Similar iterations are conducted to the case with FORMULA , but now until the FORMULA th user is eventually allocated its bandwidth upper limit.
+Then, it terminates because there is no user left.
+Once again, it can be easily verified that the resultant allocation becomes identical to the optimal allocation for FORMULA .
+Therefore, the conclusion follows.
+By the above equivalence between the closed algorithmic solution presented in the previous subsection and the iterative algorithm in Table REF , both of which lead to (REF ), we can freely choose whichever convenient in what follows.
+The proof of Remark REF  shows that if the iterative algorithm terminates in FORMULA  iterations then FORMULA .
+If it terminates in FORMULA  iterations and the only one user in the user list has the due share computed in the line 4 of the FORMULA th iteration no greater than its bandwidth upper limit, then FORMULA , otherwise FORMULA .
+Thus, we can find the number FORMULA  of oversized users from the iterative algorithm that iterates FORMULA  times to construct the optimal bandwidths of the users.
+As shown in the proof, for FORMULA , the FORMULA th user as the renumbered first user has the due share computed in the line 3 of the FORMULA th iteration equal to FORMULA , which is used in the classification rule (REF ).
+Thus, by Definition REF , it turns out that the line 4 of TABLE REF  actually tests whether the renumbered first user is oversized or not, i.e., whether FORMULA  or not.
+If so, then by the line 5 the user is allocated its bandwidth upper limit FORMULA  that is less than its due share FORMULA .
+This justifies why we name the oversized users as such by precisely explaining what the physical meaning of FORMULA  in (REF ) is for the oversized users.
+By the line 6 of TABLE REF , non-oversized users are allocated the bandwidths that are equal to their due shares computed in the line 3 of the FORMULA th iteration.
+Despite this commonality of the non-oversized users, we further classify them into the critically-sized and the undersized users as done in Definition REF .
+To see why, we alter Lemma REF  and introduce the number FORMULA  of non-undersized users in the system.
+Lemma 3 
+There exists a unique integer FORMULA  such that all the users with index FORMULA  are non-undersized, while all the other users with index FORMULA  are undersized, i.e.,
+rCl
+wkwk,   for   1kK2,
+and
+
+wk<wk,  for  K2<kK.
+
+Omitted. It can be proved in almost the same way as Lemma REF  is proved.
+Remark 2 
+The FORMULA th user is
+rll
+(a)  oversized,  for FORMULA ,
+(b)  critically-sized,  for FORMULA , and
+(c)  undersized,  for FORMULA .
+
+Lemmas REF  and REF  show that the unique boundary indexes FORMULA  and FORMULA  can be identified, respectively, by which the oversized and the non-oversized users are separated and by which the non-undersized and the undersized users are separated.
+Since FORMULA , the conclusion follows immediately.
+The following remark justifies why we name the critically-sized and the undersized users as such.
+Remark 3 
+The optimal bandwidths of the non-oversized users satisfy the following properties.
+(a)
+The optimal bandwidth of a critically-sized user, if such a user exists, equals the user's bandwidth upper limit.
+(b)
+The optimal bandwidth of an undersized user, if such a user exists, is less than the user's bandwidth upper limit.
+
+
+To prove Remark REF -(a), assume that at least one critically-sized user exists.
+Then, by Definition REF  and Remark REF , the FORMULA th user becomes a critically-sized user that satisfies FORMULA .
+Also, by Definition REF  and (REF ), we have FORMULA .
+Thus, FORMULA .
+For the situations with more than one critically-sized users, since the optimal bandwidths of the non-oversized users follow the proportional-share allocation rule, it can be shown that Remark REF -(a) is still true by applying a form of the algebraic method of componendo and dividendoIn this paper, we use only the form FORMULA , for FORMULA , and FORMULA . to Definition REF  and (REF ) for FORMULA .
+To prove Remark REF -(b), assume that at least one undersized user exists.
+Then, by Definition REF  and Remark REF , the FORMULA th user becomes an undersized user that satisfies FORMULA .
+Also, by Definition REF  and (REF ), we have FORMULA .
+Thus, FORMULA .
+For the situations with more than one undersized users, let FORMULA  be the common PSD of the non-oversized users.
+Then, by (REF ), (REF ), and the result FORMULA  just derived, we have FORMULA .
+Therefore, the conclusion follows.
+Remark REF -(a) says that not only an oversized user but also a critically-sized user has the optimal bandwidth equal to its bandwidth upper limit.
+Unlike an oversized user, however, the upper limit is now equal to the critically-sized user's due share computed in the line 3 of the FORMULA th iteration after removing all the oversized users from the user list.
+This justifies why we name the critically-size users as such.
+Remark REF -(b) says that, though the non-oversized users are all allocated the due shares computed in the line 3 of the FORMULA th iteration, an undersized user is different from a critically-sized user in that its optimal bandwidth is less than the upper limit.
+This justifies why we name the undersized users as such.
+The proof of Remark REF -(b) shows that the test applied to the first non-oversized user performs nothing but the comparison of the upper limit FORMULA  with the non-oversized user's due share FORMULA  computed in the line 3 of the FORMULA th iteration.
+Moreover, by Lemma REF , we do not need to check whether a user is non-oversized or not any more once the first non-oversized user is found.
+Thus, the physical meaning of FORMULA  in (REF ) is also explained for the non-oversized users and shown to be consistent with that for the oversized users.
+The proof of Remark REF -(b) also shows that the proportional-share allocation scheme applied to the non-oversized users results in equal PSDs for these users.
+The following remark details the properties of the user PSDs of the optimal restricted FDMA system.
+Remark 4 
+The user PSDs of the optimal solution have the following properties.
+(a)
+The optimal PSDs are equal among the non-oversized users, if they exist.
+(b)
+The optimal PSDs are non-increasing in the user index.
+(c)
+The optimal PSD of an oversized user is always greater than those of non-oversized users, if they exist.
+
+
+Remark REF -(a) can be immediately seen from Proposition REF .
+If FORMULA , then the optimal solution (REF ) reduces to the proportional-share bandwidth allocation scheme.
+Since the PSD of the FORMULA th user satisfies FORMULA , the PSDs are equal, so that non-increasing.
+If FORMULA , then the PSDs of the oversized users are given by FORMULA .
+Thus, by the assumption (REF ), the PSDs of the oversized users are non-increasing.
+Since the proportional-share bandwidth allocation is performed to the non-oversized users, the PSDs of the non-oversized users are all equal to that of the FORMULA th user, i.e.,
+FORMULA .
+Moreover, the PSDs of the FORMULA th and the FORMULA th users satisfy
+ll
+pK1wK1*=pK1wK1>k'=K1Kpk'wtot-k'=1K1-1wk'
+>k'=K1+1Kpk'wtot-k'=1K1wk'=pK1+1wK1+1*
+
+where (REF ) comes from Definition REF  and the fact that the FORMULA th user is oversized, and (REF ) comes from the facts that an oversized user is allocated its bandwidth upper limit and that FORMULA  implies FORMULA  for all real constants FORMULA  and FORMULA .
+Hence, the PSDs are non-increasing.
+Also, (REF ) proves Remark REF -(c).
+If FORMULA , then the PSDs of the optimal solution are given by FORMULA .
+Thus, by the assumption (REF ), the PSDs are non-increasing.
+Therefore, Remark REF -(b) is true in all cases.
+The above remark implies that, if FORMULA , then we have
+FORMULA 
+By Remarks REF  and REF , we have the following alternative expressions of the optimal bandwidth allocation and the maximum sum rate.
+Recall that FORMULA , defined in Lemma REF , is the number of non-undersized users in the system.
+Remark 5 
+The optimal solution FORMULA  in Proposition REF  to Problem REF  can be rewritten as
+FORMULA 
+Consequently, the maximum sum rate in (REF ) can be rewritten as
+ll
+CFDMA(p,w,wtot,N0)= k=1K2wk(1+pkN0wk)
+ +(wtot-k=1K2wk)(1+k=K2+1KpkN0(wtot-k=1K2wk)).
+
+By Remark REF -(a), the optimal bandwidth of a critically-sized user, if exists, equals its bandwidth upper limit.
+Moreover, by Remark REF -(a), the PSD of a critically-sized user, if exists, equals that of the other non-oversized users.
+Thus, again by the method of componendo and dividendo, it can be shown that FORMULA .
+Therefore, the conclusion follows.
+The following remark shows how the imposition of the upper limits affects the bandwidth allocation.
+Remark 6 
+If there exists a non-oversized user in the optimal restricted FDMA system, then the bandwidth allocated to the non-oversized user is always greater than or equal to its due share of the bandwidth, where the equality holds if and only if there is no oversized user.
+
+A sketch of the proof is as follows.
+Since there exists at least one non-oversized user, we have FORMULA , which is divided into two cases of FORMULA  and FORMULA .
+If FORMULA , then the algorithm in TABLE REF  terminates in one iteration and the proportional-share allocation becomes optimal.
+Thus, the statement is trivially true.
+If FORMULA , then the first user is oversized and allocated a smaller bandwidth than its due share, i.e., FORMULA , by the line 5 of the first iteration.
+Since FORMULA , it leaves the remaining users in the user list a larger bandwidth FORMULA  than the sum of their due shares FORMULA .
+So, in the line 3 of the second iteration, the computed due share of the bandwidth of each user in the user list becomes larger than the due share computed in the line 3 of the first iteration.
+There are two sub-cases to consider.
+For FORMULA , the algorithm terminates after assigning the due shares to the users.
+Thus, the statement is true.
+For FORMULA , the first user in the user list is allocated a smaller bandwidth than the due share computed in the line 3 of the second iteration and leaves the remaining users in the user list a larger bandwidth than the due share computed in the line 3 of the second iteration.
+In this way, the bandwidth left to the non-oversized users is always increasing as the iterations go on.
+We keep continuing this iteration until the algorithm terminates.
+Therefore, the conclusion follows.
+The user PSDs also help us visually and, hence, more straightforwardly understand the above remark.
+A related numerical example can be found in Section .
+From Remark REF , we have the following consequences, which will be used later to explain the properties of the sum-rate optimal multi-code CDMA system.
+Remark 7 
+ FORMULA
+(a)
+If there exists a critically-sized user in the optimal restricted FDMA system, then its rate is always greater than or equal to its due rate, where the equality holds if and only if there is no oversized user.
+(b)
+If there exist undersized users in the optimal restricted FDMA system, then the undersized users' sum rate is always greater than or equal to the sum of their due rates, where the equality holds if and only if there is no oversized user.
+(c)
+If there exists an oversized user in the optimal restricted FDMA system, then the oversized users' sum rate is always less than the sum of their due rates.
+(d)
+If there exists an oversized user in the optimal restricted FDMA system, then the first oversized user's rate is always less than its due rate. However, it is not necessarily true for other oversized users.
+
+
+Note that FORMULA  is a monotone increasing function of FORMULA  and that a critically-size user is also a non-oversized user.
+Thus, by Remark REF , we have Remark REF -(a).
+Similarly, we can say the same as Remark REF -(a) for each undersized user, which directly implies that the sum of the optimal bandwidths allocated to the undersized users is always greater than or equal to the sum of their due shares, where the equality holds if and only if there is no oversized user.
+Note that the sum rate of the undersized users is the second term in the right side of (REF ).
+Thus, we have Remark REF -(b) because FORMULA  is a monotone increasing function of FORMULA .
+When there exists an oversized user, the sum of the optimal bandwidths allocated to the oversized users is always less than the sum of their due shares because the sum of the optimal bandwidths allocated to the non-oversized users is always greater than the sum of their due shares.
+Thus, we have Remark REF -(c) because a smaller bandwidth implies a lower rate even if the proportional-share allocation scheme is applied among the oversized users.
+The first sentence of Remark REF -(d) is straightforward from the algorithm in TABLE REF .
+To show that this does not hold for the other oversized users, a counter example is enough, which can be found in Section .
+Thus, we have the second sentence of Remark REF -(d).
+Remarks REF  and REF -(c) show that the imposition of, for example, equal upper limits mitigates the unfairness inherent in the sum-rate maximization by reducing the sum rate of the strong-power oversized users, while increasing the sum rate of the non-oversized users.
+However, Remark REF -(d) emphasizes that an oversized FORMULA th user is not always allocated a smaller bandwidth than its due share computed in the line 3 of the first iteration.
+Rather, it is allocated a smaller bandwidth than its due share computed in the line 3 of the FORMULA th iteration.
+The next remark is on the necessary and sufficient condition for the optimal restricted FDMA system to achieve the sum capacity of the MAC.
+Remark 8 
+The maximum sum rate (REF ) of the restricted FDMA system is upper bounded by the sum capacity of the MAC, i.e.,
+FORMULA 
+where equality holds if and only if there is no oversized user, i.e., FORMULA  or, equivalently,
+FORMULA 
+
+The constraint set of the restricted FDMA problem is a subset of that of the unrestricted FDMA problem.
+In addition, the unrestricted FDMA as one of the various multiple-access schemes has its sum rate upper bounded by the sum capacity of the MAC.
+Thus, we have (REF ).
+It is well known {{cite:26ba8e15-3e99-4895-a218-954e1ab9640b}} that the FDMA system achieves the sum capacity if and only if the bandwidths are allocated to all users by applying the proportional-share allocation scheme.
+Moreover, TABLE REF  shows that this occurs if and only if the first user is non-oversized, i.e., (REF ) holds by Definition REF .
+By Lemma REF , there is no oversized user because the first user is not oversized.
+Therefore, the conclusion follows.
+As mentioned earlier in this section, the proportional-share bandwidth allocation is equivalent to assigning a flat PSD for each user and equal PSDs for all users, which evenly loads all the frequency components in the system frequency band.
+Thus, (REF ) is also the necessary and sufficient condition for the equal PSDs of users to result in not only a feasible but also the optimal solution to the sum-rate maximization problem for the restricted FDMA system.
+Although no direct link has been yet established between the definitions of the oversized users for the FDMA and for the single-code CDMA systems, a similar argument can be found in {{cite:9e3ca95d-56ce-4a66-bf50-ca277e0d8736}}, which says that the optimal overloaded single-code CDMA system achieves the sum capacity of the MAC if and only if there is no oversized user.
+In the next section, it will be shown that the above remark not only verbally parallels the argument in {{cite:9e3ca95d-56ce-4a66-bf50-ca277e0d8736}} but also successfully generalizes it to the multi-code CDMA system.
+Until now, we have been assuming that all users are active and have positive powers, i.e., FORMULA .
+The following rather obvious remark, which is presented for the completeness of the argument, shows how to extend the results in this section to allow zero-power inactive users.
+This result along with the convention FORMULA  at FORMULA , for all FORMULA , in (REF ) will be used in the next section, where we return to the sum-rate maximization problem for the multi-code CDMA system.
+To avoid a vacuous situation, it is assumed that at least one user has a positive power.
+Remark 9 
+Suppose that there are FORMULA  users but only FORMULA  users are active.
+Then, FORMULA  is exactly the same as (REF ) or, equivalently, (REF ) for FORMULA , while it can be any value satisfying
+FORMULA 
+for FORMULA .
+
+Since the users are numbered in a non-increasing order of the minimal PSDs, we have FORMULA , and FORMULA .
+Note that a zero-power inactive user does not increase the sum rate even when a positive bandwidth is allocated to the user.
+Thus, by simply ignoring the inactive users, we obtain FORMULA  as (REF ) or, equivalently, (REF ) for FORMULA , which results in the maximum sum rate given by (REF ).
+If FORMULA , then the inactive users have the remaining bandwidth FORMULA  at their disposal.
+Otherwise, no inactive user can be allocated a positive bandwidth at all.
+Therefore, we have (REF ).
+By the simple substitutions of FORMULA  and FORMULA  with FORMULA  and FORMULA , respectively, for all FORMULA , all the frequency-domain arguments in this subsection can be straightforwardly converted to the time-domain arguments for the restricted TDMA system.
+It turns out in the next section that this equivalence between the optimal bandwidth allocation problem for the restricted FDMA system and the optimal duty-cycle allocation problem for the restricted TDMA system also extends to the optimal power distribution problem for the multi-code CDMA system.
+
+Maximum Sum Rate of Multi-Code CDMA Systems
+In this section, we completely characterize the maximum sum rate achievable by the multi-code CDMA system considered in Section .
+Given an upper limit on FORMULA  for each FORMULA , we not only derive the maximum sum rate along with the jointly optimal power distribution and sequence design, but also find the maximum number of orthogonal signature sequences and the minimum number of signature sequences both with the maximum sum rate being still retained.
+To do so, first, a rather unconventional approach of the replace-and-switch method is applied to Problem REF .
+Then, the notions of FDMA-equivalent bandwidth and TDMA-equivalent duty-cycle are introduced to establish the equivalence of the optimal multi-code CDMA system to the optimal restricted FDMA and TDMA systems.
+We also extend the results to the symbol-asynchronous but chip-synchronous multi-code CDMA system.
+Throughout this section, we assume that the users are numbered in a non-increasing order of FORMULA , i.e.,
+FORMULA 
+Replace-and-Switch Method
+Recall Problem REF  having the outer optimization over FORMULA  and the inner optimization over FORMULA , which is one of two double-maximization forms of Problem REF .
+It is already discussed at the end of Section  that, though this form has a well-known inner optimization problem, the outer optimization problem is not mathematically tractable.
+The alternative double-maximization form having the outer optimization over FORMULA  and the inner one over FORMULA  may also be considered.
+However, it can be easily seen that this form does not even result in a simple or a known optimization problem for the inner optimization.
+Instead of taking such direct double-maximization approaches, we take an indirect approach of replacing the inner optimization of Problem REF  with an equivalent one and then switching the order of the inner and the outer optimizations in the hope that it may convert the problem into a solvable one.
+This use of the replace-and-switch method is motivated by its success in solving the total power minimization problem in {{cite:9c628878-1cf4-4bb5-bea3-0ca3108aa7b9}}, where the jointly optimal power allocation and signature waveform design are derived for a continuous-time band-limited single-code CDMA system that meets the asymmetric SINR requirements of users at the output of the linear minimum mean-squared error (LMMSE) receivers.
+To proceed, we define the signum function as
+FORMULA 
+As seen below, this function is used just to count the positive numbers among non-negative numbers, though defined also for a negative argument.
+Lemma 4 
+Given a feasible power matrix FORMULA , the inner optimization problem of Problem REF  over FORMULA  results in the same sum rate as Problem REF  does for the restricted FDMA system, where the FDMA system has the total number FORMULA  of positive-power active and zero-power inactive FDMA users, the power FORMULA  of the FORMULA th user, one-sided PSD FORMULA  of the AWGN, the equal bandwidth upper limit FORMULA , and the total system bandwidth FORMULA .
+
+Given FORMULA  satisfying FORMULA  and FORMULA , the inner optimization problem in (REF ) can be viewed as the sequence design problem for a single-code CDMA system considered in {{cite:9e3ca95d-56ce-4a66-bf50-ca277e0d8736}}, now having the number of active users equal to FORMULA .
+Suppose that this number is not greater than the processing gain, i.e., FORMULA .
+As shown in {{cite:9e3ca95d-56ce-4a66-bf50-ca277e0d8736}}, a complete orthogonalization of the signature sequences is possible in this case of a non-overloaded CDMA system with virtual single-code users and, consequently, the maximum sum rate is given by FORMULA .
+Note that the corresponding restricted FDMA system with parameters specified in this lemma has the sum of the bandwidth upper limits of the active FDMA users no greater than the total system bandwidth, i.e., FORMULA .
+Thus, every active FDMA user is non-undersized by Definition REF  and the maximum sum rate becomes equal to that of this single-code CDMA system.
+Now, suppose that FORMULA , i.e., the CDMA system with virtual single-code users is overloaded.
+As shown in {{cite:9e3ca95d-56ce-4a66-bf50-ca277e0d8736}}, we first need to identify the oversized single-code users in this case to compute the maximum sum rate.
+Note that the direct comparison of Definition REF  with the definition in {{cite:9e3ca95d-56ce-4a66-bf50-ca277e0d8736}} reveals that the corresponding restricted FDMA system with parameters specified in this lemma has the oversized user classification rule in common with the single-code CDMA system.
+In addition, the direct comparison of (REF ) with the maximum sum rate in {{cite:9e3ca95d-56ce-4a66-bf50-ca277e0d8736}} shows that the corresponding restricted FDMA system has the maximum sum rate in common with the single-code CDMA system.
+Therefore, the conclusion follows.
+Lemma REF  can be straightforwardly converted to the equivalence of the single-code CDMA system to the restricted TDMA system having equal upper limits FORMULA  on the duty cycles of FORMULA  users.
+This equivalence of the single-code CDMA system to the restricted FDMA and TDMA systems will be further extended in the next subsections to the equivalence of the multi-code CDMA system to the restricted FDMA and TDMA systems possibly having unequal upper limits on the bandwidths and the duty cycles of users, respectively.
+Note that, since some FORMULA  of a feasible FORMULA  of the inner optimization in (REF ) may be zero, it is now clear why the sum-rate maximization for the restricted FDMA and TDMA systems is extended at the end of Section  to include both active and inactive users.
+In the proof of Lemma REF , we considered the CDMA system with number of active virtual single-code users equal to FORMULA .
+These virtual single-code users can be classified as follows.
+Definition 7 
+The active virtual single-code users of a multi-code CDMA system are classified into oversized, critically-sized, or undersized virtual single-code users, if the corresponding users of the equivalent restricted FDMA system with parameters specified in Lemma REF  are classified as such by Definition REF .
+The non-oversized and the non-undersized virtual single-code users are also similarly defined among the active virtual single-code users.
+
+Note, as mentioned in the proof of Lemma REF , that this definition of the oversized virtual single-code user coincides with that of the oversized single-code user in {{cite:9e3ca95d-56ce-4a66-bf50-ca277e0d8736}}.
+Now, Lemma REF  allows us to replace the inner optimization problem of Problem REF  with the sum-rate maximization problem for the restricted FDMA system having the upper limit FORMULA  on the bandwidth FORMULA  of the FORMULA th user as
+Problem 6 
+ll
+(pk,l)k,lmaximize{
+ll
+(wk,l)k,lmaxk=1Kl=1nkwk,l(1+pk,l22wk,l)
+subject to0wk,l12N,k,l,  and
+k=1Kl=1nkwk,l12,
+
+.
+
+subject tol=1nkpk,l=pk,k, and
+pk,l0,k,l.
+
+Recall that, once at least the optimal solution FORMULA  to the outer optimization problem of Problem REF  is found somehow, the jointly optimal signature sequences can be straightforwardly identified and constructed by applying the results in {{cite:9e3ca95d-56ce-4a66-bf50-ca277e0d8736}} to solve the inner optimization problem of Problem REF .
+Notice, however, that this replacement of the inner optimization problem itself does not help at all yet in solving the outer optimization problem of Problem REF  over FORMULA , because the inner optimization still returns the same objective function that is a highly non-linear function of FORMULA .
+Lemma 5 
+Problem REF  has the maximum sum rate and the optimal solution in common with
+Problem 7 
+ll
+(wk,l)k,lmaximize{
+ll
+(pk,l)k,lmaxk=1Kl=1nkwk,l(1+pk,l22wk,l)
+subject tol=1nkpk,l=pk,k, and
+pk,l0,k,l,
+
+.
+
+subject to0wk,l12N,k,l, and
+k=1Kl=1nkwk,l12.
+
+
+The constraints of the inner optimization problem of Problem REF  are not affected by the choice of FORMULA .
+In addition, those of the outer optimization problem are not affected by the choice of FORMULA .
+Thus, the optimal solution to Problem REF  does not change even if we switch the order of the inner and the outer optimization problems.
+Therefore, the conclusion follows.
+As shown in the next subsections, Problem REF  obtained by applying the simple trick of switching the order of the inner and the outer optimization problems of Problem REF  turns out to be solvable.
+Of course, Lemma REF  and Problem REF  as well as Definition REF  and Problem REF  can be re-stated in terms of the parameters of the restricted TDMA system having the upper limit FORMULA  on the duty cycle
+FORMULA 
+of the FORMULA th user.
+
+FDMA-Equivalent Bandwidth and TDMA-Equivalent Duty Cycle
+In the previous subsection, the equivalence of the optimal single-code CDMA system was established to the optimal restricted FDMA and TDMA systems, respectively, with equal upper limits on the bandwidths and the duty cycles of users.
+By using this equivalence, the replace-and-switch method successfully formulated Problem REF  that has the maximum sum rate and the optimal power distribution in common with Problem REF .
+In this subsection, we introduce the notions of FDMA-equivalent bandwidth and TDMA-equivalent duty cycle, and derive the optimal FORMULA  and FORMULA  for Problems REF  and REF .
+To proceed, we examine the inner optimization of Problem REF .
+Lemma 6 
+Given a feasible solution FORMULA  to the outer optimization problem of Problem REF , the inner optimization problem has the optimal solution given by
+FORMULA 
+for all FORMULA  and FORMULA .
+
+Straightforward by applying the water-filling argument {{cite:26ba8e15-3e99-4895-a218-954e1ab9640b}} to FORMULA  parallel AWGN channels with total power FORMULA  and channel bandwidths FORMULA , for each FORMULA .
+Recall the convention FORMULA  at FORMULA , for all FORMULA , in (REF ).
+Then, (REF ) allows us to write the outer problem of Problem REF  as
+Problem 8 
+ll
+(wk,l)k,lmaximizek=1Kl=1nkwk,l(1+pk22l'=1nkwk,l')
+subject to0wk,l12N,k,l, and
+k=1Kl=1nkwk,l12,
+
+which needs to be solved only for FORMULA .
+Of course, Lemma REF  and Problem REF  can be re-stated in terms of the duty cycles FORMULA  of the equivalent restricted TDMA system with FORMULA  users having the equal upper limit FORMULA  on their duty cycles.
+To solve Problem REF , we introduce the following definition.
+Definition 8 Given a feasible solution to Problem REF , the FDMA-equivalent bandwidth FORMULA  and the TDMA-equivalent duty cycle FORMULA  of the FORMULA th multi-code user are defined as
+rCl
+wk l=1nkwk,l,
+and
+tk l=1nktk,l=2wk,
+
+respectively, for FORMULA .
+
+These definitions are motivated by the fact that the objective function in (REF ) depends on FORMULA  only through FORMULA  or, equivalently, FORMULA .
+Proposition 2 
+A profile FORMULA  is an optimal solution to Problem REF  if and only if it is a member of the set
+FORMULA 
+where FORMULA  is given by
+FORMULA 
+or, equivalently,
+FORMULA 
+where FORMULA  and FORMULA  are, respectively, the numbers of oversized and non-undersized users in the restricted FDMA system with power FORMULA , bandwidth upper limit FORMULA , and total system bandwidth FORMULA .
+
+Since the objective function in (REF ) is a function only of the FDMA-equivalent bandwidths, the constraint set can be partitioned for local searches into the subsets of feasible solutions having the common profile of FORMULA .
+Moreover, the constraint (REF ) implies
+FORMULA 
+Thus, (REF ) and (REF ) can be imposed on Problem REF  as additional constraints without altering the maximum sum rate and the set of the optimal solutions.
+Consequently, Problem REF  can be rewritten in a double maximization form given by
+Problem 9 
+ll
+(wk,l)k,lmaximize{
+ll
+(wk)kmaxk=1Kwk(1+pk22wk)
+subject to0wknk2N,k,  and 
+k=1Kwk12,
+
+.
+
+subject to0wk,l12N,k,l,  and 
+l=1nkwk,l=wk, k.
+
+By comparing the inner optimization problem of Problem REF  with Problem REF , we straightforwardly see that the results in Proposition REF  or, equivalently, those in Remark REF  can be immediately used to obtain FORMULA  as (REF ) by replacing the parameters FORMULA  and FORMULA  with FORMULA  and FORMULA , respectively.
+Once FORMULA  is found for all FORMULA , the optimal solution FORMULA  can be obtained by solving the outer optimization problem of Problem REF , which is just a simple feasibility test to check the membership to the set defined in (REF ).
+Therefore, the conclusion follows.
+In Proposition REF , we found the optimal FDMA-equivalent bandwidths of the multi-code users by solving the corresponding restricted FDMA problem.
+Henceforth, the multi-code users will be classified as follows in a similar way to the virtual single-code users.
+Definition 9 
+The users of the multi-code CDMA system are classified into oversized, critically-sized, or undersized multi-code users, if the corresponding users of the restricted FDMA system with power FORMULA , bandwidth upper limit FORMULA , and total system bandwidth FORMULA  are classified as such by Definition REF , i.e.,
+the FORMULA th user is tested by the rule
+FORMULA 
+and classified as
+FORMULA 
+
+Recall that the oversized users of an overloaded single-code CDMA system are defined as the relatively strong-power users satisfying the conditions in {{cite:9e3ca95d-56ce-4a66-bf50-ca277e0d8736}} and, equivalently, those in {{cite:3a884b63-43e1-4eaa-a355-86633054f460}}.
+It can be easily seen that these conditions are the same as the condition FORMULA  in Definition REF  if FORMULA  is replaced by 1 for all FORMULA .
+Moreover, Definition REF  works for all system loading condition, while the conditions {{cite:9e3ca95d-56ce-4a66-bf50-ca277e0d8736}} and {{cite:3a884b63-43e1-4eaa-a355-86633054f460}} for the single-code CDMA system do not always work due to division by zero.
+Also recall that the corresponding oversized users of the optimal restricted FDMA system are allocated their bandwidth upper limits and have greater PSDs than non-oversized users.
+This is because, if the FORMULA th user is oversized, its due share of the bandwidth computed in the line 3 of the FORMULA th iteration in TABLE REF  is greater than its bandwidth upper limit.
+In this way, Definition REF  successfully generalizes the definition of the oversized user for the single-code system to the user classification rule for the multi-code CDMA system and provides it a physical meaning in terms of the parameters of the equivalent FDMA system.
+Note that (REF ) allows freedom in choosing FORMULA  only for the non-undersized multi-code users with FORMULA  because FORMULA  for such users.
+Once a feasible optimal solution is found by using Proposition REF , the optimal solution FORMULA  to the inner and, equivalently, the outer optimization problems of Problems REF  and REF , respectively, can be found by Lemma REF .
+Thus, combined with the results in {{cite:9e3ca95d-56ce-4a66-bf50-ca277e0d8736}}, Proposition REF  eventually leads to the optimal solution FORMULA  to Problem REF  as presented in the next subsection.
+Of course, all the results in this subsection can be re-stated in terms of the parameters of the equivalent TDMA system.
+
+Optimal System and Its Properties
+In this subsection, we present the sum-rate optimal multi-code CDMA system and examine its properties.
+First, we establish the equivalence of the optimal multi-code CDMA system to the optimal restricted FDMA system and, then, present the necessary and sufficient condition for an optimal multi-code system to achieve the sum capacity of the MAC.
+Throughout this subsection, the equivalence to the optimal restricted FDMA system is solely utilized just for simplicity, though (REF ) says that the same arguments can be made by using the equivalence to the optimal restricted TDMA system.
+In what follows,
+FORMULA 
+denotes the upper-limit profile on the numbers of multi-codes of users.
+Theorem 1 
+The maximum sum rate FORMULA  of the multi-code CDMA system with power profile FORMULA , upper-limit profile FORMULA , processing gain FORMULA , and variance FORMULA  per dimension of the AWGN is equal to that of the restricted FDMA system with power profile FORMULA , bandwidth-constraint profile FORMULA , total system bandwidth FORMULA , and one-sided PSD FORMULA  of the AWGN, i.e.,
+lCl
+CCDMA(p,n,N,2)=
+CFDMA(p,n2N,12,22)
+=k=1K1nk2N(1+Npk2nk)
++N-k=1K1nk2N(1+Nk=K1+1Kpk2(N-k=1K1nk))
+=k=1K2nk2N(1+Npk2nk)
++N-k=1K2nk2N(1+Nk=K2+1Kpk2(N-k=1K2nk)),
+where FORMULA  and FORMULA  are the numbers of oversized and non-undersized users in the system, respectively.
+
+Since the outer optimization problem of Problem REF  is a feasibility test, the maximum sum rate can be found just by solving the inner optimization problem of Problem REF .
+Thus, by Propositions REF  and REF , we have (REF ) and (REF ).
+Moreover, by Remark REF , we have (REF ).
+Therefore, the conclusion follows.
+Theorem REF  combined with the inner optimization problem of Problem REF  shows that limiting the numbers of multi-codes of users in CDMA corresponds to imposing the upper limits on the bandwidths of users in FDMA.
+Recall that the unrestricted FDMA having only the total bandwidth constraint maximizes the sum rate by assigning each user the bandwidth that is proportional to its signal power, which implies a more bandwidth to a stronger-power user {{cite:26ba8e15-3e99-4895-a218-954e1ab9640b}}.
+Thus, the above equivalence shows that the CDMA is a multiple-access scheme that mitigates the unfairness inherent in the sum-rate maximization by imposing upper limits on the FDMA-equivalent bandwidths of users.
+Theorem 2 
+The maximum sum rate (REF ) of the multi-code CDMA system is upper bounded by the sum capacity of the MAC, i.e.,
+FORMULA 
+where equality holds if and only if there is no oversized multi-code user, i.e., FORMULA  or, equivalently,
+FORMULA 
+
+Straightforward by Remark REF  and Theorem REF .
+Especially for the single-code CDMA system, i.e., for FORMULA , the condition (REF ) simplifies to
+FORMULA 
+which is identical to the necessary and sufficient condition derived in {{cite:9e3ca95d-56ce-4a66-bf50-ca277e0d8736}} for the optimal single-code CDMA system to achieve the sum capacity of the MAC by having no oversized user.
+Note that (REF ) implies FORMULA .
+Thus, for (REF ) to hold, it is necessary that the system is not underloaded, i.e., the number of active users must be no less than the processing gain.
+On the contrary, note that (REF ) implies FORMULA  by the assumption (REF ).
+Thus, for (REF ) to hold, it is necessary that the total sum of the upper limits on the number of multi-codes of the active users is just no less than the processing gain, which includes the cases of non-underloaded systems.
+So, the necessary and sufficient condition is successfully extended to the multi-code CDMA system by Theorem REF , saying that the sum capacity of the MAC is achieved, regardless of the system loading, if and only if the first user and, consequently by Lemma REF , every user is a non-oversized multi-code user.
+This implies that the multi-code CDMA is better suited than the single-code CDMA in that it may achieve a higher sum rate and even be an optimal multiple-access scheme for underloaded systems by properly choosing the upper limits on the numbers of multi-codes of users.
+Divided by FORMULA , the left side of (REF ) is nothing but the due share of the bandwidth to the first user of the equivalent FDMA system, and the right side is the first user's bandwidth upper limit.
+If the inequality in (REF ) holds, then the equivalent restricted FDMA system achieves the sum capacity of the MAC by having a flat PSD for each user and equal PSDs for all users.
+Otherwise, the presence of an oversized user in the restricted FDMA system makes the PSD no longer flat, which leads to an inefficient utilization of the system bandwidth compared to the proportional-share allocation scheme that achieves the sum capacity of the MAC.
+Thus, Theorem REF  implies that, if the upper limits FORMULA  are chosen relatively large then, though the sum capacity may be achievable, it becomes possible for a small group of strong-power multi-code users to occupy most of the total FDMA-equivalent bandwidth due to the nature of the proportional-share bandwidth allocation.
+If the upper limits are chosen relatively small, which is the case with the single-code system, then fairness among users may be increased at the cost of the maximum sum rate falling short of the sum capacity of the MAC.
+Second, we present the optimal power distribution that achieves the maximum sum rate of the multi-code CDMA system jointly with the optimal signature sequences that will be presented next.
+Theorem 3 
+The optimal power distribution for the FORMULA th multi-code user is given by
+FORMULA 
+for each FORMULA , so that the optimal number FORMULA  of active data streams is given by
+FORMULA 
+
+where FORMULA  and FORMULA , for FORMULA , are found as described in Proposition REF .
+
+From the iterative algorithm in TABLE REF , we can easily see that the FORMULA th multi-code user with FORMULA  always has FORMULA .
+By substituting FORMULA  and FORMULA  into (REF ) in Lemma REF , we have FORMULA , which leads to FORMULA .
+In particular, (REF ) and (REF ) in Proposition REF  imply that, for FORMULA ,
+rl
+wk,l*=12N, l,
+and
+nk*=nk.
+Therefore, we have the conclusion.
+Again by the method of componendo and dividendo, it can be shown that Theorem REF  holds with FORMULA  being replaced by FORMULA .
+This theorem shows that, if the FORMULA th user is oversized or critically-sized, an optimal multi-code CDMA system equally distributes FORMULA  to its all FORMULA  data streams, i.e., FORMULA , for FORMULA .
+However, if the FORMULA th user is undersized with FORMULA , an optimal multi-code CDMA system has no unique power distribution and, consequently, no unique number of active data streams in general.
+So, it becomes of interest to find a simple form among all optimal power distributions that can maximize the sum rate jointly with the optimal sequences.
+The following remark shows that the equal distribution of each user's power to its multiple data streams is not only the unique optimal distribution for the non-undersized multi-code users but also an optimal distribution for the undersized multi-code users.
+Remark 10 
+The equal distribution of the FORMULA th user's power FORMULA  to its all FORMULA  data streams for all FORMULA , i.e.,
+rCl
+pk,l*=pknk, k, l,
+and
+nk*=nk, k,
+can achieve the maximum sum rate of the multi-code CDMA system.
+
+Given the optimal FDMA-equivalent bandwidths FORMULA , consider the equal-bandwidth allocation of FORMULA  to FORMULA , given by FORMULA .
+Then, it can be easily verified that this allocation satisfies the conditions in (REF ).
+Thus, it is an optimal allocation by Proposition REF .
+By (REF ), this equal-bandwidth allocation leads to the equal-power distribution (REF ).
+Therefore, the conclusion follows.
+Third, we present the optimal signature sequences that achieve the maximum sum rate of the multi-code CDMA system jointly with the optimal power distribution that is just presented.
+As mentioned earlier, once an optimal power distribution is found, the inner optimization problem of Problem REF  can be viewed as the sequence design problem for a CDMA system with virtual single-code users.
+Thus, the results in {{cite:9e3ca95d-56ce-4a66-bf50-ca277e0d8736}} can be directly used to identify and construct the optimal signature sequences, which will yield orthogonal sequences for oversized virtual single-code users and GWBE sequences for non-oversized virtual single-code users.
+However, unlike {{cite:9e3ca95d-56ce-4a66-bf50-ca277e0d8736}}, we have introduced the notions of critically-sized users in this paper.
+This separation of the critically-sized users and the undersized users enables us to better design the system as shown below.
+Theorem 4 
+The optimal signature sequences are given by
+FORMULA 
+where FORMULA  is the set of all virtual single-code user indexes FORMULA  such that the FORMULA th virtual single-code user with power FORMULA  is non-undersized, FORMULA  is the FORMULA -by-FORMULA  matrix consisting of the norm-FORMULA  and length-FORMULA  orthogonal basis vectors of the orthogonal complement of the span of FORMULA , the sequences FORMULA  satisfying FORMULA  and FORMULA  are arbitrary length-FORMULA  sequences, and the sequences FORMULA  satisfying FORMULA  and FORMULA  are the length-FORMULA  GWBE sequences {{cite:9e3ca95d-56ce-4a66-bf50-ca277e0d8736}} such that
+FORMULA 
+where FORMULA  denotes the cardinality of the set FORMULA  and the identity matrix FORMULA  is of size FORMULA .
+
+Given an optimal power matrix FORMULA , the inner optimization problem in (REF ) becomes the sequence design problem for the single-code CDMA system considered in {{cite:9e3ca95d-56ce-4a66-bf50-ca277e0d8736}}, now having the number of active users equal to FORMULA .
+If this number is not greater than the processing gain, i.e., FORMULA , then, as shown in {{cite:9e3ca95d-56ce-4a66-bf50-ca277e0d8736}}, a complete orthogonalization of the signature sequences is possible for this non-overloaded system with virtual single-code users.
+Since the corresponding restricted FDMA system with the specified parameters has the sum of the bandwidth upper limits of the active users no greater than the total bandwidth, i.e., FORMULA , every active virtual single-code user is non-undersized.
+Thus, FORMULA  for all FORMULA , which makes the code design in (REF ) lead to orthogonal signature sequences, which coincides with the result in {{cite:9e3ca95d-56ce-4a66-bf50-ca277e0d8736}} just mentioned.
+On the other hand, if FORMULA , then the inner optimization problem of Problem REF  becomes the sequence design problem for the overloaded single-code CDMA system.
+Again, the optimal signature sequences for the active virtual single-code users can be identified and constructed by using the results in {{cite:9e3ca95d-56ce-4a66-bf50-ca277e0d8736}}, which can be rewritten as (REF ) and (REF ) for the multi-code system except that FORMULA  is replaced by the set FORMULA  of all oversized virtual single-code user indexes.
+To show that FORMULA  can be used instead of FORMULA , let FORMULA  be the user index of a critically-sized virtual single-code user and choose any orthogonal matrix FORMULA , of which the first column is proportional to the GWBE signature sequence of the FORMULA th user constructed as described in (REF ) and (REF ) with FORMULA  being replaced by FORMULA .
+By pre- and post-multiplying FORMULA  and FORMULA , respectively, to (REF ), we have
+rCl
+UT((k,l)K1,pk,l*>0pk,l*sk,l*sk,l*T)U
+=UT((k,l)K1,pk,l*>0pk,l*N-|K1|IN-|K1|)U
+=[
+c|c
+pk',l'*  0N-|K1|-1T
+0N-|K1|-1   
+c
+(k,l)K1{(k',l')}
+pk,l*>0
+
+
+pk,l*N-|K1|-1IN-|K1|-1
+
+],
+where (REF ) comes from Remark REF -(a) and the method of componendo and dividendo that imply  FORMULA
+FORMULA  FORMULA .
+Thus, the signature sequence of the FORMULA th user is orthogonal to the subspace spanned by those of the remaining non-oversized virtual single-code users.
+Moreover, the FORMULA th entry of the block matrix in (REF ) shows that GWBE sequences are optimal as the signature sequences of the remaining virtual single-code users.
+Obviously, this procedure can be repeated until every critically-sized virtual single-code user is allocated an orthogonal sequence.
+Therefore, the conclusion follows.
+Here follows a simple consequence of this theorem.
+Remark 11 
+If the FORMULA th user is a non-undersized multi-code user, i.e., FORMULA , then it is always allocated FORMULA  orthogonal sequences.
+
+By (REF ) and (REF ) in the proof of Theorem REF , the FORMULA th user for FORMULA , has FORMULA  virtual single-code users with FORMULA .
+Then, the equivalence of the restricted FDMA system with equal bandwidth upper limit FORMULA  to the CDMA system with virtual single-code users implies that FORMULA .
+Therefore, by Theorem REF , the conclusion follows.
+Note that each of the virtual single-code users of the oversized and the critically-sized multi-code users has the equal optimal FDMA-equivalent bandwidth of FORMULA , which results in the information rate in (REF ) of such a virtual single-code user given by
+FORMULA , where we used FORMULA  in (REF ).
+In other words, a virtual single-code user of a critically-sized multi-code user occupies the same amount of signal dimension as that of an oversized multi-code user does.
+This explains why the critically-sized virtual single-code users are also allocated orthogonal sequences as the oversized virtual single-code users.
+A caution needs to be paid to the information rate of an undersized virtual single-code user.
+As pointed out in {{cite:fb3594c3-3ed6-40de-af60-5ff0f31e8075}}, the individual information rate of a single-code user that is allocated a GWBE sequence may not be uniquely determined.
+This is because, though the maximum sum rate is uniquely determined, the sum rate of such users can be maximized by various combinations of time sharing or rate splitting combined with superposition encoding and successive interference cancelation decoding {{cite:558368a1-5be0-44db-9ad5-e0db9011e28e}}, {{cite:2fc5454b-22af-4caa-b9f0-48a2d9fe3750}}, which results in the different rate profiles of the users.
+For the same reason, though the FDMA-equivalent bandwidth of a non-undersized virtual single-code user is the signal dimension actually allocated to the user, that of an undersized virtual single-code user is not.
+Remark REF  says that every virtual single-code user of an non-undersized multi-code user is allocated an orthogonal sequence but not the truth of the converse.
+The next result shows that even some virtual single-code users of an undersized multi-code user can be allocated orthogonal sequences.
+Fourth, we find the maximum number of orthogonal signature sequences to satisfy the constraint on FORMULA  for all FORMULA  and, at the same time, retain the maximum sum rate.
+Recall that, as mentioned in Section , this maximization may contribute to reducing the system complexity.
+According to {{cite:9e3ca95d-56ce-4a66-bf50-ca277e0d8736}}, the GWBE sequences are allocated to the non-oversized single-code users, where it is not pointed out that a set of GWBE sequences may include an orthogonal sequence.
+Now, Remark REF  says that, in the single-code CDMA system, the use of non-orthogonal GWBE sequences is actually limited only to the undersized users because the GWBE sequences for the critically-sized single-code users are all orthogonal sequences.
+Of course, Remark REF  does not imply that, in the multi-code CDMA system, every signature sequence of an undersized multi-code user is a non-orthogonal GWBE sequence.
+Rather, the use of non-orthogonal GWBE sequences can be further limited.
+In other words, as the following result shows, the number of orthogonal sequences can be further increased.
+Theorem 5 
+The maximum of the number FORMULA  of active orthogonal signature sequences of the FORMULA th multi-code user to still retain the maximum sum rate is given by
+C
+nk={
+l
+nk,                    for  1kK2,
+(N-k'=1K2nk') pkk'=K2+1Kpk',
+
+.
+                                     for  K2 < k K,
+where FORMULA  denotes the flooring operation.
+
+If the FORMULA th multi-code user is oversized or critically-sized, then its all FORMULA  data streams are transmitted by using orthogonal sequences, as shown in Remark REF .
+Thus, FORMULA .
+If the FORMULA th multi-code user is undersized, then the equivalence of the CDMA system with virtual single-code users to the restricted FDMA system with equal bandwidth upper limit FORMULA  implies that its FORMULA th data stream is transmitted by using an orthogonal signature sequence if FORMULA .
+Thus, FORMULA .
+Since the optimal FDMA-equivalent bandwidth FORMULA  of the FORMULA th multi-code user is given by (REF ), we have the conclusion.
+In other words, Theorem REF  says that all the virtual single-code users of the non-undersized multi-code users are allocated orthogonal signature sequences, while some virtual single-code users of the undersized multi-code users can be allocated orthogonal signature sequences.
+This result may be alternatively explained by using the properties of the PSDs of users in the equivalent restricted FDMA system.
+By Remark REF -(a), all the critically-sized and the undersized multi-code users have the optimal PSDs equal among the corresponding users in the equivalent restricted FDMA system.
+In addition, all the virtual single-code users of a critically-sized multi-code user that are allocated orthogonal sequences have the FDMA-equivalent bandwidth FORMULA .
+Suppose that there is a virtual single-code user of an undersized multi-code user having the FDMA-equivalent bandwidth FORMULA .
+Since it is not distinguishable in terms of the PSD and the FDMA-equivalent bandwidth from a virtual single-code user of a critically-sized multi-code user, it is no wonder why it is also allocated an orthogonal signature sequence.
+Note that the equal-power distribution of Remark REF  minimizes the number of orthogonal sequences.
+This is because it makes the FORMULA th user for FORMULA , have FORMULA  data streams satisfying FORMULA , for FORMULA , which leads to no orthogonal sequences for undersized multi-code users.
+Fifth, we find the minimum number of active signature sequences for each multi-code user to still retain the maximum sum rate.
+Though simple, the equal-power distribution of Remark REF  is definitely not a desirable solution as far as the complexity of the transmitters and the receiver is concerned, because it maximizes the number of active signature sequences.
+In addition, even the maximization of the number of orthogonal sequences in Theorem REF  may still leave freedom in choosing the number of virtual single-code users for undersized multi-code users.
+This is because, even after FORMULA  virtual single-code users are each allocated the FDMA-equivalent bandwidth of FORMULA , the remaining FDMA-equivalent bandwidth FORMULA  can be arbitrarily distributed to the rest FORMULA  virtual single-code users.
+Thus, it becomes of interest to investigate the problem of minimizing the number of active signature sequences.
+Theorem 6 
+The minimum number FORMULA  of active signature sequences of the FORMULA th multi-code user to still retain the maximum sum rate is given by
+C
+nk*={
+l
+nk,                    for  1kK2,
+(N-k'=1K2nk') pkk'=K2+1Kpk',
+
+.
+                                     for  K2 < k K,
+where FORMULA  denotes the ceiling operation.
+
+For the oversized and the critically-sized multi-code users, we always have FORMULA , as shown in Theorem REF .
+Thus, FORMULA .
+For the undersized users, we always have FORMULA , as shown in Remark REF -(b).
+By the condition (REF ), the minimum number of nonzero FORMULA  of the FORMULA th user of the equivalent FDMA system is given by FORMULA .
+Due to the equivalence in Theorem REF , this number is the same as the minimum number of the active signature sequences of the FORMULA th user of the multi-code CDMA system.
+Since the optimal FDMA-equivalent bandwidth FORMULA  of the FORMULA th multi-code user is given by (REF ), we have the conclusion.
+By using any FORMULA  that satisfies both the optimality condition in (REF ) and the condition FORMULA , to have the minimum numbers of multi-codes of users, the optimal power distribution can be obtained again as (REF ) in Theorem REF .
+Recall that this freedom in choosing FORMULA  applies only to the undersized multi-code users, because the non-undersized multi-code users have the unique optimal power distribution that results in FORMULA , and FORMULA  orthogonal signature sequences.
+Note that the maximum number FORMULA  of orthogonal signature sequences and the minimum number FORMULA  of signature sequences can be achieved simultaneously by allocating FORMULA  orthogonal codes to each undersized multi-code user.
+In this case, the number of non-orthogonal GWBE sequences allocated to an undersized multi-code user becomes FORMULA  or 1.
+This implies that the total minimum number of non-orthogonal GWBE sequences is upper bounded by FORMULA .
+This also implies that, interestingly, an undersized multi-code user may not have any non-orthogonal GWBE sequence but only orthogonal sequences if FORMULA .
+Consequently, the multi-code CDMA system with undersized multi-code users may only have orthogonal sequences if FORMULA .
+Finally, unlike the minimization in Theorem REF  of the number of signature sequences given the power and the upper-limit profile of users, we may consider the minimization of the upper limits on the number of multi-codes, subject to the achievement of the sum capacity of the MAC.
+Remark 12 
+The minimalFor the definition of minimality, see {{cite:ff77ba94-91ed-4dbb-ba55-c513bfef67ee}}. of the upper-limit profiles FORMULA  on the numbers of multi-codes of users to achieve the sum capacity of the MAC has the FORMULA th entry FORMULA  given by
+FORMULA 
+for FORMULA .
+
+Given any pair of the processing gain and the power profile of users,
+we can always find FORMULA  with finite entries such that
+FORMULA 
+Note that FORMULA  if FORMULA  satisfies (REF ), while FORMULA  otherwise.
+Thus, for any such FORMULA , there is no oversized user by Definition REF , i.e., FORMULA , and the FDMA-equivalent bandwidth of the optimal multi-code system is given by FORMULA , by (REF ).
+On the other hand, by (REF ) and (REF ), we have FORMULA , and FORMULA .
+Thus, we can rewrite (REF ) simply as FORMULA , in this case.
+Therefore, the conclusion follows.
+By (REF ), the total minimum number of multi-codes required to achieve the sum capacity of the MAC can always be upper bounded as
+rCl
+k=1K nk = k=1K N(pkk'=1Kpk')
+      + k=1K{ N(pkk'=1Kpk') -N(pkk'=1Kpk')}
+      N+(K-1),
+
+regardless of the power profile of users, where we used FORMULA .
+Note that this upper bound coincides with that in {{cite:fb3594c3-3ed6-40de-af60-5ff0f31e8075}}, where it is shown that the upper bound on the total minimum number of multi-codes is FORMULA  to have no oversized users regardless of the rate profile of users in minimizing the sum power.
+Unlike the result in {{cite:fb3594c3-3ed6-40de-af60-5ff0f31e8075}}, we have derived this upper bound without assuming the equal-power distribution to the virtual single-code users of a multi-code user.
+Recall that it is necessary for a single-code CDMA system to be critically-loaded or overloaded in order to achieve the sum capacity of the MAC.
+Otherwise, some system resource is wasted because only FORMULA  orthogonal sequences are allocated for the FORMULA  dimensional signal space.
+On the contrary, it is not necessary for a multi-code CDMA system to be critically-loaded or overloaded in order to achieve the sum capacity of the MAC.
+This is because there exists an upper-limit profile that satisfies (REF ) as far as total of at least FORMULA  multi-codes are allowed, even when the system is underloaded, which may be a more interesting system loading condition in some applications.
+Thus, this finiteness of the upper bound shows that the sub-optimality of the CDMA as a multiple-access scheme is due only to the excessive restriction on the numbers of multi-codes and that it can always be overcome by a bounded system complexity.
+
+Extension to Symbol-Asynchronous but Chip-Synchronous Multi-Code System
+So far, only symbol-synchronous multi-code system is considered.
+We now consider in this subsection the symbol-asynchronous but chip-synchronous multi-code CDMA system.
+In {{cite:3a884b63-43e1-4eaa-a355-86633054f460}}, the maximum sum rate is completely characterized for the symbol-asynchronous but chip-synchronous single-code CDMA system as an extension of the work in {{cite:9e3ca95d-56ce-4a66-bf50-ca277e0d8736}} for the symbol-synchronous single-code system.
+The optimal signature sequences are derived and shown to be orthogonal sequences for oversized single-code users, while generalized asynchronous WBE (GAWBE) sequences for non-oversized users.
+It is also shown that, regardless of the delay profile, the maximum sum rate of the asynchronous single-code system is the same as that of the synchronous single-code system as long as the two systems have the processing gain and the power profile of users in common.
+In this subsection, we briefly discuss how to joint optimally distribute the power and allocate signature sequences to maximize the sum rate of the symbol-asynchronous but chip-synchronous multi-code system as an extension of the work in the previous subsections for the symbol-synchronous multi-code system.
+To proceed, define
+rCl
+k [k,1,k,2,,k,nk],
+and
+ [1,2,,K],
+
+as the relative delay profile of the FORMULA th multi-code user for FORMULA , and the relative delay profile of all FORMULA  data streams of the multi-code system, respectively.
+Since it is reasonable to model that all FORMULA  data streams of the FORMULA th user have the same delay, we assume that there exists FORMULA  such that
+FORMULA 
+for each FORMULA .
+By the same reason as Lemma REF , the data symbols are assumed independent without loss of generality, not only when they are from different multi-code users but also when they are from the same multi-code user.
+This enables us to view the asynchronous multi-code system as an asynchronous system with virtual single-code users, which leads to the following theorem.
+Theorem 7 
+Given a power profile FORMULA , an upper-limit profile FORMULA , a processing gain FORMULA , and the variance FORMULA  per dimension of the AWGN,
+the maximum sum rate FORMULA  of the symbol-asynchronous but chip-synchronous multi-code CDMA system with delay profile FORMULA  is the same as that of the symbol-synchronous multi-code CDMA system, i.e.,
+FORMULA 
+where FORMULA  is given by (REF ).
+
+A sketch of the proof is as follows.
+If we view the system as an asynchronous system with virtual single-code users, then we can formulate a double maximization problem to find the maximum sum rate by taking the same procedures as those taken to obtain Problem REF  for the synchronous multi-code system.
+The outer optimization of this double maximization problem is again to be solved over the diagonal power matrix FORMULA  under the same constraints (REF ) and (REF ) as that of Problem REF  is, while the inner optimization is now to be solved over the signature sequences of the asynchronous virtual single-code users.
+As already mentioned, the asynchronous single-code system has the same maximum sum rate as the synchronous system does {{cite:3a884b63-43e1-4eaa-a355-86633054f460}}.
+So, given a feasible FORMULA , the inner optimization over the signature sequences returns the same maximum sum rate as the corresponding synchronous system with virtual single-code users does.
+Moreover, by Lemma REF , the synchronous system with virtual single-code users has the same maximum sum rate as the equivalent restricted FDMA system does.
+Thus, we again reach Problem REF  by replacing the inner optimization problem with the sum-rate maximization problem for the equivalent restricted FDMA system.
+The next procedures are exactly the same as those used to obtain Theorem REF .
+Therefore, we have the conclusion.
+Since the sum-rate maximization problems for the synchronous and the asynchronous multi-code systems share Problem REF , it follows that the necessary and sufficient condition for the asynchronous multi-code system to achieve the sum capacity of the MAC is the same as the condition given in Theorem REF , and that the optimal power distribution is the same as the distribution given in Theorem REF .
+Once an optimal power distribution FORMULA  is found, the optimal signature sequences for the asynchronous system with virtual single-code users can be found by directly using the results in {{cite:3a884b63-43e1-4eaa-a355-86633054f460}}.
+Other results in the previous sections can also be similarly extended.
+
+Numerical Results and Discussions
+In this section, we provide numerical results and discussions, which include the comparison of the sum-rate optimal multi-code CDMA system with the multi-code CDMA system having random signature sequences.
+Sum-Rate Optimal Multi-Code CDMA System
+The first numerical result is to illustrate how the bandwidths and the PSDs of users in the equivalent FDMA system are updated as the algorithm in Table REF  iterates.
+In this example, there are 5 users with processing gain 8, power profile FORMULA , and upper-limit profile FORMULA , which results in FORMULA , FORMULA , and the profile of the optimal FDMA-equivalent bandwidths FORMULA .
+Fig. REF -(a) shows the tentative allocation in the line 3 of the first iteration, where the bandwidths are the due shares given by FORMULA .
+Fig. REF -(b) shows the optimal bandwidth of the first user and the tentative allocation to the other users after the first iteration, where the first user is allocated less bandwidth than the due share because the FDMA-equivalent bandwidth-constraint profile is FORMULA .
+Fig. REF -(c) shows the optimal bandwidth of the first user and the tentative allocation computed in the line 3 of the second iteration.
+Note that a non-oversized user has the tentatively allocated bandwidth greater than that in the first iteration and, consequently, its user PSD has become smaller.
+Fig. REF -(d) shows the optimal bandwidths of the first two users and the tentative allocation to the other users after the second iteration.
+Fig. REF -(e) shows the optimal bandwidths allocated after the third, which is final in this example, iteration.
+Note that a non-oversized user has the allocated bandwidth greater than that in the second iteration and, consequently, its user PSD has become smaller.
+We can see from Fig. REF -(e) that the critically-sized user with index FORMULA  is allocated the bandwidth upper limit, and that the undersized-user with index FORMULA  or 5 is allocated a less bandwidth than the bandwidth upper limit, as shown in Remark REF .
+We can also see that the non-oversized users with indexes FORMULA  and 5 have the same PSDs, that the optimal PSDs of users are non-increasing, and that the oversized user with index FORMULA  or 2 has a greater PSD than that of the non-oversized user with index FORMULA  or 5, as shown in Remark REF .
+FIGURE 
+The second numerical result compares the total sum rate and the sum rates of the oversized, the critically-sized, and the undersized users of the restricted multi-code CDMA system in Fig. REF -(e) against those of the unrestricted CDMA system in Fig. REF -(a).
+The sum rates of the oversized, the critically-sized, and the undersized users of the unrestricted multi-code CDMA system are, respectively, the summations of the rates of the corresponding users of the restricted system.
+Note that, in Fig. REF -(e), the second user that is oversized has the optimal FDMA-equivalent bandwidth FORMULA .
+However, in Fig. REF -(a), the second user has the due share FORMULA , which is smaller than its optimal FDMA-equivalent bandwidth and leads to the second user's due rate less than its optimal rate.
+This is the counter example mentioned in Remark REF -(d).
+We can see from Fig. REF  that the imposition of the equal upper limits mitigates the unfairness inherent in the sum-rate maximization in the sense that that the sum rate of the undersized users is also increased, the rate of the critically-sized user is increased, but that the sum rate of the oversized users is decreased, as shown in Remark REF .
+We can also see that a decrease in the total sum rate is unavoidable, as shown in Theorem REF  and, equivalently, in Remark REF , in order to improve the fairness.
+FIGURE 
+The third numerical result shows the sum rate of the restricted multi-code CDMA system as a function of the upper limit on the number of multi-codes.
+For simplicity, we consider three cases of system loading with FORMULA , and 160, and FORMULA , where the FORMULA th user has the upper limit FORMULA  on the number FORMULA  of multi-codes and the power that leads to FORMULA  [dB] for all FORMULA .
+Fig. REF  shows both the sum rates of the three restricted multi-code CDMA systems that are evaluated by using the formula in Theorem REF  and the sum rates of the three corresponding unrestricted multi-code CDMA systems that are evaluated by using the formula in (REF ).
+In {{cite:8092cf44-0876-45b1-97e6-32bf2c19a644}}, it is shown that a single-code CDMA system with symmetric-power users achieves the sum capacity of the MAC if and only if the system is overloaded or critically loaded.
+Thus, for low FORMULA  such as state-of-the-art CDMA {{cite:e7bf98da-89de-46e4-89f4-5c1d476dbe5a}}, the maximum sum rate of a single-code CDMA system falls short of the sum capacity, which we can see from Fig. REF  with FORMULA  and FORMULA .
+However, even for low FORMULA , the sum rate of the multi-code systems increase as FORMULA  increases and eventually becomes equal to the sum capacity.
+This is because, for FORMULA , each user has the FDMA-equivalent bandwidth FORMULA  by (REF ) in Proposition REF , which makes the total allocated FDMA-equivalent bandwidth less than the total available system bandwidth, i.e., FORMULA , but makes more and more FDMA-equivalent bandwidth utilized by the system as FORMULA  increases.
+For FORMULA , the necessary and sufficient condition to achieve the sum capacity of the MAC in Theorem REF  is met by the multi-code CDMA system with symmetric-power users.
+Note that the system with a heavier loading achieves a higher sum capacity FORMULA  because the more the symmetric-power users the larger the total system power.
+FIGURE 
+The above arguments are alternatively justified with the help of Remark REF , which shows that the equal distribution of each user's power to its multiple data streams is optimal.
+Thus, when the upper limits FORMULA  are equal to FORMULA  for all FORMULA , a multi-code CDMA system with FORMULA  symmetric-power users can be replaced by a CDMA system with FORMULA  symmetric-power virtual single-code users as far as the maximum sum rate is concerned.
+Since the CDMA system with symmetric-power virtual single-code users has the system loading FORMULA , the sum rate increases for FORMULA  by allocating orthogonal sequences and becomes equal to the sum capacity of the MAC for FORMULA  by allocating WBE sequences.
+Although this approach much straightforwardly explains the behavior of the optimal sum rate as a function of FORMULA , the use of FORMULA  WBE sequences is not the only optimal way to design a sum-rate optimal system.
+As mentioned immediately after Theorem REF , even an undersized multi-code user may have orthogonal sequences, which comes from an optimal unequal distribution of each user's power to its multiple data streams.
+This complexity issue is discussed in the next result.
+The fourth numerical result shows the total number of signature sequences and the number of orthogonal signature sequences of the highest- and the lowest-complexity restricted multi-code CDMA systems having the parameters in common with Fig. REF .
+The highest-complexity system is the system considered in Remark REF , where each user has the same power FORMULA , and distributes it equally to all available FORMULA  data streams of each user.
+This system has the highest complexity in the sense that the total number of signature sequences is maximized as FORMULA  but the number of orthogonal sequences is minimized as FORMULA  for FORMULA , among all optimal multi-code CDMA systems.
+The lowest-complexity system is the system considered in Theorems REF  and REF , which maximizes the number of orthogonal codes and at the same time minimizes the total number of multi-codes, among all optimal multi-code CDMA systems.
+We can see from Fig. REF  that, for FORMULA , the highest- and the lowest-complexity systems have the same total numbers of signature sequences and the same numbers of orthogonal sequences.
+This is because all the multi-code users of an optimal multi-code CDMA system are non-undersized in this case by Definition REF , which makes all the optimal systems have FORMULA , by Remark REF .
+We can also see that the portion of the complexity reduction obtained from a large number of orthogonal sequences vanishes only for the system loading FORMULA  because the lowest-complexity system with the minimum number of signature sequences FORMULA  also has FORMULA .
+FIGURE 
+
+Comparison to Multi-Code CDMA System Having Random Signature Sequences
+In this subsection, we discuss the spectral efficiency of the multi-code CDMA systems having jointly sum-rate optimal power distribution and signature sequences.
+In particular, the spectral efficiency is compared to that of the CDMA systems in {{cite:745b806d-2510-4e31-964d-bb14ee4a8e94}}–{{cite:b13638b1-ad3e-41f2-a179-59bb9deb2278}} having random signature sequences.
+In {{cite:e7bf98da-89de-46e4-89f4-5c1d476dbe5a}}, the spectral efficiency of the single-code CDMA system with symmetric-power users is derived when random signature sequences and the optimal encoder-decoder pair are employed.
+Since it is difficult to derive a closed-form spectral efficiency as a function of FORMULA , FORMULA , and the bit energy per noise density FORMULA , an asymptotic analysis later named a large system analysis is performed by letting FORMULA  and FORMULA  tend to infinity with FORMULA  being fixed.
+In {{cite:b13638b1-ad3e-41f2-a179-59bb9deb2278}}, this result is extended to single-code CDMA systems with independent and identically distributed (i.i.d.) flat-fading channel for each user.
+In {{cite:745b806d-2510-4e31-964d-bb14ee4a8e94}}, these results are extended to multi-code CDMA systems with i.i.d. flat-fading or frequency-selective fading channel for each multi-code user.
+However, due to the difficulty in computing the spectral efficiency with a large number of multi-code users, the cases only with a small number of multi-code users or only with a large number of single-code users are considered in {{cite:745b806d-2510-4e31-964d-bb14ee4a8e94}}.
+In the previous section, we derived the sum rate of the multi-code CDMA system with asymmetric-power users, when the upper limits are imposed on the numbers of multi-codes of users and the jointly optimal signature sequences and encoder-decoder pair are employed.
+To compare with the results in {{cite:e7bf98da-89de-46e4-89f4-5c1d476dbe5a}}, we only consider the cases with symmetric-power users, equal upper limits, and no channel fading.
+Remark 13 
+When the equal upper limits are imposed, the spectral efficiency in [bits/chip] of the sum-rate optimal multi-code CDMA system with symmetric-power users is given by
+FORMULA 
+where FORMULA  is the equal upper limit and FORMULA  satisfying
+lCl
+CSU(EbN0)=12(1+2CSU(EbN0)EbN0)
+
+is the spectral efficiency in [bits/dimension] of the optimal single-user system operating over AWGN.
+
+Let FORMULA  be the total signal power and FORMULA  be the length-FORMULA  all-one vector.
+Then, from Theorem REF , we have the maximum sum rate given by
+lCl
+CCCDMA(ptotK1K,n1K,N,2)
+={
+ll
+12(nKN)(1+(ptot2)/(nKN)),for  nKN1,
+
+12(1+ptot2),elsewhere.
+
+.
+
+
+
+Since FORMULA , FORMULA , and FORMULA  are related as {{cite:e7bf98da-89de-46e4-89f4-5c1d476dbe5a}}
+FORMULA 
+FORMULA  in (REF ) can be rewritten as FORMULA , for FORMULA , and  FORMULAFORMULA , elsewhere.
+Therefore, by using (REF ), we have (REF ).
+Note that, given FORMULA , the spectral efficiency in (REF ) of the sum-rate optimal multi-code CDMA system with symmetric-power users is a function of FORMULA , FORMULA , and FORMULA  only through FORMULA .
+Thus, the systems with different FORMULA  triples have the same performance as far as their effective system loadings FORMULA  are the same, which makes it needless to perform an asymptotic analysis that is done in {{cite:e7bf98da-89de-46e4-89f4-5c1d476dbe5a}}.
+Fig. REF  compares the spectral efficiency in (REF ) with the spectral efficiency of the single- and multi-code CDMA systems having random signature sequences, when FORMULA  [dB].
+The unrestricted multi-code CDMA system having no upper limits always achieves the spectral efficiency FORMULA  of the optimal single-user system, while the single- and multi-code systems having sum-rate optimal sequences have the spectral efficiency linearly increasing for FORMULA  by using orthogonal sequences, while achieving FORMULA  elsewhere by using orthogonal, WBE, and/or GWBE sequences depending on the power distribution.
+Note that, as FORMULA  increases, the range of the system loading FORMULA  increases on which the system optimally utilizes the spectrum.
+The spectral efficiency of a single-code CDMA system having random sequences is obtained by using the result in {{cite:e7bf98da-89de-46e4-89f4-5c1d476dbe5a}}, while that of a multi-code CDMA system having random sequences is obtained by scaling that of the single-code system in the horizontal axis under the assumption that every data stream has the same power.
+Obviously, given FORMULA  and FORMULA , the sum-rate optimal CDMA system always outperforms the CDMA system having random sequences.
+Particularly, the performance gap is maximized at FORMULA , i.e., when the effective system loading is critical, which extends the result in {{cite:e7bf98da-89de-46e4-89f4-5c1d476dbe5a}} obtained for the single-code systems.
+FIGURE 
+Fig. REF  performs the same comparison as Fig. REF  does.
+Now, the spectral efficiency is plotted as a function of FORMULA  for a fixed system loading of FORMULA  and more values of FORMULA  and 32.
+In {{cite:e7bf98da-89de-46e4-89f4-5c1d476dbe5a}}, it is pointed out that the spectral efficiency of the single-code system having random sequences approaches FORMULA  as FORMULA  tends to infinity.
+Recall that increasing FORMULA  of the multi-code CDMA system having random sequences corresponds to increasing the system loading of the virtual single-code user CDMA system having random sequences.
+Thus, as we can see from Fig. REF , the spectral efficiency of the multi-code system having random sequences approaches the spectral efficiency FORMULA  of the optimal single-user system, as the number FORMULA  of multi-codes per user tends to infinity.
+On the contrary, the sum-rate optimal multi-code system achieves FORMULA  for FORMULA  and, moreover, this can be done by using only two multi-codes per user as exemplified in Fig. REF -(b) with FORMULA  and FORMULA .
+Similar results can be obtained for various system loading.
+FIGURE 
+FIGURE 
+Fig. REF  performs the same comparison as Fig. REF  does except that there are asymmetric-power users.
+In {{cite:b13638b1-ad3e-41f2-a179-59bb9deb2278}}, the spectral efficiency of the single-code CDMA system having random sequences is derived by using a large system analysis, when each single-code user has an i.i.d. flat-fading channel.
+We adopt this result now with Rayleigh flat-fading channel for the single-code CDMA system.
+However, this result cannot be used to obtain the spectral efficiency of the multi-code CDMA system having random sequences because the multiple data streams of each multi-code user do not suffer from i.i.d. fading channels but from the same fading channel.
+In {{cite:745b806d-2510-4e31-964d-bb14ee4a8e94}}, the spectral efficiency of the multi-code CDMA system having random sequences or so-called isometric sequencesThe multiple data streams of a multi-code user are orthogonalized by using the columns from a Haar-distributed unitary random matrix. For details, see {{cite:9207b71d-c7e8-4ccc-8de8-8b7d2d37baca}}. is derived again by using a large system analysis, when each multi-code user has an i.i.d. flat-fading or frequency-selective fading channel.
+However, this large system analysis is only for the case where FORMULA  and FORMULA  tend to infinity with FORMULA  being kept as a constant and is not for the systems with a large number of multi-code users.
+Thus, instead of performing a large system analysis, the spectral efficiency of the multi-code CDMA system having random sequences in Fig. REF  is obtained by generating FORMULA  i.i.d. exponential random numbers per each Monte-Carlo simulation run as the powers of the multi-code users that suffer Rayleigh flat fading.
+To obtain the spectral efficiency of the sum-rate optimal restricted multi-code CDMA system, the sum-rate formula (REF ) is converted for the bandpass signaling or, equivalently, for the complex-baseband signaling, and the same method is used for each Monte-Carlo simulation run.
+The performance of the unrestricted multi-code CDMA system is computed through numerical integration by using the well-known probability density functions {{cite:94064241-1fd0-421a-ae96-229fcee2a023}} of the sum of i.i.d. exponential random variables.
+Fig. REF  shows the spectral efficiency in [bps/Hz] obtained at the average bit energy per noise density FORMULA  of 10 [dB], where each marker is the average of FORMULA  Monte-Carlo simulation runs.
+Similar to Fig. REF , the spectral efficiency improves as FORMULA  increases, and the sum-rate optimal CDMA system outperforms the CDMA system having random sequences.
+Although not shown in Fig. REF , this is still the case when the isometric sequences are used.
+In contrast to Fig. REF , for FORMULA , the spectral efficiency of the sum-rate optimal restricted multi-code CDMA system is less than the spectral efficiency of the unrestricted multi-code CDMA system.
+This is because the probability of event that there exists at least one oversized multi-code user is not zero even if the effective system loading FORMULA  is greater than or equal to the unity.
+
+Conclusions and Future Work
+In this paper, we have completely characterized the maximum sum rate of a multi-code CDMA system.
+The maximum sum rate is derived as a function of the processing gain, power profile, and the upper-limit profile of the users on the number of multi-codes.
+It turns out that the maximum sum rate is the same as those of the equivalent restricted FDMA and TDMA systems with upper limits on the bandwidths and the duty cycles of users, respectively.
+This equivalence greatly enhances our understanding of the sum-rate optimal restricted multi-code systems by using, e.g., the optimal bandwidth allocation and the corresponding PSDs of users in the equivalent restricted FDMA systems.
+The optimal distribution scheme of each user's power to its multiple data streams is also derived that maximize the sum rate jointly with the optimal signature sequences.
+Interestingly, it is shown that the same maximum sum rate can be achieved in general by various combinations of the total number of signature sequences and that of orthogonal signature sequences.
+It is also shown that the restricted multi-code CDMA is a multiple-access scheme that trades off the maximum sum rate with the fairness among the users by imposing different upper limit profile on the number of multi-codes of users.
+It turns out that the CDMA system is one of the optimal multiple-access schemes that achieve the sum capacity of the MAC, as far as enough number of multi-codes are assigned to the multi-code users.
+In {{cite:dc531dd1-a1c6-4614-9c34-483316972f09}}, an optimal coding-spreading tradeoff problem for CDMA systems is posed to investigate the effects on the spectral efficiency of different allocations of the system bandwidth to coding and spreading.
+Some partial answers can be found in {{cite:e7bf98da-89de-46e4-89f4-5c1d476dbe5a}} and {{cite:57947d97-2a60-45c8-97eb-9e5fcb7a39e5}} for single-code CDMA systems.
+A more complete answer to this open problem in terms of the Shannon and the Fourier bandwidths {{cite:dc531dd1-a1c6-4614-9c34-483316972f09}} remains as a future work, which may be obtained by extending the results in this paper to a continuous-time bandpass multi-code CDMA system.
+
+Appendix
+Proof of Lemma  REF
+Let FORMULA  be a feasible solution to Problem REF .
+If we find an orthogonal matrix FORMULA  and a diagonal matrix FORMULA  by using the orthogonal eigen-decomposition of FORMULA  such that
+FORMULA 
+then the signal correlation matrix FORMULA  of the FORMULA th multi-code user can be rewritten as
+FORMULA 
+To make every column of FORMULA  FORMULA  have norm FORMULA , we define FORMULA  and FORMULA  as FORMULA  and FORMULA  with FORMULA  being the FORMULA th diagonal entry of FORMULA .
+Then, FORMULA  can be rewritten as
+rCl
+Sk Pk SkT=l=1nkpk,lsk,lsk,lT
+=l=1nkpk,lsk,lsk,lT=SkPkSkT,
+where FORMULA  and
+FORMULA  FORMULA .
+Thus, if we define FORMULA  and FORMULA , then the correlation matrix FORMULA  of the signal component in the objective function (REF ) can be rewritten as
+FORMULA 
+where FORMULA  now consists of column vectors of norm FORMULA  and FORMULA  is diagonal with non-negative entries.
+Therefore, the conclusion follows.
+
+Proof of Lemma  REF
+First, we show that FORMULA  defined in (REF ) satisfies
+rCl
+wk > wk wl > wl, lk, and
+wk wk wl wl, lk,
+
+i.e., if the FORMULA th user is oversized then every user having a smaller user index is also oversized, while if the FORMULA th user is non-oversized then every user having a bigger index is non-oversized, too.
+To see this, assume FORMULA .
+For FORMULA , we have
+rCl
+pk(wtot-k'=1k-1wk')>wkk'=kKpk'
+pl(wtot-k'=1k-1wk')>wlk'=kKpk'
+pl(wtot-k'=1k-1wk')+plk'=lk-1wk'>wlk'=kKpk'+wlk'=lk-1pk'
+pl(wtot-k'=1l-1wk')>wlk'=lKpk',
+where (REF ) is by Definition REF , and (REF ) and (REF ) come from (REF ) and the assumption FORMULA .
+Thus, FORMULA , holds.
+Now, assume FORMULA .
+For FORMULA , we have
+rCl
+pk(wtot-k'=1k-1wk')wkk'=kKpk'
+pl(wtot-k'=1k-1wk')wlk'=kKpk'
+pl(wtot-k'=1k-1wk')-plk'=kl-1wk'wlk'=kKpk'-wlk'=kl-1pk'
+pl(wtot-k'=1l-1wk')wlk'=lKpk',
+where (REF ) is by Definition REF , and (REF ) and (REF ) come from (REF ) and the assumption FORMULA .
+Thus, FORMULA , holds.
+Then, we evaluate FORMULA  from FORMULA  to FORMULA  to find the largest, thus unique, index FORMULA  satisfying FORMULA .
+If FORMULA , then all the users are non-oversized by (REF ).
+Thus, FORMULA  and (REF ) holds.
+If FORMULA , then FORMULA  exists and (REF ) holds by (REF ) and (REF ).
+Therefore, the conclusion follows.
+
+Proof of Proposition  REF
+Define the Lagrangian function as
+l
+L(wk,k,k,)k=1Kwk(1+pkN0wk)                  
+-k=1Kk(wk-wk)+k=1Kkwk-(k=1Kwk-wtot),
+where FORMULA  and FORMULA  are the dual variables.
+Note that we use the natural logarithmic function FORMULA  just for convenience because any positive scaling of the objective function does not affect the solution.
+Then, the Karush-Kuhn-Tucker (KKT) conditions {{cite:ff77ba94-91ed-4dbb-ba55-c513bfef67ee}} for Problem REF  are given by
+ll
+(1+pkN0wk*)-pk/wk*N0+pk/wk*                  
+                              -k+k-=0,k,
+wk*-wk0,k,
+wk*0,k,
+k=1Kwk*-wtot0,
+k0,k,
+k(wk*-wk)=0,k,
+k0,k,
+k wk*=0,k,
+0, and
+(k=1Kwk*-wtot)=0,
+
+where (REF ) is the stationarity condition; (REF )-(REF ) are the primal feasibility conditions; (REF ), (REF ), and (REF ) are the dual feasibility conditions; and (REF ), (REF ), and (REF ) are the complementary slackness conditions.
+Let FORMULA  be defined as
+FORMULA 
+The positivity of the denominator in (REF ) will be shown soon.
+Now, the optimal solution (REF ) can be rewritten as FORMULA  and FORMULA .
+Thus, FORMULA  can be interpreted as the common PSD of non-oversized users, if exist.
+Then, the claim is that FORMULA  and FORMULA  given by
+lCl
+k={
+ll
+(1+pkN0wk)-pk/wkN0+pk/wk
+ -((1+sN0)-sN0+s),for  1k K1,
+0,for  K1 < k K,
+
+.
+k=0,k, and
+=
+ll
+(1+ sN0)-sN0+s,
+
+
+together with (REF ) satisfy all the KKT conditions in (REF ).
+Substituting (REF ), (REF ), (REF ), and (REF ) into (REF ), we can see that (REF ) is satisfied for all FORMULA .
+Next, from (REF ), note that FORMULA .
+In addition, if FORMULA , since FORMULA  by (REF ), FORMULA  implies FORMULA , which comes from (REF ).
+Thus, the condition (REF ) is satisfied.
+Next, if FORMULA  then the condition (REF ) is satisfied for all FORMULA  by (REF ).
+If FORMULA  then, since FORMULA  by (REF ) and FORMULA , by assumption, the condition (REF ) is satisfied for FORMULA .
+On the other hand, if (REF ) is evaluated at FORMULA , then FORMULA , which leads to FORMULA .
+So, we have
+FORMULA 
+due to the assumption FORMULA .
+Thus, the condition (REF ) is satisfied for FORMULA , because FORMULA  for FORMULA .
+By the way, (REF ) verifies that the denominator of FORMULA  is positive when FORMULA .
+Note that it is obviously the case with FORMULA .
+Next, if FORMULA , then the condition (REF ) is satisfied by (REF ).
+If FORMULA , then the condition (REF ) is satisfied again as
+FORMULA 
+by (REF ) and (REF ).
+Next, if FORMULA , then the condition (REF ) is satisfied for all FORMULA  by (REF ).
+If (REF ) is evaluated again at FORMULA , then this time FORMULA  implies FORMULA , which leads to FORMULA , by (REF ).
+So, we have FORMULA , because FORMULA  is a monotone increasing function of FORMULA .
+In addition, FORMULA , from (REF ).
+Thus, the condition (REF ) is satisfied.
+Next, substituting (REF ) and (REF ) into (REF ), we can see that the condition (REF ) is satisfied.
+By (REF ), the conditions (REF ) and (REF ) are satisfied immediately.
+Note that FORMULA  is a monotone increasing function of FORMULA  and that FORMULA .
+Thus, by the non-negativity of FORMULA , the condition (REF ) is satisfied.
+Finally, if FORMULA , then the condition (REF ) is satisfied because FORMULA  by (REF ), which leads to FORMULA .
+If FORMULA , then FORMULA  as already shown in (REF ).
+Thus, the condition (REF ) is satisfied.
+It can be easily verified that the constraints (REF ) and (REF ) satisfy Slater's condition {{cite:ff77ba94-91ed-4dbb-ba55-c513bfef67ee}}.
+Thus, these KKT conditions become necessary and sufficient for a feasible solution to be optimal.
+Moreover, by evaluating the objective function with the optimal bandwidths in (REF ), we obtain the maximum sum rate as (REF ).
+Therefore, the conclusion follows.
+-0.0in
+

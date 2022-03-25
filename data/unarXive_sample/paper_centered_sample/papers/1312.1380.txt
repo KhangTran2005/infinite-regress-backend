@@ -1,0 +1,1231 @@
+
+hmargin=2.5cm,vmargin=2cm
+Proportionality of components, Liouville theorems and a priori estimates for noncooperative elliptic systemsAlexandre MONTARUFORMULA , Boyan SIRAKOVFORMULA , Philippe SOUPLETFORMULA 
+FORMULA Université Paris 13, Sorbonne Paris Cité,
+LAGA, CNRS, UMR 7539,F-93430, Villetaneuse, FRANCE. FORMULA PUC-Rio, Departamento de Matematica,
+Rua Marquês de São Vicente 225, Gávea, Rio de Janeiro - CEP 22451-900, BRASIL montaru@math.univ-paris13.fr, bsirakov@mat.puc-rio.br, souplet@math.univ-paris13.fr We study qualitative properties of positive solutions of
+noncooperative, possibly nonvariational, elliptic systems.
+We obtain new classification and Liouville type theorems in the whole Euclidean space, as well as in half-spaces,
+and deduce a priori estimates and existence of positive solutions for related Dirichlet problems.
+We significantly improve the known results for a large class of systems involving a balance between repulsive and attractive terms. This class contains systems arising in biological models of Lotka-Volterra type, in physical models of Bose-Einstein condensates and in models of chemical reactions.
+Introduction
+This paper is concerned with existence, non-existence and qualitative properties of
+classical solutions of nonlinear elliptic systems in the form
+FORMULA 
+In a nutshell, we will consider noncooperative, possibly nonvariational, systems with nonlinearities which
+have power growth in FORMULA , and in which the reaction terms dominate the absorption
+ones. We will be interested in nonexistence or more general classification results
+in unbounded domains such as FORMULA  or a half-space in FORMULA , as well as in their
+applications to a priori estimates and existence of positive solutions
+of Dirichlet problems in bounded domains.
+A model case
+We will illustrate our results by applying them to the system
+FORMULA 
+where FORMULA ,
+FORMULA 
+and the coefficients FORMULA  are Hölder continuous functions in
+FORMULA , with
+FORMULA 
+Observe (REF ) already covers a large class of systems satisfied by
+stationary states of coupled reaction-diffusion equations, or by standing waves of
+Schrödinger equations in the typical form
+FORMULA 
+where FORMULA  and FORMULA  is a matrix which describes
+the replication rate of and the interaction between the quantities FORMULA  and FORMULA .
+Let us mention that for FORMULA  and FORMULA  we obtain a Lotka-Volterra system,
+while for FORMULA  and FORMULA  we get a system arising in the theory of Bose-Einstein
+condensates and nonlinear optics, which has been widely studied in the recent years.
+Systems like (REF ) with FORMULA  appear in models of chemical interactions.
+A more detailed discussion and references will be given in Section REF ,
+below.
+We will almost always assume that the reaction terms in the system dominate the
+absorption terms, in the following sense
+FORMULA 
+The following two theorems effectively illustrate the more general results below.
+Here and in the rest of the article, FORMULA  denotes the first eigenvalue of FORMULA  with Dirichlet boundary conditions in FORMULA .
+THEOREM 1.1 
+Let FORMULA  be a smooth bounded domain. Assume that (REF )–(REF ) hold,
+FORMULA 
+and
+FORMULA 
+Then the system (REF ) has a classical solution FORMULA  in FORMULA , such that FORMULA  in FORMULA . All such solutions are uniformly bounded in FORMULA .
+
+THEOREM 1.2  Assume that (REF )–(REF ) hold,
+FORMULA , and FORMULA  are constants. Let FORMULA  be a nonnegative classical solution of (REF ).
+
+If FORMULA  and FORMULA  then either FORMULA , or FORMULA , or
+FORMULA  for some unique constant FORMULA .
+
+If FORMULA , FORMULA  and FORMULA , then for some nonnegative constant  FORMULA
+FORMULA 
+If FORMULA  then FORMULA .
+
+If FORMULA  is a half-space of FORMULA  and FORMULA , then
+ FORMULA
+
+
+
+A quick overview of our goals and methods
+As the previous two theorems show, the two main goals we pursue are:
+(a) obtain classification (or non-existence) results for solutions of (REF ) in FORMULA  or in a half-space of FORMULA . Naturally, to that goal we need to assume some homogeneity of (REF ) in FORMULA .
+(b) prove a priori estimates and existence statements for the Dirichlet problem for (REF ) in bounded domains. The "blow-up" method of Gidas and Spruck yields such results for general nonlinearities FORMULA  and FORMULA , whose leading terms are the functions for which the non-existence theorems in (a) are proved.
+This scheme is well-known and has been used widely since the pioneering works {{cite:d251b5dd-fab2-4b4f-9f3c-b14c3c54fa2c}}, {{cite:4e91ead5-32eb-4c85-a90e-73def6315065}}. As can be expected, the main effort falls on the classification results in (a). It should be stressed that these classification results must not be viewed only as a step to the existence results in (b), but are of considerable importance in themselves.
+It appears that for systems in the whole space or in a half-space,
+most methods to prove Liouville type theorems under optimal growth assumptions
+are based either on moving planes or spheres and Kelvin transform, and hence
+require some rather restrictive cooperativity assumptions (cf. {{cite:30caf0fe-2df4-4462-988c-2a7b7d2221b3}}, {{cite:e2a55af8-80b8-4a4e-a980-63dd6a04c7b1}}, {{cite:9fafe0b6-0f4a-432b-801c-ecaef522677e}}, {{cite:cbd66457-4640-4732-abf3-006819da9d15}});
+or on integral identities such as Pohozaev's identity, and hence require some
+variational structure
+(cf. {{cite:44d1427a-c234-4cd2-b8d5-c04c650bdeb9}}, {{cite:ef40cc8f-d656-47ed-834d-e14427566584}}, {{cite:4f701b36-9988-41f0-8477-d3a1d7e83efb}}, {{cite:1373f89d-7f20-4e0b-94e1-5d621c625e40}}, {{cite:93b89a17-f4eb-43a6-ba1b-f1fb63bb601a}}, {{cite:f2110651-2d61-4cd3-9a0f-66607a704819}}).
+However, there are large classes of systems appearing in applications, whose
+structure is not treatable by these techniques. One of our basic observations
+is that many such systems have an inherent monotonicity structure expressed by
+the following hypothesis
+FORMULA 
+which plays a fundamental role in our nonexistence and classification results.
+To fix ideas, we will immediately describe a class of systems that appear in applications, satisfy (REF ), but do not seem to be manageable by the well-known methods for establishing Liouville type results. Our techniques naturally extend to even more general systems that satisfy the condition (REF ) (observe that verifying (REF ) for any given system is a matter of simple analysis).
+Consider the system
+FORMULA 
+In our study of (REF ) we always assume that the real parameters FORMULA  satisfy
+FORMULA 
+PROPOSITION 1.3 
+Assume (REF ).
+(i) Then the nonlinearities in system (REF ) satisfy (REF ).
+(ii) Assume moreover that FORMULA . Then the number FORMULA  is unique. We have
+FORMULA  if and only if FORMULA  and FORMULA  if and only
+if FORMULA . In addition, if FORMULA  (resp. FORMULA ),
+then FORMULA  (resp. FORMULA ) and FORMULA  (resp. FORMULA ).
+
+The proof of this proposition is of course elementary (though tedious), and
+will be given in the appendix.
+There is no explicit formula for FORMULA , except in some special cases.
+For instance,
+when
+FORMULA  and FORMULA , one easily computes that FORMULA .
+We do not know whether the hypothesis FORMULA  in (REF )
+is necessary for our classification results. However,
+we observe that even the simplest systems of the type (REF ), with FORMULA , may have a different solution set from what we obtain here,
+when (REF ) (and hence FORMULA ) is not satisfied, as shown by the result in {{cite:d395cf5d-77b7-41b5-a4cf-78c0217370b3}}.
+On the other hand, many models of which we are aware satisfy this hypothesis.
+Let us now discuss the use of (REF ).
+The point of this hypothesis is that for any solution FORMULA  of
+(REF ), the nonnegative functions FORMULA  and FORMULA  are subharmonic in FORMULA , which allows for applications of various forms of the maximum principle.
+In particular, if (REF ) holds, the domain FORMULA  is bounded and FORMULA  on FORMULA , then the classical maximum principle implies the classification property
+FORMULA 
+which reduces the system to a single elliptic equation.
+Our basic goal will be to prove (REF ) for unbounded domains like the whole
+space FORMULA  or a half-space, where additional work and hypotheses are needed. We comment briefly on these next.
+First, when FORMULA  is a half-space and FORMULA  have sublinear growth at infinity, (REF ) is a consequence of the PhragmÃ©n-Lindelöf maximum principle (a tool which is not often encountered in the context of Liouville theorems for nonlinear systems). This classifies bounded solutions in a half-space, which in particular is sufficient for the application of the blow-up method. We obtain nonexistence and classification results for general unbounded solutions in a half-space as well - then some supplementary assumptions are unavoidable. The proofs of these more general results use properties of spherical means of functions in a half-space, as well as a general nonexistence result for weighted elliptic inequalities in cones from {{cite:017c122b-cc3a-415f-8f8d-ffe9d91fca2d}}.
+Next, proving (REF ) in the whole space is where we encounter most difficulties. Probably the most important and novel observation we make is that under our assumptions the functions FORMULA  and FORMULA  satisfy the inequality
+FORMULA 
+and, in some cases,
+FORMULA 
+for appropriate FORMULA , FORMULA . It is worth observing that in (REF ) the superharmonic function FORMULA  satisfies an anti-coercive elliptic inequality with a subharmonic weight FORMULA , while in (REF ) the subharmonic function FORMULA  satisfies a coercive inequality with a weight which is a power of a superharmonic function. We do not know of any other work where such combinations of inequalities and weights appear. By using properties of subharmonic and superharmonic functions and by adapting the methods for proving nonexistence of positive solutions of inequalities from {{cite:017c122b-cc3a-415f-8f8d-ffe9d91fca2d}} (for (REF )) and from {{cite:3a1d2cfa-2132-442e-a643-30f54a46c061}} (for (REF )), we show that under appropriate restrictions on the exponents FORMULA , we have FORMULA .
+The idea of showing nonexistence results by first proving the property (REF )
+was used earlier in {{cite:b4eacaac-62ca-404a-b007-30effd0590b5}}, {{cite:c4f2c863-98aa-4d1b-9353-719b1b1938a5}}
+for a particular Lotka-Volterra type system, and more recently in {{cite:d395cf5d-77b7-41b5-a4cf-78c0217370b3}}, {{cite:9dc0547e-c824-4b34-af89-ccaf399e5abf}}, {{cite:d683bb13-de65-42e0-a822-a2ea83c5e486}}, where
+some partial use of (REF ) with FORMULA  was also made. To our
+knowledge the present paper is the first systematic study of systems whose
+nonlinearities satisfy (REF ). Our results very strongly improve
+on previous ones, both in the generality of the systems considered, and in the
+results obtained, even when applied to particular systems. Our methods,
+in particular the above observations, appear to be new.
+Finally, as far as step (b) above is concerned, we recall that uniform a priori
+estimates and existence of positive solutions of Dirichlet problems
+associated with asymptotically homogeneous systems in bounded domains can be obtained via the rescaling (or blow-up) method
+of Gidas and Spruck {{cite:d251b5dd-fab2-4b4f-9f3c-b14c3c54fa2c}} combined with known topological degree arguments (see for instance {{cite:f2bf3c38-482e-44e0-a390-1858d800fb6a}}, {{cite:b4eacaac-62ca-404a-b007-30effd0590b5}}, {{cite:c4f2c863-98aa-4d1b-9353-719b1b1938a5}}, {{cite:e2a55af8-80b8-4a4e-a980-63dd6a04c7b1}}, {{cite:9fafe0b6-0f4a-432b-801c-ecaef522677e}}, {{cite:cbd66457-4640-4732-abf3-006819da9d15}}
+for systems). Applying this method requires nonexistence theorems for the limiting "blown-up" system in the whole space
+and in the half-space. We will follow the same scheme here; however, as an additional and nontrivial difficulty with respect to the cases treated in {{cite:f2bf3c38-482e-44e0-a390-1858d800fb6a}}, {{cite:b4eacaac-62ca-404a-b007-30effd0590b5}}, {{cite:c4f2c863-98aa-4d1b-9353-719b1b1938a5}}, {{cite:e2a55af8-80b8-4a4e-a980-63dd6a04c7b1}}, {{cite:9fafe0b6-0f4a-432b-801c-ecaef522677e}}, we will need to deal with the fact that
+many of the limiting systems that we obtain
+admit semi-trivial solutions in the whole space, of the form FORMULA  or FORMULA , with FORMULA 
+(for instance system (REF ) with FORMULA ).
+Additional arguments are thus needed to rule out the occurrence of such limits (see Remark REF ).
+
+Some systems that appear in applications, to which our results apply
+The results in Section REF  apply in particular to the following two systems which we already mentioned
+FORMULA 
+The first of these two systems is of Lotka-Volterra type, and appears as a model of symbiotic interaction of biological species. In (LV) the logistic terms FORMULA  and FORMULA  take into account the reproduction and the limitation of resources within each species, while the FORMULA -terms represent the interaction between the two species.
+A positive solution then corresponds to a coexistence state – see for instance {{cite:40773adc-e94d-4719-a900-4afcdb7b3ac5}}, {{cite:b4eacaac-62ca-404a-b007-30effd0590b5}}, {{cite:c4f2c863-98aa-4d1b-9353-719b1b1938a5}} and the references therein for more details on the biological background.
+The system (BE) arises in models of Bose-Einstein condensates which involve two different quantum states, as well as in nonlinear optics. In particular, one gets (BE) when looking for standing waves
+of an evolutionary cubic Schrödinger system.
+In the present case, the interspecies interaction is attractive, while the self-interaction is repulsive or neutral,
+leading to phenomena of symbiotic solitons.
+We refer to {{cite:41beb9d5-e8fb-42a6-ba96-235a72965035}}, {{cite:a38fe37b-4e07-4d61-9652-8b81e20f70cf}} for a description of physical phenomena that lead to such systems. These references include systems with spatially inhomogeneous coefficients.
+For (LV) and (BE), we get the following result as a direct consequence of Theorem REF .
+COROLLARY 1.4 
+Assume FORMULA  is a smooth bounded domain, FORMULA  are Hölder continuous in FORMULA ,
+and (REF ), (REF ) hold. Assume further that FORMULA  for (LV), FORMULA  for (BE).
+If
+FORMULA 
+then there exists at least one positive classical solution of (LV) or (BE) in FORMULA , such that FORMULA  on FORMULA . All such solutions are bounded above by a constant which depends only on FORMULA , and the uniform norms of FORMULA .
+
+Observe that (REF ) cannot be removed, as simple examples show. For instance, if FORMULA  and
+FORMULA 
+in (LV) or (BE), by adding up the two equations we see that any nonnegative solution of the Dirichlet problem vanishes identically.
+In spite of the huge number of works on Lotka-Volterra systems (giving a reasonably complete bibliography is virtually impossible), this corollary represents an improvement on known results for (LV) — see {{cite:c4f2c863-98aa-4d1b-9353-719b1b1938a5}},
+where a more restrictive assumption than (REF ) was made on the functions FORMULA .
+For the system (BE), most of the previously known statements on a priori estimates and existence
+concerned the case of reversed interactions (FORMULA  positive and FORMULA  negative; or FORMULA  negative); see {{cite:c57854af-88b9-4895-a690-1aa0ca091c94}}, {{cite:80ae442e-6d5a-4773-b16e-3cab10e722c9}}, {{cite:4d8ef79a-9617-4fd2-bd42-9339fadffe75}}, {{cite:71a0411e-c1c1-4972-933d-ee999fd6a0a8}}, {{cite:1373f89d-7f20-4e0b-94e1-5d621c625e40}}, {{cite:9fafe0b6-0f4a-432b-801c-ecaef522677e}}.
+The self-repulsive case which we consider here was also studied in {{cite:8a638282-ad91-476d-b51e-8c9a92bc20f4}}, where positive solutions are constructed by variational methods under the additional hypothesis that FORMULA  and FORMULA  are large constants.
+Thus Corollary REF  completes these works, providing optimal results for the case of attractive interspecies interaction, and repulsive or neutral intraspecies interaction.
+
+Finally, we point out the following third example, which is a special case of a class of systems arising in the modelling of general
+chemical reactions
+FORMULA 
+where FORMULA  is a bounded domain and FORMULA .
+See for instance equation (1) in {{cite:413c471f-74e7-4d59-ae0d-2b667c1e5a5a}} and equations (3.1), (3.5) in {{cite:57da0f00-854c-43aa-af92-79334541b181}},
+as well as the other examples and references given in these works (note that more general power-like behaviour in the nonlinearities can be considered as well).
+Specifically, system (REF ) in the case FORMULA  and FORMULA  describes
+the evolution of the concentrations of two chemical molecules FORMULA  and FORMULA 
+in the reversible reaction
+FORMULA 
+under inhomogeneous catalysis with reaction speeds FORMULA , FORMULA ,
+and absorption on the boundary.
+(Note that the net result of the reaction is FORMULA 
+and that the molecules FORMULA  should thus be isomeric.)
+In this case, it is easy to see by considering FORMULA  that
+the only nonnegative equilibrium is FORMULA . Hence, Theorem REF  shows the existence of a bifurcation phenomenon for the
+stationary system associated with (REF ), precisely at FORMULA  and FORMULA . Indeed, assume FORMULA  and let the Hölder continuous functions FORMULA  satisfy FORMULA , FORMULA  and FORMULA  in FORMULA .
+Then there exists a positive steady state beside the trivial one, for each FORMULA .
+It is worth noticing that the discussion in {{cite:57da0f00-854c-43aa-af92-79334541b181}} (see eqn. (3.6) in that paper) provides a physical explanation
+as to why the case FORMULA  differs strongly from FORMULA .
+As is pointed out in {{cite:57da0f00-854c-43aa-af92-79334541b181}}, in the case of constant coefficients, FORMULA  guarantees that the
+system (REF ) exhibits control of mass (we refer to {{cite:57da0f00-854c-43aa-af92-79334541b181}}
+for definitions), or, in other words, the absorption in the system controls the
+reaction. Under this assumption, it can be shown that any global and bounded solution converges uniformly to FORMULA  as FORMULA 
+(however, whether or not some solutions may blow up in finite time is a highly nontrivial question in general – see {{cite:57da0f00-854c-43aa-af92-79334541b181}} and the references therein).
+It should then come as no surprise that the case FORMULA , in which no control of mass is available, is delicate to study, even in the stationary (elliptic) case.
+
+Main results
+We will only consider classical solutions, for simplicity. Observe that under our hypotheses on FORMULA , FORMULA , any continuous weak-Sobolev solution of (REF ) is actually classical, by standard elliptic regularity.
+In what follows, we say that FORMULA  is semi-trivial if FORMULA  or FORMULA .
+We say that FORMULA  is positive if FORMULA  in the domain where a given system is set.
+Classification results in the whole space
+In this section we study the system (REF ) in FORMULA .
+The following theorem plays a pivotal role in the paper and is probably its most original result.
+THEOREM 2.1 
+Assume (REF ) holds and FORMULA . Let FORMULA  be the constant from Proposition REF  and FORMULA  be a positive classical solution of (REF ) in FORMULA .
+(i) Assume that
+FORMULA 
+If FORMULA , assume in addition that FORMULA  is bounded. Then FORMULA .
+(ii) Assume that
+FORMULA 
+If FORMULA , assume in addition that FORMULA  is bounded. Then FORMULA .
+
+We stress that, remarkably, Theorem REF  includes critical and supercritical cases, since no
+upper bound is imposed on the total degree FORMULA  of the system (REF ).
+Theorem REF  provides a classification of positive solutions
+of (REF ) in FORMULA . Specifically, the set of positive solutions of (REF ) is given by FORMULA , where FORMULA  is either a positive harmonic function, hence constant (if FORMULA ) or FORMULA  is a solution of
+FORMULA 
+with FORMULA  (if FORMULA , by Proposition REF ).
+It is well known that positive solutions of (REF ) exist precisely if FORMULA  and FORMULA .
+They are moreover unique up to rescaling and translation, and explicit, if FORMULA  (see {{cite:a7180768-5d9e-4157-ba83-9215c6bc5afd}}).
+For some related classification results for cooperative systems with FORMULA  in the critical case, which use the method of moving planes, see {{cite:1bace347-e887-4333-82fc-e73bc0f90c73}}, {{cite:cf1063ba-697e-4935-8d20-b73a189bbb2d}}.
+Theorem REF  significantly improves the results from {{cite:d395cf5d-77b7-41b5-a4cf-78c0217370b3}} concerning system (REF ) (see {{cite:d395cf5d-77b7-41b5-a4cf-78c0217370b3}}).
+There, only the case FORMULA , FORMULA  (hence FORMULA ) was considered and, for that case, much stronger restrictions than (REF ) or (REF ) were imposed.
+Combining Theorem REF  with known results on scalar equations yields the following striking Liouville type result for the noncooperative system (REF ), with an optimal growth assumption on the nonlinearities.
+THEOREM 2.2 
+Assume (REF ), FORMULA , and
+FORMULA 
+(i) Then system (REF ) does not admit any positive, classical, bounded solution.
+(ii) Assume in addition
+FORMULA 
+(note this hypothesis is satisfied in each one of the "physical cases" FORMULA  or FORMULA ).
+Then system (REF ) does not admit any positive classical (bounded or unbounded) solution.
+
+Once positive solutions are ruled out, it is natural to ask about nontrivial nonnegative solutions
+(and this will be important in view of our applications to a priori estimates, below). The following result is a simple consequence of Theorem REF  and the strong maximum principle.
+COROLLARY 2.3 
+Under the hypotheses of Theorem REF (i) (resp., REF (ii)),
+assuming in addition FORMULA ,
+any nonnegative bounded (resp., nonnegative) solution of (REF ) is in the form
+FORMULA  or FORMULA , where FORMULA  are nonnegative constants.
+Moreover, if in addition FORMULA , FORMULA  and FORMULA  (resp., FORMULA ), then FORMULA  (resp., FORMULA ),
+whereas, if FORMULA , then FORMULA .
+
+We end this subsection with several remarks on the hypotheses in the above theorems.
+It is not known whether or not the restrictions (REF ), (REF ) are optimal for the property FORMULA . However, the following result shows that
+this property may fail if FORMULA  and FORMULA  are large enough.
+THEOREM 2.4 
+Let FORMULA  and consider system (REF ) with FORMULA , FORMULA  and FORMULA .
+Then there exists a positive solution such that FORMULA  is not constant.
+
+We remark that if FORMULA  or FORMULA  then we can show that
+at least one of the components dominates the other, without restrictions on FORMULA  or FORMULA .
+PROPOSITION 2.5 
+Assume (REF ) and FORMULA  or FORMULA .
+Assume that either FORMULA  is bounded or FORMULA .
+Then either FORMULA  in FORMULA  or FORMULA  in FORMULA .
+
+Remark 2.1 
+If FORMULA  and FORMULA  are assumed to be radially symmetric, it is easy to show that we have FORMULA  or FORMULA , only under the assumptions (REF ) and FORMULA  (see the end of section 4.1).
+
+Next, we recall that the property FORMULA  is known to be true for all nonnegative solutions of (REF ) provided FORMULA  (so that the system is cooperative), and FORMULA , FORMULA , FORMULA .
+The proof of this fact (see {{cite:b4eacaac-62ca-404a-b007-30effd0590b5}}, {{cite:d683bb13-de65-42e0-a822-a2ea83c5e486}}, {{cite:9dc0547e-c824-4b34-af89-ccaf399e5abf}})
+relies on the observation that the function FORMULA  satisfies
+FORMULA  for some constant FORMULA , which leads to the “coercive” elliptic inequality
+FORMULA 
+It then follows from a classical result of Keller and Osserman (see also Brezis {{cite:38fdd060-d664-49c5-9e2b-d4699ac590be}}) that FORMULA , hence FORMULA  (after exchanging the roles of FORMULA ).
+The same idea applies in the half-space, under homogeneous Dirichlet boundary conditions.
+However, this argument fails if FORMULA , or if FORMULA  or FORMULA ,
+since one does not obtain a coercive equation like (REF ).
+Nevertheless, we will be able to use some more general coercivity properties in the proof of Theorem REF  for FORMULA , see (REF ).
+Finally, we recall that the case FORMULA  in system (REF ) is very different, since the absorption features then become dominant.
+For instance, if FORMULA  and FORMULA , then any nonnegative solution of (REF ) has to be trivial if FORMULA ,
+in sharp contrast with the case FORMULA  (when nontrivial solutions FORMULA  exist if FORMULA ).
+Indeed, by Young's inequality, one easily checks that FORMULA  satisfies
+(REF ) for suitable FORMULA , hence FORMULA . An interesting question, though outside the scope of this paper, is to determine the optimal conditions on FORMULA  under which classification results can be proved, when FORMULA .
+
+Classification results in the half-space
+We begin with a rather general classification result for system (REF ) on the half-space FORMULA ,
+under the basic structure assumption (REF ).
+A function
+FORMULA  is said to have sublinear growth if
+FORMULA  as FORMULA , FORMULA .
+The following theorem classifies positive solutions with sublinear growth in FORMULA , and implies nonexistence results by reducing the system to a scalar equation.
+It will thus be sufficient,
+along with Liouville type results for bounded solutions in the whole space (stated in Section REF ),
+in order to prove a priori estimates via the blow-up method.
+THEOREM 2.6 
+Assume that (REF ) holds.
+Let FORMULA  be a classical solution of (REF ) in FORMULA ,
+such that FORMULA  on FORMULA .
+If FORMULA  and FORMULA  have sublinear growth, then
+FORMULA 
+
+This theorem is a consequence of the PhragmÃ¨n-Lindelöf
+maximum principle.
+Remark 2.2 
+Observe that we did not make any assumption on the sign or on the growth of the nonlinearities FORMULA  and FORMULA . Therefore, supercritical nonlinearities can be allowed.
+
+Theorem REF  can be used to deduce Liouville type theorems for noncooperative systems. We have for instance the following result, which applies to the system (REF ).
+COROLLARY 2.7 
+Assume that (REF ) holds for some FORMULA , and there exist constants FORMULA  and FORMULA  such that
+FORMULA 
+Then system (REF ) has no nontrivial, bounded, classical nonnegative solution in FORMULA , such that FORMULA  on the boundary FORMULA .
+
+This corollary is obtained by combining Theorem REF  with a recent result {{cite:81e1d403-8088-46e0-9690-b1c7d0e7458b}}, which
+guarantees that, for any FORMULA , the scalar equation FORMULA  has no positive, bounded, classical solution in the half-space, which vanishes on the boundary (this was known before under additional restriction on FORMULA , see {{cite:d251b5dd-fab2-4b4f-9f3c-b14c3c54fa2c}}, {{cite:14862a58-0787-46eb-9c09-7ddb1f3e0617}}, {{cite:9697b871-eca3-4082-b2a0-b4dc7a897b50}}).
+Under further assumptions on the nonlinearities, namely positivity
+(one may think of FORMULA  in (REF )), we obtain classification results in the half-space, without making growth restrictions on the solutions.
+THEOREM 2.8 
+Let FORMULA .
+We assume that FORMULA  satisfy condition (REF ) for some constant FORMULA  and that, for some FORMULA ,
+FORMULA 
+Let FORMULA  be a nonnegative classical solution of (REF ) in FORMULA ,
+such that FORMULA  on FORMULA .
+(i)
+Either FORMULA  or FORMULA  in FORMULA .
+(ii)
+If
+FORMULA 
+and
+FORMULA 
+then either
+FORMULA  or FORMULA  is semitrivial.
+(iii)
+If (REF )-(REF ) hold and FORMULA , then FORMULA  is semitrivial.
+
+
+Theorem REF  complements {{cite:d395cf5d-77b7-41b5-a4cf-78c0217370b3}},
+which concerned similar problems in FORMULA .
+Remark 2.3 
+The restrictions
+(REF )–(REF ) are unlikely to be optimal, since they are strongly related to nonexistence results for inequalities in the half-space. Recall that FORMULA  has no positive solutions vanishing on the boundary for each FORMULA , while the same is valid for FORMULA  if and only if FORMULA .
+
+The proof of Theorem REF  makes use of a generalization of Theorem REF , which we state next. If FORMULA  is a continuous function in FORMULA , we denote with FORMULA  its half-spherical mean, defined by
+FORMULA 
+for each FORMULA , where FORMULA .
+THEOREM 2.9 
+Assume that (REF ) holds.
+Let FORMULA  be a classical solution of (REF ) in FORMULA ,
+such that FORMULA  on FORMULA .
+If
+FORMULA 
+then  FORMULA
+
+Remark 2.4  If FORMULA  have sublinear growth then FORMULA , which in turn implies (REF ). Hence Theorem REF  is a consequence of Theorem REF .
+
+
+A priori estimates and existence in bounded domains
+We consider the Dirichlet problem
+FORMULA 
+where FORMULA  is a smooth bounded domain of FORMULA .
+For simplicity, here we restrict ourselves to linear lower order terms.
+Further results, for systems with more general lower order terms, will be given in Section 6.
+Note that, due to the space dependence of the coefficients FORMULA  and to the presence of the lower order terms,
+the right-hand side of system (REF ) does not satisfy (REF ), in general.
+Therefore, system (REF ) cannot be directly reduced to a scalar problem via the property FORMULA .
+THEOREM 2.10 
+Let FORMULA , FORMULA , and
+FORMULA 
+Let FORMULA  satisfy FORMULA , FORMULA  in
+FORMULA  and
+FORMULA 
+(i) Then there exists FORMULA , depending only on FORMULA , FORMULA , and the uniform norms of FORMULA , such that any positive classical solution FORMULA  of
+(REF ) satisfies
+FORMULA 
+(ii) Assume in addition that FORMULA  are Hölder continuous
+and that FORMULA .
+Then there exists at least one positive classical solution of (REF ).
+
+As we already observed, Theorem REF  seems to be new even for very particular cases of (REF ), for instance the system (BE) from Section REF .
+The rest of the paper is organized as follows.
+In the preliminary Section 3 we state some essentially known nonexistence results for scalar inequalities with weights. In Section 4 we prove the main classification and Liouville type results for the
+repulsive-attractive system (REF )
+in the whole space.
+In Section 5 we introduce the half-spherical means, establish their monotonicity properties and
+prove Theorems REF  and REF . Then we prove
+some further properties of half-spherical means of
+superharmonic functions, and deduce Theorem REF .
+Finally, Section 6 is devoted to a priori estimates by the rescaling method
+and existence by topological degree arguments. In the appendix we gather some elementary computations related to Proposition REF .
+
+Preliminary results. Liouville theorems for weighted inequalities in unbounded domains. 
+In this section we state three essentially known nonexistence results for scalar elliptic inequalities.
+We require such properties both for inequalities with source and for inequalities with absorption.
+In the rest of the paper, a weak solution of an (in)equality in a given domain FORMULA  will mean a function in FORMULA  which verifies the given (in)equality in the sense of distributions.
+We begin with the following Liouville type result for weighted
+elliptic inequalities with space dependence in an exterior domain of the half-space.
+LEMMA 3.1 
+Let FORMULA  and FORMULA  be a nonnegative weak solution of :
+FORMULA 
+where FORMULA  on FORMULA  and there exists FORMULA  such that FORMULA , and
+FORMULA 
+for some constants FORMULA .
+If
+FORMULA 
+then FORMULA .
+
+This follows from Theorem 5.1 or Corollary 5.6 in {{cite:017c122b-cc3a-415f-8f8d-ffe9d91fca2d}}. Note that theorem was stated for FORMULA  but its proof contains the statement of Lemma REF . As is explained in Section 3 of {{cite:017c122b-cc3a-415f-8f8d-ffe9d91fca2d}}, the results in that paper hold for any notion of weak solution, for which the maximum principle and some related properties are valid.
+Remark 3.1 We will apply Lemma REF 
+with FORMULA  in the form FORMULA .
+
+The next result plays a crucial role in our proofs below.
+LEMMA 3.2 
+Assume FORMULA  and let FORMULA , FORMULA , FORMULA  be such that
+FORMULA 
+Let FORMULA  be a weak solution of
+FORMULA 
+Then FORMULA .
+
+The point is that in inequality (REF ) the potential FORMULA  is not assumed to be bounded below by a positive constant (in which case the result is well-known - see for instance {{cite:fb1a5ca1-8922-4edd-a585-04a9d8f4e48b}}), but only in average on large annuli.
+In particular, Lemma REF  applies if FORMULA  is a subharmonic function. Indeed, the mean-value inequality and the well-known fact that for each subharmonic function FORMULA  the spherical average FORMULA  is nondecreasing in FORMULA  easily imply that (here FORMULA  stands for the average integral)
+FORMULA 
+hence, for each  FORMULA
+FORMULA 
+which implies, for each subharmonic FORMULA  and some positive constant FORMULA ,
+FORMULA 
+Lemma REF  can be proved through a slight modification of the argument introduced in {{cite:017c122b-cc3a-415f-8f8d-ffe9d91fca2d}}. We will give a full and simplified proof, for completeness.
+We first recall the following "quantitative strong maximum principle".
+LEMMA 3.3  Let FORMULA  be a smooth bounded domain and FORMULA  be a compact subset of FORMULA . There exists a constant FORMULA  depending only on FORMULA , FORMULA , distFORMULA , such that if FORMULA  is a nonnegative bounded function and FORMULA  satisfies the inequality
+FORMULA 
+
+For a simple proof of Lemma REF  one may consult Lemma 3.2 in {{cite:b9ce8775-6b2d-4589-a357-c19621439d92}}. Lemma REF  can also be seen as a consequence of the fact that the Green function of the Laplacian in any domain is strictly positive away from the boundary of the domain.
+[Proof of Lemma  REF] If FORMULA  Lemma REF  is immediate, since every positive superharmonic function in FORMULA  is constant.
+Suppose now FORMULA  and FORMULA  is a solution of (REF ). Set FORMULA  and FORMULA . By the maximum principle FORMULA  and FORMULA  is nonincreasing in FORMULA .
+Observe that (REF ) is equivalent to the existence of FORMULA  and FORMULA  such that
+FORMULA 
+From now on we assume that FORMULA . Since FORMULA  is a solution in FORMULA  of the inequality
+FORMULA 
+we can apply Lemma REF  with FORMULA  and FORMULA  and deduce
+FORMULA 
+for some FORMULA . If FORMULA  this is a contradiction, since FORMULA  is nonincreasing in FORMULA .
+If FORMULA  we get
+FORMULA 
+Since FORMULA  is superharmonic, the maximum principle implies that
+FORMULA 
+and hence
+FORMULA 
+If FORMULA , combining (REF ) and (REF ), and letting FORMULA  yields a contradiction.
+Finally, assume that FORMULA , that is, FORMULA .
+Set FORMULA . Then
+FORMULA 
+Observe that
+FORMULA 
+where FORMULA . We proved in (REF )–(REF ) that FORMULA , for FORMULA .
+By the maximum principle FORMULA  in FORMULA , which is equivalent to FORMULA  in FORMULA , by the FORMULA -homogeneity of FORMULA . In addition, FORMULA  is nondecreasing in FORMULA .
+So (REF ) implies
+FORMULA 
+We apply Lemma REF  to this inequality, with FORMULA  and FORMULA , to deduce that
+FORMULA 
+that is,
+FORMULA 
+Hence
+FORMULA 
+which implies FORMULA  as FORMULA , a contradiction.
+The following lemma is a generalization of a classical result of Keller and Osserman to weak solutions of coercive problems with weights.
+LEMMA 3.4 
+Let FORMULA  be a nonnegative weak solution of
+FORMULA 
+where FORMULA  and FORMULA .
+(i)
+If FORMULA , then FORMULA .
+(ii)
+If FORMULA , then FORMULA .
+
+
+The statement (ii) in this lemma appeared first in {{cite:3a1d2cfa-2132-442e-a643-30f54a46c061}}
+(see also {{cite:ff4e4842-dc52-41ae-86c6-f0f9f56f5540}} for an earlier result for potentials with subquadratic decay).
+We will provide a full and simplified proof in the case of the Laplacian, for the reader's convenience.
+[Proof of Lemma  REF] In what follows we denote
+FORMULA 
+Step 1. We assume FORMULA  or FORMULA . Given a solution FORMULA  of FORMULA , we prove the existence of a
+smooth FORMULA 
+satisfying the same equation, with possibly modified constant FORMULA .
+We pick a nonnegative FORMULA  with support inside
+FORMULA  such that FORMULA  and set FORMULA . It is easy to
+see that
+FORMULA 
+in the classical sense.
+Note that if FORMULA , then FORMULA .
+So
+FORMULA 
+where
+FORMULA  if FORMULA 
+and FORMULA  if FORMULA 
+(if FORMULA  we use Jensen's inequality).
+Hence,
+FORMULA 
+where
+FORMULA  and FORMULA .
+Note that if FORMULA , then FORMULA .
+Step 2. From Step 1, we can assume that FORMULA  is smooth.
+(i) Suppose for contradiction that FORMULA  is bounded on FORMULA  and does not vanish
+identically. We can assume without loss of generality that
+FORMULA , since the problem is invariant with respect to translations (a translation of FORMULA  gives a function whose behaviour is the same as FORMULA ).
+For any FORMULA , we denote the spherical mean of FORMULA  by
+FORMULA 
+where FORMULA  is the sphere of center 0 and radius R, FORMULA  is the
+Lebesgue's measure on FORMULA  and FORMULA . It is clear that
+FORMULA  is bounded on FORMULA .
+Since FORMULA  is subharmonic,
+FORMULA 
+It is easy to see that
+there exists FORMULA  independent of FORMULA  such that
+FORMULA 
+Indeed, if FORMULA  then this is a consequence of Jensen's inequality (and FORMULA ), whereas if
+FORMULA , we can use the boundedness of FORMULA 
+(and FORMULA ).
+We know that
+FORMULA 
+hence
+FORMULA 
+But this implies FORMULA , which is a contradiction.
+(ii) We assume FORMULA  and will prove that FORMULA  is bounded, which implies the result,
+by the statement (i).
+Arguing as in {{cite:e7b643de-4702-4f6c-b5ed-0ecdc1570fa4}}, we define the function FORMULA  on FORMULA  by
+FORMULA 
+where FORMULA . We will see, by direct computation, that if FORMULA  is
+large enough, then
+FORMULA 
+Indeed, denoting FORMULA , we have
+FORMULA 
+and
+FORMULA 
+We note that FORMULA .
+Hence, a sufficient condition to have (REF ) is
+FORMULA 
+Since FORMULA , for each FORMULA  a sufficient condition for the last inequality is
+FORMULA 
+and this is how we choose FORMULA .
+It is now easy to see that FORMULA  on FORMULA . Note that FORMULA  as FORMULA . If we denote
+FORMULA  and if S is a FORMULA  nondecreasing convex function on
+FORMULA  such that FORMULA  on FORMULA  and FORMULA  otherwise, then
+FORMULA 
+Hence FORMULA  is subharmonic on FORMULA  and can
+be continuously extended on FORMULA  by setting FORMULA  on FORMULA , so
+by the maximum principle FORMULA , that is, FORMULA .
+Finally, for all FORMULA , FORMULA  on FORMULA , so by letting FORMULA 
+we obtain FORMULA , for each FORMULA .
+
+Proofs of the classification and Liouville theorems in the whole space 
+Proof of Theorem REF .
+The key idea is to use the two auxiliary functions
+FORMULA 
+and
+FORMULA 
+where FORMULA  is given by Proposition REF . Clearly FORMULA  is equivalent to FORMULA , and FORMULA  is equivalent to FORMULA , when FORMULA .
+The following two lemmas assert that the functions FORMULA  satisfy a suitable
+system of elliptic inequalities, respectively of the form (REF ) and (REF ).
+LEMMA 4.1 
+We suppose that (REF ) holds.
+(i) Assume FORMULA . Then FORMULA  is superharmonic.
+If FORMULA , suppose in addition that FORMULA  is bounded.
+Then FORMULA  is a weak solution of
+FORMULA 
+where FORMULA  and FORMULA .
+(ii) Assume FORMULA . Then FORMULA  is a weak solution of
+FORMULA 
+
+LEMMA 4.2 
+We suppose that (REF ) holds, and FORMULA .
+(i) Then FORMULA  is subharmonic.
+(ii) Assume FORMULA  and FORMULA .
+We also suppose that FORMULA  is bounded in case FORMULA .
+Then FORMULA  is a weak solution of
+FORMULA 
+where FORMULA  and FORMULA .
+
+[Proof of Lemma  REF]
+Let us recall the Kato inequality (valid in particular for weak solutions):
+FORMULA 
+(i) Writing
+FORMULA 
+it follows from (REF ) that
+FORMULA 
+hence
+FORMULA 
+Now we make use of the inequality
+FORMULA 
+with FORMULA  if FORMULA , FORMULA  if FORMULA .
+By Proposition REF , we have
+FORMULA 
+Therefore, on the set FORMULA , we obtain
+FORMULA 
+Similarly, on the set FORMULA , we get
+FORMULA 
+In particular, FORMULA .
+Hence, we deduce from (REF ) that
+FORMULA 
+so FORMULA  is superharmonic, by (REF ) and (REF ).
+Now assume either that FORMULA  or that FORMULA  is bounded.
+By using that
+FORMULA 
+and FORMULA  otherwise (since FORMULA  is bounded), we infer from (REF ) and (REF ) that
+FORMULA 
+and
+FORMULA 
+We then deduce from (REF ) that
+FORMULA 
+(ii) If FORMULA , then the inequalities in (REF ) are strict, that is FORMULA , FORMULA  for some FORMULA . Then we obtain, as in (REF ) and (REF ), that
+FORMULA 
+and
+FORMULA  on the set FORMULA ,
+for some FORMULA .
+The assertion then follows from (REF ).
+[Proof of Lemma  REF]
+(i) By using (REF ) and Proposition REF , we get
+FORMULA 
+hence
+FORMULA 
+
+where we have set FORMULA , FORMULA .
+(ii) In Lemma REF (i) in the appendix we show that
+FORMULA 
+when FORMULA  and FORMULA .
+Using (REF ), we then get
+FORMULA 
+If FORMULA , we conclude by using FORMULA .
+If FORMULA , we conclude by using
+FORMULA , in view of the boundedness of FORMULA .
+[Proof of Theorem  REF]
+(i) Assume for contradiction that FORMULA .
+By Lemma REF (i), the function FORMULA  is subharmonic, nonnegative and nontrivial. Clearly, so is FORMULA , for each FORMULA . Then Lemma REF  applies to the inequality FORMULA , which we proved in Lemma REF  (recall the discussion after the statement of Lemma REF ). Hence FORMULA , a contradiction.
+(ii) First, we observe that we may assume FORMULA . Indeed, if FORMULA , then FORMULA  is assumed to be bounded
+and, since FORMULA , the conclusion follows from assertion (i).
+Next we claim that we may assume FORMULA .
+Indeed, if FORMULA , then this is true due to FORMULA . If FORMULA , then we may assume FORMULA  and FORMULA ,
+since otherwise the result is already known from assertion (i). But then FORMULA .
+Now, by Lemma REF (i), FORMULA  is superharmonic and positive, hence
+FORMULA 
+for some FORMULA . Therefore
+FORMULA 
+Hence we can apply Lemma REF  to the inequality FORMULA , which we obtained in Lemma REF (ii), and conclude that FORMULA .
+Remark 4.1 
+It does not seem possible to go beyond assumptions (REF ), (REF ) by the sole means of the mixed-type system
+(REF )-(REF ).
+Indeed, if FORMULA , FORMULA  and FORMULA , then this system admits positive solutions of the form
+FORMULA 
+with suitable FORMULA , FORMULA ,
+FORMULA  and FORMULA 
+(this is easily checked by direct computation).
+We remark that Keller-Osserman type estimates and Liouville theorems for another mixed-type system, namely
+FORMULA 
+were obtained in the recent work {{cite:84a82dbf-c0c0-4c22-a712-2c3d1c2f52da}}.
+
+[Proof of Theorem  REF]   Assume first that FORMULA .
+Then the result is a consequence of Lemma REF (ii) and Lemma
+REF .
+Assume next that FORMULA  and FORMULA .
+Suppose for contradiction that a positive bounded solution FORMULA  exists.
+By (REF ), we have FORMULA , hence FORMULA .
+Since FORMULA , we deduce FORMULA .
+Theorem REF  then guarantees that FORMULA ,
+where FORMULA  is given by Proposition REF .
+It follows that
+FORMULA 
+with FORMULA  by Proposition REF .
+But this contradicts a well-known Liouville-type result from {{cite:4e91ead5-32eb-4c85-a90e-73def6315065}}.
+Moreover, if either FORMULA , or FORMULA  (hence FORMULA  due to FORMULA ),
+then the boundedness assumption is not necessary when applying Theorem REF .
+Finally, we note that if FORMULA , then we always have
+either FORMULA  or FORMULA .
+[Proof of Proposition  REF]
+We may assume without loss of generality that FORMULA .
+(Indeed the system (REF ) with unknown FORMULA , parameters FORMULA  and exponents FORMULA  is equivalent to
+the system (REF ) with unknown FORMULA , parameters FORMULA  and same exponents.)
+Also we may assume that FORMULA  since, in the case FORMULA , the result is already known from Theorems 1.4(i) and 1.2 in {{cite:d395cf5d-77b7-41b5-a4cf-78c0217370b3}}.
+(This is actually proved there in the case FORMULA , but the general case immediately follows by scaling.)
+Now assume that FORMULA .
+Since
+FORMULA 
+due to Proposition REF , the function FORMULA  is subharmonic.
+It follows (see the discussion after the statement of Lemma REF )) that
+FORMULA 
+Consequently, since FORMULA  we have FORMULA ,
+where FORMULA  denote the spherical means.
+But, since FORMULA  is superharmonic due to FORMULA ,
+we deduce from {{cite:d395cf5d-77b7-41b5-a4cf-78c0217370b3}} that
+FORMULA 
+On the other hand, by Lemma REF (ii), we have
+FORMULA 
+Therefore,
+FORMULA 
+owing to (REF ). In view of Lemma REF (ii), we conclude that FORMULA .
+Finally, let us justify the statement in Remark REF . Let FORMULA  and FORMULA .
+By the proof of Lemma REF (i), we know that the radially symmetric functions
+FORMULA  and FORMULA  are subharmonic, hence (radially) nondecreasing.
+Since FORMULA , we necessarily have FORMULA  or FORMULA ,
+hence FORMULA  or FORMULA .
+
+Proof of Theorem  REF
+By adding up the two equations, we see that FORMULA  is harmonic and positive, hence constant. We therefore look
+for a solution such that FORMULA , with FORMULA .
+The system then becomes equivalent to
+FORMULA 
+To show the existence of a nonconstant positive solution of (REF ), we argue like in the proof of {{cite:d395cf5d-77b7-41b5-a4cf-78c0217370b3}}.
+Consider the initial value problem for the real function  FORMULA
+FORMULA 
+with FORMULA . It is standard to check that either FORMULA , FORMULA  for all FORMULA , or FORMULA  has a first zero FORMULA .
+If the latter occurs, then the PDE in (REF ) admits a positive solution FORMULA  in a finite ball with homogeneous Dirichlet conditions,
+and also FORMULA .
+But this is known to be impossible, owing to the Pohozaev identity, whenever
+FORMULA 
+where FORMULA  and FORMULA .
+In the case of (REF ) we have FORMULA  and
+FORMULA 
+Therefore (REF ) is true for FORMULA  sufficiently small, and the conclusion follows.
+
+Properties of half-spherical means. Proofs of the classification results in a half-space. 
+We start by recalling that the classical PhragmÃ©n-Lindelöf maximum principle states that a subharmonic function with sublinear growth in the half-space which is nonpositive on FORMULA  is also nonpositive in FORMULA  (see for instance {{cite:e8ccc252-cbe6-4e85-8f3a-e75bb6c6ff30}}).
+[Proof of Theorem  REF]    We set FORMULA . Since FORMULA  have sublinear growth, so do FORMULA  and FORMULA .
+Let FORMULA  be convex, nondecreasing and such that
+FORMULA  for all FORMULA  and FORMULA  for FORMULA . Then
+FORMULA  has sublinear growth.
+Since the nonlinearities satisfy condition (REF ), then FORMULA 
+implies FORMULA .
+Hence, we have
+FORMULA 
+since
+FORMULA  if FORMULA  and FORMULA  otherwise. Hence, FORMULA  is subharmonic.
+Since by hypothesis FORMULA  on FORMULA , FORMULA  on FORMULA . By the
+PhragmÃ©n-Lindelöf maximum principle, we get FORMULA , so FORMULA .
+The same argument applied to FORMULA  leads to FORMULA . Finally, we obtain FORMULA ,
+i.e. FORMULA .
+We will use the following notation: for any FORMULA , and any FORMULA , we set
+FORMULA 
+FORMULA 
+FORMULA 
+and write FORMULA , FORMULA  and FORMULA  respectively for
+FORMULA , FORMULA  and FORMULA .
+We recall the definition of the half-spherical means of a function FORMULA , namely
+FORMULA 
+and denote FORMULA .
+Observe that FORMULA  is a positive constant (independent of FORMULA ).
+The following lemma provides a basic computation for the derivative of the half-spherical mean with respect to the radius.
+LEMMA 5.1 
+Let FORMULA . For any FORMULA  and FORMULA , we have :
+FORMULA 
+
+We have
+FORMULA 
+
+since FORMULA  on FORMULA .
+Then, setting FORMULA ,
+since FORMULA  and FORMULA , we have
+FORMULA 
+Next, we give a the generalization of the PhragmÃ©n-Lindelöf maximum principle,
+based on the above monotonicity property, which will play an important role.
+LEMMA 5.2 
+Let FORMULA  be such that FORMULA  on FORMULA  and
+FORMULA  on the set FORMULA .
+If we assume
+FORMULA 
+then FORMULA  in FORMULA .
+
+[Proof] Let FORMULA  be convex, nondecreasing and such that
+FORMULA  for all FORMULA  and FORMULA  for FORMULA . Then, for any FORMULA ,
+FORMULA . Therefore,
+FORMULA 
+We also have
+FORMULA 
+since
+FORMULA  if FORMULA  and FORMULA  otherwise.
+Since FORMULA  on FORMULA , then FORMULA  on FORMULA  so
+Lemma REF  gives
+that FORMULA  is nondecreasing.
+But its limit as FORMULA  is zero by
+(REF ), so FORMULA  for all FORMULA . This implies that
+FORMULA , hence FORMULA .
+The proof of Theorem REF  is an easy consequence of
+Lemma REF .
+[Proof of Theorem  REF]
+Let FORMULA . Observe that FORMULA  on FORMULA  and FORMULA 
+thanks to (REF ). Hence we can apply Lemma REF 
+to FORMULA  and FORMULA  and conclude that FORMULA .
+We now turn to the proof of Theorem REF .
+In order to treat solutions without growth restrictions at infinity in the case of positive nonlinearities,
+we will need to exploit some further properties of half-spherical means for superharmonic functions.
+The following lemma will permit to us to split the proof of Theorem REF  in the following way:
+either the superharmonic functions FORMULA  grow at infinity at least like FORMULA  and then we apply the nonexistence result for weighted inequalities in Lemma REF , or the half-spherical means of FORMULA  decay at infinity and we can use Theorem REF .
+LEMMA 5.3 
+Suppose that FORMULA  is nonnegative and superharmonic in FORMULA .
+(i)
+For each FORMULA , the function FORMULA  is nonincreasing and its limit is independent of FORMULA .
+(ii)
+Denote FORMULA .
+Then we have
+FORMULA 
+
+
+Assertion (ii) can be deduced from a more general and rather difficult result from {{cite:97178c38-d00b-4cbc-82c9-9389c89e5212}};
+see Remark REF  below. We will provide a direct, more elementary proof.
+[Proof]
+(i) That FORMULA  is nonincreasing in FORMULA  is a direct consequence of Lemma REF .
+Set
+FORMULA 
+By L'Hôpital's rule, (REF ) implies that
+FORMULA 
+(with nonincreasing limit).
+Now, for FORMULA , we have FORMULA ,
+hence
+FORMULA 
+By letting FORMULA , we deduce that FORMULA ,
+which proves that FORMULA  is independent of FORMULA .
+(ii) The proof is divided in three steps.
+Step 1. We recall several properties of Poisson kernels, that is, normal derivatives of Green functions. For FORMULA , we denote by FORMULA  the Poisson kernel of FORMULA .
+Then for any FORMULA , the unique harmonic function FORMULA  in FORMULA  with boundary value FORMULA 
+is given by
+FORMULA 
+A simple rescaling argument shows that
+FORMULA 
+On the other hand, for each FORMULA , FORMULA  is positive in FORMULA  (by the strong maximum principle,
+since it is harmonic, nonnegative and nontrivial).
+For each FORMULA , since FORMULA  is continuous on FORMULA , it follows that
+FORMULA 
+Step 2. Fix FORMULA , denote by FORMULA  its projection onto FORMULA  and set FORMULA .
+Since FORMULA  is superharmonic in FORMULA ,
+the maximum principle implies that, for all FORMULA ,
+FORMULA 
+hence
+FORMULA 
+due to (REF ).
+Now take FORMULA , set FORMULA  and FORMULA  (see (REF )).
+Using (REF ) and assertion (i), we obtain
+FORMULA 
+Step 3. Define FORMULA .
+The set FORMULA  is closed and nonempty. For any FORMULA , we have FORMULA , hence FORMULA  is bounded and
+FORMULA 
+Assume for contradiction that FORMULA .
+Setting FORMULA , we see that FORMULA  is nonnegative, superharmonic and that FORMULA .
+By the result of Step 2 applied to FORMULA , it follows that FORMULA  for some FORMULA .
+But this contradicts the definition of FORMULA .
+Therefore FORMULA  and the result is proved.
+Remark 5.1 
+(i) For any subharmonic function FORMULA  on FORMULA , the
+Corollary to Theorem 1 on page 341 in {{cite:97178c38-d00b-4cbc-82c9-9389c89e5212}}
+asserts the following: if FORMULA  has a harmonic majorant, if FORMULA 
+and if, for all FORMULA , FORMULA , then FORMULA .
+To deduce Lemma REF (ii) from this,
+set FORMULA  and FORMULA . Then FORMULA  is subharmonic,
+FORMULA  has a harmonic majorant FORMULA 
+and FORMULA .
+Moreover, for all FORMULA , FORMULA .
+Therefore, FORMULA , i.e., FORMULA .
+(ii) From Lemmas REF  and REF (ii),
+we may retrieve the well-known fact that any positive harmonic function in FORMULA , such that FORMULA 
+and FORMULA  on the boundary, is necessarily of the form FORMULA  with FORMULA .
+We first claim that FORMULA . Indeed, FORMULA  is independent of FORMULA  by Lemma REF .
+Therefore FORMULA  would imply FORMULA , from which we readily infer FORMULA .
+Let then FORMULA . Then FORMULA  is harmonic and Lemma REF (ii) guarantees FORMULA .
+Since FORMULA , the above argument yields FORMULA .
+
+[Proof of Theorem  REF.]
+(i) Since the functions FORMULA  and FORMULA  are nonnegative, FORMULA  and FORMULA  are superharmonic. Therefore, by Lemma REF (ii),
+FORMULA 
+First, we observe that we cannot have simultaneously FORMULA  and FORMULA .
+Indeed, by Lemma REF (ii), this would imply that, for some FORMULA , and all  FORMULA
+FORMULA 
+hence FORMULA  in FORMULA , but this contradicts
+Lemma REF .
+Assume for instance FORMULA . Setting FORMULA , we have FORMULA , hence
+FORMULA 
+By Lemma REF , this implies FORMULA , i.e. FORMULA .
+If FORMULA , we similarly obtain FORMULA .
+(ii) By what we just proved, it is enough to show that FORMULA . Assume FORMULA .
+Therefore, FORMULA  for FORMULA , and
+FORMULA 
+If the first condition in (REF ) is satisfied, then the first inequality in (REF ) combined with Lemma REF  yields FORMULA .
+Hence we can assume that the second condition in (REF ) is satisfied. Set FORMULA , so that FORMULA  in FORMULA .
+Let
+FORMULA 
+Note FORMULA  (if FORMULA  on FORMULA , this follows from Hopf's lemma). Since FORMULA  is superharmonic in FORMULA , FORMULA  on FORMULA  and FORMULA  as FORMULA , the maximum principle implies
+FORMULA 
+Plugging this into the second inequality of (REF ) we get
+FORMULA 
+in FORMULA , which contradicts Lemma REF ,
+applied with FORMULA  and FORMULA ,
+in view of the second condition in (REF ).
+In case FORMULA  we use (REF ) in a similar way, to conclude the proof of (ii).
+(iii) By (ii), we know that either FORMULA  is semi-trivial or FORMULA . In the latter case,
+since FORMULA , we deduce from
+Lemma REF  that FORMULA  or FORMULA .
+
+A priori estimates and existence
+We consider the following system with general lower order terms, of which (REF ) is a particular case
+FORMULA 
+where FORMULA  is a smooth bounded domain of FORMULA .
+Theorem REF  is a consequence of the following more general statements
+on a priori estimates and existence.
+THEOREM 6.1 
+Let FORMULA , FORMULA , FORMULA , and
+FORMULA 
+Let FORMULA  satisfy FORMULA , FORMULA  in FORMULA  and
+FORMULA 
+Let FORMULA  satisfy
+FORMULA 
+and assume that one of the following two sets of assumptions is satisfied:
+FORMULA 
+or
+FORMULA 
+(with uniform limits with respect to FORMULA  in (REF )–(REF )).
+Then there exists FORMULA  such that any positive classical solution FORMULA  of
+(REF ) satisfies
+FORMULA 
+
+THEOREM 6.2 
+Let (REF )–(REF ) be satisfied.
+Assume in addition that FORMULA  are Hölder continuous and that for some  FORMULA
+FORMULA 
+FORMULA 
+FORMULA 
+Then there exists a positive classical solution of (REF ).
+
+Remark 6.1 
+We will not treat the existence question under the assumption (REF ),
+which seems to be a delicate problem.
+The reason is that we prove Theorem REF  by using a deformation of the
+system (REF ) via homotopy, adding positive linear terms (see (REF ) below). However, with such terms,
+assumption (REF ) is no longer satisfied and we cannot use Theorem REF .
+
+Remark 6.2 
+Like many previous works, our proof of a priori estimates uses the classical rescaling method of Gidas and Spruck {{cite:d251b5dd-fab2-4b4f-9f3c-b14c3c54fa2c}}.
+However, as mentioned in the introduction, arises an additional difficulty: to rule out the possibility of semitrivial rescaling limits, of the form FORMULA  or FORMULA  (see Step 2 below).
+Under assumption (REF ), this will be achieved by a suitable eigenfunction argument, while (REF ) will guarantee that in each blowing up solution FORMULA  of (REF ) the components FORMULA  and FORMULA  explode at a comparable rate.
+Note that a similar difficulty appears in the work {{cite:cbd66457-4640-4732-abf3-006819da9d15}}, which studied a class of cooperative systems with nonnegative nonlinearities in the form of products.
+In that case, the problem was dealt with by different techniques, namely moving planes and Harnack inequalities.
+
+For the reader's convenience, before giving the proofs of Theorems REF -REF  we quickly review the role of the hypotheses in these theorems. The first condition in (REF ) guarantees that the strong maximum principle applies to the system (REF ), while the second condition in (REF ) is a usual superlinearity and subcriticality condition on the nonlinearities at infinity. The hypothesis (REF ) says FORMULA  and FORMULA  are indeed of "lower order", and disappear in the blow-up limit, while the assumptions (REF )-(REF ) are used to exclude semitrivial blow-up limits. The hypothesis (REF ) permits to us to apply the strong maximum principle to (REF ), whereas (REF ) implies that for each nonnegative solution of (REF ) we have FORMULA  if and only if FORMULA . Finally, (REF ) is a standard superlinearity condition at zero for (REF ).
+[Proof of Theorem  REF.]
+We will consider the following parametrized version of system (REF ) (this will be needed in the proof of Theorem REF ):
+FORMULA 
+where
+FORMULA 
+FORMULA 
+and
+FORMULA 
+Here FORMULA  is a constant to be fixed below, and FORMULA  is a parameter in FORMULA .
+Note that (REF ) is (REF ) with FORMULA .
+Under assumption (REF ), we will prove the bound in (REF ) for the positive solutions of (REF ), uniformly for FORMULA 
+(but possibly depending on FORMULA ), whereas under assumption (REF ) we will restrict ourselves to  FORMULAThe restriction FORMULA 
+under assumption (REF ) will be used only in Step 2
+to exclude semi-trivial rescaling limits.
+(see Remark REF ).
+We assume for contradiction that there exists a sequence FORMULA  and a sequence FORMULA 
+of positive solutions of (REF ) with FORMULA ,
+such that FORMULA .
+We may assume FORMULA  without loss of generality.
+Set FORMULA . Let FORMULA  be such that FORMULA  and set
+FORMULA 
+By passing to a subsequence, we may assume that FORMULA 
+and FORMULA .
+Setting FORMULA , we then split the proof into two cases,
+according to whether FORMULA  (along some subsequence) or
+FORMULA  is bounded.
+Case A: FORMULA .
+This case is treated in two steps.
+Step 1: Convergence of rescaled solutions to a semi-trivial entire solution.
+We rescale the solutions around FORMULA  as follows:
+FORMULA 
+where FORMULA .
+Due to the definition of FORMULA , it is clear that
+FORMULA 
+Moreover, FORMULA , hence
+FORMULA 
+We see that FORMULA  satisfies the system
+FORMULA 
+where
+FORMULA 
+In view of (REF ), (REF ), FORMULA , and FORMULA  we have
+FORMULA 
+For each fixed FORMULA , we have FORMULA  for FORMULA  sufficiently large,
+and FORMULA  in FORMULA ,
+owing to (REF ), (REF ), (REF ).
+It follows from interior elliptic estimates that
+the sequences FORMULA , FORMULA  are bounded in FORMULA  for each FORMULA .
+By embedding theorems, we deduce that they are bounded in
+FORMULA  for each FORMULA .
+It follows that, up to some subsequence,
+FORMULA 
+where FORMULA  is a bounded nonnegative classical solution of
+FORMULA 
+with
+FORMULA 
+Moreover,
+FORMULA 
+in view of (REF ).
+Also, FORMULA  due to (REF ).
+By Theorem REF (i) and Corollary REF , there exists a constant FORMULA  such that FORMULA  and FORMULA , hence
+FORMULA 
+Step 2: Exclusion of semi-trivial rescaling limits.
+Let us first consider the case when assumption (REF ) is satisfied.
+For some FORMULA  we have
+FORMULA 
+(uniformly in FORMULA  and FORMULA ) and hence
+FORMULA 
+Fix FORMULA  with
+FORMULA 
+Take FORMULA  to be chosen later. By (REF ), there exists FORMULA  such that, for all FORMULA , we have
+FORMULA , FORMULA  on FORMULA , and
+FORMULA , since FORMULA  as FORMULA . Hence
+FORMULA 
+(in the last inequality we used FORMULA ). This implies that the first
+eigenvalue of the Laplacian in FORMULA  is larger than
+FORMULA , which is a contradiction for sufficiently large FORMULA . More precisely, denote by FORMULA  and FORMULA  the first eigenvalue and eigenfunction of FORMULA  in FORMULA 
+with Dirichlet boundary conditions. Since FORMULA , by multiplying the above inequality with FORMULA 
+and by integrating by parts, we get
+FORMULA 
+By taking FORMULA  sufficiently large (depending only on FORMULA ), this implies FORMULA  on FORMULA , a contradiction.
+Let us now consider the case when assumption (REF ) is satisfied, and FORMULA .
+Now there exist FORMULA  such that
+FORMULA 
+Therefore, for any positive solution FORMULA  of (REF ), if FORMULA  then, at a maximum point FORMULA  of FORMULA , we have
+either FORMULA , or else
+FORMULA 
+Since FORMULA  and FORMULA  are positive we deduce that
+FORMULA 
+Hence there exists a constant FORMULA 
+such that, for any positive solution FORMULA  of (REF ),
+FORMULA 
+In view of definition (REF ), this implies FORMULA ,
+hence FORMULA , which excludes semitrivial limits and leads to a contradiction with the nonexistence of positive solutions of (REF ).
+Case B: FORMULA  is bounded.
+We may assume that FORMULA .
+Arguing similarly to {{cite:d251b5dd-fab2-4b4f-9f3c-b14c3c54fa2c}}
+(see also {{cite:d395cf5d-77b7-41b5-a4cf-78c0217370b3}}), after performing local changes of coordinates
+which flatten the boundary, we end up with a nontrivial
+nonnegative (bounded) solution FORMULA  of system (REF ) in a half-space,
+with FORMULA  on the boundary.
+Moreover, (REF ) is satisfied.
+By Proposition REF  and Theorem REF , we deduce FORMULA , FORMULA , which in turn implies that FORMULA , FORMULA  in the half-space, for some FORMULA .
+This yields a contradiction with the Liouville-type theorem in {{cite:d251b5dd-fab2-4b4f-9f3c-b14c3c54fa2c}} for half-spaces.
+[Proof of Theorem  REF.]
+First, it is important to observe that the assumptions FORMULA  and (REF ) guarantee that any
+nonnegative solution of (REF ) satisfies FORMULA  and FORMULA  in FORMULA ,
+unless FORMULA  and FORMULA .
+Indeed, if FORMULA , then FORMULA  by the strong maximum principle – note by (REF ) and (REF ) we have
+FORMULA 
+for some FORMULA  (which may depend on FORMULA ).
+On the other hand, assume for instance FORMULA . Then
+FORMULA  (since (REF ) implies FORMULA  for some FORMULA ), so FORMULA . Then (REF )
+implies that
+FORMULA 
+for some FORMULA .
+We then easily deduce FORMULA , by multiplying with the first Dirichlet eigenfunction of FORMULA 
+and by integrating by parts.
+Theorem REF  follows from a standard topological degree argument. We recall the following fixed point theorem, due to Krasnoselskii and Benjamin (see Proposition 2.1 and Remark 2.1 in {{cite:576df3bd-2b77-4113-a423-190a5bd8d24d}}). This type of statements are nowadays standard in proving existence results.
+THEOREM 6.3  Let FORMULA  be a
+closed cone in a Banach space FORMULA , and let FORMULA  be a
+compact mapping. Suppose FORMULA ,
+are such that
+(i)
+FORMULA  for all FORMULA , and all
+FORMULA ;
+
+and there exists a compact mapping FORMULA  such that
+(ii)
+FORMULA  for all FORMULA ;
+(iii)
+FORMULA  for all FORMULA  and
+all FORMULA ;
+(iv)
+FORMULA  for all FORMULA .
+
+Then there exists a fixed point FORMULA  of FORMULA 
+(i.e. FORMULA ), such that FORMULA .
+
+Observe that (i) implies FORMULA , where FORMULA  is the (homotopy invariant) fixed point index with respect to the relative topology of FORMULA , whereas by (iii)-(iv)
+FORMULA 
+and the excision property of the index implies Theorem REF .
+A little care is needed in defining FORMULA  and FORMULA .
+Let FORMULA  denote the cone of nonnegative functions in
+FORMULA ,
+and let FORMULA  be defined by
+FORMULA 
+where FORMULA  is the solution of the linear problem
+FORMULA 
+It is clear that FORMULA  is compact, since FORMULA  is such by elliptic estimates, and FORMULA  is Lipschitz.
+We set
+FORMULA 
+and FORMULA . Recall FORMULA  are defined in (REF )-(REF ), so fixed points of FORMULA  are solutions of (REF ).
+We still have to choose the constant FORMULA  in
+(REF )–(REF ).
+We do this in the following way: by (REF ), there exists FORMULA  such that FORMULA  and FORMULA , and we set
+FORMULA 
+where FORMULA  is some smooth strict subdomain of FORMULA .
+Once FORMULA  is fixed, we know from the proof of Theorem REF  that there
+exists a universal bound for the positive solutions (if they exist) of
+(REF )
+valid for all FORMULA , and we chose FORMULA  larger than this bound.
+Theorem REF  is proved if we show that FORMULA  has a nontrivial fixed point in FORMULA . So it remains to check that the hypotheses of Theorem REF  are satisfied.
+FORMULA  Let us first show that FORMULA  does not possess any fixed point in FORMULA ,
+which will verify (iv).
+Assume such a fixed point FORMULA  exists, which is then a solution of (REF ), with FORMULA . We have FORMULA  in FORMULA , since FORMULA .
+Let FORMULA . By using the inequality FORMULA , we get
+FORMULA 
+
+where FORMULA .
+Using (REF ) and the inequality
+FORMULA 
+(note FORMULA ),
+it follows that
+FORMULA 
+We reach a contradiction by testing this inequality with the first Dirichlet eigenfunction in FORMULA , because of (REF ).
+FORMULA  Hypothesis (iii) in Theorem REF  is a consequence of the a priori bound for positive solutions of (REF ) which we obtained in the proof of Theorem REF , and the observation we made in the beginning of the proof of Theorem REF .
+FORMULA  Finally, assume that hypothesis (i) is not verified,
+which implies that for any (small) FORMULA  we can find a
+positive solution FORMULA  with FORMULA ,
+of (REF ) with the right-hand side of this system
+multiplied by some FORMULA . By adding up the two equations in the system and using (REF ) we obtain,
+with FORMULA  and for some FORMULA ,
+FORMULA 
+(we obtained the last inequality by choosing FORMULA  sufficiently small). By testing again with the first Dirichlet eigenfunction we get a contradiction.
+Theorem REF  is proved.
+Remark 6.3 
+By simple modifications of the above proof, one can show that assumption (REF )
+can be weakened as follows: for each FORMULA ,
+FORMULA 
+(which allows for the application of the strong maximum principle)
+and, for each FORMULA , there exists FORMULA  such that, for all FORMULA , FORMULA ,
+FORMULA 
+
+
+Appendix. Proof of Proposition  REF
+In the appendix we study the proportionality constants of the
+system (REF ) and give the elementary proof of Proposition REF . In the following we set
+FORMULA 
+[Proof of Proposition  REF.]
+We first note that if FORMULA  and FORMULA , then FORMULA 
+and (REF ) is satisfied if and only if FORMULA 
+(and then actually FORMULA ).
+We may thus assume that either
+FORMULA 
+Set FORMULA . For given FORMULA , we compute, for FORMULA ,
+FORMULA 
+and also, factorizing by FORMULA ,
+FORMULA 
+Set
+FORMULA 
+and define
+FORMULA 
+where
+FORMULA 
+We then see that we may write
+FORMULA 
+We next claim that there exists (at least one) FORMULA  such that FORMULA .
+Indeed, setting
+FORMULA 
+we easily see that
+FORMULA  and FORMULA  for small FORMULA ,
+and the claim follows.
+Now pick any FORMULA  such that FORMULA . We will prove that
+FORMULA 
+a slightly stronger property than (REF ),
+which will in particular establish the existence part of Proposition REF .
+We first consider the case FORMULA  and set FORMULA .
+Let us rewrite
+FORMULA 
+This function is easier to handle than FORMULA  because its last two terms are affine
+and FORMULA  is convex.
+We claim that
+FORMULA 
+FORMULA  If FORMULA , then FORMULA .
+FORMULA  If FORMULA  and FORMULA , then FORMULA  and FORMULA .
+FORMULA  If FORMULA  (hence FORMULA ) and FORMULA  (hence FORMULA  and FORMULA ), then we may assume FORMULA  (see (REF )).
+We have FORMULA .
+Then necessarily FORMULA  (since FORMULA ).
+Thus FORMULA  and FORMULA .
+In either case, (REF ) is true. On the other hand, we also have
+FORMULA 
+(This is clear unless FORMULA  and FORMULA , but in that case FORMULA  due to (REF ),
+hence FORMULA  due to FORMULA .)
+Now, since FORMULA  is convex on FORMULA ,
+it follows from (REF ), (REF ) that FORMULA  has a unique zero on FORMULA .
+Consequently, FORMULA  is the unique zero of FORMULA  on FORMULA 
+and, by (REF ), (REF ) and (REF ), we deduce (REF ).
+If FORMULA , then FORMULA , which is monotonically
+increasing in FORMULA , and (REF ) is clear.
+The proof of the existence part is thus complete.
+Let us now suppose FORMULA  and show the uniqueness of FORMULA .
+Assume for contradiction that (REF ) is true for
+two distinct values of FORMULA , say FORMULA .
+Pick FORMULA . For FORMULA , since FORMULA  due to (REF ), it follows
+from what we already proved that (REF ) is true for FORMULA .
+In particular, FORMULA .
+Therefore FORMULA  and FORMULA , that is
+FORMULA  and FORMULA .
+Consequently FORMULA : a contradiction.
+Finally, suppose FORMULA  and assume for contradiction that FORMULA  (hence FORMULA ).
+Then FORMULA .
+It then follows from (REF ) that
+FORMULA 
+This contradiction shows that FORMULA .
+The proofs of FORMULA  and of the equalities are similar.
+In the end, we prove related lower bounds which we use in the proofs of Lemma REF 
+and Proposition REF .
+LEMMA 7.1  Assume (REF ).
+(i) Assume FORMULA  and FORMULA .
+Then the nonlinearities in the system (REF ) satisfy, for some FORMULA ,
+FORMULA 
+(ii) Assume FORMULA  and FORMULA . Then
+FORMULA 
+
+[Proof]
+(i) We use the same notation as in the above proof of
+Proposition REF .
+First note that FORMULA  since FORMULA  is negative and convex on FORMULA .
+Denoting
+FORMULA 
+we observe that FORMULA  on FORMULA  and that FORMULA  has
+positive limits as FORMULA  goes to FORMULA  or FORMULA  (using that FORMULA ).
+Hence, for all FORMULA , we have FORMULA  for some constant FORMULA .
+So,
+FORMULA 
+and we obtain
+FORMULA 
+Since
+FORMULA ,
+by using the inequality
+FORMULA 
+for FORMULA  and some FORMULA , we get
+FORMULA 
+(ii) Letting FORMULA , we have, for FORMULA ,
+FORMULA 
+We know from Proposition REF  that FORMULA  vanishes only at FORMULA .
+Since FORMULA , it is easy to see that
+FORMULA 
+where FORMULA .
+Therefore
+FORMULA 
+The assertion follows.

@@ -1,0 +1,1187 @@
+
+Asymptotic analysis by the saddle point method of the Anick-Mitra-Sondhi modelDiego Dominiciddomin1@uic.edu  and Charles
+Knesslknessl@uic.eduDepartment of Mathematics, Statistics and Computer Science University of Illinois at Chicago (M/C 249) 851 South Morgan Street Chicago, IL 60607-7045, USA2018/12/10 07:25:17We consider a fluid queue where the input process consists of FORMULA  identical
+sources that turn on and off at exponential waiting times.
+The server works at the constant rate FORMULA  and an on source generates
+fluid at unit rate. This model was first formulated and analyzed by Anick,
+Mitra and Sondhi in {{cite:bef8324e-13c4-45ed-a417-0f5d27fa93f8}}. We obtain an alternate representation
+of the joint steady state distribution of the buffer content and the number of
+on sources. This is given as a contour integral that we then analyze
+in the limit FORMULA  We give detailed asymptotic results for the
+joint distribution, as well as the associated marginal and conditional
+distributions. In particular, simple conditional limits laws are obtained.
+These shows how the buffer content behaves conditioned on the number of active
+sources and vice versa. Numerical comparisons show that our asymptotic results
+are very accurate even for  FORMULA
+Introduction
+In traditional queueing theory one usually considers a system with one or more
+servers, at which customers arrive to receive some kind of service. As all
+servers may be busy, the customers may have to wait for service in a queue.
+Since there is uncertainty about the actual arrival times of the customers
+and/or their service requirements, queues are typically modeled
+stochastically, as random processes.
+In the last twenty years, models have appeared in which a continuous quantity,
+referred to as a fluid, takes the role of the number of customers or
+queue length. In these models, fluid flows into a reservoir according to some
+stochastic process. The server may be viewed as a tap at the bottom of the
+reservoir, allowing fluid to flow out. The rate at which this happens is often
+constant, but may also be stochastic. Since the fluid reservoir takes the role
+of the traditional customer queue, it is often referred to as a fluid
+queue. A third term which is often encountered is fluid buffer,
+stressing the fact that the storage of fluid is temporary, to prevent loss of
+fluid at times when the input rate exceeds the output rate. Such models are
+used as approximations to discrete queuing models of manufacturing systems,
+high-speed data networks, transportation systems, in the theory of dams, etc.
+The distribution of the fluid level or buffer content, the average buffer
+content, the overflow probability (in case of a finite buffer) and the output
+process are the main quantities of interest in these fluid models.
+In the last decade, the literature on queueing theory has paid considerable
+attention to Markov-modulated fluid models {{cite:1605dcdf-a4e0-4575-9c73-02ce6bdea1e4}},
+{{cite:199532fc-0df7-46c0-8beb-c1e56f31b161}}. In these models, a fluid buffer is either filled or depleted, or
+both, at rates which are determined by the current state of a
+background Markov process, also called Markovian random
+environment.
+The Markov-modulated fluid model
+In this section we describe a general model of fluid entering and leaving a
+single buffer system {{cite:1ad6743d-e3b8-4e96-8dc7-59dd42e7af93}}. Let FORMULA  denote the amount of fluid
+at time FORMULA  in the buffer. Furthermore, let FORMULA  be a continuous-time Markov
+process. FORMULA  will be said to evolve “in the
+background”. We will assume that FORMULA  has a finite state
+space FORMULA  with FORMULA .
+The buffer content FORMULA  is regulated (or driven) by FORMULA  in such a way
+that the net input rate into the buffer (i.e., the rate of change of
+its content) is FORMULA . The function FORMULA  is called the drift function. When the buffer
+capacity is infinite, the dynamics of FORMULA  are given by
+FORMULA 
+The condition at FORMULA  ensures that the process FORMULA  does not become
+negative. When the buffer capacity is finite, say FORMULA  the dynamics are given
+by
+FORMULA 
+The condition at FORMULA  prevents the buffer content from exceeding  FORMULA
+One of the main reasons why Markov-modulated fluid models have attracted so
+much attention is that they are relevant for modelling telecommunications
+networks. In the literature, more attention has been paid to models in which
+the buffer capacity is infinitely large, because this case is easier to
+analyze. For most practical situations in telecommunications the infinite
+buffer case is a good approximation for the finite buffer case, since overflow
+of the buffer is assumed to be extremely rare. For highly loss-sensitive
+traffic, allowed loss fractions in the order of FORMULA  to FORMULA  are
+typical {{cite:6f2adfb0-4af8-4eb0-b51d-7551198dfbc5}}.
+Unlike classical queueing models which assume renewal arrivals, Markov
+modulated fluid models can capture autocorrelations in arrival processes. The
+continuous nature of the fluid also makes them more tractable analytically.
+Many results have been obtained for a variety of fluid queueing systems
+{{cite:74bae704-ad0f-4da6-a763-abb591b479b6}}, {{cite:5ac7d35b-22e3-4449-9648-7baf8a85586d}}, {{cite:07c04ed5-35ec-4e47-8efa-93d23958136f}},
+{{cite:880fc8fe-ff33-4061-8be4-86f97b00ee5a}}, {{cite:4087fb04-3f24-4e0c-8f7e-707f1e832665}}, {{cite:ec4877ff-bc4e-4106-b65b-c0705271cc41}}, {{cite:b1e8d7bc-c3c9-41fc-a3d4-c4d9d1764f53}}, {{cite:da6b28a5-995c-44fc-9800-c2aadbb6a70d}}, {{cite:8dad809a-c3ce-4cc7-aad1-f1c85d5d5b67}}, {{cite:441c6c4c-4ef2-4af1-aeb5-378556d12840}},
+{{cite:9b524ec3-7de1-4232-a364-4d504d0d7dbc}}, {{cite:1c83f03c-6457-4439-9713-b4e5283a3ee9}}.
+In many applications, the process FORMULA  evolves as a finite state
+birth-death process. Birth-death processes have wide applications in
+many practical problems {{cite:0436ba60-ccae-4893-8a27-5e5a68b52fc1}}. They can be regarded as continuous
+time analogs of random walks.
+The paper which has become the main reference for birth-death fluid models was
+written by Anick, Mitra and Sondhi {{cite:bef8324e-13c4-45ed-a417-0f5d27fa93f8}}. We shall refer to their
+model as the AMS model. The AMS model describes an infinitely large fluid
+buffer which is fed by FORMULA  identical exponential on-off
+sources and emptied by an output channel with constant capacity FORMULA  An
+on source turns off at rate 1 and an off source
+turns on at rate FORMULA  Thus, the net input is regulated by a
+specific birth-death process FORMULA  with state space FORMULA  birth rate
+FORMULA  death rate FORMULA  and drift
+function FORMULA  The rates are conditioned on  FORMULA
+In a way, the AMS model was a generalization of  the earlier model of Kosten
+{{cite:66f6fe60-4522-4d5f-81f7-c9f13bbccf18}}, {{cite:64db84a5-5412-474c-9461-264d6a8145f8}}, where the limiting case FORMULA  (with FORMULA  fixed) is considered.
+According to the authors in {{cite:bef8324e-13c4-45ed-a417-0f5d27fa93f8}}, their model and its variants
+had also been proposed in other previous papers {{cite:a175c827-5f30-4e3a-b17e-5ea54536c4fc}}, {{cite:d2582f96-0d84-44a5-a5e9-1c9133744b5c}},
+{{cite:5b9b60b5-98ff-46f4-a3e8-96aa518d4756}}.
+In {{cite:f9a31bab-f891-4732-945d-a4db9b20742a}}, Kosten generalizes the AMS model by considering the same
+problem for a Multi Group Finite Source (MGFS) system, consisting of
+FORMULA  groups of identical sources and a single shared buffer. In
+{{cite:e62a430b-9bd5-4dfa-b5ba-eb3fb4b2dfc0}} Kosten considers a central processor, working at uniform
+speed, that receives information at uniform rates from a number of sources and
+a buffer which stores the information that cannot be handled directly. He
+shows that the stationary probability of overflow FORMULA  satisfies FORMULA  as FORMULA  For fairly complex aggregates of
+sources, a method is developed (called the decomposition method) to determine
+the exponent FORMULA . The coefficient FORMULA  is determined by simulation.
+Daigle and Landford {{cite:8149b3bb-d681-4f75-b662-1c60710d6e70}} used the AMS model to study
+packet voice communication systems. Tucker {{cite:c7f778be-6a00-4487-b9c7-4e7a5919e087}} also used a similar
+model, but the server capacity was defined as an integer number of information
+units and the model had finite buffer size. Results on the buffer content
+distribution, cell loss and delay were given, along with simulation comparisons.
+The feature common to the above models is that they all assume a continuous
+time distribution for the on-off intervals. On the other hand, Li
+{{cite:5e309e7b-8037-457e-9aea-c8699b448ab2}} introduced a discrete time model with a finite number of
+on-off sources and geometric distributions for the on-off
+intervals. He assumed that in one time unit only one on-off source
+can change state. The channel capacity was assumed to be an integer number of
+sources and the buffer size could be either zero (burst switching-clipping
+case) or infinity (packet switching case).
+In {{cite:06ee9128-2c6d-4e57-918e-a0da949ab273}} Mitra shows how to deal with states FORMULA 
+for which FORMULA . He also generalizes the AMS model in two ways.
+Again, he considers a buffer which receives input from FORMULA  i.i.d. exponential
+sources, called producers. However, now the output is also assumed to be
+Markov-modulated, by FORMULA  i.i.d. exponential consumers. A second generalization
+is that he considers the case of finite buffer capacity.
+In the manufacturing literature Wijngaard {{cite:26c24917-4bc7-43b6-a5d9-1904acc86528}} has analyzed the
+model treated in {{cite:06ee9128-2c6d-4e57-918e-a0da949ab273}} for the case of one producing and one
+consuming machine. SevastFORMULA yanov {{cite:a1c4675b-343d-450a-a5db-76b3a75faf9e}} has given an
+innovative approximation for a production line model of many stages, which
+incorporates the exact solution of a pair of stages. All of this work assumes
+finite capacity buffers. Another extension of the AMS model is presented in
+{{cite:4da28b88-a766-4d18-8ca4-107949173b04}}, where the authors allow the possibility of two sources of
+input, one slow source of a fluid and another source that generates packets.
+Some birth-death fluid queues with finite FORMULA   have also been
+proposed as approximative models, when the modulating process in the original
+model is a multidimensional Markov chain, see {{cite:47eb3438-42a1-4f30-b2db-f926301e0e69}}. In
+{{cite:58b6abd9-76ba-4c52-9b20-a15c5b172549}} the authors allow the modulating process to be an arbitrary
+birth-death process on a finite state space, but require the drift function
+dFORMULA  to have a particular sign structure. An analysis without any
+restriction on the sign structure of the drift vector has been given in the
+survey paper {{cite:4ab20b7c-5250-4cdd-8e08-0eecf3c69ca4}}.
+Until recently, authors have mostly focused on stationary
+probabilities. The transient analysis of  stochastic fluid models, i.e., the
+analysis of the fluid distribution in the buffer at an arbitrary time FORMULA , is
+a complex and computationally intensive task. There are only a few papers
+dedicated to the transient behavior of fluid queues with Markov input. Narayan
+and Kulkarni {{cite:b2dc8f8f-8b1e-417b-b7d0-0e79bcf94b41}} derive explicit expressions for the Laplace
+transform of the joint distribution of the first time the buffer becomes empty
+and the state of the Markov process at that time.
+The Laplace transform has been often used to evaluate the transient behavior
+of fluid flow models. In {{cite:c9a399c8-4ce1-4a98-9989-fb6bce130ad4}} Ren and Kobayashi studied the
+transient distribution of the buffer content for the AMS model. The same
+authors deal with the case of multiple types of inputs in {{cite:781155dd-61a6-4f27-96ff-cc97203933c1}}. These
+studies have been extended to the Markov modulated input rate model by Tanaka,
+et. al., in {{cite:55c5e177-a62b-4b09-bf73-0183be2baf8b}}.
+Another approach to transient behavior is due to Sericola {{cite:cbe0b179-8aa9-440a-b9a5-7e413449bf9a}}.
+This leads to a numerically stable recursive method for computing transient
+and first passage distributions, and applies to general rate and drift functions.
+The equilibrium probability that the buffer content exceeds FORMULA  FORMULA  in the AMS model has been studied asymptotically, as
+FORMULA  by Weiss {{cite:06cb4243-c898-456e-8212-211dd0f6b8c3}} and Morrison
+{{cite:ffc44dd1-08a8-4a5d-8a5e-af018feb8c48}}. The exact expression in {{cite:bef8324e-13c4-45ed-a417-0f5d27fa93f8}} is convenient
+for calculating this probability for moderate values of FORMULA  However, when FORMULA 
+is large it is useful to have asymptotic approximations FORMULA
+Weiss {{cite:06cb4243-c898-456e-8212-211dd0f6b8c3}} (see also {{cite:19d72c3a-6599-40b5-b1f0-278f9dda27d1}}) analyzed the large FORMULA 
+asymptotics using the theory of large deviations. This yields an approximation
+of the form FORMULA  where FORMULA  is characterized as a solution of a
+variational problem. Overflow asymptotics of this type for more general
+Markov-modulated fluid models are derived in {{cite:000be805-935b-40cf-b47c-04fb5d93d18c}}. Duffield
+{{cite:5aef96f7-d0db-4126-bfbf-b4617461ff11}} considers time-dependent asymptotics for the overflow probability.
+Morrison {{cite:ffc44dd1-08a8-4a5d-8a5e-af018feb8c48}} investigated the AMS model starting from the exact
+expression in {{cite:bef8324e-13c4-45ed-a417-0f5d27fa93f8}}, using the Euler-Maclaurin formula. He
+constructed different asymptotic approximations to FORMULA  for the three scales FORMULA   and   FORMULA
+The heavy traffic analysis of the AMS model, where FORMULA  and
+FORMULA  was
+studied by Knessl and Morrison {{cite:239965fd-49a5-49f2-a7b3-e212d9a94858}}. In this limit, computing
+the joint steady-state distribution of the buffer content and the number of
+on sources can be reduced to solving a partial differential equation,
+which is forward parabolic in a part of the domain and backward parabolic in
+the remaining portion.
+In this paper we analyze the joint distribution of the buffer content and
+number of on sources in the AMS model asymptotically, as the number
+of sources FORMULA  Our results extend those obtained in
+{{cite:ffc44dd1-08a8-4a5d-8a5e-af018feb8c48}}.
+In Section 2 we describe the AMS model in more detail and in Section 3 we
+derive an integral representation of the solution, from which the spectral
+representation obtained by the authors in {{cite:bef8324e-13c4-45ed-a417-0f5d27fa93f8}} can be easily
+derived. In Sections 4-9 we obtain asymptotic expansions from the exact
+solution by using the saddle point method. We have to consider eleven relevant
+regions of the two-dimensional state space. In Section 10 we summarize our
+results and numerically compare our approximations with the exact solution. In
+Section 11 we analyze the conditional and marginal distributions.
+
+The Anick-Mitra-Sondhi (AMS) model
+In this model a data-handling switch receives messages from FORMULA  mutually
+independent sources, which independently and asynchronously alternate between
+on and off states. The on and off periods are exponentially distributed for each source. These two
+distributions, while not necessarily identical, are common to all sources.
+The unit of time is selected to be the average on period and the
+average off period is denoted by FORMULA . Thus, if we
+denote by On (Off) the random variables measuring the elapsed time a source is
+in the on (off) state, we have
+FORMULA 
+and
+FORMULA 
+An on source will generate packets of information at a uniform rate
+that we assume, without loss of generality, to be 1 packet per unit of time.
+While a source is off, it generates no packets. Thus, when FORMULA 
+sources are on simultaneously, the instantaneous receiving rate at
+the switch is FORMULA . The switch stores or buffers the incoming information that
+is in excess of the maximum transmission rate FORMULA  of an output channel (thus,
+FORMULA  is also the ratio of the output channel capacity to an on source's transmission rate). We assume that FORMULA  is not an integer.
+Let FORMULA  be the number of on sources at time FORMULA , and FORMULA  be
+the buffer content. As long as the buffer is not empty, the instantaneous rate
+of change of the buffer content is FORMULA . Once the buffer is empty, it
+remains so as long as FORMULA . We assume that the buffer capacity is
+infinite, so we need the following stability condition
+FORMULA 
+to ensure the existence of a steady state distribution. Note that FORMULA 
+implies that the buffer may be non-empty and FORMULA 
+means that the output rate exceeds the average input rate.
+Here we consider only the equilibrium probabilities, defined by
+FORMULA 
+The balance equations are {{cite:bef8324e-13c4-45ed-a417-0f5d27fa93f8}}
+FORMULA 
+with
+FORMULA 
+Moreover, if the number of sources on at any time exceeds FORMULA , then
+the buffer content increases and the buffer cannot stay empty. Hence,
+FORMULA 
+Also,
+FORMULA 
+since FORMULA  is the probability that FORMULA  out of FORMULA  sources are
+on simultaneously and from (REF ) this follows a binomial
+distribution with parameter FORMULA .
+In {{cite:bef8324e-13c4-45ed-a417-0f5d27fa93f8}} Anick, Mitra and Sondhi derived the spectral
+representation of the solution to (REF )-(REF ). They wrote the
+equation (REF ) in matrix form
+FORMULA 
+where
+FORMULA 
+FORMULA  is an FORMULA  diagonal
+matrix with entries
+FORMULA 
+and FORMULA  is an FORMULA 
+tridiagonal matrix with entries
+FORMULA 
+Using (REF ), they represented the solution FORMULA 
+as
+FORMULA 
+where FORMULA  is a negative eigenvalue and FORMULA  is the
+associated right eigenvector of the matrix  FORMULA
+FORMULA 
+They showed that (REF ) and (REF ) imply conditions on the
+derivatives of FORMULA  at  FORMULA
+FORMULA 
+From (REF ) they found the coefficients FORMULA  in (REF )
+with the help of Vandermonde determinants. Asymptotic and numerical results
+for the overflow probability of a predefined buffer backlog were also presented.
+
+Exact solution
+Here we shall solve the problem (REF )-(REF ) by a different method
+than that used in {{cite:bef8324e-13c4-45ed-a417-0f5d27fa93f8}}. This will lead to an alternate form of
+the solution that shall prove useful for asymptotic analysis.
+Looking for a solution to (REF ) of the form
+FORMULA 
+we get the following difference equation for  FORMULA
+FORMULA 
+To solve (REF ) we represent FORMULA  as an integral
+FORMULA 
+where FORMULA  is an small loop around the origin in the complex plane
+and FORMULA  is an analytic function of FORMULA  inside FORMULA . Using
+(REF ) in (REF ) and integrating by parts gives an ODE for
+ FORMULA
+FORMULA 
+whose solution is
+FORMULA 
+with
+FORMULA 
+FORMULA 
+Using the binomial theorem we can also represent FORMULA  as
+FORMULA 
+which shows that FORMULA  is a polynomial in FORMULA  of degree  FORMULA
+FORMULA 
+
+The polynomials FORMULA  are related to the Krawtchouk polynomials
+{{cite:d37f367a-d9ef-4abf-9ba1-ef1248d49c80}}. The functions FORMULA  are entire (polynomial)
+functions of FORMULA  that may be computed from (REF ).
+Since FORMULA  is analytic inside FORMULA , we have
+FORMULA 
+Imposing the boundary condition (REF ) yields FORMULA  for
+FORMULA  Thus,
+FORMULA 
+and therefore FORMULA  must be a polynomial in FORMULA  of degree FORMULA . In
+view of (REF ) we must have
+FORMULA 
+which gives the equation for the eigenvalues FORMULA  Since from
+(REF ) we need FORMULA  FORMULA  for FORMULA  we consider only the negative eigenvalues. Solving for FORMULA 
+in (REF ) we get
+FORMULA 
+where
+FORMULA 
+and
+FORMULA 
+with FORMULA  from (REF ). Combining the above results and using
+(REF ), we find the spectral representation of the solution
+FORMULA 
+where the constants FORMULA  are to be determined. To find FORMULA  we employ
+arguments different from those in {{cite:bef8324e-13c4-45ed-a417-0f5d27fa93f8}} FORMULA
+Taking the Laplace transform
+FORMULA 
+in (REF ) and using the boundary conditions (REF ) for
+FORMULA  gives
+FORMULA 
+Equation (REF ) has two independent solutions, FORMULA 
+and FORMULA  with FORMULA  given by (REF ) and
+FORMULA 
+where FORMULA  is a small loop around the origin and
+FORMULA 
+Using the binomial theorem we get from (REF )
+FORMULA 
+From (REF ) we have
+FORMULA 
+
+where the FORMULA  are polynomials that can be identified
+from (REF ) using (REF ) and (REF ). Therefore, the general
+solution to (REF ) is given by
+FORMULA 
+with FORMULA  FORMULA  still undetermined.
+We note that FORMULA  and FORMULA  are entire functions of
+FORMULA  Since FORMULA  but FORMULA  we see from (REF ) that we need FORMULA  so that
+FORMULA 
+Taking the Laplace transform in (REF ) yields
+FORMULA 
+from which we see that the only singularities of FORMULA 
+are simple poles at FORMULA   and  FORMULA   Since FORMULA  is entire,
+FORMULA  must have poles at these points also. We thus rewrite
+(REF ) as
+FORMULA 
+where FORMULA  is an entire function. Using the inversion formula, we
+can represent  FORMULA   in the form
+FORMULA 
+where FORMULA  is a vertical contour on which FORMULA .  From (REF ) the residue of FORMULA  at  FORMULA   is equal to
+FORMULA 
+and from (REF ) we know that
+FORMULA 
+which implies that
+FORMULA 
+Thus, from (REF ), we get
+FORMULA 
+We determine FORMULA  by examining the limit FORMULA , which correspond to considering the boundary condition at  FORMULA
+From (REF ) and (REF ) we can easily obtain the asymptotic expressions
+FORMULA 
+
+Setting FORMULA  in (REF ) and using (REF ) yields
+FORMULA 
+
+We also have
+FORMULA 
+Combining (REF ) and (REF ) we get
+FORMULA 
+Since (REF ) implies that
+FORMULA 
+we obtain
+FORMULA 
+Setting FORMULA  we see that FORMULA  is an
+entire function that is FORMULA  as FORMULA  By the generalized Liouville theorem {{cite:6e2dcdee-154d-4290-a8ea-668c142bff85}},
+FORMULA  must be a constant
+FORMULA 
+Therefore we can write
+FORMULA 
+Closing FORMULA  in the half-plane FORMULA  we recover the spectral representation
+FORMULA 
+with
+FORMULA 
+In conclusion, we have proved the following theorem.
+Theorem 1 The solution of (REF )-(REF ) is given by
+FORMULA 
+where FORMULA  is a vertical contour on which  FORMULA
+FORMULA 
+FORMULA   is a small loop around the origin in the complex FORMULA plane
+FORMULA 
+FORMULA 
+FORMULA 
+FORMULA 
+and
+FORMULA 
+
+We have thus re-derived, using different arguments, the spectral
+representation
+FORMULA 
+obtained by the authors in {{cite:bef8324e-13c4-45ed-a417-0f5d27fa93f8}}. We also derived the integral
+representation (REF ) that will prove more useful than (REF ) for asymptotic analysis. We note that the coefficients in the sum in
+(REF ) alternate in sign and this makes it very difficult to obtain
+asymptotic results for FORMULA  from the spectral representation.
+We study asymptotic properties of FORMULA  as FORMULA  for
+various ranges of FORMULA  and FORMULA  We shall use (REF ), approximate the
+integrand for FORMULA  large and then evaluate the integral over FORMULA 
+asymptotically. We will introduce the scaled variables FORMULA  and consider the limit
+FORMULA  with FORMULA  and FORMULA  fixed. In Section  we
+will derive asymptotic approximations to FORMULA  that are valid in most of
+the strip FORMULA  with the exception of a few boundary regions and one curve
+in FORMULA  (the interior of FORMULA These
+other ranges are considered in Sections  -
+.
+
+The main approximation
+We first evaluate the product in (REF ) for FORMULA .
+Lemma 2 Let
+FORMULA 
+Then, for  FORMULA and a fixed FORMULA  we have
+FORMULA 
+with
+FORMULA 
+and
+FORMULA 
+FORMULA 
+We note from (REF ) that  FORMULA
+
+Proof. Since we assumed that FORMULA  is not an integer, we introduce the fractional part
+of FORMULA  defined by
+FORMULA 
+which allows us to write FORMULA  as FORMULA  Since
+FORMULA 
+we can apply the Euler-Maclaurin formula {{cite:8b29e1c8-c9c1-4331-834f-a9f75296db85}} to get
+FORMULA 
+
+Changing variables from FORMULA  to FORMULA  we obtain
+FORMULA 
+with
+FORMULA 
+If we denote the indefinite integral in (REF ) by
+FORMULA 
+then we have, as  FORMULA
+FORMULA 
+where FORMULA  means FORMULA . From (REF ) we get
+FORMULA 
+with
+FORMULA 
+Therefore,
+FORMULA 
+To find FORMULA  we use integration by parts
+FORMULA 
+Since (REF ) implies that FORMULA  we can write
+(REF ) as
+FORMULA 
+or, changing the integrating variable from FORMULA  to  FORMULA
+FORMULA 
+FORMULA 
+FORMULA 
+
+The first integral in (REF ) is
+FORMULA 
+The second integral in (REF ) is quite complicated and after some
+calculation we find that
+FORMULA 
+Hence,
+FORMULA 
+with
+FORMULA 
+As FORMULA  we have
+FORMULA 
+and taking (REF ) into account we get
+FORMULA 
+Using (REF ) in (REF ) we have
+FORMULA 
+From (REF ) and (REF ) we get
+FORMULA 
+
+Combining these results in (REF ) yields
+FORMULA 
+FORMULA 
+From (REF ) we see that as  FORMULA
+FORMULA 
+Therefore, we conclude that
+FORMULA 
+Exponentiating this yields the formula for FORMULA .
+ 
+We note from (REF ) that
+FORMULA 
+and that FORMULA  has a branch point singularity at
+ FORMULA
+We evaluate next FORMULA  in (REF ) for FORMULA 
+and FORMULA  with FORMULA  fixed. We introduce the new variables
+FORMULA 
+and consider the asymptotic approximation to FORMULA  inside the domain
+FORMULA 
+Writing FORMULA  in terms of FORMULA  we have
+FORMULA 
+
+with
+FORMULA 
+We first assume that FORMULA  and compute the integral (REF ) as
+FORMULA  by the saddle point method {{cite:228458e8-31ea-4b25-95a4-edc130ef01a3}}. Thus, we
+locate the saddle points FORMULA  by solving the equation
+FORMULA 
+or
+FORMULA 
+and find two saddle points FORMULA  and
+FORMULA  defined by
+FORMULA 
+with
+FORMULA 
+We next study the motion of the saddle points FORMULA  and also the branch points FORMULA  and
+FORMULA  of FORMULA  as FORMULA 
+decreases from FORMULA  to FORMULA  with FORMULA  First we observe
+from (REF ) that for all real FORMULA  FORMULA and
+FORMULA  and thus
+FORMULA 
+For large FORMULA  we have
+FORMULA 
+and hence for all  FORMULA
+FORMULA 
+When FORMULA  the branch point FORMULA  coalesces
+with the saddle point  FORMULA
+FORMULA 
+and we get
+FORMULA 
+For FORMULA  the saddle point FORMULA  moves to the right of
+the branch point  FORMULA
+FORMULA 
+Finally, when FORMULA  with FORMULA 
+the branch point FORMULA  coalesces with the saddle point
+ FORMULA
+FORMULA 
+and we have
+FORMULA 
+Note that when FORMULA  where
+FORMULA 
+the discriminant FORMULA  vanishes and the saddle points coalesce.
+Thus,
+FORMULA 
+Furthermore,
+FORMULA 
+since
+FORMULA 
+Hence, FORMULA  has a double zero at  FORMULA
+From (REF )-(REF ) we conclude that for FORMULA 
+with FORMULA  we must deform the contour FORMULA  to the steepest
+descent contour through the saddle FORMULA  and therefore
+FORMULA 
+Note that the steepest descent directions at FORMULA  are FORMULA  and we can shift FORMULA  into another
+circle that goes through this saddle point.
+Using (REF ) and (REF ) we find that
+FORMULA 
+with
+FORMULA 
+FORMULA 
+ FORMULA
+Using (REF ) and (REF ) in (REF ) we have
+FORMULA 
+
+To compute the above integral as FORMULA  we shall again use the
+saddle point method. We obtain FORMULA  with
+FORMULA 
+
+where
+FORMULA 
+and FORMULA  is defined to be the solution of the equation
+FORMULA 
+where we have used
+FORMULA 
+For each value of FORMULA  (REF ) defines implicitly a curve in the
+FORMULA -plane.
+Since (REF ) has a pole at FORMULA  (REF ) is only valid if FORMULA 
+and FORMULA  are such that FORMULA  i.e., the saddle lies to the right of the
+pole. Then FORMULA  can be deformed to the steepest descent contour
+through FORMULA  We also note that when FORMULA  (REF ) is
+singular. We shall find an asymptotic approximation valid when the saddle is
+close to FORMULA  in Section . From (REF ) we see
+that FORMULA  corresponds to the curve
+FORMULA 
+For FORMULA  the saddle point FORMULA  lies on the negative real axis, to
+the left of the pole at FORMULA  We re-write (REF ) as
+FORMULA 
+where FORMULA  on FORMULA  Note
+that the residue at  FORMULA  was already calculated in (REF ) and
+corresponds to FORMULA . Using (REF ) and (REF ) in
+(REF ) and approximating the integral by the saddle point method,
+we obtain
+FORMULA 
+with FORMULA  and FORMULA  defined by (REF ) and
+(REF ) respectively.
+From (REF ) we find that the value FORMULA  corresponds to
+the curve
+FORMULA 
+Our approximation to the integral in (REF ) assumed that FORMULA  However, (REF ) passes smoothly through the curve
+FORMULA  since from (REF ) we have
+FORMULA 
+The discriminant FORMULA  vanishes when
+FORMULA 
+where FORMULA  was defined in (REF ). But, as we
+showed in (REF ), the derivative of the discriminant also vanishes
+along the curve FORMULA  so that (REF ) can be smoothly
+continued through this curve by simply replacing FORMULA  by  FORMULA
+We summarize our results below.
+FIGURE 
+Theorem 3 Defining FORMULA  and FORMULA  for
+FORMULA  we have
+
+
+FORMULA 
+FORMULA 
+FORMULA 
+where
+FORMULA 
+FORMULA 
+FORMULA 
+FORMULA 
+and FORMULA  is defined to be the solution of the equation
+FORMULA 
+FORMULA 
+
+
+FORMULA 
+FORMULA 
+with
+FORMULA 
+FORMULA 
+
+
+FORMULA 
+FORMULA 
+where
+FORMULA 
+
+and FORMULA  is defined to be the solution of the equation
+FORMULA 
+
+
+The three regions FORMULA  are sketched in Figure REF .
+Note that as we pass from FORMULA  to FORMULA  there is a
+“phase transition” in the asymptotics.
+However, the solution is smooth as we pass from FORMULA  to
+ FORMULA
+Theorem REF  ceases to be valid along the curve FORMULA  because the function FORMULA  is singular
+there. We shall find a corner layer solution near the point FORMULA  in
+Section , a transition layer solution along FORMULA  in Section  and a corner layer solution
+near the point FORMULA  in Section REF .
+From (REF ) we have
+FORMULA 
+
+and from (REF ) we get
+FORMULA 
+
+Hence,
+FORMULA 
+
+and our approximation develops singularities as FORMULA  and
+FORMULA  which corresponds to FORMULA  and FORMULA  We shall
+find a boundary layer solution near FORMULA  in Section  and a
+boundary layer solution near FORMULA  in Section . In these
+cases we will need to re-examine the expansion of (REF ).
+Finally, from (REF ) we see that FORMULA  as
+FORMULA if FORMULA  We shall find a boundary layer approximation
+near FORMULA  with FORMULA  in Section . To analyze the case
+of small FORMULA  we will need an expansion of FORMULA  in Lemma REF 
+valid for FORMULA  large. Note that Theorem REF  does apply for
+FORMULA  as long as FORMULA  In this range we can show that
+FORMULA  in (REF ) remains finite. In particular, the boundary
+masses FORMULA  for FORMULA  with FORMULA  can be computed by setting
+FORMULA  in (REF ). We also note that in this range FORMULA  and the exponentially small (as FORMULA 
+difference can be estimated from (REF ).
+
+The corner layer at FORMULA  (Region I)
+ FORMULA
+We next consider the vicinity of the corner point FORMULA  We first
+evaluate the product FORMULA  for FORMULA  and
+ FORMULA
+Lemma 4 Let FORMULA  and
+FORMULA 
+Then FORMULA  as FORMULA  where
+FORMULA 
+
+Here FORMULA  is the Gamma function, FORMULA  is the fractional part of FORMULA , FORMULA  and  FORMULA
+
+Proof. We write
+FORMULA 
+FORMULA 
+Changing index from FORMULA  to FORMULA  and defining
+FORMULA 
+we have
+FORMULA 
+FORMULA 
+
+We evaluate individually the three products in (REF ) beginning
+with  FORMULA
+Setting FORMULA  and using the Euler-MacLaurin summation
+formula, we have
+FORMULA 
+
+Changing variables to FORMULA  , we
+get
+FORMULA 
+
+Defining
+FORMULA 
+we have
+FORMULA 
+From (REF ) we have
+FORMULA 
+and evaluating this at  FORMULA  we get
+FORMULA 
+After some calculations, we find that
+FORMULA 
+
+where
+FORMULA 
+From (REF ) we obtain
+FORMULA 
+and
+FORMULA 
+Thus,
+FORMULA 
+and we have
+FORMULA 
+From (REF ) and (REF ) we get
+FORMULA 
+
+Therefore we conclude that
+FORMULA 
+
+and then
+FORMULA 
+We next consider the second product in (REF ). Using properties of
+Gamma functions {{cite:51bd8204-33f3-4da1-8635-9a38e4e88020}} we have
+FORMULA 
+and Stirling's formula {{cite:01e57284-ec8f-48e6-a50b-786478e1c5ae}} gives
+FORMULA 
+Finally we determine the asymptotic approximation to FORMULA  The
+Euler-MacLaurin summation formula yields
+FORMULA 
+FORMULA 
+Changing variables in the integral in (REF ) from FORMULA  to FORMULA  we have
+FORMULA 
+FORMULA 
+We write (REF ) as the difference of two integrals
+FORMULA 
+FORMULA 
+The first integral in (REF ) is easily evaluated as FORMULA  to give
+FORMULA 
+FORMULA  FORMULA Introducing the function
+FORMULA 
+in (REF ) and using (REF ) we have
+FORMULA 
+After some work we find that
+FORMULA 
+with
+FORMULA 
+From (REF ) we have, as  FORMULA
+FORMULA 
+
+and
+FORMULA 
+We conclude that
+FORMULA 
+Finally we compute the remaining part of (REF )
+FORMULA 
+
+Hence,
+FORMULA 
+Combining (REF ), (REF ) and (REF ) we obtain
+FORMULA 
+as in (REF ).
+ 
+Next, we shall analyze the function FORMULA  for FORMULA  and FORMULA  close to the corner FORMULA  To do so,
+we introduce the new variable FORMULA  defined by
+FORMULA 
+and the new function FORMULA  From (REF ) and
+(REF ) we have
+FORMULA 
+Using (REF ) we see that as FORMULA  the branch points are
+located at
+FORMULA 
+and that, for FORMULA  with FORMULA  and FORMULA  fixed,
+FORMULA 
+
+Therefore, we replace the contour FORMULA  in (REF ) by a Hankel's
+loop and use (REF ) to obtain
+FORMULA 
+
+where FORMULA  begins at FORMULA  encircles FORMULA  once in a positive
+sense and returns to its starting point. We assume that the branch of
+FORMULA  takes its principal value at the point where
+the contour crosses the positive real axis and is continuous everywhere,
+except for FORMULA  real and negative {{cite:a4e46849-e749-443e-8ec7-1eb6d5fe1ed9}}.
+Introducing the new variable FORMULA  with
+FORMULA 
+we get
+FORMULA 
+
+where FORMULA  is another Hankel contour of the same shape as
+FORMULA  Using an integral representation of the Bessel function
+FORMULA  {{cite:24fc6911-5244-4982-ad1c-77b8a53c79b7}} we obtain
+FORMULA 
+Using (REF ) and (REF ) we obtain the following theorem.
+Theorem 5  Let FORMULA  and FORMULA  Then
+FORMULA  as FORMULA  where
+FORMULA 
+
+FORMULA  is a vertical contour in the complex plane with
+FORMULA  FORMULA  is the Bessel function,
+FORMULA  is the Gamma function ,
+FORMULA 
+and
+FORMULA 
+
+
+The transition layer atFORMULA  (Region II)
+As we observed previously in Section , the approximation
+(REF ) is not valid along the curve FORMULA  given by
+FORMULA 
+The condition FORMULA  corresponds to the saddle FORMULA  being
+close to the pole at FORMULA  in (REF ). To obtain the expansion
+of (REF ) for FORMULA  we first approximate the integrand in
+(REF ) for small FORMULA  using
+FORMULA 
+FORMULA 
+FORMULA 
+FORMULA 
+Using the above in (REF ) yields
+FORMULA 
+with FORMULA  given by (REF ). Changing variables to
+FORMULA 
+we obtain {{cite:372734d7-9ba6-4500-989c-2536d7c805a2}}
+FORMULA 
+
+where FORMULA  is another vertical contour, on which
+FORMULA  Therefore,
+FORMULA 
+This is valid for FORMULA  with
+FORMULA  and gives the transition between regions FORMULA  and
+FORMULA  in Theorem REF .
+
+The boundary FORMULA  (Region III)
+ FORMULA
+We shall next analyze the part of FORMULA  corresponding to
+FORMULA  We start by proving the following lemma.
+Lemma 6 Let FORMULA  Then as  FORMULA
+FORMULA 
+where FORMULA  is defined in (REF ).
+
+Proof. From (REF ) we have for FORMULA  with  FORMULA
+FORMULA 
+We replace FORMULA  by FORMULA  and
+change variables from FORMULA  to FORMULA  in (REF ) to get
+FORMULA 
+Using (REF ) we have
+FORMULA 
+which evaluates to give (REF ).
+ 
+Writing (REF ) as
+FORMULA 
+and using (REF ) and (REF ) we have
+FORMULA 
+Use of the saddle point method yields
+FORMULA 
+where
+FORMULA 
+and FORMULA  is the solution to the equation
+FORMULA 
+We note from (REF ) that
+FORMULA 
+
+and thus we shall limit FORMULA  to the range FORMULA  in (REF ). Expansion (REF ) remains valid
+for FORMULA  and can be used to evaluate FORMULA  for
+ FORMULA
+
+The boundary FORMULA   FORMULA
+We examine the scale FORMULA  which corresponds to FORMULA  The
+analysis is different for three ranges of  FORMULA
+The boundary layer at FORMULA  (Region IV)
+ FORMULA
+Lemma 7 Let  FORMULA  Then, as  FORMULA
+FORMULA 
+
+Proof. From (REF ) we have
+FORMULA 
+Changing variables to FORMULA  we get
+FORMULA 
+FORMULA 
+where FORMULA  is a small loop around
+FORMULA  Hence, the result follows by expanding FORMULA  in Taylor series.
+ 
+Using (REF ) and (REF ) in (REF ) we have
+FORMULA 
+We evaluate the integral above for FORMULA  by the saddle point
+method and obtain
+FORMULA 
+
+where FORMULA  is the solution to
+FORMULA 
+
+The corner layer at FORMULA  (Region V)
+
+From (REF ) we see thatFORMULA   as
+ FORMULA  Therefore, we shall find a solution valid in the
+neighborhood of the point FORMULA  From (REF )
+we have as FORMULA  with  FORMULA
+FORMULA 
+and from (REF ) we get
+FORMULA 
+
+Using (REF ) and the above in (REF ) we obtain
+FORMULA 
+Defining
+FORMULA 
+we obtain, for FORMULA  and  FORMULA
+FORMULA 
+
+The boundary layer at FORMULA  (Region VI)
+We shall examine the portion of the boundary  FORMULA  for FORMULA  To do
+so, we write FORMULA  as
+FORMULA 
+and, repeating the same calculation done in Section , we conclude
+that
+FORMULA 
+
+The boundary  FORMULA   FORMULA
+In this Section we analyze the part of the boundary where the boundary
+condition (REF ) applies. Theorem REF  is not valid for small
+FORMULA  since for FORMULA  the saddle FORMULA  as
+FORMULA  but our approximation to the integrand in (REF )
+was only valid for FORMULA  We will scale FORMULA  and use Lemma
+REF , which applies for FORMULA  We note that
+FORMULA  We will need to examine separately the cases FORMULA  and
+ FORMULA
+The boundary layer at FORMULA  (Region VII)
+Lemma 8 Let  FORMULA  Then,
+FORMULA 
+
+Proof. Changing variables in (REF ) from FORMULA  to  FORMULA  we have
+FORMULA 
+FORMULA 
+
+Use of the saddle point method gives, for FORMULA  with FORMULA  and
+FORMULA  fixed,
+FORMULA 
+
+where the saddle point is located at
+FORMULA 
+ 
+Using (REF ) and (REF ) in (REF ), we get
+FORMULA 
+where FORMULA  is a vertical contour on which FORMULA  Computing the integral in (REF ) as FORMULA  by the
+saddle point method, we find that the integrand has a saddle at
+FORMULA 
+and hence the leading term for (REF ) is
+FORMULA 
+After some simplification we get
+FORMULA 
+Note that (REF ) is singular as FORMULA  We can show that
+if we expand (REF ) as FORMULA  with FORMULA  fixed, the result asymptotically matches to he corner layer
+approximation in Theorem REF . The latter must be expanded for
+FORMULA  with FORMULA  fixed.
+
+The corner layer at FORMULA  (Region VIII)
+When FORMULA  (REF ) becomes singular. Therefore, we shall find
+an approximation to  FORMULA   close to the point FORMULA  We first
+observe that when
+FORMULA 
+we obtain from (REF ), by a calculation similar to that in the proof of
+Lemma REF ,
+FORMULA 
+Using (REF ) and (REF ) in (REF ) we have
+FORMULA 
+
+Using the saddle point method we find that the integrand of (REF ) has a
+saddle at
+FORMULA 
+where FORMULA  was defined in (REF ). Hence, to leading order,
+we obtain
+FORMULA 
+
+Note that from (REF ) and (REF ) we have
+FORMULA 
+and thus we recover the result found in {{cite:bef8324e-13c4-45ed-a417-0f5d27fa93f8}} (equation (38)
+therein), that
+FORMULA 
+
+Summary and numerical studies
+In most of the strip FORMULA  the asymptotic expansion of FORMULA  is given by Theorem
+REF . Below we summarize our results for the various boundary,
+corner and transition layer regions, where Theorem REF  does not
+apply. The paragraph number refers to the corresponding region (see Figure
+REF ).
+FIGURE 
+Theorem 9 As FORMULA , asymptotic approximations of the joint distribution
+FORMULA  are as follows.
+
+FORMULA  and FORMULA  FORMULA  as FORMULA  where
+FORMULA 
+
+FORMULA  is a vertical contour in the complex plane with
+FORMULA  FORMULA  is the Bessel function,
+FORMULA  is the Gamma function ,
+FORMULA 
+and
+FORMULA 
+
+ FORMULA
+FORMULA 
+with
+FORMULA 
+FORMULA 
+FORMULA 
+FORMULA 
+
+ FORMULA
+FORMULA 
+where
+FORMULA 
+and FORMULA  is the solution to the equation
+FORMULA 
+
+ FORMULA
+FORMULA 
+
+where FORMULA  is the solution to
+FORMULA 
+
+ FORMULA
+FORMULA 
+with
+FORMULA 
+
+ FORMULA
+FORMULA 
+where FORMULA  is as in item IV.
+
+ FORMULA
+FORMULA 
+
+ FORMULA
+FORMULA 
+
+
+From (REF ) we see that the continuous part of the density (for FORMULA 
+is given by
+FORMULA 
+Therefore, we can approximate the density by multiplying the asymptotic
+approximations by the corresponding saddle point:
+FORMULA 
+
+Here the right sides are the expansions valid in the various regions.
+We compare our asymptotic approximations to the density with the exact results
+obtained by evaluating (REF ). We use FORMULA and
+FORMULA  In Figure REF  we graph FORMULA  and the
+asymptotic approximation FORMULA , for FORMULA  We note that the
+asymptotics predict that the maximum value will be achieved at  FORMULA
+FIGURE 
+In Figure REF  we graph FORMULA  and the asymptotic
+approximation FORMULA  We note that the maximum is now achieved
+at FORMULA  which is consistent with the asymptotic analysis.
+FIGURE 
+In Figure REF  we graph FORMULA  and FORMULA  This shows the importance of treating
+Region III.
+FIGURE 
+In Figure REF  we graph FORMULA  and
+FORMULA  the latter being the boundary
+layer approximation to the density at  FORMULA
+FIGURE 
+In Figure REF  we graph FORMULA  and
+FORMULA  with FORMULA  We see how
+the asymptotic approximation breaks down for FORMULA  and for
+FORMULA  (it does not apply for FORMULA ).
+FIGURE 
+In REF  we graph FORMULA  and the asymptotic approximations
+FORMULA  and FORMULA  with FORMULA  To show in more
+detail the different ranges, in Table 1 we compare the exact value of the
+density with the approximations given by FORMULA  and
+FORMULA , for FORMULA  (FORMULA ) with FORMULA  In Table 2
+we compare FORMULA  with the approximations given by FORMULA  and FORMULA , for FORMULA  (FORMULA ) with FORMULA . We note that for our choice of parameters FORMULA  and
+FORMULA  Also, when FORMULA , the equation FORMULA 
+has the solution FORMULA , so that the transition between FORMULA  and FORMULA  occurs at FORMULA .
+FIGURE 
+TABLE 
+TABLE 
+
+Conditional limit laws
+In this section we will study the probability of FORMULA  sources being
+on, given that the buffer content is equal to FORMULA  and the
+probability of the buffer having some non-zero content FORMULA , given that FORMULA 
+sources are on, for various ranges of FORMULA  and  FORMULA
+The distribution of active sources conditioned on  FORMULA
+We define
+FORMULA 
+FORMULA 
+and the conditional probabilities
+FORMULA 
+FORMULA 
+Note that
+FORMULA 
+We first consider FORMULA  In this range we compute FORMULA  using the
+approximation in  FORMULA
+FORMULA 
+
+The main contribution to the integral comes from near FORMULA  and by
+Laplace's method we have
+FORMULA 
+
+since
+FORMULA 
+FORMULA 
+and
+FORMULA 
+Therefore,
+FORMULA 
+
+and expanding this for FORMULA  yields the Gaussian form
+FORMULA 
+
+with FORMULA  This means that given a
+buffer size FORMULA  the most likely number of active sources will be
+FORMULA  with a Gaussian spread whose variance is obtained by solving
+(REF ) with FORMULA  This is also illustrated in Figure
+REF .
+Next we assume a small buffer size, with FORMULA  Again the main
+contribution to the sum (REF ) comes from FORMULA  but for FORMULA 
+we must use the Region I approximation FORMULA  Thus,
+FORMULA 
+
+which we can write as a residue series
+FORMULA 
+
+where we have used
+FORMULA 
+Using the generating function {{cite:24fc6911-5244-4982-ad1c-77b8a53c79b7}}
+FORMULA 
+in (REF ) we obtain
+FORMULA 
+and thus
+FORMULA 
+
+It follows that
+FORMULA 
+FORMULA 
+which is a discrete distribution in  FORMULA
+
+The buffer density conditioned on  FORMULA
+We first consider FORMULA  In this range FORMULA  and from
+(REF ) we have FORMULA  We have
+FORMULA 
+so that the maximum of the density occurs at FORMULA  which corresponds to
+the transition curve
+FORMULA 
+Therefore, we shall use the approximate solution FORMULA  since Region
+II corresponds to FORMULA  From (REF ) we get, for  FORMULA
+FORMULA 
+FORMULA 
+From (REF ) we obtain
+FORMULA 
+and we conclude that
+FORMULA 
+with FORMULA  This shows that if the
+number of active sources exceeds the service rate, the buffer content is
+likely to be large, approximately FORMULA  and with a Gaussian spread
+proportional to FORMULA  (see also Figure REF ). While this
+calculation assumed that FORMULA  we can show that the result remains
+valid for  FORMULA
+Next we consider the range FORMULA  We use the asymptotic
+approximation FORMULA  or
+FORMULA 
+
+From (REF ) we have
+FORMULA 
+Hence,
+FORMULA 
+
+and as  FORMULA
+FORMULA 
+
+This shows that if the number of on sources is less than the service
+rate FORMULA  and the buffer is not empty, the conditional density is approximately
+exponential in FORMULA  with mean FORMULA  This exponential
+shape is also illustrated in Figure REF .
+Finally, we consider the case FORMULA  We shall again use the
+approximation in Region I and from (REF ) we get
+FORMULA 
+
+Therefore,
+FORMULA 
+FORMULA 
+which is a density in FORMULA  consisting of an infinite mixture of exponentials.
+
+Acknowledgement
+The work of C. Knessl was partially supported by NSF Grants DMS 99-71656,
+DMS 02-02815 and NSA Grant MDA 904-03-1-0036. The work of D. Dominici was
+supported in part by NSF Grant 99-73231, provided by Professor Floyd Hanson.
+We wish to thank him for his generous sponsorship.

@@ -1,0 +1,396 @@
+
+Nature of HFORMULA  selected galaxies . I.
+Tadaki et al.
+Nature of HFORMULA  selected galaxies at FORMULA . I. Main sequence and dusty star-forming galaxies
+Ken-ichi Tadaki1, Tadayuki Kodama1,2, Ichi Tanaka3, Masao Hayashi4, Yusei Koyama1
+tadaki.ken@nao.ac.jp
+Rhythm Shimakawa2
+1Optical and Infrared Astronomy Division, National Astronomical Observatory of Japan, Mitaka, Tokyo 181-8588, Japan
+2Department of Astronomical Science, The Graduate University for Advanced Studies, Mitaka, Tokyo 181-8588, Japan
+3Subaru Telescope, National Astronomical Observatory of Japan, 650 North A'ohoku Place, Hilo, HI 96720, USA
+4Institute for Cosmic Ray Research, The University of Tokyo, 5-1-5 Kashiwanoha, Kashiwa, Chiba 277-8582, Japan
+We present the results from our narrow-band imaging surveys of HFORMULA  emitters (HAEs) at FORMULA  and FORMULA 
+in the Subaru/FORMULA –FORMULA  Deep survey Field with near-infrared camera MOIRCS on the Subaru Telescope.
+We have constructed a clean sample of 63 star-forming galaxies at FORMULA  and 46 at FORMULA .
+For 12 (or FORMULA 92%) out of 13 HAEs at FORMULA , their HFORMULA  emission lines have been
+successfully detected by the spectroscopy. While about 42% of the red, massive HAEs with FORMULA  contain active galactic nuclei (AGNs), most of the blue, less massive ones are likely to be star-forming galaxies.
+This suggests that the AGN may plays an important role in galaxy evolution at the late stage of truncation.
+For the HAEs excluding possible AGNs, we estimate the gas-phase metallicities on the basis of [N ii]/HFORMULA  ratios, and find that the metallicities of the HFORMULA  selected
+galaxies at FORMULA  are lower than those of local star-forming galaxies at fixed stellar mass, as shown by previous studies.
+Moreover, we present and discuss the so-called “main sequence” of star-forming galaxies at FORMULA  based on our unique sample of HAEs.
+By correlating the level of dust extinction with the location on the main sequence,
+we find that there are two kinds/modes of dusty star-forming galaxies: star-bursting galaxies and metal-rich normal star-forming galaxies.
+galaxies: evolution – galaxies: high-redshift – galaxies: starburst
+Introduction
+The star formation rate (SFR) is one of the most fundamental parameters to characterize current activities of galaxies and its time evolution because new stars are continuously formed through cooling and contraction of cold gas in galaxies.
+The sketch of the cosmic evolution of star formation activities is known as the “Madau plot” {{cite:ca73e684-784f-4f4d-b788-301ee7e0cb43}}.
+{{cite:6b164428-e11b-4ec0-a10c-82c362ad8351}} have compiled an extensive series of SFR measurements and illustrated the evolution of cosmic SFR density from FORMULA  back to FORMULA .
+The volume-averaged SFR (i.e. SFR density) increases by a factor of 10 from FORMULA  to FORMULA  and comes to its peak at FORMULA , which indicates that a large fraction of stars in the present-day galaxies were formed beyond FORMULA .
+The evolution of stellar mass density independently shows that about 50% of stellar mass in the local galaxies are formed at FORMULA  {{cite:7d81d468-f704-4fbe-9464-d14a9b6b05bb}}, {{cite:bb028aa4-7d18-4cb1-a764-67a02410f183}}.
+Therefore, star-forming galaxies at the peak epoch are the key population to understanding the formation and early evolution of galaxies.
+While the SFR represents a differential rate of on-going star formation,
+the stellar mass (FORMULA ) indicates the cumulative amount
+of past star formation activities.
+Therefore, these two are fundamental quantities to characterize star formation
+histories of galaxies.
+{{cite:9202bda3-0639-4518-9bbb-49c244fa1f8f}} find a tight correlation between stellar mass and SFR in galaxies at FORMULA , named as the “FORMULA ” of star-forming galaxies.
+A similar correlation is also found at FORMULA  {{cite:5e7ef964-c1c7-4267-921b-22253f92ad0f}} and in the local universe {{cite:ac6959ca-678c-4e04-9b0f-b0bda4fa027d}}, while the cosmic SFR density declines significantly by more than an order of magnitude from FORMULA  to 0.
+In the SFR–FORMULA  diagrams, some outliers have significantly higher specific SFRs (sSFRs) with respect to the main sequence galaxies.
+Using the simplified model, {{cite:cc4a0b5f-2890-4494-87b3-2405e8d662c2}} has shown that a small difference in sSFR can be dramatically amplified in the subsequent evolution.
+While galaxies with high sSFRs undergo a rapid mass accretion, those with low sSFRs evolve with moderate mass increase.
+In fact, recent observations of molecular gas in star-forming galaxies at FORMULA  have revealed that they are very gas-rich systems, and suggest that two different star formation modes exist; a long-lasting mode for “normal” galaxies, and a short-lived intense mode for “starburst” galaxies {{cite:6b869936-4331-43f3-968e-de3b6d82867b}}.
+FIGURE 
+{{cite:92f79e38-0527-419a-ba29-e086f4c2331b}} have demonstrated that the main-sequence galaxies represent 98% of mass-selected star-forming galaxies and account for FORMULA 90% of the cosmic SFR density at FORMULA , with the sample detected by PACS 100 FORMULA m or 160 FORMULA m on-board FORMULA  as well as optical/near-infrared (NIR) color-selected one.
+Some recent studies also suggest that the main sequence is independent of the environment in the local universe {{cite:8db4b590-901f-448f-8a6b-a9b162fb27ec}} and in the distant universe {{cite:c41b73ea-fe1f-491e-aade-e62564569207}}, supporting the fact that main sequence galaxies represent a vast majority of star-forming galaxies at each redshift.
+Despite its importance, the definition of the main sequence is largely dependent on a sample selection and the SFR indicator used.
+In this paper, we present the main sequence of star-forming galaxies at FORMULA , which are selected from a HFORMULA  narrow-band (NB) imaging survey.
+The advantage of selecting galaxies with NB imaging is that we can construct a nearly SFR-limited, complete sample of star-forming galaxies which spans a broader range in stellar mass from FORMULA  to FORMULA .
+Also, the HFORMULA  line is one of the best SFR indicators
+that has many great advantages, such as being less affected by dust extinction, and having been well calibrated in the local universe {{cite:9e698db3-1a1f-4ddd-ac10-700a86b9c69a}}.
+Recently, we have been conducting the “FORMULA ” project (MApping HAlpha and Lines of Oxygen with Subaru; see an overview by {{cite:92cd3373-086c-4cce-bb35-dcc23e0e0f1b}}), which is a large, systematic survey of HFORMULA  emitters (HAEs) utilizing a unique set of NB filters.
+We target both biased high-density regions {{cite:e8adfd2a-4dbf-4beb-8a71-f72cd145c734}}, {{cite:457a22bf-41c7-4048-9cf0-8a8bdae37095}}, {{cite:22b696a3-6671-44ba-b6c9-5c09dced4af2}} and non-biased blank fields {{cite:f8441342-8d6b-4f57-9dff-6ddced2542aa}}.
+In general fields, other large HFORMULA  surveys have been carried out at FORMULA .
+{{cite:d22aa0b2-d94f-4e6e-a5e4-95f0913a7765}} have made a large sample of HAEs at FORMULA  with a NB filter over FORMULA 2 degFORMULA  as a part of the High-FORMULA  Emission Line Survey (HiZELS) with Wide Field Camera (WFCAM) on UKIRT, and derived the HFORMULA  luminosity function and its evolution.
+{{cite:4bb40584-33ba-4113-8f5e-de4786407c73}} conducted the deepest survey of HAEs at this high redshift with HAWK-I on VLT over a 56 arcminFORMULA  area, and constrain the faint end slope of the luminosity function.
+Given such large or deep NB surveys providing statistical samples of star-forming galaxies at FORMULA ,
+our primary motivation is shifted from the stage of identifying high-FORMULA  star-forming galaxies to the next stage of understanding the physical processes in these galaxies that control their formation and early evolution.
+This paper is structured as follows. In Section 2, we describe the existing data and our observations in Subaru/FORMULA –FORMULA  Deep survey Field (SXDF; {{cite:69cd37ad-8b82-47ce-be80-4ece767c8dbd}}).
+We show the target selections of HAEs in Section 3.
+In Section 4, their global properties such as SFRs, stellar masses, and metallicities are derived, and the mass–metallicity relation is presented.
+In Section 5, we discuss the relation between the main-sequence galaxies and dustiness of star formation activities and interpret the mass–metallicity relation observed at FORMULA .
+We summarize our study in Section 6.
+Throughout this paper, we assume the cosmological parameters of FORMULA =70 km sFORMULA  MpcFORMULA , FORMULA , and FORMULA , and Salpeter initial mass function (IMF) is adopted for the estimation of stellar masses and SFRs {{cite:2c31ae97-0631-41ed-bebb-8f6653d4f479}}.
+
+Data
+We have conducted the HAE surveys in two redshift slices of FORMULA  and FORMULA  at a general field SXDF.
+Two NB filters, namely NB209 (FORMULA m, FWHM = 0.025 FORMULA m) and NB2315 (FORMULA m, FWHM = 0.027 FORMULA m), are used.
+Figure REF  shows the filter response functions of the two NB filters together with a broad-band (BB) filter FORMULA -band which measures the continuum level.
+The NB209 and NB2315 filters capture HFORMULA  emission lines from star-forming galaxies at FORMULA  and FORMULA , respectively.
+Note that FORMULA  is the highest redshift where we can capture HFORMULA  lines with high sensitivity from ground-based telescopes.
+Broad-band data
+TABLE 
+In SXDF, there is an extensive data-set covering a wide wavelength from ultraviolet (UV) to mid-infrared.
+We use the publicly available multi-wavelength catalog {{cite:79a5eb19-f643-45c6-87dc-582806301e5f}} from the Rainbow Database, which includes the FORMULA -band data from CFHT/Megacam (O. Almaini et al. in preparation), FORMULA  and FORMULA  band data from Subaru/Suprime-Cam {{cite:69cd37ad-8b82-47ce-be80-4ece767c8dbd}} , FORMULA  and FORMULA  band data from VLT/HAWK-I (A. Fontana et al. in preparation), FORMULA  and FORMULA  bands data from UKIRT/WFCAM (UKIDSS Data Release 8; {{cite:7bd862b5-ac57-4cb9-8cf2-e0ab5e614ac3}}), Spitzer/IRAC {{cite:deda07b2-d065-4766-8441-06294758168d}} and MIPS data (SpUDS; PI: J. Dunlop).
+Table 1 summarizes the existing BB data that are used in this paper, and their limiting magnitudes.
+
+Narrow-band imaging
+FIGURE 
+The NB imaging observations were carried out with Multi-Object InfraRed Camera and Spectrograph (MOIRCS; {{cite:baf152e2-522c-4e3a-9db6-1dfac68fd81a}}) on Subaru.
+MOIRCS is equipped with two Hawaii-2 detectors (2048 FORMULA 2048), and provides a 7FORMULA  4 field of view per pointing.
+We made observations for seven nights in total, in 2010 October–November and 2011 September.
+The weather condition was fine during the observing runs and the seeing sizes were 0.4–0.7 in FWHM.
+The point spread functions (PSFs) of all the images are eventually smoothed to 0.7.
+Figure REF  shows the observed fields, and Table REF  lists the exposure times, seeing sizes (FWHM), field-of-views (FoVs), and the limiting magnitudes in the NB209 or NB2315 bands.
+The observed field is unique because the high-resolution optical/NIR images by ACS/WFC3 on the FORMULA  are both publicly available {{cite:42cf97d1-50fb-4dc5-b094-54b5c100d501}}.
+The field coverages are slightly different between the NB209 and NB2315 survey.
+For NB2315, we spent four MOIRCS pointings which covers a contiguous field of 94 arcminFORMULA .
+For NB209, unfortunately, one of the two MOIRCS chips was unavailable at the time of observation due to a mechanical problem.
+Therefore, we spent eight MOIRCS pointings to cover a total area of 91 arcminFORMULA .
+These correspond to the co-moving volumes of FORMULA  MpcFORMULA  and FORMULA  MpcFORMULA  at FORMULA  (NB209) and FORMULA  (NB2315), respectively.
+Data reduction is conducted by using the MOIRCS imaging pipeline software (MCSRED; {{cite:e8adfd2a-4dbf-4beb-8a71-f72cd145c734}}).
+Here, we briefly describe the procedures.
+First, a dome flat image is used to correct for any variabilities in sensitivity from pixel to pixel because a sky pattern remains in a self-sky flat image due to interferences of the OH sky emission lines in the case of NB imaging.
+The residual pattern, which is estimated by dividing a self-sky flat image by a dome flat image, is subtracted from each flat-fielded image.
+Then, a “median sky” image, which is made from some adjacent frames before and after the individual image to be processed, is also subtracted from the image.
+After each image is flat-fielded and sky-subtracted, a geometrical distortion is then corrected.
+Finally, all the processed images are combined with the inverse square of rms level of each frame as a weight.
+The photometric zero-point of our NB209/NB2315 images are determined using colors of unsaturated stars within the FoVs.
+TABLE 
+FIGURE 
+FIGURE 
+
+Target selection
+Narrow-band emitters
+We identify emission line galaxies on the basis of flux excesses in a NB as compared to a BB that covers the NB wavelength.
+First, the NB detected catalogs are made from the images (FORMULA  from WFCAM and NB from MOIRCS) using SExtractor {{cite:d9408f60-8c6c-4978-9a04-4376ddab74c5}}.
+The pixel scales and PSF sizes of the BB images are matched to those of the NB images. The offset between these images is smaller than 0.05 arcsec.
+Source detections and photometries are carried out using the double image mode of the SExtractor. The extraction criterion is having at least 9 pixels with fluxes above 1.5FORMULA  level in the NB images. The sources fainter than 5FORMULA  limiting magnitudes in the detection frame (NB209 or NB2315) are rejected.
+An aperture magnitude within a diameter of 1.6 is used to derive a color index.
+Note that these catalogs are used for the selection of NB emitters and the measurements of NB fluxes.
+For the following color selection (Figure REF ) and the spectral energy distribution (SED) fitting (Section REF ), the template-fitting photometries are used (see {{cite:79a5eb19-f643-45c6-87dc-582806301e5f}} for more details).
+Because the effective wavelengths of the NB209/NB2315 filters are slightly different from that of the FORMULA -band filter,
+we estimate the continuum level at the wavelengths of the NB209/NB2315 filters by taking a linear interpolation between FORMULA -band and FORMULA -band magnitudes as follows,
+FORMULA 
+Figure REF  shows the FORMULA NB209 and FORMULA NB2315 color-magnitude diagrams for all the objects
+that are brighter than the 5FORMULA  limiting magnitudes of NB209 and NB2315, respectively.
+For faint objects (FORMULA ) in FORMULA -band or FORMULA -band, the FORMULA  limiting magnitude is used to calculate colors.
+{{cite:830b2515-3c76-4e0a-bc97-87efde290bb8}} defined a significance of a magnitude excess in a certain NB by a parameter FORMULA  taking account of the fact that the fainter the NB flux is, the larger the photometric error is, as follows;
+FORMULA 
+where FORMULA  and FORMULA  indicate a magnitude and flux density, respectively.
+FORMULA =3 and FORMULA , which corresponds to the equivalent width cut in the rest frame of EWFORMULA  Å, are adopted to select NB emitters.
+These criteria are similar to those used in our previous NB survey {{cite:b0ca5757-8d6e-47ec-a53b-86df667871c5}}.
+The significance of FORMULA  corresponds to the limiting line fluxes of FORMULA  erg sFORMULA  cmFORMULA , that can be transformed to 4 (10) FORMULA yrFORMULA  of dust-uncorrected SFRs {{cite:b6a4a0da-32af-43a6-b1b1-2846261bd9fe}}.
+Based on the first criteria, 99 (58) objects are identified as NB209 (NB2315) emitters, respectively.
+TABLE 
+The NB209 (NB2315) filter picks up not only a HFORMULA  line at FORMULA  but some other lines at different redshifts are contaminating such as PFORMULA  at FORMULA , [O iii] at FORMULA  and [O ii] line at FORMULA .
+Although a photometric redshift technique is expected to be effective in discriminating HAEs at FORMULA  and FORMULA  from a few other choices, it is less accurate for some faint galaxies where photometric redshift errors are large.
+Therefore, instead of using photometric redshifts, we define the best color selections to cull out the HAEs based on the spectroscopic sample of galaxies in the MOIRCS Deep Survey (MODS; {{cite:aab28e96-5736-4473-98af-94066a99b472}}).
+Figure REF  shows the color-color diagrams for the galaxies with spectroscopic redshifts.
+The color combination is chosen so that it can capture the Balmer/4000 Å break of galaxies at each redshift.
+The FORMULA  and FORMULA  diagrams are found to effectively isolate FORMULA  emitters and FORMULA  emitters, respectively, from the HAEs at FORMULA .
+As for the HAEs at FORMULA , the FORMULA  and FORMULA  diagrams are used to reject FORMULA  emitters and FORMULA  emitters.
+The degrees of completeness and contamination in the color selections are estimated, based on the spectroscopically confirmed MODS sample.
+98% (91%) of the MODS sample at FORMULA  (FORMULA ) satisfy our color criteria and 5% (5%) of the MODS sample at other redshift are also included as contaminants.
+After these color selections, 63 HAEs at FORMULA  and 46 at FORMULA  are finally identified.
+While most of NB2315 emitters are HAEs at FORMULA , the NB209 sample includes about 30 [O iii] emitters at FORMULA .
+
+MOIRCS spectroscopic follow-up
+FIGURE 
+In order to confirm that the HAEs, which will be selected in Section , are actually located at FORMULA , and to measure their spectral properties such as the line ratio of [N ii]/HFORMULA ,
+we conducted a spectroscopic follow-up observation with MOIRCS on the multi-object spectroscopy (MOS) mode {{cite:5ace13d6-626e-42b7-91da-08b7a138b099}} in 2012 October–November.
+The HK500 low-resolution grizm, which covers the wavelength range of FORMULA m, was used.
+The slit width was 0.8 and its length was 10-12.
+The total on-source exposure time was 220 minutes.
+Data reduction is conducted with the MOIRCS MOS Data Pipeline (MCSMDP; {{cite:55bbf8d1-70f0-4804-8025-4fba5947d940}}) in the following way.
+First of all, bad pixels and cosmic-rays are removed.
+A sky frame is created in parallel to processing the object frames.
+The object frames and the sky frame are then divided by the dome flat for flat-fielding.
+Distortion is corrected by using the database for the imaging mode of MCSRED.
+The wavelength calibration is performed by using the OH lines in the sky frame.
+After a sky pattern is roughly removed by subtracting the adjacent dithered image (A–B subtraction) for each object frame,
+the residual background emission is subtracted by using the task “background” of IRAF.
+Finally, all frames are combined with weights in exposure times.
+To calibrate the telluric absorption and the difference in sensitivity at each wavelength, the object frames are divided by the spectrum of a spectroscopic standard star (A1-type), and multiplied by the model spectrum {{cite:0f9a253a-38c6-44eb-ac3b-02c2623ebfe5}}.
+For a slit spectroscopy, a slit loss must be properly corrected for in order to estimate a total flux.
+However, the slit loss strongly depends on the size of a galaxy.
+Therefore, in this work, we do not use the absolute flux derived from the
+spectroscopy and discuss only the redshifts and the line ratios of the HAEs.
+For the target selection of spectroscopy, we gave a high priority on objects with a bright HFORMULA  emission measured from the NB data.
+With the MOIRCS, the NIR spectra of 13 HAEs at FORMULA  have been obtained.
+We successfully detected HFORMULA  and [N ii] emission lines above FORMULA  from 12 and 8 objects, respectively.
+Table REF  lists their spectroscopic redshifts, and Figure REF  shows their spectra.
+For only one object, no line is seen in its spectrum though the expected HFORMULA  flux density from our NB data is large enough to be detected.
+The non-detection might be due to a large flux loss by the slit because it is a diffuse source.
+In order to measure the spectroscopic redshifts and line ratios,
+the reduced spectra are fit by a three-component (HFORMULA  and [N ii]FORMULA ) Gaussian
+model, with the free parameters of redshift, line width, and flux density of each line.
+The continuum is first subtracted off by fitting the spectra with a linear function
+over the wavelength range of 2.08–2.1 FORMULA m.
+The line ratio of [N ii]FORMULA /[N ii]FORMULA  is fixed to 3.0
+{{cite:fc16ffe1-96c7-4d77-8de7-94cfa3784ccf}}.
+The sky noise is estimated from a Poisson error of the sky frame without a background
+subtraction.
+For SXDF-NB209-4, 34, 43 and 60, [N ii] lines are not detected.
+SXDF-NB209-34 has been confirmed to be located at FORMULA  as its [O iii] and HFORMULA  emission lines are detected.
+Although we do not yet have conclusive evidence at this stage that the detected lines are HFORMULA  for SXDF-NB209-4, 43 and 60,
+our spectroscopic follow-up observations do support that our criteria of identifying HAEs based on NB and BB data should work very well.
+We hereafter regard all of the 12 sources with line detections as HAEs.
+
+Galaxy properties
+SED fitting
+Multi BB photometries provide SEDs of individual galaxies, which give us valuable information of physical properties such as stellar mass, age, and amount of dust extinction.
+We fit the photometric SEDs traced by 12 bands (FORMULA ) with the stellar population synthesis model of {{cite:7aee3c27-11e2-4a59-b020-d37c9a446641}}. We adopt the solar metallicity.
+The SED fitting with a standard FORMULA  minimization procedure is applied by using FORMULA  {{cite:8f82e136-d62c-4242-a3f3-0c9aeaa5a0af}}.
+The redshift is fixed to FORMULA  and FORMULA  for the NB209 and NB2315 HAEs, respectively.
+We use the libraries with exponentially declining star formation histories: SFRFORMULA  with FORMULA =0.01, 0.02, 0.05, 010, 0.20, 0.50, 1.0, 2.0, and 5.0 Gyr.
+Salpeter IMF is adopted for the estimation of stellar masses and SFRs.
+The dust attenuation law for starburst galaxies {{cite:67c1c876-234c-48e8-a1d7-acaf0ae12d5c}} is applied to the model spectra.
+The best fitting template gives stellar mass, age, FORMULA  and FORMULA .
+Although the estimated age and the amount of dust extinction by SED fitting are not very reliable due to a degeneracy, the stellar mass is a rather robust quantity if IMF is given.
+Ideally, we should accurately measure the amount of dust extinction by the Balmer decrement method.
+However, HFORMULA  lines are generally too weak to be detected for high-FORMULA  galaxies, and we ought to rely on the values of dust extinction derived from the SED fitting.
+
+AGN contribution
+Ideally, we can distinguish between star-forming galaxies and active galactic nuclei (AGNs) by measuring emission line ratios of [O iii]/HFORMULA  and [N ii]/HFORMULA  and plot them on the so-called BPT diagram {{cite:f92f3355-371c-48b1-a16a-2e67dcf9f5b2}}.
+We detected both HFORMULA  and [O iii] emission lines for only one target (SXDF-NB209-34).
+For this object, the line ratios of log ([O iii]/HFORMULA )=0.73 and log ([N ii]/HFORMULA )FORMULA  indicate that this is a star-forming galaxy.
+Unfortunately, neither HFORMULA  nor [O iii] lines are detected for the other objects, and so we are obliged to make a diagnosis based solely on the line ratio of [N ii]/HFORMULA .
+[N ii]/HFORMULA  is particularly sensitive to shock excitation or the presence of a hard ionizing radiation field around an AGN.
+{{cite:437e621a-b1f9-49e9-aea5-5f671b86ee44}} put a theoretical upper limit on [N ii]/HFORMULA  ratio based on photo-ionization and stellar population synthesis models. For star-forming galaxies, the ratio of [N ii]/HFORMULA  should always be less than 0.6.
+On the BPT diagram, Seyfert galaxies are often defined to have [O iii]/HFORMULA  3 and [N ii]/HFORMULA  FORMULA  0.6, and low-ionization nuclear emission-line regions to have [O iii]/HFORMULA  FORMULA  3 and [N ii]/HFORMULA  FORMULA  0.6 {{cite:d54148a1-e3f8-48a3-ac0a-0ca9e0748303}}.
+Therefore, we regard the three HAEs (SXDF-NB209-2, 9 and 16) with [N ii]/HFORMULA  0.6 as AGNs.
+One HAE (SXDF-NB209-1) has been diagnosed as a narrow-line AGN on the basis of high-ionization ultraviolet emission lines such as C iv and [Ne iii] by the previous study {{cite:dc8f9656-99a9-40a1-8d02-a88ccb38a532}}.
+The diagnostic with IRAC four-band photometries is also useful for identifying AGNs.
+The mid-infrared SEDs of AGNs are well fitted by a power law because the thermal emission by hot dust dominates the SEDs of host galaxies {{cite:7675d8c8-d969-44bc-b8c9-579c15eeaf53}}.
+{{cite:c1f134ad-df72-4a22-95d0-e24a6c2a6694}} find that a power-law selection of FORMULA  recovers the majority of high-quality AGN candidates.
+While the IRAC SEDs of most our HAEs are not fitted by a power-law, one HAE (SXDF-NB209-42) satisfied the criterion of FORMULA -0.5, suggesting that it hosts an AGN.
+In total, we have identified five AGN candidates.
+In SXDF, deep X-ray data by FORMULA  are available {{cite:d762cc78-2462-42e5-88f2-6334a31de172}}, which enable us to identify AGNs.
+However, none of our five AGN candidates are detected in X-ray, suggesting that they are obscured AGN by dust and gas.
+FIGURE 
+Figure REF  shows the color–magnitude diagram for HAEs at FORMULA .
+We also plot seven HAEs at FORMULA  in GOODS-N field, which are identified by our previous NB209 survey on MOIRCS and confirmed by the follow-up spectroscopy {{cite:f8441342-8d6b-4f57-9dff-6ddced2542aa}}.
+One of them is an X-ray-detected AGN.
+Galaxies are known to show a color bimodality; blue cloud galaxies and red sequence galaxies {{cite:3a616e87-b2dc-4a99-bce6-a2d58b91ad80}}.
+The HAEs are naturally supposed to be blue star-forming galaxies.
+However, some of them are red in the rest-frame optical colors (FORMULA  1).
+Throughout this paper, "red" refers to a red color in the rest-frame optical.
+The red HAEs tend to be more massive than normal blue emitters so that they are likely to be direct progenitors of massive galaxies seen today.
+We find that at least 42% (=5/12) of these red, massive HAEs with FORMULA  are strongly influenced by AGNs while most of the blue, less massive ones are likely to be star-forming galaxies.
+The dependence on stellar mass or color is consistent with the previous studies {{cite:11ce24fb-ea97-410a-bcb2-2035ed211376}}, {{cite:ab454e7b-4334-4255-950b-f62a9f7f0f7b}}.
+We investigate whether the galaxies hosting AGNs are quiescent or dusty star-forming based on the FORMULA  versus FORMULA [3.6] color-color diagram (Figure REF ).
+It is found that their colors are inconsistent with ones of the quiescent galaxy model and redden along with the dust reddening vector of star-forming galaxy model.
+Therefore, they are likely to be mixed systems of dusty star-forming galaxies containing AGNs rather than quiescent galaxies.
+Our results suggest that AGN activity is enhanced at the late stage of massive galaxy formation and possibly contributes to subsequent quenching of star formation.
+An investigation of the fraction of AGNs for a larger, complete HAEs sample by additional follow-up spectroscopic observations is desperately needed..
+In the following sections, we exclude these AGNs to concentrate on star-forming activities.
+FIGURE 
+
+Star formation rates
+It is standard for us to estimate SFRs of our HAEs with the following standard calibrations of {{cite:b6a4a0da-32af-43a6-b1b1-2846261bd9fe}};
+FORMULA 
+where FORMULA  and FORMULA  indicate dust-uncorrected SFRs based on HFORMULA  and rest-frame UV luminosities, respectively.
+Since the composite UV spectrum is nearly flat over the wavelength range of 1500–2800 Å,
+the UV luminosity is calculated by linearly-interpolating the FORMULA -, FORMULA - and FORMULA -band luminosities as,
+FORMULA 
+FIGURE 
+where FORMULA  is the interpolated magnitude at the rest-frame wavelength of 1500 Å.
+The HAE surveys with NB filters allow us to measure the HFORMULA  fluxes from the flux densities in NB and BB, hence SFRs for all galaxies {{cite:0ad06bb0-8e87-4bd7-b314-61457577030b}}.
+The NB flux density can be defined as FORMULA , where FORMULA  is the continuum flux density, FORMULA  is the emission-line flux, and FORMULA  denotes FWHMs of the filters.
+The BB flux density is also defined as FORMULA .
+Therefore, the line flux, continuum flux density, and equivalent width (EW) are calculated as,
+FORMULA 
+Note that a [N ii] line also contributes to a NB209/NB2315 flux.
+{{cite:fe271a1a-6a8c-4d3a-a3a8-d3e6d877b8cb}} estimated the [N ii] contamination for the full Sloan Digital Sky Survey (SDSS) sample as a function of total rest-frame EW and compute the polynomial approximation of the relationship between log([N ii]/HFORMULA ) (denoted as FORMULA ) and log[EWFORMULA ([N ii]+HFORMULA )] (denoted as FORMULA ), which is presented as FORMULA .
+We use this polynomial function to correct for a [N ii] contamination to derive
+a pure HFORMULA  flux. The average correction is [N ii]/HFORMULA =0.16.
+Figure REF  shows the SFRFORMULA  versus SFRFORMULA  diagram for the HAEs at FORMULA  and 2.5 with and without dust extinction correction (right and left panels, respectively).
+The dust uncorrected SFRFORMULA  is not correlated to SFRFORMULA 
+(left panel).
+We use the amount of dust extinction derived from the SED fitting in Section REF  and assume equal extinction between UV (stellar) and HFORMULA  (nebular) rather than FORMULA )FORMULA =0.44FORMULA )FORMULA  {{cite:67c1c876-234c-48e8-a1d7-acaf0ae12d5c}}, because the SFRFORMULA  is significantly overestimated with respect to the SFRFORMULA  in the latter situation {{cite:d6dc7222-f052-442d-99b9-2caa79c2215b}}.
+Once we apply such corrections, the right panel of Figure REF  shows a good correlation between the two measurements of SFRs from two independent indicators.
+Hereafter, we use dust-corrected SFRs based on HFORMULA  luminosities, in order to define the main sequence of star-forming galaxies at FORMULA  presented in Section REF .
+FIGURE 
+
+Main sequence of star-forming galaxies
+The FORMULA SFR relation, named as the FORMULA  of star-forming
+galaxies, is conveniently parameterized as
+FORMULA 
+Based on the fact that the majority of star-forming galaxies are located on this sequence,
+it must have essential information on how star formation in galaxies are generally
+regulated, and it must be playing a vital role in galaxy evolution.
+In spite of its vital importance, the values of FORMULA  and FORMULA  are still quite
+uncertain especially at high redshifts. This is because the results are highly dependent
+both on the sample selection and on the SFR indicator that is used.
+Due to our relatively un-biased sample of star-forming galaxies and the robust measure of SFRs based on HFORMULA , we are able to investigate such a relationship for star-forming galaxies at FORMULA  and FORMULA .
+Figure REF  shows the SFR–FORMULA  diagram for the HAEs.
+The star forming activities of HAEs at FORMULA  seem to be systematically higher than those at FORMULA  at the fixed stellar mass.
+It is not clear at this moment whether such difference is due to an intrinsic evolution of galaxies with time, or an environmental dependence (cosmic variance), or simply due to small number statistics.
+We will investigate this potentially interesting result in greater detail in a future paper.
+In this paper, we do not consider this possible difference further, and we fit a relation for the combined sample of FORMULA  and FORMULA  with a stellar mass cut of FORMULA  since our HAE sample becomes significantly incomplete below it.
+Also, we do not use massive galaxies with FORMULA , in which the AGN fraction could increase (Section REF ), for the fit.
+The best fit line is SFR=238FORMULA , where FORMULA  shows the stellar mass in the unit of FORMULA  (FORMULA =FORMULA ), and its scatter is 0.3 dex.
+{{cite:9202bda3-0639-4518-9bbb-49c244fa1f8f}} gives SFR=200FORMULA  as the main sequence of color-selected star-forming galaxies at FORMULA .
+The best fitted main sequence is well suited to that defined by {{cite:9202bda3-0639-4518-9bbb-49c244fa1f8f}} although they estimated SFRs by using UV and IR luminosities rather than HFORMULA  emission lines, and the sample selection is also different from ours.
+Hereafter, we use our fitting result for the main sequence.
+
+Mass–metallicity relation
+The [N ii]/HFORMULA  line ratios can also be used as a crude estimator of gaseous metallicity
+in Hii regions of star-forming galaxies.
+A metallicity is one of the most important properties for understanding galaxy evolution
+because it imprints the past star-formation histories.
+If a HFORMULA  emission line is free from AGN contribution, we are able to measure
+its oxygen abundance with the line ratio of
+N2=log([N ii]FORMULA 6583/HFORMULA ); 12+log(O/H)=8.9+0.57FORMULA N2 {{cite:9e64865b-3538-4ff2-a47a-1429879bc596}}.
+TABLE 
+In the local universe, it is well known that the metallicity is correlated to the stellar mass {{cite:fa682160-2346-4837-b3b0-026c9de14608}}. Such mass–metallicity relations were recently investigated even at FORMULA  by many authors.
+For example, {{cite:09589245-ce6f-4803-a0b3-6673f4dd51dc}} obtain the mass–metallicity relation with the stacked spectra of 87 rest-frame UV-selected star-forming galaxies at FORMULA  and found that their metallicities are systematically lower than those of local galaxies with the same stellar mass.
+On the other hand, {{cite:e06561fa-dd5e-4970-aaa6-2967c345205a}} and {{cite:86f09353-915a-4469-8b2f-e21e492f987e}} report that optical-NIR color selected star-forming galaxies at FORMULA  show much higher metallicities
+which are almost comparable to those of local galaxies.
+Since this difference is likely to be attributed to the difference in the sample selection,
+it is important to investigate the mass–metallicity relation further with a larger, relatively
+unbiased sample of star-forming galaxies such as HAEs.
+Figure REF  presents the mass–metallicity relation for the spectroscopically confirmed HAEs at FORMULA  (Section REF ).
+Note that our targets of spectroscopic observations are biased to objects with a large line flux.
+For the objects whose [N ii] lines are not detected, we adopt 1FORMULA  flux as the upper limit.
+We also plot the sample of HAEs at FORMULA  in GOODS-N field, which are used in Section REF  {{cite:f8441342-8d6b-4f57-9dff-6ddced2542aa}}.
+Table REF  lists the properties for six star-forming galaxies, excluding one X-ray detected AGN, in GOODS-N field.
+Our data points for the HAEs are broadly consistent with the median relationship presented by {{cite:09589245-ce6f-4803-a0b3-6673f4dd51dc}} for FORMULA , although including some upper limit points.
+While some massive HAEs with [N ii] line detection are as metal rich as local galaxies at FORMULA  {{cite:fa682160-2346-4837-b3b0-026c9de14608}},
+the metallicities of less massive HAEs are systematically lower, and their dispersion is large at a given stellar mass from one sample to another.
+Because our HFORMULA  selection by NB imaging provides us with a relatively unbiased sample of star-forming galaxies irrespective of their stellar populations,
+the variation we see here may represent the intrinsic scatter of the relationship.
+FIGURE 
+
+Discussion
+Two modes of dusty star-forming galaxies
+In Figure REF , we find that the HAEs at the massive end of the main sequence tend to be detected at MIPS 24 FORMULA m, indicating that they are dusty star-forming galaxies.
+However, for the galaxies below the detection limit of the MIPS data, we can not evaluate how dusty they are from the MIPS data alone.
+To investigate a possible difference in dusty nature between the normal mode of star formation on the main sequence and the burst mode of star formation above the main sequence,
+we define the “dustiness” index with the following equation,
+FORMULA 
+FIGURE 
+For dusty star-forming galaxies, the dustiness index should be high because the HFORMULA  emission line is much less attenuated by dust extinction than the UV light.
+Most of the MIPS-detected HAEs actually show high values of dustiness (FORMULA ).
+We could in principle estimate the amount of dust extinction (FORMULA ) directly from the dustiness index by assuming the extinction curve such as {{cite:67c1c876-234c-48e8-a1d7-acaf0ae12d5c}}: FORMULA .
+However, we choose to use the dustiness index because of the uncertainties in the extinction law.
+Figure REF  plots the sSFRs as a function of stellar mass for our HAEs.
+It seems that the dustiness depends on two parameters: offset from the main sequence in SFR, FORMULA log(SFR)=log(SFR)-log(SFRFORMULA ), and stellar mass.
+The HAEs with enhanced SFRs relative to the main sequence galaxies tend to have dusty formation.
+On the other hand, the dustiness is also clearly high at the massive end despite declined star formation activities (low sSFRs).
+These two interesting trends have been pointed out also by {{cite:84e68caa-182e-48bb-a6e2-50eb83eccedb}}, who find that SFRFORMULA /SFRFORMULA  is correlated with both star formation activities and stellar mass.
+We investigate the dependence of dustiness on two parameters separately by fixing one parameter and allowing the other parameter to change, and vice versa (Figure REF ).
+For galaxies with FORMULA , the dustiness is closely correlated with FORMULA log(SFR).
+This result may give us a hint on why the star formation activity is boosted in the galaxies with large FORMULA log(SFR).
+In the case of clump migration {{cite:fa46a905-2a10-4d6d-9b8e-13cee9392378}}, {{cite:32fb486c-3326-4cdd-bb08-a07f8bfb0224}} and gas rich mergers, star forming regions are likely to be concentrated toward galaxy centers due to an inflow of gas that has lost its angular momentum.
+Such compact dusty star forming regions would lead to a large dust attenuation.
+We may therefore call such origin of dusty galaxies “starburst mode”.
+FIGURE 
+On the other hand, the dustiness seems to be constantly high regardless of the level of star formation activities for the massive galaxies with FORMULA .
+This suggests that stellar mass also contributes to the dust obscuration.
+In fact, at fixed FORMULA log(SFR), the dustiness seems to increase along the main sequence from low mass to high mass ends.
+Such dependence indicates an additional process to increase dust extinction as stellar mass is increased. Star forming galaxies continue to grow in stellar mass and move up along the main sequence as more and more new stars are formed. During the growth, chemical evolution must progress in the galaxies and become progressively more metal rich. Since the dust production is strongly correlated with metallicity,
+galaxies would become dustier as a result.
+Therefore, HFORMULA  emission lines and UV photons radiated from the ionized gas and massive stars, are strongly attenuated by dust, and they would appear as massive, dusty galaxies.
+In fact, in the local universe, it is found that the amount of dust extinction roughly correlates
+with stellar mass {{cite:748d031c-5d14-44f0-bfc6-a18f40e5333b}}, {{cite:398371d2-939c-4eb7-ac2b-68f50e0c8164}}, {{cite:fe271a1a-6a8c-4d3a-a3a8-d3e6d877b8cb}}.
+We may call such origin of dusty galaxies as “metal-enrichment mode”.
+In summary, we propose that the two modes/origins of dusty star-forming
+galaxies at FORMULA , are the starburst mode and the metal-enrichment mode.
+
+Origin of the metallicity variation at fixed stellar mass
+We find that the metallicities of HAEs at FORMULA  are significantly lower compared to local galaxies at the fixed stellar mass (Section REF ).
+It is not clear, however, why galaxies with the same stellar mass show such variations in metallicity despite of the fact that they have produced the same amount of stars in the past.
+Recently, a fundamental relationship among three parameters, namely, mass, SFR, and metallicity, was presented, which can account for the source of scatter and the cosmic evolution of the mass–metallicity relation {{cite:56cad973-8728-43cc-bb6c-1efc92456ca8}}, {{cite:75bfc988-c961-4b81-9fd2-edbc767e13c2}}.
+{{cite:12c22549-3f35-4916-970a-71955326bbd3}} find that the metallicity is also correlated with SFR at fixed mass,
+and the scatter is significantly reduced by introducing SFR as a second parameter.
+Similarly, {{cite:4ee70cf5-40ef-4a86-84d5-dd5fc0ec0ecc}} demonstrate that galaxies with larger SFR have lower metallicity, with 71 star-forming galaxies at FORMULA .
+In order to investigate the effect of remaining molecular gas in the mass–metallicity relation,
+we present the mass–metallicity relation for the SDSS sample at FORMULA  whose CO emission lines are detected in Figure REF .
+Here we use the spectroscopic SDSS data (DR7; {{cite:434c27fc-b986-4e3d-abb8-0930ffae04ea}}) and the catalog of CO Legacy Data base for the GASS (GALEX Arecibo Sloan Digital Sky Survey) survey {{cite:83e90980-4501-4f6d-9651-fecbca1ace29}}.
+Molecular gas masses are derived from CO luminosities, with the conversion factor of 4.35 FORMULA /(K km sFORMULA pcFORMULA ) for normal star-forming galaxies and 1.0 FORMULA /(K km sFORMULA pcFORMULA ) in systems with high infrared luminosities (FORMULA ) and warm dust temperatures (FORMULA ) {{cite:172e42fc-01a9-45ea-ade1-5ab0da1cd082}}.
+The metallicities of galaxies at a given stellar mass show some scatter, but there is a clear trend that the galaxies with larger gas mass fraction, FORMULA , tend to have lower metallicities, indicating that the gaseous metallicity is well correlated to gas mass and its fraction at fixed stellar mass in the local universe.
+{{cite:c64c0207-6571-441f-bc28-7bab6b249325}} also find a dependence of metallicity on HI gas mass, supporting our result.
+Galaxies with a large gas reservoir have a potential to evolve into more massive and metal rich galaxies by subsequent star formation, which would then be eventually located on the more massive side of the local mass–metallicity relation.
+While gas fractions of local star-forming galaxies are distributed in a relatively narrow range (5%–15%), highFORMULA  galaxies are more gas rich {{cite:3bb740bd-0dd5-4a05-aee1-7549e5a50f09}}, {{cite:98077a7c-fff3-4f53-ae39-0c6e16b891ee}}.
+Therefore, the dependence of metallicity on the gas mass fraction would become more significant and visible.
+In order to reveal the origin of the metallicity variation, we need to measure the amount of remaining cold gas and its fraction for a statistical sample of star-forming galaxies at FORMULA  with, eg., ALMA.
+We can then confirm the hypothesis that the metallicity variation at a given stellar mass is due to the scatter in the gas mass fraction.
+FIGURE 
+
+Summary
+We have conducted NB imaging and spectroscopic surveys of HAEs at FORMULA  and FORMULA  in SXDF, using MOIRCS on Subaru Telescope. Our survey has identified 109 HAEs at FORMULA  in total over a total of 180 arcminFORMULA  area.
+We have confirmed probable HFORMULA  emission lines for 12 out of 13 targets by the spectroscopic follow-up observations.
+Therefore, our technique of searching for HAEs based on the excess fluxes in NB and multi-color selection, is proven to be a robust and efficient method.
+Based on this unique, clean sample of star-forming galaxies at FORMULA ,
+we have investigated their global properties in this paper.
+
+The diagnostics based on the [N ii]/HFORMULA  line ratio, high-ionization ultraviolet emission lines, or X-ray detections, shows that about 42% of the red, massive HAEs with FORMULA  contain AGNs, implying that the AGN feedback may be contributing to quenching star formation in these massive systems.
+To further investigate the effects of AGNs on the evolution of star-forming galaxies, we need to make a systematic, extensive spectroscopic observations over a large sample that spans a wide range in stellar mass.
+
+The HAEs at FORMULA  and FORMULA  exhibit a well defined main sequence represented by SFR=238FORMULA .
+We find that the dustiness index (SFRFORMULA /SFRFORMULA ) of star-forming galaxies is dependent on two parameters: offset from the main sequence, FORMULA log(SFR), and the stellar mass.
+Galaxies with high SFRs with respect to the main sequence tend to have high dustiness.
+On the other hand, massive star-forming galaxies also tend to be dusty,
+probably because they are more metal rich and contain larger amounts of dust.
+Although it is widely recognized that dusty galaxies such as SMGs are merger-driven starburst
+galaxies {{cite:d651949f-bf7b-402a-b2a3-f69b9ed939f3}},
+our result suggests that some dusty HAEs are not necessarily indicative of such populations and they can be more like metal rich normal star-forming galaxies.
+
+The metallicities of HAEs are roughly consistent with the typical values of the UV-selected galaxies at FORMULA  {{cite:09589245-ce6f-4803-a0b3-6673f4dd51dc}}.
+Massive HAEs at FORMULA  have already evolved into a metal rich system to the same level as the local star-forming galaxies, while
+the metallicities of less massive galaxies are systematically lower, and their dispersion is large.
+The SDSS sample at FORMULA  with CO detections suggests that the scatter in the mass–metallicity relation originated from the different amounts of molecular gas fraction.
+Gas rich galaxies tend to have lower metallicities at fixed stellar mass compared to gas poor ones.
+Therefore, at FORMULA  when the gas mass fraction of galaxies is larger (FORMULA %) and the scatter
+would also be large, the metallicities at a given stellar mass would naturally show a large scatter as observed.
+The measurements of cold gas with ALMA and JVLA would reveal the dependence of metallicities on gas mass fraction at FORMULA  directly for the first time, and this may lead us to establish a new fundamental metallicity relation among three parameters, namely, stellar mass, metallicity, and gas mass fraction.
+
+This paper is based on data collected at Subaru Telescope, which is operated by the National Astronomical Observatory of Japan.
+We thank the Subaru telescope staff for their help in the observation.
+This work has made use of the Rainbow Cosmological Surveys Database, which is operated by the Universidad Complutense de Madrid (UCM), partnered with the University of California Observatories at Santa Cruz (UCO/Lick,UCSC).
+Funding for the SDSS and SDSS-II has been provided by the Alfred P. Sloan Foundation, the Participating Institutions, the National Science Foundation, the U.S. Department of Energy, the National Aeronautics and Space Administration, the Japanese Monbukagakusho, the Max Planck Society, and the Higher Education Funding Council for England. The SDSS Web Site is http://www.sdss.org/.
+We thank the anonymous referee who gave us many useful comments, which improved the paper.
+K. T. thank Dr. Kazuhiro Shimasaku, Professor Masashi Chiba, Dr. Nobunari Kashikawa, Dr. Kentaro Motohara, Dr. Masami Ouchi, and Professor. Masanori Iye for useful discussions and comments.
+K.T. and Y.K. acknowledge the support from the Japan Society for the Promotion of Science (JSPS) through JSPS research fellowships for young scientists.
+T.K. acknowledges the financial support in part by a Grant-in-Aid for the Scientific Research (Nos.  18684004, 21340045, and 24244015) by the Japanese Ministry of Education, Culture, Sports, Science and Technology.

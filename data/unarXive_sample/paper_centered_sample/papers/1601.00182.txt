@@ -1,0 +1,1178 @@
+
+definitionDefinition
+Cohort Query Processing
+1
+
+Dawei JiangFORMULA      Qingchao CaiFORMULA      Gang ChenFORMULA      H. V. Jagadish FORMULA
+    Beng Chin OoiFORMULA      Kian-Lee TanFORMULA      Anthony K. H. Tung FORMULA
+
+FORMULA Zhejiang University       FORMULA National University of Singapore       FORMULA University of Michigan
+ FORMULA {jiangdw, cg}@zju.edu.cn FORMULA {caiqc, ooibc, tankl, atung}@comp.nus.edu.sg FORMULA jag@umich.edu
+Modern Internet applications often produce a large volume of user activity
+records. Data analysts are interested in cohort analysis, or finding
+unusual user behavioral trends, in these large tables of activity records.
+In a traditional database system, cohort analysis queries are both painful
+to specify and expensive to evaluate. We propose to extend database systems
+to support cohort analysis. We do so by extending SQL with three new
+operators. We devise three different evaluation schemes for cohort query processing.
+Two of them adopt a non-intrusive approach. The third approach employs
+a columnar based evaluation scheme with optimizations specifically
+designed for cohort query processing.
+Our experimental results confirm
+the performance benefits of our proposed columnar database system, compared
+against the two non-intrusive approaches that implement cohort queries on top of regular
+relational databases.
+InputInput
+Fn
+GetBirthTupleGetBirthTuple
+OpenOpen
+GetCurrentGetCurrent
+GetNextGetNext
+GetNextUserGetNextUser
+SkipCurUserSkipCurUser
+CloseClose
+BirthBirth
+Introduction
+TABLE 
+Internet applications often accumulate a huge amount of
+activity data representing information associated with user
+actions. Such activity
+data are often tabulated to provide insights into the
+behavior of users in order to increase sales and ensure
+user retention. To illustrate, Table REF  shows some samples
+of a real dataset containing user activities
+collected from a mobile game. Each tuple in this table represents
+a user action and its associated information. For example, tuple FORMULA 
+represents that player 001 launched the game on 2013/05/19 in Australia
+in a dwarf role.
+An obvious solution to obtain insights from such activity data is to apply
+traditional SQL GROUP BY operators. For example,
+if we want to look at the players' shopping
+trend in terms of the gold (the virtual currency) they spent, we may run
+the following SQL query FORMULA .
+
+SELECT week, Avg(gold) as avgSpent
+FROM GameActions
+WHERE action = "shop"
+GROUP BY Week(time) as week
+
+Executing this query against a sample dataset (of which Table REF  shows some records) results in Table
+REF ,
+where each tuple represents
+the average gold that users spent each week.
+The results seem to suggest
+that there was a slight drop in shopping, and then a partial recovery. However,
+it is hard to draw meaningful
+insights.
+There are two major sources that
+can affect human behavior {{cite:72e45fd1-e47f-4dba-971a-4fef0daecdd7}}: 1) aging, i.e.,
+people behave differently as they grow older and
+2) social changes, i.e., people behave differently if the societies they live in are different.
+In our in-game shopping example, players tend to buy more weapons
+in their initial game sessions
+than they do in later game sessions - this is the effect of aging.
+On the other hand, social change may also affect the players' shopping
+behavior, e.g., with new weapons being introduced in iterative game
+development, players may start to spend again in order to
+acquire these weapons. Cohort analysis,
+originally introduced in Social Science, is a data analytical technique
+for assessing the effects of aging on human behavior in a changing society {{cite:72e45fd1-e47f-4dba-971a-4fef0daecdd7}}.
+In particular, it allows us to tease apart the effect of aging
+from the effect of social change, and hence can offer more valuable
+insights.
+With cohort analytics, social scientists study the human behavioral trend
+in three steps: 1) group users into cohorts; 2) determine the age of user
+activities and 3) compute aggregations for each (cohort, age) bucket.
+The first step employs the so called cohort operation
+to capture the effect of social differences.
+Social scientists choose a particular action FORMULA  (called the birth action) and
+divide users into different groups (called cohorts) based on the
+first time (called birth time) that users performed FORMULA . Each cohort is then represented by the
+time bin (e.g., day, week or month) associated with the birth time The interval of
+the time bin is chosen to ensure that there are no significant social differences
+occurred in that time bin..
+Each activity tuple of a user is then assigned to the same cohort that this user belongs to.
+In the second step, social scientists capture the effect of aging by partitioning
+activity tuples in each cohort into smaller
+sub-partitions based on age. The age of an activity tuple FORMULA  is the duration
+between the birth time of that user and
+the time that user performed FORMULA . Finally, aggregated behavioral measure
+is reported for each (cohort, age) bucket.
+Back to our in-game shopping example, suppose we choose launch as the birth action
+and week as the cohort time bin interval,
+the activity tuples of player 001 are assigned to 2013-05-19
+launch cohort since the activity tuple FORMULA  (called birth activity tuple)
+indicates that player 001 first launched the game at
+that week. We further partition activity tuples in 2013-05-19 launch cohort
+into sub-partitions identified by age.
+As an example, the activity tuple FORMULA  is partitioned into the week 1 age sub-partition.
+Finally, we report the average gold spent for each (cohort, age) bucket shown in Table REF 
+and visualized in Figure REF . Each row in Figure REF  represents
+the shopping trend of a cohort measured at different ages.
+For example, column FORMULA  (under the age section)
+reports the average expenditures of the cohorts
+at the FORMULA th week (i.e., age = FORMULA ).
+TABLE 
+FIGURE 
+By looking at each row horizontally, we can see the aging effect,
+i.e., players spent more gold on buying weapons on their initial game
+sessions than their later game sessions.
+For example, for the 2013-05-19 cohort, the amount of gold spent
+was 52 in the first week, but there is a clear declining trend as
+time passes.
+On the other hand,
+by comparing different rows (i.e., reading rows vertically), we can observe
+that the drop-off trend seems to becomes less severe.
+Comparing rows 1 and 2 in our example, we observe that for the same column,
+the value of row 2 is larger than that of row 1.
+This suggests that the iterative game development indeed did a better job
+of retaining player enthusiasm as they aged, an insight which cannot be
+drawn from OLAP style results in Table REF .
+While the classic cohort analysis we presented so far has been
+very useful in many analytic applications such as retention analysis
+{{cite:de5c0fe4-e483-4d1a-9c4b-9cf8f0de88fb}}, we hope to 1) generalize the approach so that it can
+be applied to a wider range of applications and 2) extend SQL
+to support this generalized cohort analysis
+in this paper.
+There are two limitations in the standard social science style
+cohort analysis. First, social scientists typically analyze
+a whole dataset. This is because the datasets used are usually small
+and are specifically collected for a certain cohort analysis task.
+As such, there is no mechanism for extracting
+a portion of users or activity tuples for cohort analysis.
+While this task seems trivial, it has to be handled with care
+as a naive selection may lead to incorrect answers!
+Referring to our running example (from Table REF ),
+suppose we choose launch
+as the birth action, and we are interested to perform a cohort analysis
+on those tuples where time > 2013/05/22:0000.
+Now, the resultant subset of tuples
+is FORMULA . However, we no longer can perform any cohort analysis
+as the birth activity tuple FORMULA , i.e., the activity
+tuple representing player 001 first performing launch, has
+been removed.
+Second, social scientists use only the time attribute to identify cohorts.
+This is because time is considered to be the key attribute
+that determines social change. However, it is possible that some other
+attributes, such as country, may also have a significant effect on
+social differences, in which case, it may be interesting to
+perform cohorts based on the country attribute. Thus, it would be desirable
+to provide support for a more general cohort analysis task.
+FIGURE 
+In this paper, we make the following contributions to address the above issues.
+
+We define the important problem of cohort analytics in the context of a DBMS.
+
+
+We introduce an extended relation to model user activity data for cohort analytics,
+and introduce three new operators for manipulating the extended
+relation and composing cohort queries.
+Two of the operators are designed for extracting a subset of activities for cohort analysis,
+and the last one is designed for producing aggregates over arbitrary attribute combinations.
+We show that cohort queries can be expressed elegantly and concisely using the data model and the newly proposed operators.
+We also show how
+more complicated data analytics tasks can be expressed
+using a mix of traditional SQL clauses and the newly proposed operators.
+
+
+We build a columnar based cohort query engine, COHAHA, which
+implements multiple optimizations for efficient cohort query processing.
+
+
+We design a benchmark study to compare
+COHANA against alternative non-intrusive evaluation schemes in terms of cohort
+query processing performance.
+The experimental results show that COHANA is two orders superior to its
+mostly optimized counterpart, demonstrating the necessity of
+extending database systems to cater to cohort analytics,
+rather than simply running an SQL statement over
+a traditional DBMS.
+
+The rest of the paper is organized as follows:
+Section  presents the SQL based and the materialized view based approaches
+for processing cohort queries.
+Section  presents the foundations of cohort analysis.
+Section  presents our proposed columnar database based scheme
+for cohort query processing.
+Section  reports the experimental results. We present related work in Section 
+and conclude in Section .
+
+Non-intrusive Approaches to Cohort Analytics
+A least intrusive approach to supporting cohort analytics
+is to use an existing relational DBMS and
+express the cohort analysis task as a SQL query.
+We illustrate such an approach using the following cohort analysis task:
+Example 1 
+Given the launch birth action and the activity table as shown
+in Table REF  (denoted as FORMULA ), for players who play the
+dwarf role at their birth time, cohort those players based on
+their birth countries and
+report the total gold that country launch cohorts spent
+since they were born.
+
+Figure REF  shows the corresponding SQL query FORMULA  for this
+task.
+To save space, we use p, a, t, c abbreviations respectively to denote
+the player, action, time, and country
+attribute in Table REF .
+The FORMULA  employs four sub-queries (i.e., Figure REF  – Figure REF )
+and one outer query (i.e., Figure REF ) to produce the results.
+Overall, this SQL approach performs poorly for three reasons:
+
+The SQL statement FORMULA  is verbose,
+and its complexity renders it prone to mistakes.
+
+The SQL statement FORMULA  requires many joins to perform the analysis task.
+As we shall see in our experimental study, such a query processing scheme
+can be up to 5 orders of magnitude slower than our proposed solution.
+
+It requires manual tuning. For example, one may notice that we can push the selection condition
+(i.e., birthRole = "dwarf") from the outer query (Figure REF )
+to the inner sub-query (Figure REF ) to reduce the size of intermediate
+tables. Ideally, such an optimization can be performed by an intelligent optimizer.
+However, our evaluation shows that few database systems can perform
+such an optimization.
+
+To speed up the processing of the analysis task, we can
+adopt a materialized view (MV) approach that stores some
+intermediate results.
+For example, we can materialize the intermediate table cohortT
+produced by the sub-query in FORMULA  (Figure REF )
+as follows.
+CREATE VIEW MATERIALIZED cohorts as cohortT
+With cohorts, we can express the query FORMULA  in a simpler
+SQL statement consisting
+of a single sub-query (Figure REF ) and an outer query
+(Figure REF ).
+The performance of the resulting SQL expression is also
+improved since it only involves a single
+join. However, the materialized view approach also suffers from
+a number of issues.
+
+The cost of generating the MV is still high since
+it involves two joins (Figure REF  and REF ).
+
+
+The storage space for the MV is huge if the approach is used as a general
+cohort query processing strategy. Figure REF  only includes a
+single calculated birth attribute birthRole as it is the only attribute appearing in
+the birth selection condition (i.e., the condition of playing as the dwarf
+role at birth time) of the analysis task. However, if other
+calculated birth attributes are
+also involved in the birth selection condition, we need to include those
+attributes in the MV as well. In the extreme case, every possible birth
+attribute shall be included in the MV, doubling the storage space
+as compared to the original activity table.
+
+
+The MV only answers cohort queries introduced by launch birth
+action. If another birth action (e.g., shop) is used, one more MV is required.
+Obviously, this per birth action per MV approach does not scale even
+for a small number of
+birth actions due to the cost of MV construction and maintenance.
+
+
+The query performance is still not optimal. By the definition of the analysis
+task, if a player does not play as dwarf role when that player is born,
+we should exclude all activity tuples of that player in the result set.
+Ideally, this filtering operation can be performed by simply checking
+the single birth activity tuple of that player. If the birth activity tuple
+indicates that the player is not qualified, we can safely skip all activity tuples of
+that player without further checking. However, as shown in Figure REF ,
+the MV approach needs to, unnecessarily, check each activity tuple
+of a player to perform the filtering operation (i.e., comparing
+the value in birthRole attribute against dwarf).
+Building an index on the birthRole attribute cannot improve the
+situation much since index look up will introduce too many random seeks
+on large activity tables.
+
+
+Cohort Analysis Foundations
+In this paper, we seek to
+extend an existing relational
+database system to support cohort analytics.
+This section presents the data model, which includes a central new concept of an activity table, and the proposed new cohort
+operators.
+We use the term cohort to refer to a number of individuals
+who have some common characteristic in
+performing a particular action for the first time;
+we use this particular action and the attribute values of
+the common characteristics to identify the resulting cohort.
+For example, a group of users who first login
+(the particular action) in 2015 January (the common characteristic)
+is called the 2015 January login cohort.
+Similarly customers
+who make their first purchase in the United States form a
+United States purchase cohort. Broadly speaking, cohort analysis is a data
+exploration technique that
+examines longitudinal behavioral trends
+of different cohorts
+since they were born.
+Data Model
+We represent a collection of activity data as an instance of an activity relation,
+a special relation where each tuple represents the information
+associated with a single user activity. We will also call an activity relation
+an activity table. In this paper, the two terms, i.e., activity relation and
+activity table are used interchangeably.
+Formally, an activity table FORMULA  is a relation with attributes
+FORMULA  where FORMULA . FORMULA  is a string uniquely
+identifying a user; FORMULA  is also a string,
+representing an action chosen from a pre-defined collection of actions,
+and FORMULA  records the time at which FORMULA  performed FORMULA .
+Every other
+attribute in FORMULA  is a standard relational attribute.
+Furthermore,
+an activity table has a primary key constraint on
+FORMULA . That is,
+each user FORMULA  can only perform a specific action FORMULA  once at each time instant.
+As exemplified in Table REF ,
+the first three columns correspond to the user (FORMULA ), timestamp (FORMULA ) and
+action (FORMULA ) attribute, respectively.
+Role and Country are dimension attributes, which respectively specify the role
+and the country of player FORMULA  when performing FORMULA  at FORMULA .
+Following the two dimension attributes is gold, a measure attribute representing
+the virtual currency that player FORMULA  spent for this action.
+We shall continue to use Table REF 
+as our running example for describing each concept in cohort analysis.
+
+Basic Concepts of Cohort Analysis
+We present three core concepts of cohort analysis: birth action, birth time
+and age. Given an action
+FORMULA , the birth time of user FORMULA  is the
+first time that FORMULA  performed FORMULA  or -1 if FORMULA  never performed FORMULA ,
+as shown in Definition REF .
+An action FORMULA  is called a birth action if FORMULA  is used to define
+the birth time of users.
+Given an activity table FORMULA ,
+and a birth action FORMULA ,
+a time value FORMULA  is called the birth time
+of user FORMULA  if and only if
+FORMULA 
+where FORMULA  and FORMULA  are the standard projection and selection operators.
+Given an activity table FORMULA ,
+and a birth action FORMULA ,
+a tuple FORMULA  is
+called the birth activity tuple of user FORMULA  if and only if
+FORMULA 
+Since FORMULA  is the primary key of FORMULA , we conclude
+that for each user FORMULA , there is only one birth activity tuple of FORMULA  in FORMULA 
+for any birth action FORMULA  that FORMULA  performed.
+Given the birth time FORMULA , a numerical value FORMULA  is called the age of user
+FORMULA  in tuple FORMULA , if and only if
+FORMULA 
+The concept of age is designed for specifying the time point to aggregate
+the behavioral metric of a cohort. In cohort analysis, we calculate the
+metric only at positive ages. That is, if the age of an user in a tuple is negative,
+that tuple will be excluded from the final report.
+The activity tuple with a positive
+age is called an age activity tuple. Furthermore, in practical
+applications, the age FORMULA  is normalized by a certain time unit such as a day,
+week or month. Without loss of generality, we assume that the
+granularity of FORMULA  is a day.
+Consider the example activity relation in Table REF .
+Suppose we use the action launch as the birth action.
+Then, the activity tuple FORMULA  is
+the birth activity tuple of player 001, and the birth time is 2013/05/19:1000.
+The activity tuple FORMULA  is an age tuple of player 001 produced at
+age 1.
+
+Cohort Operators
+We now present operations on a single activity table.
+In particular, we propose two new operators to retrieve a subset of
+activity tuples
+for cohort analysis.
+We also propose a cohort aggregation operator
+for aggregating activity tuples for each (cohort, age) combination.
+As we shall see, these three operators enable us to express
+a cohort analysis task in a very concise and elegant way that is
+easy to understand.
+The FORMULA  Operator
+The birth selection operator FORMULA  is used to retrieve activity
+tuples of qualified users whose birth activity tuples satisfy a specific condition FORMULA .
+Given an activity table FORMULA , the birth selection operator FORMULA  is defined as
+
+bC,e(D) = {dD  |  i d[Au] C(di,e) = true}
+
+where FORMULA  is a propositional formula and FORMULA  is a birth action.
+Consider the activity relation FORMULA  in Table REF . Suppose we want to
+derive an activity table from FORMULA  which retains all activity tuples of
+users who were born from performing launch action
+in Australia. This can be achieved with the following expression,
+which returns FORMULA .
+FORMULA 
+
+The FORMULA  Operator
+The age selection operator FORMULA  is used to generate an activity table from FORMULA 
+which retains all birth activity tuples in FORMULA  but only
+a subset of age activity tuples which satisfy a condition FORMULA .
+Given an activity table FORMULA , the age selection operator FORMULA 
+is defined as
+
+gC,e(D) =  {dD | i d[Au]
+ ((d[At] = ti,e) (d[At] > ti,e C(d) =
+true)) }
+
+where FORMULA  is a propositional formula and FORMULA  is a birth action.
+For example, suppose shop is the birth action,
+and we want to derive an activity table which retains
+all birth activity tuples in Table REF 
+but only includes age activity tuples which indicate users performing
+in-game shopping in all countries but China. The following expression can
+be used to obtain the desired activity table.
+FORMULA 
+The result set of the above selection operation is FORMULA 
+where FORMULA  is the birth activity tuple of player 001, FORMULA  and FORMULA  are
+the qualified age activity tuples of player 001. The activity tuples
+FORMULA  and FORMULA 
+are the birth activity tuple and the qualified age activity tuple of player 002.
+A common requirement in specifying FORMULA  operation is that
+we often want to reference the attribute values of birth activity tuples
+in FORMULA . For example, given the birth action
+shop, we may want to select age activity tuples
+whose users perform in-game shopping at the same location as their
+country of birth. We introduce
+a  function for this purpose. Given an attribute
+FORMULA , for any activity tuple FORMULA , the FORMULA  returns the value of
+attribute FORMULA  in FORMULA 's birth activity tuple:
+FORMULA 
+where FORMULA  and FORMULA  is the birth action.
+In our running example, suppose shop is the birth action, and we want
+to obtain an activity table which retains all
+birth activity tuples but only include
+age activity tuples which indicate that players performed shopping in the same role
+as they were born.
+The following expression is used to retrieve the desired results.
+FORMULA 
+The result set of the above operation is FORMULA  where
+FORMULA  and FORMULA  are the birth activity tuples of player 001 and player 002, respectively,
+and FORMULA  and FORMULA  are the qualified age activity tuples.
+
+The FORMULA  Operator
+We now present the cohort aggregation operator FORMULA .
+This operator produces cohort aggregates in two steps: 1) cohort users and 2)
+aggregate activity tuples.
+In the first step, given an activity table FORMULA  with its attribute set FORMULA 
+and a birth action FORMULA , we pick up a cohort attribute set FORMULA 
+such that FORMULA  and assign each user FORMULA 
+to a cohort FORMULA  specified by FORMULA . Essentially, we divide users
+into cohorts based on the projection of users' birth activity tuples onto a specified
+cohort attribute set.
+In our running example, suppose launch is the birth action and the cohort
+attribute set is FORMULA ={country}, player 001 in Table REF 
+is assigned to the Australia launch cohort, player 002 is assigned
+to the United States launch cohort and player 003 is assigned to the China
+launch cohort.
+After assigning users to cohorts, in the second step, we divide activity tuples
+(including both the birth activity tuples and the age activity tuples) into
+the same cohorts that the user belonged to for aggregation.
+Given an activity table FORMULA , the cohort aggregation operator
+FORMULA  is defined as
+
+cL,e,fA(D) =  {(dL, g, s, m) |
+ Dg {(d, l, g) | d D i d[Au]
+             l = di,e[L] g = d[At] - ti,e }
+ (dL, g) l, g(Dg)
+ s = Count(Audg[l]=dL(Dg))
+ m = fA(dg[l] = dL dg[g] = g g > 0(Dg))
+
+where FORMULA  is a cohort attributes set, FORMULA  is a birth action
+and FORMULA  is a standard aggregation function with respect to the attribute FORMULA .
+In summary, the cohort aggregation operator takes an activity table FORMULA 
+as input and produces a normal relational table FORMULA  as output.
+Each row in the output table FORMULA  consists of four parts FORMULA , where FORMULA  is the projection of birth activity tuples onto
+the cohort attributes set FORMULA  and identifies the cohort,
+FORMULA  is the age, i.e., the time point that we report the aggregates,
+FORMULA  is the size of the cohort, i.e., the number of users in the cohort specified by
+FORMULA , and FORMULA  is the aggregated measure produced by the aggregate
+function FORMULA . Note that we only apply FORMULA  on age activity tuples with FORMULA .
+
+Properties of Cohort Operators
+We note that the two selection operators,
+FORMULA  and FORMULA , are commutative
+if they involve the same birth action.
+FORMULA 
+Based on this property, we can, as we shall see in Section ,
+push the birth selection operator down the query plan to
+optimize cohort query evaluation.
+
+The Cohort Query
+Given an activity table FORMULA  and operators
+FORMULA , FORMULA , FORMULA ,
+and FORMULA , a cohort query FORMULA  can be
+expressed as a composition of those operators that takes FORMULA  as input and produces
+a relation FORMULA  as output with the constraint that the same birth action
+FORMULA  is used for all cohort operators in FORMULA . To specify a cohort query, we
+propose to use the following SQL-style SELECT statement.
+SELECT ... FROM  FORMULA
+BIRTH FROM action = FORMULA  [ AND FORMULA  ]
+[ AGE ACTIVITIES IN FORMULA  ]
+COHORT BY  FORMULA
+In the above syntax, FORMULA  is the birth action that is specified by the data analyst
+for the whole cohort query. The order of BIRTH FROM and AGE ACTIVITIES IN
+clauses is irrelevant,
+and the birth selection (i.e., FORMULA ) and age
+selection (i.e., FORMULA ) clauses are optional.
+We also introduce two keywords AGE and COHORTSIZE for data analysts
+to retrieve the calculated columns produced by FORMULA 
+in the SELECT list. Note that except for projection, we disallow other relational
+operators such as FORMULA  (i.e., SQL WHERE) and FORMULA  (i.e., SQL GROUP BY),
+and binary operators like intersection and join,
+in a basic cohort query.
+With the newly developed cohort operators, the cohort analysis task
+presented in Example 1 can be expressed by the following query:
+FORMULA : SELECT country, COHORTSIZE, AGE, Sum(gold) as spent
+      FROM FORMULA  AGE ACTIVITIES IN action = "shop"
+      BIRTH FROM action = "launch" AND role = "dwarf"
+      COHORT BY country
+
+
+Extensions
+Our cohort query proposal can be extended in many directions to enable even more
+complex and deep analysis. First, it would be great to mix cohort queries
+with SQL queries in a single query. For example, one may want to use a SQL query to
+retrieve specific cohort trends produced by a cohort query for further analysis.
+If the cohort operation is specified by multiple attributes (e.g.,
+COHORT BY time, country, role), one may want to apply a SQL CUBE
+operator on top of the cohort query results for OLAP analysis.
+This mixed querying requirement can be achieved by applying the standard SQL
+WITH clause to encapsulate a cohort query as a sub-query that can
+be processed by an outer SQL query. The following example demonstrates
+how to use a mixed query to retrieve specific cohort spent trends
+reported by FORMULA  for further analysis.
+WITH cohorts AS (FORMULA )
+SELECT cohort, AGE, spent FROM cohorts
+WHERE cohort IN ["Australia", "China"]
+However, to ensure the correctness of a mixed query,
+certain rules must be established to prevent SQL queries from
+removing birth activity tuples incidently.
+First, for a mixed query,
+the outermost query must be a SQL query. That is, cohort queries can only
+serve as sub-queries inside a mixed query.
+Furthermore, we only allow SQL queries
+(no matter sub-queries or the outer query) to reference
+cohort sub-queries in the FROM or WHERE clauses and
+prohibit a cohort sub-query from referencing other SQL or cohort sub-queries.
+In addition, a mixed query should be evaluated in the order of first cohort
+sub-queries and then others.
+This “cohort query first" evaluation scheme ensures that
+no SQL queries can incidentally remove birth activity tuples
+during query processing.
+Another extension is to introduce binary cohort operators (e.g., join, intersection etc.)
+for analyzing multiple activity tables. We leave the details of evaluating
+a mixed query and other interesting extensions in a future paper.
+In the rest of this paper, we shall focus on the approaches for evaluating
+a single cohort query over a single activity table.
+
+Mapping Cohort Operations to SQL Statements
+Before leaving this section, we shall demonstrate that given
+a materialized view (MV) built for a specific birth action,
+the proposed cohort operators can be implemented by SQL sub-queries.
+This enable us to pose cohort queries composed of
+newly developed operators in the context of a non-intrusive
+mechanism.
+As shown in Section , the
+MV approach stores each activity tuple of user FORMULA  along with
+FORMULA 's birth attributes. Thus, to implement the birth selection operator,
+one can use a SQL SELECT statement
+with a WHERE clause specifying the birth selection condition
+on the materialized birth attributes. Similarly, the age selection
+operator can be simulated by a SQL SELECT statement with
+a WHERE clause specifying the age selection condition
+along with an additional predicate to include birth activity tuples.
+The cohort aggregation operator can be implemented by
+applying a SQL GROUP BY
+aggregation operation on the joined results between the
+cohortSize table and the qualified age activity tuples.
+As an example, Figure REF  demonstrates for FORMULA  of
+Example 1 the correspondence between the three proposed cohort
+operators and the equivalent SQL statements posed on the MV built for the launch
+birth action. As in
+Figure REF , the player, action and time attributes are respectively abbreviated to p, a, and t.
+bc, br, bt and age are four attributes additionally materialized along with
+the original activity table. The first three attributes, bc, br and bt,
+respectively represent the birth attributes for country, role and time.
+It should be noted that the SQL statements of Figure REF 
+are separated out for ease of exposition:
+one can optimize them by combining Figure REF 
+and REF  into a single SQL statement, as we do in experiments.
+FIGURE 
+
+COHANA: Cohort Query Engine
+FIGURE 
+To support cohort analytics with the newly designed cohort operators,
+we present four extensions to a columnar database: 1) a fine tuned columnar storage
+format for persisting activity tables; 2) a modified table scan operator
+capable of skipping age activity tuples of unqualified users;
+3) a native efficient implementation of cohort operators; 4)
+a query planner capable of utilizing the cohort operator property
+(i.e., Equation (REF )) for optimization.
+We have implemented the proposed techniques in a columnar based
+query engine, COHAHA, for performance study. Figure REF  presents
+the architecture of COHAHA which includes four modules:
+parser, catalog, storage manager and query executor. The first two
+modules are trivial, and we shall focus on the other two modules.
+The Activity Table Storage Format
+We store an activity table FORMULA  in the sorted order of
+its primary key FORMULA . This storage layout
+has two nice properties: 1) activity tuples of the same
+user are clustered together; we refer to this as the
+clustering property;
+2) The activity tuples of each user
+are stored in a chronological order; this is called
+the time ordering
+property. With these two properties, we can efficiently
+find the birth activity tuple of any user for any birth action in a single
+sequential scan. Suppose the activity tuples of user FORMULA  is stored between
+FORMULA  and FORMULA . To find the birth activity tuple of FORMULA  for
+any birth action FORMULA , we just iterate over each tuple between FORMULA  and
+FORMULA  and return the first tuple FORMULA  satisfying FORMULA .
+We employ a chunking scheme and various
+compression techniques to speed up cohort query processing.
+We first horizontally partition the activity table into multiple data chunks
+such that the activity tuples of
+each user are included in exactly one chunk. Then, in each chunk, the activity
+tuples are stored column by column.
+For each column in a data chunk, we choose an appropriate compression scheme
+for storing values based on the column type.
+For the user column FORMULA , we choose Run-Length-Encoding (RLE) scheme.
+The values in FORMULA  is stored as
+a sequence of triples FORMULA , where FORMULA  is the user in FORMULA ,
+FORMULA  is the position of the first appearance of FORMULA  in the column,
+and FORMULA  is the number of appearances of FORMULA  in the column.
+We shall see in Section REF ,
+a modified table scan operator can directly
+process these triples and efficiently skip to the activity tuples of the next user
+if the birth activity tuple of the current user is not qualified with respect to
+the birth selection condition.
+For the action column FORMULA  and other string columns, we employ a two level
+compression scheme presented in {{cite:5a6c77e3-2af5-443a-b73a-4bdcb7e6be64}} for storing
+the values. More details of this encoding scheme can be found
+in {{cite:5a6c77e3-2af5-443a-b73a-4bdcb7e6be64}}.
+For each such column FORMULA , we first build and persist a global dictionary which
+consists of the sorted unique values of FORMULA .
+Each unique value of FORMULA  is then assigned a global-id, which is the position of
+that value in the global dictionary.
+For each data chunk, the sorted global-ids of the unique values of FORMULA  in that chunk
+form a chunk dictionary. Given the chunk dictionary, each value of FORMULA  in that chunk
+can be represented as a chunk-id, which is the position of the global-id of that
+value in the chunk dictionary. The chunk-ids are then persisted immediately after the chunk
+dictionary in the same order as the respective values appear in FORMULA .
+This two level encoding scheme enables
+the efficient pruning of chunks where no users perform the birth action.
+For a given birth action FORMULA , we first perform a binary search
+on the global index to find its global-id FORMULA . Then, for each data
+chunk, we perform a binary search
+for FORMULA  in the chunk dictionary. If FORMULA  is not found, we can safely
+skip the current data chunk since no users in the data chunk perform FORMULA .
+For FORMULA  and other integer columns, we employ a two-level delta encoding
+scheme which is similar to the one designed for string columns. For each column
+FORMULA  of this type, we first store the MIN and MAX value of FORMULA  for the whole
+activity table as the global range. Then, for each data chunk,
+the MIN and MAX values are extracted as the chunk range
+from the segment of FORMULA  in that chunk and persisted as well.
+Each value of the column segment is then finally stored as the delta (difference) between it
+and the chunk MIN value. Similar to the encoding scheme for string columns,
+this two-level delta encoding scheme also enables the efficient pruning of chunks
+where no activity tuples fall in the range specified in the birth selection
+or age selection operation.
+With the above two encoding schemes, the final representation of string columns
+and integer columns are arrays of integers within a small range.
+We therefore further employ
+integer compression techniques to reduce the storage space. For each integer
+array, we compute the minimum number of bits, denoted by FORMULA , to represent the
+maximum value in the array, and then sequentially pack as many values as
+possible into a computer word such that each value only occupies FORMULA  bits.
+Finally, we persist the resulting computer words
+to the storage device. This fixed-width encoding scheme is by no means
+the most space-saving scheme. However, it enables the compressed values to be
+randomly read without decompression. For each position in the original integer
+array, one can easily locate the corresponding bits in the compressed computer
+words and extract the value from these bits.
+This feature is of vital importance for efficient cohort query processing.
+
+Cohort Query Evaluation
+FIGURE 
+This section presents how to evaluate a cohort query over the activity table
+compressed with the techniques proposed in Section REF .
+We shall use the cohort query FORMULA  as our running example. The overall
+query processing strategy is as follows. We first generate a logical query plan,
+and then optimize it by pushing down the birth selections along the plan.
+Next, the optimized query plan is executed against each data chunk. Finally,
+all partial results produced by the third step are merged together to produce
+the final result. The final merging step is trivial and we shall only
+present the first three steps.
+The cohort query plan we introduced
+in this paper is a tree of physical operators consisting of four operators:
+TableScan, birth selection FORMULA , age selection FORMULA 
+and cohort aggregation FORMULA .
+Like other columnar databases, the projection operation is implemented in a pre-processing step:
+we collect all required columns at query preparation stage and then pass those
+columns to the TableScan operator which retrieves the values for each
+column.
+In the query plan, the root and the only leaf node are the aggregation operator,
+FORMULA , and the TableScan operator,
+respectively, and between them is a sequence of birth selection
+operators and age selection operators.
+Then, we push down the birth selection operators along the query plan
+such that they are always below the age selection operators.
+This push-down optimization is always feasible,
+since according to equation (REF ), we can arbitrarily swap the order
+of FORMULA  and FORMULA  operators in any sequence consisting of
+these two operators. Figure REF  shows the query
+plan for the cohort query of FORMULA .
+We always employ this push-down optimization since,
+as we shall see in Section REF , a special designed
+TableScan implementation can efficiently skip age activity tuples
+without further processing
+for users whose birth activity tuples do not satisfy the birth selection
+condition. Therefore, the cost of evaluating
+birth selection operators before age selection operators is always less than
+the cost incurred from the reverse evaluation sequence in terms of the number of
+activity tuples processed.
+After pushing down birth selections, the resulting query plan
+will be executed against each data chunk. Before the execution, we apply an additional
+filtering step by utilizing the FORMULA  column's two-level compression scheme
+to skip data chunks where no users perform the birth action FORMULA . The concrete
+processing strategy is presented in Section REF .
+In practice, we find that this intermediate filtering step is particularly
+useful if the birth action is highly selective (i.e., only a few users
+performed that birth action).
+We will present the implementation of the physical operators in
+the rest of this section.
+
+The TableScan Operator
+We augment the standard TableScan operator of columnar databases
+for efficient cohort query processing.
+The modified TableScan operator performs scanning operation over
+the compressed activity table that we proposed in Section REF .
+We mainly add two additional functions to a standard columnar database
+TableScan operator:  and . The 
+function returns the activity tuple block of the next user; the 
+skips the activity tuples of the current user.
+The modified TableScan operator is implemented
+as follows. For each data chunk, in the query initialization stage,
+the TableScan operator collects all (compressed) chunk columns referenced in the query
+and maintains for each chunk column a file pointer which is initialized
+to point to the beginning of that chunk column.
+The implementation of  function
+is identical to the standard TableScan operator of a columnar database.
+The  is implemented by first
+retrieving the next triple FORMULA  of FORMULA  column and then advancing the file pointer
+of each other referenced column to the beginning of the column segment corresponding to user FORMULA .
+The  is implemented in a similar way. When it is called, the 
+function first calculates the number of remaining
+activity tuples of the current user,
+and then advances the file pointers of all columns by the same
+number.
+
+Cohort Algorithms
+This section develops algorithms for the implementation of cohort operators
+over the proposed storage format for activity tables.
+KwOrOR
+[tb]
+FORMULA  operator implementation
+
+FORMULA 
+FORMULA  
+FORMULA 
+FORMULA .
+
+ FORMULA
+FORMULA . 
+FORMULA  
+
+
+FORMULA  has more activity tuples 
+ FORMULA
+there are more users in the data chunk 
+FORMULA 
+FORMULA 
+FORMULA  
+FORMULA  
+Found FORMULA  
+Found 
+FORMULA 
+
+FORMULA 
+
+
+
+Algorithm REF  presents the implementation of the birth selection
+operator FORMULA .
+It employs an auxiliary function
+FORMULA  (line 1 – line 5) for finding the birth
+activity tuple
+of user FORMULA , given that FORMULA  is the first activity
+tuple of FORMULA  in the data chunk and FORMULA  is the birth action.
+The  function finds FORMULA 's birth activity
+tuple by iterating over each next tuple FORMULA 
+and checks whether FORMULA  belongs to FORMULA  and whether
+FORMULA  is the birth action FORMULA  (line 3).
+The first activity tuple FORMULA  matching the
+condition is the required birth activity tuple.
+To evaluate FORMULA , Algorithm REF 
+first opens the input data chunk FORMULA 
+and initializes the global variable FORMULA  (line 7 – line 8)
+which points to the user currently being processed.
+In the  function, we return
+the next activity tuple FORMULA  of FORMULA  if FORMULA  is
+qualified with respect to the birth selection condition (line 11).
+If FORMULA 's activity tuples are exhausted, we retrieve
+the next user block by calling the  function of
+the TableScan operator (line 13).
+Then, we find the birth activity
+tuple of the new user and check if it satisfies the birth selection condition
+(line 16 – line 17). If the new user is qualified, its birth activity tuple
+will be returned; otherwise all the activity tuples of this user will be skipped
+using the  function so that its next user can be ready for
+processing. Therefore, one can continuously call the  function to
+retrieve the activity tuples of users that are qualified with respect to the
+birth selection condition.
+The implementation of FORMULA  is much simpler than
+FORMULA . We also employ the user block processing
+strategy. For each user block, we first locate the birth activity tuple
+and then return the birth activity tuple and qualified
+age activity tuples.
+[tb]
+FORMULA  operator implementation
+
+FORMULA  
+FORMULA  *[f]Cohort size hash table
+FORMULA  *[f]Cohort metric hash table
+there are more users in FORMULA  
+FORMULA  
+FORMULA  
+FORMULA  
+FORMULA  
+FORMULA  is qualified 
+FORMULA  
+FORMULA  has more qualified age activity tuples 
+FORMULA  
+update FORMULA  with  FORMULA
+Retrieve next key FORMULA  from FORMULA  
+FORMULA 
+
+
+Algorithm REF  presents the implementation of FORMULA 
+operator. The main logic is implemented in the  function.
+The function first initializes two hash tables FORMULA  and FORMULA  which
+respectively store the cohort size and per data chunk
+aggregation result for each (cohort, age) partition (line 2 – line 6).
+Then, the  function iterates over each user block and updates FORMULA 
+for each qualified user (determined by FORMULA  and
+FORMULA  for all qualified age activity tuples (determined by FORMULA )
+(line 10 – line 14). To speed up the query processing, we further
+follow the suggestions presented in {{cite:a83816ee-f6f8-4f71-bc25-38d8eaf11e08}}, {{cite:5a6c77e3-2af5-443a-b73a-4bdcb7e6be64}} and
+use array based hash tables for aggregation. In practice, we find
+that the use of
+array-based hash tables in the inner loop of cohort aggregation
+significantly improves the performance since modern CPUs
+can highly pipeline array operations.
+
+Optimizing for User Retention Analysis
+One popular application of cohort analysis is to show the trend of
+user retention {{cite:de5c0fe4-e483-4d1a-9c4b-9cf8f0de88fb}}. These cohort queries
+involve counting distinct number of users for each (cohort, age)
+combination. This computation is very costly in terms of memory
+for fields with a large cardinality, such as FORMULA .
+Fortunately, our proposed storage format has a nice property
+that the activity tuples of any user are included in only one chunk.
+We therefore implement a UserCount() aggregation function for
+the efficient counting of distinct users by performing counting against each chunk
+and returning the sum of the obtained numbers as the final result.
+
+Analysis of Query Performance
+Given there are FORMULA  users in the activity table FORMULA , each user
+produces FORMULA  activity tuples, it can be clearly seen that, to evaluate
+a cohort query composed of FORMULA , FORMULA  and
+FORMULA  operators, the
+query evaluation scheme we presented so far only needs to process
+FORMULA  activity tuples in a single pass,
+where FORMULA  is the number of qualified users
+with respect to the birth selection condition.
+Therefore, the query processing time grows linearly with FORMULA ,
+and therefore approaches optimal performance.
+
+A Performance Study
+This section presents a performance study to evaluate the effectiveness
+of our proposed COHANA engine. We mainly
+perform two sets of experiments.
+First, we study the effectiveness of COHANA,
+and its optimization techniques.
+In the second set of experiments,
+we compare the performance
+of different query evaluation schemes. We implement the SQL based approach and the materialized
+view based approach on two relational databases: Postgres and MonetDB, and compare
+the performance of these two systems with COHANA. For the two relational
+databases, we allow them to use all the free memory for buffering, and leave all other
+settings as default.
+Experimental Environment
+All experiments are run on a high-end workstation. The workstation is equipped with
+a quad-core Intel Xeon E3-1220 v3 3.10GHz processor and 8GB of memory. The disk speed
+reported by hdparm is 14.8GB/s for cached reads and 138MB/s for buffered
+reads.
+The dataset we used is produced by a real mobile game application.
+The dataset consists of 30M activity tuples contributed by 57,077 users
+worldwide from 2013-5-19 to 2013-06-26, and occupies a disk space of 3.6GB in
+its raw csv format. In addition to the required
+user, action and action time attributes, we also include the country, city and role as
+dimensions and session length and gold as measures.
+Users in the game played 16 actions in total, and we choose the launch,
+shop and achievement actions as the birth actions.
+In addition, we manually scale the dataset and study
+the performance of three cohort query evaluation schemes on different dataset size.
+Given a scale factor X, we produce a dataset consisting of X times users.
+Each user has the same activity tuples as the original dataset
+except with a different user attribute.
+For the SQL based approach, we manually translate the cohort
+query into a SQL query as exemplified in Figure REF .
+For the materialized view approach,
+we manually materialize the view using CREATE TABLE AS command.
+For each birth action, we materialize the age and a birth attribute
+set of time, role, country and city attribute in its materialized view.
+This materialization scheme adds 15 additional columns to the original table
+by performing six joins in total.
+We also build a cluster index on the primary key and indices on birth attributes.
+For COHANA, we choose the chunk size to be 256K.
+
+Benchmark Queries
+We design four queries (described with COHANA's cohort query syntax)
+for the benchmark by incrementally adding the cohort operators we proposed in this paper.
+The first query Q1 evaluates a single cohort aggregation operator. The second query
+Q2 evaluates a combination of birth selection and cohort aggregation. The third
+query Q3 evaluates a combination of age selection
+and cohort aggregation. The fourth query Q4 evaluates a combination of all three
+cohort operators. For each query, we report the average execution time of five runs for each system.
+Q1: For each country launch cohort, report the number of retained users who did at least
+one action since they first launched the game.
+
+SELECT country, CohortSize, Age, UserCount()
+FROM GameActions BIRTH FROM action = "launch"
+COHORT BY country
+
+Q2: For each country launch cohort born in a specific date range, report the number of retained
+users who did at least one action since they first launched the game.
+
+SELECT country, COHORTSIZE, AGE, UserCount()
+FROM GameActions BIRTH FROM action = "launch" AND
+      time BETWEEN "2013-05-21" AND "2013-05-27"
+COHORT BY country
+
+Q3: For each country shop cohort, report the average gold they spent in shopping
+since they made first shop in the game.
+
+SELECT country, COHORTSIZE, AGE, Avg(gold)
+FROM GameActions BIRTH FROM action = "shop"
+AGE ACTIVITIES IN action = "shop"
+COHORT BY country
+
+Q4: For each country shop cohort, report the average gold they spent
+in shopping in their birth country where they
+were born with respect to the dwarf role in a given date range.
+
+SELECT country, COHORTSIZE, AGE, Avg(gold)
+FROM GameActions BIRTH FROM action = "shop" AND
+      time BETWEEN "2013-05-21" AND "2013-05-27" AND
+      role = "dwarf" AND
+      country IN ["China", "Australia", "United States"]
+AGE ACTIVITIES IN actionFORMULA =FORMULA "shop" AND countryFORMULA =FORMULA Birth(country)
+COHORT BY country
+
+In order to investigate the impact of the birth selection operator and the age
+selection operator on the query performance of COHANA, we further design two
+variants of Q1 and Q3 by adding to them a birth selection condition
+(resulting in Q5 and Q6) or an age selection condition (resulting in Q7 and Q8).
+The details of Q5-Q8 are shown below.
+Q5: For each country launch cohort, report the number of retained users who did at least
+one action during the date range [d1; d2] since they first launched the game.
+
+SELECT country, COHORTSIZE, AGE, UserCount()
+FROM GameActions
+BIRTH FROM action = "launch" AND time BETWEEN FORMULA  AND  FORMULA
+COHORT BY country
+
+Q6: For each country shop cohort, report the average gold they spent in shopping
+during the date range [d1; d2] since they made their first shop in the game.
+
+SELECT country, COHORTSIZE, AGE, Avg(gold)
+FROM GameActions
+BIRTH FROM action = "shop" AND time BETWEEN FORMULA  AND  FORMULA
+AGE ACTIVITIES IN action = "shop"
+COHORT BY country
+
+Q7: For each country launch cohort whose age is less than FORMULA , report the number of retained
+users who did at least one action since they first launched the game.
+
+SELECT country, COHORTSIZE, AGE, UserCount()
+FROM GameActions BIRTH FROM action = "launch"
+AGE ACTIVITIES in AGE <  FORMULA
+COHORT BY country
+
+Q8: For each country shop cohort whose age is less than FORMULA , report the average gold they
+spent in shopping since they made their first shop in the game.
+
+SELECT country, COHORTSIZE, AGE, Avg(gold)
+FROM GameActions BIRTH FROM action = "shop"
+AGE ACTIVITIES IN action = "shop" AND AGE <  FORMULA
+COHORT BY country
+
+
+Performance Study of COHANA
+In this section we report on a set of experiments in which we vary chunk
+size and birth/age selection condition and investigate
+how COHANA adapts to such variation.
+Effect of Chunk Size
+FIGURE 
+FIGURE 
+Figures REF  and REF  respectively present the storage space COHANA requires for
+the activity table compressed with different chunk sizes,
+and the corresponding query performance.
+It is clearly seen from Figure REF  that increasing the chunk size also
+augments storage cost.
+This is because an increase in the size of a chunk will lead to more
+players included
+in that chunk. As a result, the number of distinct values in the columns of each chunk also increases,
+which in turn requires more bits for encoding values.
+We also observe that cohort queries can be processed slightly faster
+under a smaller chunk size than a larger one. This is expected
+as fewer bytes are read. However, for large datasets, a
+larger chunk size can be a better choice.
+For example, at scale 64, COHANA processes Q1 and Q3 most efficiently under 1M
+chunk size. This is because the processing of Q1 and Q3 at scale 64 is dominated
+by disk accesses, whose granularity is normally a 4KB block. Compared with a
+large chunk size, a small one leads to more part of the neighbouring columns to
+be simultaneously read when reading a compressed chunk column, and hence results
+in a longer disk read time and a lower memory efficiency due to the memory
+contention
+between the useful columns and their unused neighbours within the same chunk.
+
+Effect of Birth Selection
+In Section REF , we claim that the running time of COHANA is bounded
+by FORMULA  where FORMULA  is the total number of qualified users. This experiment studies
+the query performance of COHANA with respect to the birth selection selectivity.
+We run Q5 and Q6, which are respectively a variant of Q1 and Q3, by fixing FORMULA  to be the
+earliest birth day, and incrementing FORMULA  by one day each time. The dataset used
+in this experiment is at scale 1.
+Figure REF  presents the processing times of Q5 and Q6
+which are respectively normalized by
+that of Q1 and Q3. The cumulative distribution of user births is also given
+in this figure. We do not differentiate the birth distributions between the
+birth actions of launch and shop, as the birth distributions with respect to
+both birth actions are similar.
+It can be clearly observed from this figure that the processing time of Q5
+highly coincides with the birth distribution.
+We attribute this coincidence to the optimization of
+pushing down the birth selection operator
+and the refined birth selection algorithm which is capable of
+skipping unqualified users. The processing time of Q6, however, is not very
+sensitive to the birth distribution. This is because in Q6, users are born
+with respect to the shop action, and there is a cost in finding the
+birth activity tuple for each user. This cost is avoided in Q5 as the first activity tuple of each
+user is the birth activity tuple of this user (recall that the first action each user performed is
+launch).
+
+Effect of Age Selection
+In this experiment, we run Q7 and Q8, another variant of Q1 and Q3,
+on the dataset of scale 1 by varying FORMULA  from 1 day to 14 days to
+study the query performance of COHANA under different age selection conditions.
+Figure REF  presents the result of this experiment. As in
+Figure REF , the processing times of Q7 and Q8 are also respectively
+normalized by that of Q1 and Q3. It can be seen from
+this figure that the processing times of Q7 and Q8 exhibit different trends.
+Specifically, the processing time of Q7 increases almost linearly, while
+the processing time for Q8 increases slowly. The reason for this difference is
+that the performance of Q7 is bounded by the number of distinct users within the
+given age range, which grows almost linearly with age range.
+For Q8, the processing time mainly depends on finding the birth activity tuples and
+the aggregation performed upon the shop activity tuples.
+The cost of the former operation is fixed across various age ranges, and
+the cost of the latter operation does not change dramatically as
+the number of shop activity tuples grows slowly with the age – the aging
+effect.
+
+Comparative Study
+FIGURE 
+Figure REF  reports for each scale (factor) the execution time that each system takes to
+execute the four queries. The results of the Postgres and the MonetDB databases
+are respectively shown in the lines labelled by “PG-S/M" and in those labelled
+by “MONET-S/M", where “S" and “M" respectively mean the SQL
+and the materialized view approaches.
+As expected, the SQL based approach is the slowest as it needs multiple joins
+for processing cohort queries. With the elimination of joins, the materialized
+view based approach can reduce the query processing time by an order of
+magnitude. This figure also shows the power of columnar storage in terms of
+cohort query processing. MonetDB, a state-of-the-art columnar database, can be
+up to two orders faster than Postgres.
+Although the combination of a materialized view and columnar storage can address
+cohort queries reasonably well on small datasets; however, it is not able to
+handle large datasets. For example, it takes
+half an hour to process Q1 at scale 64.
+The proposed system, COHANA, is able to perform extremely well not only on
+small datasets, but also on large datasets. Moreover, for each query, COHANA is able to
+perform better than the MonetDB equipped with the materialized view
+at any scale. The performance gap between them is one to two orders of magnitude in most
+cases, and can be up to three orders of magnitude (Q4 at scale 32). We also
+observe that the two retention queries (Q1 and Q2) enjoy a larger
+performance gain than Q3 does and in part attribute it to the
+optimization Section REF  presents for user retention analysis.
+Finally, the generation of the materialized view is much more expensive than COHANA. As
+shown in Figure REF , at scale 64, MonetDB needs more than 60,000 seconds (16.7
+hours) to generate the materialized view from the original activity table.
+This time cost is even more expensive in Postgres, which needs more than 100,000
+seconds (27.8 hours) at scale 32. The result for Postgres at scale 64 is not
+available as Postgres is not able to generate the materialized
+view before using up all free disk space, which also implies a high storage cost
+during the generation of the materialized view.
+In a sharp contrast, COHANA only needs 1.25
+hours to compress the activity table of scale 64.
+
+Related Work
+The work related to ours is the database support for data analysis and cohort analysis.
+The requirement to support data analysis inside a database system has a long history. The early
+effort is the SQL GROUP BY operator and aggregate functions.
+These ideas are generalized with the CUBE operator {{cite:a83816ee-f6f8-4f71-bc25-38d8eaf11e08}}.
+Traditional row-oriented databases are inefficient for CUBE style OLAP analysis.
+Hence, columnar databases are proposed for solving the efficiency issue
+{{cite:e5f2fd35-93d9-4481-b8c4-7dc617144387}}, {{cite:5b796783-e023-4560-b3f9-17c6cd3bb6c1}}, {{cite:deb5af86-f80a-4a1e-b6dd-5af87620b1a9}}. Techniques such as
+data compression {{cite:825d5426-8c30-413e-a14c-9223d94f7d61}}, {{cite:a2d67046-9961-4b78-8870-22a744cbb842}}, query processing on compressed data
+{{cite:cc872372-ad9b-47c4-9d5d-5751030ff218}}, {{cite:896eae07-63a1-443c-8978-92f5ac427dd1}}, {{cite:c66f29ed-1918-43fc-a20b-51ec1891d0b5}}, array based
+aggregation {{cite:0443c79c-2516-4450-9fd1-c69fa6119114}}, {{cite:b4256e8c-fe9c-4aec-a7e1-8f7637b9718b}}, and materialized view based approaches {{cite:0af83e40-92cc-40cf-86d4-e3e60a72584b}} are
+proposed for speeding up OLAP queries.
+Albeit targeting OLAP queries which are defined on relational operators that
+are generally not applicable to cohort queries, the above techniques can also be used to
+accelerate the processing of cohort queries as we have shown in Section .
+Cohort analysis originates from social science {{cite:72e45fd1-e47f-4dba-971a-4fef0daecdd7}}.
+However, the cohort analysis approach presented
+in social science literatures has two limitations:
+1) lack of a way for specifying a subset of users
+or activity tuples for analysis; 2) only use time attribute to identify
+cohorts. These two limitations are recognized in modern
+analytical software package {{cite:94813667-48a3-40b7-bf80-f42134ae07c6}}, {{cite:de5c0fe4-e483-4d1a-9c4b-9cf8f0de88fb}}, {{cite:5a0f2f60-543a-40b0-9e3a-f16cb5eec314}}.
+These software somehow try to solve these limitations in
+their respective application domains. For example, MixPanel
+allows data analysts to select user segment for cohort analysis.
+But none of the solutions we investigated so far is general.
+For example, none of the software support Birth() filtering
+we present in this paper.
+An implicit cohort analysis is conducted in {{cite:ae38a97f-995c-4777-9b90-dc170e2c811b}} to study the behavior of
+users in a private BitTorrent community using the SQL approach.
+Compared to the above works, our effort not only generalizes the cohort analysis
+for broader spectrum of applications,
+but also is the first attempt to extend database systems to support the generalized cohort analysis.
+
+Conclusions
+Cohort analysis is a powerful tool for
+finding unusual user behavioral trends
+in large activity tables. This paper has conducted
+the first investigation of database support for cohort analysis.
+Consequently, we have introduced an extended
+relation for modeling activity data and
+extended SQL with three new operators for composing cohort queries.
+We have developed a columnar based query engine, COHAHA,
+for efficient cohort query processing.
+Our experimental results showed that COHANA
+can achieve two orders faster query performance than simply running
+SQL queries over conventional database systems,
+demonstrating the possible benefit of
+extending a database system for cohort queries over implementing
+cohort queries on top of it.

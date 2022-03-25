@@ -1,0 +1,595 @@
+
+High-Dimensional CSI Acquisition in Massive MIMO: Sparsity-Inspired
+Approaches
+Juei-Chin Shen, Member, IEEE, Jun Zhang, Member, IEEE, Kwang-Cheng Chen, Fellow, IEEE,
+and Khaled B. Letaief, Fellow, IEEE
+
+
+Massive MIMO has been regarded as one of the key technologies for
+5G wireless networks, as it can significantly improve both the spectral
+efficiency and energy efficiency. The availability of high-dimensional
+channel side information (CSI) is critical for its promised performance
+gains, but the overhead of acquiring CSI may potentially deplete the
+available radio resources. Fortunately, it has recently been discovered
+that harnessing various sparsity structures in massive MIMO channels
+can lead to significant overhead reduction, and thus improve the system
+performance. This paper presents and discusses the use of sparsity-inspired
+CSI acquisition techniques for massive MIMO, as well as the underlying
+mathematical theory. Sparsity-inspired approaches for both frequency-division
+duplexing and time-division duplexing massive MIMO systems will be
+examined and compared from an overall system perspective, including
+the design trade-offs between the two duplexing modes, computational
+complexity of acquisition algorithms, and applicability of sparsity
+structures. Meanwhile, some future prospects for research on high-dimensional
+CSI acquisition to meet practical demands will be identified.
+J.-C. Shen, J. Zhang, and K. B. Letaief are with the Department of
+Electronic and Computer Engineering, Hong Kong University of Science
+and Technology, Hong Kong (E-mail: {eejcshen, eejzhang, eekhaled}@ust.hk).K.-C. Chen is with the Graduate Institute of Communication Engineering,
+National Taiwan University, Taipei, Taiwan (E-mail: chenkc@cc.ee.ntu.edu.tw).
+Massive MIMO, channel estimation, pilot contamination, pilot sequences,
+sparsity, compressed sensing, FORMULA  minimization.
+Introduction
+Massive MIMO systems promise to boost spectral efficiency by more
+than one order of magnitude {{cite:ba120399-ff88-44df-985a-9170e3041f65}}, {{cite:8c3be8bb-beda-46d4-8474-3b0b83772b80}}. Full benefits
+of massive MIMO, however, will never come to fruition without the
+base stations (BSs) having adequate channel knowledge, which appears
+to be an extremely challenging task {{cite:f302ccc5-bf30-4d2d-a028-8f7c189fa9d4}}. The challenges
+posed by MIMO channels of very high dimension are confronted in both
+frequency-division duplexing (FDD) and time-division duplexing (TDD)
+massive MIMO systems. In the FDD mode, both the pilot-aided training
+overhead and the feedback overhead for CSI acquisition grow proportionally
+with the BS antenna size. However, the proportion of radio resources
+allocated to CSI acquisition is severely restricted by the channel
+coherence period. The situation is made worse in an environment with
+high user equipment (UE) mobility.
+In view of this, a considerable research effort has been devoted to
+TDD massive MIMO by exploiting channel reciprocity. Although the training
+overhead for TDD operation becomes proportional to the number of active
+UEs rather than that of BS antennas, the inevitable reuse of the same
+pilot in neighboring cells can seriously degrade the quality of obtained
+channel knowledge. This is because the channels to UEs in adjacent
+cells who share the same pilot will be collectively acquired by the
+BS. In other words, the desired channel obtained by the BS will be
+contaminated by interference channels. Once this contaminated channel
+knowledge is utilized for transmitting or receiving data, intercell
+interference occurs immediately and hence limits the achievable performance.
+This problem, known as pilot contamination, can not be circumvented
+simply by adding more BS antennas.
+FIGURE 
+Several attempts have been made to tackle the challenges of acquiring
+high-dimensional CSI in massive MIMO. For instance, in {{cite:7c621596-c37b-421a-9955-14cfb9bc6a81}},
+open/closed loop training that utilizes temporal and spatial channel
+statistics is proposed to reduce the amount of downlink training overhead.
+For mitigating pilot contamination, the optimal design of precoding
+matrices aimed at minimizing the square errors caused by pilot reuse
+has shown its superiority over linear precoding {{cite:1e111067-982f-4be2-a446-514ae147ce08}}. Thanks
+to the recent advances in compressed sensing {{cite:c673dc7e-84d9-4717-b5ac-4660bb7295d6}}, {{cite:9c8b1740-2a32-42b9-aa1f-5aa23c8adda5}},
+sparse signal processing has attracted much attention in such high-dimensional
+settings, which has also demonstrated its power in CSI acquisition
+in terms of reconstructing CSI from a limited number of channel measurements.
+Various sparsity structures exhibited by massive MIMO channels have
+recently been identified, thereby motivating the development of new
+strategies for CSI acquisition. Surprisingly, not only can high training
+overhead be reduced, but pilot contamination can also be resolved
+by appealing to sparsity-inspired approaches.
+In this paper, we provide a comprehensive overview of the state-of-the-art
+research on sparsity-inspired approaches for high-dimensional CSI
+acquisition. In Section II, the challenges in FDD and TDD massive
+MIMO are reviewed in detail, including a rarely mentioned issue of
+FDD pilot contamination. On the basis of different sparsity structures,
+a variety of methods for either achieving overhead reduction or alleviating
+the effects of pilot reuse are examined and compared in Section III.
+Finally, concluding remarks are made in Section IV.
+Notations: FORMULA : complex number, FORMULA : real part,
+FORMULA : FORMULA -norm, FORMULA :
+transpose, FORMULA : Hermitian transpose, FORMULA :
+FORMULA  identity matrix, FORMULA :
+normal distribution, FORMULA : expectation,
+FORMULA : zero vector, FORMULA : cardinality,
+FORMULA : the set of indices of non-zero elements,
+FORMULA : variance, FORMULA :
+the maximum element, FORMULA : vectorization,
+FORMULA : Kronecker product, FORMULA : matrix inequality, FORMULA :
+pseudo inverse.
+
+Challenges of High-Dimensional CSI Acquisition
+In massive MIMO systems with high-dimensional channels, CSI acquisition
+at BSs is a fundamentally challenging problem. In FDD massive MIMO,
+performing this task consumes a considerable amount of radio resources
+which is proportional to the dimension of channels. On the other hand,
+in TDD-mode operation, it is hard to ensure the orthogonality of pilot
+sequences in the multicell scenario as the number of overall UEs becomes
+large. As a result, the inevitable reuse of correlated pilot sequences
+in different cells, known as pilot contamination, causes capacity-limiting
+intercell interference.
+To illustrate these difficulties further, we will consider a massive
+MIMO network consisting of FORMULA  hexagonal cells. In each cell, there
+is a BS equipped with an FORMULA -element linear arrayFor simplicity, the assumption of employing linear arrays is made.
+However, most of the results discussed in this paper can be generalized
+to include the cases of using planar or cylindrical arrays., serving FORMULA  single-antenna UEs. The channel between BS FORMULA  and
+UE FORMULA  in cell FORMULA  is denoted by the FORMULA  vector FORMULA .
+The BS antenna size is supposed to be greatly larger than the number
+of served UEs.
+FDD Massive MIMO
+In the FDD mode, obtaining CSI at BSs is normally performed in two
+steps. First, each BS sends a downlink training matrix to its served
+UEs. Second, each UE estimates the desired channel based on the downlink
+measurements and feeds back acquired CSI through dedicated uplink
+feedback channels.
+During downlink training, UE FORMULA  in cell FORMULA  receives channel measurements
+FORMULA 
+where FORMULA  denotes the FORMULA 
+pilot training matrix used in cell FORMULA , FORMULA 
+is the additive noise, while the first term of the right-hand side
+(RHS) represents the desired channel measurements, and the next term
+results from intercell interference. Even without considering the
+impact of intercell interference, the required training overhead FORMULA 
+for conventional least-squares (LS) or minimum mean square error (MMSE)
+estimators to achieve a reasonable performance level still scales
+linearly with the BS antenna size. By taking intercell interference
+into account, a further increase in training overhead would occur.
+The explicit expressions of the optimal pilot training matrices (FORMULA )
+are provided in {{cite:fa0246d9-f5d3-46a2-8263-5cecd89e8de8}} for single-cell networks. In {{cite:25fa974f-7e85-4172-b7ae-7be795d75fea}},
+the optimal design of training matrices for multicell MIMO-OFDM systems
+is considered.
+What makes the situation worse is that typical feedback channels are
+finite-rate. This implies that only quantized versions of channel
+estimates can be fed back to BSs. If there are predefined codebooks
+consisting of precoding vectors, then the index of the optimal codebook
+vector is required to be sent back {{cite:8232c2c5-f6cb-4d34-8c0c-4251f3504bb7}}, {{cite:7ad398cf-0bac-422f-96f9-9aa090bb851b}}.
+However, either the amount of quantized CSI or the size of codebooks
+increases in proportion to the number of BS antennas, and it in turn
+makes these two limited feedback techniques impractical in FDD massive
+MIMO.
+Note that when the same training matrix is repeatedly used in multiple
+cells, i.e., FORMULA ,
+this can be regarded as pilot contamination in FDD massive MIMO. As
+a result of such contamination, as shown in Fig. REF (a),
+BS FORMULA  will acquire the composite channel FORMULA 
+rather than the desired channel FORMULA , given the feedback
+channel being error-free and the additive noise being ignored. Despite
+this fact, utilizing this composite CSI to form a precoding vector
+and transmit signals at BS FORMULA  will not cause serious interference
+to UEs in the neighboring cells. For instance, given that maximum
+ratio transmission (MRT) precoding is employed, the transmitted signal
+from BS FORMULA  can be expressed as FORMULA 
+where FORMULA  is the signal intended for UE FORMULA  within the cell,
+and FORMULA 
+denotes the MRT precoding vector. During the downlink transmission
+phase, the received interference at UE FORMULA  in cell FORMULA  due to BS
+FORMULA  is given by
+FORMULA 
+
+When the number of BS antennas grows without limit, the channel vectors
+are asymptotically orthogonal. Thus, the channel products FORMULA 
+approach zero and so does the interference FORMULA . In other
+words, intercell interference caused by pilot contamination diminishes
+asymptotically with increasing BS antenna size. This implies that
+there is no need to mitigate intercell interference by making training
+matrices distinct from each other in the asymptotic regime. Hence,
+the existing literature rarely addresses the issue of pilot contamination
+in FDD massive MIMO.
+Note that uplink training in the FDD mode is not considered here.
+An explanation for this is provided as follows. The uplink CSI is
+mainly utilized for data acquisition in a multiple-access channel,
+instead of a broadcast channel. This means that more advanced signal
+processing techniques, such as blind multiuser detection, can be applied
+at the BS side. Thus, pilot-aided training may not be the best choice
+and CSI acquisition is not necessarily separated from data acquisition.
+
+TDD Massive MIMO 
+Making massive MIMO operate in the TDD mode is a promising way to
+circumvent the identified difficulties in the FDD mode. Owing to channel
+reciprocity in the TDD mode, the CSI obtained via uplink training
+can be utilized for downlink transmission. More importantly, the cost
+of uplink training now increases linearly with the number of active
+UEs rather than that of BS antennas. Typically, for obtaining accurate
+CSI, it requires that each UE transmits an orthogonal pilot sequence
+to its serving BS. However, the number of available orthogonal pilot
+sequences is limited by the ratio of the channel coherence interval
+to the channel delay spread {{cite:d46575f3-4a5e-4419-9ec5-b2a16f098152}}, which may be small
+due to the mobility of UEs or adverse physical environments. When
+the number of overall UEs becomes large, the situation of using non-orthogonal
+pilot sequences, known as pilot contamination, inevitably arises.
+A consequence of pilot contamination is intra- and inter-cell interference.
+FIGURE 
+During the uplink training phase, the received signal at the FORMULA th
+BS is given by
+FORMULA 
+where FORMULA 
+consists of channel vectors from UEs in the FORMULA th cell to the FORMULA th
+BS, the columns of FORMULA  form a set
+of FORMULA  pilot sequences FORMULA ,
+and FORMULA  denotes an additive noise
+matrix. To illustrate the case of intercell interference, assume that
+the same set of orthogonal pilot sequences is reused in each cell,
+i.e., FORMULA 
+and FORMULA  for FORMULA ,
+as shown in Fig. REF (b). Employing the LS estimator
+yields the channel estimate
+FORMULA 
+where the rows of FORMULA  are given by FORMULA 
+when ignoring the noise. During downlink transmission, using estimates
+FORMULA  to form the transmit signal FORMULA ,
+where FORMULA 
+are MRT precoding vectors, will cause interference
+FORMULA 
+to UE FORMULA  in cell FORMULA . Though the second term on the RHS of (REF )
+decreases with the increasing BS antenna size, the first term, which
+does not vanish, makes the received signal-to-interference-plus-noise
+ratio (SINR) at UE FORMULA  in cell FORMULA  converge to a limit and becomes
+the performance limiting factor.
+The current investigation into TDD pilot contamination focuses on
+its impact on the received SINR or the sum rate when linear precoders/detectors
+are applied. However, very little is known about its impact on the
+system equipped with nonlinear precoders/detectors. A recent work
+{{cite:421291f2-4dfe-4663-8db9-fd3247db2b2a}} provides an interesting perspective on the
+user capacity of pilot-contaminated massive MIMO which quantifies
+the maximum number of admissible UEs given their own SINR requirements.
+As shown in Fig. REF , the user capacity of
+three schemesThe pilot sequences employed in the GWBE, WBE, and FOS schemes are
+respectively generalized Welch bound equality (GWBE) sequences, WBE
+sequences, and finite orthogonal sequences (FOS) whose correlation
+among sequences is either 1 or 0. The same downlink power allocation,
+FORMULA , is used in the
+three schemes. of joint pilot design and transmit power allocation is fundamentally
+limited by the length of pilot sequences. For further details about
+pilot contamination in TDD massive MIMO, the study {{cite:6f7774b0-6a98-4c87-8652-1af66d82493d}}
+and references therein should be consulted.
+
+Sparsity-Inspired CSI Acquisition
+Despite the challenges imposed by the high dimensionality of channel
+matrices, a number of research efforts have sought to address them
+and have achieved reasonably efficient CSI acquisition. In particular,
+sparsity-inspired approaches have been proved to be powerful tools,
+as presented below.
+FDD Massive MIMO
+The Joint CSI Recovery Method
+Authors of {{cite:18e4fd3c-6164-4f90-a5b4-39517ab2479f}} proposed a method for low-overhead pilot
+training in the single-cell scenario, taking advantage of channel
+sparsity. Provided that a uniform linear array with critically spaced
+antennas is employed at the BS, the channel FORMULA , where
+indices of BSs are discarded in the single-cell scenario, exhibits
+a sparse representation FORMULA  in the angular
+domain, i.e.,
+FORMULA 
+where FORMULA  is a discrete Fourier transform (DFT) matrix whose
+columns form an angular basis. The cardinality of FORMULA 
+can be reasonably assumed to be greatly less than FORMULA  because of
+limited local scattering at the BS whose antenna array mounted higher
+than surrounding scatterers. Additionally, based on the results in
+{{cite:e2aa55dd-3c82-45b2-8059-189c4676386c}}, it has been argued that the channels to UEs are
+likely to share a partially common support in the angular domain,
+i.e., FORMULA .
+In order to utilize the channel sparsity and common support property
+simultaneously, channel measurements acquired at UEs are fed back
+to the serving BS via error-free feedback channels. Hence, a joint
+channel recovery problem can be formulated as follows:
+FORMULA 
+Using orthogonal matching pursuit (OMP) as a basis, a greedy algorithm
+has been proposed to efficiently solve this problem. The simulation
+results show that the required training overhead for this recovery
+algorithm can be significantly less than that for the conventional
+LS estimator. Moreover, the mean square error (MSE) performance improves
+with the increasing cardinality of FORMULA .
+One major concern about this joint recovery approach is the underlying
+assumption of perfect channel measurements being fed back. As practical
+feedback channels are rate-limited, it is more reasonable to assume
+quantized measurements at the BS. The impact of quantization on the
+channel recovery performance requires further investigation. On the
+other hand, it has been suggested that the amount of channel measurements
+that is needed at the BS should be adaptively adjusted according to
+the sensitivity of the system performance to the CSI inaccuracy {{cite:4e46b930-fec8-46bd-8efc-99c97b020a67}}.
+Furthermore, there has been little quantitative analysis of the required
+training overhead against the channel sparsity level. This quantification
+is in dire need as it will help us measure the actual training overhead
+reduction that can be achieved without relying on time-consuming simulations.
+
+The Weighted FORMULA  Minimization Method
+Considering a similar single-cell scenario, the study in {{cite:4bf6bdbf-cad3-4327-9743-13072ee114b1}}
+has drawn attention to utilizing partial support information of sparse
+massive MIMO channels, which is a collection of indices of significant
+entries of channel vectors in the angular domain. The main advantage
+of using partial support information is the possibility of achieving
+a remarkable training overhead reduction. Specifically, the order
+of the required overhead decreases from FORMULA 
+to FORMULA  where FORMULA 
+is the channel sparsity level. Assume that the partial support information
+FORMULA  of channel FORMULA  is available
+at UE FORMULA , where FORMULA  and FORMULA 
+is given by FORMULA . The higher
+the factor FORMULA , the higher is the accuracy level of partial
+support information. Based on a weighted FORMULA  minimization
+framework, the channel recovery is performed as follows:
+FORMULA 
+where FORMULA  is
+designed to be a Gaussian random matrix of independent complex normal
+entries, the noise FORMULA  is assumed
+to be upper bounded, i.e., FORMULA ,
+and FORMULA .
+In the objective function, the entries that are expected to be zero
+are weighted more heavily than others. The results show a significant
+improvement over the method without using partial support information
+when the accuracy level FORMULA  exceeds a certain threshold. Moreover,
+taking a convex geometry approach, the authors have successfully and
+precisely quantified the required training overhead for achieving
+a certain percentage of exact recovery. The exact recovery is declared
+if FORMULA .
+As shown in Fig. REF , the
+analytical curves of FORMULA  and FORMULA  can accurately
+depict the empirical phase transition curves of FORMULA  exact recovery
+and FORMULA  exact recovery, respectively.
+FIGURE 
+Unlike the previous method, here, channel measurements are not fed
+back to the BS. In other words, it avoids the assumption of error-free
+feedback channels. However, it raises another issue of storing random
+matrices at UEs with limited memory. Also, performing convex optimization
+can impose a stringent computation requirement on UEs without seeking
+for low-complexity solutions. Several attempts have been made to design
+practical training matrices. In {{cite:93833ca7-879c-43c6-b406-edf4c671d472}}, Toeplitz-structured
+training matrices, suggested for the realistic implementation, are
+shown to perform comparably to Gaussian random matrices and require
+generating less independent random variables. A deterministic approach
+to the training matrix design is first considered by appealing to
+matrix properties such as mutual coherence {{cite:a4f175a6-d8fd-4de9-8a56-c943e5a3d636}}. More
+advanced deterministic training matrices are developed in {{cite:41ff9fe5-5d5a-4386-b74c-0016c0d855e0}}
+to yield higher recovery accuracy. In the context of FDD massive MIMO,
+it would be interesting to invent structurally random or deterministic
+training matrices that take partial support information of channels
+to multiple UEs into consideration. In addition, the similar concepts
+of using prior channel knowledge to lower training overhead can be
+found in {{cite:7c621596-c37b-421a-9955-14cfb9bc6a81}} where spatial and temporal correlations
+are harnessed. More study is needed to better understand how to integrate
+all the relevant prior knowledge into efficient CSI acquisition.
+
+TDD Massive MIMO
+As mentioned in Sec. REF , employing
+uplink training to obtain high-dimensional downlink CSI results in
+undesired pilot contamination, and the following are some efforts
+to address this issue.
+The Coordinated MMSE Method
+Contradicting conventional wisdom, it has been shown that it is possible
+to mitigate pilot contamination using the linear MMSE estimator {{cite:a80a6909-0210-4633-a449-30227ae3c9b3}}.
+The key factor in determining the success of MMSE estimation is that
+each channel to the UE can be regarded as a linear combination of
+finite steering vectors
+FORMULA 
+where FORMULA  is the number of paths, FORMULA 
+are zero-mean path gains, and FORMULA 
+denote the steering vectors due to angle of arrivals (AoAs) FORMULA .
+Consequently, the rank of the channel covariance matrix FORMULA 
+depends on the range FORMULA 
+in which AoAs FORMULA  lie, which typically
+turns out to be low. Let us focus on the FORMULA th row of (REF ),
+i.e., FORMULA .
+Based on it, the desired channel FORMULA  can be further
+extracted by the MMSE estimator, i.e.,
+FORMULA 
+where the covariance matrix of FORMULA  is assumed to be
+FORMULA . When the range of AoAs due to interfering
+UEs that use the same pilot sequence does not overlap with the AoA
+range due to the desired UE, the estimate FORMULA 
+approaches the desired FORMULA  as the BS antenna size
+grows to infinity. This feature is highly attractive because the dimension
+of the BS antennas can be made as large as desired in massive MIMO.
+Moreover, the condition of non-overlapping AoA ranges can be satisfied
+if the reused pilot sequence is properly allocated to UEs in neighboring
+cells. A heuristic algorithm has been developed to perform pilot allocation
+in a coordinated manner. Another favorable feature of this method
+recently demonstrated in {{cite:aa46d9a1-23a0-4523-9508-f9486ff9a0e0}} is that the asymptotically
+optimal estimate is obtainable whether uniform or non-uniform arrays
+are employed. As a result, BS antenna arrays are exempt from the requirement
+of high calibration accuracy.
+The second-order statistics of high-dimensional channels have successfully
+been utilized to facilitate robust MMSE channel estimation under pilot
+contamination. However, obtaining channel covariance matrices of high
+dimension imposes another challenge to the massive MIMO system. It
+is interesting to know if the low-rankness can help speed up the acquisition
+of channel covariance matrices. Furthermore, it is still unknown if
+this covariance-matrix-aware method is sensitive to the inaccuracy
+of the second-order statistics. On the other hand, the information
+about AoAs actually can be extracted from statistical channel knowledge
+prior to commencing the instantaneous CSI acquisition {{cite:d84404b6-f5e0-403c-9699-1af13be54c03}}.
+In this case, the dimension of the parameter space of each channel
+shrinks to FORMULA , which can be significantly less than the original.
+Most importantly, this information could aid BSs in distinguishing
+between training signals from UEs using the same pilot.
+TABLE 
+
+The Quadratic Semidefinite Programming (SDP) Method
+It is suggested that a BS should collect CSI of both the desired links
+within the cell and interference links from its neighboring cells
+{{cite:f50fc682-69ed-47cb-b833-c0b382fabca0}}. In other words, the CSI of interference links
+should not be regarded as irrelevant information. From this new angle,
+the expression (REF ) can be recast as
+FORMULA 
+where FORMULA 
+and FORMULA 
+is the full CSI of wireless links that should be recovered. Thus,
+the currently challenging issue is similar to that in FDD massive
+MIMO, i.e., how to reduce the required training overhead.
+In the undesirable scattering propagation environments, the rank of
+the channel matrix is equal to the number FORMULA  of the feasible AoAs
+FORMULA  in (REF ), which
+is greatly less than FORMULA . Based on
+this observation, a unclear norm regularized problem can be formulated
+as
+FORMULA 
+where FORMULA 
+and FORMULA  is a regularization factor. The sole purpose of adopting
+unclear norm regulation is to minimize the sum of the matrix's singular
+values, thereby achieving rank minimization. The above problem has
+been further recast as a quadratic SDP problem
+FORMULA 
+The solution FORMULA  to this SDP problem determines the
+estimate of the channel matrix
+FORMULA 
+which can now be obtained efficiently, thanks to the readily available
+polynomial-time SDP solvers.
+In the commencing study of massive MIMO {{cite:da5bb98c-b07e-4cba-848a-4b5575b18d36}}, the CSI
+of interference links at BSs is viewed as nonessential. This is because
+that desired links and interference links are asymptotically orthogonal,
+and more importantly, intercell interference can be proved manageable
+with the CSI of desired links only. Here, we offer an explanation
+why there is a need for acquiring the CSI of interference links in
+the poor scattering environments. Consider that FORMULA 
+where FORMULA 
+is an FORMULA  matrix of full row rank with FORMULA 
+due to poor scattering, and FORMULA  consists of FORMULA 
+independent and identically distributed (i.i.d.) zero-mean channel
+gains. Then, we have FORMULA 
+and
+FORMULA 
+which implies that the correlation among wireless links does not diminish
+with the increasing BS antenna size. In such a situation, it becomes
+crucial to obtain the full CSI of wireless links for effective interference
+management.
+
+The Sparse Bayesian Learning (SBL) Method
+Sharing the same perspective as the study {{cite:f50fc682-69ed-47cb-b833-c0b382fabca0}},
+the work in {{cite:5d2e4d76-fc73-41a7-826c-a92ee1fe0afa}} also considers acquiring the full CSI of
+wireless links and proposes a sparse Bayesian learning method to achieve
+this goal. Sparse Bayesian learning was first presented in {{cite:eafc4f69-914f-4c74-980c-e5ddaba11649}}
+and has been proved to outperform some prevailing FORMULA  minimization
+algorithms {{cite:0ac53500-78e5-492e-a0a1-44b520609481}}. The SBL method proceeds by first
+transforming the channel matrix into the angular domain via DFT as
+mentioned in the joint CSI recovery method, i.e., FORMULA .
+Interestingly, instead of taking advantage of the sparsity in the
+angular domain, the sparsity in the UE domain, which has been empirically
+shown to exist, is utilized. In other words, the column vectors of
+the channel matrix FORMULA  are considered one
+by one. As each column vector consists of elements due to different
+UEs, the independence among elements can be reasonably assumed. This
+independence together with the sparsity in the UE domain leads to
+an effective Gaussian-mixture (GM) model which well describes the
+joint distributions of the channel elements. More surprisingly, empirical
+results show that there are only few parameters involved in the GM
+model that need to be determined. Therefore, the practical Bayes estimation
+can be implemented by evaluating marginal probability density functions
+via the approximate message passing (AMP) algorithm {{cite:05943366-6cac-4f60-a061-257ad446d320}}
+and learning GM parameters by means of the expectation-maximization
+(EM) algorithm {{cite:d7ed4766-01d8-4495-89e7-3317afb47ec4}}. The numerical results show that this
+Bayesian method can achieve a significant reduction in estimation
+errors.
+The assumption of channel vectors being sparse in the UE domain may
+not hold when the UE dimension FORMULA  is not large enough. A possible
+remedy for this situation is suggested in the following. First, it
+is desirable to understand if the GM model is also applicable for
+modeling distributions of spare channel vectors in the angular domain.
+Second, as angular-domain channels are very likely to consist of a
+small number of block-wise non-zero segments resulting from few clusters
+of scatterers, it is eminently reasonable to assume some dependence
+among angular-domain channel elements. Hence, the distribution of
+the channel vector could be a mixture of Gaussian random vectors,
+and the original AMP and EM algorithms should be modified accordingly
+to this new GM model.
+
+Discussion and Comparison 
+In the previous subsections, several methods for efficient high-dimensional
+CSI acquisition have been discussed for massive MIMO communications.
+Table REF  provides a brief summary of the advantages
+and disadvantages of these methods. It is shown in the table that
+each method utilizes a distinct sparsity structure. However, all sparsity
+structures considered in massive MIMO are based on the observation
+that angular-domain channels are sparse. As a result, the second-order
+statistics of massive MIMO channels inherit the sparsity structure,
+yielding low-rank channel covariance matrices. In addition, as sparse
+channels are collectively examined, it leads to either block-sparse
+or low-rank channel matrices. When the UE dimension is comparable
+to the channel dimension, sparsity in the angular domain also results
+in sparsity in the UE domain. On the basis of the aforementioned sparsity
+structures, different sparsity-inspired methods are developed either
+to reduce training overhead or to mitigate pilot contamination.
+In FDD massive MIMO, without feeding back channel measurements to
+the BS side, less sparsity structures are available for developing
+efficient CSI acquisition methods. Despite this limitation, the weighted
+FORMULA  minimization method shows that achieving further overhead
+reduction is feasible if partial support information can be obtained
+in advance and properly harnessed. Interestingly, by enabling the
+BS to gather perfect channel measurements from its served UEs, the
+joint CSI recovery method offers an effective way of utilizing sparsity
+structures across multiple UEs. If the performance superiority of
+this method still holds when taking rate-limited feedback channels
+into account, it will establish the fact that offloading CSI acquisition
+tasks to the BS is feasible and beneficial.
+With regard to TDD massive MIMO, uplink training has more sparsity
+structures to utilize as high-dimensional channels are jointly recovered
+at the BS side. It is worth noting that only low-rank channel covariance
+matrices have been used for pilot decontamination. Other sparsity
+structures such as low-rank channel matrices and sparse UE-domain
+channels have not been considered for mitigating the effects of pilot
+reuse. In this regard, there is still much room for innovation in
+sparsity-inspired pilot decontamination. It is also worth noting that
+using perfect covariance matrices of both desired channels and interference
+channels in the coordinated MMSE method has drawn criticism {{cite:c04e73ce-dab6-44ea-a069-97df0cd27235}}.
+It would be intriguing to assess if there exist efficient algorithms
+for learning low-rank covariance matrices. If such algorithms are
+developed or identified, they should be integrated into the coordinated
+MMSE method.
+
+Implementation Issues
+Recently investigators have examined the practical implementation
+of compressed sensing based algorithms for sparse channel recovery
+{{cite:56473e2f-ac43-4765-84b8-83ac61ed2788}}, {{cite:1651c46e-90e2-4528-afc5-6547a0731d13}}, {{cite:1fc16143-3d5e-40a2-9c33-7d4488abd02c}}. Although
+the design targets are channel models in the 3GPP LTE standard, several
+insights that have been provided are still valuable and applicable
+to realistic implementation of sparse massive MIMO channel recovery.
+It has been pointed out that greedy algorithms such as OMP or matching
+pursuit (MP) are more desirable from a hardware perspective. It is
+because these algorithms require lower computational complexity and
+lower numerical precision when compared to convex relaxation algorithms
+such as basis pursuit (BP) {{cite:1651c46e-90e2-4528-afc5-6547a0731d13}}. The trade-off between
+hardware complexity and denoising performance of three greedy algorithms
+has been characterized in {{cite:1fc16143-3d5e-40a2-9c33-7d4488abd02c}} and it
+is indicated that the chip area overhead required to implement the
+gradient pursuit (GP) algorithm can be three times larger than MP.
+The power consumption is normally proportional to this area overhead.
+When it comes to the design of channel recovery algorithms in FDD
+massive MIMO, which are typically performed at the UE side, the issue
+of hardware complexity should be carefully taken into account. On
+the other hand, at the BS side, high-dimensional channels can be recovered
+by more advanced algorithms such as sparse Bayesian learning or joint
+CSI recovery.
+
+Implications of New Propagation Models
+Most existing studies have based their CSI acquisition approaches
+on the conventional MIMO channel models, which may fail to capture
+some unique characteristics of massive MIMO channels. For instance,
+the far-field and plane wavefront assumptions no longer hold when
+antenna arrays become physically larger than the Rayleigh distance
+{{cite:79b84ab7-beb0-43bc-8ce8-092584470276}}. On the other hand, the sheer size of antenna arrays,
+where different antenna elements observe varying subsets of scatterer
+clusters, makes the assumption of spatial channels being wide-sense
+stationary on the array axis no longer valid {{cite:36221c95-6f80-43a9-bb5e-d5dfffc55e22}}. While
+new channel models have been proposed in {{cite:de3b9e0e-75a9-4393-abe7-686f27bea0af}}, {{cite:69455728-6c76-4a15-8b63-83ec66853603}}
+by making a more accurate spherical wavefront assumption and taking
+the non-stationarities into consideration, there is still very little
+understanding of how these characteristics affect the sparsity structures
+of the channels in massive MIMO systems. One previous result {{cite:4dab3478-b8fd-4d66-a2d4-1689f7e3c056}},
+however, suggests that the spherical wavefront model does adequately
+characterize the rank of the channel matrix. This implies that the
+new channel models can potentially affect the SDP method which exploits
+the sparsity in the form of the channel matrix rank. In addition,
+the possibility that none of clusters are perceptible to some antenna
+elements cannot be categorically excluded, so it indicates the possible
+presence of the sparsity on the array axis. These inferences suggest
+that there is abundant room for further progress in identifying utilizable
+sparsity structures based on the latest models.
+
+Conclusions
+In this article, the challenges of acquiring high-dimensional CSI
+in FDD/TDD massive MIMO systems have been discussed. To address these
+challenges and break the curse of dimensionality, one can effectively
+utilize sparsity structures that uniquely appear in massive MIMO channels.
+Several state-of-the-art sparsity-inspired approaches for high-dimensional
+CSI acquisition have been examined and compared in terms of the sparsity
+structures being exploited, while their own advantages and disadvantages
+are identified. As a result of this study, the following conclusions
+can be drawn. The sparsity structures that can be harnessed are conditional
+on the radio propagation environments. In TDD massive MIMO, uplink
+training inherently has more sparsity structures to exploit as high-dimensional
+channels are jointly recovered at the BS. On the contrary, in the
+FDD mode, the desired channel is normally recovered at the UE where
+utilizable sparsity structures are limited. Finally, based upon existing
+approaches, we have identified the potential research problems in
+need of further investigation.

@@ -1,0 +1,677 @@
+
+
+Counting lattice points and o-minimal structures
+Fabrizio BarroeroMartin Widmer
+Counting lattice points and o-minimal structures
+Fabrizio Barroero
+Martin Widmer
+Institute of Analysis and Computational Number Theory (Math A),
+Graz University of Technology,
+Steyrergasse 30, A-8010 Graz,
+Austriabarroero@math.tugraz.at
+Scuola Normale Superiore di Pisa,
+56126 Pisa, Italymartin.widmer@sns.it
+F. Barroero is supported by the Austrian Science Foundation (FWF) project W1230-N13.M. Widmer was supported in part by the Austrian Science Foundation (FWF) project M1222-N13 and ERC-Grant No. 267273.December 11, 2018
+Primary 11H06, 03C98, 03C64; Secondary 11P21, 28A75, 52C07
+Lattice points, counting, o-minimal structure, volumes of projections, computational geometry
+
+Let FORMULA  be a lattice in FORMULA , and let FORMULA  be a definable family in an o-minimal structure over FORMULA .
+We give sharp estimates for the number of lattice points in the fibers FORMULA .
+Along the way we show that for any subspace FORMULA  of dimension FORMULA  the FORMULA -volume of the orthogonal projection of FORMULA  to
+FORMULA  is, up to a constant depending only on the family FORMULA , bounded by the maximal FORMULA -dimensional volume of the orthogonal projections to the FORMULA -dimensional coordinate subspaces.
+
+Introduction
+Let FORMULA  be a lattice in FORMULA , and let FORMULA  be a subset of FORMULA . We consider FORMULA  as a parameterized family of subsets
+FORMULA  of FORMULA .
+One is often led to the problem of estimating the cardinality FORMULA  as the parameter FORMULA 
+ranges over an infinite set. According to a general principle one would expect that,
+if the sets FORMULA  are reasonably shaped, a good estimate for FORMULA  is given by
+FORMULA . The situation is relatively easy if
+FORMULA  for some fixed subset FORMULA  of FORMULA  and as FORMULA  tends to infinity.However, even if FORMULA  is compact
+it is not necessarily true that FORMULA , e.g.,
+take FORMULA , and FORMULA .
+The latter is a counterexample to the claim in the first paragraph of {{cite:ff9b229b-92fd-496c-8923-629c215e118a}}.
+However,
+in many situations the family FORMULA  is more complicated, and typically described by inequalities such as
+FORMULA 
+
+where the FORMULA  are certain real valued functions on FORMULA , e.g., polynomials.
+Using the language of o-minimal structures from model theory we prove for fairly general
+families FORMULA  an estimate for FORMULA , which is quite precise in terms
+of the geometry of the sets FORMULA , and the geometry of the lattice FORMULA .
+A classical result, although restricted to FORMULA , was proven by Davenport {{cite:ff9b229b-92fd-496c-8923-629c215e118a}}.
+Theorem 1.1 (Davenport)  
+Let FORMULA  be a positive integer, and let FORMULA  be a compact set in FORMULA  that satisfies the following conditions.
+
+Any line parallel to one of the FORMULA  coordinate axes intersects FORMULA  in a set of points, which, if not empty, consists of at most FORMULA  intervals.
+
+The same is true (with FORMULA  in place of FORMULA ) for any of the FORMULA  dimensional regions obtained by orthogonally projecting FORMULA  on one of the
+coordinate spaces defined by equating a selection of FORMULA  of the coordinates to zero, and this condition is satisfied for all FORMULA  from 1 to FORMULA .
+
+Then
+FORMULA 
+
+where FORMULA  is the sum of the FORMULA -dimensional volumes of the orthogonal projections of FORMULA  on
+the various coordinate spaces obtained by equating any FORMULA  coordinates to zero, and FORMULA  by convention.
+
+A drawback of Davenport's theorem is that the conditions (1) and (2) are often difficult to verify.
+Various authors have given similar estimates for general lattices with simpler, possibly milder, conditions on the set; see {{cite:ff5454ba-0f67-4ed6-9707-fe51201ffbe9}}
+for a discussion on that.
+Classical results are known for homogeneously expanding sets whose boundary is parameterizable by certain Lipschitz maps, see, e.g., {{cite:4ebe3178-fd42-4478-8347-4c3f4194bdb8}},
+or {{cite:40c0dd8f-0e95-448a-ba07-ee9ddfc54077}} for a refined version.
+Masser and Vaaler {{cite:bf62b4a0-463a-42bb-ab14-d6625558629d}} gave a counting result for sets satisfying the above Lipschitz condition but which are not necessarily homogeneously expanding,
+and moreover, the dependence on the lattice was made explicit.
+Masser and Vaaler's result was refined by the second author {{cite:422214c7-6898-4dce-8e53-2a0df924e6d4}} to get a sharp error term (for balls such sharp estimates have been
+obtained by Schmidt in {{cite:76aa5075-27c6-419e-b88a-2aae55495456}}).
+However, all these results for general lattices have one drawback in common:
+usually, a direct application yields nontrivial estimates
+only if the volume is much larger than the diameter; e.g., if FORMULA  tends to infinity we usually require
+FORMULA . We shall illustrate this problem more
+explicitly after we have stated our theorem.
+Of course, Davenport's theorem can easily be generalized to arbitrary lattices. With a bit care, using standard results from Geometry of Numbers,
+one gets the error term (ignoring a factor depending only on FORMULA )
+FORMULA 
+
+where FORMULA  are the successive minima of FORMULA  (with respect to the zero-centered unit ball),
+FORMULA  is the supremum of the volumes of the orthogonal
+projections of FORMULA  to the FORMULA -dimensional linear subspaces, and FORMULA  is what we get instead of FORMULA  when
+in Davenport's conditions “line parallel to one of the FORMULA  coordinate axes” and
+“orthogonally projecting FORMULA  on one of the
+coordinate spaces defined by equating a selection of FORMULA  of the coordinates to zero”
+are replaced by “line” and “any projection of FORMULA  on any FORMULA -dimensional subspace”.
+Now the quantity FORMULA  is definitely not so nice to work with as FORMULA .
+Moreover, proving the existence of uniform upper bounds for FORMULA  (i.e., independent of FORMULA ) is often troublesome and awkward.
+Therefore it would be nice to have some general but mild conditions on the family FORMULA  that allow us to replace FORMULA  by a uniform constant FORMULA 
+and FORMULA  by FORMULA .
+At this point it might be worthwhile to emphasize that even if the sets FORMULA  are simply given by a finite number of squares in FORMULA  we cannot
+expect that FORMULA  for some absolute constant FORMULA ; consider the sets FORMULA  in {{cite:9e8e5e3c-4350-4588-a70c-9d88bddcb976}} for a simple
+counterexample. The latter example indicates that such an inequality would require a rather strong hypothesis on the family FORMULA .
+Also, to handle FORMULA  we need that the number of connected components of a projection of FORMULA  when intersected with a line is uniformly bounded.
+The setting of o-minimal structures delivers exactly the required topological properties, and therefore seems to be the natural framework suitable
+for our problem. Furthermore, it provides a rich and flexible structure, including many of the relevant examples.
+We are using the notation of {{cite:b749eccc-7af5-4903-bdc9-ebe95a499b29}} and {{cite:ff9b229b-92fd-496c-8923-629c215e118a}}. We write FORMULA  for the set of positive integers.
+Definition 1.2 
+An o-minimal structure is a sequence FORMULA  of families of subsets in FORMULA  such that for each FORMULA :
+
+FORMULA  is a boolean algebra of subsets of FORMULA , that is, FORMULA  is a collection of subsets of FORMULA ,
+FORMULA , and if FORMULA  then also FORMULA , and FORMULA .
+
+If FORMULA  then FORMULA  and FORMULA .
+
+FORMULA  for FORMULA .
+
+If FORMULA  is the projection map on the first FORMULA  coordinates and FORMULA  then FORMULA .
+
+FORMULA  for any FORMULA  and FORMULA .
+
+The only sets in FORMULA  are the finite unions of intervals and points. (“Interval” always means “open interval” with infinite endpoints allowed.)
+
+
+Following the usual convention, we say a set FORMULA  is definable (in FORMULA ) if it lies in some FORMULA .
+Next we give some important examples of o-minimal structures, following the presentation of Scanlon in {{cite:da118744-ae20-4aa5-a9cd-fb14d21e9486}}.
+For each FORMULA  let FORMULA  be a collection of functions FORMULA  that we call distinguished functions.
+If FORMULA  are built from the coordinate functions, constant functions and distinguished functions by composition
+(provided it is defined), then we say
+FORMULA 
+
+are atomic sets. Now let us consider the smallest family of sets in FORMULA  (for various FORMULA ) that contains all atomic sets, and is closed under finite unions and complements,
+and images of the usual projection maps FORMULA  onto the first FORMULA  coordinates.
+For the following choices of FORMULA , the resulting family consists precisely of the definable
+sets in a particular o-minimal structure:
+
+FORMULA polynomials defined over FORMULA ,
+
+FORMULA restricted analytic functionsFORMULA ,
+
+FORMULA the exponential function FORMULA ,
+
+FORMULA .
+
+By a restricted analytic function we mean a function FORMULA , which is zero outside of FORMULA , and is the restriction to FORMULA  of a
+function, which is real analytic on an open neighborhood of FORMULA .
+For the first example note that by the Tarski-Seidenberg theorem every
+set in this family is a boolean combination of atomic sets, and thus is semialgebraic.
+This implies (6) in Definition REF , and (1)-(5) are clear. The o-minimality of example (2) is due to Denef and van den
+Dries {{cite:3d24ec67-d93f-4c03-862b-cbe535ce080c}}, while (3) is due to Wilkie {{cite:0dac3a76-ea46-420a-920a-e78b0cf04d3a}}. Van den Dries and Miller {{cite:1216cae2-345e-4e19-a5b4-1a23d92038a6}} proved the o-minimality of the fourth example.
+From now on, and for the rest of the paper, we suppose that our o-minimal structure FORMULA  contains the semialgebraic sets.
+Recall that a set FORMULA  is definable if it lies in some FORMULA .
+For a set FORMULA  we call FORMULA  a fiber of FORMULA .
+From this viewpoint it is natural to call FORMULA  a family. In particular, we call FORMULA  a definable family if FORMULA  is a definable set.
+We write
+FORMULA  for FORMULA  for the successive minima of FORMULA  with respect to the zero-centered unit ball FORMULA , i.e., for  FORMULA
+FORMULA 
+
+Also recall that
+FORMULA  is the sum of the FORMULA -dimensional volumes of the orthogonal projections of FORMULA 
+on every FORMULA -dimensional coordinate subspace of FORMULA . We shall see that if FORMULA  is a definable family with bounded fibers FORMULA  then the FORMULA -dimensional volumes of
+the orthogonal projections of FORMULA  on any FORMULA -dimensional coordinate subspace of FORMULA  exist and are finite, and also the volume FORMULA  exists and is finite.
+Theorem 1.3 
+Let FORMULA  and FORMULA  be positive integers, let FORMULA  be a definable family, and suppose the fibers FORMULA  are bounded.
+Then there exists a constant FORMULA , depending only on the family FORMULA , such that
+FORMULA 
+
+where for FORMULA  the term in the sum is to be understood as 1.
+
+Up to the constant FORMULA , our estimate is best-possible. To see this we take FORMULA  with FORMULA ,
+and the semialgebraic set FORMULA , defined as the union of
+FORMULA 
+taken over FORMULA . Hence, for FORMULA  we get
+FORMULA 
+
+Next let us consider a simple application. Suppose we want to count lattice points in the fibers FORMULA 
+of the family FORMULA  as defined in (REF )
+by the FORMULA  polynomial functions FORMULA , where FORMULA  runs over all subsets of FORMULA , FORMULA .
+This problem occurs if one counts algebraic integers in a totally real field FORMULA , and of bounded Weil height.
+Now we have FORMULA ,
+and moreover, FORMULA . Obviously, our family FORMULA  is a semialgebraic set.
+Applying Theorem REF  we get an asymptotic formula.
+Now suppose we want to derive a similar statement from the counting results in {{cite:bf62b4a0-463a-42bb-ab14-d6625558629d}} or {{cite:422214c7-6898-4dce-8e53-2a0df924e6d4}} ({{cite:4ebe3178-fd42-4478-8347-4c3f4194bdb8}} cannot be applied as FORMULA  is not homogeneously expanding).
+Then we require to parameterize the boundary of FORMULA 
+by a finite number of Lipschitz maps
+FORMULA . This can certainly be done, even with a single map. But the diameter of FORMULA  has size of order FORMULA , and thus
+the Lipschitz constant FORMULA  of this map is necessarily of this size. This gives an error term of order FORMULA  which exceeds the “main term”, at least if FORMULA .
+Possibly one can resolve this problem by using many parameterizing maps instead of just one. But even in this single case it is
+not obvious how to do this.
+Now the aforementioned example of counting integers in FORMULA  of bounded height is covered by more general and precise results in {{cite:8a77bec2-85d7-437b-a881-cbc1c0c9c3b1}}.
+But in a subsequent paper {{cite:8585e438-989b-4129-b299-b2e42fbda09f}} the first author will apply Theorem REF  to deduce the asymptotics of algebraic integers of bounded height and of
+fixed degree over a given number field FORMULA . The special case FORMULA  follows from a result of Chern and Vaaler {{cite:fba5021b-0f72-4e02-9ddc-55b000f89cc9}} but the general result appears to be new.
+In an ongoing project we give a more elaborate application of Theorem REF , which, in conjunction with previous results of the second author,
+might lead to some new instances of Manin's conjecture
+on the number of FORMULA -rational points of bounded height on the symmetric square of FORMULA , where FORMULA  is an arbitrary number field.
+The special case FORMULA  follows easily from a theorem of Schmidt {{cite:44e780e0-c3f1-4eac-a742-d69edd75b3c3}}, which in turn follows from his results on the number of quadratic points
+of bounded height {{cite:44e780e0-c3f1-4eac-a742-d69edd75b3c3}} and Davenport's theorem.
+In recent times o-minimal structures have successfully been used for problems in number theory. Using ideas that date back to a paper by Bombieri and Pila {{cite:d364a9c9-fa2a-4ad1-994f-abe1308a5cc1}},
+and were further developed in various articles of Pila,
+Pila and Wilkie {{cite:2417ba54-9577-49fe-b7e1-2cd709f3246d}} gave upper bounds for the number of rational points
+of bounded height on the transcendental part of definable sets. These results in turn have been applied to
+problems in Diophantine geometry (see {{cite:a23aa65f-208c-478e-888b-cbedb8d6561e}}, {{cite:652b82da-d189-4f42-a773-47d87ffb2fea}}, {{cite:99952e39-47cf-4a61-8cfd-2a82e0cbc2fa}}, {{cite:daa07c2a-5c95-4002-8154-a1900e5b2229}} and {{cite:30127e98-2844-43c4-922c-e3102a41636c}}).
+However, to the best of the authors' knowledge, o-minimal structures have not been
+used so far to establish asymptotic counting results.
+The paper is organized as follows. In Section  we use Geometry of Numbers, and follow arguments of Thunder {{cite:09829608-4fd6-4437-969d-ff6dfb191989}} to generalize Davenport's theorem
+to arbitrary lattices with an error term as in (REF ). In Section  we collect some basic facts about o-minimal structures,
+as well as some deeper results like the cell-decomposition Theorem, the Reparametrization Lemma (originally due to Yomdin {{cite:fda74ee4-eede-46ed-8eea-dd98a4780b62}}, {{cite:8bec63aa-2a6c-46c5-881d-e3d4424a59df}}, and Gromov {{cite:d21e2e99-e0d8-4d56-a3d3-ac45d444bff7}},
+and refined by Pila and Wilkie {{cite:2417ba54-9577-49fe-b7e1-2cd709f3246d}}), and the existence of definable Skolem functions.
+Then, in Section , we use the fact that
+there are uniform upper bounds for the number of connected components of fibers of definable sets, to establish a uniform upper bound for our quantity FORMULA .
+In Section  we establish a geometric inequality that allows us to substitute FORMULA  of (REF ) with FORMULA .
+This is the core argument of the paper, and the strategy is, roughly speaking, as follows.
+For each FORMULA  and any FORMULA -dimensional subspace
+FORMULA  we construct a FORMULA -dimensional definable subset of FORMULA  that
+projects to FORMULA  with maximal volume. Locally, the volume of the
+projection onto FORMULA  can be bounded by the sum of the volumes of the
+projections onto the FORMULA -dimensional
+coordinate spaces, so globally we only have to worry about these
+projections being non-injective. However, o-minimality provides a bound
+for the number of pre-images for each such projection, which is uniform
+in FORMULA  and FORMULA , and this is sufficient.
+To carry out the aforementioned strategy we require some concepts and results from geometric measure theory such as rectifiability and Hausdorff measure/dimension,
+which we derive and recall
+in Section . The Reparametrization Lemma implies the required rectifiability assumptions for bounded definable sets. Finally,
+in Section  we put all together to prove Theorem REF .
+Some of the potential users of our theorem may not be familiar with o-minimality. Therefore, we have given definitions, and proofs or references,
+even for the most basic concepts, and results.
+For the same reason we also have restricted ourselves to the set-theoretic language instead of the model-theoretic approach,
+although the latter often leads to simpler and quicker proofs.
+
+Geometry of numbers
+By {{cite:647121bb-42c8-442d-9112-096902877e4f}} there exists a basis FORMULA  of the lattice FORMULA  such that FORMULA  for FORMULA .
+We let FORMULA  be the automorphism of FORMULA  defined by FORMULA , where FORMULA  is the
+standard basis of FORMULA .
+Hence, we have FORMULA .
+Lemma 2.1 
+Let FORMULA  be a compact set such that FORMULA  satisfies the hypothesis (1) and (2) of Theorem REF . Then
+FORMULA 
+
+Clearly, we have
+FORMULA 
+and FORMULA . The inverse of FORMULA  corresponds to the matrix with columns FORMULA , and therefore FORMULA .
+As FORMULA  is compact also FORMULA  is compact. Applying Theorem REF  yields the claim.
+In the next two lemmas we simply reproduce arguments of Thunder from {{cite:09829608-4fd6-4437-969d-ff6dfb191989}} to obtain an error term as anticipated in (REF ).
+Let FORMULA , let FORMULA  be any subset of FORMULA  of cardinality FORMULA , and let FORMULA  be its complement. Let FORMULA  and FORMULA  be
+respectively the subspace
+of FORMULA  and the sublattice of FORMULA  generated by the vectors FORMULA , FORMULA . For any set FORMULA  we define
+FORMULA 
+This is nothing but the projection of FORMULA  to FORMULA  with respect to FORMULA .
+Lemma 2.2 
+Suppose FORMULA  is compact. Then, for every FORMULA ,
+FORMULA 
+where FORMULA  is the volume of the FORMULA -dimensional unit-ball.
+
+The orthogonal projection of FORMULA  to the coordinate subspace spanned by FORMULA , FORMULA  for some choice
+of FORMULA , corresponds to the projection FORMULA  of FORMULA  to FORMULA  with respect to FORMULA .
+Therefore we have that
+FORMULA 
+As FORMULA  for FORMULA  we deduce from Minkowski's second theorem
+FORMULA 
+and this proves the lemma.
+Definition 2.3 
+Suppose FORMULA  is compact, and suppose FORMULA . We define FORMULA  to be the supremum of the volumes of the orthogonal projections of FORMULA 
+to any FORMULA -dimensional linear subspace of FORMULA , and we set
+FORMULA .
+
+Lemma 2.4 
+Suppose FORMULA  is compact. Then
+for any FORMULA  and any FORMULA  with FORMULA  there exists a constant FORMULA  such that
+FORMULA 
+
+Let FORMULA  be the vectors defined by
+FORMULA 
+Now let FORMULA  be the linear subspace generated by FORMULA , FORMULA  (and thus orthogonal to FORMULA ). Let FORMULA  be
+the orthogonal projection of FORMULA  on FORMULA . This means
+FORMULA 
+There exists a linear transformation FORMULA  between FORMULA  and FORMULA  that maps a point of FORMULA  to its orthogonal projection on
+FORMULA . Note that FORMULA  because, for every FORMULA , FORMULA  for some FORMULA  and
+FORMULA , and FORMULA  for some FORMULA , and thus FORMULA .
+Moreover, FORMULA  is an injective map. Indeed, suppose we had FORMULA  with the same image, then FORMULA , which
+means FORMULA . Therefore we can see FORMULA  as an automorphism of FORMULA . We want to bound the determinant of the inverse of FORMULA . Let
+FORMULA 
+Since FORMULA  and by definition FORMULA ,
+we have, for every FORMULA , FORMULA  and FORMULA . Thus,
+FORMULA 
+The condition FORMULA , the definition of FORMULA  and Minkowski's second Theorem imply that
+FORMULA 
+Thus,
+FORMULA 
+and this implies
+FORMULA 
+where FORMULA  is the operator norm. Suppose FORMULA  corresponds to the matrix
+FORMULA  then
+FORMULA . By Hadamard's inequality
+FORMULA 
+Finally, since FORMULA ,
+FORMULA 
+
+O-minimal structures
+In this section we state the basic properties used later on. Most of the results are taken literally from {{cite:b749eccc-7af5-4903-bdc9-ebe95a499b29}}.
+We start with a list of simple facts that will be used in the sequel, sometimes without explicitly referring to them.
+Lemma 3.1 
+
+
+FORMULA ;
+
+FORMULA ;
+
+FORMULA ;
+
+FORMULA , FORMULA  a permutation on FORMULA  coordinates FORMULA ;
+
+FORMULA , where FORMULA  is a coordinate subspace in FORMULA  and FORMULA 
+is the orthogonal projection to FORMULA ;
+
+FORMULA .
+
+
+The statement FORMULA  is obvious from Definition REF .
+For FORMULA  we use that FORMULA .
+Now FORMULA  follows easily.
+For FORMULA  we note that FORMULA  is the projection
+to the first FORMULA  coordinates of the definable set FORMULA .
+Then, FORMULA  follows immediately. Finally, for FORMULA  we note that FORMULA , where FORMULA 
+projects to the last FORMULA  coordinates.
+Recall that a subset FORMULA  of FORMULA  is definable (in the o-minimal structure FORMULA ) if FORMULA .
+Also recall that our o-minimal structure FORMULA  contains the semialgebraic sets.
+Definition 3.2 
+Suppose FORMULA  is definable then we say that FORMULA  is a definable function (in FORMULA )
+if its graph FORMULA  is definable (in FORMULA ).
+We say that FORMULA  is bounded if its graph is a bounded set.
+
+Let FORMULA  be an endomorphism of FORMULA .
+Then we will identify FORMULA  with the vector FORMULA , where FORMULA  is the standard basis of FORMULA .
+A set of the form
+FORMULA 
+is defined by polynomial equalities, and hence is definable.
+Now suppose FORMULA  is a definable set, and let
+FORMULA 
+and
+FORMULA 
+For FORMULA  and FORMULA  in FORMULA  we write FORMULA  if FORMULA  for all FORMULA . In this case we put
+FORMULA 
+
+It is not difficult to see that FORMULA  is a definable subset of FORMULA , e.g., FORMULA  is a projection
+of the definable set FORMULA .
+We now come to the definition of cells which are particularly simple definable sets.
+Definition 3.3 
+Let FORMULA  be a sequence of zeros and ones of length FORMULA . A FORMULA -cell is a
+definable subset of FORMULA  obtained by induction on FORMULA  as follows:
+
+A FORMULA -cell is a one-element set FORMULA , a FORMULA -cell is a nonempty interval FORMULA .
+
+Suppose FORMULA -cells are already defined; then a FORMULA -cell is the graph FORMULA  of a function FORMULA ,
+where FORMULA  is a FORMULA -cell;
+further, a FORMULA -cell is a set FORMULA , where FORMULA  is a FORMULA -cell and FORMULA  with FORMULA .
+
+A cell in FORMULA  is an FORMULA -cell for some (necessarily unique) sequence FORMULA .
+
+Lemma 3.4 
+Each cell is connected in the usual topological sense.
+
+This follows from {{cite:b749eccc-7af5-4903-bdc9-ebe95a499b29}} combined with {{cite:b749eccc-7af5-4903-bdc9-ebe95a499b29}}.
+We need another definition.
+Definition 3.5 A decomposition of FORMULA  is a special kind of partition into finitely many cells.
+Again the definition is by induction on FORMULA :
+(1) a decomposition of FORMULA  is a collection
+FORMULA 
+
+where FORMULA  are points in FORMULA .
+(2) a decomposition of FORMULA  is a finite partition of FORMULA  into cells FORMULA  such that the set of projections FORMULA 
+is a decomposition of FORMULA . (Here FORMULA  is the usual projection map on the first FORMULA  coordinates.)
+
+A decomposition FORMULA  of FORMULA  is said to partition a set FORMULA  if each cell in FORMULA  is either part of FORMULA  or disjoint from FORMULA .
+We can now state the following theorem, which is a special case of the cell decomposition theorem ({{cite:b749eccc-7af5-4903-bdc9-ebe95a499b29}} or {{cite:bf237a6e-2b90-4354-a013-ebd3e7fed1d4}}).
+Theorem 3.6
+Given a definable set FORMULA  there is a decomposition of FORMULA  partitioning FORMULA .
+
+This follows immediately from FORMULA  in {{cite:b749eccc-7af5-4903-bdc9-ebe95a499b29}}.
+We recall the definition of dimension of a definable set from {{cite:b749eccc-7af5-4903-bdc9-ebe95a499b29}}.
+Definition 3.7 
+Let FORMULA  be nonempty and definable. The dimension of FORMULA  is defined as
+FORMULA 
+To the empty set we assign the dimension FORMULA .
+
+Note that a definable set of dimension zero is a finite collection of points.
+Next we collect some basic facts about definable functions. These will be used in the sequel, sometimes without further mention.
+Lemma 3.8 
+Suppose FORMULA  is a definable function and suppose FORMULA  is a nonempty definable subset of FORMULA . Then
+
+FORMULA  and FORMULA  are definable;
+
+The restriction FORMULA  is definable;
+
+If FORMULA  is bijective then FORMULA  is definable;
+
+If FORMULA  is bijective then FORMULA .
+
+
+The claim FORMULA  follows immediately from the definition, similarly FORMULA  by noting that FORMULA , and FORMULA  is obvious.
+For FORMULA  we refer to {{cite:b749eccc-7af5-4903-bdc9-ebe95a499b29}},
+Definition 3.9 
+Let FORMULA  be a definable set of dimension FORMULA .
+Let FORMULA  be a finite set of definable functions FORMULA  such that
+FORMULA . We call FORMULA  a parametrization of FORMULA . Let FORMULA  be a multi index write FORMULA  and,
+for FORMULA ,
+FORMULA 
+We call FORMULA  a FORMULA -parametrization if every FORMULA  is of class FORMULA  and has the property that FORMULA  is bounded for each
+FORMULA  with FORMULA .
+
+Theorem 3.10 (Pila, Wilkie) 
+For any FORMULA , and any bounded definable set FORMULA  of positive dimension, there exists a FORMULA -parametrization of FORMULA .
+
+This is a special case of {{cite:2417ba54-9577-49fe-b7e1-2cd709f3246d}}.
+Let FORMULA  be nonempty. We say FORMULA  is a Lipschitz map if there exists a real constant FORMULA  such that
+FORMULA 
+Corollary 3.11 
+Let FORMULA  be bounded and definable, and suppose FORMULA .
+Then FORMULA  can be parameterized by a finite number of Lipschitz maps FORMULA .
+
+By Theorem REF  any bounded definable set FORMULA  of dimension FORMULA  can be parameterized by a finite number of maps FORMULA  with
+uniformly bounded partial derivatives.
+This implies the claim (see also {{cite:b749eccc-7af5-4903-bdc9-ebe95a499b29}}).
+Proposition 3.12 {{cite:b749eccc-7af5-4903-bdc9-ebe95a499b29}}
+Let FORMULA  be the projection on the first FORMULA  coordinates. If FORMULA  is a cell in FORMULA  and FORMULA , then FORMULA  is a cell in FORMULA .
+Moreover, if FORMULA  is a decomposition of FORMULA  and FORMULA  then the collection
+FORMULA 
+is a decomposition of FORMULA .
+
+Corollary 3.13
+Let FORMULA  be a definable family. Then there exists a number FORMULA  such that for each FORMULA  the set FORMULA  can be partitioned into at
+most FORMULA  cells. In particular, each fiber FORMULA  has at most FORMULA  connected components.
+
+By the cell decomposition theorem there exists a decomposition FORMULA  of FORMULA  partitioning FORMULA . Then for each FORMULA  the decomposition FORMULA 
+of FORMULA  consists of at most FORMULA  cells and partitions FORMULA . So we can take FORMULA . The last statement follows from Lemma REF .
+Another important property of o-minimal structures is the possibility of “lifting” projections. In model-theoretic terms this might be rephrased as
+existence of definable Skolem functions.
+Proposition 3.14 {{cite:b749eccc-7af5-4903-bdc9-ebe95a499b29}}
+If FORMULA  is definable and FORMULA  is the projection on the first FORMULA  coordinates, then there is a definable map FORMULA 
+such that FORMULA .
+
+The proof of {{cite:b749eccc-7af5-4903-bdc9-ebe95a499b29}} actually shows that there is an algorithmic way to construct the Skolem function FORMULA .
+The construction of FORMULA  is of no importance for us but we will use the fact that this choice of FORMULA  is determined by FORMULA  and FORMULA .
+We write FORMULA  and FORMULA  for the the topological closure and the interior of the set FORMULA  respectively.
+Also recall that FORMULA  denotes the topological boundary of FORMULA .
+Lemma 3.15 
+Suppose FORMULA  is definable. Then
+FORMULA , FORMULA , and FORMULA  are definable.
+
+The first statement is {{cite:b749eccc-7af5-4903-bdc9-ebe95a499b29}}. For the second set note that FORMULA  is equivalent to
+FORMULA , and, moreover, FORMULA . Hence,
+FORMULA , which is definable by our first statement.
+Finally, as FORMULA  we get the last statement.
+
+The Davenport constant
+If FORMULA  satisfies the conditions (1) and (2) in Theorem REF  then we say FORMULA  is a Davenport constant for FORMULA .
+Of course, this has nothing to do with the classical Davenport constant of a finite abelian group.
+Lemma 4.1
+Let FORMULA  be a definable family. There exists a natural number FORMULA , depending only on FORMULA , such that
+for every FORMULA  and every endomorphism FORMULA  of FORMULA  the number FORMULA  is a Davenport constant for FORMULA .
+
+Let FORMULA  be a nonempty subset of FORMULA  and let FORMULA  be the orthogonal projection of FORMULA  on the coordinate subspace FORMULA  generated by the FORMULA , FORMULA .
+Recall the notation of (REF ) in Section  and let FORMULA  be the set
+FORMULA 
+Note that, up to a coordinate permutation, FORMULA  is the projection to the first FORMULA  coordinates of the definable set FORMULA . By Lemma REF  and the fact that semialgebraic sets are definable, this is a definable set. Moreover, note that
+FORMULA 
+Let us set some notation we need. We indicate by FORMULA  the endomorphism of FORMULA  defined by FORMULA .
+A line in FORMULA  parallel to FORMULA  is determined by FORMULA  reals and therefore we indicate it by FORMULA .
+Let FORMULA  be nonempty and FORMULA , we consider the sets
+FORMULA 
+
+Again by elementary properties mentioned in Section , these are definable sets . A fiber FORMULA  is exactly the intersection
+of FORMULA  and the line FORMULA  parallel to FORMULA  in the subspace FORMULA .
+Now we use Corollary REF  to find a uniform bound FORMULA  for the number of connected components of the fibers FORMULA  of FORMULA . This means that FORMULA  is a bound on the number of connected components of the intersection of FORMULA  with any line of FORMULA  parallel to FORMULA , for any choice of FORMULA  and FORMULA .
+Finally, we can take FORMULA  to be the maximum of the FORMULA  for all the possible choices of FORMULA  and FORMULA .
+
+Hausdorff measure and rectifiability
+We also require the FORMULA -Hausdorff measure FORMULA . For the definition and properties of the Hausdorff measure we refer to {{cite:6d18f26f-69da-4595-9fa4-1ba02c141c7b}} or {{cite:1257c1ae-5d77-4d77-8091-6358a3457c42}}.
+Lemma 5.1 
+Suppose FORMULA , FORMULA  and suppose FORMULA  is FORMULA -Hausdorff measurable.
+Furthermore, let FORMULA  be an endomorphism.
+Then FORMULA . Moreover, if FORMULA  is an orthogonal projection we have FORMULA . If FORMULA  is
+in the orthogonal group FORMULA  then we have FORMULA .
+
+The first claim follows from {{cite:6f6b2266-ee0f-4061-b4ad-0a263d6f5a6b}}. If FORMULA  is in FORMULA  or if FORMULA  is an orthogonal projection then FORMULA . If
+FORMULA  then also
+FORMULA , and we apply the previous with FORMULA  and FORMULA .
+Proposition 5.2 
+Suppose FORMULA  is nonempty and definable. Then FORMULA  coincides with the Hausdorff dimension. Moreover,
+if FORMULA  and FORMULA  is bounded, then FORMULA  is FORMULA -Hausdorff measurable for every FORMULA  with FORMULA . Finally, FORMULA  and FORMULA  for FORMULA .
+
+See {{cite:d5e77997-67a8-4e75-9eea-60e2188c025d}}. The last claim follows from the definition of Hausdorff dimension.
+It is well known that on FORMULA  the FORMULA -Hausdorff measure coincides with the Lebesgue measure (see {{cite:1257c1ae-5d77-4d77-8091-6358a3457c42}}). This,
+together with Proposition REF , implies that a definable set in FORMULA  of dimension FORMULA  has volume zero.
+Also recall that any bounded set that is open or closed is measurable and has finite volume.
+Lemma 5.3 
+Let FORMULA  be a bounded definable set. Then FORMULA . In particular, FORMULA  is measurable and FORMULA .
+
+By {{cite:b749eccc-7af5-4903-bdc9-ebe95a499b29}} we have FORMULA . This, combined with the previous observation yields FORMULA .
+Berarducci and Otero {{cite:b46154a9-71f7-4cd9-985a-16db2e472383}} have proven measurability results for more general o-minimal structures expanding a field, not necessarily FORMULA .
+E.g., {{cite:b46154a9-71f7-4cd9-985a-16db2e472383}} implies that any bounded definable set is measurable.
+Lemma 5.4 
+Let FORMULA  be a definable family and suppose the fibers FORMULA  are bounded. Then for FORMULA 
+the FORMULA -dimensional volumes of the orthogonal projections of FORMULA 
+on every FORMULA -dimensional coordinate subspace of FORMULA  exist and are finite.
+Moreover, we have
+FORMULA .
+
+Let FORMULA  be a coordinate space of dimension FORMULA , and let FORMULA  be the orthogonal projection from FORMULA  to FORMULA .
+Recall that the Lebesgue measure on FORMULA  is denoted by FORMULA .
+Using the continuity of FORMULA  we get FORMULA . In particular, FORMULA  is measurable,
+and FORMULA .
+Next we apply Lemma REF  with FORMULA  in the coordinate space FORMULA  to get FORMULA ,
+and this proves the claim.
+Next we recall the definition of FORMULA -rectifiability from {{cite:6d18f26f-69da-4595-9fa4-1ba02c141c7b}}.
+Definition 5.5 
+Let FORMULA  and let FORMULA  be a positive integer.
+We say FORMULA  is FORMULA -rectifiable if there exists a Lipschitz function mapping some bounded subset of FORMULA  onto FORMULA . Moreover, FORMULA  is FORMULA -rectifiable if there exist countably
+many FORMULA -rectifiable sets whose union is FORMULA -almost FORMULA  and FORMULA .
+
+Proposition 5.6 
+Let FORMULA  be bounded and definable, and suppose FORMULA .
+Then FORMULA  is FORMULA -rectifiable for every FORMULA  such that FORMULA .
+
+By Corollary REF  we can cover FORMULA  by the images of finitely many Lipschitz maps FORMULA 
+whose domain can clearly be extended to FORMULA  for every FORMULA  without loosing the Lipschitz condition.
+The finiteness of FORMULA  comes from Proposition REF .
+We fix an integer FORMULA . Let FORMULA  be a subset of FORMULA  of cardinality FORMULA  and let FORMULA 
+be the projection map such that FORMULA . For FORMULA  let
+FORMULA 
+A priori, FORMULA  could be infinite, even for every FORMULA . The following theorem ({{cite:6d18f26f-69da-4595-9fa4-1ba02c141c7b}}) tells us that if
+FORMULA  is FORMULA -rectifiable then we can integrate FORMULA 
+and obtain a finite value.
+Unless specified otherwise, the domain of integration is always FORMULA .
+Theorem 5.7 {{cite:6d18f26f-69da-4595-9fa4-1ba02c141c7b}}
+If FORMULA , and if FORMULA  is a FORMULA -rectifiable subset of FORMULA , then
+FORMULA 
+where
+FORMULA 
+
+To conclude this section we apply Theorem REF  to fibers of definable families.
+Lemma 5.8 
+Let FORMULA  be a definable family whose fibers FORMULA  are bounded and of dimension at most FORMULA .
+Then there exists a real constant FORMULA  such that
+FORMULA 
+for every FORMULA .
+
+If FORMULA , the claim is trivially true. For those FORMULA  such that FORMULA  or FORMULA 
+we have from Proposition REF  that FORMULA , and so in this case again the claim is trivially true.
+Therefore, we can assume that FORMULA , and so we get from Proposition REF  that FORMULA  is FORMULA -rectifiable.
+Hence, we can apply Theorem REF , and we get
+FORMULA 
+for every FORMULA  such that FORMULA . Therefore, we are left to prove that for any FORMULA  of cardinality
+FORMULA  there exists a real FORMULA  such that
+FORMULA 
+for every FORMULA .
+Let FORMULA  be the definable family
+FORMULA 
+Note that FORMULA .
+Thus, for every FORMULA  we have FORMULA .
+Moreover, by Corollary REF  there is a uniform upper bound FORMULA  for the number of connected components of the fibers FORMULA .
+In particular, if FORMULA  we get FORMULA .
+Now fix an FORMULA . The restriction FORMULA  is a definable map. Thus, by
+{{cite:b749eccc-7af5-4903-bdc9-ebe95a499b29}},
+we obtain
+FORMULA 
+is definable, and, moreover,
+FORMULA 
+Hence FORMULA  has measure zero in FORMULA .
+Let FORMULA  be its complement in FORMULA , i.e.,
+FORMULA .
+This set is definable, and it is exactly the set of FORMULA  such that FORMULA  has dimension zero. Therefore
+FORMULA 
+
+A geometric inequality
+In this section we are going to prove the following proposition. Recall the definition of FORMULA  from Definition REF , and also
+that FORMULA  denotes the topological closure of FORMULA .
+Proposition 6.1
+Let FORMULA  be a definable family such that the fibers FORMULA  are bounded, and let FORMULA  be an integer such that FORMULA . Then there exists a constant FORMULA ,
+depending only on the family and on FORMULA , such that
+FORMULA 
+for every FORMULA .
+
+If FORMULA  or FORMULA  the inequality is trivially true. For the remainder of this section we assume that FORMULA  is nonempty, and we fix an integer FORMULA  satisfying FORMULA .
+By Lemma REF  we have FORMULA . Hence, for the rest of this section we can and will also assume
+FORMULA 
+Let FORMULA  be the orthogonal group. It embeds into FORMULA  if we identify, as already done before, a linear function FORMULA  with the image vector of the standard basis.
+So FORMULA  is a semialgebraic set, as it is defined by polynomial equalities.
+Lemma 6.2 
+There exists a definable set FORMULA  depending only on FORMULA  such that
+FORMULA 
+and
+FORMULA 
+for every FORMULA , and
+FORMULA 
+for every FORMULA .
+
+Let
+FORMULA 
+This set is nothing but the set FORMULA  in (REF ) intersected with FORMULA  and is therefore definable. Note that
+FORMULA 
+for every FORMULA .
+Let FORMULA  be the projection that cancels the last FORMULA  coordinates. We use the fact that o-minimal structures have definable Skolem functions
+(Proposition REF , see also the observation after Proposition REF ). There exists an explicit construction of a definable function
+FORMULA 
+such that the graph of  FORMULA
+FORMULA 
+is contained in FORMULA . Therefore
+FORMULA 
+for every FORMULA . Moreover, since FORMULA  we have
+FORMULA 
+for every FORMULA .
+The function
+FORMULA 
+is definable because its graph is the definable set
+FORMULA 
+Moreover, FORMULA  is a bijection with inverse FORMULA . Now fix any FORMULA , suppose FORMULA  is nonempty,
+and consider the bijection FORMULA  defined by FORMULA .
+Using the elementary properties we see that FORMULA  is definable. Hence, by Lemma REF , we conclude that
+FORMULA 
+for every FORMULA . Note that FORMULA  implies FORMULA ,
+and hence (REF ) remains true for FORMULA .
+Again by the elementary properties, the set
+FORMULA 
+is definable.
+Note that
+FORMULA 
+for every FORMULA . Moreover, if FORMULA , we have FORMULA  and (REF ), (REF ) are satisfied.
+Now fix FORMULA . As FORMULA  we can apply Lemma REF  to get
+FORMULA 
+By (REF ), (REF ) and (REF ) we have that
+FORMULA 
+and this proves (REF ). Moreover, since FORMULA  and by (REF ) and (REF ), we have
+FORMULA 
+that is exactly (REF ).
+We now prove the volume inequality (REF ). Let FORMULA  be any FORMULA -dimensional linear subspace of FORMULA . Fix an orthonormal basis FORMULA  of FORMULA .
+Suppose FORMULA  is in FORMULA  and such that FORMULA  for FORMULA . Let FORMULA  be the orthogonal projection map from FORMULA  to FORMULA  and FORMULA  the
+projection from FORMULA  to the coordinate subspace spanned by FORMULA . Note that FORMULA  and FORMULA  coincide on FORMULA  and their
+kernel is the orthogonal complement FORMULA .
+Hence, FORMULA . Recalling that FORMULA  on FORMULA  and FORMULA , and using (REF ) and Lemma REF , we obtain
+FORMULA 
+Then
+FORMULA 
+Fix FORMULA . Note that for any set FORMULA  we have FORMULA  and
+FORMULA .
+The latter in conjunction with (REF ) gives
+FORMULA 
+By this and Lemma REF  we get
+FORMULA 
+Again by (REF ) and Lemma REF  we have
+FORMULA 
+for every FORMULA .
+Combining (REF ), (REF ) and (REF ) proves (REF ), and thereby completes the proof of Lemma REF .
+As in Section , FORMULA  indicates a nonempty proper subset of FORMULA  and FORMULA  is the projection map such that
+FORMULA .
+Applying Lemma REF  to the family FORMULA  we conclude that there exist FORMULA  such that
+FORMULA 
+for every FORMULA .
+Let FORMULA  be the orthogonal projection map from FORMULA  to the coordinate subspace FORMULA  spanned by FORMULA , FORMULA . We have
+FORMULA 
+Therefore, recalling (REF ),
+FORMULA 
+where
+FORMULA 
+Finally, combining this with (REF ) from Lemma REF , completes the proof of Proposition REF .
+
+Proof of Theorem  REF
+First we assume FORMULA  is such that FORMULA  for all FORMULA . By assumption the fibers FORMULA  are also bounded, and so they are compact.
+Thanks to Lemma REF  we can apply Lemma REF  with a Davenport constant FORMULA  depending only on FORMULA .
+Then we use Lemmas REF , REF , and Proposition REF  to bound FORMULA ,
+and this proves the estimate of Theorem REF  when FORMULA . From this special case of the theorem we will deduce the general case.
+To this end we first note that
+FORMULA 
+By Lemma REF  we see that FORMULA  and FORMULA  are definable.
+Clearly, FORMULA , and FORMULA , and these sets are closed and bounded as the sets FORMULA  are bounded.
+Hence, we can apply our theorem with FORMULA  and then with FORMULA . For FORMULA  we obtain
+FORMULA 
+Note that the constant FORMULA  depends only on the family FORMULA , and thus only on the
+family FORMULA . Moreover, FORMULA  by Lemma REF  and FORMULA  by Lemma REF .
+Using also FORMULA  by Lemma REF , and FORMULA , we get similarly that
+FORMULA 
+again with a constant FORMULA  depending only on the family FORMULA .
+Combining these estimates concludes the proof of Theorem REF  in the general case.
+
+Acknowledgements
+It is our pleasure to thank Alessandro Berarducci, Zoé Chatzidakis, Marcello Mamino, and Vincenzo Mantova for answering many questions about o-minimal structures.
+We thank Francesco Ghiraldin for pointing out the example {{cite:9e8e5e3c-4350-4588-a70c-9d88bddcb976}} mentioned in the introduction, and Andrea Mondino
+for helpful discussions on rectifiability.
+We also thank Robert Tichy, Johannes Wallner, and Umberto Zannier for interesting discussions and encouragement.
+We are grateful to the referees for providing valuable suggestions that simplified the proof of Lemma REF  and improved the exposition of the paper.
+Parts of this project have been done while the second author was visiting Graz University of Technology. He is grateful for the
+invitation and the financial support. The first author would like to thank Centro de Giorgi for the hospitality during his visit in Pisa.

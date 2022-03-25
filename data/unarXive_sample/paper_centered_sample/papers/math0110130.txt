@@ -1,0 +1,1620 @@
+
+
+Connes-Kasparov Conjecture
+ChabertEchterhoffNest
+The Connes-Kasparov Conjecture for
+almost connected groups
+Jérôme Chabert
+Siegfried
+Echterhoff
+Ryszard Nest
+
+
+Jérôme Chabert:
+Université Blaise Pascal, Bât. de mathématiques, 63177,
+Aubière, FranceWestfälische Wilhelms-Universität
+Münster, Mathematisches Institut, Einsteinstr. 62 D-48149
+Münster, GermanyDepartment of Mathematics, University
+of Copenhagen, Universitetsparken 5, DK-2100 Copenhagen, Denmarkchabert@math.univ-bpclermont.fr, echters@math.uni-muenster.de,
+rnest@math.ku.dk
+This research has been supported by the
+Deutsche Forschungsgemeinschaft (SFB 478)
+Let FORMULA  be a locally compact group with cocompact connected
+component. We prove that the assembly map from the topological
+FORMULA -theory of FORMULA  to the FORMULA -theory of the reduced FORMULA -algebra
+of FORMULA  is an isomorphism.
+
+Introduction and statement of results
+In this paper we give a proof of the Connes-Kasparov conjecture for
+almost connected groups. To be more precise, we prove the following
+Theorem 1.1 
+Let FORMULA  be a second countable almost connected group (i.e., FORMULA 
+is compact, where FORMULA  denotes the connected component of FORMULA ).
+Then FORMULA  satisfies the Baum-Connes conjecture with trivial
+coefficients FORMULA , i.e., if FORMULA  denotes the
+topological FORMULA -theory of FORMULA , then the Baum-Connes assembly map
+FORMULA 
+is an isomorphism.
+
+It was already shown by Kasparov in {{cite:73925548-45c5-4de8-9602-506ea1aa1884}} that the theorem is
+true if FORMULA  is amenable. In fact, by a more recent result of Higson
+and Kasparov, we know that the Baum-Connes conjecture with arbitrary
+coefficients holds for any amenable group. By work of A. Wassermann
+{{cite:f79c627c-9040-4393-bbc1-1fbbdee45980}}, we also know that the result is true for all connected
+reductive linear Lie groups. More recently, Lafforgue used quite
+different methods to give a proof of the conjecture for all connected
+semi-simple groups with finite center (which are not necessarily
+linear). The main idea of the proof of the general result of Theorem
+REF  is to use the Mackey-machine approach, as outlined in
+{{cite:2c66253f-f958-4643-98d6-010fc43f23e2}}, in order to reduce to the reductive case. The strategy
+for doing this bases heavily on some ideas presented in Pukánszky's
+recent book {{cite:2e3e99e9-4d8c-4c9d-b41c-6493561ccef2}} where he reports on his deep analysis of the
+representation theory of connected groups. In particular the methods
+of his proof that locally algebraic connected real Lie groups are type
+I, presented on the first four pages of his book, where most
+enlightening.
+The above theorem is actually a special case of a more general result
+which we shall explain below. If FORMULA  is a second countable locally
+compact group, then by a FORMULA -algebra FORMULA  we shall always understand a
+FORMULA -algebra FORMULA  equipped with a strongly continuous action of FORMULA  by
+FORMULA -automorphisms of FORMULA . Let FORMULA  denote a locally compact
+universal proper FORMULA -space in the sense of {{cite:b1753972-5629-4ec8-9ff3-2440f22f2c04}} (we refer to
+{{cite:f60e7e3f-6b6c-43ea-be2f-62d66c924da1}} for a discussion about the relation to the notion of
+universal proper FORMULA -space as introduced by Baum, Connes and Higson in
+{{cite:c8ad20b2-eac1-444d-ac60-885da5677da8}}). If FORMULA  is a FORMULA -algebra, the topological FORMULA -theory of
+FORMULA  with coefficients in FORMULA  is defined as
+FORMULA 
+where FORMULA  runs through
+the FORMULA -compact subspaces of FORMULA  (i.e., FORMULA  is compact) ordered
+by inclusion, and FORMULA  denotes Kasparov's equivariant
+FORMULA -theory. If FORMULA , we simply write FORMULA  for
+FORMULA .
+The construction of Baum, Connes and Higson presented in {{cite:c8ad20b2-eac1-444d-ac60-885da5677da8}} determines a homomorphism
+FORMULA 
+usually called the
+assembly map. We say that FORMULA  satisfies BC for FORMULA  (i.e., FORMULA 
+satisfies the Baum-Connes conjecture for the coefficient algebra FORMULA ),
+if FORMULA  is an isomorphism. Theorem REF  is then a
+special case of
+Theorem 1.2 
+Suppose that FORMULA  is any second countable locally compact group such
+that FORMULA  satisfies BC for arbitrary coefficients, where FORMULA 
+denotes the connected component of FORMULA . (By the results of Higson
+and Kasparov {{cite:eaaa1ad2-7984-4bb8-a323-66b3a450b722}} this is in particular true if FORMULA  is
+amenable or, more general, if FORMULA  satisfies the Haagerup
+property.) Then FORMULA  satisfies BC for FORMULA , FORMULA  a separable
+Hilbert space, with respect to any action of FORMULA  on FORMULA .
+
+It is well known that in case of almost connected groups, the
+topological FORMULA -theory FORMULA  has a very nice description
+in terms of the maximal compact subgroup FORMULA  of FORMULA . In fact, under
+some mild extra conditions on FORMULA , the group FORMULA  can be
+computed by means of the FORMULA -theory of the crossed product FORMULA . We give a brief discussion of these relations in §
+below. As was already pointed out in {{cite:d1ab7eeb-43d1-4bfd-9e59-c1a29ab4da6f}}, our results have
+important applications to the study of square-integrable
+representations. In fact, combining our results with {{cite:d1ab7eeb-43d1-4bfd-9e59-c1a29ab4da6f}} gives
+Corollary 1.3 (cf {{cite:d1ab7eeb-43d1-4bfd-9e59-c1a29ab4da6f}}) 
+Let FORMULA  be a connected unimodular Lie group. Then all
+square-integrable factor representations of FORMULA  are type I.
+Moreover, FORMULA  has no square-integrable factor representations if
+FORMULA  is odd, where FORMULA  denotes the maximal compact subgroup
+of FORMULA .
+
+The paper is outlined as follows: In our preliminary section,
+§, we recall the main results from {{cite:9569cc5f-21a8-436a-a084-c9db7025eba1}}, {{cite:2c66253f-f958-4643-98d6-010fc43f23e2}} on
+the permanence properties of the Baum-Connes conjecture which are
+needed in this work. We will also use these results to perform some
+first reductions of the problem. In § we prove a
+result on continuous fields of actions, showing under some mild
+conditions on the group FORMULA  and the base space FORMULA  of the field, that
+FORMULA  satisfies the Baum-Connes conjecture with coefficients in the
+algebra of FORMULA -sections of the field if it satisfies the conjecture
+for all fibres. This result will be another basic tool for the proof
+our our main theorem.
+In § we are concerned with the conjecture for reductive
+groups. Using (and slightly extending) some recent results of
+Lafforgue {{cite:7a3db8bb-45c4-4b07-b209-ce0549897be5}} on the conjecture for semi-simple groups with
+finite center, we will show that the results on continuous fields
+obtained in § imply that the conjecture (with trivial
+coefficients) holds for all reductive groups without any linearity
+conditions. In § we will then use Pukánzsky's
+methods in combination with an extensive use of the permanence
+properties for BC to give the final steps for the proof of Theorem
+REF . In § we shall then discuss the
+implications for almost connected groups as mentioned above. Note that
+§ does not contain any new material, except the
+conclusion drawn out of our main theorem.
+Acknowledgments. The authors profited quite a lot from valuable
+discussions with several friends and colleagues. We are most grateful
+to Alain Connes who suggested (after an Oberwolfach lecture on the
+permanence properties for BC) to use the results of {{cite:9569cc5f-21a8-436a-a084-c9db7025eba1}}, {{cite:2c66253f-f958-4643-98d6-010fc43f23e2}} to
+attack the Connes-Kasparov conjecture with trivial coefficients.
+We are also grateful to Bachir Bekka, Ludwig Bröcker, Guennadi
+Kasparov, Guido Kings, Hervé Oyono-Oyono, Jörg Schürmann
+and Peter Slodowy for some useful
+discussions or comments.
+
+Some preliminaries and first reductions
+Let us collect some general facts which were presented in {{cite:2c66253f-f958-4643-98d6-010fc43f23e2}}
+– for the definitions of twisted actions and twisted equivariant
+FORMULA -theory we refer to {{cite:9569cc5f-21a8-436a-a084-c9db7025eba1}}. Assume that FORMULA  is a second
+countable group and let FORMULA  be a FORMULA -FORMULA -algebra. We say that FORMULA 
+satisfies BC with coefficients in FORMULA  if the assembly map
+FORMULA 
+is an isomorphism.
+If FORMULA  is a closed normal subgroup of FORMULA , there exists a twisted
+action of FORMULA  on FORMULA  such that the twisted crossed
+product FORMULA  is canonically isomorphic to
+FORMULA . Moreover, we can use the twisted equivariant
+FORMULA -theory of {{cite:9569cc5f-21a8-436a-a084-c9db7025eba1}} to define the topological FORMULA -theory FORMULA  with respect to the twisted action of
+FORMULA  on FORMULA , and a twisted version of the assembly map
+FORMULA 
+In {{cite:9569cc5f-21a8-436a-a084-c9db7025eba1}} we constructed a
+partial assembly map
+FORMULA 
+such that the following diagram commutes
+FORMULA 
+Using this, the first two authors were able to prove the following
+extension results:
+Theorem 2.1 
+Assume that FORMULA  is a FORMULA -algebra and let FORMULA  be a closed normal
+subgroup of FORMULA . Let FORMULA  denote the quotient map and assume
+that one of the following conditions is satisfied
+
+FORMULA  has a compact open subgroup FORMULA  and for any
+compact subgroup FORMULA  of FORMULA , the group
+FORMULA  satisfies BC for FORMULA .
+
+FORMULA  has a FORMULA -element FORMULA 
+(which is automatically true if FORMULA  is almost connected),
+FORMULA  is almost connected and FORMULA  satisfies BC
+for FORMULA , where FORMULA  is a maximal compact subgroup of
+FORMULA .
+
+Then the partial assembly map FORMULA  is an isomorphism. In particular,
+FORMULA  satisfies BC for FORMULA  if and only if FORMULA  satisfies BC for
+FORMULA .
+
+See {{cite:2c66253f-f958-4643-98d6-010fc43f23e2}}.
+In order to avoid the use of twisted actions we may use the version of
+the Packer-Raeburn stabilization trick as given in {{cite:1dbe5aef-ebf0-46d6-86bd-61ff98e0ce8e}}, {{cite:faf5cf56-ce71-4df9-8b43-c3bd905eec67}}:
+Proposition 2.2 (cf {{cite:1dbe5aef-ebf0-46d6-86bd-61ff98e0ce8e}} and {{cite:faf5cf56-ce71-4df9-8b43-c3bd905eec67}}) 
+Assume that FORMULA  is a second countable group and let FORMULA  be a closed
+normal subgroup of FORMULA . Let FORMULA  be a twisted action of
+FORMULA  on the separable FORMULA -algebra FORMULA . Then there exists an
+ordinary action FORMULA , FORMULA ,
+such that FORMULA  is stably exterior equivalent (and hence Morita
+equivalent) to FORMULA .
+
+Note that BC is invariant under passing to Morita equivalent actions.
+Thus, in order to conclude that FORMULA  satisfies BC for
+FORMULA , it is enough to show that FORMULA  satisfies BC for
+FORMULA  with respect to an appropriate action of
+FORMULA  on FORMULA . In particular, if FORMULA  is
+amenable, it follows that FORMULA  is always an
+isomorphism.
+In what follows we need to study the following special situation:
+Assume that FORMULA  is an action of FORMULA  on FORMULA 
+for some separable Hilbert space FORMULA . Since FORMULA , we can choose a Borel map FORMULA  such that
+FORMULA  for all FORMULA . Since FORMULA  is a
+homomorphism, we see that there exists a Borel cocycle FORMULA  such that
+FORMULA 
+The class
+FORMULA  is called the Mackey obstruction for
+FORMULA  being unitary. Let
+FORMULA 
+be the central extension of FORMULA 
+by FORMULA  corresponding to FORMULA , i.e., we have FORMULA 
+with multiplication given by
+FORMULA 
+and the unique locally compact
+group topology which generates the product Borel structure on FORMULA  (see {{cite:3713a1c1-e23c-4435-8a06-a8c2999ce101}}). Then the following is true
+Lemma 2.3 
+For each FORMULA  let FORMULA . Let
+FORMULA  and FORMULA  be as above. Then FORMULA  is
+Morita equivalent to the twisted action FORMULA  of
+FORMULA  on FORMULA .
+
+Let FORMULA  be as in the discussion above, i.e., FORMULA  and FORMULA  for all FORMULA . Then it is easy
+to check that FORMULA  defined by
+FORMULA  is a homomorphism which implements the
+desired equivalence on the FORMULA  bimodule FORMULA  (we refer to
+{{cite:faf5cf56-ce71-4df9-8b43-c3bd905eec67}} for an extensive discussion of Morita equivalence for
+twisted actions).
+Another important result is the continuity of the Baum-Connes
+conjecture with respect to inductive limits of the coefficients, at
+least if FORMULA  is exact. For this we need
+Lemma 2.4 
+Assume that FORMULA  is an inductive system of FORMULA -algebras
+and let FORMULA  be the FORMULA -algebraic inductive limit.
+Assume further that one of the following conditions is satisfied:
+
+All connecting maps FORMULA , FORMULA  are injective,
+or
+
+FORMULA  is exact.
+
+Then FORMULA  with respect to the obvious
+connecting homomorphisms.
+
+If all connecting maps are injective, we may
+regard each FORMULA  as a subalgebra of FORMULA . But this implies that we
+also have FORMULA  as subalgebras of FORMULA , and hence
+the inductive limit
+FORMULA 
+sits inside FORMULA . But it is easy to check that
+FORMULA  is dense in
+FORMULA .
+Suppose now that FORMULA  is exact. In this situation we want to reduce
+the proof to situation (i). Consider the canonical homomorphisms
+FORMULA . Let FORMULA  and let
+FORMULA , where the FORMULA  denote the
+connecting homomorphisms for FORMULA . Of course, if FORMULA  then FORMULA , so for each FORMULA  the system
+FORMULA  is an inductive system with injective
+connecting maps. It follows directly from the definition of the
+inductive limit that FORMULA , and hence it follows from (i) that
+FORMULA . By exactness of
+FORMULA  it follows that FORMULA  is the kernel of
+FORMULA . By the previous
+discussion it follows that FORMULA  is also the kernel of the canonical
+homomorphism FORMULA . Thus, dividing
+out the kernels, i.e., by considering the system FORMULA 
+with FORMULA  we conclude from another use of (i) that
+FORMULA 
+As a direct consequence we obtain
+Proposition 2.5 
+Assume that the FORMULA -algebra FORMULA  is an inductive limit of the
+FORMULA -algebras FORMULA , FORMULA , such that FORMULA  satisfies BC for all
+FORMULA . Assume further that FORMULA  is exact or that all connecting
+homomorphisms FORMULA  are injective. Then FORMULA  satisfies BC for
+FORMULA .
+
+It follows from Lemma REF  and the continuity of
+FORMULA -theory that FORMULA . On
+the other side, it is shown in {{cite:2c66253f-f958-4643-98d6-010fc43f23e2}} that
+FORMULA . Since by assumption
+FORMULA  via the assembly map,
+and since the assembly map commutes with the FORMULA -theory maps induced
+by the FORMULA -equivariant homomorphism FORMULA , the result
+follows.
+As a first application we get
+Proposition 2.6 
+Let FORMULA  be a separable locally compact group such that FORMULA 
+satisfies BC for arbitrary coefficients. Then the following are
+equivalent:
+
+For every central extension FORMULA  the group FORMULA  satisfies BC for FORMULA .
+
+FORMULA  satisfies BC with coefficients in the compact
+operators FORMULA  for all separable Hilbert spaces FORMULA 
+and with respect to all possible actions of FORMULA  on FORMULA .
+
+
+Assume that (1) holds. Let FORMULA  be any action of
+FORMULA  on FORMULA  and let FORMULA  denote the Mackey
+obstruction for this action. Let
+FORMULA 
+denote the central extension
+determined by FORMULA . It follows from Lemma REF  that
+FORMULA  is Morita equivalent to the twisted action FORMULA 
+of FORMULA  on FORMULA . By assumption, we know that FORMULA 
+satisfies BC for FORMULA . It follows from Theorem REF  that
+FORMULA  satisfies BC for FORMULA , or,
+equivalently, that FORMULA  satisfies BC for FORMULA  with respect
+to the appropriate action of FORMULA  (use Proposition REF ).
+Since our group FORMULA  does not satisfy directly the assumptions of
+Theorem REF , let us briefly explain how it is used: first
+apply part (i) of Theorem REF  to FORMULA , which implies
+that FORMULA  satisfies BC for FORMULA  if and only if every compact
+extension FORMULA  of FORMULA  in FORMULA  satisfies BC for FORMULA , and
+then apply part (ii) of Theorem REF  to the subgroup FORMULA 
+of FORMULA .
+Writing FORMULA , the twisted action of
+FORMULA  is given by the twisted action FORMULA  of
+FORMULA  on the n'th summand. Let FORMULA  be
+the projection on the summand corresponding to FORMULA . Consider
+the diagram
+FORMULA 
+(Here the topological FORMULA -theory FORMULA  is computed
+with respected to the twisted action FORMULA  of FORMULA  and FORMULA  denotes the twisted assembly map!)
+Since
+the vertical arrows are split-surjective and the upper horizontal
+arrow is bijective, it follows that the lower horizontal arrow is also
+bijective. Thus we see that FORMULA  satisfies BC for FORMULA 
+with respect to the twisted action FORMULA . By Morita
+equivalence this implies that FORMULA  satisfies BC for FORMULA  with respect
+to FORMULA .
+For the opposite direction assume that (2) holds. Let FORMULA  be as in (1). As explained above it follows from
+Theorem REF  that FORMULA  satisfies BC for FORMULA  if
+FORMULA  satisfies BC for FORMULA . Using the
+stabilization trick, the latter is true if FORMULA  satisfies BC for
+FORMULA  with respect to an appropriate action of FORMULA  on
+FORMULA  which fixes the base FORMULA . Using continuity of BC,
+this follows easily from the fact that FORMULA  satisfies BC for arbitrary
+actions on FORMULA .
+We also need a result on induced algebras as obtained in
+{{cite:2c66253f-f958-4643-98d6-010fc43f23e2}}. For this recall that if FORMULA  is a closed subgroup of FORMULA 
+and FORMULA  is an FORMULA -algebra, then the induced algebra FORMULA  is
+defined as
+FORMULA 
+Equipped with the
+pointwise operations and the supremum-norm, FORMULA  becomes a
+FORMULA -algebra with FORMULA -action defined by
+FORMULA 
+The following result follows from
+{{cite:2c66253f-f958-4643-98d6-010fc43f23e2}}:
+Theorem 2.7 
+Let FORMULA , FORMULA , FORMULA  and FORMULA  be as above. Then G satisfies BC
+for FORMULA  if and only if FORMULA  satisfies BC for FORMULA .
+
+The result becomes most valuable for us when combined with the
+following result of {{cite:192f8749-ea46-431c-95c1-5cbbddf30468}}:
+Proposition 2.8 
+Suppose that FORMULA  is a closed subgroup of FORMULA  and FORMULA  is a
+FORMULA -algebra. Let FORMULA  denote the set of equivalence classes
+of irreducible representations of FORMULA  equipped with the usual
+FORMULA -action defined by FORMULA . Then FORMULA 
+is isomorphic (as a FORMULA -algebra) to FORMULA  for some FORMULA -algebra
+FORMULA  if and only if there exists a FORMULA -equivariant continuous map
+FORMULA . Moreover, if FORMULA  is such a map, then FORMULA  can be chosen to be FORMULA , with
+FORMULA  equipped with the obvious
+FORMULA -action.
+
+As a corollary of Theorem REF  and Proposition
+REF  we get in particular:
+Corollary 2.9 
+Suppose that FORMULA  is a locally compact group and FORMULA  is a FORMULA -algebra
+which is type I and such that FORMULA  acts transitively on
+FORMULA . Let FORMULA  and let FORMULA  denote the
+stabilizer of FORMULA  for the action of FORMULA  on FORMULA . Then FORMULA 
+satisfies BC for FORMULA  if and only if FORMULA  satisfies BC for
+FORMULA , where FORMULA  denotes the Hilbert
+space of FORMULA .
+
+Since there is only one orbit for the FORMULA -action on FORMULA ,
+it follows from results of Glimm {{cite:974ad3b3-e4a9-4914-a32c-88bbf54fcd8b}}, that FORMULA  is
+homeomorphic to FORMULA  via FORMULA . In
+particular, it follows that FORMULA  is Hausdorff, which
+implies that FORMULA . The inverse of
+the above map is clearly a continuous FORMULA -equivariant map of
+FORMULA  to FORMULA , and Proposition REF 
+then implies that FORMULA . The result
+then follows from Theorem REF .
+We now give a short outline of the proof of Theorem REF .
+The main work is required for proving the following proposition:
+Proposition 2.10 
+Assume that FORMULA  is a Lie group with finitely many components and let
+FORMULA  be an action of FORMULA  on the compact operators
+on some separable Hilbert space FORMULA . Then FORMULA  satisfies BC for FORMULA .
+
+The body of this paper is devoted to give a proof of this proposition
+by using induction on the dimension of FORMULA . It is fairly easy to see
+that the above proposition implies Theorem REF . Indeed,
+using the first part of Theorem REF  we can directly reduce
+to the case where FORMULA  is almost connected. Hence Theorem
+REF  follows from
+Proposition 2.11 
+Suppose that Proposition REF  holds. Let FORMULA  be any
+almost connected group and let FORMULA  be any action
+of FORMULA  on the compact operators on some separable Hilbert space FORMULA .
+Then FORMULA  satisfies BC with coefficients in FORMULA .
+
+By the structure theory of almost connected groups
+(e.g. see {{cite:825352a6-b00c-4148-a697-46993837e36d}}) we can find a compact normal subgroup
+FORMULA  such that FORMULA  is a Lie group with finitely many
+components. Using Theorem REF  we see that FORMULA  satisfies
+BC for FORMULA  if and only if FORMULA  satisfies BC for FORMULA 
+(with respect to an appropriate twisted action). Since FORMULA  is
+compact, it follows that FORMULA  is discrete, and
+(after stabilizing if necessary), FORMULA . Let
+FORMULA  and let FORMULA  denote the space of
+FORMULA -orbits in FORMULA . Since FORMULA  is discrete, the same is true
+for FORMULA , and we get a decomposition FORMULA . By
+continuity of BC (see Proposition REF ), we conclude
+that FORMULA  satisfies BC for FORMULA  if and only if
+FORMULA  satisfies BC for FORMULA  for all FORMULA . Using Corollary REF , this will follow if all
+stabilizers FORMULA  satisfy BC for FORMULA .
+But since FORMULA  is discrete, it follows that each stabilizer
+FORMULA  contains the connected component FORMULA  of
+FORMULA . Thus, each stabilizer is a Lie group with finitely many
+components and the result will follow from Proposition
+REF .
+As mentioned above, the main idea for the proof of Proposition
+REF  is to use induction on the dimension FORMULA  of the
+Lie group FORMULA . For this we were very much influenced by Pukánszky's
+proof of the fact that locally algebraic groups (i.e., Lie groups
+having the same Lie algebra as some real algebraic group) have type I
+group FORMULA -algebras as presented in his recent book {{cite:2e3e99e9-4d8c-4c9d-b41c-6493561ccef2}}. We
+split the induction argument into two main parts, which deal with the
+cases whether FORMULA  is semi-simple or not. Note that even in the
+semi-simple case the result does not follow directly from the existent
+results, since all known results only work for trivial coefficients
+and require that the groups have finite centers.
+
+Baum-Connes for continuous fields of FORMULA -algebras
+Let FORMULA  be a separable locally compact group. Then FORMULA  is called
+FORMULA -exact, if the functor FORMULA  is half-exact,
+that is: whenever FORMULA  is a short exact sequence
+of FORMULA -algebras, then the sequence
+FORMULA 
+is
+exact in the middle term. Clearly, every exact group is FORMULA -exact.
+Note that every almost connected group is exact by {{cite:e23b2500-c56e-47ab-87df-1a11d2c05b3c}}.
+Recall also that an element FORMULA  is called a
+FORMULA -element for FORMULA  if there exists a locally compact
+proper FORMULA -space FORMULA , a FORMULA -algebra FORMULA  equipped with a
+nondegenerate and FORMULA -equivariant FORMULA -homomorphism FORMULA , the center of the multiplier algebra FORMULA  of FORMULA , and (Dirac
+and dual-Dirac) elements
+FORMULA 
+such that
+FORMULA 
+for all locally compact proper FORMULA -spaces FORMULA ,
+where FORMULA . It is a basic result of Kasparov
+{{cite:af5442ae-d4b5-4753-899e-e8e7839c2478}} that every almost connected group has a
+FORMULA -element and it follows also from the work of Kasparov (but
+see also {{cite:6efe084e-64ca-419d-a57f-64268c9a7c64}}) that a FORMULA -element of FORMULA  is unique and
+that it is an idempotent with the remarkable property that for every
+FORMULA -algebra FORMULA  the image FORMULA  of the
+assembly map is equal to the FORMULA -part
+FORMULA 
+Here and below, we denote by
+FORMULA  the (reduced)
+descent homomorphism of Kasparov and we denote by FORMULA  the external tensor
+product homomorphism (see {{cite:af5442ae-d4b5-4753-899e-e8e7839c2478}}). Note that it
+follows from the above discussion that a group FORMULA  with
+FORMULA -element satisfies BC for a given FORMULA -algebra FORMULA  if and only
+if FORMULA  (i.e., FORMULA ) acts as the identity on
+FORMULA . We want to exploit these facts to prove the
+following basic result:
+Proposition 3.1 
+Suppose that FORMULA  is a separable locally compact space which can be
+realized as the geometric realization of a (probably infinite)
+finite dimensional simplicial complex. Let FORMULA  be the algebra of
+FORMULA -sections of a continuous field of FORMULA -algebras FORMULA , and let FORMULA  be a FORMULA -linear action of
+FORMULA  on FORMULA . Assume further that FORMULA  is exact and has a
+FORMULA -element FORMULA . Then, if FORMULA 
+satisfies BC with coefficients in each fibre FORMULA , FORMULA  satisfies BC
+for FORMULA .
+
+For the general notion of continuous fields of FORMULA -algebras and
+their basic properties we refer to {{cite:d42799c5-cf72-4637-b118-77dc7dd1bed4}}, {{cite:6b3e6d63-472b-43de-92eb-1ad113f13497}}, {{cite:a0bff5b8-8805-4559-b8a7-fbf86ae956b3}}, {{cite:7ab7feca-91c6-40dc-b878-c044c9192473}}.
+The idea of the proof is to show first that it holds for any closed
+interval FORMULA . Then a short induction argument will show
+that it holds for any cube in FORMULA . Then the result will follow
+from a Mayer-Vietoris argument. For the proof we first need the
+following lemma.
+Lemma 3.2 
+Assume that FORMULA  is a FORMULA -exact group with a FORMULA -element
+FORMULA . Let FORMULA  be a FORMULA -algebra and let
+FORMULA  be a FORMULA -invariant closed ideal of FORMULA . Then there
+is a natural six-term exact sequence
+FORMULA 
+
+Since FORMULA  is FORMULA -exact, it follows that FORMULA 
+is a homotopy invariant and half-exact functor on the category of
+FORMULA -FORMULA -algebras which also satisfies Bott-periodicity (with
+respect to the trivial FORMULA -action on FORMULA ). Then it follows
+from some general arguments (e.g., see {{cite:d6238d4c-f212-46bb-8492-523a7109004f}}) that
+there exists a six-term exact sequence
+FORMULA 
+We want to show that all maps in the sequence commute with
+multiplication with the FORMULA -element. By the construction of the
+connecting maps in the above sequence as given in {{cite:d6238d4c-f212-46bb-8492-523a7109004f}}, it is enough to show that for any pair of FORMULA -algebras FORMULA 
+and FORMULA  and any  FORMULA
+FORMULA 
+commutes with multiplication with
+FORMULA . But for this it is enough to show that
+FORMULA 
+This follows from
+the fact that the descent homomorphism FORMULA  is compatible with
+Kasparov products and the fact that
+FORMULA 
+which follows from {{cite:af5442ae-d4b5-4753-899e-e8e7839c2478}}.
+It follows now that multiplication with FORMULA  also commutes with
+all maps in the above commutative diagram. Since FORMULA  is an
+idempotent, it is now easy to see that the full six-term exact
+sequence restricts to a six-term exact sequence on the
+FORMULA -parts of the respective FORMULA -theory groups of the crossed
+products.
+Remark 3.3 
+It is now a direct consequence of the above proposition that if FORMULA 
+is a FORMULA -exact group possessing a FORMULA -element, and if FORMULA  is a short exact sequence of FORMULA -algebras, then
+FORMULA  satisfying BC for two of the algebras in this sequence implies
+that G satisfies BC for all three algebras in the sequence. The same
+result holds without the assumption on the FORMULA -element (see
+{{cite:2c66253f-f958-4643-98d6-010fc43f23e2}} – which was actually deduced as an easy
+consequence of a result of Kasparov and Skandalis in {{cite:b1753972-5629-4ec8-9ff3-2440f22f2c04}}).
+
+We also need the following easy lemma.
+Lemma 3.4 
+Assume that FORMULA  is a locally compact space and that FORMULA  is the
+algebra of FORMULA -sections of the continuous field FORMULA 
+of FORMULA -algebras. Assume further that FORMULA , FORMULA , such
+that FORMULA  for some evaluation map FORMULA . Then
+there exists a compact neighborhood FORMULA  of FORMULA  such that
+FORMULA  in FORMULA , where FORMULA  denotes the
+restriction of FORMULA  to FORMULA  and FORMULA  denotes the quotient
+map.
+
+We may assume without loss of generality that FORMULA  is
+compact.
+Using suspension, it is enough to give a proof for the case FORMULA .
+In what follows, if FORMULA  is any FORMULA -algebra, we denote by FORMULA  the
+algebra obtained from FORMULA  by adjoining a unit (even if FORMULA  is
+already unital). Then FORMULA  is a continuous field of
+FORMULA -algebras in a canonical way. The algebra FORMULA  of
+sections can be written as the set of pairs FORMULA  with multiplication given pointwise by the multiplication
+rule of the fibres FORMULA . Moreover, we have an obvious unital
+embedding FORMULA .
+Assume now that FORMULA  and FORMULA  are as in the lemma. We
+represent FORMULA  as a formal difference FORMULA  for some projections
+FORMULA . Since FORMULA  we may assume (after
+increasing dimension if necessary) that there exists a unitary
+FORMULA  such that FORMULA . After passing to
+FORMULA  if
+necessary, we may further assume that FORMULA  lies in the connected
+component of the identity of FORMULA . Thus, there exists a
+unitary FORMULA  such that FORMULA . Since FORMULA  is a
+continuous section in FORMULA , it follows that there exists a
+compact neighborhood FORMULA  of FORMULA  such that FORMULA 
+for all FORMULA , which implies that FORMULA , where FORMULA  and FORMULA  denote the restrictions
+of FORMULA  to FORMULA , respectively. But this shows that
+FORMULA  in FORMULA .
+Since FORMULA  is exact, it follows from {{cite:7ab7feca-91c6-40dc-b878-c044c9192473}} that the
+crossed products FORMULA  form a continuous
+bundle such that FORMULA  is the algebra of continuous sections
+of this bundle. We start with proving the result in the special
+case where FORMULA .
+Recall from the above discussions that FORMULA  satisfies BC for a given
+FORMULA -algebra FORMULA  if and only if FORMULA . In particular, it follows from our
+assumptions that FORMULA  for all
+FORMULA . Assume now that FORMULA ,
+FORMULA , and let FORMULA  denote the
+evaluation maps for each FORMULA . Then FORMULA  for all FORMULA . Thus,
+using Lemma REF , we see that there exists a partition
+FORMULA  such that FORMULA  in FORMULA . Now let
+FORMULA  and let FORMULA . It follows from the
+exact sequence
+FORMULA 
+that there exists a FORMULA 
+such that FORMULA  is the image of FORMULA  under the inclusion. Since
+FORMULA 
+we may write
+FORMULA  with FORMULA  for each FORMULA . Thus it is enough to show that FORMULA  for each FORMULA . In what follows, we write FORMULA  and
+FORMULA . Since FORMULA  for all FORMULA  we obtain a
+six-term exact sequence
+FORMULA 
+Since the image of FORMULA  in FORMULA  coincides
+with the image of FORMULA  in FORMULA , we see that
+FORMULA  maps to 0 under the isomorphism FORMULA , so
+FORMULA .
+We now show by induction on FORMULA  that the result is true for
+FORMULA . For this assume that FORMULA  is a continuous field over the cube and FORMULA  is the algebra
+of continuous sections of this field. We write FORMULA  and put FORMULA . Then FORMULA  is a continuous field over
+FORMULA  and FORMULA  is also the section algebra of this bundle. If
+FORMULA  is a FORMULA -linear action on FORMULA , it is also
+FORMULA -linear with respect to the bundle structure of FORMULA  over
+FORMULA  coming from the above decomposition of the cube. Moreover,
+the actions on the fibres FORMULA  are clearly FORMULA -linear,
+so by the induction assumption we know that FORMULA  satisfies BC with
+coefficients in FORMULA  for all FORMULA . We now apply the above
+result to the bundle FORMULA  to conclude that FORMULA 
+satisfies BC with coefficients in FORMULA .
+In a next step we show that the result holds for the open cubes
+FORMULA . By similar arguments as given above it
+suffices to show that the result holds for open intervals. So assume
+that FORMULA  is a continuous field with section algebra
+FORMULA . Let FORMULA . Then it follows from the first part of
+the proof that FORMULA  satisfies BC with coefficients in FORMULA .
+Since, by assumption, FORMULA  also satisfies BC for the fibres, a six-term
+sequence argument shows that it also satisfies BC with coefficients in
+FORMULA . Writing FORMULA  and using continuity of the BC conjecture, it
+follows that FORMULA  satisfies BC for FORMULA .
+Since the result of the proposition is clearly invariant under
+replacing the space FORMULA  by a homeomorphic space FORMULA , we now see that
+the result holds for all open or closed simplices. We now proof the
+general result for simplicial complexes via induction on the dimension
+of the complex. By continuity of the conjecture, the result is clear
+for zero-dimensional complexes. If FORMULA  has dimension FORMULA , let FORMULA 
+denote the interiors of all FORMULA -dimensional simplices in FORMULA . Then
+FORMULA  is homeomorphic to a disjoint union of open FORMULA -dimensional
+cubes, so the result holds for FORMULA . Since FORMULA  is a
+simplicial complex of dimension FORMULA , the result is true for
+FORMULA  by the induction assumption. The result then
+follows from another easy application of the six-term sequence (see
+Remark REF ).
+Remark 3.5 
+Let FORMULA  be a second countable locally compact group and let FORMULA  be a
+second countable locally compact FORMULA -space. Following Glimm we say
+that the quotient space FORMULA  is countably separated, if all
+orbits FORMULA  are locally closed, i.e. FORMULA  is open in its closure
+FORMULA . Glimm showed in {{cite:974ad3b3-e4a9-4914-a32c-88bbf54fcd8b}} that FORMULA 
+being countably separated is equivalent to each of the following
+conditions:
+
+The canonical map FORMULA  is a
+homeomorphism for each FORMULA .
+
+There exists a sequence of FORMULA -invariant open subsets
+FORMULA  of FORMULA , where FORMULA  runs through the ordinal
+numbers such that
+
+FORMULA  for each FORMULA  and
+FORMULA  is Hausdorff.
+
+If FORMULA  is a limit ordinal, then
+FORMULA .
+
+There exits an ordinal number FORMULA  such that
+FORMULA .
+
+
+Unfortunately, in order to apply our bundle results to such actions,
+we need to know that the spaces FORMULA  have a simplicial structure as required in Proposition
+REF . However, we can summarize the above results to
+prove the following theorem which turns out to be sufficient for our
+purposes:
+
+Theorem 3.6 
+Suppose that FORMULA  is a second countable exact group which has a
+FORMULA -element. Let FORMULA  be a second countable locally compact
+FORMULA -space, let FORMULA  be a continuous bundle of
+FORMULA -algebras over FORMULA  with section algebra FORMULA  and let
+FORMULA  be an action of FORMULA  on FORMULA  which is compatible
+with the given action of FORMULA  on FORMULA . Assume further that the
+following assumptions are satisfied:
+
+FORMULA  is countably separated.
+
+There exists an increasing sequence of open FORMULA -invariant
+subsets FORMULA  of FORMULA  such that
+FORMULA  if FORMULA  is a limit ordinal
+and FORMULA  for some FORMULA .
+
+For each FORMULA  there exists a finite dimensional
+simplicial complex FORMULA  and a continuous and open
+surjection FORMULA  such that for all FORMULA ,
+FORMULA  is a finite union of orbits in FORMULA .
+
+Each stabilizer FORMULA , FORMULA , satisfies BC for FORMULA .
+
+Then FORMULA  satisfies BC for FORMULA .
+
+For each ordinal FORMULA  let FORMULA 
+denote the ideal corresponding to FORMULA . We show by transfinite
+induction that FORMULA  satisfies BC with coefficients in FORMULA  for
+each FORMULA . Since FORMULA  for some FORMULA , the result will
+follow.
+We start by showing that FORMULA  satisfies BC with coefficients in
+FORMULA . Since the map FORMULA  is open, we can regard FORMULA 
+as a section algebra of a continuous bundle over FORMULA  with fibres
+isomorphic to FORMULA . By Proposition REF 
+it is therefore sufficient to prove that FORMULA  satisfies BC for
+FORMULA  for all FORMULA . Fix FORMULA  and put
+FORMULA . Since FORMULA  is a finite union of FORMULA -orbits, we find
+a finite sequence
+FORMULA 
+of
+open invariant subsets of FORMULA  such that FORMULA  is a discrete finite set. To see this let FORMULA  be the
+union of all closed FORMULA -orbits in FORMULA  (such orbits must exist by the
+finiteness of FORMULA !). Then FORMULA  is closed in FORMULA  and FORMULA  is
+discrete. Put FORMULA  and then define the FORMULA 's,
+FORMULA , inductively by the same procedure. Using six-term sequences
+(e.g., see Remark REF ), FORMULA  satisfies BC for FORMULA  if
+FORMULA  satisfies BC for all FORMULA , which in
+turn follows if FORMULA  satisfies BC for FORMULA  for any FORMULA -orbit
+FORMULA . Since FORMULA  is homeomorphic to FORMULA  via the
+canonical map (see Remark REF  above), it follows
+from Proposition REF , that FORMULA  is
+FORMULA -equivariantly isomorphic to FORMULA . Since, by
+assumption, FORMULA  satisfies BC with coefficients in FORMULA , it
+follows then from Theorem REF  that FORMULA  satisfies BC
+with coefficients in FORMULA . This completes the proof for
+FORMULA .
+Assume now that FORMULA  is an ordinal number and that we have already
+shown that FORMULA  satisfies BC for FORMULA  for all FORMULA . If
+FORMULA  for some ordinal FORMULA , it follows from the same
+reasoning as for the case FORMULA  that FORMULA  satisfies BC for
+FORMULA . Since FORMULA 
+satisfies BC for FORMULA  by the induction assumption, it follows
+from Remark REF  that FORMULA  satisfies BC for FORMULA .
+Assume now that FORMULA  is a limit ordinal and FORMULA  satisfies BC for
+each FORMULA . Then FORMULA  which implies
+that FORMULA  is the inductive limit of the
+FORMULA . Thus it follows from Proposition REF  that
+FORMULA  satisfies BC for FORMULA .
+
+The semi-simple case
+In this section we want to show that Proposition REF  is
+true if FORMULA  is semi-simple. For this we first have to obtain a slight
+extension of Lafforgue's results on the Baum-Connes conjecture for
+semi-simple groups with finite center.
+Let us first recall the basic idea of Lafforgue's proof of the
+Baum-Connes conjecture for such groups. If FORMULA  is a locally compact
+group we let FORMULA  denote the convolution algebra of FORMULA  consisting
+of continuous functions with compact supports. A norm FORMULA  on
+FORMULA  is called good if convolution is continuous with
+respect to this norm and if FORMULA  only depends on the absolute value
+of FORMULA  for all FORMULA  (i.e., FORMULA  for all FORMULA ). A good completion FORMULA  of FORMULA  is a
+completion with respect to a good norm on FORMULA . Note that
+FORMULA  is always a good completion of FORMULA , but FORMULA  and
+FORMULA  are in general not good completions of FORMULA .
+If FORMULA  is a good completion of FORMULA , then Lafforgue
+constructed an assembly map
+FORMULA 
+Moreover, if the identity on FORMULA  extends to a continuous
+embedding FORMULA , he also shows that the
+assembly map FORMULA  factors
+through FORMULA , i.e.,
+FORMULA 
+(see {{cite:7a3db8bb-45c4-4b07-b209-ce0549897be5}}). Thus, if we know that FORMULA  is an
+isomorphism for all good completions of FORMULA , and if we further
+know that there exists a good completion FORMULA  such that the inclusion FORMULA  is an isomorphism, it follows that FORMULA  is an isomorphism. Note that
+FORMULA  is an isomorphism
+whenever FORMULA  is closed under holomorphic functional
+calculus in FORMULA . Now Lafforgue was able to prove the following
+deep results:
+Theorem 4.1 (cf {{cite:7a3db8bb-45c4-4b07-b209-ce0549897be5}}) 
+
+Assume that FORMULA  is a second countable locally compact group such
+that FORMULA  acts isometrically and properly on a Riemannian manifold
+with nonpositive sectional curvature which is bounded below. Then
+FORMULA  is
+an isomorphism for every good completion FORMULA  of
+FORMULA .
+
+In fact, Lafforgue was even able to show that the above result holds
+with arbitrary FORMULA -algebra coefficients, but we do not need this
+more general result here. Note that if FORMULA  is semi-simple with finite
+center, then the Riemannian manifold of the theorem can be chosen to
+be the symmetric space FORMULA , where FORMULA  is the maximal compact
+subgroup of FORMULA .
+In the second step for the proof of BC for semi-simple groups,
+Lafforgue constructed a Schwartz-algebra FORMULA  which is a good completion of FORMULA  which is closed under
+holomorphic functional calculus in FORMULA . In fact, this
+construction followed a more general principle, which we are now going
+to describe in more detail.
+Assume that FORMULA  is a unimodular group and FORMULA  is a compact subgroup of
+FORMULA . Then, following Lafforgue (see {{cite:7a3db8bb-45c4-4b07-b209-ce0549897be5}}), we say
+that the pair FORMULA  satisfies property FORMULA  if the following
+conditions are satisfied
+
+There exists a continuous function FORMULA 
+such that FORMULA , FORMULA  for all FORMULA  and
+FORMULA  for all FORMULA .
+
+There exists a continuous function FORMULA  such
+that FORMULA , FORMULA , FORMULA  for
+all FORMULA  and FORMULA , and
+FORMULA 
+with respect to the normalized Haar measure on FORMULA .
+
+There exists a FORMULA  such that
+FORMULA  for all FORMULA .
+
+If FORMULA  is a connected semi-simple group with finite center, and if FORMULA 
+is the maximal compact subgroup of FORMULA , then Lafforgue was able to
+show that FORMULA  satisfies (HC). The following theorem then completes
+the proof of BC for connected semi-simple groups with finite center.
+Theorem 4.2 (cf {{cite:7a3db8bb-45c4-4b07-b209-ce0549897be5}}) 
+Assume that FORMULA  is a unimodular group and FORMULA  is a compact subgroup
+of FORMULA  such that the pair FORMULA  satisfies (HC). Then there exists
+a good completion FORMULA  of FORMULA  such
+that FORMULA  is closed under holomorphic functional calculus
+in FORMULA .
+
+In order to extend Lafforgue's methods to extensions of semi-simple
+groups, we first show that property (HC) is closed under compact
+extensions.
+Lemma 4.3 
+Assume that FORMULA  satisfies property (HC). Assume further that
+FORMULA 
+is a group extension
+with FORMULA  compact. Let FORMULA .
+Then FORMULA  satisfies (HC).
+
+Since compact extensions of unimodular groups
+are unimodular, FORMULA  is unimodular. Let FORMULA  be a pair
+of functions which satisfy HC1, HC2, and HC3 with respect to
+FORMULA . Define FORMULA  and
+FORMULA . Then a straightforward computation shows
+that FORMULA  satisfies HC1, HC2, and HC3 with
+respect to FORMULA .
+The second result is slightly more technical.
+Lemma 4.4 
+Assume that FORMULA  is a unimodular Lie group with finitely many
+components and let FORMULA  be a maximal compact subgroup of FORMULA . Let
+FORMULA  denote the connected component of FORMULA  and let FORMULA  be a
+maximal compact subgroup of FORMULA  such that FORMULA  satisfies
+(HC). Then FORMULA  satisfies (HC), too.
+
+First note that we may assume that FORMULA . To see this
+observe first that, since FORMULA  is a compact subgroup of FORMULA , we may
+assume without loss of generality that FORMULA .
+But the maximality of FORMULA  then implies equality. It follows from
+this that FORMULA  is a normal subgroup of FORMULA  and since FORMULA  is
+connected, it follows that the inclusion FORMULA  induces a group
+isomorphism FORMULA .
+Let FORMULA  be a pair of functions satisfying conditions
+HC1–HC3 for FORMULA . It follows from the above remarks that we
+can write every element of FORMULA  as a product FORMULA  with FORMULA ,
+FORMULA . We then define
+FORMULA 
+To see that FORMULA  and FORMULA 
+are well defined assume that we have two factorizations FORMULA 
+with FORMULA . Then FORMULA  with
+FORMULA . Since FORMULA  normalizes FORMULA , it follows from
+the left and right FORMULA -invariance of FORMULA  that
+FORMULA 
+
+A similar computation shows that FORMULA  is well defined.
+We are now going to check properties HC1–HC3 for FORMULA .
+It follows directly from the definition of FORMULA  and FORMULA  that
+they are left invariant under the action of FORMULA . To see right
+invariance, we compute for FORMULA :
+FORMULA 
+So FORMULA  is also right invariant and a similar computation show
+that the same is true for FORMULA . Since Haar measure on FORMULA  is
+normalized, it follows that FORMULA  and FORMULA . Moreover,
+if FORMULA  with FORMULA  we get
+FORMULA 
+
+In order to prove the multiplication rule for FORMULA  we use
+Weil's formula
+FORMULA 
+with
+respect to normalized Haar measures on FORMULA , and FORMULA  to
+compute
+FORMULA 
+
+Here the equation (*) follows from the FORMULA -invariance of FORMULA ,
+(**) follows from Fubini together with the transformation
+FORMULA , and (***) follows from property HC2 for
+FORMULA . This completes the proof of HC1 and HC2.
+For the proof of HC3 we write FORMULA ,
+FORMULA . Since FORMULA , it follows from the FORMULA -invariance of
+FORMULA  and FORMULA  that the integrals of FORMULA  over the
+FORMULA -cosets coincide. Thus, since FORMULA  is finite, it is
+enough to show that FORMULA  for some FORMULA . For
+this we first choose a set of representatives FORMULA  for FORMULA  with FORMULA . Then, for FORMULA , we
+obtain the inequality
+FORMULA 
+from which it follows that FORMULA  for all
+FORMULA . Thus, if FORMULA  such that FORMULA , then we also
+have FORMULA . So let FORMULA  with FORMULA  as above. Then we get
+FORMULA 
+
+Since FORMULA  is unimodular, it follows that each summand FORMULA ,
+and hence FORMULA .
+We are now ready to combine the above results to get
+Proposition 4.5 
+Let FORMULA  be a locally compact group with finitely many components.
+Assume further that FORMULA  has a compact normal subgroup FORMULA  such that FORMULA  is semi-simple with finite center. Then FORMULA 
+satisfies BC with trivial coefficients.
+
+Let FORMULA  denote the maximal compact subgroup of FORMULA .
+Then FORMULA  is a symmetric space and
+therefore has nonpositive sectional curvature. Moreover, if FORMULA  is a
+maximal compact subgroup of FORMULA  such that FORMULA , we see
+that FORMULA  as a Riemannian manifold. Since FORMULA  acts
+isometrically and properly on FORMULA , FORMULA  satisfies the assumptions
+of Theorem REF . By Lafforgue's results we also know that
+FORMULA  satisfies (HC). Lemmas REF  and
+REF  then imply that FORMULA  also satisfies property
+(HC). Thus, it follows from the combination of Theorem
+REF  with Theorem REF  that FORMULA  satisfies BC
+with coefficients in FORMULA .
+Using the results on continuous fields of actions as presented in the
+previous section, we are now able to prove
+Proposition 4.6 
+Assume that FORMULA  is a Lie group with finitely many components such
+that FORMULA  is reductive, i.e., the Lie algebra FORMULA  of FORMULA  is
+a direct sum of two ideals FORMULA  with
+FORMULA  semi-simple and FORMULA  abelian. Then FORMULA  satisfies
+BC for FORMULA .
+
+Let FORMULA  denote the center of FORMULA . Using Theorem
+REF  it is enough to show that FORMULA  satisfies BC with
+coefficients in FORMULA , where
+the action of FORMULA  on the dual space FORMULA  of FORMULA  is given
+via conjugation. Since FORMULA  is central in FORMULA , it follows that this
+action factors through an action of the finite group FORMULA .
+Moreover, since FORMULA  is a manifold (since FORMULA  is a
+compactly generated abelian group), it follows that the quotients of
+the orbit-types in FORMULA  are manifolds. From this we easily
+obtain a finite decomposition sequence
+FORMULA 
+of open FORMULA -invariant subsets of FORMULA 
+such that the quotients of the differences FORMULA  are homeomorphic to geometric realizations of finite
+dimensional simplicial complexes. Moreover, since all stabilizers
+for the action of FORMULA  on FORMULA  contain FORMULA , which is
+semi-simple with trivial center, it follows from a combination of
+Proposition REF  with Proposition REF  that
+all stabilizers satisfy BC for FORMULA . The result then follows from
+Theorem REF .
+Since any central extension of a semi-simple group is reductive, we
+now get the desired result for general semi-simple groups.
+Corollary 4.7 
+Let FORMULA  be a semi-simple Lie group with finitely many components and
+let
+FORMULA 
+be a central extension of FORMULA  by
+FORMULA . Then FORMULA  satisfies BC for FORMULA . As a consequence
+(using Proposition REF ), FORMULA  satisfies BC for FORMULA 
+with respect to arbitrary actions of FORMULA  on FORMULA .
+
+
+The general case
+We now want to give a proof of Proposition REF . As
+indicated in the first section, we are going to use an induction
+argument on the dimension FORMULA . Since any one-dimensional Lie
+group with finitely many components is amenable, and since amenable
+groups satisfy BC for arbitrary coefficients, the case FORMULA  is clear.
+Assume now that FORMULA  is an arbitrary Lie group with finitely many
+components. Let FORMULA  denote the connected component of FORMULA . Let FORMULA 
+denote the nilradical of FORMULA  and let FORMULA  and FORMULA  denote
+the Lie algebras of FORMULA  and FORMULA , respectively. If FORMULA ,
+then FORMULA  is semi-simple and the result follows from the previous
+section. So we may assume that FORMULA .
+It is shown in {{cite:2e3e99e9-4d8c-4c9d-b41c-6493561ccef2}} that the subgroup FORMULA  of
+FORMULA  corresponding to the subalgebra
+FORMULA  of FORMULA  is closed in
+FORMULA . Further, if FORMULA  is a Levi section in FORMULA , i.e.,
+FORMULA  is a maximal semi-simple subalgebra of FORMULA , then
+FORMULA  (e.g., see the discussion in the proof of
+{{cite:2e3e99e9-4d8c-4c9d-b41c-6493561ccef2}}). In particular, FORMULA  is semi-simple.
+Clearly, FORMULA  is a normal subgroup of FORMULA  and FORMULA  is a finite
+extension of a connected abelian Lie group. Let FORMULA  denote the
+inverse image of the maximal compact subgroup of FORMULA  in FORMULA . It
+follows then from Theorem REF  that FORMULA  satisfies BC for FORMULA 
+if and only if FORMULA  satisfies BC for FORMULA . Note that the connected
+component of FORMULA  is a compact connected abelian Lie group, hence a
+torus group.
+Thus, replacing FORMULA  by FORMULA , we may from now on assume that FORMULA  has the
+following structure: There exist closed normal subgroups
+FORMULA 
+such that FORMULA  is a non-trivial connected nilpotent Lie group, FORMULA  is
+semi-simple, FORMULA  is a torus group and FORMULA  is finite. Moreover,
+by induction we may assume that every almost connected Lie group with
+smaller dimension satisfies BC for FORMULA  with respect to arbitrary
+actions on FORMULA , or, equivalently (by Proposition REF ),
+every central extension by FORMULA  satisfies BC for FORMULA .
+It is now useful to recall the following result of Chevalley
+(see {{cite:c7698237-8be3-41b5-b951-fdc95abb0269}}):
+Proposition 5.1  Let FORMULA 
+be a Lie-algebra of endomorphisms of the finite dimensional
+real vector space FORMULA . Then
+FORMULA  is algebraic (i.e. it corresponds to a real
+algebraic subgroup FORMULA )
+if and only if there exist subalgebras FORMULA 
+of FORMULA  with FORMULA ,
+FORMULA  is semi-simple, FORMULA  is the largest ideal
+of FORMULA  consisting of nilpotent
+endomorphisms, and FORMULA  is an algebraic abelian
+subalgebra of FORMULA  consisting of semi-simple
+endomorphisms such that FORMULA .
+
+Using Ado's theorem
+(see {{cite:c7698237-8be3-41b5-b951-fdc95abb0269}})
+and Proposition REF , it follows that the group FORMULA 
+considered above is locally algebraic,
+i.e., the Lie algebra FORMULA  has a faithful representation
+as an algebraic Lie subalgebra into some FORMULA .
+Using this structure, the main idea is to apply the Mackey machine to
+a suitable abelian subgroup FORMULA  of FORMULA  which is normal in FORMULA . The
+fact that FORMULA  is very close to an algebraic group implies that the
+action of FORMULA  on the dual FORMULA  of FORMULA  has very good
+topological properties, which is precisely what we need to make
+everything work. As a first hint that this approach is feasible we
+prove:
+Lemma 5.2 
+Assume that FORMULA  is a Lie group with finitely many components. Let
+FORMULA  be a connected closed normal subgroup of FORMULA  such
+that FORMULA  is locally algebraic, and such that FORMULA  is compact. Let
+FORMULA  denote the nilpotent radical of FORMULA , and let FORMULA  be a
+connected abelian normal subgroup of FORMULA . Let FORMULA  denote
+the character group of FORMULA  and let FORMULA  act on FORMULA  via
+conjugation. Then the following assertions are true:
+
+The orbit space FORMULA  is countably separated,
+i.e., all FORMULA -orbits in FORMULA  are locally closed.
+
+If FORMULA  is the stabilizer of some FORMULA  for the action of FORMULA  on FORMULA , then
+FORMULA  is amenable.
+
+
+We first show that it is sufficient to prove the result for the case
+FORMULA . Indeed, if we already know that FORMULA  is countably
+separated, then we observe that FORMULA  is a topological
+FORMULA -space such that FORMULA .
+But it is an easy exercise to prove that the quotient space of a
+countably separated space by a compact group action is countably
+separated.
+Assume now that FORMULA  is the stabilizer of some FORMULA  in FORMULA . Then FORMULA  is the
+stabilizer in FORMULA . It follows that FORMULA  is a normal subgroup
+of FORMULA  such that FORMULA  is compact. If
+FORMULA  is amenable, it also follows that
+FORMULA , and hence also FORMULA  are
+amenable.
+So, for the rest of the proof we assume that FORMULA . In the next
+step we reduce to the case where FORMULA  is simply connected. For this
+let FORMULA  denote the universal covering group of FORMULA . Then
+FORMULA  has the same Lie algebra as FORMULA , and therefore it is
+locally algebraic. Let FORMULA  denote the quotient map
+and let FORMULA . Then FORMULA  is a discrete central subgroup of
+FORMULA . Let FORMULA  denote the Lie
+algebra of FORMULA  and let FORMULA  denote the connected closed
+normal subgroup of FORMULA  corresponding to FORMULA . Then
+FORMULA  is a vector subgroup of the nilpotent radical
+FORMULA  of FORMULA  and the quotient map FORMULA 
+maps FORMULA  surjectively onto FORMULA , i.e., we have FORMULA . In particular, it follows that we may
+view FORMULA  as a closed FORMULA -invariant subspace of
+FORMULA , and we have
+FORMULA  (since the central subgroup
+FORMULA  acts trivially on FORMULA ). Thus, if
+FORMULA  is countably separated, the same is
+true for FORMULA .
+We now consider the stabilizers. It follows from the above
+considerations that if FORMULA  is the stabilizer of some FORMULA , then FORMULA  is the
+stabilizer of FORMULA  in FORMULA . Thus it follows that
+FORMULA . Since the
+connected component of FORMULA  is mapped onto the
+connected component of FORMULA  under the quotient map, it follows
+that FORMULA  is a quotient of
+FORMULA . Thus, if the latter is
+amenable, the same is true for FORMULA .
+Thus, in what follows we may assume without loss of generality that
+FORMULA  is simply connected. We are then in precisely the same situation
+as in the proof of Case (A) of the proof of the Theorem on page 2 of
+{{cite:2e3e99e9-4d8c-4c9d-b41c-6493561ccef2}}, and from now on we can follow the line of arguments as
+given on pages 2 and 3 of {{cite:2e3e99e9-4d8c-4c9d-b41c-6493561ccef2}} to see that FORMULA  is
+countably separated. Moreover, the arguments presented in steps c)
+and d) on page 3 of Punkánzsky's book imply that for each
+stabilizer FORMULA  the quotient FORMULA  is a
+finite extension of an abelian group, and hence is amenable.
+Remark 5.3  We should point out that
+the result on the stabilizers in Lemma REF  is most
+satisfying: Indeed if we know that every almost connected Lie group
+with dimension FORMULA  satisfies BC for FORMULA , say, then, by an
+easy application of Theorem REF  the same is true for all
+Lie groups FORMULA  with FORMULA  and FORMULA  amenable!
+
+Unfortunately, the result on the orbit space FORMULA  is not
+sufficient for a direct application of Theorem REF . So
+we have to do some extra work to obtain more information on the
+structure of FORMULA . To do this
+we have to do two steps:
+
+Reduce to cases where the action of FORMULA  on FORMULA 
+factors through an algebraic action of some real algebraic group
+FORMULA  (or a subgroup of finite index in FORMULA ).
+
+Show that that the topological orbit-spaces of algebraic group actions
+on real affine varieties have nice stratifications
+as required by Theorem REF .
+
+Note that Pukánszky does the first reduction
+for the cocompact subgroup FORMULA  of FORMULA , which allowed us to
+draw the conclusions of the previous lemma.
+However, with a bit more work we obtain similar conclusion
+for FORMULA . The following result is
+certainly well-known to the experts, but since we didn't find a direct
+reference we included the easy proof.
+Lemma 5.4 
+Assume that FORMULA  is a Lie group with finitely many components such
+that FORMULA  has a connected closed normal subgroup FORMULA  with FORMULA 
+semi-simple and FORMULA  a torus group. Let FORMULA  be a finite
+dimensional real vector space and let FORMULA  be any
+continuous homomorphism. Then the Zariski closure FORMULA  of FORMULA 
+is a (reductive) real algebraic group which contains FORMULA  as a
+subgroup of finite index.
+
+Let FORMULA  denote
+the differential of FORMULA  and let FORMULA  denote the ideal of
+FORMULA  corresponding to FORMULA . Then FORMULA  is semi-simple
+(or trivial). Since FORMULA  is a semi-simple subgroup of FORMULA 
+it is closed in FORMULA . This follows from the fact that every
+semi-simple subalgebra of FORMULA  is algebraic
+(by Proposition REF ), which implies
+that FORMULA  is the connected component of some algebraic linear
+subgroup of FORMULA .
+Since FORMULA  is compact, it
+follows that FORMULA  is a closed subgroup of FORMULA , too.
+To simplify notation we assume from now on that FORMULA  itself is a
+closed subgroup of FORMULA  and that FORMULA  is the
+identity map. Let FORMULA  be a Levi
+decomposition of FORMULA . Since FORMULA  is abelian and FORMULA  is
+semi-simple, it follows that FORMULA 
+and FORMULA . Thus
+FORMULA  is reductive.
+We now show that FORMULA  is an algebraic subalgebra of FORMULA .
+By Proposition REF  it suffices to show that
+FORMULA  is algebraic and consists of semi-simple elements.
+But this will follow if we can show that FORMULA  is compact, and hence a torus group.
+Since FORMULA  is finite (since every linear semi-simple group
+has finite center), the restriction to FORMULA  of the quotient map
+FORMULA  has finite kernel. Since FORMULA , FORMULA  is
+compact by assumption, and hence FORMULA  is compact, too.
+It follows that the algebraic closure FORMULA  of FORMULA  is a
+reductive algebraic group which contains FORMULA  as a subgroup of
+finite index. Since every element of FORMULA  fixes the Lie algebra
+FORMULA  via the adjoint action, it also normalizes FORMULA .
+Therefore, FORMULA  is a reductive algebraic group which
+contains FORMULA  as a subgroup of finite index.
+We now show that quotients of linear algebraic group actions
+on affine varieties have nice stratifications in the sense of
+Theorem REF . We are very grateful to Jörg Schürmann
+and Peter Slodowy for some valuable comments, which helped us
+to replace a previous version of the following result
+(which, as was pointed out to us by Jörg Schürmann, contained a gap)
+by
+Proposition 5.5 
+Suppose that FORMULA  is a closed subgroup of finite index
+of a Zariski closed subgroup FORMULA  of
+FORMULA  and that FORMULA  is a FORMULA -invariant Zariski
+closed subset of FORMULA . Then there exists a
+stratification
+FORMULA 
+of open FORMULA -invariant subsets FORMULA  of FORMULA 
+such that
+FORMULA  admits a continuous and open finite-to-one map
+onto a differentiable manifold.
+
+Since every manifold has a triangulation, the above result
+really gives what we need to apply Theorem REF .
+For the proof we need the following lemma about certain decompositions of
+continuous semi-algebraic maps.
+Lemma 5.6 
+Let FORMULA  be semi-algebraic sets and let FORMULA 
+be a continuous semi-algebraic map (see {{cite:df0beb25-abc2-4856-b47a-ae0e3e61e444}} for
+the notations).
+Then there exists a stratification
+FORMULA 
+with each FORMULA  open in FORMULA , FORMULA 
+is a differentiable manifold and
+FORMULA 
+is open (in the euclidean topology) for all FORMULA .
+
+Since the image of a semi-algebraic set under a
+semi-algebraic map is
+semi-algebraic (see {{cite:df0beb25-abc2-4856-b47a-ae0e3e61e444}}),
+we may assume without loss of generality that FORMULA .
+By {{cite:df0beb25-abc2-4856-b47a-ae0e3e61e444}} there exists a closed
+semi-algebraic subset FORMULA  with FORMULA ,
+such that FORMULA  is a finite disjoint
+union of connected components (combine with {{cite:df0beb25-abc2-4856-b47a-ae0e3e61e444}}) and such that the restriction of FORMULA  to the inverse
+image of each component is a projection, hence open.
+Thus FORMULA  is open, too.
+Indeed, the construction (using {{cite:df0beb25-abc2-4856-b47a-ae0e3e61e444}})
+implies that FORMULA  is homeomorphic to
+a submanifold of some FORMULA .
+Put FORMULA . Since FORMULA , the result
+follows by induction.
+Remark 5.7 
+Let FORMULA  be a real linear algebraic group,
+and let FORMULA  be its complexification.
+Then it follows from {{cite:2ef8825a-7675-4a19-9cc6-13f072e9749f}} that
+each FORMULA -orbit in FORMULA  contains at most finitely many
+FORMULA -orbits in FORMULA .
+
+We first note that we may assume without loss of generality
+that FORMULA . Indeed, since FORMULA  has finite index in FORMULA ,
+every FORMULA -orbit decomposes into finitely many FORMULA -orbits.
+Thus, if FORMULA 
+is a stratification of FORMULA  for the FORMULA -action
+with the required properties,
+it is also a stratification for the FORMULA -action with the same properties.
+Thus we assume from now on that FORMULA  is a Zariski closed subgroup of
+FORMULA .
+Let FORMULA  denote the
+complexification
+of FORMULA . Consider the diagram
+FORMULA 
+By the theorem of Rosenlicht ({{cite:e109a4fc-4152-4261-be69-ac500ce74a1d}}, but see also
+{{cite:06d4ad58-ff69-4ad8-b3ea-9dec1cf37c83}}), there exists a sequence
+FORMULA 
+of Zariski-closed FORMULA -invariant subsets of
+strictly decreasing dimension such that FORMULA 
+has closed FORMULA -orbits and the geometric quotient by
+FORMULA 
+of FORMULA  exists. This means that the
+quotient FORMULA 
+can be realized as an algebraic set and the quotient map is
+also algebraic.
+Let FORMULA  be the first of the sets FORMULA 
+which has nonempty intersection with FORMULA . Restricting the maps
+in the above diagram gives
+FORMULA 
+The resulting map FORMULA  from FORMULA  to FORMULA  is
+an algebraic map, and hence it is a continuous semi-algebraic
+map. Thus it follows from Lemma REF  that, if FORMULA  denotes the
+image of FORMULA  in FORMULA , then
+FORMULA  has a stratification
+FORMULA 
+such that FORMULA 
+is open for all FORMULA , each FORMULA  is open in
+FORMULA , and the difference sets FORMULA  are
+submanifolds of some FORMULA .
+Put FORMULA  for FORMULA . Then FORMULA .
+By Remark REF , if we pass through the lower left corner of the
+diagram, the corresponding maps FORMULA  are open, finite-to-one, onto the
+manifolds FORMULA .
+Now replace FORMULA  by the invariant Zariski-closed subset
+FORMULA . Repeating the above arguments finitely many
+times gives the desired stratification (the procedure stops
+after finitely many steps, since any increasing sequence of
+Zariski open sets eventually stabilizes).
+Using the above results, we are now able to prove
+Proposition 5.8 
+Suppose that FORMULA  is a Lie group with finitely many components and with
+connected closed normal subgroups FORMULA  as in (REF ), i.e., FORMULA  is the
+nilradical of FORMULA , FORMULA  is semi-simple and FORMULA  is a torus group.
+Let FORMULA  be a connected closed subgroup which is normal
+in FORMULA , where FORMULA  denotes the center of FORMULA . Then
+FORMULA  decomposes into a countable disjoint union of
+open FORMULA -invariant sets FORMULA  such that each FORMULA  has a
+stratification
+FORMULA 
+(where FORMULA  may depend on FORMULA )
+of open FORMULA -invariant subsets of FORMULA ,
+and continuous open surjections
+FORMULA 
+such
+that each FORMULA  is a differentiable manifold and inverse images of
+points in FORMULA  are finite unions of FORMULA -orbits in FORMULA  for
+all FORMULA .
+
+Let FORMULA  denote the ideal of FORMULA  corresponding to FORMULA .
+Then we may identify FORMULA  with a closed FORMULA -stable subset
+of FORMULA  of the form FORMULA  with FORMULA  being a vector
+subgroup of FORMULA  and FORMULA  a finitely generated free abelian
+group. Note that FORMULA  can be identified with the dual of the maximal
+compact subgroup in FORMULA , and therefore we can decompose FORMULA  into a
+disjoint union of FORMULA -orbits, which are all finite since FORMULA  acts
+trivially on FORMULA . It then follows that FORMULA  can be
+decomposed into a disjoint union of FORMULA -invariant sets of the form
+FORMULA  with FORMULA  finite.
+The action of FORMULA  on FORMULA  is given via the coadjoint
+representation FORMULA . Since
+FORMULA , it follows that this representation factors
+through a representation of FORMULA . Thus it follows from the general
+assumptions on FORMULA  and Lemma REF  that the algebraic
+closure FORMULA  of FORMULA  in FORMULA  is a
+reductive algebraic group which contains the image of
+FORMULA  as a subgroup of finite index. Since the
+FORMULA -stable sets of the form FORMULA  of the previous paragraph
+are closed algebraic subvarieties of FORMULA , it follows that
+these sets are also invariant under the action of the Zariski
+closure FORMULA  of FORMULA . Thus it follows from
+Proposition REF  that for each such set we obtain a
+stratification
+FORMULA 
+with the required properties.
+We are now ready for the final step:
+By the discussion at the beginning of this section we may assume
+without loss of generality that FORMULA  is as in (REF ),
+i.e., we have connected closed normal subgroups
+FORMULA 
+such that FORMULA  is a
+nontrivial nilpotent group FORMULA  is semi-simple and FORMULA  is a
+torus group. For the induction step we have to show that every
+central extension
+FORMULA 
+satisfies BC for FORMULA . Let
+FORMULA , FORMULA  and FORMULA  denote the inverse images of
+FORMULA , FORMULA  and FORMULA  in FORMULA . Then the sequence of normal
+subgroups
+FORMULA 
+has
+the same general properties as the sequence FORMULA , in particular, FORMULA  is the nilradical of
+FORMULA  and FORMULA  is locally algebraic. Let FORMULA  denote the
+central copy of FORMULA  in FORMULA  coming from the given central
+extension. We now divide the proof into the following cases:
+
+The center FORMULA  of FORMULA  has dimension
+greater or equal to two.
+
+FORMULA .
+
+We start with Case C(1): By Theorem REF  (and the discussion
+following that theorem) it suffices to show that FORMULA  satisfies
+BC with coefficients in FORMULA  where the action of
+FORMULA  on FORMULA  is given by conjugation. By Theorem
+REF  it suffices to show that all stabilizers
+FORMULA  satisfy BC for FORMULA  and that
+FORMULA  has a nice stratification. While the latter follows
+from Proposition REF , the requirement on the stabilizers
+follows from Lemma REF , Remark REF , and the
+induction assumption since
+FORMULA 
+This finishes
+the proof in Case C(1).
+For the proof of Case C(2) we have to do some more reduction steps in
+order to use the same line of arguments as in C(1). For this it is
+useful to consider the following two subcases:
+
+If FORMULA  denotes the inverse image of the center
+FORMULA  of FORMULA  in FORMULA , then FORMULA .
+
+FORMULA .
+
+In Case (2)a we consider the normal subgroup FORMULA  of FORMULA .
+Then FORMULA  is a connected two-step nilpotent Lie group with
+one-dimensional center FORMULA , and therefore a Heisenberg group. It
+follows that FORMULA  can be written as the direct sum
+FORMULA 
+with
+FORMULA 
+Since FORMULA  acts trivially on
+FORMULA , it follows that the decomposition action of FORMULA 
+on FORMULA  induces an action on each fibre FORMULA , and,
+by Theorem REF  together with Proposition REF ,
+it follows that FORMULA  satisfies BC with coefficients in FORMULA  if
+FORMULA  satisfies BC with coefficients in FORMULA  for
+each FORMULA . If FORMULA , we get
+FORMULA , and the desired result follows from the
+induction assumption and the fact that FORMULA .
+So we only have to deal with the case FORMULA , where we have to deal
+with the fibre FORMULA . But
+here we are exactly in the same situation as in the proof of Case C(1),
+since the action of FORMULA  on FORMULA  factors through an
+action of FORMULA  and all stabilizers of the characters of FORMULA  have
+dimension strictly smaller than FORMULA .
+We have to work a bit more for the Proof of Case (2)b. Here we put
+FORMULA . Then FORMULA  is a connected abelian subgroup of
+FORMULA  and it follows from Lemma REF , Remark
+REF , the fact that FORMULA 
+and the induction assumption that
+all stabilizers for the action of FORMULA  on FORMULA  satisfy
+BC for FORMULA .
+Again we study the structure of the orbit space FORMULA .
+For each FORMULA  we define
+FORMULA 
+Since FORMULA 
+is central in FORMULA , it follows that FORMULA  acts trivially on
+FORMULA , and hence that FORMULA  is
+FORMULA -invariant for all FORMULA . Since
+FORMULA  is discrete, we may write
+FORMULA 
+with fiberwise action of
+FORMULA . Thus by continuity of BC it suffices to deal with the
+single fibers. For FORMULA  we are looking at the action of
+FORMULA  on FORMULA , and
+since FORMULA  is a central subgroup of FORMULA  we may again argue precisely
+as in the proof of Case C(1) to see that FORMULA  satisfies BC for
+FORMULA .
+In order to deal with the other fibers we are now going to show that
+FORMULA  acts transitively on FORMULA  for each nontrivial
+character FORMULA . It follows then directly from
+Corollary REF  that FORMULA  satisfies BC for
+FORMULA . In fact, Lemma REF  below
+shows that FORMULA  already acts transitively on FORMULA 
+for FORMULA  and the result will follow from that lemma.
+The following lemma is certainly well known to the experts on the
+representation theory of nilpotent groups. For the readers convenience
+we give the elementary proof.
+Lemma 5.9 
+Assume that FORMULA  is a connected nilpotent Lie group with
+one-dimensional center FORMULA . Let FORMULA  be a closed connected
+abelian normal subgroup of FORMULA  such that FORMULA  and
+FORMULA . Let FORMULA  and let
+FORMULA . Then FORMULA 
+acts transitively on FORMULA  by conjugation.
+
+We may assume without loss of generality that FORMULA  is simply
+connected. In fact, if this is not the case, we pass to the
+universal covering group FORMULA  of FORMULA  and the universal
+covering FORMULA  of FORMULA  and observe that
+there exists a discrete subgroup FORMULA 
+such that FORMULA , FORMULA , FORMULA  and
+FORMULA  can then be (equivariantly) identified with
+FORMULA  for all FORMULA .
+Let FORMULA , FORMULA  and FORMULA  denote the Lie algebras of
+FORMULA , FORMULA  and FORMULA , respectively. Since FORMULA  is simply connected, we
+can write
+FORMULA 
+with multiplication given by the
+Campbell-Hausdorff formula. In particular, if FORMULA , then
+FORMULA 
+for all FORMULA , since it
+follows from the assumption that FORMULA  that
+FORMULA  and all commutators with
+FORMULA  vanish. In particular, if we conjugate FORMULA  by
+FORMULA  we get the formula
+FORMULA 
+for all FORMULA .
+Assume now that FORMULA  and let FORMULA .
+We claim that we can find a basis FORMULA  of
+FORMULA  and elements FORMULA  such that
+FORMULA 
+for all FORMULA . Indeed this follows from an easy
+Schmidt-orthogonalization procedure: Consider the bilinear form
+FORMULA 
+Choose FORMULA . Then there exists FORMULA 
+with FORMULA  (since FORMULA  is not central), and hence we may
+assume that FORMULA . Assume now that we have chosen FORMULA  and FORMULA , FORMULA , with the desired
+properties. Choose FORMULA  not in the span of FORMULA  and FORMULA  with FORMULA . Then it is easy
+to check that FORMULA  satisfies
+FORMULA  and FORMULA  for FORMULA .
+Now we identify FORMULA  with FORMULA  (via FORMULA ) and FORMULA 
+with FORMULA . The conjugation action of FORMULA  on FORMULA  is
+then transferred to the coadjoint action FORMULA . If FORMULA  is a dual basis for the basis FORMULA  of
+FORMULA , the result will follow if we can show that
+FORMULA 
+for all
+FORMULA . By rescaling we may assume that FORMULA .
+But for FORMULA  we can compute
+FORMULA 
+Since FORMULA  is
+central in FORMULA  it follows that
+FORMULA  for all FORMULA . Thus
+FORMULA 
+
+Relations to the FORMULA -theory of the maximal compact subgroup
+In this section we want to describe the relations between the
+FORMULA -theory of FORMULA  and the FORMULA -theory of FORMULA , where FORMULA 
+denotes the maximal compact subgroup of the almost connected group
+FORMULA  (we chose the letter FORMULA  to avoid confusion). We should mention
+that all results presented here (accept the conclusions drawn out of
+our main theorem) are well known, but since they have important impact
+on our results, we found it useful to give at least a brief report.
+The main references for these results are {{cite:cbfe4b43-22ef-4ab2-8789-7bdf0d2db755}}, {{cite:fa76f513-69a0-4bf0-93f9-1d1dbffd6878}}, and we
+refer especially to {{cite:cbfe4b43-22ef-4ab2-8789-7bdf0d2db755}} for a more geometric discussion of
+some the results presented in this section.
+If FORMULA  and FORMULA  are as above, it follows from work of Abels (see
+{{cite:6bbd79be-249d-4641-9f0a-ec031dc72462}}) that FORMULA  is a universal proper FORMULA -space. Thus we have
+FORMULA 
+where the second isomorphism follows from
+{{cite:af5442ae-d4b5-4753-899e-e8e7839c2478}}. Also by the work of Abels
+{{cite:6bbd79be-249d-4641-9f0a-ec031dc72462}}, FORMULA  is a Riemannian manifold which is FORMULA -equivariantly
+diffeomorphic to the tangent space FORMULA  equipped with the
+adjoint action of FORMULA  on FORMULA . It follows then from Kasparov's work in
+{{cite:fa76f513-69a0-4bf0-93f9-1d1dbffd6878}} (see {{cite:9569cc5f-21a8-436a-a084-c9db7025eba1}} for a more extensive
+discussion) that tensoring with FORMULA  gives a natural isomorphism
+FORMULA 
+and by Kasparov's Bott-periodicity theorem (see
+{{cite:fa76f513-69a0-4bf0-93f9-1d1dbffd6878}}) we know that FORMULA , equipped
+with the diagonal action, is FORMULA -equivalent to FORMULA  (but see also
+the discussion below). Thus we obtain the following chain of
+isomorphisms
+FORMULA 
+
+where the last isomorphism follows from the Green-Julg theorem.
+Hence, as a direct consequence of Theorem REF  we can
+deduce
+Theorem 6.1 
+Assume that FORMULA  is an almost connected (second countable) group with
+maximal compact subgroup FORMULA . Let FORMULA  be the algebra of
+compact operators on the separable Hilbert space FORMULA  equipped with
+any action of FORMULA . Then FORMULA  is naturally
+isomorphic to FORMULA .
+
+By Kasparov's Bott-periodicity theorem (see {{cite:fa76f513-69a0-4bf0-93f9-1d1dbffd6878}}) it
+follows that FORMULA  is FORMULA -equivalent to the graded complex
+Clifford algebra FORMULA  (with respect to a compatible inner product
+on FORMULA ), equipped with the action of FORMULA  induced by the given action
+on FORMULA . So we can replace FORMULA  by the graded FORMULA -algebra
+FORMULA , but then we have to use graded FORMULA -theory!
+Let us look a bit closer to the implications of this Bott-periodicity
+theorem. Assume for the moment that FORMULA  is even dimensional and that
+the action of FORMULA  on FORMULA  preserves a given orientation of FORMULA , i.e.,
+the action factors through a homomorphism FORMULA . We
+have a central extension
+FORMULA 
+of FORMULA , where
+FORMULA  denotes the group of complex spinors (e.g.
+see {{cite:86e1ba8a-d903-49c9-ba80-fe8ab2fb6341}}). The corresponding action of FORMULA  on FORMULA  is given
+by the homomorphism
+FORMULA 
+Now choose a fixed
+orthonormal base FORMULA  of FORMULA . Then the grading of
+FORMULA  is given by conjugation with the symmetry FORMULA . One can show that, up to a sign, FORMULA  does not
+depend on the choice of this basis, and the sign only depends on the
+orientation of the basis. In particular, FORMULA  is invariant under
+conjugation with elements in FORMULA . From this it follows that
+the graded FORMULA -algebra FORMULA  is FORMULA -equivariantly Morita equivalent
+to the trivially graded FORMULA -algebra FORMULA  – a Morita equivalence is
+given by the module FORMULA  with given FORMULA -action and grading
+automorphism given by left multiplication with FORMULA . Moreover, since
+FORMULA  is even, FORMULA  is isomorphic to the simple matrix
+algebra FORMULA .
+Assume now that FORMULA  is odd. Then, replacing FORMULA  by
+FORMULA  (with trivial action of FORMULA  on FORMULA ) we get
+FORMULA 
+Moreover, if
+the action of FORMULA  on FORMULA  is orientation preserving, the same is
+true for the resulting action of FORMULA  on FORMULA , which we
+identify with the tangent space at FORMULA  in the group FORMULA .
+Hence, modulo a dimension shift, we can use the above considerations
+also for this case. Thus, as a consequence of Theorem
+REF  we obtain
+Theorem 6.2 
+Assume that FORMULA  is an almost connected group with maximal compact
+subgroup FORMULA  such that the adjoint action of FORMULA  on FORMULA  is
+orientation preserving. Then there are natural isomorphisms
+FORMULA 
+if FORMULA  is even and
+FORMULA 
+if FORMULA  is odd. Here all
+algebras are trivially graded!
+
+Perhaps, the above result has its most satisfying formulation if
+translated into the language of twisted group algebras. For this let
+FORMULA  denote a representative of the Mackey obstruction
+for the action of FORMULA  on FORMULA  (see the discussion preceding Lemma
+REF ). Then FORMULA  is isomorphic to
+FORMULA , where FORMULA  denotes the reduced
+twisted group algebra FORMULA  (e.g., see {{cite:746b8f20-5036-4789-a66f-ab4a52d15a50}}). Recall that FORMULA  can be defined either as the
+reduced twisted crossed product FORMULA  with
+respect to the twisted action FORMULA  (which, by Lemma
+REF , is Morita equivalent to the given action on FORMULA ), or
+as the completion of FORMULA , where FORMULA  acts
+on FORMULA  by the twisted convolution
+FORMULA 
+Up to isomorphism, FORMULA  only depends on the
+class FORMULA . Conversely, given any cocycle, the
+representation FORMULA  given by
+FORMULA 
+determines an action of FORMULA  on FORMULA  with Mackey obstruction
+represented by FORMULA .
+Note that the Mackey obstruction for the action of FORMULA  on FORMULA  is
+given by the restriction of FORMULA  to FORMULA  and the obstruction for the
+action of FORMULA  on FORMULA  (if FORMULA  is even) is
+given by the pull-back, say FORMULA , to FORMULA  of a cocycle representing
+the central extension
+FORMULA 
+Since FORMULA  (diagonal action), where
+FORMULA 
+is the real group of spinors,
+the cocycle FORMULA  can be chosen to take values in the subgroup
+FORMULA , and therefore FORMULA . Note that FORMULA  is
+trivial if and only if the homomorphism FORMULA 
+factorizes through FORMULA  (i.e., if and only if FORMULA  carries a
+FORMULA -invariant FORMULA -structure). If FORMULA  is odd, we may
+define FORMULA  in the same way as above, noticing that this cocycle is
+equivalent to the pull back of (a cocycle representing) the extension
+FORMULA 
+which
+follows from the fact that FORMULA  acts trivially on FORMULA ! Since the
+Mackey obstruction of a tensor product of actions is the product of
+the Mackey obstructions of the factors, we obtain
+Theorem 6.3 
+Assume that FORMULA  is an almost connected group with maximal compact
+subgroup FORMULA  such that the adjoint action of FORMULA  on FORMULA  is
+orientation preserving. Let FORMULA  and let FORMULA  be any cocycle on FORMULA . Then
+FORMULA 
+In particular, in the special case where
+FORMULA  is trivial, we obtain an isomorphism
+FORMULA 
+
+Again, FORMULA  is trivial if and only if FORMULA  carries a FORMULA -invariant
+FORMULA -structure. In general, since FORMULA  is the
+quotient of the central extension FORMULA  of FORMULA  by FORMULA 
+corresponding to the character FORMULA  of FORMULA , it follows that
+FORMULA  is a direct sum of (possibly infinitely many)
+matrix algebras. Thus as a direct corollary of the above result we
+obtain:
+Corollary 6.4 
+Assume that FORMULA , FORMULA  and FORMULA  are as in Theorem REF .
+Then FORMULA  is isomorphic to a free
+abelian group in at most countably many generators and
+FORMULA .
+
+This result has interesting consequence towards the question of
+existence of square integrable representations of connected unimodular
+Lie groups. In fact, combining the above corollary with {{cite:d1ab7eeb-43d1-4bfd-9e59-c1a29ab4da6f}} gives:
+Corollary 6.5 (cf {{cite:d1ab7eeb-43d1-4bfd-9e59-c1a29ab4da6f}}) 
+Let FORMULA  be a connected unimodular Lie group. Then all
+square-integrable factor representations of FORMULA  are type I.
+Moreover, FORMULA  has no square-integrable factor representations if
+FORMULA  is odd, where FORMULA  denotes the maximal compact subgroup
+of FORMULA .
+
+We refer to {{cite:d1ab7eeb-43d1-4bfd-9e59-c1a29ab4da6f}} for more detailed discussions on this kind of
+applications of the positive solution of the Connes-Kasparov
+conjecture. Note that Theorem REF  and Corollary
+REF  do not hold in general without the assumption that
+the action of FORMULA  on FORMULA  is orientation preserving. In fact an
+easy six-term-sequence argument shows that it cannot hold for the
+group FORMULA , where FORMULA  acts on FORMULA  by reflection
+through 0.

@@ -1,0 +1,422 @@
+
+/Title (Trading-Off Cost of Deployment Versus Accuracy in Learning Predictive Models)
+/Author (Daniel P. Robinson, Suchi Saria)
+Trading-Off Cost of Deployment Versus Accuracy in Learning Predictive Models
+This project was supported by NSF IIS-1418590 and the Johns Hopkins University IDIES Seed Funding Initiative.Daniel P. Robinson Equal contribution. Johns Hopkins University Department of Applied Mathematics and Statistics Baltimore, Maryland daniel.p.robinson@jhu.edu Suchi Saria [2] Johns Hopkins University Department of Computer Science Baltimore, Maryland ssaria@cs.jhu.edu
+2018/12/11 12:26:29Predictive models are finding an increasing number of applications in many industries.
+As a result, a practical means for trading-off the cost of deploying a model versus
+its effectiveness is needed. Our work is motivated by risk prediction
+problems in healthcare. Cost-structures in domains such as healthcare are quite complex, posing a significant challenge to existing approaches. We propose a novel framework for designing cost-sensitive structured regularizers that is suitable for problems with
+complex cost dependencies. We draw upon a surprising connection to boolean circuits. In particular,
+we represent the problem costs as a multi-layer boolean circuit, and
+then use properties of boolean circuits to define an extended feature
+vector and a group regularizer that exactly captures the underlying cost
+structure. The resulting regularizer may then be
+combined with a fidelity function to perform model prediction, for example.
+For the challenging real-world application of risk prediction for sepsis in intensive
+care units, the use of our regularizer leads to models that are in harmony with the underlying cost structure and thus provide an excellent prediction accuracy versus cost tradeoff.
+Introduction
+Many industries (e.g., retail, manufacturing, and
+medicine) are recognizing the advantages of using predictive models
+to make key decisions. They also understand that the cost of obtaining input measurements
+should be balanced with their effectiveness in prediction when choosing which model to deploy. This is especially challenging when the cost structure for an application is complicated. As an important example, consider the cost structure associated with deploying a predictive model in an Intensive Care Unit (ICU) (see the cost-dependency graph in Figure REF ).
+In such a setting, the following hold: (i) costs may be defined for tests, measurements, or activities and these costs may be of different types (e.g., the financial cost of acquiring a blood test versus the staff time taken to draw blood); (ii) features are obtained using one or more measurements (e.g., lactate level or creatinine) which in turn are obtained by ordering a test; (iii) a test may consist of a single measurement
+(e.g., lactate level) or a panel of measurements (e.g., CBC panel);
+(iv) a measurement can be ordered via
+multiple tests (e.g., creatinine can be ordered on its own, as
+part of a basic or a comprehensive metabolic panel, each having a
+different financial cost); (v) multiple features can be derived from the same
+measurement (e.g., the heart rate variability and the heart rate trend can both be derived from the heart rate trace); and (vi) some features
+may require multiple measurements (e.g., shock index
+is derived from blood pressure and heart rate measurements).
+These aspects make the cost structure complicated.
+FIGURE 
+Before expanding upon the challenges involved with addressing complex cost-structures such as the one above, we first introduce the mathematical setup for learning predictive models.
+This involves data that is
+formally represented by sets of pairs FORMULA  for
+some integer FORMULA , where FORMULA  for some
+integer FORMULA  and FORMULA , for all FORMULA . The vector
+FORMULA  denotes the
+FORMULA th input (feature) vector and FORMULA  the output (label)
+associated with the FORMULA th input vector FORMULA .
+The goal is then to predict the unknown output associated with
+a newly obtained input vector by
+using the knowledge one learns from the data
+FORMULA . A popular approach for performing this
+task is to build predictive models via empirical regularized-loss
+minimization {{cite:01bb99ff-7c05-42aa-a505-0323b94b1d32}}. The problems used take the form
+FORMULA 
+where FORMULA  is the parameter vector to be learned, FORMULA  is a loss function such as
+the logistic loss FORMULA ,
+and FORMULA  is a regularizer.
+The choice of regularizer amounts to
+giving preference to certain models, e.g., the
+FORMULA -regularizer FORMULA  for some FORMULA  prefers models defined by a sparse
+vector FORMULA . In practice,
+the regularizer should be chosen to reflect
+the preferred models, which are often driven by the costs associated with the application.
+For example, in compressed sensing, one wishes to find a sparse solution to a linear
+system of equations. Thus, the cost, i.e., the number of nonzeros in
+a prospective solution, is
+harmonious with the FORMULA -regularizer, which promotes sparse
+solutions. Note that in this example, as well as many others,
+the costs are directly tied to the feature vectors themselves, i.e., they occur at the feature level.
+How does one design an appropriate regularizer for problems with a complicated cost structure, such as for the ICU example above? We address that question in this paper.
+Related work.
+Learning models in the presence of costs has received significant attention in recent years (e.g., {{cite:a7ac0aea-f5b7-4934-9f1f-aee2b9c6240b}}, {{cite:1ef8cbb0-3c31-41f5-846a-6c8d49585997}}, {{cite:db138f81-b293-4902-8b48-25cf293c8032}}, {{cite:d8864ba5-1841-4bf3-b4d0-1a408eab6e4c}}, {{cite:c0d87810-074c-48a2-bef2-1dac0db0ed51}}). Existing work has primarily targeted applications where the cost of computation is the primary concern, and this cost is elicited at the feature level. Moreover, much of this work has focused on optimizing performance when information is acquired incrementally {{cite:1ef8cbb0-3c31-41f5-846a-6c8d49585997}}, {{cite:a7ac0aea-f5b7-4934-9f1f-aee2b9c6240b}}, {{cite:f114e245-c11a-4101-b01e-ca63cfbe61e1}}, {{cite:fb0610aa-033a-4ad5-82cd-3d3d7be7a00a}}, {{cite:24833544-f1db-4523-b8ce-d2f6de00f103}}. In {{cite:1ef8cbb0-3c31-41f5-846a-6c8d49585997}}, they define the problem of cost-sensitive classification and use a partially observable Markov decision process to trade-off the cost of acquiring additional measurements with classification performance. While they apply their method to a medical diagnosis problem, their costs were approximated at the feature level.
+In {{cite:a7ac0aea-f5b7-4934-9f1f-aee2b9c6240b}}, stage-wise regression is used to learn a collection of regression trees in a manner that ensures that classifiers built from more trees is more accurate, but more expensive. For the task of ranking web page documents, they showed improved speed and accuracy by accounting for feature costs—simple lookups (e.g., word occurrences) versus those needing more computation (e.g., a document-specific BM25 score for measuring relevance to a query). For structured prediction, {{cite:ec6527c1-5cb1-4d3d-bf40-79107a6dba6d}} proposed a two tier
+collection of models of varying costs and a model selector; for each new test example, their selector adaptively chooses a model. For vision applications (e.g., articulated pose estimation in videos), they showed gains in performance by adaptively selecting models of varying costs by using a histogram of gradient features at a fine (expensive) versus a coarse (cheap) resolution. These solutions focused on applications with no dependencies between the costs for the units reasoned over (i.e. feature or model costs are independent) and when they are provided upfront. As predictive models continue to find their way into many important applications,
+a means for incorporating rich cost structures is needed.
+Returning to our example in healthcare, the challenge of incorporating costs arises from the dependencies between features, measurements, tests, and required activities. Measurements may be obtained from a singleton test or as part of a test that yields multiple measurements. Tests may have different resource costs associated with them, while features may be derived from more than one measurement. These dependencies between features, measurements and tests yield a complex dependence structure between the features. Moreover, various costs are specified at different levels of this hierarchy; therefore, the cost of a feature is not specified upfront, but rather is dependent on which other features, measurements, and tests are selected.
+Cost imposed via a hierarchical dependency graph is reminiscent of past works utilizing structured sparsity penalties (see the survey {{cite:140e841f-154c-4c53-8be0-bfddb4f6a8b9}} and {{cite:65d573ab-9dff-4f1c-9221-a40c8ab3a4ae}}), especially those using tree-based regularizers {{cite:33e35f5f-ae8c-4c29-a98b-b1e0f28735c3}} and penalties with overlapping groups and hierarchical structure {{cite:27b92677-27e6-4cc0-8e89-075d48a87f68}}, {{cite:65d573ab-9dff-4f1c-9221-a40c8ab3a4ae}}. Different from these past works, a key challenge for our task is that the structure of the group regularizer is not given and its construction is not straightforward. We show that cost-dependency graphs are naturally captured via Boolean circuits—graphs where nodes share a combination of AND and OR connections with its parents. Only leaf nodes (i.e. feature nodes) of this circuit are included in the regularizer while the internal nodes (e.g., measurements needed to obtain features) induce dependency between the leaf nodes. The presence of mixed AND/OR relationships and the non-inclusion of internal nodes renders our application different from past works. Other regularizers such as OSCAR {{cite:f51aca64-6e69-4b72-83db-a2f660003c6e}} and Laplacian Net {{cite:6daa9bd6-83bf-4de4-bcb9-0a42ab399f74}} aim at discovering group structure when the features are highly correlated. In our setting, the groups are determined by the structure of the cost graph, not by the correlations between the features.
+Our contributions.
+We develop a new framework for defining
+structured regularizers suitable for problems with complex
+cost structures by drawing upon a surprising connection to boolean circuits.
+In particular, we represent the problem costs as a boolean circuit, and then use properties of boolean circuits to define the exact cost penalty.
+Based on our exact cost penalty, any standard convex relaxation may be employed for the purpose of computational efficiency, and here we choose a standard FORMULA -FORMULA  relaxation.
+Our new regularizer may be used within
+an empirical risk minimization framework to tradeoff cost versus
+accuracy. We focus on the one-shot setting (i.e., when all measurements are obtained upfront), although
+our regularizer is also applicable in the incremental setting.
+Since the cost-structure of many real-life applications may be represented as a boolean circuit, the contribution of our work is substantial.
+Our ideas are presented in the context of a
+challenging healthcare application—the development of a rapid screening
+tool for sepsis {{cite:ea87af9e-5c13-4b01-a391-e96c2a2c8d91}}—using data from patients in the
+ICU {{cite:31cd6987-f90c-49c6-b360-676879a4c775}}. In this setting, examples of potential users include patients, doctors, and administration. Our experiments show
+that our regularizer
+allows for a collection of
+models that are in harmony with a user's cost preferences.
+Numerical comparisons to a cost-sensitive FORMULA —a natural competitor to our proposed regularizer that does not account for the complicated cost structure—shows that models obtained with our regularizer have a better prediction/cost tradeoff. Compared to existing approaches in predictive modeling where cost preferences are often accounted for post hoc, our scheme provides a new way to account for complex cost preferences during model selection.
+
+Regularizers for complex cost structures
+Our scheme is general since it may be applied to any problem with a cost
+structure that may be represented as a finite-layer boolean circuit.
+However, for clarity of exposition,
+we first focus on a particular healthcare application that also
+serves as the basis for the numerical results presented.
+
+An example from the intensive-care unit (ICU)
+We formulate a structured regularizer for the cost structure associated with
+risk prediction applications for the in-hospital setting. These
+include problems such as prediction of those at
+risk for death, the likelihood of readmission, and the early detection
+of adverse events, e.g., shock and cardiac arrest.
+Recall the cost dependency graph for the ICU example in Figure REF .
+The features are represented by nodes in
+layer-1, and their calculation requires a subset of measurements
+from layer 2, i.e.,
+nodes in layer-1 share an AND or OR relationship with those
+in layer-2.
+Measurements can be
+obtained in a number of ways by performing various tests, which are
+represented at layer-3, i.e.,
+nodes in layer-2 similarly share an AND or OR relationship with those
+in layer-3.
+The caregiver activities are
+represented at layer-4 and are performed when a test is
+needed that requires that action, i.e., layer-3 shares an AND
+relationship with layer-4. Every relationship in this
+boolean circuit is described using only logical
+AND and OR operations. Note that, without loss of
+generality, we include
+fictitious nodes “none-1” and “none-2” in layer-4 so that the collection
+of input nodes are in the same layer.
+There are three relevant costs:
+the financial cost of ordering a test, the waiting time
+to obtain a test result, and the caregivers' time needed to
+perform the activities required for the tests. The ideal regularizer should account
+for the following:
+(i) obtaining a measurement may cost different amounts
+depending on which tests are ordered to obtain it;
+(ii) features share costs with other features derived from the same
+measurement;
+(iii) a feature may require multiple measurements so that its
+cost depends on more than one measurement; and
+(iv) caregiver time and financial costs are additive while
+wait time is the maximum of the separate wait times.
+Our structured regularizer requires the following sets:
+FORMULA 
+
+to be the sets of features (layer-1 nodes), measurements (layer-2
+nodes), tests (layer-3 nodes), and caregiver activities (layer-4
+nodes), with FORMULA  and FORMULA  being the number of each, respectively.
+We use FORMULA  to mean that there is a directed
+edge that links node FORMULA  to node FORMULA . Thus,
+our specific boolean circuit allow
+us to interpret
+FORMULA ,
+FORMULA , and FORMULA 
+to mean the FORMULA th feature requires the FORMULA th measurement, the FORMULA th measurement can be obtained by
+performing the FORMULA th test, and the FORMULA th test requires the FORMULA th activity.
+We now define the set valued mappings
+FORMULA ,
+FORMULA , and
+FORMULA ,
+which represent the set of measurements
+required to obtain feature FORMULA , the set of tests that
+produce measurement FORMULA , and the set of tests that require
+action FORMULA . We note that we have overloaded the
+definition of the function FORMULA  above, i.e., we have two different definitions for
+FORMULA  and FORMULA . However, this should not lead to any confusion
+since the correct definition is always clear from the context.
+Next, we resolve the fact that some features may be
+obtained in multiple ways by ordering various combinations of tests.
+If this is not considered, the cost of a feature may
+be over penalized by our regularizer.
+To address this issue, let FORMULA  denote the numbers of ways feature
+FORMULA  can be obtained.
+Then, for the FORMULA th feature, we define
+FORMULA 
+and
+FORMULA 
+so that FORMULA  represents the parameter associated with
+ordering feature FORMULA  in the FORMULA th way.
+This allows us to define
+the extended feature and parameter vectors
+FORMULA 
+and FORMULA .
+Modeling financial cost and caregiver time:
+To model financial cost, which is incurred at
+the test level, for each test FORMULA  and feature FORMULA  we define
+FORMULA 
+with
+FORMULA 
+for all
+FORMULA ,
+FORMULA , and
+FORMULA .
+Given a financial cost FORMULA  of ordering test FORMULA 
+and a weighting parameter FORMULA ,
+the exact structured regularizer for financial cost is
+FORMULA 
+with the indicator function FORMULA  satisfying FORMULA  and FORMULA  for
+all FORMULA .
+It follows from (REF ) that a financial cost
+for test FORMULA  is incurred only when
+instructed to order some feature FORMULA  in the FORMULA th
+way (FORMULA ), and that FORMULA th way requires test FORMULA 
+(FORMULA ).
+The regularizer (REF ) is not computationally friendly, so we instead use the relaxed structured regularizer
+FORMULA 
+where we define for a set of vectors FORMULA  and
+a subset FORMULA  the quantities
+FORMULA 
+Note that (REF ) is a sum of group
+FORMULA -norms, which is supported by the software SPAMS.
+To model the caregivers time cost in a similar way, we define
+FORMULA 
+with
+FORMULA 
+for all
+FORMULA ,
+FORMULA , and
+FORMULA ,
+where we have again overloaded notation. The regularizer associated
+with caregiver activity time then becomes
+FORMULA 
+with FORMULA  being the time cost associated with the FORMULA th activity and
+FORMULA  a weighting parameter. Overall, our
+structured regularizer becomes
+FORMULA 
+By varying FORMULA  and FORMULA  we trade-off the
+financial and caregiver activity time costs, respectively.
+Remark 1 If a scaled-FORMULA -norm was used, the user chooses a weight for each
+feature by condensing the complex cost structure into a single
+number, necessarily in an ad-hoc way.
+
+Remark 2 
+Consider the 3-layer boolean circuit where
+layer-1 contain the nodes FORMULA ,
+layer-2 contain the nodes FORMULA , and
+layer-3 contain the nodes FORMULA . Moreover, the gate functions at
+layer-1 are given, for each FORMULA , by
+FORMULA 
+for all FORMULA , and the gate functions at layer-2 are
+given, for each FORMULA , by
+FORMULA 
+for all FORMULA  and FORMULA . In particular,
+only OR gate functions are used in layer-1 and only AND gate
+functions are used in layer-2. Moreover, the properties of this
+3-layer gate allows us to conclude that for a given
+caregiver activity, say FORMULA , we have
+FORMULA 
+with the index set FORMULA  defind as
+FORMULA ,
+so that the definition of our regularizer (REF )
+follows from our knowledge of the 3-layer boolean circuit. In fact,
+the only properties of the circuit that we used were (i) layer-1 was
+the feature layer; (ii) layer-3 contained the nodes whose
+costs we were modeling; (iii) layer-1 only contained OR
+gates; and (iv) layer-2 only had AND gates. This motivates the
+general case below.
+
+Modeling testing wait time:
+We use a simpler approach to address the time needed to obtain test results.
+Note that the wait time for a set of test results is
+the maximum of the wait times for each individual test
+(assuming that tests can be ordered in parallel). Thus, for a
+given upper bound, say FORMULA , on the tolerated testing wait time, we
+only allow tests that have a wait time less than FORMULA 
+to be used. This amounts to selecting a reduced boolean circuit
+containing only these allowed tests, the caregiver actions required to obtain these
+allowed tests, measurements that result from the allowed tests, and
+the features that may be calculated from the included measurements.
+
+Structured regularizer: the general case
+We now show how to define our regularizer for any problem whose cost structure may be represented as a finite FORMULA -layer boolean circuit; Figure REF  is an instance of such a circuit.
+An FORMULA -layer boolean circuit
+consists of layers of finitely many nodes. The lowest layer (layer-1) consists of the set of output nodes, while the highest layer (layer-FORMULA ) contains the input nodes. Additionally, we are given
+boolean functions—defined on the basis FORMULA —for all nodes. Formally, each boolean function performs the basic logical operations from FORMULA  on one or more logical inputs from the previous layer, and produces a single logical output value. The healthcare example in Figure REF  is a 4-layer boolean circuit with the features corresponding to layer-1, the measurements to layer-2, the tests to layer-3, and the activities to layer-4.
+Let FORMULA 
+be the nodes in layer-FORMULA  for some FORMULA . By removing double negations, and using the laws of distribution and De Morgan's laws, the FORMULA -layer circuit may be reduced to a 3-layer boolean circuit in disjunctive normal form {{cite:96c5f13a-0743-4152-82ad-19196d5591e8}}, {{cite:7669d908-69f7-4e10-a823-fc36cec43f8d}}. The nodes in the 3-layer circuit are then
+layer-3: FORMULA ,
+layer-2: FORMULA , and
+layer-1: FORMULA 
+for some FORMULA  and set FORMULA  of nodes for layer-2.
+Moreover, the only logical operations used by the boolean functions FORMULA  in layer-2 are AND and NOT operations, while the boolean functions FORMULA  in layer-1 only use logical OR operations. (In Remark REF  we showed how a circuit of this form could be obtained for the healthcare example.)
+If we define the vectors
+FORMULA 
+and
+FORMULA ,
+then we define our cost-driven structured regularizer as
+FORMULA 
+with FORMULA .
+When this regularizer is used in model prediction, an optimal value for the extended vector FORMULA  is obtained. Using this vector and the fact that layer-1 only has OR gates, we know that a node FORMULA  in layer-1 (i.e., the feature layer for the healthcare application) has the logical value of 1 (i.e., the feature should be computed) if FORMULA  for some FORMULA .
+Remark 3 Although our exact penalty is approximated by an overlapping group regularizer, what is non-trivial is determining which features belong to which groups for complex cost graphs. By relating the cost graph to a Boolean circuit, we can use properties of Boolean circuits to define an extended feature set and overlapping structure that is correct for arbitrary cost graphs. Moreover, this connection allows for the use of widely used off-the-shelf software such as SymPy
+to convert an arbitrary graph to the 3-layer circuit in disjunctive normal form used to define our exact regularizer.
+
+
+Numerical experiments
+We focus on early detection of septic shock—an adverse event
+resulting from sepsis—since it is the 11th leading cause of patient mortality in the United
+States. (Mortality rates are between FORMULA  and FORMULA  for those who develop
+septic shock {{cite:0488c8fc-ce25-419d-ac0b-ac3d97c7f828}}.) Although early treatment
+can reduce the patient mortality rate, less than one-third of
+patients receive appropriate therapy before onset. Therefore,
+an early warning system that accurately predicts a sepsis event
+allows for appropriate treatment and a higher quality of patient care.
+(See the references in {{cite:6244bac1-eefa-4032-b92a-c6257786eff1}} for recent work
+on sepsis detection; none have tackled the cost of deployment.)
+More broadly, this problem is an instance of cost-sensitive risk prediction for automated triage {{cite:51f24efe-970b-4624-899a-bcf0ce83e7f5}}.
+FIGURE 
+TABLE 
+We constructed the full cost-graph in collaboration with domain experts, which resulted in 119 nodes and 294 edges. (The full list of measurements and tests can be found in Figure REF .)
+We combine the logistic-regression function with our
+structured regularizer (REF ) to predict the
+probability that a patient will develop septic shock. We use
+MIMIC-II {{cite:31cd6987-f90c-49c6-b360-676879a4c775}}, a large publicly available dataset
+of electronic health records from patients admitted to four
+different ICUs at the Beth Israel Deaconess Medical Center over a seven year
+period. Using the processing described in {{cite:a49ab1ce-a9ae-4917-bb5a-660085d742dd}},
+FORMULA  positive patients and FORMULA  negative patient cases were
+obtained.
+We answer two questions. Does our structured regularizer lead to diverse models, especially in terms of the various costs? How well does our new structured regularizer perform compared to existing available solutions? Natural comparisons include regularizers that account for cost but do not account for the cost-dependence structure, e.g., the FORMULA -norm regularizer or the cost-sensitive FORMULA -norm.
+A comparison with other structured sparsity penalties would also seem appropriate, but none exist that construct the penalty for complex cost graphs (see the discussion in the related work section). We do not include comparisons to stage-wise alternatives because they are suboptimal to the proposed cost-sensitive FORMULA -norm, which yields a global optimum.
+Experimental setup.
+We split the individuals
+into training (75%) and test (25%) sets. From the training set,
+we process the data using a sliding window to extract positive and
+negative samples consisting of the features observed at a given time,
+and an associated label that is positive if septic shock was
+occured within the following 48 hours and negative
+otherwise. Since the dataset is imbalanced, we subsample the
+negative pairs to obtain a balanced training set.
+For our test set, we use the learned model to predict
+the risk of septic shock at each time point.
+This gives a trajectory of risk for septic shock over time for
+each individual. For a given threshold, an individual is
+identified as having shock if their risk
+trajectory rose above that threshold prior to shock onset. For
+this threshold, we calculate: (i) sensitivity as the fraction of
+patients who develop septic shock and are identified as having a high
+risk of septic shock; (ii) the false positive rate (FPR) as the
+fraction of patients who never develop septic shock but are identified
+as high risk patients by our model; and specificity as FORMULA . The receiver operating characteristic (ROC) curve and
+area under that curve (AUC)
+are obtained by varying the threshold value, with patients identified
+as at-risk if their predicted probability was above the threshold
+value. We use 10 bootstrapped samples to estimate confidence intervals for the AUC.
+We used the mexFistGraph routine in SPAMS to minimize the sum of
+the logistic function and our structured regularizer (REF ).
+The maximum allowed iteration limit was set to FORMULA  and the termination tolerance (duality gap) to FORMULA .
+Model diversity.
+Three costs were considered: (i) financial cost associated with ordering a test; (ii) nursing-staff's time needed to perform the activities required for the tests; and (iii) waiting time to obtain a test result. For a chosen maximum wait time and weighting parameters FORMULA  and FORMULA ,
+our algorithm minimizes the sum of the logistic-regression function with the regularizer (REF ), which returns parameters for a model from which we may compute an associated ROC, AUC, financial cost, nurse-time, and test result wait time. By sweeping over a range of values for the maximum allowed wait time, FORMULA , and FORMULA ,
+we obtain models with various costs that reflect preferences for different models. For our cost-dependency structure,
+there are three possible maximum wait times: 50 minutes, 10 minutes, and 0 minutes. For each of these scenarios, we select values for FORMULA  and FORMULA 
+from an equally spaced grid over the interval FORMULA , which yields a collection of models at the cost-accuracy frontier. Four models—denoted as FORMULA , FORMULA , FORMULA , and FORMULA —are represented in Table REF  to illustrate the tradeoff achieved by our approach.
+Model FORMULA  is the most cost-effective.
+It uses existing measurements that are routinely collected and
+therefore it neither incurs a financial cost nor the need for
+nursing-time to acquire new measurements. Since no additional tests
+are required, the wait time for the model is also zero minutes.
+The model achieves a relatively high AUC of FORMULA .
+The set of measurements that were
+found to be most predictive include: clinical history (on ventilator,
+on pacemaker, has cardiovascular complications); vitals (shock index,
+raw and derived features of the heart rate, SpO2, FiO2, blood
+pressure, respiratory rate); and time since first presentation of
+systemic inflammatory response syndrome (SIRS).
+At the other extreme, model FORMULA  has a financial cost of FORMULA , requires a nurse-time of 30 minutes, and a total test result wait time of 50 minutes. It requires measurements attained from numerous additional tests such as the arterial blood gas, comprehensive metabolic panel, hematocrit, hemoglobin, and urine tests. By using these measurements, the accuracy increases to an AUC of FORMULA , and
+shows a clinically significant gain in sensitivity compared to model FORMULA .
+Models FORMULA  and FORMULA  have cost and performance intermediate to models FORMULA  and FORMULA . Also, it is interesting to see that FORMULA  and FORMULA  achieve similar performance in very different ways. Model FORMULA  selects a urine measurement with a test result wait time of 10 minutes and 10 minutes of nurse time, while FORMULA  does not require any nurse time, but needs 50 minutes of wait time to receive test results.
+For the specificity level of FORMULA , the models vary significantly in terms of sensitivity. As expected, model FORMULA  has the lowest sensitivity value of FORMULA , followed by model FORMULA  with a value of FORMULA , then model FORMULA  with a value of FORMULA , and finally model FORMULA  with a value of FORMULA . Thus, with additional resources, FORMULA  is significantly better at
+identifying patients that eventually did experience septic shock. The
+added sensitivity is useful for units with vulnerable populations.
+In practice, a user can benefit from our structured regularizer in at least two ways. First, the user can obtain multiple predictive models by choosing a diverse set of values for the weighting parameter values FORMULA  and FORMULA .
+This brute force approach would provide a diverse landscape of models with very different cost distributions. A second approach involves the user making a sequence of decisions. In particular, the user would adjust the weighting parameter values after the results using their current values is obtained. Specifically, the user would adjust the parameter values so as to obtain a new model that is more aligned with their preferences.
+Comparison with the FORMULA  and scaled FORMULA -norm.
+Simple regularizers (e.g., the FORMULA -norm) can not capture the rich structure of the cost-dependencies in real-world
+domains such as healthcare.
+Figure REF  compares our structured group regularizer (Group) to the FORMULA -norm (L1) and a scaled-FORMULA -norm (L1-scaled). The L1 method is a straightforward implementation of logistic regression plus FORMULA -norm minimization.
+The L1-scaled algorithm combines the logistic function with a scaled-FORMULA -norm given by
+FORMULA 
+for some diagonal scaling matrix FORMULA 
+and weighting parameter FORMULA . In our tests, we defined FORMULA  as the maximum of 1 and the minimum cost required to obtain the FORMULA th feature.
+Although this choice is reasonable, it is also ad-hoc, which is necessarily true for any choice of the scaling matrix FORMULA . This is a consequence of the fact that it takes a complicated cost structure and represents it by FORMULA  numbers, which is too simplistic.
+FIGURE 
+Figure REF  compares the tradeoff between financial cost and AUC values of Group, L1, and L1-scaled. (Similar plots could be constructed for test result time and nurse time.)
+The reported cost of a model is obtained by post-processing, whereby we sum the costs for the unique set of tests required. Each point in the plot represents a pair FORMULA  for some model. For algorithms L1 and L1-scaled, the
+points were obtained by varying the parameter FORMULA  over the interval FORMULA . For algorithm Group based on the regularizer (REF ), we fixed FORMULA  and let FORMULA  take on the same values as FORMULA  for algorithms L1 and L1-scaled; this placed different levels of emphasis on only the financial cost, which further illustrates the flexibility of our cost-driven structured regularizer.
+For all three algorithms we only use tests that have a maximum allowed wait time of 50 minutes.
+First, observe that algorithm L1 performs the worst. In particular, the cheapest model recovered by algorithm L1 costs $129 and had an AUC of approximately FORMULA . At that same price-point, algorithms L1-scaled and Group were able to obtain AUC values of approximately FORMULA  and FORMULA . This is not surprising since the FORMULA -regularizer used by algorithm L1 causes the most predictive features to be chosen first, without any regard to the resulting financial cost. This performance is not surprising and may be used to motivate algorithm L1-scaled. In essence, L1-scaled incorporates a rough measure of the cost for each feature through the choice of FORMULA , as described above. Second, Figure REF  shows that our cost-sensitive regularizer significantly outperforms algorithm L1-scaled. Third, observe that a (perhaps) surprisingly high AUC value (approximately FORMULA ) may be achieved for models without any financial cost by algorithms L1-scaled and Group. For the prediction of sepsis, this means that although expensive tests produce measurements that allow for better prediction accuracy, one may still do well without incurring any (additional) financial costs. This observation should be leveraged when implementing screening tools or assessing risk stratification.
+
+Conclusions and discussion
+We designed a structured regularizer that captures
+the complex cost structure of many applications. The
+feature, measurement, test, and caregiver activity hierarchy in
+healthcare was used as an example, but we showed how our method can be
+used anytime the cost structure can be represented as a
+finite-layer boolean circuit. By building a regularizer that was in
+harmony with user's application-specific cost preferences, our
+experiments produced a diverse collection of models.
+Moreover, our cost-sensitive regularizer achieved
+better prediction accuracy for the same (often lower) cost when
+compared to FORMULA  or weighted-FORMULA  norms commonly used.
+We comment that the design of our regularizer must only be
+done once up-front for each application, and then may be reused
+to answer a host of questions, e.g., through model prediction.
+Beyond sepsis, our regularizer applies to many prediction problems in healthcare {{cite:6937927b-0004-4ffd-89c6-87b77d0dfd2c}} including early detection of other potentially preventable conditions, e.g.,
+pneumonia, c-diff, and renal failure {{cite:8ee1ffd1-b3a0-44ff-bc8c-616a8d0f6cb5}}.
+More broadly, our regularizer is applicable to cost-sensitive prediction problems whose cost-graphs may be represented with a logical AND and OR structure associated with boolean circuits.
+In traffic prediction, for example, features (e.g., mean and trend) of the traffic velocity can be computed from streams acquired from sources (e.g., querying crowdsourced GPS devices, pneumatic road tubes, piezo-electric sensors, cameras, and manual counting) at different locations including live event streams {{cite:71cc3399-5316-4f92-9672-5eb9218ee3a5}}.
+Considerations for choosing a model include the cost of
+acquiring and deploying the sensors, the staff time to maintain the
+sensors, and the recurring costs of acquiring traffic, weather and live
+event streaming data. Depending on the availability and cost of
+resources, one may wish to deploy different models in different
+regions.
+Although our cost-sensitive regularizer may be used in many important
+applications, it has limitations. Its more accurate modeling of the cost-graph is achieved at the expense of requiring additional computation to construct. Converting a general r-layer Boolean circuit to a 3-layer Boolean circuit has complexity
+FORMULA , where FORMULA  is the number of nodes and FORMULA  is the fan (the largest number of allowed gate inputs/outputs) of the circuit.
+However, most cost-graphs are highly structured, thus dramatically
+reducing the computational cost. For example, constructing the regularizer for the ICU application took approximately 10 seconds on a MacBook Air laptop (1.8 GHz Intel Core i5 processor with 4GB of RAM). This modest additional cost is a consequence of the structure of the cost-graph: most nodes have relatively few connections to nodes in adjacent layers, and the logical gates mostly contain simple OR and AND constructs.
+Since these properties hold for many cost-graphs in practice, our approach is often practical.
+
+Acknowledgments
+We would like to thank Mu Wei for fruitful conversations that ultimately lead to the ideas presented here.
+We would also like to thank Katherine Henry for her help in obtaining and
+cleaning the data used in the healthcare example, and for many
+conversations in which we benefited from her expert knowledge of the data. Finally,
+we thank Dr. Harold Lehmann for helping us understand end-user preferences in the clinical environment.

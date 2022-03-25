@@ -1,0 +1,612 @@
+
+pdftitle=Segre4
+
+At most 64 lines on smooth quartic surfaces (characteristic 2)
+Sławomir RamsMatthias Schütt
+At most 64 lines on smooth quartic surfaces (characteristic 2)
+Sławomir Rams
+Matthias Schütt
+Institute of Mathematics, Jagiellonian University,
+ul. Łojasiewicza 6, 30-348 Kraków, Polandslawomir.rams@uj.edu.pl
+Institut für Algebraische Geometrie, Leibniz Universität
+Hannover, Welfengarten 1, 30167 Hannover, Germanyschuett@math.uni-hannover.de
+Funding by ERC StG 279723 (SURFARI) is gratefully acknowledged (M. Schütt). Partially supported by National Science Centre, Poland, grant 2014/15/B/ST1/02197 (S. Rams).December 4, 2015
+
+Let FORMULA  be a field of characteristic 2.
+We prove
+that there are no smooth quartic surfaces FORMULA 
+with more than 64 lines.
+We also exhibit a smooth quartic containing 60 lines
+which seems to give the current record in characteristic 2.
+
+Introduction
+This paper continues our study of the maximum number of lines
+on smooth quartic surfaces in FORMULA 
+initiated in {{cite:d9563ac5-57d1-46e6-ac19-11f3361ff076}} and {{cite:9e5f0a61-230f-4f4b-b271-81fb94c63258}}.
+Starting from Segre's original ideas and claims in {{cite:1b9a3a23-3dce-472e-92cf-d9872a3963af}},
+we proved in {{cite:d9563ac5-57d1-46e6-ac19-11f3361ff076}}
+that a smooth quartic surface outside characteristics 2 and 3
+contains at most 64 lines,
+with the maximum attained by Schur's quartic {{cite:1fd824e0-f2d5-4200-9c58-fe191540c6f7}}.
+In characteristic 3, this specializes to the Fermat quartic
+which contains 112 lines, the maximum by {{cite:9e5f0a61-230f-4f4b-b271-81fb94c63258}}.
+In characteristic 2, however, both these quartics degenerate
+which opens the way to new phenomena.
+The main result of this paper is
+that the maximum number of lines still cannot exceed 64:
+Theorem 1.1 
+Let FORMULA  be a field of characteristic FORMULA .
+Then any smooth quartic surface over FORMULA  contains at most 64 lines.
+
+Unfortunately we do not know whether Theorem REF  is sharp.
+To the best of our knowledge, the current record is at 60 lines,
+attained by a quartic with FORMULA -action which we shall exhibit explicitly in Section .
+We point out that unlike in other characteristics (by work of us and Veniani {{cite:d9563ac5-57d1-46e6-ac19-11f3361ff076}}, {{cite:9e5f0a61-230f-4f4b-b271-81fb94c63258}}, {{cite:fd1aefd4-938e-4d87-ad17-4cba1a45f950}}),
+there exist non-smooth quartic K3 surfaces more lines than in the smooth case,
+in fact with as many as 68 lines in characteristics 2 (see Remark REF ),
+indicating how special this situation is.
+We emphasize that originally we were expecting the bound from characteristics FORMULA  to go up in characteristic 2,
+since just like in characteristic 3,
+there may be quasi-elliptic fibrations
+and the flecnodal divisor may degenerate.
+With this in mind,
+our previous best bound ended up at 84 in {{cite:9e5f0a61-230f-4f4b-b271-81fb94c63258}}.
+In contrast,
+this paper will show that quasi-elliptic fibrations
+in characteristic 2 cannot arise from lines on smooth quartics (see Proposition REF ).
+Then we will make particular use of special features of elliptic fibrations
+in characteristic 2,
+and of the Hessian, to preserve the original bound of 64.
+The paper is organized as follows.
+Section  reviews genus one fibrations for smooth quartics with lines
+with a special view towards quasi-elliptic fibrations.
+In Section , we discuss ramification types and the Hessian of a cubic in characteristic 2
+to derive Segre's upper bound for the valency of a line of the so-called first kind.
+Lines of the second kind are analyzed in Section , much in the spirit of {{cite:d9563ac5-57d1-46e6-ac19-11f3361ff076}}.
+The proof of Theorem REF  is given in Sections  - 
+by distinguishing which basic configurations of lines occur on the quartic.
+The paper concludes with an example of a smooth quartic over FORMULA  containing 60 lines over FORMULA .
+Convention 1.2 Throughout this note we work over an algebraically closed field FORMULA  of characteristic FORMULA ,
+since base change does not affect the validity of Theorem REF .
+
+
+Genus one fibration
+Let FORMULA  be a smooth quartic surface over an algebraically closed field FORMULA 
+of characteristic 2.
+Assuming that FORMULA  contains a line FORMULA ,
+the linear system FORMULA  gives a pencil of cubic curves;
+explicitly these are obtained as residual cubics FORMULA 
+when FORMULA  is intersected with the pencil of planes FORMULA  containing FORMULA .
+In particular, we obtain a fibration
+FORMULA 
+whose fibers are reduced curves of arithmetic genus one.
+Note that in general there need not be a section,
+and due to the special characteristic,
+the general fiber need not be smooth,
+i.e. the fibration may a priori be quasi-elliptic.
+In fact, we shall instantly rule this latter special behaviour out,
+but before doing so,
+we note the limited types of singular fibers (in Kodaira's notation {{cite:8ac60733-9dbf-47a3-b9ba-189b8b946595}})
+which may arise from a plane curve of degree 3:
+TABLE 
+While this is already quite restrictive for any genus one fibration,
+it determines the singular fibers of a quasi-elliptic fibration in characteristic 2 completely:
+the general fiber has Kodaira type FORMULA ,
+and for Euler-Poincaré characteristic reasons,
+there are exactly 20 reducible fibers, all of type FORMULA .
+It turns out
+that this together with the theory of Mordell-Weil lattices
+provides enough information to rule out quasi-elliptic fibrations in our characteristic 2 set-up:
+Proposition 2.1 
+The fibration FORMULA  cannot be quasi-elliptic.
+
+Assume to the contrary that FORMULA  is quasi-elliptic.
+Then FORMULA  automatically is unirational,
+and thus supersingular,
+i.e. the Néron-Severi group FORMULA  has rank 22
+equalling the second Betti number;
+endowed with the intersection pairing,
+the Néron-Severi lattice has discriminant
+FORMULA 
+by {{cite:83402c07-5c8e-492e-91df-9f583635eb66}}.
+We will use the following basic result
+whose proof resembles that of {{cite:e4e2e6d9-41bf-4797-a9a8-d808b7259fb1}}.
+Lemma 2.2 
+If FORMULA  is quasi-elliptic,
+then it admits a section.
+
+If there were no section,
+then FORMULA  would have multisection index 3,
+thanks to the trisection FORMULA .
+Hence we can define an auxiliary integral lattice FORMULA  of the same rank
+by dividing the general fiber FORMULA  by 3:
+FORMULA 
+Since FORMULA  can be interpreted as index 3 overlattice of FORMULA ,
+we obtain
+FORMULA 
+By (REF ), this is not an integer, despite FORMULA  being integral, giving the desired contradiction.
+We continue the proof of Proposition REF 
+by picking a section of FORMULA  and denoting it by FORMULA .
+Then FORMULA  induces a section FORMULA  of FORMULA 
+which is obtained fiberwise by addition.
+By the theory of Mordell-Weil lattices {{cite:4826d167-e75a-4900-b322-69c68782692c}}
+(which also applies to quasi-elliptic fibrations),
+the class of FORMULA  in FORMULA  is computed as follows.
+Let FORMULA  be the number of reducible fibers
+which are intersected by FORMULA  in the linear component,
+and denote the respective component by FORMULA .
+Let FORMULA .
+We claim that
+FORMULA 
+To see this, it suffices to verify the following properties,
+using the fact that FORMULA  modulo the trivial lattice generated by FORMULA  and fiber components:
+
+FORMULA  meets every fiber with multiplicity one in a single component
+(the linear component; this is assured by subtracting FORMULA  and the FORMULA );
+
+FORMULA  (giving the coefficient of FORMULA  in the representation of FORMULA ).
+
+But then the Mordell-Weil group of a jacobian quasi-elliptic fibration is always finite
+(compare {{cite:125cf4e0-e5b3-4b5b-b71f-76140146ce09}}),
+so FORMULA  has height zero.
+Using FORMULA  and the correction terms FORMULA  from each of the FORMULA  reducible fibers
+where FORMULA  meets the conic while FORMULA  always meets the line,
+we find
+FORMULA 
+Since the equation FORMULA  has no integer solution
+(reduce modulo 3!),
+we arrive at the required contradiction.
+Remark 2.3 
+Once quasi-elliptic fibrations are excluded,
+one can adopt the techniques from {{cite:d9563ac5-57d1-46e6-ac19-11f3361ff076}}, {{cite:9e5f0a61-230f-4f4b-b271-81fb94c63258}}
+to prove without too much difficulty
+that FORMULA  cannot contain more than 68 lines.
+While this is still a few lines away from Theorem REF ,
+it is an interesting coincidence that there exists a one-dimensional family of non-smooth quartic K3 surfaces,
+i.e. admitting only isolated ordinary double points as singularities,
+which admit as many as 68 lines:
+FORMULA 
+
+
+Ramification and Hessian
+In this section,
+we introduce two of the main tools for the proof of Theorem REF .
+It is instructive that both of them have different features in characteristic 2 than usual.
+Ramification
+First we consider the ramification of the restriction of the morphism FORMULA 
+to the line FORMULA :
+FORMULA 
+Since this morphism has degree 3,
+is always has exactly 1 or 2 ramification points in characteristic 2
+(because of Riemann-Hurwitz and wild ramification).
+We distinguish the ramification type of FORMULA  according to the ramification points as follows:
+TABLE 
+The ramification type is relevant for our purposes
+because often one studies the base change of FORMULA  over FORMULA 
+where by definition the fibration corresponding to FORMULA  attains a section.
+In fact, we will usually extend the base field to the Galois closure of FORMULA 
+where FORMULA  splits into three sections.
+Note that the field extension FORMULA  itself is Galois
+if and only if FORMULA  has ramification type FORMULA .
+Encoded in the ramification,
+one finds how the singular fibers behave under the base change,
+and more importantly, how they are intersected by the sections
+obtained from FORMULA .
+
+Hessian
+We now introduce the Hessian of the residual cubics FORMULA .
+To this end, we apply a projective transformation,
+so that
+FORMULA 
+Then the pencil of hyperplanes in FORMULA  containing FORMULA  is given by
+FORMULA 
+(including the hyperplane FORMULA  at FORMULA ,
+so everything in what follows can be understood in homogenous coordinates of FORMULA 
+parametrising FORMULA ;
+we decided to opt for the affine notation for simplicity).
+The residual cubics FORMULA  of FORMULA 
+are given by a homogeneous cubic polynomial
+FORMULA 
+which is obtained from the homogeneous quartic polynomial FORMULA 
+defining FORMULA 
+by substituting FORMULA  for FORMULA  and factoring out FORMULA .
+Outside characteristic 2,
+the points of inflection of FORMULA 
+(which are often used to define a group structure on FORMULA ,
+at least when one of them is rational)
+are given by the Hessian
+FORMULA 
+In characteristic 2, however,
+some extra divisibilities in the coefficients force us to modify the Hessian formally
+using the FORMULA -coefficient FORMULA  of FORMULA 
+until it takes the following shape
+(understood algebraically over FORMULA  in terms of the generic coefficients of FORMULA 
+before reducing modulo 2 and substituting):
+FORMULA 
+In order to use the Hessian for considerations of lines on FORMULA ,
+Segre's key insight from {{cite:1b9a3a23-3dce-472e-92cf-d9872a3963af}}
+was that FORMULA  vanishes on each linear component of a given residual cubic FORMULA 
+(or, if FORMULA  is singular, but irreducible, in its singularity).
+That is, any line in a fiber of FORMULA  (i.e. intersecting FORMULA )
+gives a zero of the following polynomial FORMULA ,
+obtained by intersecting FORMULA  and FORMULA  with FORMULA  (i.e. substituting FORMULA )
+and taking the resultant with respect to either remaining homogeneous variable:
+FORMULA 
+More precisely, one computes that FORMULA  has generically degree 18,
+and that each line contributes to the zeroes of FORMULA  separately:
+Lemma 3.1 
+In the above set-up,
+assume that FORMULA  has
+
+a fiber of type FORMULA  or FORMULA  at FORMULA ,
+then FORMULA ;
+
+a fiber of type FORMULA  or FORMULA  with double ramification at FORMULA ,
+then FORMULA .
+
+
+For degree reasons, one directly obtains the following upper bound for the valency of
+FORMULA ,
+i.e. the number of other lines on FORMULA  met by FORMULA :
+Corollary 3.2 (Segre) 
+
+If FORMULA , then FORMULA .
+
+This makes clear
+that we have to carefully distinguish whether FORMULA  vanishes identically or not.
+Recall from {{cite:1b9a3a23-3dce-472e-92cf-d9872a3963af}}, {{cite:d9563ac5-57d1-46e6-ac19-11f3361ff076}}
+how this leads to the following terminology:
+Definition 3.3 The line FORMULA  is said to be of the second kind if FORMULA .
+Else we call FORMULA  a line of the first kind.
+
+We will next show that lines of the second kind behave essentially
+as in characteristic FORMULA .
+For lines of the first kind,
+the different quality of ramification changes the situation substantially,
+but it is not clear (to us) whether the valency bound from Corollary REF  is still sharp.
+(The lines on the record surface from Section  have all valency 17.)
+
+Lines of the second kind
+Since lines of the second kind in characteristic 2
+turn out to behave mostly like in characteristics FORMULA ,
+we will be somewhat sketchy in this section.
+That is, while trying to keep the exposition as self-contained as possible,
+we will refer the reader back to {{cite:d9563ac5-57d1-46e6-ac19-11f3361ff076}} for the details whenever possible.
+Let FORMULA  be a line of the second kind.
+Then, by definition,
+FORMULA  is contained in the closure of the flex locus on the smooth fibers.
+This severely limits the way how FORMULA  may intersect the singular fibers.
+As in characteristics FORMULA  in {{cite:d9563ac5-57d1-46e6-ac19-11f3361ff076}},
+one obtains the following configurations
+depending on the ramification:
+Lemma 4.1 
+A line of the second kind may intersect the singular fibers of FORMULA 
+depending on the ramification as follows:
+TABLE 
+
+We emphasize that fibers of type FORMULA  and FORMULA  necessarily come with wild
+ramification
+in characteristic 2;
+in fact they impose on the discriminant a zero of multiplicity at least 4 by {{cite:43d84380-a44d-4bcd-b9ce-6828b55eaded}}.
+(In mixed characteristic, this can often be explained as two fibers of type FORMULA  merging
+without the fiber type changing, compare Lemma REF  with {{cite:d9563ac5-57d1-46e6-ac19-11f3361ff076}}.)
+As in {{cite:d9563ac5-57d1-46e6-ac19-11f3361ff076}} we continue to argue with the base change of FORMULA 
+to the Galois closure of FORMULA .
+By construction, this sees FORMULA  split into three sections;
+taking one as zero for the group law,
+the others necessarily become 3-torsion.
+In practice, this implies that fibers of type FORMULA  and FORMULA  have to even out
+– including the possible degeneration of two FORMULA 's to one FORMULA .
+Since the latter fiber type automatically comes with double ramification
+by Lemma REF ,
+we can bound the possible configurations of singular fibers
+(where the precise numbers depend on the index of wild ramification of the FORMULA  fibers):
+Lemma 4.2 
+For a line of the second kind,
+the singular fibers of FORMULA  can be configured as follows:
+TABLE 
+
+Corollary 4.3 
+Unless the line FORMULA  of the second kind has ramification type FORMULA ,
+it has valency
+FORMULA 
+Else one has FORMULA .
+
+It is due to this result that we will have to pay particular attention
+to lines of the second kind with ramification type FORMULA .
+As it happens, quartics containing such a line are not hard to parametrise;
+in fact, a comparison with the proof of {{cite:d9563ac5-57d1-46e6-ac19-11f3361ff076}} shows that
+exactly the same argument as in characteristics FORMULA  goes through:
+Lemma 4.4 (Family FORMULA ) 
+
+Let FORMULA  be a line of the second kind on a smooth quartic FORMULA  with ramification type FORMULA .
+Then FORMULA  is projectively equivalent to a quartic in the family FORMULA  given by the homogeneous polynomials
+FORMULA 
+where FORMULA ,
+FORMULA  and FORMULA .
+
+We will not need the precise location of all singular fibers of FORMULA 
+in what follows,
+but we would like to highlight the ramified singular fibers of Kodaira type FORMULA 
+at FORMULA .
+These degenerate to type FORMULA  if and only if FORMULA  resp. FORMULA  divides FORMULA 
+(unless the surface attains singularities, for instance if FORMULA  has a square factor).
+Note that if FORMULA  is smooth and taken as in Lemma REF , then
+FORMULA 
+For the record, we also note the following easy consequence of our considerations
+which we will use occasionally to specialise to jacobian elliptic fibrations:
+Corollary 4.5 
+If FORMULA  admits no section,
+or if no two lines on FORMULA  intersect,
+then FORMULA  contains at most 21 lines.
+
+In the first case, since any line disjoint from FORMULA  would give a section of FORMULA ,
+we know that all lines on FORMULA  meet FORMULA .
+Hence the corollary follows from the combination of
+Corollaries REF  and REF .
+In the second case, the lines give orthogonal FORMULA  classes in FORMULA .
+Since the latter has signature FORMULA  with FORMULA ,
+the claim follows.
+
+Proof of Theorem REF  in the triangle case
+We will break the proof of Theorem REF  into three cases,
+depending on which configurations of lines the smooth quartic FORMULA  admits.
+They will be treated separately in this and the next two sections.
+Throughout this section, we work with a smooth quartic FORMULA  satisfying the following assumption:
+Assumption 5.1 FORMULA  contains a triangle (or star) composed of 3 lines.
+
+Equivalently (since FORMULA  is assumed to be smooth), there is a hyperplane FORMULA 
+containing the three said lines and thus splitting completely into lines on FORMULA :
+FORMULA 
+
+If neither of the lines FORMULA  is of the second kind,
+then each of them meets at most 18 lines on FORMULA  by Corollary REF .
+Since any line on FORMULA  meets FORMULA ,
+we find that FORMULA  contains at most 64 lines as claimed.
+
+
+If the lines are allowed to be of the second kind,
+but not of ramification type FORMULA ,
+then Corollary REF  implies again
+that FORMULA  contains at most 64 lines.
+
+
+To complete the proof of Theorem REF  in the triangle case,
+it thus suffices to consider the case
+where one of the lines, say FORMULA ,
+is of the second kind with ramification type FORMULA .
+Hence FORMULA  can be given as in Lemma REF ;
+in particular, it admits a symplectic automorphism FORMULA  of order 3
+acting by
+FORMULA 
+for some primitive root of unity FORMULA .
+Note that FORMULA  permutes the lines FORMULA 
+(or of any triangle coplanar with FORMULA ).
+In particular, these three lines are of the same type.
+As before, we continue to distinguish three cases:
+
+If FORMULA  is of the first kind,
+then consider the degree 18 polynomial FORMULA 
+associated to the flex points of the genus one fibration induced by FORMULA .
+Locate the singular fiber FORMULA  (of type FORMULA  or FORMULA ) at FORMULA .
+Then an explicit computation shows that
+FORMULA 
+Since this divisibility exceeds the lower bound from Lemma REF ,
+we infer from the arguments laid out in Section 
+that FORMULA  meets at most 14 lines outside the fiber at FORMULA .
+In total, this gives
+FORMULA 
+Together with Corollary REF , this shows that FORMULA  contains at most 63 lines.
+
+
+Similarly, if FORMULA  is of the second kind, but not of ramification type FORMULA ,
+then by Corollary REF , there are no more than 60 lines on FORMULA .
+
+
+We conclude the proof of Theorem REF  in the triangle case
+by ruling out that FORMULA  is of the second kind with ramification type FORMULA .
+(Over FORMULA SFORMULA x3, x4FORMULA =1FORMULA x44FORMULA q4 FORMULA FORMULA FORMULAFORMULA 2FORMULA (1,1)FORMULA (2,2)FORMULA S FORMULA FORMULAFORMULA x3FORMULA x4FORMULA q4 FORMULA FORMULAFORMULA I3FORMULA IVFORMULA 1+3+4FORMULA =0FORMULA R0FORMULA RFORMULA 7FORMULA RFORMULA S FORMULA
+
+Proof of Theorem REF  in the square case
+Throughout this section, we work with a smooth quartic FORMULA  satisfying the following assumption:
+Assumption 6.1 
+FORMULA  contains no triangle or star composed of 3 lines,
+but a square comprising 4 lines.
+
+We shall refer to this situation as the square case.
+Our arguments are inspired by an approach due to Degtyarev and Veniani (see {{cite:fd1aefd4-938e-4d87-ad17-4cba1a45f950}}).
+Lemma 6.2 
+If FORMULA  contains no triangles or stars,
+then each line FORMULA  on FORMULA  has valency
+FORMULA 
+
+Since the genus one fibration FORMULA  induced by FORMULA  cannot be quasi-elliptic by Proposition REF ,
+the proof of Lemma REF  amounts to a simple Euler-Poincaré characteristic computation
+as the contributions of the singular fibers (including wild ramification) have to sum up to 24.
+Presently, since FORMULA  admits no triangles and stars by assumption,
+FORMULA  can only have singular fibers of Kodaira types FORMULA .
+Hence there can be at most be 12 fibers containing a line.
+Denote any 4 lines forming a square on FORMULA  by FORMULA .
+Order the lines such that FORMULA  if and only if FORMULA .
+Consider the two residual (irreducible) conics FORMULA  such that the hyperplane class FORMULA  decomposes on FORMULA  as
+FORMULA 
+Then the linear system FORMULA  induces a genus one fibration
+FORMULA 
+with fibers of degree 4 – one of them is exactly the square FORMULA  of Kodaira type FORMULA .
+Any line on FORMULA  is either orthogonal to FORMULA  and thus a fiber component of FORMULA ,
+or it gives a section or bisection for FORMULA ,
+thus contributing to the valency of one or two of the FORMULA .
+In total, this gives the upper bound
+FORMULA 
+where the second equality follows from Lemma REF .
+We shall now study the possible fiber configurations
+to derive the following upper bound for the number of lines on FORMULA  which will prove Theorem REF  in the square case.
+Proposition 6.3 
+Under Assumption REF ,
+the smooth quartic FORMULA  contains at most 60 lines.
+
+Before starting the proof of Proposition REF  properly,
+we note the possible reducible fibers of FORMULA :
+TABLE 
+Using the fact that additive fibers necessarily come with wild ramification
+(so that they contribute at least 4 to the Euler-Poincaré characteristic, see {{cite:43d84380-a44d-4bcd-b9ce-6828b55eaded}}),
+one can easily work out all fiber configurations possibly admitting more than 20 lines as fiber components:
+FORMULA 
+To rule out all these configurations,
+we will employ structural Weierstrass form arguments specific to characteristic 2
+(which apply since we always switch to the Jacobian of FORMULA ).
+Similar arguments have been applied to the particular problem of maximal singular fibers of elliptic K3 surfaces
+in {{cite:43d84380-a44d-4bcd-b9ce-6828b55eaded}}.
+General set-up
+In characteristic 2,
+an elliptic curve with given non-zero j-invariant FORMULA  can be defined
+by a Weierstrass form over a given field FORMULA  by
+FORMULA 
+As usual, this is unique up to quadratic twist,
+but here twists occur in terms of an extra summand FORMULA ,
+with FORMULA -isomorphic surfaces connected by the Artin-Schreier map FORMULA  over FORMULA :
+FORMULA 
+The main approach now consists in substituting a conjectural j-invariant,
+given as quotient
+FORMULA 
+associated to the usual integral Weierstrass form
+FORMULA 
+Converting the twisted form of (REF ) with j-invariant from (REF )
+to an integral model FORMULA ,
+we arrive at the Weierstrass form
+FORMULA 
+which outside very special cases will be non-minimal at the zeroes of FORMULA .
+Then minimalizing is achieved by running Tate's algorithm {{cite:40d5c06c-8326-4d22-822a-c33def0be5b0}}
+which consequently gives relations between the coefficients of FORMULA  and FORMULA ,
+or in some cases like ours leads to a contradiction.
+By inspection of (REF ), the polynomial FORMULA  encodes singular or supersingular fibers.
+For immediate use, we record the
+following criterion which is borrowed from {{cite:57b93dc4-467d-464b-86c1-4545cfe0b126}}:
+Lemma 6.4 
+Assume that there is a supersingular place which is not singular.
+Locating it at FORMULA , the FORMULA -coefficient of FORMULA  has to vanish.
+
+By assumption, FORMULA , so the integral Weierstrass form (REF ) reads
+FORMULA 
+Writing FORMULA ,
+the fiber of the affine Weierstrass form at FORMULA  has a singular point at FORMULA .
+Since FORMULA  is a place of good reduction, the Weierstrass form is non-minimal.
+From Tate's algorithm {{cite:40d5c06c-8326-4d22-822a-c33def0be5b0}},
+this translates as FORMULA  being in fact a surface singularity.
+Equivalently, FORMULA  by Jacobi's criterion.
+Example 6.5 
+There cannot be a rational elliptic surface in characteristic 2
+with singular fibers FORMULA .
+Otherwise, FORMULA  for some squarefree degree 5 polynomial FORMULA  and with FORMULA .
+Since the surface is semi-stable, Lemma REF  kicks in to show that FORMULA , contradiction.
+
+Remark 6.6 Note that the criterion of Lemma REF 
+applies after any Möbius transformation fixing 0,
+and to any supersingular place that is not singular.
+Tracing the non-minimality argument further through Tate's algorithm,
+one can, for instance, show that there do not exist elliptic fibrations in characteristic 2
+with configuration of singular fibers FORMULA 
+(as occuring on Schur's quartic over  FORMULA
+Non-existence of the configurations  FORMULA
+In each of the said cases,
+the j-invariant (REF ) is a perfect square.
+Equivalently, FORMULA  arises from another elliptic fibration by a purely inseparable base change.
+(To see this, apply the variable transformation FORMULA  to (REF ).)
+In the first two cases, this would lead to a rational elliptic surface with five FORMULA  fibers;
+this cannot exist by {{cite:1ee34afe-5fb1-4627-8c1d-00aa05008b6b}} (which can be checked independently as in Example REF  or REF ).
+Similarly, the configuration FORMULA  cannot arise at all
+because fibers of type FORMULA  are only related to type FORMULA  by inseparable base change,
+so that the Euler Poincaré characteristics would not sum up to a multiple of 12.
+For the last configuration, since the fiber of type FORMULA  comes with wild ramification of index 1
+(by the Euler-Poincaré characteristic formula), it can only arise from a singular fiber
+of the same ramification index and total contribution to the discriminant congruent to 2 mod 6.
+By {{cite:43d84380-a44d-4bcd-b9ce-6828b55eaded}}, this uniquely leads to Kodaira type FORMULA ,
+but then again with the five FORMULA  fibers the Euler-Poincaré characteristics do not sum up to a multiple of 12.
+
+Non-existence of the configurations  FORMULA
+Each of these configurations is semi-stable, so Lemma REF  applies
+with supersingular (smooth) place at FORMULA .
+In the first case, for instance, we can locate the FORMULA  fiber at FORMULA 
+and write affinely
+FORMULA 
+for some squarefree polynomial FORMULA  of degree 5.
+But then FORMULA  by Lemma REF , contradiction.
+The other two configurations can be ruled out completely analogously.
+Altogether it follows that the fibers of FORMULA  may contain at most 20 lines.
+In view of the upper bound
+FORMULA 
+this completes the proof of Proposition REF .
+ FORMULA
+
+Proof of Theorem REF  in the squarefree case
+Throughout this section, we work with a smooth quartic FORMULA  satisfying the following assumption:
+Assumption 7.1 
+FORMULA  contains neither a triangle or star composed of 3 lines nor a square comprising 4 lines.
+
+In short, we will also call FORMULA  squarefree (meaning also trianglefree).
+In the sequel we will use the following stronger version of {{cite:9e5f0a61-230f-4f4b-b271-81fb94c63258}}.
+Lemma 7.2 
+Let FORMULA  be an irreducible conic which is coplanar with two lines.
+Then FORMULA  is met by at most 46 lines on FORMULA .
+
+The proof of the claim forms the last section of the proof of {{cite:9e5f0a61-230f-4f4b-b271-81fb94c63258}}.
+Lemma 7.3 
+If FORMULA  is squarefree, then FORMULA  contains at most 60 lines.
+
+By Corollary REF  we can assume that FORMULA  contains a pair of lines FORMULA  that intersect.
+Let FORMULA  be lines on FORMULA  that meet FORMULA , and let FORMULA  be the lines
+that intersect FORMULA  for FORMULA .
+After reordering the lines, we assume FORMULA .
+Suppose that FORMULA  for an FORMULA .
+Then, by Lemma REF  the irreducible conic in FORMULA  is met by at most 44 lines on FORMULA 
+other than FORMULA ,
+and the claim of the lemma follows immediately, because every line on FORMULA  meets FORMULA  or FORMULA  or the conic.
+Otherwise, we assume to the contrary that FORMULA  contains more than 60 lines.
+After exchanging FORMULA , if necessary,
+and iterating the above process, we may assume using Lemma REF  that
+FORMULA 
+In particular, we always have the lines FORMULA  on FORMULA ,
+and FORMULA  for FORMULA .
+Assumption REF  guarantees that
+FORMULA 
+Consider the divisor FORMULA  of Kodaira type FORMULA .
+Then FORMULA  induces an elliptic fibration
+FORMULA 
+with FORMULA  as fiber.
+Naturally, FORMULA , being perpendicular to FORMULA , also appear as fiber components,
+but we can say a little more.
+Namely, by (REF ), each FORMULA  comes with at least FORMULA  adjacent lines,
+say FORMULA  which are also perpendicular to FORMULA .
+Since FORMULA , the divisor FORMULA  gives another FORMULA  fiber of FORMULA .
+Altogether, since FORMULA , this endows FORMULA  with at least 5 fibers of type FORMULA .
+The sum of their Euler-Poincaré characteristics clearly exceeds FORMULA .
+This gives the desired contradiction and thus concludes the proof of Lemma REF .
+Conclusion 7.4 Having treated the triangle case, the square case and the squarefree case,
+the proof of Theorem REF  is complete.  FORMULA
+
+
+Example with 60 lines
+This section gives an explicit example
+of a smooth quartic surface defined over the finite field FORMULA 
+which contains 60 lines over FORMULA .
+Motivated by {{cite:e04f5483-6785-4498-93c4-3b20a5f51001}}
+where a pencil of quintic surfaces going back to Barth was studied,
+we consider geometrically irreducible quartic surfaces with an
+action by the symmetric group FORMULA  of order 120.
+These come in a one-dimensional pencil
+which can be expressed in elementary symmetric polynomials FORMULA  of degree FORMULA 
+in the homogeneous coordinates of FORMULA  as
+FORMULA 
+There are 60 lines at the primitive third roots of unity as follows.
+Let FORMULA  be a fifth root of unity,
+i.e. FORMULA .
+Then FORMULA  is a cube root of unity,
+and FORMULA  contains the line FORMULA  given by
+FORMULA 
+The FORMULA -orbit of FORMULA  consists of exactly 60 lines
+which span FORMULA  of rank 20 and discriminant FORMULA .
+We are not aware of any other smooth quartic surface in FORMULA  with 60 or more lines.
+Acknowledgements
+We thank Davide Veniani for helpful comments and discussions.
+This paper was completed at the workshop on K3 surfaces and related topics at KIAS in November 2015.
+We thank the organizers JongHae Keum and Shigeyuki Kondō for the great hospitality.

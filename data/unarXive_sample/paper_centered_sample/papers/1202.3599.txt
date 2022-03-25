@@ -1,0 +1,157 @@
+
+
+A note on the categorification of Lie algebras
+Isar GoyvaertsJoost Vercruysse
+A note on the categorification of Lie algebras
+Isar Goyvaerts
+Joost Vercruysse
+Department of Mathematics, Vrije Universiteit Brussel, Pleinlaan 2, B-1050 Brussel, Belgiumigoyvaer@vub.ac.be
+Département de Mathématiques, Université Libre de Bruxelles, Boulevard du Triomphe, B-1050 Bruxelles, Belgiumjvercruy@ulb.ac.be
+
+In this short note we study Lie algebras in the framework of symmetric monoidal categories. After a brief review of the existing work in this field and a presentation of earlier studied and new examples, we examine which functors preserve the structure of a Lie algebra.
+
+Introduction
+Lie algebras have many generalizations such as Lie superalgebras, Lie color and FORMULA -Lie algebras, braided Lie algebras, Hom-Lie algebras, Lie algebroids, etc.
+Motivated by the way that the field of Hopf algebras benefited from the interaction with the field of monoidal categories (see e.g. {{cite:4fa0864c-f114-4ba8-aaa1-d2275cf3c7b6}}) on one hand, and the strong relationship between Hopf algebras and Lie algebras on the other hand, the natural question arose whether it is possible to study Lie algebras within the framework of monoidal categories, and whether Lie theory could also benefit from this viewpoint.
+First of all, it became folklore knowledge that Lie algebras can be easily defined in any symmetric monoidal FORMULA -linear category over a commutative ring FORMULA , or (almost equivalently) in any symmetric monoidal additive category. Within this setting, many (but not all) of the above cited examples can already be recovered. We will treat slightly in more detail the examples of Lie superalgebras and Hom-Lie algebras in the second section.
+As some examples, in particular Lie color algebras, do not fit into this theory, several attemps were made to define Lie algebras in any braided, rather than symmetric monoidal category. A reason to do this is that FORMULA -graded modules over any group FORMULA  give rise to a monoidal category, whose center is a braided monoidal category that can be described as the category of Yetter-Drinfel'd modules over a Hopf algebra. In this way, Lie color algebras and FORMULA -Lie algebras are recovered as a special case (see {{cite:d4bb1c6b-54d5-430b-86d7-a4551e308022}}). A slightly different point of view is advocated by Majid, whose motivation is to describe deformations of Lie algebras, that he calls braided Lie algebras, inside a braided monoidal category, such that the universal enveloping of this deformed Lie algebra encodes the same information as the deformed (quantum) enveloping algebra of the original Lie algebra (see {{cite:f96fb937-6f6b-4f18-b422-b9524e81b69d}}).
+We will not discuss further these two last cited types of Lie algebras in this short note. Rather, we will study Lie algebras in a (possibly non-symmetric, possibly non-braided) monoidal category, such that the Lie algebra allows a local symmetry. That is, the Lie algebra possesses a self-invertible Yang-Baxter operator and the anti-symmetry and Jacobi identity are defined up to this Yang-Baxter operator.
+
+Lie algebras in additive monoidal categories
+Troughout, we will work in a symmetric monoidal and additive category.
+Without any change in the arguments, one can work in any FORMULA -linear symmetric monoidal category, where FORMULA  is a commutative ring with characteristic different from 2.
+Definition 2.1 Let FORMULA  be a symmetric monoidal additive category with associativity constraint FORMULA , left- and right unit constraints resp. FORMULA  and FORMULA  and symmetry FORMULA . A Lie algebra in FORMULA  is a pair FORMULA , where FORMULA  is an object of FORMULA  and FORMULA  is a morphism in FORMULA  that satisfies the following two conditions
+FORMULA 
+where FORMULA  and FORMULA .
+
+Example 2.2 
+Let FORMULA  be the abelian, symmetric monoidal category of (right) FORMULA -modules over a commutative ring FORMULA  (FORMULA ) with trivial associativity and unit constraints and with symmetry FORMULA  (the flip). Taking a Lie algebra in FORMULA , one obtains the classical definition of a Lie algebra over FORMULA .
+
+Example 2.3 
+Let FORMULA  be the abelian, symmetric monoidal category of FORMULA -vector spaces (FORMULA ) graded by FORMULA . We take the trivial associativity and unit constraints. The symmetry FORMULA  is defined as follows: For any pair of objects FORMULA  in FORMULA ; FORMULA .
+Taking a Lie algebra in FORMULA , one recovers the definition of a Lie superalgebra (see also {{cite:d4bb1c6b-54d5-430b-86d7-a4551e308022}}).
+
+Example 2.4 We now recall from {{cite:b4f2aeb7-e404-4562-a507-4cc7fe54bd61}}, the construction of a non-trivial example of an abelian, non-strict symmetric monoidal category (called the Hom-construction).
+Let FORMULA  be a category. A new category FORMULA  is introduced as follows:
+objects are couples FORMULA , with FORMULA  and FORMULA .
+A morphism FORMULA  is a morphism FORMULA  in FORMULA  such that
+ FORMULA
+Now assume that FORMULA  is a braided monoidal category.
+Then one easily verifies that FORMULA  is again a braided monoidal category, with the tensor product defined by the following formula
+FORMULA 
+for FORMULA  and FORMULA  in FORMULA .
+On the level of morphisms, the tensor product is the tensor products of morphisms in FORMULA .
+By deforming the category FORMULA , we obtain the category FORMULA  which is still a braided monoidal category (but no longer strict if FORMULA  was strict).
+The associativity constraint FORMULA  is given by the formula
+FORMULA 
+for FORMULA . The unit constraints FORMULA  and
+FORMULA  are given by
+FORMULA 
+Now, A Lie algebra in FORMULA  is a triple FORMULA  with FORMULA , FORMULA  a morphism
+in FORMULA  (that is, FORMULA ), satisfying anti-symmetry and the so-called Hom-Jacobi identity;
+FORMULA 
+We thus recover the definition of a Hom-Lie algebra (cf.{{cite:985b9328-f543-422c-bcb0-8e9994d8839e}}), where in this case FORMULA  is a classical Lie algebra isomorphism.
+
+Example 2.5
+A Lie coalgebra in FORMULA  is a Lie algebra in FORMULA , the opposite category of FORMULA . This means that a Lie coalgebra is a pair FORMULA , where FORMULA  is a map that satisfies the following two conditions
+FORMULA 
+Lie coalgebras were introduced by Michaelis {{cite:d58a6ab6-a9d8-4abe-a558-3d766052beb4}}.
+Our next aim is to `free' the definition of Lie algebra of the global symmetry on our additive monoidal category.
+Definition 2.6 Let FORMULA  be a (possibly non-symmetric)
+monoidal category and FORMULA  an object in FORMULA . A self-invertible Yang-Baxter operator on FORMULA  is a morphism FORMULA  that satisfies the following conditions:
+FORMULA 
+
+Given an object FORMULA  in FORMULA , together with a self-invertible Yang Baxter operator FORMULA  as above, we can construct the following morphisms in FORMULA :
+FORMULA 
+One can easily verify that FORMULA  and FORMULA .
+Example 2.7 
+If FORMULA  is a symmetric monoidal category, with symmetry FORMULA , for all FORMULA , then FORMULA  is a self-invertible Yang-Baxter operator for FORMULA . Obviously, FORMULA  satisfies conditions (REF ); to see that FORMULA  also satisfies (), one applies the hexagon condition in combination with the naturality of FORMULA .
+Moreover, FORMULA  and FORMULA .
+
+Definition 2.8 Let FORMULA  be an an additive, monoidal category, but not necessarily symmetric. A YB-Lie algebra in FORMULA  is a triple FORMULA , where FORMULA  is an object of FORMULA , FORMULA  is a self-invertible Yang-Baxter operator for FORMULA  in FORMULA , and FORMULA  is a morphism in FORMULA  that satisfies
+FORMULA 
+We call () the (right) FORMULA -Jacobi identity for FORMULA . The equation () expresses the compatibility between the Lie bracket FORMULA  and the Yang-Baxter operator FORMULA . Remark that in the case were FORMULA  (see Example REF ), this condition is automatically satisfied by the naturality of the symmetry FORMULA .
+
+As for usual Lie algebras, the definition of a YB-Lie algebra is left-right symmetric, as follows from the following Lemma.
+Lemma 2.9 Let FORMULA  be a YB-Lie algebra in FORMULA . Then FORMULA  also satisfies the left FORMULA -Jacobi identity, that is the following equation holds
+FORMULA 
+
+Using (REF ) in the first equality, () in the second equality, FORMULA  in the third equality and () in the last equality we find
+FORMULA 
+Example 2.10 
+Let FORMULA  be any additive category, and consider the functor category FORMULA  of endofunctors on FORMULA  and natural transformations between them. Recall that this is a monoidal category with the composition of functors as tensor product on objects and the Godement product as tensor product on morphisms.
+Moreover, FORMULA  inherits the additivity of FORMULA .
+We will call a YB-Lie algebra in FORMULA  a Lie monad on FORMULA .
+
+Example 2.11 Let FORMULA  be an associative algebra in an additive, monoidal category FORMULA  and suppose there is a self-invertible Yang-Baxter operator FORMULA  on FORMULA , such that the conditions hold:
+FORMULA 
+Then we can consider a YB-Lie algebra structure on FORMULA , induced by the commutator bracket FORMULA  (defined by FORMULA ). E.g. If FORMULA  is a braided Hopf algebra (or a braided bialgebra) in the sense of Takeuchi (see {{cite:4fa0864c-f114-4ba8-aaa1-d2275cf3c7b6}}) then FORMULA  admits a Yang-Baxter operator FORMULA  that satisfies the diagrams (REF ). If FORMULA  is self-invertible, the commutator algebra of FORMULA  is a YB-Lie-algebra in our sense. Moreover, the primitive elements of FORMULA  can be defined as the equaliser FORMULA  in the following diagram
+FORMULA 
+where FORMULA  is the comultiplication on FORMULA  and FORMULA  is the unit of FORMULA .
+One can show (see forthcoming {{cite:97f7119c-c68a-4799-bd47-3233e089cb54}}) that FORMULA  is again a YB-Lie algebra.
+
+Functorial properties
+In this section we study functors that send Lie algebras to Lie algebras.
+Let FORMULA  and FORMULA  be two additive, monoidal categories. For simplicity, we will suppose that FORMULA  and FORMULA  are strict monoidal, that is FORMULA  and FORMULA  are identity natural transformations and will be omitted. By Mac Lane's coherence theorem, this puts no restrictions on the subsequent results.
+Definition 3.1 A functor FORMULA  will be called a non-unital monoidal functor, if there exists a natural transformation FORMULA  that satisfies the following condition
+FORMULA 
+
+Lemma 3.2 
+Let FORMULA  be a non-unital monoidal functor and use notation as above.
+Let FORMULA  be a self-invertible Yang-Baxter operator on FORMULA . Suppose that there exists a morphism FORMULA  such that FORMULA . If FORMULA , FORMULA  and FORMULA  are monomorphisms (e.g. FORMULA  is a natural monomorphism and the endofunctor FORMULA  preserves monos), then FORMULA  is a self invertible Yang-Baxter operator on FORMULA .
+
+Using the compatibility between FORMULA  and FORMULA  in the first equality, the naturality of FORMULA  in the second equality, (REF ) in the third equality, a repetition of the above arguments in the fourth equality, the Yang-Baxter identity for FORMULA  in the fifth equality, and a reverse computation in the last equality, we find
+FORMULA 
+As FORMULA  and FORMULA  are monomorphisms, we conclude from the computation above that FORMULA  satisfies the Yang-Baxter identity. In a similar way, one proofs that FORMULA  is self-invertible.
+Lemma 3.3 
+Let FORMULA  be a non-unital monoidal functor and use notation as above.
+Let FORMULA  and FORMULA  be FORMULA  (resp. FORMULA )-morphisms such that FORMULA .
+Then the following identities hold
+FORMULA 
+
+Let us proof equation (REF ), the proof of () is completely similar.
+FORMULA 
+We used the compatibility between FORMULA  and FORMULA  in the second and fifth equality, the naturality of FORMULA  in the third and sixth equality and (REF ) in the fourth.
+Remark that the existence of the morphism FORMULA  as in the above lemmata is guaranteed if FORMULA  is a strong monoidal functor, as in this situation FORMULA  is invertible. Furthermore, if FORMULA  and FORMULA  are symmetric monoidal and we take FORMULA  and FORMULA  induced by the symmetry of FORMULA  and FORMULA  respectively, then the compatibility condition between FORMULA  and FORMULA  is automatically satisfied.
+Theorem 3.4 
+Let FORMULA  be an additive non-unital monoidal functor and FORMULA  a YB-Lie algebra in FORMULA . Suppose that there exists a self-invertible Yang-Baxter operator FORMULA  such that FORMULA .
+Then FORMULA  is a YB-Lie algebra in FORMULA  with Lie-bracket given by
+FORMULA 
+
+Let us check that FORMULA  is antisymmetric. Using the antisymmetry of FORMULA  and compatibility between FORMULA  and FORMULA  we obtain
+FORMULA 
+Next, let us check the Jacobi identity
+FORMULA 
+We used the naturality of FORMULA  in the second equality and Lemma REF  in the third equation and () in the last equality.
+Combining Theorem REF  with Lemma REF , we immediately obtain the following two satisfying corollaries, which allow to apply Theorem REF  in practical situations.
+Corollary 3.5 
+Let FORMULA  be an additive symmetric monoidal functor between additive symmetric monoidal categories. If FORMULA  is a Lie algebra in FORMULA , then FORMULA  is a Lie algebra in FORMULA .
+
+Corollary 3.6 
+Let FORMULA  be an additive (non-unital) strong monoidal functor between additive monoidal categories. If FORMULA  is a YB-Lie algebra in FORMULA , then FORMULA  is a YB-lie algebra in FORMULA .
+
+Example 3.7 Let us return to the case of Lie superalgebras, which are exactly Lie algebras in FORMULA  (cf. Example REF ). It is well-known that this category is equivalent (even isomorphic) to the category FORMULA  of comodules over the groupalgebra FORMULA , which is in fact a Hopf-algebra. Moreover, this equivalence of categories is an additive, monoidal equivalence, and even a symmetric one, taking into account the coquasitrangular structure on FORMULA . By our Corollary REF , this implies that Lie algebras can be computed equivalently in FORMULA  as well as in FORMULA .
+In fact, Lie algebras in a general monoidal category FORMULA  of comodules over a coquasitriangular bialgebra FORMULA  have been studied in {{cite:25c68561-fcdc-4662-b878-5ae27d709f73}} and in {{cite:e21f2294-8316-4f50-a96e-7f624f8ffd65}}, amongst others. Such a Lie algebra is a triple FORMULA  with FORMULA  a FORMULA -vectorspace, a coaction FORMULA  on FORMULA  and a FORMULA -linear map FORMULA  such that FORMULA , which satisfy the condition (REF ):
+FORMULA 
+and ():
+FORMULA 
+
+whenever FORMULA  and where we used the Sweedler-Heynemann for comodules and FORMULA  is the convolution invertible bilinear map from the coquasitriangular structure on FORMULA .
+
+Example 3.8 Let us consider again the Hom-construction. It is proven in {{cite:b4f2aeb7-e404-4562-a507-4cc7fe54bd61}} that the categories FORMULA  and FORMULA  are isomorphic as monoidal categories. Let us briefly recall this isomorphism.
+Let FORMULA  be the identity functor, and
+FORMULA  the identity. We define a natural transformation, by putting for all FORMULA ,
+FORMULA 
+Then FORMULA  is a strict monoidal functor and it is clearly an isomorphism of categories. Moreover, if FORMULA  is an additive category, then FORMULA  is also an additive functor, so FORMULA  preserves Lie algebras by Corollary REF  and YB-Lie algebras by Corollary REF .
+Let FORMULA  be a Lie algebra in FORMULA 
+i.e. FORMULA  is a Lie algebra in FORMULA  with a Lie algebra isomorphism FORMULA . Then
+FORMULA  is a Lie algebra in FORMULA . The inverse functor is also strict monoidal and additive, hence preserves Lie algebras. Consequently, Hom-Lie algebras, where FORMULA  is a Lie algebra isomorphism, are nothing else than Lie algebras endowed with a Lie algebra isomorphism.
+
+Example 3.9 Multiplier algebras serve as an important tool to study certain types of non-compact quantum groups, within the framework of multiplier Hopf algebras, see {{cite:8afe52e5-83ea-43c8-8f30-b3056bfcdead}}. In {{cite:05c08265-3b1c-44de-8f0c-085dbe56a75e}} it was proven that the creation of the multiplier algebra of a non-degenerated idempotent (non-unital) FORMULA -algebra leads to a (symmetric) monoidal (additive) functor FORMULA  on the category of these algebras. Hence the multiplier construction preserves Lie algebras by our Theorem REF . Moreover, as the monoidal product on the category of non-degenerated idempotent (non-unital) FORMULA -algebras is given by the monoidal product of underlying FORMULA -vectorspaces it follows that the multiplier construction also preserves the commutator Lie algebras associated to these algebras. Furthermore, the natural transformation FORMULA  is a natural monomorphism. Therefore, we can apply Lemma REF  and the functor FORMULA  also preserves YB-Lie algebras.
+
+Example 3.10 Let FORMULA  be an additive monoidal category, and consider the additive monoidal category FORMULA  from Example REF .
+Consider the functor FORMULA , that sends every object FORMULA  to the endofunctor FORMULA . Then FORMULA  is an additive strong monoidal functor. By Corollary REF , a YB-Lie algebra in FORMULA  leads to a YB-Lie algebra in FORMULA , i.e. to a Lie monad on FORMULA .
+Suppose now that FORMULA  is a right closed monoidal category, i.e. every endofunctor FORMULA  has a right adjoint, that we denote by FORMULA . Then there exist natural isomorphisms FORMULA . One can proof (see e.g. {{cite:97f7119c-c68a-4799-bd47-3233e089cb54}}) that this isomorphism can be extended to an isomorphism
+FORMULA 
+in FORMULA . Hence the contravariant functor FORMULA  that sends an object FORMULA  to the endofunctor FORMULA  is a strong monoidal functor. As consequence, this functor sends a YB-Lie coalgebra in FORMULA  to a Lie monad on FORMULA . This idea is further explored in {{cite:97f7119c-c68a-4799-bd47-3233e089cb54}} to study dualities between infinite dimensional Hopf algebras and Lie algebras.
+

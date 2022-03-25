@@ -1,0 +1,231 @@
+
+equationEq.Eqs.
+figureFig.Figs.
+sectionSec.Secs.
+chapterCh.Chs.
+appendixAppx.Appxs.
+none
+printacmref=false
+
+
+[Automatically Tuning GCC to Optimize Applications on Embedded Systems]Automatically Tuning the GCC Compiler to Optimize the Performance of Applications Running on Embedded Systems
+Craig Blackmore, Oliver Ray, Kerstin Eder
+University of Bristol, Merchant Venturers Building, Woodland Road
+Bristol, BS8 1UB, United Kingdom
+firstname.lastname@bristol.ac.uk
+This paper introduces a novel method for automatically tuning the selection of compiler flags to optimize the performance of software intended to run on embedded hardware platforms. We begin by developing our approach on code compiled by the GNU C Compiler (GCC) for the ARM Cortex-M3 (CM3) processor; and we show how our method outperforms the industry standard -O3 optimization level across a diverse embedded benchmark suite. First we quantify the potential gains by using existing iterative compilation approaches that time-intensively search for optimal configurations for each benchmark. Then we adapt iterative compilation to output a single configuration that optimizes performance across the entire benchmark suite. Although this is a time-consuming process, our approach constructs an optimized variation of -O3, which we call -Ocm3, that realizes nearly two thirds of known available gains on the CM3 and significantly outperforms a more complex state-of-the-art predictive method in cross-validation experiments. Finally, we demonstrate our method on additional platforms by constructing two more optimization levels that find even more significant speed-ups on the ARM Cortex-A8 and 8-bit AVR processors.
+<ccs2012>
+<concept>
+<conceptid>10010520.10010553.10010562</conceptid>
+<conceptdesc>Computer systems organization Embedded systems</conceptdesc>
+<conceptsignificance>500</conceptsignificance>
+</concept>
+<concept>
+<conceptid>10011007.10011006.10011041</conceptid>
+<conceptdesc>Software and its engineering Compilers</conceptdesc>
+<conceptsignificance>500</conceptsignificance>
+</concept>
+</ccs2012>
+[500]Computer systems organization Embedded systems
+[500]Software and its engineering Compilers
+compiler tuning, iterative compilation, embedded systems
+Introduction
+Modern compilers offer a range of optimization levels that are intended to progressively improve the execution time of programs at the expense of increased compile time, code size and/or conformance to software standards. The most famous is the -O3 optimization level, provided by the GCC compiler {{cite:c920d64f-82fd-466f-9ef6-5cb1ace2bb18}} (and its more recent competitor Clang {{cite:a3958c43-768e-474e-b366-8ae74afeea1e}}), which is widely used as the optimization of choice in industry.
+Previous work {{cite:7c082839-29a2-488c-a79e-1981c48ade06}} has shown that -O3 is far from optimal in many cases. By selectively enabling or disabling compiler flags that control optimization settings, the compiler can be fine-tuned to improve the performance of a given program and target platform. This leads to significant gains without the need to modify the underlying source code nor the compiler itself.
+Finding effective configurations of compiler flags is, however, a hard task due to the large number of flags available and complex and often unknown interactions between them. An exhaustive search would take infeasibly long. Furthermore, the optimal configuration is dependent on the target program and platform.
+Existing work uses random sampling or more complex iterative compilation {{cite:cc51f829-8f04-4d14-a623-a4bd7824e71e}} methods (which evaluate the performance of a given program compiled with a large number of different configurations) to search for configurations that improve the performance of a target program. This is a time consuming task which must be repeated for each program and platform pair. The slow search time motivated other studies to use iterative compilation to train machine learning approaches to predict good configurations more quickly at the cost of reduced accuracy for an unseen program.
+This paper shows how iterative compilation methods can be adapted to discover a single configuration tailored to a target platform in order to outperform the default optimization levels provided by the compiler. In contrast to previous methods, which perform a new search for each program, we search for a single configuration that enhances the overall performance of a wide range of benchmarks on a given platform. This single configuration can then simply be used in place of -O3 with no further effort from the compiler writer or application developer.
+We develop our approach on the industry standard GCC compiler and the STM32VLDISCOVERY embedded system development board which features an ARM Cortex-M3 (CM3) 32-bit processor that is a popular choice of processor for Internet of Things platforms {{cite:df722190-d538-41bd-9729-cffaae6dfddc}}.
+We use the state-of-the-art open source Bristol/Embecosm Embedded Benchmark Suite (BEEBS) {{cite:04a1e2a7-fbb0-4739-8532-c1f34095f52a}} to measure the effects of different configurations on a diverse set of programs.
+First we perform an investigatory study to quantify the potential gains, by using state-of-the-art iterative compilation methods that time-intensively search for optimal configurations for each benchmark. We then propose a practical method to automatically construct a single configuration, -Ocm3, that gives near-optimal speed-up across the benchmarks. In addition, we analyze the effects of two of the flags which our method determines should be removed from -O3 on our target architecture and explain in detail why disabling them does indeed improve performance.
+We evaluate -Ocm3 further by using 10-fold cross-validation to show that our approach generalizes well to previously unseen test cases and outperforms a more complex state-of-the-art machine learning approach {{cite:7c082839-29a2-488c-a79e-1981c48ade06}}. Our results suggest that it is best to use -Ocm3 in place of -O3 on the CM3 in order to maximize performance.
+Finally, we demonstrate the benefit of our method on two additional embedded platforms. The first platform is the BeagleBone development board which has an ARM Cortex-A8 (CA8) 32-bit processor that has featured in many mobile devices and is much more complex than the CM3. The second platform is the ATmega328P microcontroller which features an AVR 8-bit processor that is commonly used in Arduino devices and is much simpler than the CM3. We construct two new optimization levels, -Oca8 and -Oavr, that outperform -O3 on the CA8 and AVR respectively.
+The rest of the paper is structured as follows. In sec:bg we give the technical background that is relevant to our work. Then we present our investigatory study (sec:invest). This is followed by the development of our approach to construct a new optimization level (sec:results) and our cross-validation experiments (sec:valid). Then we test the approach on two additional platforms (sec:plat) and we discuss the wider context of this research by summarizing related work (sec:rel). Finally, we discuss conclusions and future work (sec:conclusion).
+
+Background
+To make this paper self-contained, this section gives a brief outline of the standard optimizations available in GCC (sec:bg:gcc) followed by a summary of compiler tuning techniques for identifying effective compiler settings (sec:bg:ic,sec:bg:ml) and a brief introduction to the BEEBS benchmark suite (sec:bg:beebs).
+Standard Optimization Levels
+Modern compilers provide standard optimization levels which enable a predefined set of optimizations. GCC provides -O0, -O1, -O2 and -O3 which enable an increasing set of optimizations at the expense of code size {{cite:c920d64f-82fd-466f-9ef6-5cb1ace2bb18}}. There is also -Os which is similar to -O2 except it disables optimizations expected to increase code size. Finally, -Ofast applies additional optimizations to -O3 that do not conform to industry standards (e.g. IEEE floating point) and therefore compromise precision, compatibility and reproducibility. Although these optimization levels are convenient for the user, better settings can often be found with extra effort (sec:bg:ic below).
+
+Iterative Compilation
+Iterative compilation {{cite:587fe088-a65b-4bc1-80df-f227232fc2f6}} methods compile a target program with several different compiler configurations and evaluate the performance of each resulting compilation in order to find a good one. This is a time-consuming task that must be repeated for each new program and platform combination but in practice it yields significant gains. There are several approaches for selecting which configurations to test in iterative compilation. Two of the most popular methods are Random Iterative Compilation (RIC) {{cite:7c082839-29a2-488c-a79e-1981c48ade06}} and Combined Elimination (CE) {{cite:cc51f829-8f04-4d14-a623-a4bd7824e71e}}.
+Random Iterative Compilation (RIC) uses straight-forward random sampling of compiler flags to construct a set of configurations for evaluation.
+Combined Elimination (CE) seeks to analyze the effect of each flag relative to an initial baseline, which has all flags enabled, and continually updates the baseline by disabling the flag that has the largest negative impact on performance. We briefly give the CE algorithm described in {{cite:cc51f829-8f04-4d14-a623-a4bd7824e71e}}. The algorithm uses the Relative Improvement Percentage (RIP) to measure the impact of a given flag in relation to a given configuration and target program. Let FORMULA  be the set of available compiler flags. The impact of flag FORMULA  relative to the baseline configuration FORMULA  is calculated by the following:
+FORMULA 
+where FORMULA  is the execution time of the target program when compiled with configuration FORMULA  and FORMULA  is the execution time given by the same configuration with flag FORMULA  disabled. The algorithm proceeds as follows:
+
+Let FORMULA  be the optimization search space and FORMULA  be the baseline configuration with all flags enabled.
+
+Calculate the FORMULA  for each flag FORMULA .
+
+Let FORMULA  be the set of flags with negative RIPs sorted in ascending order such that FORMULA  has the most negative RIP.
+
+If FORMULA  then terminate with FORMULA  as the final configuration.
+
+Remove FORMULA  from FORMULA  and FORMULA  and let FORMULA .
+
+For FORMULA  = 2 to FORMULA  recalculate FORMULA  and if FORMULA  remove FORMULA  from FORMULA  and FORMULA  and let FORMULA .
+
+Goto step 2.
+
+Pan et al. {{cite:cc51f829-8f04-4d14-a623-a4bd7824e71e}} showed that CE outperforms other iterative compilation approaches such as Optimization-Space Exploration (OSE) {{cite:f0da2046-9ecd-4a43-bf4b-b3f8f878f9b9}} and Statistical Selection (SS) {{cite:7dee4441-dd7f-4b5d-809f-9dd1e0137801}}. Although Cavazos et al. {{cite:bea87e43-7791-4146-a6a7-34a45f58cf14}} later concluded that RIC outperforms CE on an AMD Athlon case study, this does not appear to hold on our embedded system study (sec:invest:ceVSrandom later on).
+
+Machine Learning Approaches
+Due to its time-intensive nature, it is clearly infeasible to use full iterative compilation every time a programmer wants to compile a new program. This motivated other studies to use iterative compilation data to train machine learning based approaches that seek to predict a suitable configuration to optimize a given target program. Typically, these methods train a model which takes an input that describes characteristics of the target program and outputs a predicted configuration.
+These methods exhibit a trade-off between the time taken to find a solution and the quality of that solution.
+Many predictive compiler tuning approaches rely on feature vectors of statistical aggregates that summarize characteristics of the target program code. These methods seek to correlate program features with effective configurations but finding the most relevant features is non-trivial.
+Milepost {{cite:7c082839-29a2-488c-a79e-1981c48ade06}} used 1-nearest-neighbor (1NN) and decision tree approaches to train and test models based on RIC data and a feature vector of 56 features. The study focused on optimizing the most time consuming function of each program and concluded that their 1NN probabilistic approach performed best. Given a target program, this approach identifies the training program with the closest feature vector based on the most time consuming function and uses its RIC results to predict a configuration for the target program.
+Kulkarni et al. {{cite:f8c197d1-e206-4435-acc4-6ef2c9b4d95e}} used a technique called Neuro-Evolution for Augmenting Topologies (NEAT) {{cite:7d8d5495-96f7-4ec9-a7fd-f8edafe41eb9}} to train a neural network to predict performance enhancing optimization sequences for the Jikes RVM {{cite:1a89945d-8db5-4f6f-8463-00efa4d6f258}} Java compiler. This approach generates an initial population of neural networks and uses a genetic algorithm to evaluate and evolve new neural networks.
+Sher et al. {{cite:1c1ff827-8ac8-4a2f-a07e-6a3253ce5c3b}} also used NEAT to learn neural networks that predict optimization sequences for LLVM.
+More recently, Blackmore et al. {{cite:66f91d4f-1bac-43fb-ad99-5646f66e3826}} proposed a logic based machine learning approach that seeks to automatically discover relevant features for predicting effective compiler flags.
+
+BEEBS
+This study uses the 84 benchmarks of the Bristol/Embecosm Embedded Benchmark Suite (BEEBS) {{cite:04a1e2a7-fbb0-4739-8532-c1f34095f52a}}, which to our knowledge is the largest collection of free open source benchmarks available for embedded systems.Six programs are no longer in the master branch as their license status could not be confirmed and BEEBS requires all benchmarks to be under GPL.
+The benchmarks cover a wide range of characteristics as demonstrated in {{cite:66f91d4f-1bac-43fb-ad99-5646f66e3826}} and were produced in response to the lack of freely available benchmarks for resource limited bare-metal embedded systems such as the CM3 and AVR.Although the CA8 is able to run Linux, we run all of the benchmarks on bare-metal to prevent the OS from interfering with timings. Other existing benchmark suites have fewer benchmarks and are unsuitable for this study due to their reliance on an OS and/or file system being present. Some of the BEEBS programs were in fact derived and adapted from the MiBench {{cite:1f1bfad7-f5f8-4106-9b3c-64907edfd500}}, WCET {{cite:1302b4ec-9371-4b89-b9e9-e3812e6c9df8}} and DSPstone {{cite:5c70df98-0a1a-4aa1-ba64-662d8cfd40a8}} suites.
+Each BEEBS benchmark consists of at least one source file containing the benchmark itself plus another file main.c which controls the number of times the benchmark is run according to a repeat factor. The repeat factor is used to produce a runtime long enough to obtain reliable measurements and it also enables BEEBS to target a wide range of platforms which may execute particular benchmarks considerably faster or slower than other systems. Programs that run too fast may need to be looped tens of thousands of times in order to produce a long enough runtime. In these cases, the loop overhead may account for most of the measurement.
+Most of the benchmarks require test input data on which to operate. In reality, the input data would not be known at compile-time and would typically be supplied via command-line parameters, data files or an input stream from a device (e.g. sensor). To make a fair comparison between different compilations of the same benchmark, the input data must be fixed. However, BEEBS targets bare-metal embedded systems which have no command line or file handling support for providing input files or parameters, therefore the input is fixed by hard-coding it into the source code.
+Note that the latest version of BEEBS includes some technical improvements that were made (as part of the investigatory study described in the next section) in order to prevent the compiler from over-optimizing a benchmark based on its advance knowledge of the input data on which that benchmark will operate.
+
+Quantifying Potential Gains
+FIGURE 
+The aim of this section is to find the potential gains available for each benchmark in BEEBS by using RIC and CE to search as exhaustively as possible for optimal configurations.This analysis excludes three programs that do no run on the STM32VLDISCOVERY.
+First, we identify and fix an oversight in the design of BEEBS in order to increase confidence in our results (sec:invest:beebs). We then intensively search for potential gains using RIC and CE (sec:invest:data), contrast the performance of these two methods (sec:invest:ceVSrandom) and summarize the potential gains (sec:invest:gains).
+BEEBS Data Initialization
+In completing this study, we identified and fixed an oversight in the design of BEEBS in order to increase the reliability of our experiments and future work. We found that the compiler was able to `over-optimize' given knowledge of test input data necessarily hard coded into benchmarks. This is a conceptual flaw that might also affect other benchmark suites.
+We have edited BEEBS to eliminate cases where it was possible for the compiler to optimize based on input data.Our changes are now in the master branch of BEEBS (http://beebs.eu) This was done by using an initialise_benchmark function which initializes any input data required by the benchmark. The initialise_benchmark function is defined outside of main.c, but is called from within main.c. As long as link-time optimization is disabled, the knowledge that initialise_benchmark is called in main.c cannot be used in the optimization of the other source files. Benchmarks for which input data was given by global variables or arrays did not need adjusting because the compiler cannot assume that the globals are not changed elsewhere in the program.
+Over-optimization led to 1% of overall gains seen in our preliminary experiments. Ten of the benchmarks gained over 5% advantage from having input data exposed to the compiler.
+For example, the compiler was able to over-optimize expint (which calculates exponential integrals) based on constant input data to a key function in the benchmark. With inputs as constants, we found a configuration that reduced the execution of expint by 18% compared to -O3, but without these inputs available for optimization the reduction was a smaller 8%.
+The rest of this study proceeds using our improved version of BEEBS.
+
+Generating Data
+To search for potential gains on our target architecture we focused on 133 flags available when compiling for the CM3 in GCC 4.9.3. This includes 26 flags not enabled by -O3 and excludes flags that do not follow the standards, produce incompatible code, reduce precision, require additional profiling information or are purely intended for C++ or debugging.
+For our RIC data we used a similar method to {{cite:7c082839-29a2-488c-a79e-1981c48ade06}} and {{cite:66f91d4f-1bac-43fb-ad99-5646f66e3826}}. We generated a random sample of 1000 configurations by selecting -O1, -O2 or -O3 with probability FORMULA  and enabling each flag with probability FORMULA . Our CE data was generated using the original CE algorithm {{cite:cc51f829-8f04-4d14-a623-a4bd7824e71e}} as described in sec:bg:ic.
+To improve the efficiency of each method, we store the md5 hash of each compiled binary along with its performance measurement. If any future compilation has the same hash, we use the previously cached performance rather than re-executing the binary.
+
+Performance of RIC vs CE
+This section compares the performance of RIC and CE in terms of best configuration found per benchmark and time taken to find good configurations. We show that overall, CE outperformed RIC but we also give insights as to why RIC occasionally finds better configurations.
+The best execution times achieved by RIC and CE are shown in fig:ceResultsPerBmark. On average the two methods performed 11% and 13% better than -O3 respectively. Combined Elimination outperformed RIC on three quarters of the benchmarks. There were six benchmarks for which RIC was unable to outperform -O3 despite CE finding better configurations. In particular, the execution time of ctl-stack was improved by over 25% by CE while RIC performed comparable to -O3.
+Conversely, RIC performed significantly better than CE on three benchmarks – cover, compress and newlib-mod. Analysis of the RIC results for cover showed that two flags (-fivopts and -ftree-ch) were always disabled in the best configurations. Further experiments showed that exclusively disabling one of these flags degraded performance and it was in fact the combination of both flags being disabled that led to improved performance. This is a dependency between the two flags which the CE algorithm is unable to capture due to the way it considers a single flag at a time.
+While CE does not completely disregard dependencies (each decision to enable or disable a flag is dependent on the current baseline configuration) it only considers the effect of a single flag at a time, rather than toggling multiple flags at once. Allowing all single and pairs of flags to be toggled increases the search space exponentially but as a compromise, the CE algorithm could be modified to consider groups of flags with known dependencies (although finding these dependencies is non-trivial {{cite:9a9302b4-565f-4a2f-8ae0-79bccbd21ea8}}). Further work is required to determine whether compress and newlib-mod also exhibit dependencies between flags that CE was unable to capture.
+The real value of CE becomes apparent when analyzing the amount of time each method takes to find good configurations. This is shown by plotting the average of the current best performance achieved on each benchmark after each configuration is tested (fig:ceTimeSeries). In calculating the average, the performance of each benchmark is floored with -O3 in order to compare with previous work (sec:rel:iter).
+FIGURE 
+Combined Elimination overtakes RIC after 108 configurations have been tested and stays in the lead for the remaining iterations. Note that CE takes 134 configurations to test the initial baseline and each of the 133 flags. At configuration 108, a single flag (-ftree-loop-if-convert) is disabled, which has a strong impact on performance. This flag will be analyzed further in sec:tree.
+Our RIC experiments were terminated after 1000 configurations due to time restraints, but the trajectory suggests it would take much longer for RIC to match the performance achieved by CE. Overall, RIC iterative compilation took 7.5 days to run and CE took 2.5 days.
+
+Summary of Potential Gains
+FIGURE 
+To quantify the potential gains available on the CM3 we take the best known configuration found by either RIC or CE for each benchmark (fig:ceResultsPerBmark). This gives an overall improvement of 14% compared to -O3. The best known configuration for each program provides a target with which to compare any proposed method, such as the one we introduce in the next section, that aims to improve upon -O3.
+
+Constructing a New Optimization Level
+In this section we propose a general methodology for adapting existing iterative compilation methods in order to find a single configuration to optimize the performance of a whole benchmark suite (sec:method:ceWhole). We demonstrate the method in practice by applying it to CE to construct -Ocm3 based on 81 programs from BEEBS on the CM3. We discuss the effect of our method's threshold parameter which controls the trade-off between performance gains on some programs in exchange for small losses on others (sec:results:ocm3). Finally, we analyze two flags which our method suggests should always be disabled for the CM3 to determine why removing them enhances performance (fig:results:badFlags).
+Adapting Iterative Compilation
+Existing iterative compilation techniques search for a single configuration to improve the performance of a particular program. By changing the goal from enhancing a target program's performance to maximizing the overall performance of a suite of benchmarks we can adapt iterative compilation methods to find a single configuration tailored to the target platform. The aim of our approach is to find a single configuration that improves overall performance without having a significant negative impact on any one program.
+We demonstrate our new strategy by building the creation of optimization levels into the CE algorithm such that the final configuration is the new optimization level itself.
+Intuitively, the method starts with -O3 as its baseline configuration and continually enables or disables the next flag which gives the biggest improvement across all benchmarks while not causing any one benchmark to perform worse than a threshold FORMULA  of -O3. The result is a configuration that performs at least within FORMULA  of -O3 or better for each benchmark. Threshold FORMULA  controls the trade-off between performance gains and loses which will be explored further in sec:results:ocm3.
+We test our approach on CE by making the following changes to the original algorithm (sec:bg:ic):
+
+Instead of targeting the performance of a single program, we target the overall performance of the benchmark suite running on a given platform.
+
+Rather than starting with a baseline configuration of all flags enabled and then selectively disabling flags, our baseline configuration is -O3 and we can either disable flags that are in -O3 or enable flags that are not in -O3. Any baseline configuration upon which the user wishes to improve can be chosen here.
+
+As soon as a configuration causes a program to perform FORMULA  worse than -O3, the remaining tests for that configuration are skipped as it will not satisfy the requirement that performance must be at least within FORMULA  of -O3 or better. This increases the efficiency of the search by avoiding unnecessary evaluations.
+
+As in sec:invest:data, to further aid efficiency of the search, the md5 hash of each compiled binary is stored along with its performance measurement. The cached performance is used for any subsequent binary with a matching hash rather than rerunning the program.
+
+In sec:results:ocm3 we analyze the results of applying our method to find a single configuration that outperforms -O3 on the CM3 and we also highlight how our changes improve the efficiency of the search.
+
+Threshold Trade-off in Constructing -Ocm3
+Our proposed method for constructing -Ocm3 (sec:method:ceWhole) was tested with several thresholds from FORMULA  to FORMULA  using fixed increments of 1%. The configuration generated by FORMULA  gave the best average performance which was 9% better than -O3. Under this configuration, many of the benchmarks perform close to their best known configuration and only a few perform worse than -O3 (fig:ocm3thresh). The worst performing program ran 4% slower than -O3. Several benchmarks performed as well as the best known configuration.
+A more conservative threshold FORMULA  performs 3% better than -O3 overall and still manages several improvements with fewer programs performing worse than -O3. There is, then, a trade-off between optimizing some benchmarks in exchange for losses on others.
+Under FORMULA  our method identifies 20 flags which should be disabled from -O3 and three additional flags which should be enabled. We will discuss two of these flags in detail in fig:results:badFlags. Our results demonstrate that the gains of -Ocm3 created by FORMULA  outweigh the losses and would recommend its use on the CM3 instead of -O3. The complete configuration is given in fig:ocm3config (with the flags shown in the order that they were disabled or enabled by our method).
+FIGURE 
+Our method took 19 hours to run with FORMULA , which is over twice as fast as CE and seven times faster than RIC used in our investigatory study (sec:invest).
+
+Analysis of Two Excluded Flags
+To explain why some of the flags included in -O3 appear to actually reduce performance on the CM3 architecture, we analyze two such flags (-fcommon and -ftree-loop-if-convert) which our method indicates should always be disabled. Although both of these flags are in fact enabled at all optimization levels from -O0 upwards, disabling them actually reduces the overall average execution time of BEEBS by 3% and significantly improves the performance of 13 benchmarks while leaving all the others virtually unaffected.
+-fcommon
+The -fcommon flag controls the placement of uninitialized global variables within object code. As stated in the GCC manual, the flag is provided for compatibility but may lead to a speed or code size penalty on some platforms {{cite:c920d64f-82fd-466f-9ef6-5cb1ace2bb18}}. Disabling the flag on the Cortex-M3 improves overall execution time by 1% and has a significant impact on statemate and compress which are improved by 43% and 16% respectively.
+The use of -fcommon prevents the compiler from using knowledge that two global variables will share contiguous memory. Such knowledge could be used on the CM3 to exploit Load Multiple Increment After (LDMIA) or Store Multiple Increment After (STMIA) instructions which allow two variables to be loaded or stored in a single instruction.
+In more detail, -fcommon allows duplicate definitions of uninitialized global variables across different source files. Each definition of a global variable (including duplicates) appears in the common section of the object code and the linker then chooses which of these definitions to use. Unfortunately, this prevents the compiler from knowing the relative location of global variables, and it cannot optimize based on the assumption that they will occupy contiguous memory.
+In contrast, when -fcommon is disabled, each global variable can only be defined once and any other declarations must be qualified with the extern keyword. Each global variable is defined once in the data section of the object code and its location relative to other variables is preserved.
+Let us briefly analyze the effect of -fcommon on the following example code:
+    int x,y,z;
+    void g() {
+      z = x - y;
+      x = z * y;
+      y = z * x;
+    }
+Compiling with -fcommon produces twice as many instructions than when it is disabled. Only the disabled version reduces the number of memory instructions by taking advantage of LDMIA and STMIA. In addition, the enabled version uses more than 4 registers which causes a further inefficiency on the CM3 as additional stack operations are required to ensure the extra registers are restored to their original values before the function returns {{cite:d10271fa-058c-4d54-9c0a-583966233df8}}.
+
+-ftree-loop-if-convert
+FIGURE 
+This flag converts conditional jumps in innermost loops to branchless equivalents in order to improve later vectorization optimizations switched on at -O3 {{cite:c920d64f-82fd-466f-9ef6-5cb1ace2bb18}}. There is no indication in the manual, however, that this flag might degrade performance on a processor such as the CM3 that does not support vectorization. We investigate the impact of this flag further and explain why it does indeed increase runtime on the CM3.
+Disabling -ftree-loop-if-convert improves overall execution time by 2% and significantly improves aha-mont by 50% and newlib-sqrt and aha-compress by 25% while not degrading the performance of any remaining benchmark.
+Intuitively, this flag removes an if statement and replaces it with code that always executes both the if-true and if-false body and then uses predicated instructions to determine which result(s) should be used. Consider the following if statement found in newlib-sqrt:
+    if(t<=ix) {
+        s    = t+r;
+        ix  -= t;
+        q   += r;
+    }
+When -ftree-loop-if-convert is enabled, the code is converted to the following:
+    s2    = t+r;
+    ix2  -= t;
+    q2   += r;
+    ix    = (t<=ix) ? ix2 : ix;
+    s     = (t<=ix) ?  s2 : s;
+    q     = (t<=ix) ?  q2 : q;
+The code produced by -ftree-loop-if-convert always executes the if-true body, but then must execute three more statements to decide which value to use for each variable. In contrast, the original version of the code only executes the if-true body when the condition is true. We anticipate that the second version would perform increasingly well as the proportion of times the if condition evaluates to false increases. Under the default input data for newlib-sqrt the true:false ratio is 1:2.
+
+Lessons Learned
+This section analyzed two flags in detail to determine why disabling them is beneficial to performance on the CM3. While such manual analysis provides interesting insights it is a time-consuming task that is infeasible to repeat for the very many flags and platforms available. Our new iterative compilation based approach enables the automatic discovery of such important flags for new architectures without the need for in-depth manual analysis.
+
+Cross-validation of -Ocm3
+In sec:results we used the whole of BEEBS to construct a single configuration, -Ocm3, that performed well across the benchmark suite. To verify that our method does not simply overfit the benchmark suite we use the standard 10-fold cross-validation technique to test our method on unseen programs.
+Method
+In 10-fold cross-validation, the programs are partitioned into ten training and test folds. In each fold, 90% of the programs form the training set and the remaining 10% form the test set. Each program appears in the test set of exactly one fold and in the training set of the other nine folds. The folds for this analysis were generated using uniform random sampling.
+In each fold FORMULA , we construct -Ocm3-fold-x based on the training set and test its performance on the test set.
+
+Cross-validation Results
+In cross-validation -Ocm3 performed 4% better than -O3 overall and fifteen programs reached speed-ups of over 20% (fig:test). In many cases, performance was close to the maximum known potential gain. Figure REF  also compares performance to Milepost discussed later in sec:rel:ml.
+Three programs (recursion, fac and ud) ran over 20% slower than -O3. This is actually an artefact of using cross-validation as each of the three programs have unique optimization requirements that are not captured by any other program in the training set. Therefore excluding these programs from the training set prevents their requirements being included in the configuration. The first two programs also feature recursive calls, which would not normally be used on embedded systems due to memory constraints.
+Both recursion and ud appeared in the same cross-validation test fold. The configuration generated for this fold disables two flags (-ftree-reassoc and -fipa-cp-clone) that significantly optimize recursion and ud respectively. This is the only fold that disables these flags therefore we conclude that recursion and ud are unique in their dependence on these flags and none of the remaining training programs could prevent them from being disabled.
+A similar story holds for fac in another fold. This program gains significant benefit from enabling -foptimize-sibling-calls and disabling fmodulo-sched but the configuration constructed in this fold disables the former and enables the latter. As in the previous scenario, this is the only fold that features these particular settings.
+BEEBS was deliberately designed to include a diverse range of benchmarks with little redundancy between them, therefore we cannot expect optimal performance when training on a subset of the benchmarks. However, these results do show that our method performs well and not due purely to chance.
+In conclusion, the majority of programs performed as well as or better than -O3. In practice, should a program perform worse than -O3, the user can simply choose -O3 instead. This is a much less time-intensive task than choosing from hundreds of configurations.
+
+Testing on Other Platforms
+In order to demonstrate that our method can also optimize GCC for other embedded platforms we construct and test two new optimization levels -Oavr (fig:oavrConfig) and -Oca8 (fig:oca8config) for the AVR and CA8 processors. We used threshold FORMULA  to produce these configurations but it is possible that other thresholds may improve the results further. We also ran time-intensive CE experiments on each benchmark on the two platforms to quantify the potential gains.The CA8 analysis excludes two benchmarks and the AVR analysis excludes 23 benchmarks that do not run on these platforms.
+The -Oavr configuration improves overall performance on the AVR by 3% compared to -O3. Five benchmarks performed over 5% faster than -O3 and only two benchmarks performed very slightly worse than -O3 (fig:avr). The configuration disables nine flags and enables six others.
+On the CA8, -Oa8 improves overall performance by 15% compared to -O3. Over half of the benchmarks performed over 5% faster than -O3 and only one performed slightly worse (fig:ca8). The configuration disables 22 flags and enables five others.
+As the complexity of the hardware increases we observe that the potential gains over -O3 also increase. The AVR is a simple 8-bit processor with relatively little room for further optimization in many cases. The CA8 is the most complex of the three architectures (with its superscalar pipeline, caches and SIMD unit) and shows the most potential gains.
+Several flags are common to both -Ocm3 and -Oca8 and therefore particular flags may have similar effects on processors from closely related families. Conversely, there is less overlap between these configurations and -Oavr which demonstrates that the impact of the flags is indeed dependent on the platform as well as the program.
+FIGURE 
+FIGURE 
+FIGURE 
+FIGURE 
+
+Related Work
+This section begins with a discussion on iterative compilation studies relative to our work, with particular focus on a related comparison between CE and RIC (sec:rel:iter). Then we compare our -Ocm3 cross-validation results to a state-of-the-art predictive approach and suggest improvements to that approach (sec:rel:ml).
+Iterative Compilation
+Cavazos et al. also compared RIC and CE but in contrast to our study (sec:invest) they found that RIC outperformed CE. A direct comparison between the two studies is not possible as they are based on different platforms, benchmarks, optimizations and compilers. However, we give below a brief insight into the impact of flag dependencies which presents a plausible reason why CE performed better on our setup.
+Combined Elimination takes FORMULA  configurations to test the performance of the initial baseline and disabling each of the FORMULA  flags individually. Our results show significant gains even in this initial stage of removing single flags (sec:invest:ceVSrandom). Conversely, in {{cite:bea87e43-7791-4146-a6a7-34a45f58cf14}} the majority of gains only occurred once the algorithm had begun disabling multiple flags. Therefore, flag dependencies may have a greater impact on their setup.
+We suggest two ways in which the experimental setup might influence the amount of flag dependencies. Firstly, the flags of the PathScale EKOPath compiler used by {{cite:bea87e43-7791-4146-a6a7-34a45f58cf14}} may have more interdependencies than in GCC and secondly, the platform and/or benchmarks may be more sensitive to these flag dependencies.
+Purini et al. {{cite:232270df-4841-4df6-ab15-9d09a09e9387}} used iterative compilation to identify a set of ten configurations such that it contains at least one good configuration for each benchmark. Once generated, these ten configurations can then be used for the iterative compilation search on new programs. The method used iterative compilation approaches to find a good configuration for each benchmark. These configurations were then pooled together and downsampled into the ten configurations. This top-down approach differs from our bottom-up approach which performs a directed search, dependent on the performance of all benchmarks, towards a single high-performing configuration.
+Pallister et al {{cite:9a9302b4-565f-4a2f-8ae0-79bccbd21ea8}} analyzed iterative compilation data to quantify the impact of individual flags on energy consumption of the CM3 using 82 flags from GCC 4.7 and an early version of BEEBS which contained 10 benchmarks. The study identifies the top three most significant flags for the energy consumption of each program and overall the list includes two flags from -Ocm3. The experiments excluded flags enabled at -O0 and those not enabled -O3, therefore, many flags such as -fcommon and -ftree-loop-if-convert (which are both enabled at -O0) do not feature in the study.
+
+Machine Learning
+We compared our -Ocm3 cross-validation results with the state-of-the-art 1NN probabilistic machine learning approach from Milepost {{cite:7c082839-29a2-488c-a79e-1981c48ade06}} using the same cross-validation folds.
+We produced training data for 1NN by extracting the feature vector for the most time consuming function of each program (using Milepost GCC) and combining this with the RIC data from our investigatory study (sec:invest). We created our own implementation of the 1NN algorithm as Milepost is not trained for the CM3 and there were difficulties in supplying our own data to the system.
+Milepost 1NN performed 43% slower than -O3 with the majority of programs performing worse than both -O3 and -Ocm3 (fig:test). Based on insights from our work, we anticipate the original Milepost 1NN approach can be improved by training with CE data (rather than RIC) and using the feature vector of the entire program (rather than the most time consuming function) to make predictions.
+We tested these suggestions using 10-fold cross-validation and found that they do indeed improve the performance of 1NN on BEEBS by reducing the overall execution time by 1% compared to -O3. In spite of these improvements, our new optimization level, -Ocm3, still performs best and our method has none of the overheads and complexities of a machine learning based approach.
+Blackmore et al. {{cite:66f91d4f-1bac-43fb-ad99-5646f66e3826}} also tested 1NN on BEEBS and the CM3 and found that it performed slower than -O3 overall. They also used Milepost's feature vector to demonstrate the wide diversity of the programs in BEEBS.
+Despite several proposed machine learning approaches, there does not yet exist a direct comparison between all methods to determine the best. Such a comparison is difficult due to the lack of available and maintained implementations and training data for each approach. Furthermore, each study uses different benchmarks, platforms, compilers and optimization settings.
+We have contributed to a state-of-the-art embedded benchmark suite which other studies can use to compare to our work. This paper also publishes each configuration produced by our method (fig:ocm3config,fig:oca8config,fig:oavrConfig) which allows future work to compare with our approach and software developers to use these configurations in practice.
+
+Conclusion and Future Work
+We have demonstrated an automatic method for tuning the GCC compiler to a given target architecture. Using our approach we generated three new optimization levels, -Ocm3, -Oca8 and -Oavr, that outperform GCC's highest safe optimization level -O3 on the ARM Cortex-M3, ARM Cortex-A8 and 8-bit AVR respectively.
+We offer these new optimization levels as platform-specific alternatives to -O3. In situations where they might be found to reduce performance the user can simply opt for -O3. Choosing between two configurations is much less arduous than the hundreds considered by iterative compilation searches for each new program. We have shown that while our new optimization levels offer significant improvements on many benchmarks they do not guarantee the full potential gains of a time-intensive iterative compilation search tailored to a given program. Therefore, the user must decide whether it is worthwhile and feasible to invest considerable extra time in running iterative compilation to optimize their program of choice or simply use -Ocm3, -Oca8 or -Oavr. In any case, it is feasible to try these configurations on any program developed for the CM3, CA8 or AVR.
+Our approach was demonstrated on CE, but in principle, it can be applied to any iterative compilation method by changing the goal from optimizing the performance of a single program to optimizing the performance of a representative benchmark suite. We anticipate that some iterative compilation approaches may be more suited to particular benchmarks, compilers, platforms and optimizations.
+In conclusion, our approach offers an automatic method to tune compilers to new architectures. Many of the gains are captured by our new method, but there is also the opportunity to run iterative compilation starting from our configuration or further enhance performance using machine learning.
+In theory, compiler designers can adjust optimization levels for each architecture. Our analyses of the two flags in sec:results shows it is possible to reason by hand about which flags need to be removed. In practice this happens to some extent, but the fact that these flags were not removed from -O3 for these architectures shows there is a need for automated analyses like the one we have developed.
+In future work, we plan to validate our methods on more architectures and extend the evaluation to real world applications. In principle, our approach could also be applied to customize compiler settings for other compilers, metric(s) and/or specific classes of programs.

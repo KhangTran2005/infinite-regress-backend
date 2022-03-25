@@ -1,0 +1,210 @@
+
+definitionDefinition
+Reality-aware Sybil-Resilient Voting
+Gal Shahaf1
+Ehud Shapiro2
+Nimrod Talmon3
+Hebrew University of Jerusalem
+gal.shahaf@mail.huji.ac.il
+Weizmann Institute of Science
+ehud.shapiro@weizmann.ac.il
+Ben-Gurion University
+talmonn@bgu.ac.il
+
+We consider an electorate composed of both honest and fake voters, aka sybils, and investigate the resilience of its democratic decision making against two types of sybil attacks: Sybils enforcing decisions on the honest voters, and sybils blocking decisions by the honest voters. We follow Reality-aware Social Choice and use the status quo as the anchor of sybil resilience, which we characterize by safety – the inability of sybils to change the status quo against the will of the majority of the honest voters, and liveness – the ability of the honest voters to change the status quo against the will of the sybils.
+We show that a reality-aware supermajority, in which a simple majority plus half the sybil penetration rate is required to change the status quo, is safe. Interestingly, a reality-aware supermajority is similar to byzantine failures in its tipping point: Below one-third sybil penetration, it assures both safety and liveness, as a sufficiently-high majority of the honest voters may effect a change of the status quo. Above one-third, it assures safety but not liveness, as sybils, while unable to force a change to the status quo, may block any change to it.
+The proposed reality-aware supermajority rule is safe only if all honest voters participate in the vote. Hence, we explore two approaches to maintain safety while mitigating partial voter participation:
+One is to further increase the reality-aware supermajority as a function of the participation rate. Another is default (forced) delegation of uncasted votes in support of the status quo. Both ensure safety but burden liveness by increasing the supermajority of active honest voters required to change the status quo. We analyze and compare them.
+Introduction
+In a majoritarian democracy, a single vote may decide the fate of elections or tilt a decision. Such a deciding vote could, in principle, belong to a fake voter, aka sybil. The risk of sybils infiltrating the electorate is even higher in online democratic communities, making sybil attacks literally an existential threat to e-democracies.
+To defend against this threat, we follow Reality-aware Social Choice {{cite:6a91a1ab-45b6-4658-9304-bbc0ebf0ea14}} in recognizing the uniqueness of the status quo (Reality) and leverage it to face sybil attacks. Specifically, we consider voting on a proposal to change the status quo and are interested in designing voting mechanisms that would be sybil-resilient.
+First, we observe that to ensure that only a majority among the honest voters can change the status quo, we might require that only a supermajority can elect a proposal over the status quo. Specifically, we show that, for any FORMULA , requiring a majority of FORMULA , referred to as a FORMULA -supermajority, makes the vote resilient to infiltration of up to FORMULA  sybils. For example, a majority of 23 is resilient to 13rd of the voters being sybils, a majority of 34 is resilient to half the voters being sybils, a majority of FORMULA  is resilient to FORMULA  being sybils, and a consensus is resilient to everyone but me being a sybil.
+Borrowing notions from concurrency theory, we show that the safety of a democracy against sybil attacks is guaranteed by such a supermajority, as sybils cannot effect a change to the status quo not supported by a majority of the honest voters.
+Such a supermajority, however, might hamper liveness, as attacking sybils may block a change to the status quo desired by a majority of the honest voters. In particular, sybil penetration of 13 or above requires a 16-supermajority or above to be safe, which in turn allows a the sybils to block any change desired by the honest voters, even if they vote unanimously for it.
+Interestingly, one-third sybil penetration, the tipping point of reality-aware supermajority, is also
+the tipping point of byzantine failures.
+Critically,
+for such a supermajority to withstand a sybil attack, all honest voters must vote. While announcing voting to be a civic duty and renouncing failure to vote may help boost participation rate, they cannot ensure full participation. Hence, we explore mitigating partial participation.
+First, we consider further increasing the supermajority as a function of the participation rate, and analyze the required supermajorities. Second, we augment the voting rule with forced (default) vote delegation. Initially, we default votes that are not casted to the status quo.
+To analyze the liveness of this mechanism, we then provide a closed formula for the actual supermajority needed among participating voters to change the status quo as a function of FORMULA  and the participation rate FORMULA  among honest voters. The problem with this approach is that low participation rates entails that changing the status quo requires a very high supermajorities among honest voters. For example, with participation FORMULA  among honest voters and a penetration of up to 12 sybils, a FORMULA -majority among the participating voters is needed to change the status quo.
+We further analyze these two approaches and compare them.
+Related work
+There is a vast literature on defending against sybil attacks (see, e.g., the recent surveys {{cite:8f5d15f4-5ef4-4918-bad8-e1cb9c7d066d}}, {{cite:b4614a63-45c5-4e91-b242-58bf94d74806}}).
+While that literature is concerned with graphs on which the honest and sybil entities reside, the focus is usually not on voting. Douceur {{cite:4a466545-c3ce-468a-a5c1-7f43f26cdb5a}} describes a very general model for studying sybil resilience and presents some initial negative results in this model and the literature on leveraging graph properties such as various centrality measures to identify suspicious nodes (see, e.g., the paper of Cao et al. {{cite:91b8f9d3-498d-444a-af01-ac70f42de9e4}}). Molavi et al. {{cite:52214cbf-845f-4144-959d-ab948fcdd84b}} aim at shield online ranking sites from the negative effects of sybils.
+Sybil-resilient voting is considered by Tran et al. {{cite:7a2261e7-4868-49e4-b773-52bb186e1ed0}}, but with a different goal and solution. While we aim to protect democratic decisions from sybil attacks, they are considering ranking online content. Furthermore, the main crux of their solution is to assign weights to paths in a flow network built from each vertex, while we use arbitrary delegation.
+Most importantly, we rely on Reality-aware social choice, and thus conservatively allow to default back to the status quo while Tran et al. do not consider it.
+Other relevant papers within computational social choice are the paper of Conitzer et al. {{cite:d3dddb78-6f33-4b31-ad3e-a3293a5f38f5}} which concentrate on axiomatic characterizations of rules resilient to sybils in a certain formal model of elections which does not relate to the status quo; thus, their main result, which is negative, do not apply in our, Reality-aware model.
+Wagman and Conitzer {{cite:abb9fd94-c7ce-48b7-852e-cff17d3ee68d}}, {{cite:ec4ab224-95d9-4ca0-9d3b-cda3e8850757}} consider design of mechanisms to be resilient to false-name manipulation where the creation of sybils incurs some non-negligible cost.
+Waggoner et al. {{cite:5c207dd2-efa4-495c-8c8e-2368d6bdbff6}} study ways to evaluate the correctness of a certain election result when the number of sybils in the electorate is assumed to be known.
+Conitzer et al. {{cite:44f864bd-c11a-484f-9599-61659e086e6b}} consider using connections in a social network to increase the effectiveness of sybil resilient methods, however their model is very restrictive for the sybils as they assume that sybils can connect only to their sybil creator, and, thus, they concentrate on vertex cuts as the main tool to defend against such sybils.
+One tool we use for increasing the sybil resilience of our method is default vote delegation.
+Interestingly, Chen et al. {{cite:f0bce8d0-7244-4fe3-870d-862e964b1ea7}} consider queries propagated in a tree, where some nodes might be controlled by sybils, with further routing these queries to achieve better sybil resilience.
+In this context we also mention the literature on liquid democracy {{cite:b1e06cce-ac01-472d-b73a-da90ee18fae8}}, {{cite:a43dfeec-a6a5-48c9-b207-df0d3ef217db}}, {{cite:b9c6f86b-c3ef-4d14-89ef-e3961d1f36e8}}, {{cite:3424eb9c-f60e-4fae-9534-0399c36f891c}}, in which vote delegation is central. The main difference between the delegations in liquid democracy and the delegations we use in this paper is that, in liquid democracy, voters are granted the opportunity to delegate their vote to reduce the cognitive load on them, while in our case delegations are forced in order to defend against sybils.
+
+Paper Structure
+The paper is structured as follows.
+In Section  we describe our basic model and provide formal definitions.
+In Section  we consider the simple case where all honest voters vote. Specifically, we propose a voting rule which satisfies safety, analyze in which situations it also satisfies liveness, and give a close formula for its conservatism.
+Then, in Section  we consider the more realistic setting where not all honest voters vote. We propose two voting rules which satisfy safety, analyze in which situations they also satisfy liveness, and give close formulas for their conservatism.
+We end this section with a comparison of these two methods according to their conservatism.
+Finally, in Section  we discuss some implications of our analysis to other settings and discuss further avenues for future research.
+
+Sybil-Resilience: Safety, Liveness, and Conservatism
+We assume a set of people FORMULA  and a set of identities FORMULA . The ownership relation between people and identities is denoted by FORMULA , where FORMULA . We say that an identity FORMULA  is a sybil if there are FORMULA  and FORMULA  such that FORMULA  and FORMULA , and honest otherwise.
+Consequently, FORMULA  is a disjoint union (FORMULA ) of honest FORMULA  and sybil FORMULA  nodes.
+We consider elections in which the voters are identities, which vote yes/no on a single proposal, where a yes vote favors the proposal and a no vote favors the status quo.
+The theory of Reality-aware Social Choice considers elections with respect to multiple proposals, where the status quo is an ever-present alternative.
+However, as the case of sybil-resilient voting on a single proposal against the status quo is rich and interesting enough by itself, it is the focus of this paper.
+Formally, we denote the status quo by 0, the proposal by 1, and define the alternatives to be their union FORMULA .
+Then, we model an election by labeling the voters in FORMULA  and FORMULA . For a given election, not all voters cast a vote. Thus, the label of each voter comes from FORMULA , where FORMULA  indicates failure to cast a vote, 0 means a vote for the status quo, and 1 indicates a vote in favor of the proposal.
+Correspondingly, we view FORMULA  as being partitioned into FORMULA , where FORMULA  is the set of honest voters who did cast a vote and FORMULA  is the set of honest voters who did not cast a vote (formally, voters from FORMULA  are labeled by FORMULA ). We refer to the voters in FORMULA  as active honest voters and to the voters in FORMULA  as passive honest voters.
+We consider voting rules for such elections, where a voting rule FORMULA  is a function that takes a labeled set FORMULA  of voters and returns a single winner. Note that a tie retains the status quo.
+[Voting rules]
+Given an election on a proposal with a set of voters FORMULA , a voting rule FORMULA  returns 1 for the proposal or 0 for the status quo. This value is referred to as the winner of FORMULA  for the election.
+A specific natural voting rule which we are interested employs the following definition of a supermajority.
+[Supermajorities]
+The proposal is said to win by a FORMULA -supermajority, FORMULA , if more than FORMULA  of the casted (non-FORMULA ) votes prefer it over the status quo.
+The proposal wins by a simple majority if it wins by a 0-supermajority.
+[Reality-aware Supermajority rule]
+A reality-aware FORMULA -supermajority rule selects the proposal with a FORMULA -supermajority if such exists, else the status quo.
+The reality-aware 0-supermajority rule is also referred to as the majority rule.
+Formally, such FORMULA  satisfies the following, where FORMULA  and FORMULA , FORMULA , is a single vote:
+FORMULA 
+Notice how a reality-aware FORMULA -supermajority rule defined above, follows
+Reality-aware Social Choice {{cite:6a91a1ab-45b6-4658-9304-bbc0ebf0ea14}} in inherently favoring the status quo.
+We are interested first and foremost in designing safe voting rules. Thus, the following definition relates the result of a voting rule on the whole electorate against the result of another rule only on the honest voters.
+[Safety]
+Consider a set of voters FORMULA  with FORMULA  and let FORMULA  be a voting rule.
+We say that FORMULA  is safe if, for each election held on FORMULA , if the winner according to FORMULA  on FORMULA  is a proposal (not the status quo), then the proposal wins by a simple majority on FORMULA .
+In other words, we say that a voting rule is safe if, whenever there is no majority among the active honest voters in favor of changing the status quo, then the status quo remains. Notice that we disregard the passive honest voters FORMULA  and require a simple majority on FORMULA  and not on FORMULA .
+We study safe voting rules and are interested in understanding what are the situations by which they hamper liveness, as defined next.
+[Liveness]
+Consider a set of voters FORMULA  with FORMULA  and a voting rule FORMULA .
+We say that FORMULA  satisfies liveness if, for any set of votes for the sybils there is a set of votes for the active honest voters for which the proposal is chosen according to FORMULA .
+The above definition might be thought of with respect to a game played between the sybils and the honest voters, where liveness guarantees that, for any strategy of the sybils, there is a strategy of the honest voters for which the proposal is chosen.
+The most obvious example of a reality-aware sybil resilient voting rule is choosing the status quo, regardless of the votes.
+This voting rule, while satisfying safety, obviously violates liveness.
+Indeed, in this paper we are mainly interested in guaranteeing sybil resilience without being unnecessarily conservative in defending the status quo.
+To quantify the conservatism of this approach,
+we measure the effective supermajority needed among the honest voters to change the status quo,
+while assuming the worst case scenario when all sybils vote in favor of the status quo.
+[Conservatism]
+Let FORMULA  be the set of voters with FORMULA  and let FORMULA  be a voting rule. The conservatism FORMULA  of FORMULA  is defined as the supermajority among the active honest voters FORMULA  needed in order to change the status quo, according to FORMULA , assuming all sybils vote in favor of the status quo.
+Notice that FORMULA  corresponds to a simple majority and that liveness is violated if and only if FORMULA .
+
+Sybil-resilience of Reality-aware Supermajority
+In this section we consider the simple case where all honest voters actively vote, namely that FORMULA  but FORMULA ,
+and investigate the sybil-resilience of the voting rule reality-aware FORMULA -supermajority.
+The next theorem characterizes the minimal FORMULA  for which FORMULA -supermajority is safe.
+Let FORMULA  be the set of voters and assume that FORMULA  for some FORMULA . If all honest voters vote then the reality-aware FORMULA -supermajority rule is safe.
+Consider the equation:
+FORMULA 
+with the left side of the equation being the FORMULA -supermajority required for the majority of the honest voters to vote for the proposal, assuming all sybils also vote for it, and the right side of the equation being the sybils (FORMULA ) and the majority (12) of the honest voters FORMULA , divided by the total voters, namely the sybils (FORMULA ) and the honest voters (FORMULA ).
+Solving for FORMULA  gives FORMULA , which proves the claim.  FORMULA
+Notice that the value FORMULA  used in Theorem  is tight, in the sense that any value strictly smaller than FORMULA  would not be safe. To see this, assume that all sybils, as well as half of the honest voters, vote in favor of the proposal.
+The following observation gives a close formula for the conservatism of the FORMULA -supermajority rule used in Theorem .
+Observation 1 
+The conservatism of the FORMULA -supermajority rule, given a penetration rate FORMULA  of sybils and full participation of the honest voters, is
+FORMULA 
+
+Let FORMULA  be the set of voters and let FORMULA  and consider the FORMULA -supermajority rule where we have FORMULA  sybils, all voting in favor of the status quo and FORMULA  honest voters. Then, for a FORMULA -supermajority among the honest voters, which is exactly FORMULA  honest voters voting for the proposal to change the status quo, they shall constitute at least a FORMULA -fraction of the full electorate, which contains FORMULA  voters. Thus, solving the equation:
+FORMULA 
+for FORMULA  gives the result.  FORMULA
+Of particular interest is the special case FORMULA , which, following Observation REF , implies a conservatism of FORMULA . Notice that, e.g., if there are no sybils, then FORMULA , which corresponds to a simple majority.
+On the other extreme, if a 13-fraction of the voters or more are sybils,
+then the proposal cannot be chosen even if the honest voters are unanimously in favor of it.
+Let FORMULA  be the set of voters and let FORMULA . If all honest voters vote, then the FORMULA -supermajority rule satisfies liveness if and only if
+FORMULA 
+holds.
+Following Observation REF , we have that FORMULA . Solving FORMULA  for FORMULA , which corresponds to at most a 12-supermajority—which means unanimity among the honest voters—gives FORMULA .  FORMULA
+Notice that, as in byzantine failures, a sybil penetration of FORMULA  is an inflection point with respect to a FORMULA -supermajority. Up to 13 sybils, a simple majority among the honest voters can defend the status quo, i.e., veto a change to it, and a sufficiently large supermajority of the honest voters may change the status quo. So the sybils can neither enforce a change nor veto it, if the honest voters are sufficiently determined and united. However, above 13 sybils, the sybils have a veto right; if the sybil unanimously object to a change, then no majority of the honest voters can effect it. Hence, assuming FORMULA -supermajority is our defense against sybils taking over the democracy in their favorable direction, then to avoid the other edge of the FORMULA -supermajority double-edge sword, namely for a democracy not to be paralyzed by sybils, their penetration rate must be kept below 13.
+
+Catering for Partial Participation
+In Section  we have analyzed the safely, liveness, and conservatism of reality-aware supermajority assuming all honest voters actively vote. Actual participation by all voters (honest and sybils) can be measured post factum, and participation by honest voters can be bound from below based on a bound on sybil penetration and assuming all sybils vote.
+So here we assume that only a FORMULA -fraction, FORMULA , of the honest voters cast their vote.
+That is, given that the set FORMULA , where FORMULA  is the set of active honest voters, which cast a vote, and FORMULA  is the set of passive honest voters, which do not cast a vote, then FORMULA .
+Disregarding Passive Honest Voters
+Here we propose our first method of dealing with partial participation, namely disregarding the passive honest voters altogether.
+In effect, the following theorem accommodates partial participation at the expense of increasing the required supermajority.
+Let FORMULA  be a set of voters and let FORMULA . If FORMULA , FORMULA , of the honest voters vote, and the uncasted votes are disregarded, then the reality-aware FORMULA -supermajority rule is safe.
+Consider the equation:
+FORMULA 
+which is the same equation used in the proof of Theorem , except that the participation rate FORMULA  of honest voters is taken into account. We make the worst-case assumption of full sybil participation.
+Solving for FORMULA  proves the claim.
+ FORMULA
+Notice that with participation FORMULA  we get FORMULA , as in Theorem , but
+as participation decreases, the required supermajority increases. For example, with participation FORMULA , we get FORMULA , thus,
+e.g., with 13 sybils we need a 14-supermajority, with
+12 sybils we need a 13-supermajority, and with
+23 sybils we need a 25-supermajority, or a FORMULA -majority.
+Observation 2 
+The conservatism of the reality-aware FORMULA -supermajority rule, given a penetration rate FORMULA  of sybils and a participation rate FORMULA  of honest voters, is
+FORMULA 
+
+Let FORMULA  be a set of voters and let FORMULA . Assume FORMULA , FORMULA , of the honest voters vote, that uncasted votes are disregarded, and consider the equation:
+FORMULA 
+which corresponds to the supermajority FORMULA  needed among the FORMULA  active honest voters, to constitute a FORMULA  supermajority among the electorate, which consists of FORMULA  sybils and FORMULA  active honest voters (recall that the passive honest voters are disregarded).
+Solving this equation for FORMULA  gives the result.  FORMULA
+Following Theorem REF , the case FORMULA  is of special interest. We note that for such choice of FORMULA , Observation REF  suggests that a supermajority of FORMULA  among the honest voters is needed in order to change the status quo. Notice that, for the case of full participation, the result of Observation REF  indeed gives FORMULA , as in Observation REF , which considers this case. Furthermore, if there are no sybils, then we get FORMULA  which corresponds to a simple majority among the active honest voters.
+Let FORMULA  be a set of voters and let FORMULA . If FORMULA , FORMULA , of the honest voters vote, and the uncasted votes are disregarded, then, for the reality-aware FORMULA -supermajority rule satisfies liveness if and only if
+FORMULA 
+holds.
+Following Observation REF , FORMULA . Postulating FORMULA  gives the result.  FORMULA
+Notice that for the case of full participation, FORMULA , indeed liveness holds if and only if FORMULA .
+Naturally, whenever FORMULA  decreases, liveness holds for smaller values of FORMULA ;
+for example, if only half of the honest voters vote, i.e., FORMULA , then liveness holds if and only if FORMULA .
+
+Default Delegation to the Status Quo
+Theorem REF  mitigates partial participation by disregarding the passive honest voters altogether, thus in effect further raising the supermajority required, as a function of the participation rate. Next we describe a different method which incorporates default (forced) vote delegation: We posit every uncasted vote to be casted in favor of the status quo.
+The supermajority needed for safety in this case is given in the next theorem.
+Let FORMULA  be a set of voters and let FORMULA . If FORMULA , FORMULA , of the honest voters vote, and the uncasted votes are taken as votes for the status quo, then a FORMULA -supermajority is sybil resilient.
+Consider the equation:
+FORMULA 
+which corresponds to a FORMULA -supermajority consisting of all sybils and half of the active honest voters voting for the proposal.
+Solving this equation for FORMULA  gives the result.  FORMULA
+Note that if FORMULA  then Theorem REF  requires the same FORMULA -supermajority as Theorem , but if both FORMULA  and FORMULA  then it requires less than FORMULA , as
+FORMULA 
+and the term on the right is negative under the assumption.
+This should be intuitively clear as, given that passive voters vote for the status quo, a smaller supermajority is needed as a witness for a majority of the active honest voters, compared to the case where all honest voters vote.
+Observation 3 
+The conservatism of the FORMULA -supermajority rule, given a penetration rate FORMULA  of sybils and a participation rate FORMULA  of honest voters, and assuming that the votes of passive voters as well as of all sybils are in favor of the status quo, is
+FORMULA 
+
+Let FORMULA  be a set of voters and let FORMULA . Assume a FORMULA -supermajority rule is employed, that the rest of the honest votes, as well as all sybil votes, are casted in favor of the status quo, and consider the equation:
+FORMULA 
+which corresponds to a FORMULA -supermajority among the active honest voters voting for the proposal on the left side
+and a FORMULA -supermajority on the right side.
+Solving for FORMULA  gives the result.  FORMULA
+Applying Observation REF  with the FORMULA  as given in Theorem REF , yields FORMULA . We note that this is the exact conservatism obtained by disregarding the passive honest voters, as established in Observation REF .
+In particular, we have the following.
+Let FORMULA  be a set of voters and let FORMULA . If FORMULA , FORMULA , of the honest voters vote, and the uncasted votes are viewed as votes for the status quo, then, the reality-aware FORMULA -supermajority rule satisfies liveness if and only if
+FORMULA 
+holds.
+The result follows from Corollary REF . As the conservatism FORMULA  is the same in both settings, they must satisfy liveness under the same conditions.  FORMULA
+
+Comparing Disregarding Passive Voters to Delegating their Votes
+To summarize this section, we have proposed two different approaches to ensure safety despite partial participation. The two approaches lead to different required supermajorities for safety but, perhaps surprisingly, yield the same conservatism. So which should be preferred?
+We tend to prefer default delegation, for the following reasons:
+
+Delegating the votes of the passive voters to the status quo results in lowering the full-participation supermajority, while disregarding the passive voters results in increasing this supermajority.
+Thus, delegating the votes of the passive voters to the status quo, in particular, easily affords the more conservative strategy, in case of doubt, of leaving the supermajority intact.
+
+Delegation achieves lower conservatism when the estimation on the participation rate among the honest voters cannot be exact, as we can safely upper bound the FORMULA .
+
+Delegating the votes of the passive voters to the status quo opens the way to more sophisticated delegation methods, e.g. delegation to trusted peers rather than to the status quo, and may serve as a benchmark to analyze them.
+
+
+Outlook
+Democracies, online or earthly, should not tolerate high rates of sybils. They should aim to prevent their entry into the electorate in the first place, and eradicate them swiftly if they do. Still, given the results presented above, it is reassuring to know that a democracy employing reality-aware supermajority voting rules can defend itself against any potentially-massive sybil attack by promptly raising (further) the supermajority needed to change the status quo.
+Viewing the action of raising the supermajority as an emergency measure, we note that it could be triggered automatically by clear evidence for high rate of sybil infiltration. This emergency measure is not dictatorial as it simply defends the status quo prior to the sybil attack; democratic decisions could still alter the status quo, albeit with a supermajority risen for the occasion.
+Interestingly, our approach, namely using supermajorities to defend against sybils, can be used in other contexts as well. Next we discuss two such contexts.
+Defending Minorities.
+The same approach can be used to protect a minority against an unwanted change to the status quo:
+Assume there are no sybils, but rather that the electorate includes one or even two sizable minority groups, each consisting of at least FORMULA  of the the voters. If a 16-supermajority rule is employed, then each of these minority groups can veto a change to the status quo if its members unanimously object to it. If a 13-supermajority is employed, then the each such minority can veto a change if a majority of its members object to it. The approach naturally extends to smaller minorities and larger supermajorities.
+Federated Sybil-resilient Voting.
+The approach can be extended to federated sybil-resilient voting:
+A federation of FORMULA  states, or constituencies, can hold sybil-resilient voting as follows. Assume that the sybil penetration in the FORMULA  constituency is bounded by FORMULA , FORMULA , and that the sybil penetration to the combined constituency is bounded by FORMULA . Then all constituencies vote, with the FORMULA  constituency employing FORMULA -supermajority. Several aggregation rules are possible: For example, that an alternative is elected if all constituencies elect it, and it is elected by the combined constituency by a FORMULA -supermajority. This rule gives the majority of honest voters in each constituency a veto power on a change to the status quo. Another example is that a double majority is needed: the alternative wins in the majority of the constituencies by their respective supermajority, and in the combined constituency by its supermajority. This gives a majority of the constituencies a veto power on a change. Other aggregation rules are also possible, e.g. employing the square-root law of power {{cite:a297b071-364b-4e39-9c44-07d8e5cd4470}}, {{cite:cc5b83d3-612a-46ad-8ded-42ae8968dd19}}.
+Last, we mention that the idea of default (forced) delegation might be useful for other tasks other then sybil resilience. Studying further default vote delegation schemes, for example using recent ideas from the literature on liquid democracy (see, e.g., {{cite:4cb07571-368a-4e6f-985d-9f30cfd319df}}, {{cite:3424eb9c-f60e-4fae-9534-0399c36f891c}}), seems to be an important avenue for future research.
+
+Acknowledgements
+The authors thank Ouri Poupko for useful insights.

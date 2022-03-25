@@ -1,0 +1,384 @@
+
+Recursion operators
+for dispersionless integrable systems in any dimensionM. Marvan and A. SergyeyevMathematical Institute,
+Silesian University in Opava,Na Rybníčku 1, 746 01 Opava,Czech RepublicE-mail: Michal.Marvan@math.slu.cz,
+Artur.Sergyeyev@math.slu.czJuly 11, 2011
+We present a new approach to construction of recursion operators
+for multidimensional integrable systems which
+have a Lax-type representation in
+terms of a pair of commuting vector fields.
+It is illustrated by the examples
+of the Manakov–Santini system which is a hyperbolic
+system in FORMULA  dependent and FORMULA  independent variables, where
+FORMULA  is an arbitrary natural number,
+the six-dimensional generalization of the
+first heavenly equation, the modified heavenly equation,
+and the dispersionless Hirota equation.
+
+Introduction
+Existence of an infinite hierarchy of local or nonlocal symmetries usually indicates
+integrability of a PDE system.
+A standard tool to produce such hierarchies is a recursion operator, see e.g. {{cite:e47c7aa0-6cb2-4665-b51f-203460f808bc}}, {{cite:90020da7-a7c2-418f-a4fa-335ea7ce95be}}, {{cite:9a3318b1-da4b-4fee-b1f4-199133b073d5}}. In essence, if one has an auxiliary linear system and a class of its coefficients for which the inverse scattering problem can be solved,
+then using a recursion operator
+it is usually possible to write down the most general nonlinear system whose solutions
+can be obtained using the inverse scattering problem in question, cf. e.g. {{cite:86718fc2-a9d7-4782-8cc9-7925ce9e9f5b}}, {{cite:a6dce22b-132d-4d57-8f27-8f8c1c8e01a3}}.
+Recursion operators can be sought for in a variety of ways, depending on the definition
+used. For instance, a typical recursion operator in (1+1) dimensions is a pseudodifferential operator which maps symmetries into symmetries {{cite:96cfd41d-31c0-41cb-879f-a106879087f7}} and
+can be derived from the Lax pair, see e.g. {{cite:96cfd41d-31c0-41cb-879f-a106879087f7}}, {{cite:0977b2db-a559-4a65-95fe-397fc493bfe0}}, {{cite:a19a0f46-0694-453f-bbd7-133c0daa2af6}} and references therein.
+However, these definitions and methods do not immediately extend to higher dimensions {{cite:9a3318b1-da4b-4fee-b1f4-199133b073d5}}. Instead, a higher-dimensional equation may admit a bilocal recursion
+operator as introduced by Fokas and Santini, see e.g. {{cite:4811041a-5aee-4034-ae2f-e433d4017942}}, {{cite:ddb07d4f-04f5-4e70-b2f1-b587fa336e94}}, {{cite:6172706d-f46a-4caf-820b-dc229abc710d}}, and {{cite:5fb8c43d-fefb-46c9-8b2a-dc814ba5cfa1}};
+a prototypical example here is the Kadomtsev–Petviashvili equation.
+From a different perspective,
+recursion operators are Bäcklund auto-transformations of a linearized equation.
+They first appeared in this form in several works by Papachristou {{cite:d2fbc009-2652-42d0-a53b-7159484216ad}}, {{cite:8b2ab7e6-d57d-4ee1-b8a0-fedf69bcca3e}}, {{cite:4fd98ee4-452e-4091-9cc0-3166c51195a3}}.
+The idea is that symmetries are essentially solutions of the linearized equation
+and Bäcklund transformations are the most general transformations that relate solutions to solutions.
+However, as pointed out by one of us {{cite:0b81889e-6400-4fc9-8bfc-4d85385915a2}}, the same point of view applies to
+Guthrie's {{cite:a297f5f1-d375-423b-b071-cace56a30a3b}} generalized recursion operators in (1+1) dimensions.
+Guthrie introduced them to avoid difficulties connected with
+the lack of rigorous interpretation of action of pseudodifferential
+operators on symmetries.
+The recursion operators which are auto-Bäcklund transformations
+of linearized systems appear to exist only for
+a certain class of integrable systems, which has yet to be
+characterized in full generality. Such recursion
+operators are closely related to
+zero curvature representations whenever the latter exist,
+see e.g. {{cite:bc006b95-ef37-4498-b753-5e6596bb7b7b}} and references
+therein.
+By a zero curvature representation for a system of PDEs FORMULA  we mean
+a one-form FORMULA  which satisfies
+FORMULA 
+on the solution manifold of FORMULA ;
+here FORMULA  are the independent variables and
+FORMULA  belong to some matrix Lie algebra.
+Then the operators FORMULA 
+commute and we can define a matrix pseudopotential FORMULA  by setting
+FORMULA 
+where FORMULA  denotes linearization
+along a symmetry FORMULA  (see Section 2 below for details).
+For the majority of integrable systems in (1+1) dimensions
+the pseudopotentials FORMULA  provide
+nonlocal terms of inverse recursion operators, whereas
+local terms thereof are, as a rule, limited to zero-order ones at most.
+This approach applies to multidimensional systems
+whenever a zero curvature representation is available.
+For instance, the recursion operator found by Papachristou
+in {{cite:d2fbc009-2652-42d0-a53b-7159484216ad}} is easily seen to be of this kind.
+Now turn to dispersionless multidimensional systems which can be written as
+a commutativity condition for a pair of first-order
+linear scalar differential operators with no free terms
+(i.e., vector fields) and no derivatives with respect to the spectral parameter;
+see e.g. {{cite:6c327285-f3d0-417d-b2a2-70cc0cd3a3e0}}, {{cite:da0418d3-6521-4707-896a-d00f4ada19d9}}, {{cite:606650ec-003f-447f-8a93-0e731df8499b}}, {{cite:45e6f238-f679-40dd-914b-bd4ba262245e}}, {{cite:e94612c0-986f-4cf3-ab41-c344b56d3e6a}} and references therein
+for more information on such systems. The systems of this kind are
+a subject of intense research as they arise in a multitude of areas from
+self-dual gravity, see e.g. {{cite:527a4d8a-f058-4411-84dd-841bc2646770}}, {{cite:112a2302-769a-4a7d-8cdf-105cbe9ee28b}}, {{cite:561dc85e-065b-4080-9479-72339955220e}}, {{cite:e94612c0-986f-4cf3-ab41-c344b56d3e6a}},
+hyper-Kähler {{cite:098efd82-2015-41ed-84a3-5692734b5741}}, symplectic {{cite:7e165dca-45ce-4874-ae4f-db662b56f30f}} and conformal {{cite:580db370-20ee-455c-ab5c-e504f2d5cbd5}} geometry
+to fluid dynamics and related fields, cf. e.g. {{cite:ddb668e4-3bc8-42ae-b43b-5f7149f25c8e}}, {{cite:b2f720b3-a7c4-4189-9f59-04954908732d}}, {{cite:deccc469-b980-4b9c-a5f3-dafb1ae5588d}}.
+Even though the recursion operators for some of these systems
+were found, see e.g. {{cite:d2fbc009-2652-42d0-a53b-7159484216ad}}, {{cite:11d366a7-a186-4ca6-98e2-db8f44edb377}}, {{cite:112a2302-769a-4a7d-8cdf-105cbe9ee28b}}, {{cite:45e6f238-f679-40dd-914b-bd4ba262245e}}, {{cite:45cdac1b-8b3b-43c0-bd0f-1aaf8df83098}}, {{cite:561dc85e-065b-4080-9479-72339955220e}},
+they were obtained using either various ad hoc methods or the partner symmetry method, both of which can be applied only under fairly restrictive assumptions.
+Below we present a method for finding recursion operators
+which is based on a generalization of pseudopotentials (REF )
+using the adjoint representation of the Lie algebra of vector fields.
+We are convinced that our approach applies to a considerably broader
+class of dispersionless systems than the methods mentioned
+in the previous paragraph. Moreover, our method is also more algorithmic:
+given a Lax-type representation for the system under study,
+finding a recursion operator of the type described in our paper, if it exists,
+is an essentially algorithmic task while
+e.g. the partner symmetry approach involves a non-algorithmic subproblem
+of representing the linearized equation as a two-dimensional divergence.
+The paper is organized as follows.
+In Section 2 we present a general
+construction of recursion operators
+which are auto-Bäcklund transformations
+of linearized systems, and Sections 3 and 4 illustrate its application
+on the examples of the Manakov–Santini system
+and the dispersionless Hirota equation.
+Finally, in Section 5 we give a modification of the construction
+from Section 2 for the case of Hamiltonian
+vector fields and provide some further examples.
+
+The general approach
+Let FORMULA  be a system of PDEs in FORMULA  independent variables FORMULA , FORMULA , for
+the unknown FORMULA -component vector function
+FORMULA ,
+where the superscript `FORMULA ' denotes matrix transposition.
+Denote
+FORMULA ;
+in particular, FORMULA .
+As usually in the formal theory of PDEs {{cite:90020da7-a7c2-418f-a4fa-335ea7ce95be}}, {{cite:efed1b62-8a03-4ded-a1d8-98c570749f7b}}, {{cite:e47c7aa0-6cb2-4665-b51f-203460f808bc}},
+FORMULA  and FORMULA  are considered as independent quantities and can be
+viewed as coordinates on an abstract infinite-dimensional space (a jet space).
+By a local function or a function on the jet space we shall mean any function of a
+finite number of FORMULA  and FORMULA  and their derivatives.
+We denote
+FORMULA 
+the usual total derivatives, which can be naturally viewed as vector fields on the jet space.
+The condition FORMULA  along with its differential consequences
+FORMULA  determines what is called a
+solution manifold, which in general is an infinite-dimensional
+submanifold of the jet space. In what follows we tacitly assume that
+the total derivatives are restricted on the solution manifold;
+these restrictions are tangent to the latter.
+As usual, the directional derivative along an FORMULA -component vector
+FORMULA , where the superscript FORMULA  indicates the transposed matrix,
+is the vector field
+FORMULA 
+The total derivatives as well as
+the directional derivative can be applied to (possibly vector or matrix) local functions
+FORMULA .
+Recall {{cite:90020da7-a7c2-418f-a4fa-335ea7ce95be}}, {{cite:efed1b62-8a03-4ded-a1d8-98c570749f7b}} that FORMULA  is a (characteristic of a)
+symmetry for the system FORMULA  if
+FORMULA  satisfies FORMULA  on the solution manifold.
+Assume now that the system FORMULA  can be written as a commutativity condition
+FORMULA , where
+FORMULA 
+are vector fields, FORMULA  is the usual Lie bracket thereof,
+and the coefficients FORMULA  are local functions that may further depend
+on a spectral parameter FORMULA .
+Further consider a vector field FORMULA  of the same form, i.e., FORMULA ,
+except that we do not insist that FORMULA  are local functions. However, we
+assume that the total derivatives can be extended to FORMULA , see below.
+The main idea of the present paper is that we
+look for an FORMULA  matrix FORMULA 
+such that
+FORMULA 
+are components of a symmetry FORMULA  whenever FORMULA  satisfies
+FORMULA 
+We shall write
+FORMULA  when such a matrix
+FORMULA  exists; this is precisely a recursion operator
+of the type described in Introduction, i.e., a Bäcklund auto-transformation
+for the linearized system FORMULA .
+Here and below we assume for simplicity
+that the entries FORMULA  of FORMULA  are local functions; however, in principle,
+nothing prevents them from being nonlocal.
+Note that we do not insist that the vector fields FORMULA  necessarily
+involve any spectral parameter,
+but we do exclude the case when they involve derivatives with respect to the spectral
+parameter.
+The condition (REF ) is a system of first-order partial differential equations
+in the unknowns FORMULA .
+To show that the system is compatible we check the Jacobi identity
+FORMULA 
+since FORMULA  is equivalent to FORMULA  and FORMULA  is a symmetry.
+As a rule, the system (REF ) is not solvable in terms of local functions.
+Therefore, strictly speaking, FORMULA  are not necessarily symmetries of the
+system FORMULA .
+Instead, they are nonlocal symmetries (or shadows in the sense of {{cite:766d6284-cfc1-4b71-81f1-b35059fbb3ed}}, {{cite:efed1b62-8a03-4ded-a1d8-98c570749f7b}}).
+This naturally leads to introduction of pseudopotentials (for instance,
+FORMULA  and their derivatives) and subsequent extension of the total
+derivatives to include the terms coming from pseudopotentials.
+To simplify notation we shall, however, denote the extended
+total derivatives by the same symbol FORMULA . Note that when
+applied to local functions the original and extended total derivatives
+coincide.
+Note that in a number of examples, where the recursion operators are already known,
+e.g. the Pavlov equation {{cite:29891865-505c-4f9c-a2f9-65714491f869}}, {{cite:45e6f238-f679-40dd-914b-bd4ba262245e}}, our method produces the recursion
+operators which are inverse to the known ones. Moreover, the inverses
+of our recursion operators often have simpler structure
+of nonlocal terms; in particular, this holds for all systems discussed
+below. Thus, it is often appropriate to invert the operator FORMULA 
+resulting from the above construction in order to obtain a simpler recursion operator;
+the inversion is an algorithmic process described in {{cite:a297f5f1-d375-423b-b071-cace56a30a3b}}.
+Let us also mention that, in sharp contrast with
+the case of (1+1)-dimensional systems where one usually can make a clear
+distinction among positive (local) and negative
+(nonlocal) hierarchies (see, however, {{cite:6dcc8f86-6962-4ccc-924c-d2ee54815b02}}),
+the multidimensional hierarchies we have been able to generate
+contain, an eventual inversion of the recursion operator notwithstanding,
+only a few local symmetries. The same phenomenon occurs for the multidimensional hierarchies
+generated using bilocal recursion operators, see e.g. {{cite:ea451a99-eacd-42ba-941b-0c2f71fd2911}}, {{cite:13867049-04dd-4622-a16b-10209b9fffcd}}
+and references therein.
+
+The Manakov–Santini system
+Consider the Manakov–Santini system {{cite:da0418d3-6521-4707-896a-d00f4ada19d9}} in FORMULA  independent variables
+FORMULA , FORMULA  and FORMULA  dependent variables FORMULA ,
+FORMULA 
+As usual, the subscripts refer to partial derivatives.
+System (REF ) can be written {{cite:da0418d3-6521-4707-896a-d00f4ada19d9}} as a commutativity condition of the vector fields
+FORMULA 
+Assume that FORMULA  has the form
+FORMULA 
+(no terms involving FORMULA  and FORMULA  are actually needed).
+It is straightforward to verify that the following assertion holds for any natural FORMULA :
+if FORMULA  is a characteristic of symmetry
+for (REF ) then so is FORMULA , where
+FORMULA  are determined from the equations (REF ) with FORMULA  and FORMULA  given by
+(REF ) and (REF ), that is,
+FORMULA 
+To emphasize the dependence on FORMULA , the recursion operator given by
+formula (REF ) will be denoted FORMULA .
+Applying FORMULA  to local symmetries yields
+a highly nonlocal `negative' hierarchy of the Manakov–Santini system.
+In order to obtain the `positive' hierarchy with simpler
+nonlocalities, we look for the
+inverse FORMULA .
+Inverting the recursion operator FORMULA  amounts to solving (REF )
+for FORMULA .
+The inverse operator FORMULA  sends
+FORMULA  to FORMULA , where
+FORMULA  are determined from the relations
+FORMULA 
+Upon multiplying by FORMULA  and removing the trivial contribution FORMULA 
+from FORMULA ,
+we end up with the recursion operator
+FORMULA ,
+which no longer depends on FORMULA .
+The components of
+FORMULA  are defined by the relations
+FORMULA 
+The symmetries generated using this recursion operator are complicated nonlocal expressions;
+the explicit form for symmetries obtained by applying (REF ) to the Lie point symmetries
+of (REF ) is given in the appendix.
+
+Dispersionless Hirota equation
+Consider the equation {{cite:f92a795a-c24c-40b8-b9b9-e9cb2ace41af}}, {{cite:580db370-20ee-455c-ab5c-e504f2d5cbd5}}
+FORMULA 
+It has a Lax pair {{cite:f92a795a-c24c-40b8-b9b9-e9cb2ace41af}} of the form
+FORMULA 
+where FORMULA .
+The vector field FORMULA  now can be chosen in the form
+FORMULA .
+An easy computation shows that the corresponding recursion operator is given by the formula
+FORMULA 
+Here FORMULA  is a symmetry for (REF ) and FORMULA  is defined by the following equations:
+FORMULA 
+The inverse recursion operator FORMULA  is given by the formulas
+FORMULA 
+If we replace FORMULA  by FORMULA , we obtain a somewhat simpler recursion operator FORMULA , where
+FORMULA ,
+so FORMULA  can be determined from the compatible equations
+FORMULA 
+Let us apply FORMULA  to the Lie point symmetries, which are FORMULA , FORMULA , FORMULA ,
+and FORMULA .
+To start with, we find FORMULA , where FORMULA  is an arbitrary smooth function.
+Upon having agreed to remove this trivial contribution from the results, we readily find
+FORMULA 
+Thus, FORMULA  are eigenvectors of FORMULA . To the best
+of our knowldege, this is a first known example of local eigenvectors for
+a nontrivial recursion operator.
+Finally,
+FORMULA 
+where FORMULA  are nonlocal variables defined by the following equations which are
+compatible by virtue of (REF ):
+FORMULA 
+
+The case of Hamiltonian vector fields
+If the Lax pair for the system under study consists
+of Hamiltonian vector fields,
+it is natural to apply the ideas from Section 
+to the algebra of functions endowed with the Poisson bracket
+rather than to the algebra of vector fields.
+Namely, suppose that the Lax pair for the system under study
+can (up to the obvious renumbering of independent variables) be written as
+FORMULA 
+Here FORMULA  denotes the Poisson bracket in question (usually w.r.t. the independent
+variables FORMULA  only), and FORMULA  are some constants,
+which are typically proportional to the spectral parameter FORMULA .
+Instead of FORMULA  introduce a single
+nonlocal variable FORMULA  defined by the formulas
+FORMULA 
+where FORMULA  are some constants which are often proportional to the spectral parameter FORMULA .
+Then we shall seek for a recursion operator in the form
+FORMULA 
+where now FORMULA , FORMULA , are FORMULA -component vectors whose entries are local functions. If necessary, the terms containing higher-order derivatives can be also included.
+As an example, consider the following
+six-dimensional generalization of the first heavenly equation, see e.g. {{cite:7e165dca-45ce-4874-ae4f-db662b56f30f}}, {{cite:00d58f6d-f52e-49d3-96f6-fda4b07ab43d}}:
+FORMULA 
+It admits {{cite:7e165dca-45ce-4874-ae4f-db662b56f30f}} a Lax representation of the form (REF ), namely,
+FORMULA 
+with the Poisson bracket given by
+FORMULA 
+It is readily verified that (REF ) possesses a recursion operator of the form
+FORMULA , where the nonlocal variable FORMULA  is defined via (REF ), that is,
+FORMULA 
+Upon inversion we obtain a simpler recursion operator FORMULA , where FORMULA  is defined by the formulas
+FORMULA 
+For another example, consider the modified heavenly equation {{cite:7e165dca-45ce-4874-ae4f-db662b56f30f}},
+FORMULA 
+which has {{cite:7e165dca-45ce-4874-ae4f-db662b56f30f}} a Lax representation of the form (REF ),
+FORMULA 
+with the Poisson bracket given by
+FORMULA 
+It is readily seen that (REF ) admits a recursion operator
+FORMULA , where the nonlocal variable FORMULA  is now
+defined by the formulas
+FORMULA 
+Inversion again leads to a simpler recursion operator FORMULA ,
+with FORMULA  defined by the formulas
+FORMULA 
+To the best of our knowledge, the recursion operator (REF ) has not yet appeared in the literature, while (REF ) is a special case of the recursion operator for the so-called asymmetric heavenly equation found in {{cite:45cdac1b-8b3b-43c0-bd0f-1aaf8df83098}} using the partner symmetry approach.
+Note that (REF ) also could have been obtained within the partner symmetry approach {{cite:45cdac1b-8b3b-43c0-bd0f-1aaf8df83098}}. On the other hand, the recursion operators for the second heavenly and Husain equations, which were
+found in {{cite:112a2302-769a-4a7d-8cdf-105cbe9ee28b}}, {{cite:561dc85e-065b-4080-9479-72339955220e}}, can be easily recovered using the approach of the present section.
+Acknowledgements
+A.S. gratefully acknowledges the discussion of the results of the present paper with J.D.E. Grant and with B.G. Konopelchenko. A.S. also thanks J.D.E. Grant for bringing the reference {{cite:098efd82-2015-41ed-84a3-5692734b5741}} to his attention and B.G. Konopelchenko for pointing out the reference {{cite:606650ec-003f-447f-8a93-0e731df8499b}} and the fact that auxiliary linear problems involving commuting vector fields were considered for the first time by Zakharov and Shabat in {{cite:6c327285-f3d0-417d-b2a2-70cc0cd3a3e0}}.
+This research was supported in part by the
+Ministry of Education, Youth and Sports of Czech Republic (MŠMT ČR) under grant
+MSM4781305904, and by the Czech Grant Agency (GA ČR) under
+grant P201/11/0356.
+
+Appendix: Symmetries of the Manakov–Santini system
+In this section we use the standard convention on summation over repeated indices. The
+indices FORMULA  run from 1 to 2, the others run from 1 to FORMULA .
+The symmetries of the Manakov–Santini system can be routinely computed as
+solutions FORMULA  of the linearized equation FORMULA  which must
+hold only on the solution manifold of (REF ); here
+FORMULA  stands for the left-hand side of FORMULA th equation of (REF ).
+The simplest of symmetries, the Lie point ones, are characterized by the property that FORMULA 
+are linear in the first derivatives.
+A computer-aided computation reveals fourteen Lie point symmetries for (REF ), namely,
+FORMULA 
+where FORMULA  each depend on FORMULA 
+arbitrary functions of the coordinates FORMULA , FORMULA ; the left-hand-side subscripts indicate the arbitrary
+functions these symmetries depend on.
+The generators of these Lie point symmetries read
+FORMULA 
+This notation is to be read as follows: for instance,
+the symmetry FORMULA  has a characteristic FORMULA 
+and the associated evolutionary vector
+field is FORMULA .
+Let us investigate the action of the recursion operator (REF )
+on the above symmetries.
+Obviously, equations (REF ) determine FORMULA 
+uniquely up to adding the Lie symmetry we denoted FORMULA 
+(we could also write FORMULA ).
+Like the integration constants, this term will
+be omitted in what follows.
+Four classical symmetries, namely
+FORMULA , are mapped to local symmetries again:
+FORMULA 
+The others are mapped to nonlocal symmetries, sharing the same set of nonlocal
+variables FORMULA , FORMULA , subject to the equations
+FORMULA 
+The system (REF ) is compatible by virtue of the
+Manakov–Santini system (REF ). Eq.(REF ) determines a
+covering in the sense of {{cite:efed1b62-8a03-4ded-a1d8-98c570749f7b}},
+but this covering is infinite-dimensional.
+Each successive application of FORMULA  requires one more level of nonlocal
+variables FORMULA , subject to the compatible equations
+FORMULA 
+Thus we have obtained an infinite hierarchy of successive coverings.
+Upon denoting FORMULA ,
+we routinely generate
+FORMULA 
+etc. If we assign level one to the local variables, i.e., FORMULA ,
+we observe that
+the sum in the above formulas runs over all homogeneous monomials of the same level.
+We conjecture that this pattern holds for FORMULA  with any natural FORMULA .
+In terms of these, we observe the following general formula for
+FORMULA :
+FORMULA 
+Likewise, for FORMULA  we obtain the expressions
+FORMULA 
+Here another pattern can be observed. Namely,
+the sum again runs over all homogeneous monomials with the coefficient at each monomial
+equal, up to the sign, to the level of the nonlocal variable which is not differentiated. It would be interesting to find out whether
+this pattern holds for all natural FORMULA .
+In terms of FORMULA  we have the following general formula for
+FORMULA :
+FORMULA 
+Finally, we have FORMULA ,
+FORMULA 

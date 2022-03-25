@@ -1,0 +1,248 @@
+
+Magnetic Excitations and their energy change available to Superconducting
+Condensation in Optimally Doped YBaFORMULA CuFORMULA O FORMULA
+Hyungje Woo
+
+Department of Physics and Astronomy, The University of Tennessee, Knoxville, Tennessee 37996-1200, USA
+
+
+Center for Neutron Scattering, Oak Ridge National Laboratory, Oak Ridge, Tennessee 37831, USA
+Pengcheng Dai
+
+Department of Physics and Astronomy, The University of Tennessee, Knoxville, Tennessee 37996-1200, USA
+
+
+Center for Neutron Scattering, Oak Ridge National Laboratory, Oak Ridge, Tennessee 37831, USA
+S. M. Hayden
+
+H. H. Wills Physics Laboratory, University of
+Bristol, Bristol BS8 1TL, UK
+
+H. A. Mook
+
+Center for Neutron Scattering, Oak Ridge National Laboratory, Oak Ridge, Tennessee 37831, USA
+T. Dahm
+Institut für Theoretische Physik,
+Universität Tübingen,
+Auf der Morgenstelle 14, D-72076 Tübingen,
+Germany
+D. J. Scalapino
+ Department of Physics, University of California,
+Santa Barbara, California 93106, USA 
+T. G. Perring
+
+ISIS
+Facility,Rutherford Appleton Laboratory,Chilton, Didcot, Oxon,
+OX11 0QX, UK
+F. DoFORMULA an
+
+Department of Ceramic Engineering, University of
+Missouri-Rolla, Rolla, Missouri 65409-0330, USA
+Understanding the magnetic excitations in high-transition
+temperature (high-FORMULA ) copper oxides is important
+because they may mediate the electron pairing for superconductivity
+{{cite:e6e6b144-0c22-4dab-b25c-abcf2d88e563}}, {{cite:07f7f2da-4523-4cf4-8b0e-3f1cf6041b5e}}. By determining
+the wavevector (Q) and energy (FORMULA )
+dependence of the magnetic excitations,
+one can calculate the change in the exchange energy available to
+the superconducting condensation energy {{cite:2eb03774-ea78-4f0d-8c60-b4bef7440556}}, {{cite:7b928cbc-0fcb-4a41-825b-967df339ce57}}, {{cite:894c3039-3d8c-4f70-bcf4-e50b3c906f7c}}.
+For the high-FORMULA  superconductor YBaFORMULA CuFORMULA OFORMULA ,
+the most prominent feature in the magnetic excitations is the
+resonance {{cite:8d98bf1d-3432-47a7-bb7c-0f36e0e1d275}}, {{cite:4422fc38-d471-49d0-94c0-562bc61852a7}}, {{cite:f6c9d3ef-48f4-4d48-9b99-913851744137}}, {{cite:2c88cfe6-637f-4b29-936e-c4d61304f837}}, {{cite:b15c6274-4e40-4851-be99-40801da33993}}, {{cite:315793cf-b307-4c3e-a5c7-b18e0ee6d2c7}}, {{cite:c3697f65-1368-42c2-9972-f8c0ac64b8c7}}. Although
+the resonance has been suggested to contribute a major part of the
+superconducting condensation {{cite:7b928cbc-0fcb-4a41-825b-967df339ce57}}, {{cite:c87f3295-c546-4eac-a5e5-e6eedbdfca65}}, the accuracy of
+such an estimation has been in doubt because the resonance is only a small portion
+of the total magnetic scattering {{cite:c3697f65-1368-42c2-9972-f8c0ac64b8c7}}, {{cite:c87f3295-c546-4eac-a5e5-e6eedbdfca65}}, {{cite:a3d98d7b-5f08-480e-908b-aa704e447aa9}}.
+Here we report
+an extensive
+mapping of magnetic excitations
+for YBaFORMULA CuFORMULA OFORMULA  (FORMULA  K).
+Using the absolute intensity measurements of
+the full spectra, we estimate the change in the magnetic exchange energy between the
+normal and superconducting states and find it to be about 15 times larger than the superconducting condensation energy {{cite:7824c017-d2fb-41ff-b06a-530820be04b5}}, {{cite:b82b507b-8f5a-4148-97d4-2972bb1612a4}}.
+Our results thus indicate that the change in the magnetic exchange energy
+is large enough to provide the driving force for high-FORMULA  superconductivity in YBaFORMULA CuFORMULA OFORMULA .
+
+FIGURE 
+If magnetic excitations are mediating electron pairing in the high-FORMULA  copper oxides,
+one expects that the change in magnetic exchange energy provides
+enough energy for superconducting condensation. The condensation energy
+is known experimentally from specific heat measurements for
+YBaFORMULA CuFORMULA OFORMULA  (YBCO) to be FORMULA 3 K/formula unit (f.u.) {{cite:7824c017-d2fb-41ff-b06a-530820be04b5}}, {{cite:b82b507b-8f5a-4148-97d4-2972bb1612a4}}.
+Within the FORMULA -FORMULA  model the change in magnetic exchange energy can be
+calculated from the nearest neighbor spin correlations
+{{cite:2eb03774-ea78-4f0d-8c60-b4bef7440556}}, {{cite:7b928cbc-0fcb-4a41-825b-967df339ce57}}, {{cite:894c3039-3d8c-4f70-bcf4-e50b3c906f7c}}:
+FORMULA 
+where FORMULA  is the exchange interaction, FORMULA  and FORMULA  are the electron spin
+operators at nearest neighbor Cu sites FORMULA  and FORMULA  in the CuOFORMULA  plane, respectively.
+Instead of estimating the magnetic resonance's contribution to the
+superconducting condensation {{cite:7b928cbc-0fcb-4a41-825b-967df339ce57}}, {{cite:c87f3295-c546-4eac-a5e5-e6eedbdfca65}}, we seek here to calculate
+FORMULA  from the entire observable magnetic excitation spectrum. In
+general, a complete determination of the magnetic excitation spectrum is
+difficult as spin fluctuations can spread over a large wavevector and energy
+range. YBCO has two CuOFORMULA  planes per unit cell (bilayer) and therefore the
+magnetic excitations have odd (acoustic) or even (optical) symmetry with
+respect to the neighboring planes (Fig. 1). For optimally doped YBCO, the
+magnetic excitation spectrum is dominated by a resonance mode centered at 41
+meV in the acoustic channel {{cite:8d98bf1d-3432-47a7-bb7c-0f36e0e1d275}}, {{cite:4422fc38-d471-49d0-94c0-562bc61852a7}}, and a mapping of the acoustic
+and optical magnetic excitations should allow an estimation of FORMULA .
+FIGURE 
+Figure 1 summarizes the key conclusions of our work. The optical
+and acoustic spin fluctuations can be separated by their
+differences in FORMULA -dependence (Fig. 1b). The total magnetic
+response FORMULA  can then be written as
+FORMULA ,
+where FORMULA  Å is the spacing between the nearest neighbor
+CuOFORMULA  planes along the FORMULA -axis. To probe the entire magnetic
+spectra in optical and acoustic channels of
+YBCO, we used the MAPS spectrometer at ISIS Facility
+{{cite:c3697f65-1368-42c2-9972-f8c0ac64b8c7}}, {{cite:a24f2897-56d7-48f4-b981-e93805f4cf4b}} and chose incident beam energies of FORMULA , 40, 62.5, 75, 90, 110, 130, 138, 160, 210, 280, 360, and 450
+meV with the incident beam along the FORMULA -axis.
+The position sensitive detectors on MAPS allow
+a complete determination on the FORMULA -structure of
+incommensurate spin fluctuations for YBCO in one
+experimental setting {{cite:c3697f65-1368-42c2-9972-f8c0ac64b8c7}}. This avoids the complication of de-convoluting the
+instrumental resolution necessary for structure determination of
+incommensurate peaks using triple-axis spectroscopy
+{{cite:ad58032f-7ed3-4f19-a4dc-46f1fc383e91}}.
+The temperatures probed were FORMULA , 100, and 290 K. The
+intensity difference between 15 K and 100 K is almost
+entirely magnetic because of the small value of FORMULA  probed by the
+experiment and small change in the Bose factor for
+FORMULA  meV {{cite:2c88cfe6-637f-4b29-936e-c4d61304f837}}, {{cite:b15c6274-4e40-4851-be99-40801da33993}}, {{cite:72e1aa71-3ef1-4894-8740-50b5b69be621}}.
+Figures 2(a)-(c) summarize the temperature dependence of the
+FORMULA  meV scattering at the position of
+optical spin fluctuations (FORMULA  meV). A clear incommensurate
+scattering appears at 15 K (Fig. 2(a)) and they are replaced by a
+broad response at 100 K (Fig. 2(b)).
+Figs. 2(d)-(f) show the
+temperature dependence of the scattering around the 41 meV
+acoustic resonance obtained by using FORMULA  meV. At FORMULA  K,
+the scattering shows a sharp resonance centered at FORMULA 
+{{cite:b15c6274-4e40-4851-be99-40801da33993}}. On warming to 100 K, the resonance disappears (Fig.
+2(e)). Further warming to 290 K does not change the scattering
+significantly (Fig. 2(f)).
+FIGURE 
+Figure 3 summarizes the optical spin fluctuations for
+FORMULA  meV. For FORMULA 
+meV, the scattering shows no difference between normal and
+superconducting states (Figs. 3(a) and 3(e)). Since there is
+little normal state magnetic scattering, there must be an optical
+spin gap around 34 meV. On increasing the energy transfer to
+FORMULA  meV, where the acoustic channel has a
+commensurate resonance, spin fluctuations in the optical channel
+form a broad incommensurate structure away from FORMULA  (Fig.
+3(b)). Figure 4f confirms the incommensurate nature of the
+scattering and shows that the FORMULA  and FORMULA  cut directions
+are inequivalent. For FORMULA  meV, again we find
+incommensurate peaks but this time the scattering is more box-like
+with enhanced corners (Figs. 3(c) and 3(g)). The orientation of
+the scattering is rotated 45FORMULA  from that in Fig. 4(b),
+similar to acoustic high-energy spin excitations in
+YBaFORMULA CuFORMULA OFORMULA  {{cite:c3697f65-1368-42c2-9972-f8c0ac64b8c7}}. Finally, on moving the
+energy to FORMULA  meV, the temperature difference
+spectrum is featureless. Inspection of the unsubtracted data at 15
+K reveals no observable magnetic scattering (Fig. 3(h)).
+FIGURE 
+Figures 4(a)-(e) show the intensity difference spectra between 15
+K and 100 K at various energies in the acoustic channel. For
+FORMULA  meV, the temperature difference has
+negative intensity, possibly due to a reduction in the magnetic
+response on entering the superconducting state {{cite:72e1aa71-3ef1-4894-8740-50b5b69be621}} or
+large phonon population at 100 K (Fig. 4a). A cut through the
+image confirms no intensity gain at low temperatures (Fig. 4f).
+When increasing the energy to FORMULA  meV, the
+difference image shows a quartet of incommensurate peaks at
+FORMULA  and FORMULA  with FORMULA  r.l.u. To demonstrate that the incommensurate scattering is
+not circular around FORMULA , we made two cuts
+through the image. The cut along the FORMULA  direction clearly
+shows two incommensurate peaks around FORMULA . In contrast, a
+cut along the FORMULA  direction has no incommensurate peaks. Note that
+a circular symmetry at FORMULA  meV has been
+suggested for YBCO from previous
+triple-axis experiments {{cite:ad58032f-7ed3-4f19-a4dc-46f1fc383e91}}.
+Figure 4(c) shows the data at the resonance energy and its
+wavevector dependence has a Gaussian lineshape centered around
+FORMULA  (Fig. 4(h)). For energies above the resonance
+(FORMULA  meV), the scattering is incommensurate
+although the low counting rate does not allow an unambiguous
+identification of its FORMULA -structure (Figs. 4(d),4(i)).
+For FORMULA  meV, the temperature difference spectra as
+well as unsubtracted data show no evidence of magnetic scattering
+around FORMULA  (Figs. 4(e),4(j)).
+Figures 1(e) and 1(f) summarize the superconductivity-induced (15
+KFORMULA 100 K) change in the local dynamic susceptibility
+FORMULA  in absolute units for optical and
+acoustic channels of YBCO, respectively. In the
+optical channel, FORMULA  has a peak at
+FORMULA  meV, similar to theoretical expectations {{cite:8b67d63b-21f5-444c-b05b-456eea437e90}}. The magnetic spectral weight gradually increases
+from above the spin-gap value of FORMULA 30 meV {{cite:b15c6274-4e40-4851-be99-40801da33993}}, peaks
+at 46 meV, and finally diminishes for energies above FORMULA 70 meV.
+The acoustic channel behaves similarly although it peaks at the
+expected resonance position of 40 meV {{cite:b15c6274-4e40-4851-be99-40801da33993}}.
+The magnitude of the total spectral weight in the optical channel
+FORMULA 
+FORMULA  and in the acoustic channel is FORMULA 
+FORMULA  per f.u. respectively.
+This value is similar to that for
+YBaFORMULA CuFORMULA OFORMULA  around the acoustic resonance energy (FORMULA  FORMULA /f.u. for
+FORMULA 
+meV) {{cite:c3697f65-1368-42c2-9972-f8c0ac64b8c7}}. Since the high-energy
+response in underdoped YBaFORMULA CuFORMULA OFORMULA  (FORMULA ) takes
+up much more spectral weight than the resonance
+{{cite:315793cf-b307-4c3e-a5c7-b18e0ee6d2c7}}, {{cite:c3697f65-1368-42c2-9972-f8c0ac64b8c7}}, it is surprising that there is essentially no
+observed magnetic response for energies above 60 meV in
+YBCO (Fig. 1f). Compared to undoped
+YBaFORMULA CuFORMULA OFORMULA  {{cite:93eb488b-b21b-4dbc-81f2-3a16e9af1299}}, {{cite:140cdb8b-06cd-4cbb-ad65-74c7c8cb9ff2}}, which has a
+total integrated moment of FORMULA 0.4 FORMULA /f.u. when
+integrated up to 120 meV, the total integrated moment in optimally
+doped YBCO has only about 26% of the spectral
+weight in the same energy range in the acoustic channel only.
+Using the spin excitation spectra in Figs. 3 and 4,
+we have calculated the changes in the magnetic excitations from the normal to the superconducting
+state and estimated
+FORMULA /f.u.,
+where FORMULA  is the spin-spin correlation
+function for nearest neighbour copper atoms (see supplementary information).
+This estimate neglects contributions from energies below 24 meV and
+above 70 meV, where
+magnetic scattering is difficult to resolve. Also, in Eq. (REF ) the difference
+between normal and superconducting state is meant to be determined at the same
+temperature, while here we had to take normal state data at 100 K and
+superconducting state data at 15 K neglecting a possible temperature
+dependence of the normal state magnetic excitations. In order to
+assess the error introduced by these neglections, we have fitted an
+RPA-BCS model calculation of the spin excitation spectrum {{cite:9bd15cd6-3d14-4454-9560-9339e6718e45}} to our data
+and calculated the missing contributions within this model.
+This calculation indicates that our value for FORMULA  could
+be of order 30 % too large due to these neglections(see supplementary information).
+Assuming an exchange coupling of FORMULA  meV, the change in exchange energy
+would be FORMULA  meV/f.u.=-24 K/planar Cu. This value is a factor of 1.3 times larger
+than the 18 K/Cu estimated from the acoustic resonance alone
+in previous work {{cite:7b928cbc-0fcb-4a41-825b-967df339ce57}}. Even if we consider that our estimation may be
+too large by 30 %, the change in the exchange energy is still much larger
+than the FORMULA  0.26 meV/f.u.= 3 K/f.u. = 1.5 K/planar Cu
+condensation energy {{cite:7824c017-d2fb-41ff-b06a-530820be04b5}}, {{cite:b82b507b-8f5a-4148-97d4-2972bb1612a4}}.
+Our results reveal two important conclusions for spin
+excitations of optimally doped YBCO. First,
+the optical resonance reported earlier {{cite:ecfff74f-fbeb-499f-92ae-83f724955dd6}}, {{cite:4a5f48f3-3c64-498e-acf6-2ce210627cd8}}
+is actually incommensurate and this naturally explains the large
+FORMULA -widths previously reported. Second, our determination of the
+dynamical susceptibility in absolute units allows an estimation of
+the change of the magnetic excitation energy available
+to the superconducting condensation energy
+{{cite:7b928cbc-0fcb-4a41-825b-967df339ce57}}, {{cite:da03c257-58d7-46e7-a5c1-175a6416763b}}, {{cite:a3d98d7b-5f08-480e-908b-aa704e447aa9}}. We find that
+the magnetic exchange energy is about 15 times larger than that of
+the superconducting condensation energy, thus indicating magnetism
+can be the driving force for electron pairing and superconductivity.
+Correspondence and requests for materials should be addressed to P.D. (daip@ornl.gov) or H.A.M. (ham@ornl.gov).
+Acknowledgments We thank Elbio Dagotto, Z. Y. Wen, and F. C. Zhang for helpful discussions.
+This work is supported by the US DOE Office of Science, Division of Materials Science, Basic
+Energy Sciences under contract No. DE-FG02-05ER46202 (H.W. and P.D.).
+Oak Ridge National Laboratory is supported by the US DOE
+under contract No. DE-AC05-00OR22725
+with UT/Battelle LLC. SMH is supported by the UK EPSRC. DJS would like to acknowledge the Center for
+Nanophase Material Science at Oak Ridge National Laboratory for their support.
+Supplementary Information accompanies this paper on www.nature.com/naturephysics.
+Competing financial interests
+The authors declare that they have no competing financial interests.

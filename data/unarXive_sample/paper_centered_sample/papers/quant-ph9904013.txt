@@ -1,0 +1,1295 @@
+
+[prd,aps,psfig]revtex
+
+
+
+
+
+
+
+
+Sonoluminescence as a QED vacuum effect.
+I: The Physical Scenario
+S. LiberatiFORMULA 
+International School for Advanced Studies, Via Beirut 2-4,
+34014 Trieste, Italy
+INFN sezione di Trieste
+Matt VisserFORMULA 
+Physics Department, Washington University,
+Saint Louis, Missouri 63130-4899, USA
+F. BelgiornoFORMULA 
+Universitá degli Studi di Milano, Dipartimento di Fisica,
+Via Celoria 16, 20133 Milano, Italy
+D.W. SciamaFORMULA 
+International School for Advanced Studies, Via Beirut 2-4,
+34014 Trieste, Italy
+International Center for Theoretical Physics, Strada Costiera 11,
+34014 Trieste, Italy
+Physics Department, Oxford University, Oxford, England
+
+5 April 1999; Typos fixed 10 May 1999; -ed 2018/12/12 05:30:14
+Several years ago Schwinger proposed a physical mechanism for
+sonoluminescence in terms of changes in the properties of the
+quantum-electrodynamic (QED) vacuum state during collapse of the
+bubble. This mechanism is most often phrased in terms of changes in
+the Casimir Energy (i.e., changes in the distribution of
+zero-point energies) and has recently been the subject of considerable
+controversy. The present paper further develops this quantum-vacuum
+approach to sonoluminescence: We calculate Bogolubov coefficients
+relating the QED vacuum states in the presence of a homogeneous medium
+of changing dielectric constant. In this way we derive an estimate for
+the spectrum, number of photons, and total energy emitted. We
+emphasize the importance of rapid spatio-temporal changes in
+refractive indices, and the delicate sensitivity of the emitted
+radiation to the precise dependence of the refractive index as a
+function of wavenumber, pressure, temperature, and noble gas
+admixture. Although the basic physics of the dynamical Casimir effect
+is a universal  phenomenon of QED, specific and particular
+experimental features are encoded in the condensed matter physics
+controlling the details of the refractive index. This calculation
+places rather tight constraints on the possibility of using the
+dynamical Casimir effect as an explanation for sonoluminescence, and
+we are hopeful that this scenario will soon be amenable to direct
+experimental probes. In a companion paper we discuss the technical
+complications due to finite-size effects, but for reasons of clarity
+in this paper we confine attention to bulk effects.
+PACS:12.20.Ds; 77.22.Ch; 78.60.Mq
+Introduction
+Sonoluminescence (SL) is the phenomenon of light emission by a
+sound-driven gas bubble in fluid {{cite:67697046-b2c3-47f1-87d0-2cb3377a8f8e}}. In SL
+experiments the intensity of a standing sound wave is increased until
+the pulsations of a bubble of gas trapped at a velocity node have
+sufficient amplitude to emit brief flashes of light having a
+“quasi-thermal” spectrum with a “temperature” of several tens of
+thousands of Kelvin. The basic mechanism of light production in this
+phenomenon is still highly controversial. We first present a brief
+summary of the main experimental data (as currently understood) and
+their sensitivities to external and internal conditions. For a more
+detailed discussion see {{cite:67697046-b2c3-47f1-87d0-2cb3377a8f8e}}.
+SL experiments usually deal with bubbles of air in water, with
+ambient radius FORMULA .
+The bubble is driven by a sound wave of frequency of 20–30 kHz.
+(Audible frequencies can also be used, at the cost of inducing
+deafness in the experimental staff.) During the expansion phase,
+the bubble radius reaches a maximum of order FORMULA , followed by a rapid collapse down to a minimum
+radius of order FORMULA . The
+photons emitted by such a pulsating bubble have typical wavelengths of
+the order of visible light. The minimum observed wavelengths range
+between FORMULA  and FORMULA . This light appears
+distributed with a broad-band spectrum. (No resonance lines, roughly a
+power-law spectrum with exponent depending on the noble gas admixture
+entrained in the bubble, and with a cutoff in the extreme
+ultraviolet.) For a typical example, see figures REF 
+and REF . If one fits the data to a Planck black-body
+spectrum the corresponding temperature is several tens of thousands of
+Kelvin (typically FORMULA , though estimates varying from
+FORMULA  to FORMULA  are common). There is
+considerable doubt as to whether or not this temperature parameter
+corresponds to any real physical temperature. There are about one
+million photons emitted per flash, and the time-averaged total power
+emitted is between 30 and FORMULA .
+The photons appear to be emitted by a very tiny spatio-temporal
+region: Estimated flash widths vary from less than FORMULA  to
+more than FORMULA  depending on the gas entrained in the
+bubble {{cite:210e1e40-b6cd-4dc2-b99d-a09c5a71369d}}, {{cite:f61a4c2e-484c-4cd3-91a9-5cc495ab9f09}}. There are model-dependent (and
+controversial) claims that the emission times and flash widths do not
+depend on wavelength {{cite:f61a4c2e-484c-4cd3-91a9-5cc495ab9f09}}. As for the spatial scale, there
+are various model-dependent estimates but no direct measurement is
+available {{cite:f61a4c2e-484c-4cd3-91a9-5cc495ab9f09}}. Though it is clear that there is a frequency
+cutoff at about FORMULA  the physics behind this cutoff is
+controversial. Standard explanations are (1) a Thermal cutoff
+(deprecated because the observed cutoff is much sharper than
+exponential) , or (2) the opacity of water in the UV (deprecated
+because of the observed absence of dissociation effects).
+Alternatively, Schwinger suggests that the critical issue is that (3)
+the real part of the refractive index of water goes to unity in the UV
+(so that there is no change in the Casimir energy during bubble
+collapse). We shall add another possible contribution to the mix: (4)
+a rapidly changing refractive index causes photon production with an
+“adiabatic cutoff' that depends on the timescale over which the
+refractive index changes. (Because the observed falloff above the
+physical cutoff is super-exponential it is clear that this adiabatic
+effect is at most part of the complete picture.)
+FIGURE 
+FIGURE 
+Any truly successful theory of SL must also explain a whole series of
+characteristic sensitivities to different external and internal
+conditions. Among these dependencies the main one is surely the
+mysterious catalytic role of noble gas admixtures. (Most often a few
+percent in the air entrained in the bubble. One can obtain SL from air
+bubbles with a FORMULA  content of argon, and also from pure noble gas
+bubbles, but the phenomenon is practically absent in pure oxygen
+bubbles.) In fact, it has been suggested that physical processes
+concentrate the noble gasses inside the bubble to the extent that the
+bubble consists of almost pure noble gas {{cite:085a2d33-e241-440f-a205-c0bfdaabca5f}}, and some
+experimental results seem to corroborate this
+suggestion {{cite:a39814d3-56f7-4bc9-87ce-b8e614d94c3c}}.
+Other external conditions that influence SL are: (1) Magnetic Fields
+— If the frequency of the driving sound wave is kept fixed, SL
+disappears above a pressure-dependent threshold magnetic field: FORMULA . On the other hand, for a fixed value of the magnetic
+field FORMULA , there are both upper and lower bounds on the applied
+pressure that bracket the region of SL, and these bounds are
+increasing functions of the applied magnetic field {{cite:9e1c341d-366c-4bcf-9efe-23c1c85321ea}}. This
+is often interpreted as suggesting that the primary effect of magnetic
+fields is to alter the condition for stable bubble
+oscillations. See. also {{cite:1967f71c-e4c4-46c1-9ef7-61eaf42d51d8}}. (2) Temperature of the water
+— If FORMULA  decreases then the emitted power FORMULA  increases.
+The position of the peak of the spectrum depends on FORMULA . It
+has been suggested that the increased light emission at lower water
+temperature is associated with an increased stability of the bubble,
+allowing for higher driving pressures {{cite:8d59ec5c-bb9a-45f3-97b1-f15378861e54}}.
+These are only the most salient features of the SL phenomenon. In
+attempting to explain such detailed and specific behaviour the
+dynamical Casimir approach (QED vacuum approach) encounters the same
+problems as all other approaches have. Nevertheless we shall argue
+that SL explanations using a Casimir-like framework are viable, and
+merit further investigation.
+In this paper we shall concentrate on changes in the QED vacuum state
+as a candidate explanation for SL, and try to clear up considerable
+confusion as to what models based on the Casimir effect do and do not
+predict. It is important to realize that changes in the static Casimir
+energy in this experimental situation are big, that they have roughly
+the right energy budget to drive SL, and that any purported
+non-Casimir explanation for SL will have to find a way to hide the
+effects of these changes in Casimir energy so as to make them
+unobservable.
+
+Quantum-electrodynamic models of SL
+Quasi-static Casimir models: Schwinger's approach
+The idea of a “Casimir route” to SL is due to Schwinger who several
+years ago wrote a series of papers {{cite:79ba7eec-abec-42c3-97bf-a4c6404155bb}}, {{cite:039a961a-84dd-4c4f-92b0-0b5f859d7a53}}, {{cite:f16ab1cd-2714-46e0-a7f2-764ab6e79bbe}}, {{cite:501c188a-ec18-46da-a98f-bfb083f5573c}}, {{cite:0beeb76f-aea3-495c-af0b-a9fdbe5fd693}}, {{cite:93ceed48-d45e-4706-9cb3-b202cfce2276}}, {{cite:d11fe952-623d-432c-9c6c-74627636f054}}
+regarding the so-called dynamical Casimir effect. Considerable
+confusion has been caused by Schwinger's choice of the phrase
+“dynamical Casimir effect” to describe his particular model. In
+fact, Schwinger's original model is not dynamical but is instead
+quasi-static as the heart of the model lies in comparing two static
+Casimir energy calculations: That for an expanded bubble with that for
+a collapsed bubble. One key issue in Schwinger's model is thus simply
+that of calculating Casimir energies for dielectric spheres—and
+there is already considerable disagreement on this issue. A second and
+in some ways more critical question is the extent to which this
+difference in Casimir energies may be converted to real photons during
+the collapse of the bubble—it is this issue that we shall address in
+this paper. The original quasi-static incarnation of the Schwinger
+model had no real way of estimating either photon production
+efficiency or timing information (when does the flash occur?).
+In contrast the model of Eberlein {{cite:a1bf7de9-6aeb-48d6-866e-ab785be86a02}}, {{cite:ace9249f-b5a9-46d7-919f-a9813773948c}}, {{cite:b59cb898-a04b-48d8-b72e-3eb539f8af75}}
+(more fully discussed below) is truly dynamical but uses a much more
+specific physical approximation—the adiabatic approximation. The
+two models should not be confused. In this paper we shall argue that
+the observed features of SL force one to make the sudden
+approximation. We can then estimate the spectrum of the emitted
+photons by calculating an appropriate Bogolubov coefficient relating
+two states of the QED vacuum. The resulting variant of the Schwinger
+model for SL is then rather tightly constrained, and should be
+amenable to experimental verification (or falsification) in the near
+future.
+In his series of papers {{cite:79ba7eec-abec-42c3-97bf-a4c6404155bb}}, {{cite:039a961a-84dd-4c4f-92b0-0b5f859d7a53}}, {{cite:f16ab1cd-2714-46e0-a7f2-764ab6e79bbe}}, {{cite:501c188a-ec18-46da-a98f-bfb083f5573c}}, {{cite:0beeb76f-aea3-495c-af0b-a9fdbe5fd693}}, {{cite:93ceed48-d45e-4706-9cb3-b202cfce2276}}, {{cite:d11fe952-623d-432c-9c6c-74627636f054}} on SL,
+Schwinger showed that the dominant bulk contribution to the Casimir
+energy of a bubble (of dielectric constant FORMULA ) in a dielectric background (of dielectric constant
+FORMULA ) is {{cite:501c188a-ec18-46da-a98f-bfb083f5573c}}
+FORMULA 
+The corresponding number of emitted photons is
+FORMULA 
+Here we have inserted an explicit factor of two with respect to
+Schwinger's papers to take into account both photon polarizations.
+There are additional sub-dominant finite volume effects discussed
+in {{cite:1fafa5fb-11ee-45df-b2ca-0793b95c6a63}}, {{cite:65e3d95c-decb-4198-8b3e-8df8e8578f74}}, {{cite:8ca136f2-18ca-4bc1-bcef-83928e2fe8be}}. Schwinger's result can also be rephrased in
+the clearer and more general form as {{cite:1fafa5fb-11ee-45df-b2ca-0793b95c6a63}}, {{cite:65e3d95c-decb-4198-8b3e-8df8e8578f74}}, {{cite:8ca136f2-18ca-4bc1-bcef-83928e2fe8be}}:
+FORMULA 
+FORMULA 
+Here it is evident that the Casimir energy can be interpreted as a
+difference in zero point energies due to the different dispersion
+relations inside and outside the bubble. The quantity FORMULA  appearing
+above is a high-wavenumber cutoff that characterizes the wavenumber at
+which the (real part of) the refractive indices (FORMULA )
+drop to their vacuum values. It is important to stress that this
+cutoff it is not a regularization artifact to be removed at the end of
+the calculation. The cutoff has a true physical meaning in its own
+right.
+The three main points of strength of models based on zero point
+fluctuations (e.g., Schwinger's model and its variants) are:
+1) One does not need to achieve “real” temperatures of
+thousands of Kelvin inside the bubble. As discussed in {{cite:98336346-f44e-40eb-b433-e126d06d65fc}},
+quasi-thermal behaviour is generated in quantum vacuum models by the
+squeezed nature of the two photon states created {{cite:ace9249f-b5a9-46d7-919f-a9813773948c}}, and
+the “temperature” parameter is a measure of the squeezing, not a
+measure of any real physical temperatureThis “false thermality” must not be confused with the very specific
+phenomenon of Unruh temperature. In that case, valid only for
+uniformly accelerated observers in flat spacetime, the temperature is
+proportional to the constant value of the acceleration. Instead, in
+the case of squeezed states, the apparent temperature can be related
+to the degree of squeezing of the real photon pairs generated via the
+dynamical Casimir effect..
+(Of course, one should remember that the experimental data merely
+indicates an approximately power-law spectrum [FORMULA ] with some sort of cutoff in the ultraviolet, and with
+an exponent that depends on the gases entrained in the bubble; the
+much-quoted “temperature” of the SL radiation is merely an
+indication of the scale of this cutoff FORMULA .)
+2) There is no actual production of far ultraviolet photons (because
+the refractive index goes to unity in the far ultraviolet) so one does
+not expect dissociation effects in water that other models
+imply. Models based on the quantum vacuum automatically provide a
+cutoff in the far ultraviolet from the behaviour of the refractive
+index—this observation going back to Schwinger's first papers on the
+subject.
+3) One naturally gets the right energy budget. For FORMULA , FORMULA , FORMULA  in the
+ultra-violet, and FORMULA , the change in the static
+Casimir energy approximately equals the energy emitted each cycle.
+This last point is still the object of heated debate.
+Milton {{cite:289faf5f-104a-49e6-9720-62588ed9deae}}, and Milton and Ng {{cite:eb0c390e-092c-4e8f-b358-09ff25108c4b}}, {{cite:9d913e3f-bf96-4260-b3e4-c564603ad36d}} strongly criticize
+Schwinger's result claiming that actually the Casimir energy contains
+at best a surface term, the bulk term being discarded via (what is to
+our minds) a physically dubious renormalization argument. In their
+more recent paper {{cite:9d913e3f-bf96-4260-b3e4-c564603ad36d}} they discard even the surface term and
+now claim that the Casimir energy for a dielectric bubble is of order
+FORMULA . (The dispute is ongoing—see {{cite:dd2bdd75-87a4-4637-9387-06dd267b2a2c}}.)
+These points have been discussed extensively in {{cite:1fafa5fb-11ee-45df-b2ca-0793b95c6a63}}, {{cite:65e3d95c-decb-4198-8b3e-8df8e8578f74}}, {{cite:8ca136f2-18ca-4bc1-bcef-83928e2fe8be}}
+where it is emphasized that one has to compare two different physical
+configurations of the same system, corresponding to two different
+geometrical configurations of matter, and thus must compare two
+different quantum states defined on the same
+spacetimeThis point of view is also in agreement with the bag model results of
+Candelas {{cite:8d915313-e272-4d6a-9229-8ef40c5e28d4}}. It is easy to see that in the bag model one
+finds a bulk contribution that happens to be zero only because of the
+particular condition that FORMULA  everywhere. This
+condition ensures the constancy of the speed of light (and so the
+invariance of the dispersion relation) on all space while allowing the
+dielectric constant to be less than one outside the vacuum bag (as the
+model for quark confinement requires)..
+In a situation like Schwinger's model for SL one has to subtract from
+the zero point energy (ZPE) for a vacuum bubble in water the ZPE for
+water filling all space. It is clear that in this case the bulk term
+is physical and must be taken into account. Surface terms are
+also present, and eventually other higher order correction terms, but
+they prove to not be dominant for sufficiently large
+cavities {{cite:8ca136f2-18ca-4bc1-bcef-83928e2fe8be}}.
+The calculations of Brevik et al {{cite:a21543c0-a68d-4685-b8b3-e40a1800fa83}} and Nesterenko
+and Pirozhenko {{cite:c37aeef0-ab6b-4227-9757-c307e2767c33}} also fail to retain the known bulk
+volume term. In this case the subtlety in the calculation arises from
+neglecting the continuum part of the spectrum. They consider a
+dielectric sphere in an infinite dielectric background and sum only over the discrete part of the spectrum to calculate their
+Casimir “energy”. When the continuum modes are reintroduced the
+proper volume dependence is recovered. Their conclusions regarding
+the relevance of the Casimir effect to SL are then incorrect: by
+completely discarding the volume (and indeed surface) contribution
+they are left with a Casimir “energy” that can be simply estimated
+by dimensional analysis to be of order FORMULA  and is strictly
+proportional to the inverse radius of the bubble. This is certainly a
+very small quantity insufficient to drive SL but this is also not the
+correct physical quantity to calculate. For a careful discussion of
+the correct identification of the physically relevant Casimir energy
+see {{cite:1fafa5fb-11ee-45df-b2ca-0793b95c6a63}}, {{cite:65e3d95c-decb-4198-8b3e-8df8e8578f74}}, {{cite:8ca136f2-18ca-4bc1-bcef-83928e2fe8be}}.
+While we believe that the contentious issues of how to define the
+Casimir energy are successfully dealt with in {{cite:1fafa5fb-11ee-45df-b2ca-0793b95c6a63}}, {{cite:65e3d95c-decb-4198-8b3e-8df8e8578f74}}, {{cite:8ca136f2-18ca-4bc1-bcef-83928e2fe8be}},
+one of the subsidiary aims of this paper is to side-step this whole
+argument and provide an independent calculation demonstrating
+efficient photon production.
+In contrast to the points of strength outlined above, the main
+weakness of the original quasi-static version of Schwinger's idea is
+that there is no real way to calculate either timing information or
+conversion efficiency. A naive estimate is to simply and directly
+link power produced to the change in volume of the bubble. As pointed
+out by Barber et al. {{cite:67697046-b2c3-47f1-87d0-2cb3377a8f8e}}, this assumption
+would imply that the main production of photons may be expected when
+the the rate of change of the volume is maximum, which is
+experimentally found to occur near the maximum radius. In contrast the
+emission of light is experimentally found to occur near the point of
+minimum radius, where the rate of change of area is maximum. All else
+being equal, this would seem to indicate a surface dependence and
+might be interpreted as a true weakness of the dynamical Casimir
+explanation of SL. In fact we shall show that the situation is
+considerably more complex than might naively be thought. We claim that
+there is much more going on than a simple change in volume of the
+bubble, and shall shortly focus attention on the “bounce” that
+occurs as the contents of the bubble hit the van der Waals hard core
+maximum density.
+
+Eberlein's dynamical model for SL
+The quantum vacuum approach to SL was developed extensively in the
+work of Eberlein {{cite:a1bf7de9-6aeb-48d6-866e-ab785be86a02}}, {{cite:ace9249f-b5a9-46d7-919f-a9813773948c}}, {{cite:b59cb898-a04b-48d8-b72e-3eb539f8af75}}. The basic
+mechanism in Eberlein's approach is a particular implementation of the
+dynamical Casimir effect: Photons are assumed to be produced due to an
+adiabatic change of the refractive index in the region of space
+between the minimum and the maximum bubble radius (a related
+discussion for time-varying but spatially-constant refractive index
+can be found in the discussion by Yablonovitch{{cite:fd140ea0-dab5-4219-a00a-1b28c1360dec}}).
+This physical framework is actually implemented via a boundary between
+two dielectric media which accelerates with respect to the rest frame
+of the quantum vacuum state. The change in the zero-point modes of the
+fields produces a non-zero radiation flux. Eberlein's contribution
+was to take the general phenomenon of photon generation by moving
+dielectric boundaries and attempt a specific implementation of these
+ideas as a candidate for explaining SL.
+It is important to realize that this is a second-order effect. Though
+he was unable to provide a calculation to demonstrate it, Schwinger's
+original discussion is posited on the direct conversion of zero point
+fluctuations in the expanded bubble vacuum state into real photons
+plus zero point fluctuations in the collapsed bubble vacuum
+state. Eberlein's mechanism is a more subtle (and much weaker) effect
+involving the response of the atoms in the dielectric medium to
+acceleration through the zero-point fluctuations. The two mechanisms
+are quite distinct and considerable confusion has been engendered by
+conflating the two mechanisms. Criticisms of the Eberlein mechanism do
+not necessarily apply to the Schwinger mechanism, and vice versa.
+In the Eberlein analysis the motion of the bubble boundary is taken
+into account by introducing a velocity-dependent perturbation to the
+usual EM Hamiltonian:
+FORMULA 
+This is an approximate low-velocity result coming from a power series
+expansion in the speed of the bubble wall FORMULA . The
+bubble wall is known to collapse with supersonic velocity, values of
+Mach 4 are often quoted, but this is still completely non-relativistic
+with FORMULA . Unfortunately, when the Eberlein
+formalism is used to model the observed quantity of radiation from
+each SL flash the implied bubble wall velocities are superluminal,
+indicating that one has moved outside the region of validity of the
+approximation scheme {{cite:8b909ea4-9bcb-4f1e-9676-584bb459647d}}.
+The Eberlein approach consists of a novel mixture of the standard
+adiabatic approximation with perturbation theory. In principle, the
+adiabatic approximation requires the knowledge of the complete set of
+eigenfunctions of the Hamiltonian for any allowed value of the
+parameter. In the present case only the eigenfunctions of part of the
+Hamiltonian, namely those of FORMULA , are known. (And these
+eigenfunctions are known explicitly only in the adiabatic
+approximation where FORMULA  is treated as time-independent.) The
+calculation consists of initially invoking the standard application of
+the adiabatic approximation to the full Hamiltonian, then formally
+calculating the transition coefficients for the vacuum to two photon
+transition to first order in FORMULA , and finally in explicitly
+calculating the radiated energy and spectral density. In this last
+step Eberlein used an approximation valid only in the limit FORMULA 
+which means in the limit of photon wavelengths smaller than the bubble
+radius. (Compare this with our discussion of the large FORMULA  limit
+below.) This implies that the calculation will completely miss any
+resonances that are present.
+Eberlein's final result for the energy radiated over one acoustic
+cycle is:
+FORMULA 
+Eberlein approximates FORMULA  and sets FORMULA . The FORMULA  is the result of an integration that has to be
+estimated numerically. The precise nature of the semi-analytic
+approximations made as prelude to performing the numerical integration
+are far from clear.
+One of the interesting consequences of this result is that the
+dissipative force acting on the moving dielectric interface can be
+seen to behave like FORMULA , plus terms with lower
+derivatives of FORMULA . This dependence tallies with results of
+calculations for frictional forces on moving perfect mirrors; the
+dissipative part of the radiation pressure on a moving dielectric
+half-space or flat mirror is proportional to the fourth
+derivative of the velocity {{cite:90ea063b-fcb6-4e85-a5a1-253dfebb835a}}.
+By a double integration by parts the above can be re-cast as
+FORMULA 
+Then the energy radiated is also seen to be proportional to
+FORMULA 
+explicitly showing that the acceleration of the interface (FORMULA ) and the strength of the perturbation (FORMULA ) both contribute
+to the radiated energy.
+The main improvement of this model over the original Schwinger
+model is the ability to provide basic timing information: In this
+mechanism the massive burst of photons is produced at and near the
+turn-around at the minimum radius of the bubble. There the velocity
+rapidly changes sign, from collapse to re-expansion. This means
+that the acceleration is peaked at this moment, and so are higher
+derivatives of the velocity. Other main points of strength of the
+Eberlein model are the same as previously listed for the Schwinger
+model. However, Eberlein's model exhibits significant weaknesses
+(which do not apply to the Schwinger model):
+1) The calculation is based on an adiabatic approximation which
+does not seem consistent with results. The adiabatic approximation
+would seem to be justified in the SL case by the fact that the
+frequency FORMULA  of the driving sound is of the order of tens of
+kHz, while that of the emitted light is of the order of FORMULA 
+Hz. But if you take a timescale for bubble collapse of the order
+of milliseconds, or even microseconds, then photon production is
+extremely inefficient, being exponentially suppressed [as we shall
+soon see] by a factor of FORMULA .
+In order to compare with the experimental data the model requires,
+as external input, the time dependence of the bubble radius. This
+is expressed as a function of a parameter FORMULA  which describes
+the time scale of the collapse and re-expansion process. In order
+to be compatible with the experimental values for emitted power
+FORMULA  one has to fix FORMULA . This is
+far too short a time to be compatible with the adiabatic
+approximation. Although one may claim that the precise
+numerical value of the timescale can ultimately be modified by
+the eventual inclusion of resonances it would seem reasonable
+to take this ten femtosecond figure as a first self-consistent
+approximation for the characteristic timescale of the driving system
+(the pulsating bubble). Unfortunately, the characteristic timescale
+of the collapsing bubble then comes out to be of the same order of
+the characteristic period of the emitted photons, violating
+the adiabatic approximation used in deriving the result. Attempts
+at bootstrapping the calculation into self-consistency instead
+bring it to a regime where the adiabatic approximation underlying
+the scheme cannot be trusted.
+2) The Eberlein calculation cannot deal with any resonances that
+may be present. Eberlein does consider resonances to be a possible
+important correction to her model, but she is considering “classical”
+resonances (scale of the cavity of the same order of the wavelength
+of the photons) instead of what we feel is the more interesting
+possibility of parametric resonances.
+Finally we should mention a recent calculation that gives
+qualitatively the same results as the Eberlein model although leading
+to different formulae. Schützhold, Plunien, and Soff {{cite:12535a73-96e6-46b8-81f7-940054feb90f}} adopt
+a slightly different decomposition into unperturbed and perturbing
+Hamiltonians by taking
+FORMULA 
+Their result for the total energy emitted per cycle is given
+analytically by
+FORMULA 
+The key differences are that this formula is analytic (rather than
+numerical) and involves fourth derivatives of the volume of the
+bubble (rather than third derivatives of the surface area). The
+main reason for the discrepancy between this and Eberlein's result
+can be seen as due to a different choice of the dependence on FORMULA 
+of FORMULA . In reference {{cite:12535a73-96e6-46b8-81f7-940054feb90f}} they considered the more
+physical case of a localized disturbance that yields significant
+contributions only over a bounded volume. (Eberlein makes the
+simplifying assumption that FORMULA  is a function of FORMULA  only,
+which is incompatible with continuity and the essentially constant
+density of water. In contrast, Schützhold et al. take the
+radial velocity of the water outside the bubble to be FORMULA .)
+Putting these models aside, and before proposing new routes for
+developing further research in SL, we shall give below a more detailed
+discussion of some important points of Schwinger's model which seem to
+us to be crucial in order to understand the possibility of a vacuum
+explanation of SL.
+
+Timescales: The need for a sudden approximation.
+One of the key features of photon production by a space-dependent and
+time-dependent refractive index is that for a change occurring on a
+timescale FORMULA , the amount of photon production is exponentially
+suppressed by an amount FORMULA . Below we provide a
+specific model that exhibits this behaviour, and argue that the result
+is in fact generic.
+The importance for SL is that the experimental spectrum is not 
+exponentially suppressed at least out to the far ultraviolet.
+Therefore any mechanism of Casimir-induced photon production based on
+an adiabatic approximation is destined to failure: Since the
+exponential suppression is not visible out to FORMULA , it follows that if  SL is to be attributed to
+photon production from a time-dependent refractive index (i.e.,
+the dynamical Casimir effect), then the timescale for change in
+the refractive index must be of order a femtosecondActually, once one takes into account the refractive index of the
+final state this condition can be somewhat relaxed. We ultimately find
+that we can tolerate a refractive index that changes as slowly as on a
+picosecond timescale, but this is still far to rapid to be associated
+with physical collapse of the bubble. For the time being we focus on
+the femtosecond timescale (which actually makes things more difficult
+for us) to check the physical plausibility of the scenario, but keep
+in mind that eventually things can be relaxed by a few orders of
+magnitude..
+Thus any Casimir–based model has to take into account that the change in the refractive index cannot be due just to the change
+in the bubble radius.
+The SL flash is known to occur at or shortly after the point of
+maximum compression. The light flash is emitted when the bubble is at
+or near minimum radius FORMULA . Note that to get an order femtosecond change in
+refractive index over a distance of about FORMULA , the change
+in refractive index has to propagate at relativistic speeds. To
+achieve this, we must adjust basic aspects of the model: We will move
+away from the original Schwinger suggestion, in that it is no longer
+the collapse from FORMULA  to FORMULA  that is
+important. Instead we will postulate a rapid (order femtosecond)
+change in refractive index of the gas bubble when it hits the van der
+Waals hard core.
+The underlying idea is that there is some physical process that gives
+rise to a sudden change of the refractive index inside the bubble when
+it reaches maximum compression. We have to ensure that the velocity
+of mechanical perturbations, that is the sound velocity, can be a
+significant fraction of the speed of light in this critical
+regimeThis condition can also be slightly relaxed: One can conceive of the
+change in refractive index being driven by a shockwave that appears at
+the van der Waals hard core. Now a shockwave is by definition a
+supersonic phenomenon. If the velocity of sound is itself already
+extremely high then the shockwave velocity may be even higher. Note
+that most of the viable models for the gas dynamics during the
+collapse predict the formation of strong shock-waves; so we are
+adapting physics already envisaged in the literature. At the same time
+we are asking for less extreme conditions (e.g., we can be much
+more relaxed regarding the focussing of these shockwaves) in that we
+just need a rapid change of the refractive index of the entrained gas,
+and do not need to propose any overheating to “stellar”
+temperatures. It is also interesting to note that changes in the
+refractive index (but that of the surrounding water) due to the huge
+compression generated by shockwaves have already been considered in
+the literature {{cite:e7c4ca0f-967d-48eb-aabd-52abc72dce5b}} (cf. page 5437)..
+We first show that the minimum radius experimentally observed is of
+the same order as the van der Waals hard core radius FORMULA . The latter can be deduced as follows: It is known that the van
+der Waals excluded volume for air is FORMULA 0.036
+l/mol {{cite:24aca73d-5970-4bfa-83df-c53743a6f12b}}. The minimum possible value of the volume is
+then FORMULA , where
+FORMULA  gives the number of moles and
+FORMULA  is the ambient value of the volume. From
+FORMULA  and assuming for the density of air FORMULA  [FORMULA  at
+STP (standard temperature and pressure)], one gets FORMULA . This value compares favorably with the
+experimentally observed value of FORMULA . Moreover, the
+role of the van der Waals hard core in limiting the collapse of the
+bubble is suggested in {{cite:67697046-b2c3-47f1-87d0-2cb3377a8f8e}} (cf. fig. 10, p.78), and
+a careful hydrodynamic analysis for the case of an Argon
+bubble {{cite:0597f642-4e28-40cc-ba8c-000f93339b95}} reveals that for sonoluminescence it is necessary
+that the bubble undergoes a so called strongly collapsing phase where
+its minimum radius is indeed very near the hard core radiusNoticeably, from {{cite:0597f642-4e28-40cc-ba8c-000f93339b95}} it is easy to estimate the van der Waals
+radius for the Argon bubble: FORMULA , with FORMULA . This
+again gives FORMULA ..
+It is crucial to realize that a van der Waals gas, when compressed to
+near its maximum density, has a speed of sound that goes relativistic.
+To see this, write the (non-relativistic) van der Waals equation of
+state as
+FORMULA 
+Here FORMULA  is the number density of molecules; FORMULA  is mass density;
+FORMULA  is average molecular weight (FORMULA  for air).
+Now consider the (isothermal) speed of sound for a van der Waals gas
+FORMULA 
+Near maximum density this is
+FORMULA 
+and so it will go relativistic for densities close enough to maximum
+density. It is only for the sake of simplicity that we have
+considered the isothermal speed of sound. We do not expect the
+process of bubble collapse and core bounce to be isothermal.
+Nevertheless, this calculation is sufficient to demonstrate that
+in general the sound velocity becomes formally infinite (and it is
+reasonable that it goes relativistic) at the incompressibility
+limit (where it hits the van der Waals hard core). This conclusion
+is not limited to the van der Waals equation of state, and is not
+limited to isothermal (or even isentropic) sound propagation.
+Indeed, consider any equation of state of the form
+FORMULA 
+where FORMULA  is the volume per mole occupied by the gas and
+FORMULA  is the “minimum molar volume”, related to the molar mass and
+maximum mass density by
+FORMULA 
+To say that FORMULA  is a minimum molar volume means that we want
+FORMULA 
+We can enforce this by demanding
+FORMULA 
+or equivalently
+FORMULA 
+with the FORMULA  being less singular than FORMULA . For typical model equations of state FORMULA  and FORMULA  are typically differentiable and
+finite. (The van der Waals, Dieterici, Bethelot, and “modified
+adiabatic” equations are all of this form, but the Moss et al
+equation of state is not of this
+form {{cite:f1b2e030-f35d-4219-bf05-f6ec7dffbb3d}}.) The Dieterici equation of state is
+FORMULA 
+while the Bethelot equation of state is
+FORMULA 
+so that it is a modified van der Waals equation with a particular
+temperature dependence for the FORMULA  parameter (FORMULA ). The
+“modified adiabatic” equation of state discussed by Barber et al {{cite:67697046-b2c3-47f1-87d0-2cb3377a8f8e}} is
+FORMULA 
+In contrast, Moss et al {{cite:f1b2e030-f35d-4219-bf05-f6ec7dffbb3d}} use a model equation of
+state of the form
+FORMULA 
+with FORMULA  and FORMULA  being adjustable parameters. This
+equation of state does not exhibit a maximum hard-core
+density.
+
+Now calculate the speed of sound, keeping some quantity “FORMULA ”
+constant
+FORMULA 
+Then
+FORMULA 
+The net result is that as FORMULA ; i.e. FORMULA ; the speed of sound becomes relativistic
+(formally infinite), independent of whether or not this is constant
+temperature, constant entropy, or whatever “constant FORMULA ” may
+beIt should be noted that similar unphysical features also affect the
+“shock wave”–based models {{cite:67697046-b2c3-47f1-87d0-2cb3377a8f8e}}: Indeed, the Mach
+number of the shock formally diverges as the shock implodes towards
+the origin (cf. page 126 of {{cite:67697046-b2c3-47f1-87d0-2cb3377a8f8e}}). One way to
+overcome this type of problem is the suggestion that that very near
+the minimum radius of the bubble there is a breakdown of the
+hydrodynamic description {{cite:0597f642-4e28-40cc-ba8c-000f93339b95}}. If so, the thermodynamic
+description in terms of state equations should probably be considered
+to be on a heuristic footing at best..
+There is something of a puzzle in the fact that hydrodynamic
+simulations of bubble collapse do not see these relativistic effects.
+Notably, the simulations by Moss et al {{cite:f1b2e030-f35d-4219-bf05-f6ec7dffbb3d}} seem to
+suggest collapse, shock wave production, and re-expansion all without
+ever running into the van der Waals hard core. The fundamental reason
+for this is that the model equation of state they choose does not have
+a hard core for the bubble to bounce offFor low densities their equation of state is essentially perfect
+gas, for medium densities it becomes stiffer (and the speed of
+sound goes up), but for very high densities it again becomes softer,
+and there is no “maximum density”. One might think that their
+FORMULA , the density of solid air at zero Celsius, is a maximum
+density, but if you look carefully at their equation of state the
+gas is still compressible at this density; the pressure and speed
+of sound are both finite..
+Instead, there are a number of free parameters in their equation of
+state which are chosen in such a way as to make their equation of
+state stiff at intermediate densities, even if their equation of state
+is by construction always soft at van der Waals hard core
+densities. If the equation of state is made sufficiently stiff at
+intermediate densities then a bounce can be forced to occur long
+before hard core densities are encountered. Unfortunately, as
+previously mentioned, the experimental data and hydrodynamic analysis
+seem to indicate that hard core densities are achieved at
+maximum bubble compression.
+Given all this, the use of a relativistic sound speed
+is now physically justifiable, and the possibility of femtosecond
+changes in the refractive index is at least physically plausible
+(even though we cannot say that femtosecond changes in refractive
+index are guaranteed).
+So our new physical picture is this: The “in state” is a small
+sphere of gas, radius about 500 nm, with some refractive index
+FORMULA  embedded in water of refractive index FORMULA . There is a
+sudden femtosecond change in refractive index, essentially at
+constant radius, so the “out state” is gas with refractive index
+FORMULA  embedded in water of refractive index  FORMULAIn view of this femtosecond change of refractive index, we would
+be justified in making the sudden approximation for frequencies
+less than about a PHz. In this paper we do not make this
+approximation except when convenient in obtaining crude analytic
+estimates, but when we turn to dealing with finite-size effects in
+the companion paper {{cite:f1f158ce-494d-4d6f-8ab2-5579717eba8c}} the sudden approximation will
+be more than just a convenience: it will be absolutely essential
+in keeping the mathematical features of the analysis tractable..
+Thus our calculations will be complementary to Eberlein's calculations.
+She was driven to femtosecond timescales to fit the experimental
+data, but these femtosecond timescales then unfortunately undermined
+the adiabatic approximation used to derive her results. In contrast,
+we shall maintain a physically consistent calculation throughout.
+These arguments have now pushed dynamical Casimir effect models
+for SL into a rather constrained region of parameter space. We hope
+that these ideas will become experimentally testable in the near
+future.
+
+Bogolubov coefficients
+As a first approach to the problem of estimating the spectrum and
+efficiency of photon production we decided to study in detail the
+basic mechanism of particle creation and to test the consistency
+of the Casimir energy proposals previously described. With this
+aim in mind we studied the effect of a changing dielectric constant
+in a homogeneous medium. At this stage of development, we are not
+concerned with the detailed dynamics of the bubble surface, and
+confine attention to the bulk effects, deferring consideration of
+finite-volume effects to the companion paper {{cite:f1f158ce-494d-4d6f-8ab2-5579717eba8c}}.
+We shall consider two different asymptotic configurations. An
+“in” configuration with refractive index FORMULA , and an “out”
+configuration with a refractive index FORMULA . These two configurations
+will correspond to two different bases for the quantization of the
+field. (For the sake of simplicity we take, as Schwinger did, only
+the electric part of QED, reducing the problem to a scalar
+electrodynamics). The two bases will be related by Bogolubov
+coefficients in the usual way. Once we determine these coefficients
+we easily get the number of created particles per mode and from
+this the spectrum. Of course it is evident that such a model cannot
+be considered a fully complete and satisfactory model for SL. This
+present calculation must still be viewed as a test calculation in
+which basic features of the Casimir approach to SL are investigated.
+In the original version of the Schwinger model it was usual to
+simplify calculations by using the fact that the dielectric constant
+of air is approximately equal 1 at standard temperature and pressure
+(STP), and then dealing only with the dielectric constant of water
+(FORMULA ). We wish to avoid this temptation on the grounds that the
+sonoluminescent flash is known to occur within 500 picoseconds of
+the bubble achieving minimum radius. Under these conditions the gases
+trapped in the bubble are close to the absolute maximum density
+implied by the hard core repulsion incorporated into the van der Waals
+equation of state. Gas densities are approximately one million times
+atmospheric and conditions are nowhere near STP. For this reason we
+shall explicitly keep track of both initial and final refractive indices.
+We now describe a simple analytically tractable model for the
+conversion of zero point fluctuations (Casimir energy) into real
+photons. The model describes the effects of a time-dependent
+refractive index in the infinite volume limit. We shall show that
+for sudden changes in the refractive index the conversion of
+zero-point fluctuations is highly efficient, being limited only by
+phase space, whereas adiabatic changes of the refractive index lead
+to exponentially suppressed photon production.
+Defining the model
+Take an infinite homogeneous dielectric with a permittivity
+FORMULA  that depends only on time, not on space. The homogeneous
+(FORMULA ) Maxwell equations are
+FORMULA 
+FORMULA 
+while the source-free inhomogeneous (FORMULA ) Maxwell equations
+become
+FORMULA 
+FORMULA 
+Substituting into this last equation
+FORMULA 
+Suppose that FORMULA  depends on time but not space, then
+FORMULA 
+Now adopt a generalized Lorentz gauge
+FORMULA 
+Then the equations of motion reduce to
+FORMULA 
+We now introduce a “pseudo-time” parameter by defining
+FORMULA 
+That is
+FORMULA 
+In terms of this pseudo-time parameter the equation of motion is
+FORMULA 
+Compare this with equation (3.86) of Birrell and
+Davies {{cite:c4dea94f-5983-4127-b612-adbe7b484fdc}}. Now pick a convenient profile for
+the permittivity and permeability as a function of this pseudo-time.
+(This particular choice of time profile for the refractive index
+is only to make the problem analytically tractable, with a little
+more work it is possible to consider generic monotonic changes of
+refractive index and place bounds on the Bogolubov
+coefficients {{cite:21bed127-da9b-426e-b876-99f3da922dea}}.) Let us take
+FORMULA 
+Here FORMULA  represents the typical timescale of the change of the
+refractive index in terms of the pseudo-time we have just defined. We
+are interested in computing the number of particles that can be
+created passing from the “in” state (FORMULA , that is,
+FORMULA ) to the “out” state (FORMULA , that is,
+FORMULA ). This means we must determine the Bogolubov
+coefficients that relate the “in” and “out” bases of the quantum
+Hilbert space. Defining the inner product as:
+FORMULA 
+The Bogolubov coefficients can now be defined as
+FORMULA 
+Where FORMULA  and FORMULA  are solutions
+of the wave equation (REF ) in the remote past and remote future
+respectively. We shall compute the coefficient FORMULA  It is
+this quantity that is linked to the spectrum of the “out” particles
+present in the “in” vacuum, and it is this quantity that is related
+to the total energy emitted. With a few minor changes of notation we
+can just write down the answers directly from pages 60–62 of Birrell
+and Davies {{cite:c4dea94f-5983-4127-b612-adbe7b484fdc}}. Birrell and Davies were interested
+in the problem of particle production engendered by the expansion of
+the universe in a cosmological context. Although the physical model is
+radically different here the mathematical aspects of the analysis
+carry over with some minor translation in the details. Equations
+(3.88) of Birrell–Davies become
+FORMULA 
+FORMULA 
+FORMULA 
+(Here we emphasise that these frequencies are those appropriate to the
+“pseudo-time” FORMULA .) The Bogolubov FORMULA  and FORMULA 
+coefficients can be easily deduced from Birrell–Davies (3.92)+(3.93)
+FORMULA 
+Now square, using Birrell–Davies (3.95). We obtainNote that these are the Bogolubov coefficients for a scalar field
+theory. For QED in the infinite volume limit the two photon
+polarizations decouple into two independent scalar fields and these
+Bogolubov coefficients can be applied to each polarization state
+independently. Finite volume effects are a little trickier.
+FORMULA 
+We now need to translate this into physical time, noting that
+asymptotically, in either the infinite past or the infinite future,
+FORMULA , so that for physical
+frequencies
+FORMULA 
+FORMULA 
+Note that there is a symmetry in the Bogolubov coefficients under
+interchange of “in” and “out”.
+We also need to convert the timescale over which the refractive index
+changes form pseudo-time to physical time. To do this we define
+FORMULA 
+For the particular temporal profile we have chosen for analytic
+tractability this evaluates to
+FORMULA 
+After these substitutions, the (squared) Bogolubov coefficient becomes
+FORMULA 
+We now consider two limits, the adiabatic limit and the sudden limit,
+and investigate the physics.
+
+Sudden limit
+Take
+FORMULA 
+This corresponds to a rapidly changing refractive index. In terms of
+physical time this is equivalent to
+FORMULA 
+which can be simplified to yield
+FORMULA 
+So the sudden approximation is a good approximation for frequencies
+less than FORMULA , where we define
+FORMULA 
+The this shows that the frequency up to which the sudden approximation
+holds is not just the reciprocal of the timescale of the change in the
+refractive index: there is also a strong dependence on the initial and
+final values of the refractive indices. This implies that we can
+relax, for some ranges of values of FORMULA  and FORMULA , our figure of
+FORMULA  by up to a few orders of magnitude.
+Unfortunately the precise shape of the spectrum is heavily dependent
+on all the experimental parameters (FORMULA ). This
+discourages us from making any sharp statement regarding the exact
+value of the timescale required in order to fit the data.
+In the region where the sudden approximation holds the various
+FORMULA  functions in equation (REF ) can be replaced by their
+arguments FORMULA . Then
+FORMULA 
+More precisely
+FORMULA 
+For completeness we also give the unsquared Bogolubov
+coefficients evaluated in the sudden approximation:
+FORMULA 
+As expected, for FORMULA , we have FORMULA  and FORMULA .
+These result should be be compared with that obtained in the companion
+paper {{cite:f1f158ce-494d-4d6f-8ab2-5579717eba8c}}, where we first include finite volume
+effects and then consider the large-volume limit for dielectric
+bubbles in order to reproduce the original Schwinger estimate of
+photon production {{cite:79ba7eec-abec-42c3-97bf-a4c6404155bb}}, {{cite:039a961a-84dd-4c4f-92b0-0b5f859d7a53}}, {{cite:f16ab1cd-2714-46e0-a7f2-764ab6e79bbe}}, {{cite:501c188a-ec18-46da-a98f-bfb083f5573c}}, {{cite:0beeb76f-aea3-495c-af0b-a9fdbe5fd693}}, {{cite:93ceed48-d45e-4706-9cb3-b202cfce2276}}, {{cite:d11fe952-623d-432c-9c6c-74627636f054}}. It should
+also be compared with the discussion of Yablonovitch {{cite:fd140ea0-dab5-4219-a00a-1b28c1360dec}}
+[see particularly the formulae in the paragraph between equations
+(8) and (9)].
+
+Adiabatic limit
+Now take
+FORMULA 
+This corresponds to a slowly changing refractive index. In this limit
+the FORMULA  functions in the exact Bogolubov coefficient can be
+replaced with exponential functions FORMULA . Then
+FORMULA 
+More precisely
+FORMULA 
+In terms of physical time the condition defining the adiabatic limit
+reads
+FORMULA 
+The Bogolubov coefficient then becomes
+FORMULA 
+This implies exponential suppression of photon production for
+frequencies large compared to
+FORMULA 
+Eberlein's model {{cite:a1bf7de9-6aeb-48d6-866e-ab785be86a02}}, {{cite:ace9249f-b5a9-46d7-919f-a9813773948c}}, {{cite:b59cb898-a04b-48d8-b72e-3eb539f8af75}} for
+sonoluminescence explicitly makes the adiabatic approximation and this
+effect is the underlying reason why photon production is so small in
+that model; of course the technical calculations of Eberlein's model
+also include the finite volume effects due to finite bubble radius
+which somewhat obscures the underlying physics of the adiabatic
+approximation.
+
+The transition region
+Generally there will be a transition region between FORMULA  and FORMULA  over which the Bogolubov
+coefficient has a different structure from either of the asymptotic
+limits. In this transition region the Bogolubov coefficient is well
+approximated by a monomial in FORMULA  multiplied by an exponential
+suppression factor, but the e-folding rate in the exponential is
+different from that in the adiabatic regime. Fortunately, we will not
+need any detailed information about this region, beyond the fact that
+there is an exponential suppression.
+
+Spectrum
+The number spectrum of the emitted photons is
+FORMULA 
+Taking into account that FORMULA  this easily yields
+FORMULA 
+(Here the factor 2 is introduced by hand by taking into account
+the 2 photon polarizations). For low frequencies (where the sudden
+approximation is valid) this is a phase-space limited spectrum with
+a prefactor that depends only on the overall change of refractive
+index. For high frequencies (where the adiabatic approximation
+holds sway) the spectrum is cutoff in an exponential manner depending
+on the rapidity of the change in refractive index.
+A sample spectrum is plotted in figure REF . For
+comparison figure REF  shows a Planckian spectrum
+with the same exponential falloff at high frequencies, while the two
+curves are superimposed in figure REF .
+FIGURE 
+FIGURE 
+FIGURE 
+
+Lessons from this toy model
+Lesson 1: This is only a toy model, but we feel it adequately
+proves that efficient photon production occurs only in the sudden
+approximation, and that photon production is suppressed in the
+adiabatic regime. The particular choice of profile FORMULA 
+was merely a convenience, it allowed us to get analytic exact results,
+but it is not a critical part of the analysis. One might worry that
+the results of this toy model are specific to the choice of profile
+(REF ). That the results are more general can be
+established by analyzing general bounds on the Bogolubov coefficients,
+which is equivalent to studying general bounds on one-dimensional
+potential scattering {{cite:21bed127-da9b-426e-b876-99f3da922dea}}. We shall here quote only the key
+result that for any monotonic change in the dielectric constant the
+sudden approximation provides a strict upper bound on the magnitude of
+the Bogolubov coefficients {{cite:21bed127-da9b-426e-b876-99f3da922dea}}.
+Lesson 2: Eberlein's model for
+sonoluminescence {{cite:a1bf7de9-6aeb-48d6-866e-ab785be86a02}}, {{cite:ace9249f-b5a9-46d7-919f-a9813773948c}}, {{cite:b59cb898-a04b-48d8-b72e-3eb539f8af75}} explicitly
+uses the adiabatic approximation. For arbitrary adiabatic changes
+we expect the exponential suppression to still hold with FORMULA 
+now being some measure of the timescale over which the refractive
+index changes.
+Lesson 3: Schwinger's model for
+sonoluminescence {{cite:79ba7eec-abec-42c3-97bf-a4c6404155bb}}, {{cite:039a961a-84dd-4c4f-92b0-0b5f859d7a53}}, {{cite:f16ab1cd-2714-46e0-a7f2-764ab6e79bbe}}, {{cite:501c188a-ec18-46da-a98f-bfb083f5573c}}, {{cite:0beeb76f-aea3-495c-af0b-a9fdbe5fd693}}, {{cite:93ceed48-d45e-4706-9cb3-b202cfce2276}}, {{cite:d11fe952-623d-432c-9c6c-74627636f054}} implicitly uses
+the sudden approximation. It is only for the sudden approximation
+that we recover Schwinger's phase-space limited spectrum. For
+arbitrary changes the sudden approximation provides a rigorous
+upper bound on photon production. It is only in the sudden
+approximation that efficient conversion of zero-point fluctuations
+to real photons takes place. Though this result is derived here
+only for a particularly simple toy model we expect this part of
+the analysis to be completely generic. We expect that any mechanism
+for converting zero-point fluctuations to real photons will exhibit
+similar effects.
+
+Extensions of this toy model
+The major weaknesses of the toy model are that it currently includes
+neither dispersive effects nor finite volume effects. Including
+dispersive effects amounts to including condensed matter physics
+by letting the refractive index itself be a function of frequency.
+To do this carefully requires a very detailed understanding of the
+condensed matter physics, which is quite beyond the scope of the
+present paper. Instead, in this section we shall content ourselves with
+making order-of-magnitude estimates using Schwinger's sharp cutoff
+for the refractive index and the sudden approximation.
+The second issue, that of finite volume effects, is addressed more
+carefully in the companion paper {{cite:f1f158ce-494d-4d6f-8ab2-5579717eba8c}}. Finite volume
+effects are expected to be significant but not overwhelmingly large.
+From estimates of the available Casimir energy developed
+in {{cite:8ca136f2-18ca-4bc1-bcef-83928e2fe8be}}, the fractional change in available Casimir energy
+due to finite volume effects is expected to be of order FORMULA 
+which is approximately  FORMULAHere we have estimated the cutoff wavelength from the location of
+the peak in the SL spectrum. If anything, this causes us to overestimate
+the finite volume effects..
+Returning to dispersive issues: if the refractive indices
+were completely non-dispersive (frequency-independent), then the sudden
+approximation would imply infinite energy production. In the real
+physical situation FORMULA  is a function of FORMULA 
+and FORMULA  is a function of FORMULA . Schwinger's
+sharp momentum-space cutoff for the refractive index is equivalent,
+in this formalism, to the choice
+FORMULA 
+FORMULA 
+(More complicated models for the cutoff are of course possible at the
+cost of obscuring the analytic properties of the model) Although in
+general the two cutoff wavenumbers, FORMULA  and FORMULA  can be
+different, it is easy to show (using the delta function and the fact
+that FORMULA  when FORMULA ), that this is equivalent
+to a single common cutoff FORMULA . From
+equation (REF ), taking into account the two photon
+polarizations, one obtains
+FORMULA 
+As a consistency check, expression (REF ) has the desirable
+property that FORMULA  as FORMULA : That is, if there is no
+change in the refractive index, there is no particle production. In
+fact the computed Bogolubov coefficient is directly related to the
+physical quantities we are interested in
+FORMULA 
+FORMULA 
+FORMULA 
+FORMULA 
+and
+FORMULA 
+So we can now compute the spectrum, the number, and the total energy
+of the emitted photons.
+FORMULA 
+The number of emitted photons is then approximately
+FORMULA 
+So that for a spherical bubble
+FORMULA 
+It is important to note that the wavenumber cutoff FORMULA  appearing in
+the above formula is not equal to the observed wavenumber cutoff
+FORMULA . The observed wavenumber cutoff is in fact the upper
+wavelength measured once the photons have left the bubble and entered
+the ambient medium (water), so actually
+FORMULA 
+Thus
+FORMULA 
+The total emitted energy is approximately
+FORMULA 
+So the average energy per emitted photon is approximatelyThe maximum photon energy is FORMULA .
+FORMULA 
+Taking into account this extra factor we can now consider some numerical
+estimates based on our results.
+
+Some numerical estimates
+In Schwinger's original model he took FORMULA , FORMULA , FORMULA , with FORMULA  and FORMULA  {{cite:501c188a-ec18-46da-a98f-bfb083f5573c}}. Then FORMULA . Substitution of these
+numbers into equation (REF ) leads to an energy budget
+suitable for about three million emitted photons.
+By direct substitution in equation (REF ) it is easy to
+check that Schwinger's results can qualitatively be recovered also in
+our formalism: in our case we get about 1.8 million photons for
+the same numbers of Schwinger and about 4 million photons using
+the updated experimental figures FORMULA  and FORMULA .
+A sudden change in refractive index would indeed convert the most
+of the energy budget based on static Casimir energy calculations into
+real photons. This may be interpreted as an independent check on Schwinger's
+estimate of the Casimir energy of a dielectric sphere. Unfortunately,
+the sudden (femtosecond) change in refractive index required to
+get efficient photon production is also the fly in the ointment
+that kills Schwinger's original choice of parameters: The collapse
+from FORMULA  to FORMULA  is known to require
+approximately FORMULA , which is far too long a timescale
+to allow us to adopt the sudden approximation.
+In our new version of the model we have FORMULA  and take FORMULA  so
+that FORMULA . To get about one million
+photons we now need, for instance, FORMULA  and FORMULA ,
+or FORMULA  and FORMULA , or even FORMULA  and FORMULA , though many other possibilities could be
+envisaged. In particular, the first set of values could correspond to
+a change of the refractive index at the van der Waals hard core due to
+a sudden compression e.g., generated by a shock wave. In this
+framework it is obvious that the most favorable composition for the
+gas would be a noble gas since this mechanism would be most effective
+if the gas could be enormously compressed without being easily
+ionizableTo ionize Argon requires FORMULA 
+per atom. This energy could be provided either from a heat bath at
+this temperature (Bremsstrahlung) or from kinetic energy given by
+atomic collisions. Both of these possibilities require very extreme
+hypotheses..
+Note that the estimated values of FORMULA  and FORMULA  are extremely
+sensitive to the precise choice of cutoff, and the size of the light
+emitting region, and that the approximations used in taking the
+infinite volume limit underlying the use of our homogeneous dielectric
+model are uncontrolled. (The complications attendant on any attempt at
+including finite volume effects are sufficiently complex as to warrant
+being relegated to a separate technical paper. {{cite:f1f158ce-494d-4d6f-8ab2-5579717eba8c}}) We
+should not put to much credence in the particular numerical value of
+FORMULA  estimated by these means, but should content ourselves with
+this qualitative message: We need the refractive index of the contents
+of the gas bubble to change dramatically and rapidly to generate the
+photons. Compare this with the calculation and arguments presented by
+Yablonovitch {{cite:fd140ea0-dab5-4219-a00a-1b28c1360dec}}, who points out that ionization
+processes can and often do cause such sudden drops in the refractive
+index.
+As a final remark we stress that equation (REF ) and
+equation (REF ) are not quite identical. The volume term for
+photon production that we have just derived [equation
+(REF )] is of second order in FORMULA  and not of first
+order like equation (REF ). This is ultimately due to the
+fact that the interaction term responsible for converting the initial
+energy in photons is a pairwise squeezing operator
+(see {{cite:98336346-f44e-40eb-b433-e126d06d65fc}}). Equation (REF ) demonstrates that any
+argument that attempts to deny the relevance of volume terms to
+sonoluminescence due to their dependence on FORMULA  has to be
+carefully reassessed. In fact what you measure when the refractive
+index in a given volume of space changes is not directly the
+change in the static Casimir energy of the “in” state, but rather
+the fraction of this static Casimir energy that is converted into
+photons. We have just seen that once conversion efficiencies are taken
+into account, the volume dependence is conserved, but not the power in
+the difference of the refractive index. Indeed the dependence of
+FORMULA  on FORMULA , and the symmetry of the former under the
+interchange of “in” and “out” states, also proves that it is the
+amount of change in the refractive index and not its “direction”
+that governs particle production. This apparent paradox is easily
+solved by taking into account that the main source of energy is the
+acoustic field and that the amount of this energy actually converted
+in photons during each cycle is a very small fraction of the total
+acoustic energy.
+
+Estimating the number of photons
+Using the above as a guide to the appropriate starting point, we can
+now systematically explore the relationship between the in and out
+refractive indexes and the number of photons produced. Using
+FORMULA  we get
+FORMULA 
+This equation can be algebraically solved for FORMULA  as a function of
+FORMULA  and FORMULA . (It's a quadratic.) For FORMULA  emitted photons the
+result is plotted in figure (REF ). For any specified
+value of FORMULA  there are exactly two values of FORMULA  that lead to one
+million emitted photons. To understand the qualitative features of
+this diagram we consider three sub-regions.
+FIGURE 
+First, if FORMULA  then we can approximate
+FORMULA 
+This corresponds to the region near the origin, and we focus on this
+region in figure (REF ).
+FIGURE 
+Second, if FORMULA  then we can approximate
+FORMULA 
+This corresponds to the region near the FORMULA  axis, and we focus on this
+region in figure (REF ).
+FIGURE 
+Third, if FORMULA  then we can approximate
+FORMULA 
+so that
+FORMULA 
+This corresponds to the region near the asymptote FORMULA .
+Thus to get a million photons emitted from the van der Waals hard core
+in the sudden approximation requires a significant (but not enormous)
+change in refractive index. There are many possibilities consistent
+with the present model and the experimental data.
+
+Experimental features and possible tests
+Our proposal shares with other proposals based on the dynamical
+Casimir effect the main points of strength previously sketched. On
+the other hand we feel it important to stress that the model we have
+developed implies a much more complex and rich collection of physical
+effects due to the fact that photon production from vacuum is no
+longer due to the simple motion of the bubble boundary. The model
+indicates that a viable Casimir route to SL cannot avoid a “fierce
+marriage” with features related to condensed matter physics. As a
+consequence our proposal is endowed both with general characteristics,
+coming from its Casimir nature, and with particular ones coming from
+the details underlying the sudden change in the refractive index.
+Although the calculation presented above is just a “probe”, we
+can see that it is already able to make some general predictions
+that one can expect to see confirmed in a more complete approach.
+First of all the photon number spectrum the model predicts is not
+a black body. It is polynomial at low frequencies (FORMULA  in
+the infinite volume approximation of this paper), and in principle
+this difference can be experimentally detected. (The same qualitative
+prediction can be found in Schützhold et al. {{cite:12535a73-96e6-46b8-81f7-940054feb90f}}.)
+Moreover the spectrum is expected to be a power law dramatically
+ending at frequencies corresponding to the physical wave-number
+cutoff FORMULA  (at which the refractive indices go to 1). This cutoff
+implies the absence of hard UV photons and hence, in accordance
+with experiments, the absence of dissociation phenomena in the
+water surrounding the bubble.
+It is the sudden approximation adopted in this paper that makes it
+possible to mimic the experimentally observed spectrum. For either a
+rise in refractive index from 1 to 12, or a drop in refractive
+index from FORMULA  to 1 one can produce approximately one
+million photons with frequency mainly in the visible range. The
+quasi-thermal nature of the emitted photons can be explained by the
+squeezed nature of the photon pairs that are generically created via
+dynamical Casimir effect (see reference {{cite:98336346-f44e-40eb-b433-e126d06d65fc}}). Single-photon
+measurements are then thermal but the core of the bubble is not
+required to achieve the tremendous physical temperatures envisaged by
+other models. The apparent temperature measured in single-photon
+observables can be instead linked to the degree of squeezing of the
+photon-pairs. As it will be explained in {{cite:98336346-f44e-40eb-b433-e126d06d65fc}}, two-photon
+observables do not exhibit the same thermal statistics, and therefore
+measurements of suitable two-photon observables provide a useful
+diagnostic for SL models based on the dynamical Casimir effect. This
+is a general feature of all models based on photon creation from the
+QED vacuum and hence it can be used as a definitive test of the
+presence of a dynamical Casimir effect.
+In this type of model, the flash of photons is predicted to occur at
+the end of the collapse, the scale of emission zone is of the order of
+FORMULA , and the timescale of emission is very short (with a
+rise-time of the order of femtoseconds, though the flash duration may
+conceivably be somewhat longer It would be far too naive to
+assume that femtosecond changes in the refractive index lead to pulse
+widths limited to the femtosecond range. There are many condensed
+matter processes that can broaden the pulse width however rapidly it
+is generated. Indeed, the very experiments that seek to measure the
+pulse width {{cite:210e1e40-b6cd-4dc2-b99d-a09c5a71369d}}, {{cite:f61a4c2e-484c-4cd3-91a9-5cc495ab9f09}} also prove that when calibrated with
+laser pulses that are known to be of femtosecond timescale, the SL
+system responds with light pulses on the picosecond timescale..
+These are points in substantial agreement with observations. In the
+infinite volume limit the photons emerge in strictly back-to-back
+fashion. In contrast, for a finite volume bubble we have shown
+in {{cite:f1f158ce-494d-4d6f-8ab2-5579717eba8c}} that the size of the emitting region constrains
+the model to low angular momentum for the out states. This is a very
+sharp prediction that is in principle testable with a suitable
+experiment devoted to the study of the angular momentum decomposition
+of the outgoing radiation.
+Regarding other experimental dependencies, such as the temperature of
+the water or the role of noble gases, we can give general arguments
+but a truly predictive analysis can be done only after focussing on a
+specific mechanism for changing the refractive index.
+For instance, the presence of noble gas is likely to change
+solubilities of gas in the bubble, and this can vary both bubble
+dynamics and the sharpness of the boundary. Alternatively, a small
+percentage of noble gas in air can be very important in the behavior
+of its dielectric constant at high pressure. Indeed, while small
+admixtures of noble gas will not significantly alter the
+zero-frequency refractive index, from the Casimir point of view the
+behaviour of the refractive index over the entire frequency range up
+to the cutoff is important.
+Finally, the temperature of water can instead affect the dynamics of
+the bubble boundary by influencing the stability of the bubble,
+changing either the solubility of air in water or the surface tension
+of the latter. As observed by
+Schwinger {{cite:79ba7eec-abec-42c3-97bf-a4c6404155bb}}, {{cite:039a961a-84dd-4c4f-92b0-0b5f859d7a53}}, {{cite:f16ab1cd-2714-46e0-a7f2-764ab6e79bbe}}, {{cite:501c188a-ec18-46da-a98f-bfb083f5573c}}, {{cite:0beeb76f-aea3-495c-af0b-a9fdbe5fd693}}, {{cite:93ceed48-d45e-4706-9cb3-b202cfce2276}}, {{cite:d11fe952-623d-432c-9c6c-74627636f054}}, temperature can also
+affect the dielectric cutoff, and so temperature dependence of SL is
+quite natural in Schwinger-like approaches.
+
+Discussion and Conclusions
+The present paper presents calculations of the Bogolubov coefficients
+relating the two QED vacuum states appropriate to changes in the
+refractive index of a dielectric bubble. We have verified by explicit
+computation that photons are produced by rapid changes in the
+refractive index, and are in agreement with Schwinger in that QED vacuum
+effects remain a viable candidate for explaining SL. However, some
+details of the particular model considered in the present paper are
+somewhat different from that originally envisaged by Schwinger. Based
+largely on the fact that efficient photon production requires
+timescales of the order of femtoseconds we were led to consider rapid
+changes in the refractive index as the gas bubble bounces off the van
+der Waals hard core. It is important to realize that the speed of sound
+in the gas bubble can become relativistic at this stage.
+A key lesson learned from this paper is that in order that the
+conversion of zero-point fluctuations to real photons be relevant for
+sonoluminescence we would want the sudden approximation to hold for
+photons all the way out to the cutoff (FORMULA ; corresponding
+to a period of FORMULA ). That's a
+femtosecond timescale. This implies that if conversion of
+zero-point fluctuations to real photons is a significant part of the
+physics of sonoluminescence then the refractive index must be changing
+significantly on femtosecond timescales. Thus the changes in
+refractive index cannot be just due to the motion of the bubble wall.
+(The bubble wall is moving at most at Mach 4 {{cite:67697046-b2c3-47f1-87d0-2cb3377a8f8e}},
+for a FORMULA  bubble this gives a collapse timescale of
+FORMULA  seconds, about 100 picoseconds.) In this regard, the
+comments of Yablonovitch {{cite:fd140ea0-dab5-4219-a00a-1b28c1360dec}} are particularly
+useful. Yablonovitch points out that, for example, sudden ionization
+of a gas can lead to substantial changes in the refractive index on
+the sub-picosecond timescale. Nevertheless we do not necessarily
+commit ourselves to ionization as being the relevant process in
+sonoluminescence, and are quite content with any rapid change in
+refractive index, however generated.
+This suggests a slightly different physical model from Schwinger's
+original suggestion: Certainly the Casimir energy changes as the
+bubble collapses, but it is only in the sudden approximation that we
+can justify converting almost all of the change in Casimir energy to
+real photons. We thus suggest that one should not be focusing on the
+actual collapse of the bubble, but rather the way in which the
+refractive index changes as a function of space and time: As the
+bubble collapses the gases inside are compressed, and although the
+refractive index for air (plus noble gas contaminants) is 1 at STP it
+should be no surprise to see the refractive index of the trapped gas
+undergoing major changes during the collapse process—especially near
+the moment of maximum compression when the molecules in the gas bounce
+off the van der Waals' hard core repulsive potential.
+Thus attempts at using the dynamical Casimir effect to explain SL are
+now much more tightly constrained than previously. We have shown that
+any plausible model using the dynamical Casimir effect to explain SL
+must use the sudden approximation, and must have very rapid changes in
+the refractive index with a timescale of femtoseconds.
+If the light is being emitted only at the core bounce, at FORMULA , then we can get the timescales we want
+(femtoseconds) without superluminal effects, but we are rather limited
+in the amount of angular momentum we can get out. Of course, the
+present model is nowhere near a complete theory: Presently we can
+relate only the asymptotic “in” states to the asymptotic “out”
+states via these Bogolubov coefficients. A complete theory of SL will
+need to address much more specific timing information and this
+will require a fully dynamical approach (from the QFT point of view)
+and a deeper understanding (from the condensed matter side) of the
+precise spatio-temporal dependence of the refractive index as the
+bubble collapses. In absence of such a more detailed description the
+present calculation is a useful first step. Moreover it allows us to
+specify certain basic “signatures” of the effect that may be
+amenable to experimental test. To this end we have developed use of
+two-photon statistics as a diagnostic for the dynamical Casimir
+effect {{cite:98336346-f44e-40eb-b433-e126d06d65fc}}. In this paper we have addressed the basic
+physical scenario; all technical complications due to finite volume
+effects are relegated to a companion paper {{cite:f1f158ce-494d-4d6f-8ab2-5579717eba8c}}. We feel
+that, as an explanation for sonoluminescence, we have now driven
+models based on the dynamical Casimir effect into a relatively small
+region of parameter space, and are hopeful of experimental
+verification (or falsification) in the not too distant future.
+Stripped to its fundamentals, we therefore view the Schwinger
+mechanism as this: Bubble collapse leads to changes in the
+spatio-temporal distribution of the refractive index, both via
+physical movement of the dielectrics, and through the time-dependent
+properties of the dielectrics. Changes in the refractive index drive
+changes in the distribution of zero-point modes, and this change in
+zero-point modes is reflected in real photon production.
+In light of these observations we think that one can also derive a
+general conclusion about the long-standing debate on the actual value
+of the static Casimir energy and its relevance to sonoluminescence:
+Sonoluminescence cannot be directly related to the static Casimir
+effect. (The static Casimir effect is relevant only insofar as it
+gives an approximate value for the energy budget). We hope that the
+investigation of this paper will convince everyone that only models
+dealing with the actual mechanism of particle creation (a mechanism
+which must have the qualities we have discussed) will be able to
+eventually prove or disprove the pertinence of the physics of the
+quantum vacuum to Sonoluminescence. This implies that continuing
+debate about the static Casimir effect can be now seen as marginal and
+irrelevant with respect to the real physical problems of SL.
+In conclusion the present calculation (limited though it may be)
+represents an important advance: There now can be no doubt that
+changes of the refractive index of the gas inside the bubble lead to
+production of real photons—the controversial issues now move to
+quantitative ones of precise fitting of the observed experimental
+data. We are hopeful that more detailed models and data fitting will
+provide better explanations of the details of the SL effect, and
+specifically wish to assert that models based on the QED vacuum remain
+viable.
+
+Acknowledgments
+This research was supported by the Italian Ministry of Science (DWS,
+SL, and FB), and by the US Department of Energy (MV). MV particularly
+wishes to thank SISSA (Trieste, Italy) and Victoria University (Te
+Whare Wananga o te Upoko o te Ika a Maui; Wellington, New Zealand) for
+hospitality during various stages of this work. SL wishes to thank
+Washington University for its hospitality. DWS and SL wish to thank
+E. Tosatti for useful discussions. SL wishes to thank M. Bertola and
+B. Bassett for comments and suggestions. SL also wishes to thank
+R. Schützhold and G. Plunien for illuminating discussion on the
+relation between their results and Eberlein's calculations. All
+authors wish to thank G. Barton for his interest and encouragement.
+Finally, the comments and interest of K. Milton are appreciated.

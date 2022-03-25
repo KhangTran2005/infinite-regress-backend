@@ -1,0 +1,368 @@
+
+
+
+
+
+Non local Thirring model with spin flipping interactionsAníbal IucciFORMULA , Kang LiFORMULA  and Carlos M. Naón FORMULA
+We extend a non local and non covariant version of the Thirring model in order to
+describe a many-body system with spin-flipping interactions By introducing a model
+with two fermion species we are able to avoid the use of non abelian bosonization
+which is needed in a previous approach. We obtain a bosonized expression for the
+partition function, describing the dynamics of the collective modes of this system. By
+using the self-consistent harmonic approximation we found a formula for the gap of the
+spin-charge excitations as functional of arbitrary electron-electron potentials.
+
+Keywords field theory, non local, functional
+bosonization, many body, two dimensional, Luttinger liquid
+Pacs:
+11.10.Lm, 05.30.Fk
+La Plata-Th 00/14
+—————————————————————
+FORMULA  Instituto de Física La Plata, Departamento de
+Física, Facultad de Ciencias Exactas, Universidad Nacional de La Plata. CC 67,
+1900 La Plata, Argentina.
+FORMULA  Department of Physics, Zhejiang University, Hangzhou,
+310027, P.R. of China.
+emails: iucci@venus.fisica.unlp.edu.ar, kangli@mail.hz.zj.cn,
+naon@venus.fisica.unlp.edu.ar.
+
+Introduction
+In recent years there has been a surge of activity in the study of low-dimensional
+field theories. In particular, research on the one-dimensional (1d) fermionic gas has
+attracted a lot of attention. An interesting aspect of this system is the possibility
+of having a deviation from the usual Fermi-liquid behavior. This phenomenon is known
+as Luttinger-liquid behavior, characterized by spin-charge separation and by non
+universal (interaction dependent) power-law correlation functions {{cite:340195ac-64b0-4bf8-9786-e73ca0e03ab1}}. The
+simplest theoretical framework that presents this feature is the Tomonaga-Luttinger
+(TLM) model {{cite:2de8b1ea-091a-4f30-9bbc-f826dcf2004e}}, a many-body system of right and left-moving particles
+interacting through their charge densities. In recent papers {{cite:97e93420-a5dc-4d89-9114-b584fdfed2e1}} {{cite:dae05ea2-0c71-48aa-8417-b3b9740f582a}}
+{{cite:342b39ad-18f8-4eb3-a089-e52834a38efa}} an alternative, field theoretical approach was developed to consider this
+problem. In these works a non local and non covariant version of the Thirring model
+was introduced, in which the fermionic densities and currents are coupled through
+bilocal, distance-dependent potentials. The resulting non local Thirring model (NLTM)
+contains the TLM as a particular case. Although it provides an elegant framework to
+analyze the 1d many-body problem, as it stands it is not very practical to consider
+magnetic properties of Luttinger liquids. This is so because in the original
+formulation of NLTM {{cite:97e93420-a5dc-4d89-9114-b584fdfed2e1}}, the description of spin-flipping (SF) processes,
+based on non abelian bosonization, is quite involved. In this paper we show how to
+circumvent this problem by introducing a Thirring-like model with two fermion species.
+To this end we generalize the two-fermion model of Ref. {{cite:7bae528d-92e9-49d3-b747-d08c5ca8a156}}, originally
+built as a local and covariant theory, to the case in which the interactions between
+fermionic currents are mediated by bilocal functions. From the condensed matter
+standpoint, our work can also be viewed as an extension of the work of Grinstein,
+Minnhagen and Rosengren {{cite:1d7fad3f-97c8-4748-b132-f20deda9e786}} where a simplified version of the SF problem
+(contained in our model) was first considered. Our procedure allows to get a bosonized
+vacuum to vacuum functional by carefully extending previous formulations of massive
+{{cite:da037d01-291c-4121-8bd4-be3a21bdab4e}} {{cite:f68a829a-1471-47f8-b1cc-4149db940ba0}} and massive-like {{cite:a6ea19f2-d31e-4a5b-9961-fe88fbb089f0}} models. The paper is
+organized as follows. In Section 2 we introduce the above mentioned non local
+two-fermion model and explain its relationship to previous non Abelian description. In
+Section 3 we establish an equivalence between the initial fermionic partition function
+and the one corresponding to a two-boson non local extension of the sine-Gordon model.
+In Section 4 we employ a non local version of the self-consistent harmonic
+approximation (SCHA) {{cite:3dddbd40-d1f1-494d-a209-b99ee6667200}} in order to analyze the spectrum of the spin-density
+modes. In particular we give, within this approximation, a closed formula for the gap
+as functional of the non-contact forward-scattering (no SF) potentials. Finally, in
+Section 5, we summarize the main points of our investigation and gather our
+conclusions. In the Appendix we show how to compute the gap of the spin-charge sector
+by means of the harmonic approximation.
+
+The model and its relationship to a previous non Abelian description
+In this Section we introduce a non local version of the Thirring model which incorporates
+electronic spin by considering two fermion species, where each species represents a
+spin state. Our initial (Euclidean) action is
+FORMULA 
+FORMULA a - g22d2x d2y  ja(x)
+Vab()(x-y)jb(y)
+- gsd2x d2y 1 (x)2
+(x)U()(x-y)2(y)1(y)
+
+where FORMULA , with FORMULA , the currents FORMULA  are the usual
+fermion currents
+FORMULA 
+and the matrices FORMULA  have the form
+FORMULA 
+where FORMULA  and FORMULA  are coupling potentials related to
+Solyom's {{cite:4c992a7c-9ad7-4277-8fa2-cb71b6a03e65}} FORMULA  and FORMULA  forward scattering couplings. These functions
+are related to current-current interactions which do not flip the spins. The functions
+FORMULA  are the couplings governing SF processes. We have kept the constants
+FORMULA  and FORMULA  in order to facilitate comparison with local versions of this model. For
+instance, the case FORMULA  and FORMULA  corresponds to
+two decoupled, usual Thirring models. The action (REF ) has manifest FORMULA 
+chiral symmetry, i.e., it is invariant under the transformation FORMULA , FORMULA .
+Fermion spin conservation is also preserved in this theory.
+The theory defined above is similar to the one described by ZJ {{cite:7bae528d-92e9-49d3-b747-d08c5ca8a156}}.
+There are, however, two important differences with that model. First of all, our model
+takes into account the possible long-range nature of the potentials, whereas ZJ's
+model is local. On the other hand ZJ's model does not include FORMULA -like terms
+associated to scattering processes involving just one fermionic (left or right)
+branch, neither for SF nor for ordinary diagrams.
+Concerning the relationship of our action to previous condensed-matter inspired
+models, we should mention the pioneering works of Luther and Emery
+{{cite:ae6fd8af-c30e-4041-bfb3-986633d48d0b}}, and Grinstein, Minnhagen and Rosengren {{cite:1d7fad3f-97c8-4748-b132-f20deda9e786}}. The first
+authors introduced the so called backscattering model. Although this system has in
+principle no SF, in the local limit their backscattering diagrams coincide with the
+ones of spin-changing processes. Grinstein et al. included from the beginning SF
+interactions taking into account a Coulombian potential. Thus, their model is non
+local, but they took the same potential for all kinds of diagrams (SF and ordinary).
+Besides, in order to establish the equivalence between their theory and a Coulomb gas
+system the authors considered again a local limit. These authors did not include
+FORMULA -like terms either.
+Let us now show that the action (REF ) can be written in an alternative way.
+Consider the U(N) currents
+FORMULA 
+with
+FORMULA 
+FORMULA  being the SU(N) generators normalized according to
+FORMULA 
+With these currents, one can define a non local, chiral invariant, U(N) Gross-Neveu
+model, with action given by
+FORMULA 
+FORMULA - d2x d2y J(x)()(x-y)J(y),
+,=0,1,...,N2-1
+where FORMULA  are FORMULA  symmetric matrices that weight the
+interaction. Taking FORMULA , the actions (REF ) and (REF ) are
+equal provided that the matrices FORMULA  can be written as
+FORMULA 
+This non Abelian model was considered in Ref. {{cite:97e93420-a5dc-4d89-9114-b584fdfed2e1}}. The bosonized effective
+action obtained by non Abelian bosonization led to a WZW functional, which was not
+easy to deal with in order to analyze the physical spectrum. In the next Sections we
+will show how this task is greatly simplified by starting from (REF )
+instead of (REF ) and combining path-integral Abelian
+bosonization and the self consistent harmonic approximation.
+
+The equivalent bosonic action
+We start by considering the partition function
+FORMULA 
+where FORMULA  is a normalization constant. It is convenient to write
+FORMULA 
+where
+FORMULA 
+FORMULA a - g22d2x d2y  ja(x) Vab()(x-y)jb(y)
+and
+FORMULA 
+The reason for this separation lies on the fact that FORMULA  contains all the
+interaction terms that have separate chiral invariance for each species of fermions
+(spin states). They are Thirring-like interactions and will be treated in much the
+same way as the massless Thirring action, i.e. they will be transformed into free, non
+local action terms. Concerning the second term, it has no separate chiral invariance,
+and will be expanded in perturbative series like the mass term in the Thirring model.
+It is easy to show that the introduction of auxiliary vector fields FORMULA  allows
+to write
+FORMULA 
+FORMULA + g FORMULAFORMULA a)a - S[A] -
+Sflip],
+where FORMULA  is a new constant (See {{cite:97e93420-a5dc-4d89-9114-b584fdfed2e1}} for details) and
+FORMULA 
+with FORMULA  defined through the following equation:
+FORMULA 
+We now decompose FORMULA  in longitudinal and transverse pieces
+FORMULA 
+where FORMULA  and FORMULA  are scalar fields. We also perform a change in
+the fermionic fields
+FORMULA 
+FORMULA 
+whose Jacobian, as it is well-known, yields a kinetic term for the FORMULA 
+fields. One thus gets
+FORMULA 
+being FORMULA  a sum of three pieces:
+FORMULA 
+where
+FORMULA 
+FORMULA 1 + 2 i FORMULAFORMULA 2),
+FORMULA 
+and FORMULA  is the same SF interaction term already defined in equation
+(REF ). Concerning this last term, from now on we shall restrict our study to
+the case of contact SF interactions:
+FORMULA 
+and by performing a Fierz transformation followed by the chiral change defined in equations (REF ) and
+(REF ), we can write it in the form
+FORMULA 
+Now we are ready to make an expansion of the partition function taking FORMULA  as
+perturbative parameter:
+FORMULA 
+where FORMULA  means v.e.v. in a theory with action FORMULA . Only
+mean values involving an equal number of factors of the form
+FORMULA  and FORMULA  (no sum
+over repeated indices is implied in these expressions) are non zero, and thus the
+partition function can be written in the form
+FORMULA 
+The next step is to introduce two local massless scalar fields FORMULA 
+to be associated with the free fermions FORMULA  and FORMULA . This trick allows to
+replace the fermionic mean values in the above equation by their ultraviolet
+regularized bosonic counterparts, which yields
+FORMULA 
+We now use the fact that the infrared divergences of the FORMULA  field's
+propagator provide a neutrality condition for v.e.v's of vertex operators. This allows
+to rearrange the perturbative series in a non-trivial way. One is then led to the
+completely bosonized action  FORMULA
+FORMULA 
+At this point it is interesting to observe that there is a set of changes of variables that allows to express the action
+in a very suggestive way. Indeed, writing
+FORMULA 
+FORMULA 
+FORMULA 
+FORMULA 
+where the plus(minus) sign corresponds to the pair
+FORMULA (FORMULA ), one sees that the field FORMULA 
+completely decouples from the others and can then be integrated, and the
+bosonized action becomes
+FORMULA 
+where
+FORMULA 
+and
+FORMULA 
+with the functions FORMULA  defined as
+FORMULA 
+This, in turn, leads to the factorization of the partition function in the form
+FORMULA . This result is a clear manifestation of the so called spin-charge
+separation, a typical feature of Luttinger liquids {{cite:ae6fd8af-c30e-4041-bfb3-986633d48d0b}} {{cite:1d7fad3f-97c8-4748-b132-f20deda9e786}}.
+FORMULA  is the partition function associated to charge density excitations. It
+coincides with the spinless NLTM studied in reference {{cite:97e93420-a5dc-4d89-9114-b584fdfed2e1}}. FORMULA  describes
+spin-density excitations. The action FORMULA  corresponds to a certain non local
+sine-Gordon model similar to the one previously considered in {{cite:a6ea19f2-d31e-4a5b-9961-fe88fbb089f0}}. In the
+next Section we shall derive an expression for the gap of its spectrum.
+Since our main goal is to analyze the spin-charge sector, from now on we shall focus
+our attention to FORMULA . Going to momentum space (with the exception of the cosine
+term, whose transformed expression is not very illuminating) one has
+FORMULA 
+with
+FORMULA 
+FORMULA 
+FORMULA 
+In the above expressions FORMULA , FORMULA  and FORMULA  are the Fourier
+transforms of FORMULA , FORMULA  and FORMULA  respectively.
+
+The spectrum of the spin-charge sector
+In order to obtain the approximate spectrum for the spin-charge sector of our model,
+we will introduce a non local version of the self-consistent harmonic approximation
+{{cite:3dddbd40-d1f1-494d-a209-b99ee6667200}}. Basically, this amounts to replacing the so called true action
+(REF ) by a trial action in which the cosine term is approximated
+as
+FORMULA 
+where the parameter FORMULA  of the trial action can be variationally determined (See
+the Appendix for details). Once this is done, it is straightforward to obtain the
+spectrum. Indeed, going to momentum space, and back to real frequencies,
+FORMULA , FORMULA , the following equation is obtained:
+FORMULA 
+Our result for FORMULA  is
+FORMULA 
+where
+FORMULA 
+Equation (REF ) is one of our main results. It gives, within the self-consistent
+harmonic approximation, a closed expression for the gap as functional of the
+potentials FORMULA .
+At this stage it is interesting to consider the contact potential given by
+FORMULA 
+In this case FORMULA  is infinite (See Appendix). After a suitable regularization one
+obtains
+FORMULA 
+This equation can be easily solved for FORMULA  and
+FORMULA . The first case corresponds to FORMULA , and the result is
+FORMULA 
+Note that for the value FORMULA  the gap posses a linear dependence on the coupling.
+It is interesting to observe that for this value, the action FORMULA  (see Appendix)
+corresponds to a free massive fermion, with mass proportional to FORMULA . This is analog
+to the behavior found on the Luther-Emery line {{cite:ae6fd8af-c30e-4041-bfb3-986633d48d0b}}. Despite this
+similarity, the position of the line in our model differs slightly from theirs, but
+since the models are not exactly equal such a disagreement is not unexpected. However,
+we feel that the precise connection between both systems deserves a closer analysis
+that will be undertaken in a future work.
+The second case corresponds to FORMULA , and we obtain
+FORMULA 
+which is independent of FORMULA . This is expected because in this limit the contribution
+of the ordinary (without SF) terms are completely negligible.
+Let us stress that our gap equation (REF ) provides a new tool to check the
+validity of different potentials {{cite:91098869-2245-453b-898a-e5910992c682}}. This is interesting because in
+condensed-matter applications the assumption of short-range electron-electron
+interactions works well for conductors in which the screening between adjacent chains
+reduces the range of interactions within one chain {{cite:dc3bc3d3-eda7-4ff8-9b8d-68b4022d5b37}}. On the other hand,
+as the dimensionality of the system decreases charge screening effects are expected to
+become less important and the long-range interaction between electrons seems to play a
+central role in determining the properties of the system. This assertion seems to be
+confirmed by experiments in GaAs quantum wires {{cite:d5619a70-081f-48bc-bd0f-7f151462e1ac}} and quasi-1d
+conductors {{cite:14306a97-a924-45ea-af4a-f2aa6934667e}}. We hope to report on numerical solutions of the gap
+equations for long-range potentials in a future contribution.
+
+Summary
+In this work we have improved a non local version of the Thirring model which provides
+a tractable field-theoretical description of Luttinger liquids with spin. Indeed, in
+the context of non local Thirring-like theories previous treatments of SF interactions
+led to an involved non Abelian model (See for instance {{cite:97e93420-a5dc-4d89-9114-b584fdfed2e1}}). Specifically we
+have built an action based on two fermion species which allows to take into account SF
+interactions in an elegant and simpler way. Although our model was inspired by the one
+considered in Ref.{{cite:7bae528d-92e9-49d3-b747-d08c5ca8a156}}, it includes interaction diagrams not contained
+in that previous work (the so called FORMULA  diagrams in Solyom's terminology
+{{cite:4c992a7c-9ad7-4277-8fa2-cb71b6a03e65}}). Besides, the theory we present has general bilocal potentials
+governing the interactions that do not flip spins. We parametrized this potentials in
+terms of the functions FORMULA  and FORMULA  which become associated to charge-density and
+spin-density dynamics respectively, once the spin-charge separation is made manifest
+after suitable changes of variables (See equations (REF ) and (REF )).
+On the other hand, we could not get closed formulae for arbitrary distance-dependent
+SF potentials. Thus our analysis is only valid for local (contact) SF interactions.
+However, we were able to keep the general distance dependence of the ordinary (no SF)
+potentials up to the end of our computations. Under these conditions we got an
+effective bosonic action whose charge-density piece coincides with previously obtained
+descriptions of the forward-scattering spinless problem ({{cite:97e93420-a5dc-4d89-9114-b584fdfed2e1}}. Concerning the
+more interesting spin-charge sector, we obtained, within the framework of the SCHA, a
+general equation which allows to have the gap in terms of arbitrary electron-electron
+potentials. Using this formula we could, for instance, estimate the effect of a
+long-range interaction on the gap.
+
+Acknowledgements
+This work was supported by the Consejo Nacional de Investigaciones Científicas y
+Técnicas (CONICET) and Universidad Nacional de La Plata (UNLP), Argentina. KL has
+benefited from a fellowship of CONICET and the Third World Academy of Sciences (TWAS).
+
+Appendix: details of the SCHA method
+We shall give an sketch of the SCHA method. One usually starts from a partition
+function
+FORMULA 
+where FORMULA  is a generic integration measure. An elementary manipulation
+leads to
+FORMULA 
+for any trial action FORMULA . Now, by means of the property
+FORMULA 
+for FORMULA  real, and taking natural logarithm in equation (REF ), we
+obtain Feynman's inequality {{cite:bd27e2ff-103a-43e2-b6a0-88ae1682a8f0}}
+FORMULA 
+In our case, the true action is the corresponding to the spin-charge dynamics, FORMULA .
+However, before proceeding to the actual computation it is convenient to consider
+still another change of variables which diagonalizes the cuadratic part of FORMULA . This
+change is given by
+FORMULA 
+FORMULA 
+FORMULA 
+and the resulting action, reads
+FORMULA 
+where one sees that the FORMULA  and FORMULA  fields become completely decoupled from
+FORMULA . Then it becomes apparent that the FORMULA -dependent piece is the relevant one to
+consider in the present approximation. In other words, the relevant true and trial
+actions are given by
+FORMULA 
+FORMULA 
+where
+FORMULA 
+The parameter FORMULA  can be determined by maximizing the right hand side of equation
+(REF ). In order to achieve this goal we first write
+FORMULA 
+
+where the operator FORMULA  is defined, in Fourier space, by
+FORMULA 
+It is then easy to get
+FORMULA 
+where FORMULA  is the volume (infinite) of the whole space FORMULA . On the
+other hand, it is straightforward to compute FORMULA , by following,
+for instance, the steps explained in ref. {{cite:a6ea19f2-d31e-4a5b-9961-fe88fbb089f0}}. The result is
+FORMULA 
+Finally we can gather all the terms, and write them as
+FORMULA 
+where we have defined the integrals
+FORMULA 
+FORMULA 
+with the formal properties
+FORMULA 
+FORMULA 
+Now extrimizing expression (REF ) with respect to FORMULA , and
+assuming that FORMULA  is not zero (a condition that holds for most realistic
+potentials), we finally obtain the gap equation
+FORMULA 

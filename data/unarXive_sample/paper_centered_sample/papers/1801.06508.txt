@@ -1,0 +1,82 @@
+
+colorlinks=true,
+pdftitle=RPi Beam Profiler,
+pdfauthor=James Keaveney,
+linkcolor=blue,
+citecolor=blue,
+urlcolor=blue
+Automated translating beam profiler for in-situ laser beam spot-size and focal position measurements
+2019/02/18 19:15:02
+James Keaveney
+james.keaveney@durham.ac.uk
+Joint Quantum Centre (JQC) Durham-Newcastle, Department of Physics, Durham University, South Road, Durham, DH1 3LE, United Kingdom
+We present a low-cost, high-resolution solution for automated laser-beam profiling with axial translation. The device is based on a Raspberry Pi, Pi Noir CMOS camera, stepper motor and commercial translation stage. We also provide software to run the device. The CMOS sensor is sensitive over a large wavelength range between 300-1100 nm, and can be translated over 25 mm along the beam axis. The sensor head can be reversed without changing its axial position, allowing for a quantitative estimate of beam overlap with counter-propagating laser beams. Although not limited to this application, the intended use for this device is the automated measurement of the focal position and spot-size of a Gaussian laser beam. We present example data of one such measurement to illustrate device performance.
+Introduction
+
+There are a vast number of situations in experimental atomic and optical physics where precise measurement of laser beam profiles is required, from measurements of absolute beam intensity in determining atomic transition dipole matrix elements {{cite:80ad2b35-77bf-45dc-b03d-9a9055097cef}}, evaluating trap depths in optical dipole traps {{cite:493837f2-38bc-413f-9347-f5114168cca5}} and laser beam shaping applications {{cite:d06e137c-28a3-45bf-a924-93d68c613737}}, amongst others.
+For measuring the focal spot-size of a beam in one dimension, the traditional method is the knife-edge technique {{cite:fd14557f-1c02-4804-9002-73531265b574}}, {{cite:929536d6-8484-472b-86b0-869b18b1b6f2}}, {{cite:97fc3204-5856-4d89-8429-330d51fff46d}}, {{cite:797f443a-603e-417e-b24b-010b81ace568}}, where the relative transmission is recorded as a sharp edge is moved through the cross-section of the beam. The knife-edge method has a resolution that depends on the quality of the knife-edge and can be as low as 1 FORMULA m {{cite:d06e137c-28a3-45bf-a924-93d68c613737}}, but finding the focal position using this method is a very time consuming and repetitive task, especially if more than one beam axis is to be measured.
+A labour-saving alternative is to use a CMOS image sensor to map the 2D spatial profile of the laser beam. This approach is widely used; there have been recent demonstrations using a webcam {{cite:1894f37d-2af0-4486-a116-244d6b09ba91}} or the camera built into a smart phone device for this application {{cite:bf4f3409-357e-4a79-aa0f-ab43adcde14c}}.
+However, for a focussed laser beam one often needs to measure both the beam size at the focus and the axial position of the focus, which necessitates translating the camera or knife-edge along the axial dimension and repeating the profile measurements, which quickly becomes laborious if done manually.
+Commercial translating beam profilers are available for this purpose, but are often prohibitively expensive (many thousands of US dollars) and relatively bulky. A recent novel approach used a spatial light modulator to negate the need for any physical translation of the beam {{cite:bd62d588-1a5c-400a-a27f-a7335a803598}}, but this was only demonstrated for relatively large (of order 1 mm) beam sizes.
+Here we present a device based on a translating CMOS sensor head that uses a Raspberry Pi computer, the Pi Noir CMOS camera, and an inexpensive commercial translation stage. In addition to the hardware, we have developed a computer program to run the image acquisition and analysis.
+Apart from the significant cost-saving over current commercial alternatives, our design has two main advantages: first, the small sensor head is the only part of the instrument that is located in the beam path - the main body of the device is relatively small (footprint 245 x 85 mm) and sits adjacent to the beam path, which facilitates in-situ use of the device for most applications. Second, the sensor direction can be reversed without changing the axial position of the sensor (within machining tolerances), allowing for precise determination of the overlap between two beams, which finds use in many optical systems with overlapping counter-propagating beams, for example, in electromagnetically induced transparency {{cite:09d640d7-bb22-4355-8d75-f1944f55a64b}}, {{cite:9726e4e2-5d14-43df-9f56-ba3b020b2cce}} or four-wave mixing experiments {{cite:fe096d87-4661-4abb-9bf1-72d4c7212165}}, {{cite:80ad2b35-77bf-45dc-b03d-9a9055097cef}}, {{cite:70576457-724e-4855-a2d6-1b5bfafe0687}}.
+In addition, the pixel size of the sensor is smaller than many current commercial systems, though this comes at the cost of a smaller total sensor area; this device is therefore more suitable in the measurement of relatively small beams.
+All of the computer software, hardware drawings, CAD files and electronics schematics including a bill-of-materials are available on the GitHub repository for the device https://github.com/jameskeaveney/RPi-Beam-Profiler.
+
+
+Methods
+
+Hardware
+
+FIGURE 
+Figure REF  shows a rendering of the device.
+The camera is mounted on a plate and attached to the translation stage with standard opto-mechanical hardware (part numbers provided in the GitHub repository), allowing for coarse placement in the FORMULA  plane.
+To allow for direct profiling of counter-propagating beams, for precise alignment of the relative focal planes, the camera can be placed facing either forwards or backwards along the translation axis. In either orientation the mounts are designed symmetrically around the image-sensor plane, such that the sensor lies at the same axial coordinate, to within machinable precision.
+The camera attaches to the Raspberry pi (version 1 model B+, or version 2 or 3 model B) through a ribbon cable, allowing it to move freely (the standard cable is a little short for this application; several online retailers sell longer cables at little cost).
+A stepper motor controls the movement of the translation stage along the FORMULA -axis.
+The motor and stage are attached via a custom fine-adjustment screw and flexible shaft coupler, to allow for a small mismatch between the axes of the motor and screw thread. Finally, the whole assembly is mounted on a steel base plate with dimensions FORMULA  mm.
+Control of the stepper motor is via a Pololu driver board based on the DRV8825 controller IC, and is attached to the GPIO pins of the Raspberry Pi.
+The angular resolution of the stepper motor and the pitch of the screw thread sets a limit to the axial precision of the device.
+In our case, with a 0.5 mm pitch screw thread and a stepper motor with 0.9 degree resolution (Nanotec ST4209S1006-B), the axial resolution limit is 1.25 FORMULA m.
+The maximum travel of the translation stage is 25 mm, and the step size can be set in software. When the profiler software starts, the zero-position is calibrated by moving the translation stage until a microswitch is actuated.
+In order to expose the bare sensor, the Pi NoIR CMOS camera has its lens removed (see inset photograph).
+The smallest and largest beam sizes that can be detected are set by the total area of the sensor and the size of a single pixel.
+There are two versions of the PiNoIR camera: version 1 (pre-2016) uses the OmniVision OV5647 sensor with 2592 x 1944 pixels (pixel size 1.4 x 1.4 FORMULA m), whereas version 2 (April 2016 onwards) uses the Sony IMX219 sensor with 3280 x 2464 pixels (pixel size 1.12 x 1.12 FORMULA m).
+Both sensors share the same bit depth of 10-bits and physical sensor size of 3.67 x 2.74 mm.
+We have succesfully tested the device with both sensors, and the software automatically detects which sensor is connected.
+To use the device, the only requirements are a suitable power supply (8 - 12 V DC, capable of supplying FORMULA  A), a computer monitor attached to the HDMI port of the Raspberry Pi and a mouse and keyboard attached via USB. All processing is done on the Raspberry Pi. A USB memory stick or similar can be used to extract the gathered data.
+All custom-made components have relatively simple form, amenable to manufacture in any reasonably-equipped workshop.
+
+
+Software
+
+The beam profiler program can be set up to automatically start when the Raspberry Pi powers on. The analysis program has a graphical user interface and is written in python.
+Installation instructions and the source code are provided on the main GitHub page for the beam profiler [link].
+FIGURE 
+For alignment purposes, the `Live View' mode can be enabled which uses the camera in video mode. However, to avoid the automatic image enhancement techniques commonly used in digital photography which would artificially alter the data in an unknown way, the raw sensor data must be accessed.
+Since the sensor is a color camera, the raw pixels have color filters arranged in a Bayer pattern (alternating rows of red/green and green/blue pixels). Raw images are captured from the Bayer data of the sensor, and processed into a 2D array. From this array, there are software options to interpolate the data back to the full resolution of the sensor (demosaic), or alternatively extract just the red-, green- or blue-filtered pixels, which therefore increases the effective pixel separation by a factor of 2. In principle this resolution decrease can be avoided without interpolation by use of a suitable correction factor {{cite:1894f37d-2af0-4486-a116-244d6b09ba91}}, but since this has to be empirically determined for each wavelength of light we have not implemented it here.
+Image exposure time can be adjusted in software, between a minimum of 9 or 12 FORMULA s (v1 and v2 sensors, respectively) to over 1 second.
+A background frame can be measured and subtracted from subsequent images. Once this is removed, the pixel response increases linearly with incident light intensity with near-zero offset, as shown in figure REF . The sensor behaves linearly until individual pixels start to saturate, therefore the auto-exposure routine we provide in the software acquires images and adjusts exposure time until the maximum value of any single pixel on an image is just below saturation, to avoid any issues with non-linearity.
+The user selects the range and resolution of the translation (FORMULA -axis) scan, and images are acquired at each position. After each image is acquired, the program integrates over each axis and fits Gaussian functions to the FORMULA  and FORMULA  axes separately, extracting the FORMULA  radii FORMULA  and FORMULA . This assumes that for an elliptical beam the principal axes of the ellipse are aligned with the camera axes. For more complex beam analysis, the user can choose to automatically save the image data at each FORMULA  position and manually analyse the data. With the model 3 Raspberry Pi, each data point takes around 30 seconds to move the translation stage, acquire, process and save the image, so a full scan can be completed in approximately 20 minutes depending on the selected translation axis resolution.
+After the scan is complete, the axial widths FORMULA  are fitted to the form of a focussed Gaussian beam given by
+FORMULA 
+where FORMULA  is the beam waist, FORMULA  the focal position, and FORMULA  is the Rayleigh range with FORMULA  the wavelength of light. However, this assumes a beam-quality factor FORMULA  (i.e. a perfect TEMFORMULA  mode) which is rarely the case experimentally, so in practice we let FORMULA  be a floating parameter in addition to FORMULA  and FORMULA . If the beam profile is Gaussian, then FORMULA  can be extracted by assuming that FORMULA  {{cite:0159980b-4067-498f-9e79-aa64ce163620}}.
+It is possible to implement a full FORMULA  measurement for non-Gaussian beams using this system with suitable changes to the image analysis routine; this woud require using the ISO standard {{cite:ea5e302c-4c2e-4450-8e34-671a83194f1b}} second-moment FORMULA  beam width measurement instead of simple Gaussian fitting. However, since this is beyond our typical use case, we have not implemented it here.
+FIGURE 
+
+
+Results
+
+In the remainder of the paper, we illustrate the use of the beam profiler through example data.
+A diode laser with 780 nm wavelength was coupled through a single-mode optical fiber. After the fiber, the beam was collimated to a 1/eFORMULA  radius of approximately 0.8 mm, and then incident on a single-element aspheric lens with 15 mm focal length. The damage threshold was not explicitly tested, but to avoid damaging the sensor, we kept the incident optical power low (FORMULA  mW) using neutral density filters. The sensor saturates (even at the minimum exposure time) at a much lower intensity than damage occurs, therefore in practice the power can be set by coarsely placing the beam profiler near the focus of the beam and adjusting the incident intensity such that the sensor is not saturating on any single pixel with the lowest exposure time.
+Figure REF  shows an example image taken with the v2 sensor.
+The image is taken at the focal position of a 15 mm focal length aspheric lens, so the focal spot is only a few microns.
+We show the (cropped) image data and the integrated horizontal and vertical profiles, along with the fits to Gaussians. We extract radii FORMULA  FORMULA m and FORMULA  FORMULA m. These waists are consistent with the 5.0 FORMULA m that we expect from simple Gaussian beam propagation {{cite:ae2fe55f-faf6-4584-874e-c95e18a292df}} assuming a perfectly collimated input beam. The fit uses a standard Levenburg-Marquardt routine and the errors in the fit parameters are estimated using the square-root of the diagonal elements of the covariance matrix {{cite:8e974a54-6852-4964-a692-9aee54a40d8a}}.
+In figure REF  we show an example of FORMULA - and FORMULA -axis beam waists as a function of translation distance. In this case, the selected axial resolution is 100 FORMULA m. After running a translation scan, the software fits the processed beam width data to equation REF . The result of the fits are shown by the black lines; the FORMULA  and FORMULA  axes are fitted independently and both are clearly in agreement with the data. In this case, we find for the x-axis a focal size FORMULA m, focal position FORMULA  mm, and Rayleigh range FORMULA  mm. For the y-axis, we find FORMULA m, focal position FORMULA  mm, and Rayleigh range FORMULA  mm. All error bars are taken from the square root of the diagonal elements of the covariance matrix. Assuming that FORMULA , we can estimate the beam quality factor for the two axes as FORMULA  and FORMULA , which is reasonable for this type of laser.
+FIGURE 
+
+Conclusions
+
+In conclusion, we have presented an automatic translating beam profiler that can be used for in-situ measurements of focal spot size and positions. The system has some advantages over current commercial systems, besides the cost reduction; the pixel size is smaller than many CCD-based commercial beam profilers, and the measurement head can be placed into an already existing optical setup, facing in both the FORMULA  directions allowing for a quantitative estimate of beam overlap when using counter-propagating beams. The software is open-source and the analysis methods could be extended to include the ISO standard second-moment FORMULA  beam width and FORMULA  measurements in future versions.
+I gratefully acknowledge Daniel J. Whiting for testing of the device, Ifan G. Hughes for fruitful discussions and EPSRC (grant number EP/L023024/1) for funding. In addition to the GitHub repository [15], the data presented in this paper are available online at FORMULA DOI added at proof stageFORMULA .
+

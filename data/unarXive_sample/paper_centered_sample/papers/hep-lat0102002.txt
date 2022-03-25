@@ -1,0 +1,571 @@
+
+[aps,twocolumn,epsfig,tighten,floats]revtex
+
+
+
+
+ GUTPA/00/11/01
+ WUB 01-01
+
+Quark mass effects on the topological
+susceptibility in QCD
+Gunnar S. BaliFORMULA , Norbert EickerFORMULA ,
+Thomas LippertFORMULA ,
+Hartmut NeffFORMULA ,
+Boris OrthFORMULA ,
+Klaus SchillingFORMULA ,
+Thorsten StruckmannFORMULA 
+and Jochen ViehoffFORMULA 
+FORMULA Department of Physics & Astronomy, The University of Glasgow, Glasgow G12 8QQ, Scotland
+FORMULA Fachbereich Physik, Bergische Universität
+Wuppertal, D-42097 Wuppertal, Germany
+FORMULA von Neumann Institute for Computing,
+c/o Research Center Jülich, D-52425 Jülich and DESY, D-22603 Hamburg, Germany
+(SESAM and TFORMULA L Collaborations)
+2018/12/12 01:35:11
+We investigate topology in lattice simulations of QCD with two
+flavours of dynamical Wilson fermions. At various sea quark masses
+we find reasonable agreement between results for the topological
+charge from fermionic and gluonic definitions, the latter with
+cooling. We study correlations of the topological charge with light
+hadronic observables and find effects in the flavour singlet
+pseudoscalar channel. The quark mass dependence of the
+topological susceptibility, FORMULA , is consistent with the
+leading order small FORMULA  expectation,
+FORMULA .
+PACS numbers: 11.15.Ha, 12.38.Gc, 11.30.Rd, 12.38.Aw
+Introduction
+One of the most intriguing features of QCD is its topological vacuum
+structure which results in phenomenological consequences with an
+important bearing on particle physics such as the breaking of the
+axial FORMULA  and chiral symmetries.
+In the context of pure gauge theories, lattice methods have by
+now matured to provide a valuable tool kit for accessing the continuum
+topological susceptibility, FORMULA . Various gluonic definitions of
+the topological charge lead to consistent estimates of
+FORMULA  {{cite:21a34912-1e4f-49da-9d55-6a2f778c93f9}}, and remnants of the Atiyah-Singer index
+theorem are witnessed to hold on the lattice: the topological charge,
+FORMULA , as obtained after cooling from the gluonic degrees of freedom is
+consistent with the fermionic index, as determined from counting the
+zero-level crossings of the eigenvalues of the Wilson-Dirac operator,
+FORMULA , under variations of the bare quark mass,
+FORMULA  {{cite:c7e0c6cc-ba82-4c6a-8227-4457808abbdf}}, {{cite:4207bd8d-dcb3-45d9-88c6-8d645a6500f1}}.
+Moreover, one might perceive the very value of FORMULA  as delivered by quenched
+lattice
+simulations {{cite:1fd2cf3f-36fc-4bb6-b6bf-18e6a1644ac6}}, {{cite:ec0dde80-0e21-4f92-a3ee-a74d8abb7601}}, {{cite:c8bdddec-4a7b-4ad5-992e-1274be59a302}}, {{cite:ca6d3132-4898-47e6-9586-95d6609806bd}}, FORMULA  MeV,
+to confirm the lattice approach to
+topological properties: it turns out to be in fairly good agreement with the
+large FORMULA  anticipation made by Witten and Veneziano {{cite:7815e546-488e-4fc0-850d-91c8ce4a48e1}},
+FORMULA .
+In conclusion, the lattice machinery appears to work for the study of
+topological aspects in gluodynamics.
+Unfortunately, however, the situation regarding the
+QCD vacuum proper is by far less settled:
+for sheer cost reasons so far only the regime of
+intermediate sea quark masses,
+not much lighter than the strange quark, has been explored.
+In fact it is still under
+debate whether the data from full QCD simulations support the
+expected vanishing susceptibility at chiral sea quark
+masses, FORMULA :
+FORMULA 
+Attempts to verify this prediction via lattice simulations have a long
+history. While the first lattice studies in this direction with Kogut-Susskind
+(KS) sea quarks {{cite:aad4897c-dc8d-4a26-9936-874f1a6d4469}}, {{cite:b2ee47c1-15cf-44fc-8fd1-2cdc63302129}}, {{cite:23831146-1938-43f2-bae4-375d0d9adce5}}, {{cite:7c9e1885-e979-40dd-a8e9-cd57a1b0f3a5}} could not
+reach conclusive results, later investigations did yield some qualitative
+evidence in favour of the expected decrease of
+FORMULA  {{cite:de0a7e8d-8fd8-434a-89ba-b91b916a5233}}.
+Quite recently, this problem has been revisited from three different
+sides — but the debate is still open: the
+CP-PACS {{cite:022df402-bfdc-46ef-812a-380054467ba7}} and UKQCD {{cite:17a6b02a-83cf-4ebe-b41a-61b4f647e0c1}}
+collaborations employed improved Wilson fermionic and different
+gluonic actions while the Pisa group {{cite:d9268db9-bc9e-49c5-8439-9605c501a924}} operated with
+two and four flavours of KS fermions. A further data point
+for FORMULA  KS flavours has been obtained by
+Hasenfratz {{cite:1b65fe35-3302-4dd5-ad7c-a869f5fd864e}}
+(for a recent review
+see e.g. Ref. {{cite:5fb376a2-4aff-4f35-a5e2-eaec2089ace5}}). While both the Pisa group
+(working at an inverse lattice spacing FORMULA  GeV and bare
+quark masses FORMULA ) and the CP-PACS collaboration (at
+FORMULA  GeV, FORMULA ) saw no
+evidence whatsoever in favour of the expected chiral behaviour, the
+UKQCD collaboration did verify (at FORMULA  GeV and
+FORMULA ) a decrease of FORMULA , consistent with
+theoretical expectations.
+In this paper we shall present an analysis focused on this issue,
+based on the final statistics of our SESAM and TFORMULA L samples of QCD
+vacuum configurations. The article is organised as follows. In
+Sect.  we describe the details of our simulation and
+methodology, including a comparison between fermionic and gluonic
+definitions of the topological charge. Preliminary results on this
+comparison, based on smaller statistical samples, have been reported
+by us previously {{cite:682637f5-b1bd-4cb1-8047-69dce9f794e3}}. In Sect.  we
+investigate correlations between the topological charge and the hadron
+spectrum. Finally, in Sect. , we present the lattice
+data on the topological susceptibility.
+
+Determination of the topological charge
+Measurements
+We analyse ensembles of gauge configurations that have been generated
+by means of the hybrid Monte Carlo (HMC) algorithm using the Wilson
+fermionic and gluonic actions with FORMULA  mass degenerate quark
+flavours at the inverse lattice coupling, FORMULA , corresponding
+to an inverse lattice spacing FORMULA  GeV at
+physical sea quark masses. This was done on FORMULA  as well as on FORMULA  lattices at
+five different values of the sea quark mass parameter. The
+corresponding chiralities can be quantified in terms of
+FORMULA -ratios, ranging between FORMULA  and
+FORMULA  {{cite:bcc96934-3ba6-4eed-a6c7-3446acefc87d}}. The relevant simulation settings are
+displayed in Table REF  {{cite:f0bb25c7-c2e8-48dc-80e3-b38ad33460ad}}. At each
+FORMULA -value 4,000–5,000 thermalized HMC trajectories have been
+generated. In addition to the dynamical quark simulations, quenched
+reference measurements on FORMULA  lattices at FORMULA  were
+performed. The configurations that enter the analysis are separated
+by 25 (24 at FORMULA  and 10 in the quenched simulation) HMC
+trajectories.
+TABLE 
+Lower limits on the integrated autocorrelation times, FORMULA , are estimated by binning the data for the topological charge
+FORMULA , FORMULA , into FORMULA  blocks that contain FORMULA  successive measurements each. On each such
+block of length FORMULA  an average FORMULA , is calculated:
+FORMULA . We determine fluctuations
+between these bins,
+FORMULA 
+where the average FORMULA  is calculated on
+the first
+FORMULA  configurations.
+We then estimate the autocorrelation times,
+FORMULA 
+that are included in the table. FORMULA 
+denotes the measurement frequency. On the FORMULA  volume at
+FORMULA , in addition to the FORMULA  time series, we also determined the topological
+charge with increased frequency FORMULA ,
+with a reduced number of 10 (as opposed to 60) cooling sweeps. The
+larger frequency enabled us to compute the autocorrelation time from
+the autocorrelation function itself, with full control over
+statistical errors {{cite:682637f5-b1bd-4cb1-8047-69dce9f794e3}}, {{cite:134caef0-fb66-4653-b1f3-700d6bc4906e}}. The resulting value,
+FORMULA , is consistent with our estimate
+obtained in the way described above, FORMULA . We take this as an indication that our
+estimates are reasonable. Interestingly, the autocorrelation times
+grow both with decreasing quark mass and increasing volume as
+already observed in Ref. {{cite:682637f5-b1bd-4cb1-8047-69dce9f794e3}}.
+We employ a gluonic as well as a fermionic definition of the topological
+charge. In the gluonic case we define a topological charge density,
+FORMULA 
+where we use the symmetric (clover leaf) definition {{cite:ef7274eb-b203-4a6d-b543-7c72eab12686}},
+FORMULA 
+and FORMULA ,
+which is correct up to order FORMULA  lattice artefacts.
+The topological charge,
+FORMULA 
+should then approach integer values as FORMULA  in the infinite volume
+limit, on sufficiently smooth gauge configurations.
+
+Renormalization
+In a quantum field theory, both FORMULA  and FORMULA  undergo multiplicative
+renormalization. Moreover, FORMULA  requires additive renormalization.
+Cooling {{cite:f4f6ebc6-f2df-4356-8c28-da43fa72ebf0}}, {{cite:2da57305-fc09-47dc-b887-5c63b1e4c7e3}} is meant to filter for
+(semi)-classical features; indeed, after cooling, both renormalization
+constants have been shown to be close to their trivial
+values {{cite:21a34912-1e4f-49da-9d55-6a2f778c93f9}}, {{cite:ec0dde80-0e21-4f92-a3ee-a74d8abb7601}}. In the context of this
+article we will not investigate properties of the density distribution
+FORMULA  itself but rather stick to the net topological charge FORMULA  only.
+For this purpose the iterative application of cooling by simple
+minimisation of the Wilson plaquette action is appropriate. To keep
+the cooling update local we visit the lattice sites in an even-odd
+pattern, rather than in the sequential ordering that is usually
+employed in the Monte Carlo updating of pure gauge configurations.
+The inner-most loop within a cooling sweep runs across the directions
+FORMULA , and we carry out 60 such sweeps. In Fig. REF  we
+illustrate the resulting numerical pattern of topological charges
+which cluster nicely around integer values as anticipated.
+FIGURE 
+TABLE 
+The fermionic method consists of determining the topological charge
+à la Smit and Vink {{cite:83713d63-9738-4d92-9f1b-0ff63ebf6b46}},
+FORMULA 
+that is inspired by the continuum axial divergence relation,
+FORMULA . The above trace is to be
+taken over Dirac, colour and space-time indices only (not over the
+flavours), i.e. FORMULA  for
+FORMULA  mass degenerate quark flavours. FORMULA  is a
+renormalization constant, FORMULA 
+denotes the bare quark mass and FORMULA  is the lattice discretised version
+of FORMULA ,
+FORMULA 
+We determine FORMULA  using FORMULA  noisy sources
+with diagonal improvement as detailed in Ref. {{cite:7714d2a6-97e5-4001-9862-3fd998b9c089}}.
+On the FORMULA  configurations 100 such estimates were performed
+while at all other FORMULA  values we averaged over 400 estimatesApproximating FORMULA  by a finite number of noise vectors
+can result in an
+underestimated integrated autocorrelation time.
+Nonetheless, we find
+the FORMULA -estimates
+from the fermionic definition {{cite:134caef0-fb66-4653-b1f3-700d6bc4906e}} to be consistent
+with the gluonic ones
+of Table REF ..
+FIGURE 
+The renormalization constant FORMULA  in Eq. (REF ) is unknown. We
+attempt to estimate the combination FORMULA  from the ratio of the
+gluonic [Eq. (REF )] and of the fermionic
+[Eq. ())] definitions. We determine FORMULA  using
+the critical value, FORMULA  {{cite:bcc96934-3ba6-4eed-a6c7-3446acefc87d}}. The results
+are displayed in Table REF , assuming the multiplicative
+renormalization of the gluonic definition after cooling to be unity.
+The estimates of the fermionic traces are subject to statistical
+uncertainties, FORMULA  on the FORMULA  lattices
+and FORMULA  – 3 on the FORMULA  volumes. In
+addition, both definitions are expected to suffer from different
+FORMULA  lattice artefacts. We do not attempt to estimate
+the resulting statistical and systematic uncertainties on FORMULA . We
+find FORMULA  to be of order one and to depend monotonously on the quark
+mass, with the deviation from unity increasing when approaching the
+chiral limit.
+The correlation between the two definitions is visualised in the
+scatter plot, Fig. REF , for the FORMULA  lattices at
+FORMULA . While the gluonic data points cluster around integer
+values, this is not the case for the (stochastically estimated)
+fermionic values. The data of the figure are
+normalised such that the points should collapse onto the line with
+slope one. Indeed, 137 out of 199 values (62 %) lie within the
+one FORMULA  error band. The correlation between the two definitions
+is also visible from the Monte Carlo histories depicted
+in Fig. REF .
+FIGURE 
+
+Ergodicity
+In Fig. REF  we survey the Monte Carlo histories of FORMULA  for all
+our runs.
+These charts provide a gross evidence for the quality of our data in view of
+the decorrelation with respect to the topological sectors.
+The topological susceptibility,
+FORMULA 
+should be independent of the volume FORMULA 
+to a first approximation. Therefore, the modulus of the topological
+charge FORMULA  should scale in proportion to FORMULA .
+Indeed, the topological charge distribution on the large lattice at
+FORMULA  is by a factor of about two wider than that on the
+small lattice. We also observe reduced fluctuations as we increase
+FORMULA  at fixed FORMULA . While the FORMULA  time histories
+appear to tunnel ergodically through all topological sectors the total
+number of tunnellings observed for FORMULA  is not yet
+sufficient to achieve a symmetric distribution.
+
+Topology and the hadron spectrum
+We address the question whether the statistics presented in
+Fig. REF  suffices to expose a significant FORMULA  dependency of
+hadronic states. To minimise statistical errors we subdivided each
+sample into two subsamples only, one containing configurations
+with FORMULA  and one with FORMULA . For the smaller volume at
+FORMULA  this division results in two subsamples of
+approximately 100 configurations each.
+The most interesting test case is given by the effective masses in the
+flavour singlet pseudoscalar channel, FORMULA , that should be particularly sensitive to the vacuum
+topology. This is confirmed by the data displayed in Fig. REF .
+We find the FORMULA  mass on vacuum configurations with FORMULA 
+to systematically lie below the corresponding mass obtained with the
+cut FORMULA . Note that in the infinite volume limit one would expect
+such a sensitivity of correlation functions on FORMULA  to disappear.
+For further details we refer to
+Ref. {{cite:6cc1bb7f-239a-4e93-a173-ecb56fc0ffef}}.
+FIGURE 
+In Fig. REF  we show the corresponding flavour octet channel quantities,
+i.e. FORMULA  effective masses, where we anticipate no such correlation with topology.
+This is indeed borne out by the data: not only at FORMULA 
+but time slice by time slice no sensitivity to the value of the modulus of the
+topological charge is detected, with rather high statistical accuracy.
+The horizontal line with error band indicates the asymptotic large FORMULA 
+results obtained from a fit to the entire data sample {{cite:bcc96934-3ba6-4eed-a6c7-3446acefc87d}}.
+FIGURE 
+FIGURE 
+FIGURE 
+FIGURE 
+Apart from the FORMULA  none of the standard mesonic, baryonic and
+glueball-like states exhibit correlations between FORMULA  and the
+respective effective masses. In Figs. REF  –
+REF  we illustrate this for the FORMULA , the
+nucleon and the FORMULA . In no case have we found any systematic
+effects on the static potential. Of course this does not exclude the
+possibility of correlations between hadronic properties and the
+distribution of instantons and anti-instantons and their relative
+orientations in colour and position space {{cite:74055efd-535f-42e2-a9fe-a56f41cc87f8}}.
+
+The topological susceptibility
+In Figs. REF  – REF  we display three
+histograms of topological charge distributions. Each bin with width
+FORMULA , centred around FORMULA , contains all measurements
+resulting in charges within the interval FORMULA , where FORMULA  on the FORMULA  lattice depicted in
+Fig. REF  and FORMULA  for the FORMULA  lattices of
+Fig. REF  and Fig. REF . In addition to the data we
+display Gaussian distributions,
+FORMULA 
+In Fig. REF  we include the statistical uncertainties of the
+individual bins, FORMULA , while in
+Fig. REF  and Fig. REF  the error on the width of the
+distribution is reflected by the error band around the central curve.
+TABLE 
+FIGURE 
+FIGURE 
+FIGURE 
+The fitted topological susceptibilities FORMULA  as well as
+FORMULA  are displayed in Table REF . For orientation, we
+convert FORMULA  into physical units in the last column of the table, using
+FORMULA  MeV. The distribution at FORMULA  is not
+symmetric around zero anymore, as reflected by the value FORMULA  and by Fig. REF . Therefore, in this case,
+the resulting value of FORMULA  should pass with a grain of doubt,
+notwithstanding the comfortable error bars. A comparison between the
+FORMULA  and FORMULA  results at FORMULA  reveals that
+the level of finite size effects on FORMULA  is below the statistical errors.
+The Gell-Mann-Oakes-Renner (GMOR) relation connects the pion mass to
+the chiral quark mass, FORMULA , via the pion decay constantOur
+normalisation conventions are such that FORMULA  MeV.
+FORMULA  in the chiral limit and the chiral condensate, FORMULA :
+FORMULA 
+A direct lattice determination of FORMULA  from the appropriate
+current matrix element yields FORMULA , in the limit
+FORMULA  {{cite:6ba061ea-c716-4508-99e3-f6f327713739}}. Allowing for an
+additional systematic error of 10 % on FORMULA  to account for
+the fact that we have only determined the
+axial vector renormalization constants FORMULA 
+perturbatively, we arrive at the lattice
+estimate
+FORMULA 
+at FORMULA , using the value
+FORMULA  {{cite:f0bb25c7-c2e8-48dc-80e3-b38ad33460ad}}. In combining
+Eq. (REF ) with Eq. (REF ) one expectsThis formula as
+well as the GMOR relation Eq. (REF ) only apply to FORMULA 
+since for FORMULA  no light pion exists (for a finite number of
+colours, FORMULA ).
+FORMULA 
+for small pseudoscalar masses
+and large Leutwyler-Smilga parameters,
+FORMULA  {{cite:dce6c607-31a3-4d9a-b688-9985ce1a454e}}, {{cite:fafeffc5-c7c8-4d39-9473-07b74d72f64f}}.
+TABLE 
+FIGURE 
+In Table REF  we display the
+spatial lattice extents, FORMULA  as well as FORMULA 
+and FORMULA . We estimate
+the (scheme independent) combination FORMULA  that appears within FORMULA 
+from
+Eqs. (REF ) – (REF ). The topological
+charge fluctuations FORMULA  correspond to the average number of
+non-interacting instantons that can be accomodated within the
+simulated lattice volume {{cite:4afd7cbe-37f1-4ead-954e-0c927c43b4f2}}, {{cite:0c8941b3-92cc-4f37-b49a-6b9ce57ebdc0}}.
+It has
+been argued {{cite:0c8941b3-92cc-4f37-b49a-6b9ce57ebdc0}} that FORMULA  is already a large volume in the
+Leutwyler-Smilga {{cite:dce6c607-31a3-4d9a-b688-9985ce1a454e}}
+sense, such that Eq. (REF ) should safely
+apply to all but the FORMULA  lattices at FORMULA  and
+FORMULA . Even at the latter, more critical, FORMULA -value,
+where we have two lattice volumes that correspond to
+FORMULA  and FORMULA  at our disposal, we do not
+find any volume dependence of FORMULA .
+In the regime of large FORMULA  one would expect FORMULA  in
+units of some reference scale like FORMULA  to approach the quenched
+value as a smooth function of FORMULA . Prior to the comparison with
+Eq. (REF ) one should in principle extrapolate the lattice results
+on FORMULA  to the continuum limit, for instance along a trajectory of
+constant FORMULA . Having only FORMULA  data at our disposal we
+cannot yet perform this extrapolation but conjecture that our results
+are already sufficiently close to the continuum limit for
+Eq. (REF ) to hold. This assumption is plausible in view of the
+fact that the topological charges obtained from the gluonic and
+fermionic definitions agree with each other reasonably well (with a
+renormalization constant FORMULA  of order one) and of our previous
+studies of light hadronic quantities {{cite:f0bb25c7-c2e8-48dc-80e3-b38ad33460ad}}, {{cite:6ba061ea-c716-4508-99e3-f6f327713739}}.
+For the purpose of the present investigation we shall consider the
+dimensionless topological susceptibility, FORMULA , as a function
+of the dimensionless combination FORMULA  in order to carry
+out the chiral extrapolation. The results are plotted in
+Fig. REF , together with the region that is allowed for by the
+leading order expectation, Eq. (REF ), for the FORMULA  value of
+Eq. (REF ). All unquenched data except for the point at the heaviest
+quark mass (FORMULA ) are consistent with this expectation.
+Note that the most chiral data point stems from the run with
+FORMULA  which, as can be seen from Figs. REF  and
+REF , is not of sufficient statistical quality for the
+purpose of topological studies. The right-most entry in Fig. REF 
+is the result of our quenched reference study.
+A linear fit, excluding the largest mass
+point, to the parametrisation (REF )
+renders FORMULA  with FORMULA .
+This value compares reasonably well with the expectation,
+Eq. (REF ). On the other hand our data are consistent
+with a mass independence of FORMULA  too: fitting them to a constant yields
+FORMULA  with FORMULA , in agreement with the
+quenched reference point, FORMULA .
+Our present study is based on data obtained at a fixed value of
+FORMULA  and the quark mass is varied by just tuning FORMULA . It is
+worthwhile to relate our findings to those recently presented by the
+UKQCD collaborationUnfortunately,
+none of the other collaborations
+have converted their results into units of FORMULA . {{cite:17a6b02a-83cf-4ebe-b41a-61b4f647e0c1}}
+who simultaneously vary FORMULA 
+and FORMULA  to change the quark mass while keeping
+the lattice spacing FORMULA  fixed in
+units of FORMULA . Apart from this they dispose of ensembles
+of gauge field configuration of comparable statistical sizes, using
+slightly coarser lattice spacings with an improved fermionic action.
+FIGURE 
+In order to facilitate this comparison we have superimposed both data
+setsThe statistical errors quoted by the UKQCD
+collaboration are somewhat smaller than ours since no signs of
+autocorrelation effects have been found in their
+study {{cite:0be44724-b7ab-4170-868b-3692cd763177}}.
+in Fig. REF . The data do not clearly
+contradict each other, however, we are unable to confirm the decrease of
+the topological susceptibility that has been reported in
+Ref. {{cite:17a6b02a-83cf-4ebe-b41a-61b4f647e0c1}},
+at pion masses within the range of
+present-day lattice simulations.
+
+Conclusions
+We have demonstrated that Wilson fermions are suitable for lattice
+studies of topology related effects in the QCD vacuum. We have found
+agreement between the topological charge computed after cooling from
+the field strength tensor, FORMULA , and the fermionic
+definition given by Smit and Vink with a renormalization constant
+FORMULA  of order one. The trace has been estimated from diagonal
+improved FORMULA  noisy sources. As the next step we plan to investigate
+correlations between the topological charge density distribution and
+eigenvectors of FORMULA .
+The topological susceptibility at FORMULA  has been found to be
+consistent with that of quenched studies at large sea quark masses.
+Our data at smaller mass values is consistent
+with the asymptotic slope in FORMULA  that is expected from
+our independently determined FORMULA  pion
+decay constant. However, we are unable to unambiguously confirm
+the decrease that has
+recently been reported by the UKQCD collaboration {{cite:17a6b02a-83cf-4ebe-b41a-61b4f647e0c1}}
+with a different fermionic action.
+Results obtained by the CP-PACS collaboration {{cite:022df402-bfdc-46ef-812a-380054467ba7}}
+who cover a similar range of quark masses on somewhat coarser lattices
+do not clearly show this tendency either.
+We plan to clarify this issue in
+simulations at different FORMULA  values which will enable us to perform
+a continuum limit extrapolation, and at smaller sea quark masses.
+We thank S. Güsken and P. Überholz for their
+contributions at an earlier stage of this project.
+We gratefully acknowledge R. Burkhalter for detecting an important
+mistake in this article. Our European
+collaboration was funded by the EU network “Hadron Phenomenology from
+Lattice QCD” (HPRN-CT-2000-00145). G.B. received support from EU
+grant HPMF-CT-1999-00353 and PPARC grant
+PPA/G/O/1998/00559, N.E. from DFG grant Li 701/3-1.
+B.O. appreciates support from the DFG
+Graduiertenkolleg “Feldtheoretische und Numerische Methoden in der
+Statistischen und Elementarteilchenphysik”. The HMC productions were
+run on the APE100 systems at INFN Roma and NIC Zeuthen. We are
+grateful to our colleagues G. Martinelli and F. Rapuano for the
+fruitful TFORMULA L-collaboration. Part of the physics evaluation has
+been carried out on the ALiCE cluster computer at Wuppertal University.
+B. Allés, M. D'Elia, A. Di Giacomo and R. Kirchner,
+Phys. Rev. ¦D58¦, 114506 (1998)
+[hep-lat/9711026].
+S. Itoh, Y. Iwasaki and T. Yoshié,
+Phys. Rev. ¦D36¦, 527 (1987).
+R. Narayanan and P. Vranas,
+Nucl. Phys. ¦B506¦, 373 (1997)
+[hep-lat/9702005].
+M. Teper,
+Nucl. Phys. Proc. Suppl. ¦83¦, 146 (2000)
+[hep-lat/9909124].
+B. Allés, M. D'Elia and A. Di Giacomo,
+Nucl. Phys. ¦B494¦, 281 (1997)
+[hep-lat/9605013].
+A. Hasenfratz and C. Nieter,
+Phys. Lett. ¦B439¦, 366 (1998)
+[hep-lat/9806026].
+M. Garcia Perez, O. Philipsen and I. Stamatescu,
+Nucl. Phys. ¦B551¦, 293 (1999)
+[hep-lat/9812006].
+E. Witten,
+Nucl. Phys. ¦B156¦, 269 (1979);
+G. Veneziano,
+Nucl. Phys. ¦B159¦, 213 (1979).
+J. Smit and J. C. Vink,
+Phys. Lett. ¦B194¦, 433 (1987).
+H. Gausterer, J. Potvin, S. Sanielevici and P. Woit,
+Phys. Lett. ¦B233¦, 439 (1989).
+K. M. Bitar ¦et al.¦ [HEMCGC Collaboration],
+Phys. Rev. ¦D44¦, 2090 (1991).
+M. Müller-Preußker, in Proc. of the XXVI Int. Conf. on High
+Energy Physics, Dallas 1992, Ed. J.R. Sanford, AIP Conference
+Proceedings No. 272, 1545 (1993).
+Y. Kuramashi, M. Fukugita, H. Mino, M. Okawa and A. Ukawa,
+Phys. Lett. ¦B313¦, 425 (1993).
+A. Ali Khan ¦et al.¦ [CP-PACS Collaboration],
+Nucl. Phys. Proc. Suppl. ¦83¦, 162 (2000)
+[hep-lat/9909045].
+A. Hart and M. Teper,
+Nucl. Phys. Proc. Suppl. ¦83¦, 476 (2000)
+[hep-lat/9909072];
+A. Hart [UKQCD Collaboration],
+hep-ph/0004180;
+A. Hart and M. Teper [UKQCD Collaboration],
+[hep-lat/0009008].
+B. Allés, M. D'Elia and A. Di Giacomo,
+Phys. Lett. ¦B483¦, 139 (2000)
+[hep-lat/0004020];
+B. Allés, M. D'Elia and A. Di Giacomo,
+Nucl. Phys. Proc. Suppl. ¦83¦, 431 (2000)
+[hep-lat/9912012].
+A. Hasenfratz,
+Phys. Lett. B ¦476¦, 188 (2000)
+[hep-lat/9912053].
+M. Garcia Perez,
+Nucl. Phys. Proc. Suppl. ¦94¦, 27 (2001)
+[hep-lat/0011026].
+B. Allés ¦et al.¦ [TFORMULA L Collaboration],
+Phys. Rev. ¦D58¦, 071503 (1998)
+[hep-lat/9803008];
+T. Lippert ¦et al.¦ [SESAM and TFORMULA L Collaborations],
+Nucl. Phys. Proc. Suppl. ¦73¦, 521 (1999)
+[hep-lat/9809034];
+T. Lippert ¦et al.¦ [SESAM Collaboration],
+Nucl. Phys. Proc. Suppl. ¦63¦, 946 (1998)
+[hep-lat/9712020].
+B. Orth ¦et al.¦ [SESAM and TFORMULA L Collaborations],
+in preparation.
+G. S. Bali ¦et al.¦ [SESAM and TFORMULA L Collaborations],
+Phys. Rev. ¦D62¦, 054503 (2000)
+[hep-lat/0003012].
+T. Lippert ¦et al.¦ [SESAM and TFORMULA L Collaborations],
+in preparation.
+P. Di Vecchia, K. Fabricius, G. C. Rossi and G. Veneziano,
+Nucl. Phys. ¦B192¦, 392 (1981);
+P. Di Vecchia, K. Fabricius, G. C. Rossi and G. Veneziano,
+Phys. Lett. ¦B108¦, 323 (1982).
+B. Berg,
+Phys. Lett. ¦B104¦, 475 (1981).
+M. Teper,
+Phys. Lett. ¦B162¦, 357 (1985).
+J. Smit and J. C. Vink,
+Nucl. Phys. ¦B286¦, 485 (1987).
+J. Viehoff [SESAM Collaboration],
+Nucl. Phys. Proc. Suppl. ¦73¦, 856 (1999)
+[hep-lat/9809073].;
+J. Viehoff ¦et al.¦ [SESAM Collaboration],
+Nucl. Phys. Proc. Suppl. ¦63¦, 269 (1998)
+[hep-lat/9710050].
+T. Struckmann ¦et al.¦ [SESAM and TFORMULA L Collaborations],
+Phys. Rev. D ¦63¦, 074503 (2001)
+[hep-lat/0010005].
+E. M. Ilgenfritz, B. V. Martemyanov, S. V. Molodtsov, M. Müller-Preußker and Y. A. Simonov,
+Phys. Rev. ¦D58¦, 114508 (1998)
+[hep-ph/9712523].
+N. Eicker ¦et al.¦ [SESAM collaboration],
+Phys. Rev. ¦D59¦, 014509 (1999)
+[hep-lat/9806027].
+H. Leutwyler and A. Smilga,
+Phys. Rev. D ¦46¦, 5607 (1992).
+S. Dürr,
+Nucl. Phys. B ¦594¦, 420 (2001)
+[hep-lat/0008022].
+T. Schäfer and E. V. Shuryak,
+Rev. Mod. Phys. ¦70¦, 323 (1998)
+[hep-ph/9610451].
+S. Dürr,
+hep-lat/0103011.
+A. Hart, private communication.
+
+

@@ -1,0 +1,132 @@
+
+rm
+Experimental Astronomy
+Design and construction of a high resolution, portable and low-cost positioner by a star tracking system
+Meysam Izadmehr, Mehdi Khakian Ghomi
+Meysam Izadmehr, Mehdi Khakian Ghomi Department of Energy Engineering and Physics, Amirkabir University of Technology, 15875-4413, Tehran, Iran
+In normal observation procedures, the position of the observer is specified by GPS and celestial positions of an object will be calculated. But in some situations, like small zenith angle FOVs, GPS doesn't work. Therefore in this study, the work is investigated in reverse of usual procedures. Comparison between the local position of a few stars in a typical picture and their reference positions in J2000 is used for determining our location coordinates. Longitude, Latitude and North direction are determined by the procedure. The stars are identified using their unique patterns with neighbor stars. The direction of the sky photography is determined by a designed inclinometer which is harmonious to a camera. For the purpose, it was corrected atmospheric refraction effect, relativistic aberration. It was used half seconds exposure time images to obtain the best results. Therefore this positioning system is used to obtain longitude and latitude with an accuracy of less than 0.503 and 0.816 arc-minutes respectively. Total weight of the system is 4.7 kg, which makes it quite portable.
+star trackerpositioning systemdetermining latitude and longitudedigital zenith cameras
+Introduction
+Tehran is a metropolitan with about 15 million people at night, therefore there is a great light pollution there. Tehran is on the southern border of Alborz mountain chain which behaves like a high barrier in the northern part of Tehran. So the valleys there (especially with closed southern horizon) are good places to overcome this problem. In these locations, the FOV of the observers is quite limited. Therefore GPS satellites may not be in FOV. Also, in the neighborhood of constructions, GPS coordinates may systematically be distorted. This is the problem of so many astronomical groups who go to these locations. So we tried to investigate the position as an astronomical problem by the stars observed in the limited FOV. One of our goals in this project is to enhance our position accuracy with taking pictures of the sky available to the observer.
+Over recent decades, significant progress has been made in astrogeodetic research and astrometry with the development of digital zenith camera systems{{cite:05c74c31-7f75-470b-9c33-0b533cb11a9e}}. A zenith camera is an astrogeodetic telescope which is used for the local surveys of the earth's gravity field. University of Hannover in Germany and Geodesy and Geodynamics Laboratory, ETH Zurich of Switzerland, have upgraded the simulated zenith photographic instruments TZK2 and TZK3 with CCD sensor instead of quondam photographic film and developed digital zenith camera systems TZK2-D and DIADEM, respectively {{cite:33cb1554-a39b-4018-91d5-8894e6542983}}, {{cite:5e8828f3-480c-480b-9b3a-0c063da2a5df}}. These instruments could be used to observe the apparent motions of stars for the rapid determination of the vertical deflection combined with the geodetic latitude and longitude measured by GPS {{cite:4f7f6994-3517-4448-8000-4233489a3b31}}.
+The first star tracker was constructed based on CCD by Salomon in 1976 in JPLJet Propulsion Laboratory {{cite:d55ad979-ae1a-4370-901c-779d637a1e63}}. Satellites use a star tracker for the attitude determination of satellites; they can measure angles between their local coordinate system and reference coordinate system. For a ground observer, an inclinometer can determine the direction of gravity. As a result, an observer is able to determine its position using the output of the star tracker and the inclinometer. The star tracker takes some photos from the sky; stars of the image are identified, then the rotation matrix is calculated between the reference coordinate system and its star tracker coordinate system. Since the accuracy of the recorded stars in our image processing is 3 arc-seconds, therefore, we need to consider FORMULA  precession, FORMULA  nutation, FORMULA  proper motion, and FORMULA  atmospheric refraction, as well as earth rotation. These corrections are necessary for obtaining longitude, latitude, and north direction with 1 arcminute accuracy. Our procedure consists of three different parts: image processing, determination and recording of camera direction with gravity, and related calculations for finding longitude, latitude, north direction, and their errors.
+Section 2 contains the image processing details. Section 3 presents the camera direction calibration. Calculation of positioning and its procedure as the most important part of the work is presented in Section 4. Errors are determined in Section 5. It is presented the results in Section 6 and the concluding remarks are presented in the last section.
+
+Image processing
+The positioning method is based on the night sky photography and its image processing. The first stage is to take some pictures from the night sky using a digital camera. Canon EOS 5D Mark II, 21 MegaPixels (5616FORMULA 3744) and 6.4FORMULA m pixel size and a skywatcher telescope 120/600 were used for these taking pictures. Skywatcher 120/600 is a refractor telescope with 120mm aperture and 600mm focal length. Usually in each trial it is needed to take about 50 pictures. Canon EOS 5D Mark II and skywatcher 120/600 provide FORMULA  FOV with FORMULA  milliarcseconds resolution.
+To measure the star position in the image, a point spread function (PSF) implemented. The used approach, presented by Anderson & King {{cite:3f3373fe-2726-432d-b43e-0be0952356a9}}. This implementation can measure center of a star with the precision of 0.02 pixel.
+The output of this step is equivalent to the unit vectors in "camera coordinate system" and international celestial reference frame (ICRF).
+Spherical trigonometry approach
+Different algorithms are used to extracting stars in an image {{cite:5950e5d7-9a5d-48e2-a618-a06594c62abc}}, {{cite:6abbad7e-0ea4-4c58-a119-8cf8f94f2b0b}}, {{cite:9fc279ae-e067-4fd9-8f9e-0e10ab1e7b9d}}. One of these algorithms is based on planar triangle method {{cite:9fc279ae-e067-4fd9-8f9e-0e10ab1e7b9d}}. In this work, since it is needed more accurate results, we used spherical triangle geometry instead on planar triangles. In normal photos, border distortion is a common abberate. Since angles of spherical triangles are less sensitive to calibration errors, therefore, this feature used to find the stars {{cite:9fc279ae-e067-4fd9-8f9e-0e10ab1e7b9d}}. The advantage of this method over the planar triangle is more independence of this method on the field of view. Wider FOV helps us to find a unique answer for the photographed part on the sky. Another advantage of this method is higher accuracy, which reduces error in calculation of the triangles. The method with higher accuracies help us to find the unique position of the observed of sky by using fewer stars, which reduces the searching time.
+To verify the method, Monte Carlo simulations used to produce imaginary stars (brighter than magnitude 9) on the taken pictures (FORMULA  FOV). A false star is a random point which is not pointed to a star; in a real image, it may be a planet or a satellite. In this simulation, false stars add as the brightest stars, so they have maximum effect on star identification. The results of the 1000 simulations are shown in tableREF ; Lack of enough stars in the image is the main reason for their incorrect identification.
+
+ TABLEtableIt has been simulated 1000 simulation for each item. It has added 0, 1 and 2 false stars and it is tried to find the unique position of each photo in the sky
+
+Creating catalog of spherical triangles
+Since it is needed to identify the coordinates of each star in the sky, The Spherical Triangles Virtual Constellations Catalog (STVCC) has been created. To create it, Tycho-2 catalog is used as the reference data {{cite:dd0c5d15-16d8-4008-86b0-9a726cafdc43}}. Considering the used camera and telescope with 0.5-second exposure time, the stars brighter than magnitude 9 could be detected. This limitation is applied for selection of the stars among Tycho-2 catalog too. Therefore, 124799 stars are selected from Tycho-2 catalog. Since the pictures from the sky should compared with STVCC, therefore, the distance between each two stars should be less than the FOV of the telescope. This limit reduces the number of triangles. At first, size of the sides of each triangle is calculated:
+FORMULA 
+where FORMULA  is declination and FORMULA  is right ascension of each star. Angles of a spherical triangle are calculated as follows {{cite:4eacedc5-271f-486f-8063-27a2044de8f5}}:
+FORMULA 
+Size of the angles and Tycho-2 identifier of the stars are stored in the STVCC. By using STVCC, each sky zone can be identified with only 5 stars with the accuracy of more than %95, 6 stars %99, and 7 stars %99.9.
+
+Making spherical triangle in camera coordinate system
+In each spherical triangle FORMULA  (Figure REF ) details of the triangle could be calculated as:
+FORMULA 
+FORMULA 
+FORMULA 
+Where FORMULA  is the focal length of the telescope, equal to 600mm. the length of each side could be calculated by Eq. REF .
+FIGURE 
+It should be noted that, in triangle FORMULA , two points FORMULA  and FORMULA  indicate stars and FORMULA  is the center pixel of the image, not a star. Finally, after calculating the of sides of a spherical triangle, the angles are calculated by Eq. REF .
+There was some assumption in the calculation of the spherical triangle in the camera coordinate system, the center of the CCD is the center of the focal plane, and the CCD is orthogonal to the optical axis of the telescope. Their effects on the accuracy of the system has been tested. Since these effects are much smaller than the error of the system error, therefore they were eliminated for the calculation.
+
+Search in STVCC
+To obtain the most accurate position of the taken picture in the sky, it is better to use the most number of recorded stars in the picture. Our instrument is able to identify stars up to magnitude 9, so 124799 stars are selected from Tycho-2. Number of the spherical triangles from these stars is combination of 3 from 124799 which is extremely large. Fortunately, there is a limitation over the problem which reduce the number and it is instrument FOV. In the first stage, the STVCC is created for stars with magnitude up to 7, which contains 951181 spherical triangles with sides smaller than the FOV. Next step is to search for the stars of an image, therefore they are ordered in terms of their brightness. Then, a spherical triangle is created between the first three brightest stars of the image (FORMULA ) and the spherical triangle is searched in STVCC. If there is more than one answer for the triangle, the second triangle is created, which includes FORMULA  stars. This new triangle is searched in STVCC the same as the first 3 stars. Between the two triangles FORMULA  and FORMULA  there is a common side FORMULA . Therefore the results which do not have two common stars are removed from two lists of the answers. The trend of the triangle creation continues until reaching to a unique answer.
+Since the picture has some aberrations and false stars, therefore, stars brighter than magnitude 9 are used in this FOV. Least square method is used to find the best fit between the picture and Tycho-2 catalog. This procedure is the same as the upper procedure but only for this part of the sky and a new catalog around the identified stars of the picture up to 9 magnitudes.
+
+Star vectors
+After identification of the stars in the image, the corresponding star vectors are constructed in the reference and the camera coordinate systems. Origin of the camera coordinate system is the central pixel of CCD (point FORMULA  in Figure REF ), X and Y axes directions are on 5616 and 3744 pixels on camera CCD sides respectively. A star vector is a unit vector from the origin of the coordinate system to each star. For each star in the reference coordinate system, the star vector is constructed using the information of its obtained right ascension and declination with the following equation:
+FORMULA 
+To construct the star vector in the camera coordinate system, the following relations are used:
+FORMULA 
+FORMULA 
+FORMULA  and FORMULA  are specified in Figure REF . FORMULA  and FORMULA  are X and Y components of star FORMULA  from center on the image (FORMULA ). Table REF  shows that the relative error of angular measurements is less than FORMULA . For example, it has been calculated 3 angles of 3 real stars HIP104333, HIP104028, and HIP104542 in reference system and camera coordinate system, independently.
+
+ TABLEtableAngles of triangle constructed in image and STVCC for HIP104333, HIP104028, and HIP104542 stars
+
+
+Camera-direction calculation
+For the purpose of the positioning, deviation angles of the camera CCD with the horizontal plane should be specified with a high accuracy. Two observers at different longitudes and latitudes are able to observe some common stars in their FOVs. Two observers with different positions and a limited FOV are able to see Polaris and its surrounding stars. The angles between the normal vector of camera CCD and the horizon of the observer could be quite specified. The direction of the camera could be determined using an FORMULA . The inclinometer could measure the deviation from the horizontal plane.
+Inclinometer and its low-cost supporter electronics
+Here, a SCA100T-D01 sensor is used as the used inclinometer. SCA100T series have two-axial angle meter ICs based on 3D-MEMS technology, which are used for leveling instruments. The measuring axes of the sensing elements are parallel to the mounting plane and orthogonal to each other. SCA100T-D01 in the interval FORMULA  degrees can provide angles with the resolution of 0.0035 degrees with 10 Hz. Angles of two inclinometer axes with the horizontal plane for the analogue output of this sensor are in the relation with voltage:
+FORMULA 
+FORMULA  is the output voltage of the sensor, FORMULA  is output of the sensor for zero angles, i.e. half of input voltage equal to FORMULA  for FORMULA  input voltage. FORMULA  indicates the sensitivity of the sensor which is equal to FORMULA  (4 Volts per gravitational acceleration) for SCA100T-D01. Using SCA100T-D01 outputs, the analog output should be converted into digital output. Because of the high resolution of SCA100T-D01 analog outputs, supporter ADC should have at least 16bits resolution. Microcontroller alone cannot reach this resolution, so AD7730 is used as the external ADC. AD7730 converts the analog output of SCA100T-D01 into the 16-bit digital output. Then, this digital output is transferred to Atmega8 micro-controller. Atmega8 takes the digital output and transfers it to the PC. The constructed inclinometer is shown in Figure REF .
+FIGURE 
+
+Positioning procedure
+Longitude, latitude and north direction are obtained by the following equation:
+FORMULA 
+In this equation, FORMULA  and FORMULA  are equivalent unit vectors in the camera and reference coordinate system, respectively. FORMULA s are FORMULA  matrixes.
+
+FORMULA  is the rotational matrix which converts star vectors in ICRFInternational Celestial Reference Frame into ITRFInternational Terrestrial Reference Frame
+
+FORMULA  converts sensor coordinate system into the local coordinate system
+
+FORMULA  converts camera coordinate system into the sensor coordinate system
+
+FORMULA  converts ITRF into the observer's local coordinate system
+
+Difference between the observer's local coordinate system and the horizontal coordinate system is their X-axis. It is toward the north in the horizontal coordinate system; however, in the local coordinate system, it is in the observer's horizontal plane. Angle with X-axis of the horizontal coordinate system is one of the outputs from the positioning system. Astronomical positioning is acquired by the calculation of FORMULA  from Eq. REF . It means that the information of the local coordinate system is extracted by the information of reference stars. In Figure REF , coordinate's conversions are schematically shown.
+FIGURE 
+Matrix  FORMULA
+In Tycho-2 catalog, stars have been recorded by J2000 in terms of the reference coordinate system. The position of the stars relative to each other is almost fixed; most of the proper motions are much less than one arcsec per year{{cite:f53e27cc-0c6e-45e6-ab17-08d43eebb543}}. However, they move in the sky because of earth rotation{{cite:9a5fcd53-1c05-4081-8316-e825c6dc2da0}}, {{cite:2d37b29b-475a-4947-87fc-91994d815e59}}, {{cite:2cb3d16a-32fc-44fe-87f5-64d7f6eefe5e}}. Matrix FORMULA  is required for the conversion of ICRF into ITRF. Simulations and frequency fitting are done on the data of earth rotation. New fittings with milliarcsecond precision in each century provide rotation angles. In this work, time series results obtained at IERSInternational Earth Rotation and Reference Systems Service Conventions (2010) are used for obtaining the rotation matrix{{cite:6d5492c5-2aa3-4d09-bd73-2fd25db6a2dd}}.
+
+Matrix  FORMULA
+Matrix FORMULA  converts sensor coordinate system into the local coordinate system. Outputs of the sensor are the angle of X' and Y' axis of the sensor with the horizon, i.e. FORMULA  and FORMULA , respectively. These angles are the complements of angles with Z-axis of the local system. This matrix is obtained from two rotations: the first one is around Y-axis and the next one is around X-axis. This hypothesis is acceptable because the horizontal coordinate system can be converted into the sensor coordinate system with three rotations first around Z, then Y, and finally X. Matrix FORMULA  contains the rotation around Z. As a result, rotation of FORMULA  will be as follows:
+FORMULA 
+The resulting matrix would be as follows:
+FORMULA 
+Using FORMULA  and FORMULA  results in:
+FORMULA 
+FORMULA 
+As a result, FORMULA  and FORMULA  are equal to:
+FORMULA 
+FORMULA 
+Outputs of the sensor are in the interval of -30 to 30 degrees. After determining FORMULA  and FORMULA , all the components of matrix FORMULA  can be determined using Eq. REF .
+The relativistic aberration and atmospheric refraction corrections are applied after this matrix multiplied by the vectors {{cite:c850aa87-b97c-4fb8-84c0-0acdf150f41c}}.
+
+Matrix  FORMULA
+This rotation matrix is the main part, which is obtained from the following three rotations (Figure REF ):
+FORMULA 
+FORMULA  is longitude, FORMULA  is latitude, and FORMULA  is the angle between X-axis of local coordinate system and direction of the north. In Eq. REF , FORMULA  and FORMULA  are unknown. Since the matrix FORMULA  is between FORMULA  and FORMULA , it is impossible to use attitude determination algorithm for the calculation of the matrix FORMULA . If FORMULA  is known, FORMULA  could be calculated by a deterministic algorithm{{cite:d9c4e65c-cd93-4b64-9b88-90f3c45f5b34}} or an optimal algorithm{{cite:f9ee8d8d-0ad0-462d-82a2-d4d91a590950}}, {{cite:638ec44c-29ba-40da-96a0-7fc7a5543350}}. In this paper,  FORMULALevenberg-Marquardt algorithm is used for calculating matrix FORMULA  {{cite:25e01aa7-7b58-4cb2-8c09-dff54591ee68}}, {{cite:b2d00585-4770-477f-8fc8-317f73f1e9f8}}. LMA outperforms simple gradient descent and other conjugate gradient methods is in a wide variety of problems. It is a pseudo-second-order method which means that it works with only function evaluations and gradient information but estimates the Hessian matrix using the sum of outer products of the gradients. FORMULA , FORMULA , and c are calculated by LMA.
+FIGURE 
+
+Matrix  FORMULA
+This rotation matrix converts the camera coordinate system into the sensor coordinate system. This rotation matrix is minimized by the calibration procedure. For this calibration procedure, at first, matrix FORMULA  is calculated for a known latitude and longitude and then multiplied by FORMULA  vectors to obtain vectors in the local coordinate system. Similar to calculating matrix FORMULA , angles of the rotation matrix converting camera coordinate system into the local coordinate system are calculated. Therefore, using these angles, the camera is rotated to lie on the horizon plane. This rotation is done by using an EQ6 mount which has 0.144 arcsec resolution. The inclinometer is aligned to the plumb line using inclinometer outputs. After fixing the inclinometer to the camera, camera coordinate system is converted into the inclinometer coordinate system with an angle with the Z axis. This angle is fixed, but unknown. By using LMA, there is no need to determine this rotation.
+
+Error investigation
+Using the photography of the night sky and determining the direction of photography, the position of the observer will be determined; however, this positioning is a physical parameter and has some errors. Error sources are:
+Error in determination of center of the stars
+Considering the specifications of the camera and lens, FORMULA  FOV is located on 3744 pixels. In other words, any pixel covers FORMULA  arcseconds. This error is for the case where the brightest pixel is selected as a star, but by using the centroiding algorithm, the center of the star can be determined with the accuracy of up to 0.05 pixels {{cite:c8b1c7b2-8a19-43aa-93b2-fb0516439b05}}. Also using more than one star, the error of centroiding is decreased. On the other hand, aberrations increase the error. As a result, the final error of the image processing is the combination of centroiding and aberrations errors, which can be estimated by stability testing. For obtaining this error estimation, the camera is fixed in the observation place. By this fixing, the inclinometer error is removed from the positioning results and stars in the FOV changed by earth rotation.
+FIGURE 
+FIGURE 
+FIGURE 
+
+Error In determining camera direction
+This error is a systematic error which is due to the inclinometer hardware and it is equal to the resolution of the inclinometer in determining the horizontal plane. The resolution of the used inclinometer is 0.0035 degrees, which is quite enough for this task.
+
+Calibration error
+Calibration error can be calculated by comparing the final result with other error sources. it is possible to investigate the other source of error isolated from final test, but it is not possible for error of the calibration.
+
+Results
+ Stability Test Results
+The short-term test is done for the error investigation of the position of each star's center in these taken pictures. 100 pictures were taken in one hour in one night. Calculated errors on latitude, longitude and the north direction are shown in Figs. REF  to REF . In these figures, X-axis is the number of the image and Y axis is the error in degrees.The average of the absolute deviation of these errors in latitude, longitude and angle with the north direction are FORMULA , FORMULA , and FORMULA  arcseconds, respectively.
+
+Long duration tests
+Results of 50 different night tests for latitude and longitude are shown in Figure REF  and Figure REF , respectively. In these figures, X axis is number of nights and Y axis is the difference between the calculated and accurate values. Reference longitude and latitude are obtained by GPS values and vertical deflection is from EGM2008{{cite:71953336-f7cb-423b-b28f-031573e974ff}}. During the 50 nights, 50 times tripod is mounted and installed; everything have been reset and photographic situations were quite independent. For the latitude, the mean error is FORMULA  arcminutes. For the longitude, the mean error is FORMULA  arcminutes. Therefore, the total error is less than 1.5km on the ground. Since the north direction cannot be determined using another accurate method and the north direction is different for each image, a similar diagram cannot be drawn for the angle with north direction.
+FIGURE 
+FIGURE 
+Error of the calibration is FORMULA  and FORMULA  arcminutes for latitude and longitude, respectively. This error comes from the calibration procedure, which is explained in section 4.4. Although this error is fixed for the setup, but this matrix multiplied to matrix FORMULA  which is not fixed. Therefore, it is impossible to increase the accuracy by subtracting this average error from calculated latitude and longitude.
+
+Conclusion
+By using stars for positioning, it is possible to determine latitude, longitude, and angle from the true north. One advantage of this type of positioning is no need to communicate with the ground stations and satellites. As {{cite:33cb1554-a39b-4018-91d5-8894e6542983}} and {{cite:5e8828f3-480c-480b-9b3a-0c063da2a5df}} used this method for determining the deflection of vertical axis; this method can be used as a supplement or cross-checking method. Although the accuracy of determining the latitude and longitude by this positioning system is less than GPS, it can measure the angle with true north accurately too. Also, it works in the places with the small FOV. The average positioning time is 35 sec and the weight of our system is 4.7kg.
+Positioning errors are due to the image processing, inclinometer, and calibration. The values of the image-processing error and the inclinometer error are known in the results section. Comparison of the final error with error to image processing and inclinometer error clarifies that the greatest error in the results comes from the calibration. As a result, the first step in reducing the error is the improvement of the calibration method. Afterwards, changing inclinometer can increase the accuracy of positioning. By using better calibration method error can reduce to 0.0035 degrees, the error of the inclinometer. After reaching the to the error of the inclinometer, changing the inclinometer needed to reduce error. There are many inclinometers with an error less than 1 arcsecond. for example, Jewell tilt-meter model 701-2A. In this error range, shutter time needed to reduced and for that telescope with larger aperture should use. By this changes the error of 1 arcsecond can be reached, which means 30m error in the positioning.

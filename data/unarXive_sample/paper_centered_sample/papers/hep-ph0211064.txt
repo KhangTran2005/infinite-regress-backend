@@ -1,0 +1,502 @@
+
+[12pt,epsf,epsfig]article
+hep-ph/0211064
+TPI–MINN–02/45
+UMN–TH–2117/02
+November 2002
+
+CDM in Supersymmetric ModelsSummary of an invited
+talk at the 10th International Conference on Supersymmetry and
+Unification of Fundamental Interactions (SUSY02) held at DESY, Hamburg,
+Germany, June 17-22, 2002.
+
+Keith A. Olive FORMULA
+
+ FORMULATheoretical Physics Institute, School of Physics and Astronomy,
+University of Minnesota, Minneapolis, MN 55455
+
+
+The supersymmetric extension to the Standard Model offers a promising
+cold dark matter candidate, the lightest neutralino. I will review the
+phenomenological and cosmological constraints on the
+supersymmetric parameter space and discuss the prospects for the detection
+of this candidate in both accelerator and direct detection searches.
+Introduction
+It is well known that supersymmetric models with conserved FORMULA -parity
+contain one new stable particle which is a candidate for cold dark matter
+(CDM) {{cite:66c58ace-d6bb-48b7-be29-ca7250b6ee6e}}. There are very strong constraints, however, forbidding the existence of stable or
+long lived particles which are not color and electrically neutral.
+Strong and electromagnetically interacting LSPs would become bound with
+normal matter forming anomalously heavy isotopes. Indeed, there are very
+strong upper limits on the abundances, relative to hydrogen, of nuclear
+isotopes {{cite:a37231a8-8b3f-4d87-8055-b5d0b533d772}},
+FORMULA 10-15  to  10-29
+ FORMULA FORMULAFORMULA m  FORMULA FORMULAFORMULA n/nH  FORMULAFORMULA 10-10FORMULA m FORMULA FORMULAFORMULA m FORMULA FORMULAFORMULA There are four neutralinos, each of which is a
+linear combination of the FORMULA , neutral fermions {{cite:66c58ace-d6bb-48b7-be29-ca7250b6ee6e}}: the wino
+FORMULA , the partner of the
+3rd component of the FORMULA  gauge boson;
+the bino, FORMULA , the partner of the FORMULA  gauge boson;
+and the two neutral Higgsinos, FORMULA  and FORMULA .
+In general,
+neutralinos can be expressed as a linear combination
+FORMULA 
+The solution for the coefficients FORMULA  and FORMULA 
+for neutralinos that make up the LSP
+can be found by diagonalizing the mass matrix
+FORMULA 
+where FORMULA  are the soft supersymmetry breaking
+U(1) (SU(2)) gaugino mass terms. FORMULA  is the supersymmetric Higgs
+mixing mass parameter and since there are two Higgs doublets in
+the MSSM, there are two vacuum expectation values, FORMULA  and FORMULA . One
+combination of these is related to the FORMULA  mass, and therefore is not a
+free parameter, while the other combination, the ratio of the two vevs,
+FORMULA , is free.
+The most general version of the MSSM, despite its minimality in particles and
+interactions contains well over a hundred new parameters. The study of such a model
+would be untenable were it not for some (well motivated) assumptions.
+These have to do with the parameters associated with supersymmetry breaking.
+It is often assumed that, at some unification scale, all of the gaugino masses
+receive a common mass, FORMULA . The gaugino masses at the weak scale are
+determined by running a set of renormalization group equations.
+Similarly, one often assumes that all scalars receive a common mass, FORMULA ,
+at the GUT scale (though one may wish to make an exception for the Higgs
+soft masses). These too are run down to the weak scale. The remaining
+supersymmetry breaking parameters are the trilinear mass terms, FORMULA ,
+which I will also assume are unified at the GUT scale, and the bilinear
+mass term
+FORMULA . There are, in addition, two physical CP violating phases which will
+not be considered here.
+The natural boundary conditions at the GUT scale for the MSSM would
+include
+FORMULA , the two soft Higgs masses (FORMULA  and FORMULA ) and FORMULA  in addition to
+FORMULA ,
+FORMULA , and FORMULA . In this case, by running the RGEs down to a low energy
+scale, one would predict the values of FORMULA , FORMULA , and the Higgs
+pseudoscalar mass, FORMULA  (in addition to all of the sparticle masses).
+Since FORMULA  is known, it is more useful to analyze supersymmetric models
+where FORMULA  is input rather than output. It is also common to treat
+FORMULA  as an input parameter. This can be done at the expense of
+shifting FORMULA  (up to a sign) and FORMULA  from inputs to outputs.
+When the supersymmetry breaking Higgs soft masses are also unified at the
+GUT scale (and take the common value FORMULA ), the model is often referred
+to as the constrained MSSM or CMSSM. Once these parameters are set, the
+entire spectrum of sparticle masses at the weak scale can be calculated.
+
+The Relic Density
+The relic abundance of LSP's is
+determined by solving
+the Boltzmann
+equation for the LSP number density in an expanding Universe.
+The technique {{cite:ffb6ce67-5420-42bd-801f-287514b30b13}} used is similar to that for computing
+the relic abundance of massive neutrinos {{cite:769c3a9d-cff0-4bd2-a1fb-a150f164842e}}.
+The relic density depends on additional parameters in the MSSM beyond FORMULA , and FORMULA . These include the sfermion masses, FORMULA , as well as FORMULA , all derived from FORMULA , FORMULA , and
+FORMULA . To determine the relic density it is necessary to obtain the
+general annihilation cross-section for neutralinos. In much of the
+parameter space of interest, the LSP is a bino and the annihilation
+proceeds mainly through sfermion exchange. Because of the p-wave
+suppression associated with Majorana fermions, the s-wave part of the
+annihilation cross-section is suppressed by the outgoing fermion masses.
+This means that it is necessary to expand the cross-section to include
+p-wave corrections which can be expressed as a term proportional to the
+temperature if neutralinos are in equilibrium. Unless the neutralino mass
+happens to lie near near a pole, such as FORMULA 
+FORMULA  or FORMULA , in which case there are large contributions to the
+annihilation through direct FORMULA -channel resonance exchange, the dominant
+contribution to
+the FORMULA  annihilation cross section comes from crossed
+FORMULA -channel sfermion exchange.
+Annihilations in the early
+Universe continue until the annihilation rate
+FORMULA  drops below the expansion rate given by the Hubble parameter,
+FORMULA . For particles which annihilate through approximate weak scale interactions, this
+occurs when FORMULA . Subsequently, the relic density of neutralinos is
+fixed relative to the number of relativistic particles.
+As noted above, the number density of neutralinos is tracked by a
+Boltzmann-like equation,
+FORMULA 
+where FORMULA  is the equilibrium number density of neutralinos.
+By defining the quantity FORMULA , we can rewrite this equation in
+terms of FORMULA , as
+FORMULA 
+where FORMULA  is the number of relativistic degrees of freedom.
+The solution to this equation at late times (small FORMULA ) yields a constant value of
+FORMULA , so that FORMULA .
+The final relic density expressed as a fraction of the critical energy density
+can be written as {{cite:66c58ace-d6bb-48b7-be29-ca7250b6ee6e}}
+FORMULA 
+where FORMULA  accounts for the subsequent reheating of the
+photon temperature with respect to FORMULA , due to the annihilations of
+particles with mass FORMULA  {{cite:ea3bb06b-35b0-4071-bb51-122cbcdd42d9}}. The subscript FORMULA  refers to
+values at freeze-out, i.e., when annihilations cease. The coefficients FORMULA  and FORMULA 
+are related to the partial wave expansion of the cross-section, FORMULA . Eq. (REF  ) results in a very good approximation to the relic density
+expect near s-channel annihilation poles, thresholds and in regions where the LSP is
+nearly degenerate with the next lightest supersymmetric particle
+{{cite:07eeaa0b-b048-42c9-9594-4031a0f1e6db}}.
+The preferred range of the relic LSP density is provided by data on
+the cosmic microwave background (CMB), which have recently been used to
+obtain the following 95% confidence range: FORMULA  {{cite:96eab5e3-a906-4904-87d3-d837495c1c57}}. Values much smaller than
+FORMULA  seem to be disfavoured by earlier analyses
+of structure formation in the CDM framework, so we restrict our attention
+to FORMULA . However, one should note that the LSP
+may not constitute all the CDM, in which case
+FORMULA  could be reduced below this value. On the upper side,
+it is preferable to remain very conservative, in particular because the
+upper limit on
+FORMULA  sets the upper limit for the sparticle mass scale.
+Here,
+FORMULA  is used, while being aware that the lower
+part of this range currently appears the most plausible.
+Fig. REF  illustrates qualitatively the regions of the
+FORMULA  plane favoured by LEP limits, particularly on FORMULA , FORMULA  and cosmology. Electroweak symmetry breaking is not
+possible in the dark-shaded triangular region in the top left corner, and
+the lightest supersymmetric particle would be charged in the bottom right
+dark-shaded triangular region. The experimental constraints on FORMULA  and
+FORMULA  exert pressures from the left, as indicated,
+which depend on the value of FORMULA  and the sign of FORMULA . The
+indication of a deviation from the Standard Model in FORMULA 
+disfavours FORMULA  and large values of FORMULA  and FORMULA  for FORMULA . The region where
+FORMULA  falls within the preferred range is indicated in light shading,
+its exact shape being dependent on the value of FORMULA . As
+discussed later in more detail, in addition to the `bulk' region at low
+FORMULA  and FORMULA , there are a number of regions at large values
+of FORMULA  and/or FORMULA  where the relic density is still compatible
+with the cosmological constraints. At large values of FORMULA , the
+lighter stau, becomes nearly degenerate with the neutralino and
+coannihilations between these particles must be taken into
+account {{cite:e656a5db-30b9-48f7-bef4-b29293f3c705}}, {{cite:6ab6a382-b174-4e58-8d68-ce7ac5e9e485}}. For non-zero values of FORMULA , there are new
+regions for which FORMULA  coannihilations are
+important {{cite:1703ee2e-fbab-473c-a950-55f8fb75e414}}. At large FORMULA , as one increases
+FORMULA , the pseudo-scalar mass, FORMULA  begins to drop so that there is
+a wide funnel-like region (at all values of FORMULA ) such that FORMULA  and s-channel annihilations become
+important {{cite:adddee5e-da6b-46e7-8a31-9e360bf1d6dd}}, {{cite:8c430a9c-6cb0-45e9-ac1b-82b4a4622c5c}}. Finally, there is a region at very high
+FORMULA  where the value of FORMULA  begins to fall and the LSP becomes more
+Higgsino-like. This is known as the `focus point'
+region {{cite:55b90259-0639-45a6-9dd3-1e20a2734c01}}. Also shown are the position of several
+benchmark points chosen for detailed phenomenological study
+{{cite:92ce8074-3232-4e12-91d5-a295d274e62d}}.
+FIGURE 
+Let us first focus on the `bulk' region in the CMSSM for FORMULA  and FORMULA  shown in Fig. REF  {{cite:e656a5db-30b9-48f7-bef4-b29293f3c705}}. The light
+shaded region correspond to
+ FORMULA. The dark shaded region has FORMULA 
+and is excluded. The light dashed contours
+indicate the corresponding region in FORMULA  if one ignores the effect of
+coannihilations. Neglecting coannihilations, one would find an upper
+bound of FORMULA  on FORMULA , corresponding to an upper bound of
+roughly FORMULA  on FORMULA .
+Coannihilations are important when there are several
+particle species FORMULA , with different masses, and
+each with its own number density FORMULA  and
+equilibrium number density FORMULA .
+In this case {{cite:07eeaa0b-b048-42c9-9594-4031a0f1e6db}}, the rate equation (REF ) still applies,
+provided FORMULA  is
+interpreted as the total number density,
+FORMULA 
+FORMULA  as the total equilibrium number density,
+FORMULA 
+and the effective annihilation cross section as
+FORMULA 
+In eq. (REF ), FORMULA  is now understood as the mass of the
+lightest sparticle under consideration.
+FIGURE 
+Note that this implies that the
+ratio of relic densities computed with and without coannihilations is,
+roughly,
+FORMULA 
+where FORMULA  and sub- and superscripts 0 denote
+quantities computed ignoring coannihilations. The ratio FORMULA , where
+FORMULA .
+For the case of three degenerate slepton NLSPs, FORMULA  and
+FORMULA .
+The effect of coannihilations is
+to create an allowed band about 25-50 FORMULA  wide in FORMULA  for FORMULA 1400  GeVFORMULA m1=mFORMULA m1= mFORMULA R10FORMULA m0FORMULA eff FORMULA
+
+The CMSSM with Universal Higgs masses
+A larger view of the FORMULA  parameter plane is shown in Fig.
+REF  {{cite:51715a29-42a2-4438-afd4-0b60749e83c7}}, {{cite:8c430a9c-6cb0-45e9-ac1b-82b4a4622c5c}}, {{cite:92ce8074-3232-4e12-91d5-a295d274e62d}}, {{cite:1667d986-1215-48f0-9eae-9be900e2a168}}, {{cite:341f5ba9-2ab2-4a87-81cb-a5dae57ada51}}. Included here are
+the most important phenomenological constraints (shown schematically in
+Figure REF ). These include the constraints on the MSSM
+parameter space that are provided by direct sparticle searches at LEP,
+including that on the lightest chargino FORMULA :  FORMULAFORMULA eFORMULA me FORMULA FORMULAFORMULA mH > 114.4FORMULA mhFORMULA mtFORMULA m1/2 FORMULA
+FIGURE 
+The constraint imposed by
+measurements of FORMULA  {{cite:5ca9600a-d563-4c70-a890-d8a55f1ea3a9}} also excludes small
+values of
+FORMULA . These measurements agree with the Standard Model, and
+therefore provide bounds on MSSM particles, such as the chargino and
+charged Higgs masses, in particular. Typically, the FORMULA 
+constraint is more important for FORMULA , but it is also relevant for
+FORMULA , particularly when FORMULA  is large.
+The latest value of the anomalous magnetic
+moment of the muon reported {{cite:2d023904-c0a3-4cfe-9c03-3f61841219e3}} by the BNL E821 experiment is
+also taken into account. The world average of FORMULA  now deviates by
+FORMULA  from the Standard Model calculation
+of {{cite:ef6e194b-4ca2-4b8e-9dbd-c1f1133a8bff}} using FORMULA  data, and by FORMULA  from the Standard Model calculation of {{cite:ef6e194b-4ca2-4b8e-9dbd-c1f1133a8bff}} based on
+FORMULA  decay data. Other recent analyses of the FORMULA  data yield
+similar results. On some of the subsequent plots, the formal
+2-FORMULA  range FORMULA  is displayed. As one can see, the region preferred by FORMULA 
+overlaps very nicely with the `bulk' region for FORMULA  and
+FORMULA .
+FIGURE 
+As noted above, another
+mechanism for extending the allowed CMSSM region to large
+FORMULA  is rapid annihilation via a direct-channel pole when FORMULA  {{cite:adddee5e-da6b-46e7-8a31-9e360bf1d6dd}}, {{cite:8c430a9c-6cb0-45e9-ac1b-82b4a4622c5c}}. Since the heavy scalar and
+pseudoscalar Higgs masses decrease as
+FORMULA  increases, eventually FORMULA  yielding a
+`funnel' extending to large
+FORMULA  and
+FORMULA  at large
+FORMULA , as seen in Fig. REF .
+The difficulty and necessary care involved in calculations at large
+FORMULA  were discussed in {{cite:8c430a9c-6cb0-45e9-ac1b-82b4a4622c5c}}. For related CMSSM
+calculations see {{cite:66c8d50b-fe21-41da-9943-d6745d319500}}.
+Another way to see the effects of increasing FORMULA  is plot
+look at the FORMULA  plane for fixed FORMULA .
+This is shown in Fig. REF . As one can see, there is a charged
+FORMULA  LSP in the upper right corner for both values of FORMULA , though the
+area is reduced when FORMULA  is increased as is expected. One also sees the
+cosmological region moving up in FORMULA  as FORMULA  is increased. In
+b), one also sees the well defined coannihilation tail. Here, the
+importance of FORMULA  at large FORMULA  is clearly displayed.
+FIGURE 
+
+The CMSSM with Non-Universal Higgs masses
+If one relaxes the unification condition for the two soft Higgs mass,
+FORMULA  and FORMULA , one could decide to make FORMULA  and FORMULA  inputs
+and instead making the Higgs soft masses outputs. This is referred to as
+the CMSSM with non-universal Higgs masses or NUHM {{cite:dbbd9904-ab58-4466-98fb-f5334c0bc514}}, {{cite:4f84c1c6-cc46-4fac-ac19-93ed5372be7a}}, {{cite:341f5ba9-2ab2-4a87-81cb-a5dae57ada51}}.
+The attractive feature of radiative symmetry breaking in the CMSSM is
+maintained by using the electroweak minimization conditions to solve for
+FORMULA  and FORMULA , given values of FORMULA  and FORMULA  at the weak scale.
+The electroweak symmetry breaking conditions may be written in the form:
+FORMULA 
+and
+FORMULA 
+where FORMULA  and FORMULA  are loop
+corrections {{cite:589a53ea-b45b-4206-8732-a1fd6dc5ce8e}}, {{cite:e084fccb-58e5-4347-be46-6aade492f6cb}}, {{cite:d5cd6954-b7a4-48c5-bf7a-d3caa179c986}} and
+FORMULA .
+The known radiative
+corrections {{cite:589a53ea-b45b-4206-8732-a1fd6dc5ce8e}}, {{cite:70fd2dee-3086-45f0-a8b2-9d8f27d76981}}, {{cite:18fc9452-4dab-43ac-9889-a77fba88d824}}
+FORMULA  and FORMULA  relating the values of the
+NUHM parameters at FORMULA  to their values at FORMULA  are incorporated:
+FORMULA 
+Solving for FORMULA  and FORMULA , one has
+FORMULA 
+and
+FORMULA 
+which are used to perform the numerical calculations {{cite:341f5ba9-2ab2-4a87-81cb-a5dae57ada51}}.
+It can be seen from (REF ) and (REF ) that, if FORMULA  is too small
+or FORMULA  is too large, then FORMULA  and/or FORMULA  can become negative and
+large. This could lead to FORMULA  and/or FORMULA , thus triggering
+electroweak symmetry breaking at the GUT scale. The requirement that
+electroweak symmetry breaking occurs far below the GUT scale forces one to
+impose the conditions FORMULA  as
+extra constraints, which we call the GUT
+stability constraint For a different point of view, however,
+see {{cite:fa5cece2-46c4-4b7e-be7c-84a8960e3e08}}..
+The NUHM parameter space was recently analyzed {{cite:341f5ba9-2ab2-4a87-81cb-a5dae57ada51}} and a sample
+of the results found is shown in Fig. REF . While much of the
+cosmologically preferred area with FORMULA  is excluded, there is a
+significant enhancement in the allowed parameter space for FORMULA .
+FIGURE 
+As usual, there are dark (red) regions where there is one or more charged
+sparticle lighter than the neutralino FORMULA  so that FORMULA  is no longer the
+LSP. First, there are `shark's teeth' at FORMULA  GeV,
+FORMULA 300FORMULA 1FORMULA ||FORMULA mAFORMULA m22 -
+m12FORMULA RFORMULA 1FORMULA ||FORMULA mFORMULA < M1 0.4  
+m1/2FORMULA ||FORMULA e FORMULAFORMULA || FORMULAFORMULA m < 44.7 FORMULA FORMULA FORMULAFORMULA 1 FORMULAFORMULA e, FORMULA
+The thick cosmological region at smaller FORMULA 
+corresponds to the `bulk' region familiar from CMSSM studies. The two
+(black) crosses indicate the position of the CMSSM points for these input
+parameters. Extending upward in FORMULA  from this region, there is another
+light (turquoise) shaded band at smaller FORMULA . Here, the neutralino
+gets more Higgsino-like and the annihilation to FORMULA  becomes
+important, yielding a relic density in the allowed range This is
+similar to the focus-point region {{cite:55b90259-0639-45a6-9dd3-1e20a2734c01}} in the CMSSM.. For
+smaller
+FORMULA , the relic density becomes too small due to the FORMULA  coannihilations. For even smaller FORMULA  (FORMULA 30FORMULA hFORMULA ZFORMULA The unshaded regions between the allowed bands have a relic density that
+is too high: FORMULA . However, the FORMULA  and
+FORMULA  coannihilation and bulk bands are connected by
+horizontal bands of acceptable relic density that are themselves
+separated by unshaded regions of low relic density, threaded by solid
+(blue) lines asymptoting to FORMULA  GeV. These lines correspond to cases when FORMULA , where direct-channel annihilation: FORMULA  is important,
+and suppresses the relic density {{cite:8c430a9c-6cb0-45e9-ac1b-82b4a4622c5c}}, {{cite:adddee5e-da6b-46e7-8a31-9e360bf1d6dd}} creating
+`funnel'-like regions.
+In panel (b), a larger value of FORMULA  is chosen.
+In this case, the previous region excluded by the neutral LSP constraint
+at large FORMULA , migrates to larger FORMULA . The `shark's
+teeth' for moderate FORMULA  grow, reaching up to FORMULA  GeV.
+These arise when one combines a large value of FORMULA  with a
+relatively small value of FORMULA , and one may find a FORMULA  or even a
+FORMULA  LSP. The large value of FORMULA  also keeps the rate of FORMULA  under control unless FORMULA  is small. The chargino
+constraint is similar to that in panel (a), whereas the FORMULA  constraint
+is irrelevant due to the large value of FORMULA . Finally, the GUT
+mass-squared positivity constraint now allows larger values of FORMULA 1000FORMULA It is also interesting to examine the FORMULA  - FORMULA  plane in the NUHM
+{{cite:341f5ba9-2ab2-4a87-81cb-a5dae57ada51}}. In Fig. REF a, there is a bulk region at FORMULA  GeV to 350 GeV, FORMULA  GeV to 150 GeV.
+As in the CMSSM, the FORMULA  is the LSP in the bigger area at
+larger FORMULA , and there are light (turquoise) shaded strips close to
+these forbidden regions where coannihilation suppresses the relic density
+sufficiently to be cosmologically acceptable. Further away from these
+regions, the relic density is generally too high. However, for larger
+FORMULA  there is another suppression, discussed below, which makes the
+relic density too low. At small FORMULA  and FORMULA  the left handed
+sleptons, and also the sneutrinos, become lighter than the neutralino. The
+darker (dark blue) shaded area is where a sneutrino is the LSP.
+The near-vertical dark (black) dashed and light (red) dot-dashed lines in
+Fig. REF  are the LEP exclusion contours FORMULA  GeV and FORMULA  GeV respectively. As in the CMSSM case, they
+exclude low values of
+FORMULA , and hence rule out rapid relic annihilation via direct-channel
+FORMULA  and FORMULA  poles. The solid lines curved around small values of
+FORMULA  and FORMULA  bound the light (pink) shaded region favoured by
+FORMULA  and recent analyses of the FORMULA  data.
+FIGURE 
+A striking feature in Fig. REF (a) when FORMULA  GeV
+is a strip with low FORMULA , which has bands with acceptable relic
+density on either side. The low-FORMULA  strip is due to rapid
+annihilation via the direct-channel FORMULA  poles which occur when FORMULA  GeV, indicated by the near-vertical solid (blue) line.
+The analogous rapid-annihilation strips occur in
+the CMSSM but at larger FORMULA  as seen in
+Fig. REF . There, they are diagonal in the FORMULA 
+plane, reflecting a CMSSM link between FORMULA  and FORMULA  that is absent in
+this implementation of the NUHM. The right-hand band in
+Fig. REF (a) with acceptable FORMULA  is broadened because the
+neutralino acquires significant Higgsino content, and the relic density
+is suppressed by the increased FORMULA  production. As
+FORMULA  increases, the neutralino becomes almost degenerate with the
+second lightest neutralino and the lighter chargino, and the FORMULA  coannihilation processes
+eventually push FORMULA  when FORMULA 700FORMULA The two dark (black) dash-dotted lines in Fig. REF (a)
+indicate where scalar squared masses become negative at the input GUT
+scale for one of the Higgs multiplets. One of these GUT
+stability lines is
+near-vertical at FORMULA  GeV, and the other is a curved line at
+FORMULA  GeV, FORMULA  GeV.
+Panel (b) of Fig. REF  is for FORMULA  GeV and FORMULA  GeV. We notice immediately that the heavy Higgs pole and the
+right-hand boundary of the GUT stability region move out to larger
+FORMULA  GeV, respectively, as one would expect for
+larger FORMULA . At this value of FORMULA , the right side of the
+rapid annihilation (`funnel') strip has disappeared, due to enhanced
+chargino-neutralino coannihilation effects.
+These two examples serve to demonstrate that the FORMULA  plane
+may look rather different in the CMSSM from its appearance in the CMSSM
+for the same value of FORMULA . In particular, the locations of
+rapid-annihilation funnels and FORMULA 
+coannihilation regions are quite model-dependent, and the GUT stability
+requirement may exclude large parts of the FORMULA  plane.
+Detection
+Because the LSP as dark matter is present locally, there are many
+avenues for pursuing dark matter detection. Direct detection techniques
+rely on an ample neutralino-nucleon scattering cross-section.
+The effective four-fermion lagrangian can be written as
+FORMULA 
+However, the terms involving FORMULA , and
+FORMULA  lead to velocity dependent elastic cross sections.
+The remaining terms are: the spin dependent coefficient,
+FORMULA  and the scalar coefficient FORMULA .
+Contributions to FORMULA  are predominantly through light squark exchange. This is the dominant channel for binos.
+Scattering also occurs through Z exchange but this channel
+requires a strong Higgsino component.
+Contributions to FORMULA  are also dominated by
+light squark exchange but Higgs exchange
+is non-negligible in most cases.
+Fig. REF  displays contours of the
+spin-independent cross section for the elastic scattering of the LSP
+FORMULA  on protons in the FORMULA  planes for (a) FORMULA , (b) FORMULA  {{cite:24485371-6c3b-4efc-8030-5d09d3661586}}. The double
+dot-dashed (orange) lines are contours of the spin-independent cross
+section, and the contours
+FORMULA  pb in panel (a) and FORMULA  pb in panel (b) are
+indicated.
+The LEP lower limits on FORMULA  and FORMULA , as well as the
+experimental measurement of FORMULA  for FORMULA , tend to bound
+the cross sections from above, as discussed in more
+detail below. Generally speaking, the spin-independent cross section is
+relatively large in the `bulk' region, but falls off in the coannihilation
+`tail'. Also, we note also that there is a strong
+cancellation in the spin-independent cross section when
+FORMULA  {{cite:1b574ac0-0766-49ce-ba8b-f7abad3ad401}}, {{cite:b0bf5490-1ecb-4b9e-b75c-332a455ecdf2}}, as seen along strips in panel (a) of
+Fig. REF  where
+FORMULA  GeV. In the cancellation region,
+the cross section drops lower than FORMULA  pb. All these possibilities
+for suppressed spin-independent cross sections are disfavoured by the
+data on
+FORMULA , which favour values of FORMULA  and
+FORMULA  that are not very large, as well as FORMULA , as seen in panel
+(b) of Fig. REF . Thus FORMULA  tends to provide a
+lower bound on the spin-independent cross section.
+FIGURE 
+Fig. REF (a) illustrates the effect on the cross sections
+of each of the principal phenomenological constraints, for the particular
+case FORMULA  FORMULA . The solid
+(blue) lines mark the bounds on the cross sections allowed by the
+relic-density constraint FORMULA 
+alone.
+For any given value of
+FORMULA , only a restricted range of FORMULA  is allowed. Therefore, only a
+limited range of FORMULA , and hence only a limited range for the cross
+section, is allowed for any given value of
+FORMULA . The thicknesses of the allowed regions are due in part to the
+assumed
+uncertainties in the nuclear inputs. These have been discussed at
+length in {{cite:b0bf5490-1ecb-4b9e-b75c-332a455ecdf2}}, {{cite:1b574ac0-0766-49ce-ba8b-f7abad3ad401}}.
+On
+the other hand, a broad range of FORMULA  is allowed, when one takes into
+account the coannihilation `tail' region at each FORMULA  and the rapid-annihilation `funnel' regions for FORMULA . The dashed (black) line displays the range allowed by
+the FORMULA  constraint alone. In
+this case, a broader range of FORMULA  and hence the spin-independent cross
+section is possible for any given value of FORMULA . The impact of the
+constraint due to FORMULA  is shown by the dot-dashed (green) line.
+Comparing with the previous constraints, we see that a region at low
+FORMULA  is excluded by FORMULA , strengthening significantly the previous
+upper limit on the spin-independent cross section. Finally, the
+dotted (red) lines in Fig. REF  show the impact of the
+FORMULA  constraint. This imposes an upper bound on
+FORMULA  and hence FORMULA , and correspondingly a lower limit on
+the spin-independent cross section.
+FIGURE 
+This analysis is
+extended
+in panel (b) of Fig. REF  to all the values FORMULA  and we find overall that {{cite:24485371-6c3b-4efc-8030-5d09d3661586}}
+
+FORMULA 
+ SI   FORMULAFORMULA 6 10-8 pb,
+2 10-7 pb  FORMULAFORMULA  SD   FORMULAFORMULA 10-5 pb,
+
+
+for FORMULA . (FORMULA  is the spin-dependent cross-section not
+shown in the figures presented here.) As we see in panel (b) of
+Fig. REF ,
+FORMULA  provides the most important upper limit
+on the cross sections for FORMULA , and FORMULA  for
+larger FORMULA , with FORMULA  always providing a more stringent
+lower limit than the relic-density constraint.
+The relic density constraint shown is evaluated at the endpoint of the
+coannihilation region. At large FORMULA , the
+Higgs funnels or the focus-point regions have not been considered, as
+their locations are very sensitive to input parameters and calculational
+details {{cite:6c9b4147-0bb2-4ba2-81e5-f785bad33826}}.
+The results from a CMSSM and MSSM analysis {{cite:1b574ac0-0766-49ce-ba8b-f7abad3ad401}}, {{cite:b0bf5490-1ecb-4b9e-b75c-332a455ecdf2}} for FORMULA  and 10 are compared with the most recent CDMS {{cite:a5e78566-9781-41e7-ad72-d092eca622d5}} and
+Edelweiss {{cite:0dea8990-56fd-4cf7-bf65-5563a4386a8a}} bounds in Fig. REF . These results have nearly
+entirely excluded the region purported by the DAMA {{cite:4cd5aea6-cb89-439d-99f5-3303c10af8ba}} experiment.
+The CMSSM prediction
+{{cite:1b574ac0-0766-49ce-ba8b-f7abad3ad401}} is shown by the dark shaded region, while the NUHM case {{cite:b0bf5490-1ecb-4b9e-b75c-332a455ecdf2}} is
+shown by the larger lighter shaded region.
+FIGURE 
+FIGURE 
+I conclude by showing the
+prospects for direct detection for the benchmark points discussed
+above{{cite:8036ff87-06a5-4985-a777-9dfe6227c21d}}. Fig. REF  shows rates for the elastic
+spin-independent scattering of supersymmetric relics,
+including the projected sensitivities for CDMS
+II {{cite:943f3693-7d4e-4674-854e-bbc5097cee4e}} and CRESST {{cite:52127ffe-85b9-474c-ade2-6d01fec89a96}} (solid) and
+GENIUS {{cite:2a38e8af-3edd-45ba-9ddf-be5d4d40ff7a}} (dashed).
+Also shown are the cross sections
+calculated in the proposed benchmark scenarios discussed in the previous
+section, which are considerably below the DAMA {{cite:4cd5aea6-cb89-439d-99f5-3303c10af8ba}} range
+(FORMULA  pb).
+Indirect searches for supersymmetric dark matter via the products of
+annihilations in the galactic halo or inside the Sun also have prospects
+in some of the benchmark scenarios {{cite:8036ff87-06a5-4985-a777-9dfe6227c21d}}.
+
+Acknowledgments
+I would like to thank J. Ellis, T. Falk, A. Ferstl, G. Ganis, Y. Santoso, and M.
+Srednicki for enjoyable collaborations from which this work is culled.
+This work was supported in part by
+DOE grant DE-FG02-94ER40823 at Minnesota.

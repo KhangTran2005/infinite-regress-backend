@@ -1,0 +1,111 @@
+
+=1
+A second-order, perfectly matched layer formulation to model 3D transient wave propagation in anisotropic elastic mediaHisham AssiEmail address: hisham.assi@mail.utoronto.ca   and Richard S. C. CobboldInstitute of Biomaterials and Biomedical Engineering, University of Toronto,164 College Street, Toronto, M5S 3G9, CanadaNumerical simulation of wave propagation in an infinite medium is made possible by surrounding a finite region by a perfectly matched layer (PML). Using this approach a generalized three-dimensional (3D) formulation is proposed for time-domain modeling of elastic wave propagation in an unbounded lossless anisotropic medium. The formulation is based on a second-order approach that has the advantages of, physical relationship to the underlying equations, and amenability to be implemented in common numerical schemes. Specifically, our formulation uses three second-order equations of the displacement field and nine auxiliary equations, along with the three time histories of the displacement field. The properties of the PML, which are controlled by a complex two-parameter stretch function, are such that it acts as near perfect absorber. Using finite element method (FEM) 3D numerical results are presented for a highly anisotropic medium. An extension of the formulation to the particular case of a Kelvin-Vogit viscoelastic medium is also presented.
+
+Keyword: Perfectly matched layers; Elastic waves; Second order time-domain; Anisotropic media; viscoelastic media
+
+Introduction
+Perfectly matched layers {{cite:d0cbd3eb-db9c-42ff-8da1-491ef471949e}} are a well-developed method for simulating wave propagation in unbounded media enabling the use of a reduced computational domain without having to worry about spurious boundary reflections. Bérenger showed that by adding specific conductivity parameters to Maxwell's equations, perfect matching and decaying of the propagating waves in the PML could be achieved {{cite:d0cbd3eb-db9c-42ff-8da1-491ef471949e}}. An alternative method is to assume that the material contained within the PML is a uniaxial anisotropic media {{cite:ef16702d-3017-4663-a1e7-500e8db9a7b8}}, {{cite:4fb49764-f241-418a-b768-1647f380c0f0}}, {{cite:b3e79737-4d36-4020-8463-88f90075e564}}, generally referred to as the uniaxial PML approach. A third method, with greater generality and flexibility, is the complex coordinate stretching approach {{cite:84848ea6-2370-42ad-a575-fe94fe6b7ea9}}. In fact, the conductivity parameter introduced by Bérenger {{cite:d0cbd3eb-db9c-42ff-8da1-491ef471949e}} can be thought of as a damping parameter in a stretch function that transforms the spatial coordinate in the layer to the complex plane.
+Subsequent to these electromagnetic wave applications, many PML formulations have been introduced for elastic wave propagation {{cite:0041252a-6655-4864-8ee8-d0277f9a7dfb}}, {{cite:c065f055-abfc-44b4-aec4-3537e250a551}}, {{cite:082715fb-33a8-46e5-a6e5-94d70ded5644}}, {{cite:5a7a2fb0-7cf8-4ba6-9cb3-c599319dc83e}}, {{cite:5ee9d133-b453-411c-ae1c-a665c27423ce}}, {{cite:63d20e7d-9cc1-4fe4-ad3d-05ae4b356047}}, {{cite:b4919e0f-92de-4c87-8c52-1b592a75ca84}}. Amongst these, the split-field formulations that are typically described by systems of first order equations with double (for 2D) or triple (for 3D) the number of stress-velocity physical equations (nine equations in all for the 3D case) . Second-order formulations uses one physical field variable (usually the displacement) along with extra auxiliary variables that are typically needed to obtain the time-domain equations from the frequency-domain equations. Mathematically, it has been proven that certain second-order PMLs are strongly well-posed, while the first-order type is only weakly well-posed {{cite:700d28ca-62c1-4392-ac57-1c334fed9b11}}, {{cite:0285fe10-cea7-4aee-9f7e-bb920c6f0e75}}, {{cite:7587fb41-a4ff-4756-b8f9-4e53fd503be7}}.
+There are other advantages for choosing second-order formulations. The second-order displacement elastic wave equation emerges directly from Newton's second law {{cite:7587fb41-a4ff-4756-b8f9-4e53fd503be7}}, unlike the fist-order stress-velocity elastic wave equation which introduces a new non-physical wave mode with zero velocity {{cite:7587fb41-a4ff-4756-b8f9-4e53fd503be7}}, {{cite:5ee9d133-b453-411c-ae1c-a665c27423ce}}. Moreover, the second-order PML formulations are more readily implemented in common numerical schemes that are based on second-order displacement wave equations {{cite:24e4520b-8bae-4cee-aa9a-3ab1f4f8c76f}}, {{cite:0dbb5662-fc10-4237-8944-0f2149b470be}}. However, deriving second-order PML formulations is less trivial than that for first-order ones, especially in the time-domain where many auxiliary variables are needed. The problem becomes more complex for the 3D modeling which would partially explain the dearth of second order formulations in 3D.
+There have been a number of papers that describe the formulation of time-domain wave propagation in 3D fluid media using PMLs (see of example {{cite:e405f832-cd16-46a9-be05-9631da623acd}}, {{cite:be635ea1-be77-4550-9466-047ca350f9af}}) but there are relatively few that address the same problem for anisotropic, inhomogeneous elastic media, especially those attempting a second-order formulation. In previous works {{cite:473a350c-7aeb-4446-a5ec-13f232688582}}, {{cite:30f4193b-4848-4ca6-b5b4-a98ea256cfb5}}, the authors introduced a compact second-order time-domain PML formulations for the elastic wave equation in 2D which has only four auxiliary variable. Recently Lee and Shin {{cite:d5939197-74e0-499f-8604-b1b324d8f34e}} introduced an unsplit PML formulation for isotropic media or media with vertical axis of symmetry (VTI). Their 2D derivation was based on second-order elastic wave equations, and the final formulation followed closely the one given in Assi and Cobbold {{cite:473a350c-7aeb-4446-a5ec-13f232688582}}, {{cite:30f4193b-4848-4ca6-b5b4-a98ea256cfb5}}. It should be noted that the final form of the PML formulation, and not the way it wavs derived, that governs its robustness and other characteristics. Additionally, Lee and Shin extended their formulation to 3D VTI media for which they presented numerical results {{cite:d5939197-74e0-499f-8604-b1b324d8f34e}}.
+The purpose of this paper is to derive a time-domain second-order formulation to model elastic wave propagation in an unbounded three-dimensional general anisotropic inhomogeneous solid. As will be seen the formulation results in a system of equations that are applicable throughout the computational domain. In the physical domain, the complex stretch function is simply set to unity. To demonstrate the application of our formulation, propagation from a spherical transient source embedded in a highly anisotropic medium (the mineral Olivine) is illustrated. Extension of the formulation to include a viscoelastic medium that can be represented by a Kelvin-Vogit model {{cite:9333c5fc-b743-4fd1-854e-b8bcbc80e94d}}, {{cite:35de60b7-33dc-494b-9266-8866e22af848}}, is presented in app:viscoelasticity.
+
+Background and materials
+Elastic waves in solids
+Wave propagation in linear elastic solids can be described using Newton's second law, along with Hook's law and a linear approximation for the strain. These lead to the following second-order formulation of the elastic wave equation:
+FORMULA 
+where FORMULA  is time, FORMULA  is the space variable, FORMULA  are the components of particle displacement vector. Moreover, FORMULA  is the solid mass density and FORMULA  are the components of the fourth order elasticity tensor with the following symmetry properties: FORMULA , and FORMULA . The source of energy that excites the elastic medium can be added as a load vector, FORMULA , to the right-hand side (RHS) of (REF ).
+In general, the elasticity tensor, FORMULA , has 81 components, but due to the above symmetries, the maximum number of independent parameters is 21. For the special case of isotropic solids, the elasticity tensor can be described by two independent parameters such as the Lamé coefficients, FORMULA  and FORMULA . In terms of these two coefficients, the elasticity tensor can be written as:
+FORMULA 
+where FORMULA is the Kronecker delta function.
+For the purpose of plane wave and Fourier analyses, the harmonic wave solutions of the following form:
+FORMULA 
+will be considered for the elastic wave equation as given by (REF ). In this equation, FORMULA 
+is the constant amplitude polarization vector, FORMULA  is the wavevector, FORMULA  is the angular frequency, and FORMULA .
+
+Complex coordinates stretching
+To obtain a PML formulation for a given wave equation, the complex coordinate stretching {{cite:84848ea6-2370-42ad-a575-fe94fe6b7ea9}} can expressed as a coordinate transform: FORMULA . Since FORMULA  in the physical domain and the PML region is assumed to be homogeneous, then FORMULA  appears only in the form of spatial partial derivatives in the PDEs. Given a field variable FORMULA , then using the chain rule: FORMULA , which reduces to FORMULA  since FORMULA  depends only on FORMULA . As a result, defining the complex stretch function by FORMULA  suffices to perform transformation:
+FORMULA 
+The two-parameter complex stretch function introduced by Fang and Wu {{cite:9a3677ac-f729-4aef-a58c-1a04b5020701}} in their generalized PML (GPML) is adopted in this paper. This function is given by
+FORMULA 
+where the FORMULA  is the damping parameter responsible for damping the propagating wave inside the PML. In this equation, the scaling parameter, FORMULA , is responsible for either stretching (FORMULA ) or compressing (FORMULA ) the coordinate. It should be noted that in the physical domain, where FORMULA , FORMULA  and FORMULA .
+Appropriate choices are now needed for the stretch function parameters FORMULA  and FORMULA . Despite the absence of a rigorous methodology for their choice {{cite:5a7a2fb0-7cf8-4ba6-9cb3-c599319dc83e}}, {{cite:b4919e0f-92de-4c87-8c52-1b592a75ca84}}, polynomial functions are often used as indicated below for the damping parameter:
+FORMULA 
+FORMULA where d is the thickness of the PML, FORMULA  is the dimension of the square physical domain centered at the origin, FORMULA  is the polynomial order, FORMULA  is a constant that represent the maximum values of FORMULA . The value of this parameter needs to be specified. It is helpful to express the value of FORMULA  in terms of a desired amplitude reflection coefficient (FORMULA  caused by the reflection from the outer boundary of the PML. It can be shown that for normal incidence and assuming FORMULA ,
+FORMULA 
+Quadratic polynomial, corresponds to FORMULA , will be used in this work unless mentioned otherwise.
+Without loss of generality, the scaling parameter, FORMULA , is set to unity in this work. This parameter can be readily introduced back to any PML formulation that is derived using the complex stretch function in (REF ), by replacing each FORMULA  by FORMULA  in the PDEs.
+
+Formulation of PML for elastic wave propagation
+With the help of the above background, our time-domain PML formulation can be introduced for the wave propagation in unbounded media. All parameters, namely, FORMULA , FORMULA , FORMULA , and FORMULA , are assumed to be space dependent throughout the derivation leading to a variable-coefficient PML formulation. Since the stretch function also depends on the frequency, the derivation starts in the frequency domain.
+First, we take Fourier transforms of the elastic wave equation (REF ), and then transform the spatial coordinates using complex stretching, FORMULA , as introduced in subsec:complex. These steps lead to:
+FORMULA 
+where FORMULA  denotes the Fourier transform in time. The need to solve this differential equation along contours in the complex plane can be avoided by inverse transforming the complex-stretched coordinates back to the original spatial coordinates using (REF ). This is followed by multiplying the equation by FORMULA , leading to:
+FORMULA 
+Expanding FORMULA  according to (REF ) while assuming FORMULA , the left-hand side (LHS) of the above equation becomes:
+FORMULA 
+Here, it is helpful to introduce the variable
+FORMULA 
+whose Fourier transform is given by FORMULA . However, the second term vanishes since the stretch function (REF ) is not defined for the static case of FORMULA  {{cite:b4919e0f-92de-4c87-8c52-1b592a75ca84}}. Consequently, substituting FORMULA  in the last term of (REF ) and taking inverse Fourier transform FORMULA  of this, results in
+FORMULA 
+It should be noted that FORMULA , and hence does not depend on FORMULA , enabling the RHS of (REF ) to be written as:
+FORMULA 
+After some manipulations, it can be shown that
+FORMULA 
+At this point, we introduce the auxiliary variables, FORMULA  such that their Fourier transform
+FORMULA 
+Multiplying the above equations by FORMULA  and taking its inverse Fourier transform results in the following time-domain auxiliary equations:
+FORMULA 
+and the RHS of (REF ) becomes
+FORMULA 
+This concludes our derivation, so that the final second-order time-domain PML formulation for elastic wave propagation in three-dimensional anisotropic solid can be written as
+FORMULA 
+
+
+
+where FORMULA , FORMULA , FORMULA , FORMULA , and FORMULA .
+
+Numerical Methods and Results
+For our studies, the source of excitation was a 1 mm radius sphere, centered at the origin and embedded in an infinite 3D medium. To model the infinite medium we assumed a cubic physical domain of 2.0 cmFORMULA  that is centered at the origin and surrounded by a 2.0 mm PML. The boundary of the sphere was assumed to vibrate with a displacement, whose normalized time-dependence is given by the first derivative of a Gaussian, i.e., by
+FORMULA 
+where FORMULA  is the dominant frequency and FORMULA  is a source delay time. All numerical experiments used FORMULA  MHz and FORMULA s.
+The simulations were performed using COMSOL with the second-order Lagrange finite elements employing a cubic mesh for the PML region and the default tetrahedral shape in the physical domain (see fig:ThreeDGeometrya). For discussing the mesh dimensions and time discretization, it is helpful to define the minimum and maximum characteristic wave speeds associated with the medium by FORMULA  and FORMULA . The mesh size is governed by the shortest wavelength of significance for the propagating pulse, i.e., by FORMULA .
+Specifically, the mesh size was assumed to be given by
+FORMULA 
+which for the second-order accurate finite elements used, corresponds to FORMULA  degrees of freedom per wavelength. As illustrated in fig:ThreeDGeometrya, the mesh employed uses a PML whose thickness consists of just four elements. As will be seen this is sufficient to ensure virtually complete absorption of the various incident waves. For the time discretization, a second-order generalized alpha method, as defined by Chung and Hulbert {{cite:78946ac0-d6c2-43fa-94b5-cb358f0a1e27}}, was used with FORMULA = 0.75. The step duration was FORMULA , which is just less than the time needed for the fastest wave to travel through the smallest mesh dimension.
+To test the validity of our formulation and the accuracy with which our finite element simulations describe the propagating pulse, the exact solution for a monochromatic compressional wave caused by a 1-mm radius sphere whose surface vibrated normal to the surface {{cite:3f08d657-fa88-432e-8689-8d63fff75d94}} was used. The sphere was assumed to be embedded in an unbounded isotropic solid (glass). By multiplying this monochromatic solution with the Fourier transform of equation (REF ) and then taking the inverse Fourier transform, the time-domain analytic solution was obtained. Good agreement with the numerically calculated response provided convincing evidence for the validity of our 3D formulation, though the results are not presented here.
+FIGURE 
+To illustrate the application of our general formulation, we chose to present the results for a highly anisotropic medium. In particular, we chose to examine the 3D response when the above source, in (REF ), is contained within in a single crystal of olivine (MnFORMULA SiOFORMULA ). Olivine is a mineral with an orthorhombic structure and nine independent elasticity components whose measured parameters at 25FORMULA C are given by {{cite:12463b11-6f52-4bcb-aa4b-dce1a9c2d9a9}}, {{cite:fb9c512f-c868-4ff6-ae95-1e38f5d8491e}}: FORMULA , FORMULA , FORMULA , FORMULA , FORMULA , FORMULA , FORMULA , FORMULA , FORMULA  Mbar. Unlike the isotropic case, fast and slow waves propagate in anisotropic solids even if the excitation is normal to the sphere's surface. Nevertheless, in order to observe a clearer presence of these different waves, we decided to to excite the medium by vibrating the sphere's surface at FORMULA  to the normal in the polar direction. Namely, the Dirichlet boundary condition at the surface of the sphere is set to:
+FORMULA 
+where FORMULA  is defined in (REF ), FORMULA  is the normal unit vector, and FORMULA  is the tangential unit vector in the FORMULA  direction, and FORMULA  is the polar angle that varies from 0 to FORMULA  away from the FORMULA -axis. At FORMULA  for example, FORMULA  is in the negative FORMULA -direction, hence, the quasi-longitudinal wave is expected to be dominant on the FORMULA -FORMULA  plane.
+The results of the simulations are presented as density and vectors plots that represent the magnitudes and the directions of the normalized displacement field. While fig:ThreeDGeometryb provides a snapshot of the propagating waves in a 3D format, such an image is difficult to interpret. The three sets of snapshots for three different planes, as shown in the nine panels of fig:Planes2D, provides much more detailed information. These snapshots show 2D plots of the field on the thee principal planes at 1 FORMULA s, 2.2 FORMULA s, and 3.5 FORMULA s. The first column shows the displacement field on the FORMULA -FORMULA  plane, wherein, as expected, the fast wave is dominant. Meanwhile, on the other two planes, the thee waves; the quasi-longitudinal (fast) and the two quasi-shear (slow), are clearly present as shown in the 2.2 FORMULA s snapshots. At this time, the fast wave is being effectively absorbed by the PML, while the slow waves are being absorbed in the 3.5 FORMULA s snapshot.
+FIGURE 
+The effectiveness of the PML to absorb all the incident energy can be obtained by looking at the manner in which the energy in the physical domain evolves over time. Since the total energy in the physical domain is the sum of the kinetic and potential energy, it can be calculated from
+FORMULA 
+fig:EnergyDecay shows that the total energy decays to a negligible level in less than 5FORMULA s.
+FIGURE 
+
+Conclusion
+Using PML approach we have addressed the problem of wave propagation in an unbounded, linear anisotropic solid in three dimensions. A time-domain second order PDE has been derived using complex coordinate stretching. The advantages of our time-domain formulation is the fact that it covers the more general inhomogeneous anisotropic case using a small number of equations. Specifically, three second-order equations of the displacement field and nine auxiliary equations, along with the time histories of the displacement field. This simplifies the problem and reduces the computational resources needed. Moreover, use can be made of a wider variety of second-order numerical schemes.
+
+Acknowledgments
+We wish to thank the Natural Sciences and Engineering Research Council (NSERC) for their support [grant number 3247-2012]. We also wish to thank Pooya Bidari from Ryerson University for drawing to our attention the importance of developing a viscoelastic 3D model.
+
+PML for viscoelastic media
+It should be noted that the PML formulation presented in the this paper models wave propagation in a loss-less media, for which, Hook's law as used in (REF ), is given by
+FORMULA 
+where FORMULA  are the components of the symmetric stress tensor, and the components of the elasticity tensor, FORMULA , are assumed to be real-valued. There are several different models that are used to account for viscous losses to the elastic wave equation {{cite:35de60b7-33dc-494b-9266-8866e22af848}}. One that is commonly used especially for modeling wave propagation in tissue {{cite:8bd8e7d2-f86e-4dc1-b9eb-f72c29f3efc4}}, is the Kelvin–Vogit model, for which Hook's law takes the form
+FORMULA 
+where FORMULA  is the viscosity tensor. For such a medium the wave equation is:
+FORMULA 
+Following the same steps used in deriving the elastic PML formulation in sec:formulation, a PML formulation for the above viscoelastic wave equation can be obtained. The only difference, for this viscoelastic case, is that equation (REF ) in the derivation becomes:
+FORMULA 
+This leads to the following PML formulation for the viscoelastic wave equation:
+
+
+FORMULA 
+
+
+
+where FORMULA , and FORMULA , while the rest of the coefficients are as defined in elastic PML formulation as given in equation ().

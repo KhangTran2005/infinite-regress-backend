@@ -1,0 +1,123 @@
+
+[preprint,aps,floats]revtex
+CALT-68-2212
+hep-ph/9902311Semileptonic FORMULA  Decays as a Probe of New Physics
+Walter D. Goldbergerwalter@theory.caltech.edu
+
+California Institute of Technology, Pasadena, CA 91125
+Physics beyond the Standard Model could be measured indirectly, through its effects on Standard Model observables. One place to look for such effects is in the semileptonic decays of FORMULA  mesons. In order to constrain the possible role of new physics on semileptonic FORMULA  decays, we present the most general low energy effective Lagrangian constructed from all dimension six four-fermion operators that contribute to the process FORMULA . We then use it to compute the corrections due to new physics to the differential decay rates for the exclusive processes FORMULA , as well as the inclusive decays FORMULA . Both inclusive and exclusive rates are expressed in terms of a set of parameters that characterize the types of four-fermion interactions that can be induced by physics beyond the Standard Model. Although it is not particularly useful to carry out a full analysis until data from the next generation of FORMULA  factories becomes available, here we illustrate how the existing experimental results can be used to constrain some of these parameters.
+
+
+Introduction
+Despite the fact that the Standard Model successfully accounts for most of the observed experimental results (see {{cite:d2a4a104-ca6d-425c-adba-6330d9b3966e}} for a review), it is incomplete, and must be replaced by a more fundamental theory at some high energy scale. Whatever form physics at a higher scale might take, it will generate low energy effective couplings that contribute to Standard Model processes. These couplings provide the opportunity to search for signatures of new physics indirectly, by measurements of the deviation of experimental observables from their Standard Model predictions.
+Rather than compute the effect of physics beyond the Standard Model within the framework of a specific model, our ignorance dictates that we include all effective interactions consistent with the symmetries of the Standard Model. The resulting observables are expressed in terms of the parameters of the generalized interaction, which can be constrained by the experimental data. Since these parameters characterize the most general interaction, their experimental bounds can be used to rule out or guide in the construction of specific models.
+Anticipating the precision data from the upcoming generation of FORMULA  factories, one place to look for the effects of new physics is in observables related to FORMULA  meson physics. Therefore, in this paper we set up a parametrization for a set of observables associated with semileptonic FORMULA  decays into charmed mesons. Specifically, in Section  we construct the low energy effective Lagrangian for the process FORMULA  induced by new physics. We do so by including all the dimension six, four-fermion Lorentz scalars that contribute to the process, but excluding higher dimension operators. We also introduce a set of real parameters bilinear in the coupling constants of this effective Lagrangian. These parameters can be used to characterize the low energy effects of the new physics.
+Using the generalized interaction of Section , we then calculate at leading order in HQET {{cite:a67e89fd-5ac2-47a5-820b-631e0517fec2}}, {{cite:36c25cd4-77f2-4a45-a020-2c86ffc9eadd}}, {{cite:fe5321b8-428b-4625-b556-b06e4201e639}} the contribution from new physics to the differential decay rates for FORMULA  and FORMULA . The results for these observables, expressed in the parametrization of Section  appear in Section  and Section  respectively. The parametrization of Section  also appears when we consider the corrections induced by physics beyond the Standard Model on the inclusive semileptonic decay of FORMULA  mesons into final states containing a FORMULA  quark, FORMULA  In Section , these deviations are calculated at leading order in perturbation theory, which is justified for FORMULA  {{cite:44f59ea5-a737-452c-b173-c07a71552d30}}. In Section  we use the results of the previous sections to discuss briefly the constraints which the existing experimental data imposes on the parametrization of Section .
+Finally, we note that new physics effects on observables related to FORMULA  have been studied extensively for restricted types of non-Standard model interactions. The decays FORMULA  (specially for decays into FORMULA -leptons) have been used to constrain classes of models with scalar interactions {{cite:b6bc8fe0-42d6-46fe-9dc2-b32c64c048e7}}, {{cite:60828531-010a-4e3a-80fd-a495d03cb76a}}, {{cite:1a9b5f6e-52af-4700-bb76-e9e2f536108f}}, {{cite:a9ca851b-3260-4bca-939d-b6cdda9ca9c6}}, {{cite:a0edff9d-d595-4994-8ed1-0ef0c367075c}}, {{cite:65dc76ce-61ef-487f-9bc9-0c9f2041d86e}}, {{cite:5c976e7b-0a4f-4474-942e-ab40f5e16b74}}, such as those which arise in models with extended Higgs sectors. Other constraints on such types of models have also come from observables related to the exclusive decays FORMULA  {{cite:431ccd02-75e0-4514-b959-0d47adf2a80a}}, {{cite:7cd02e14-c508-4040-8031-8e81040a437c}}, {{cite:fbf7fd31-147b-4024-a401-5e25ea5c41f1}} as well as FORMULA  {{cite:431ccd02-75e0-4514-b959-0d47adf2a80a}}, {{cite:7cd02e14-c508-4040-8031-8e81040a437c}}, {{cite:c80ed717-8df7-403a-93fc-fe96237bb9d8}}. The process FORMULA  has also been used to analyze possible vector and axial vector couplings beyond the Standard Model FORMULA . In particular, model-independent analyses of right-handed FORMULA  quark current contributions to FORMULA  and FORMULA  were performed in {{cite:d625e33e-b398-4a13-adcd-285478f1aa2c}}, {{cite:70b42858-f750-41d1-87cd-ab35cca3e75c}}. These were motivated by an extension of the Standard Model, the Left-Right Symmetric model {{cite:c9768c14-0888-4be6-8956-da38cb63a29b}}, which contains gauge bosons that couple to right-handed fermions. Also inspired by this class of models were {{cite:431ccd02-75e0-4514-b959-0d47adf2a80a}}, {{cite:53771966-a1f1-4bd2-ad5f-b0911750a01c}}, who constructed observables based on the exclusive decays FORMULA  in order to constrain right-handed vector couplings. The combined effects of non-Standard Model scalar, pseudoscalar, vector, and axial vector interactions were studied in {{cite:9a767818-de71-4821-99bc-94e7df3e78e7}} within the context of FORMULA  violating polarization observables related to FORMULA  and  FORMULA
+
+Definitions
+Our starting point for the calculation of semileptonic FORMULA  decays to charmed mesons is the following interaction Hamiltonian:
+FORMULA 
+FORMULA  is the effective FORMULA  Hamiltonian which mediates the Standard Model Weak interaction process FORMULA  for energy scales much less than FORMULA . The second term represents the low-energy effective interaction generated by new physics at some energy higher than FORMULA . Rather than adopt a particular model for this new physics, we include all the lowest dimension operators which contribute to FORMULA  at tree level and which also respect the Lorentz and gauge invariance of the Standard Model. These are the dimension six four-fermi operators which appear in Eq. (REF ). One way to organize their contribution {{cite:0b3813b8-82d6-4fb1-a40d-855d27869cd8}} is to sum the index FORMULA  over FORMULA  with
+FORMULA 
+while projecting the FORMULA -quark and lepton FORMULA  into fields of definite chirality (respectively denoted by FORMULA  and FORMULA , with FORMULA ) and summing over all values of FORMULA  FORMULA . Given FORMULA  the chirality of the FORMULA  quark is fixed by FORMULA , and the chirality of the neutrino field FORMULA  is fixed by the value of FORMULA  Note in particular that we are including operators which contain a right-handed neutrino field. These occcur for FORMULA  and FORMULA  or FORMULA  and FORMULA .
+The complex coefficients FORMULA  are a set of twelve dimensionless coupling constants (scaled by the Fermi constant FORMULA ), one for each choice of FORMULA  FORMULA  and FORMULA  (In the abscence of right-handed neutrinos, FORMULA  and the number of coefficients would be reduced to six.) If written in terms of the fields that transform as definite representations of the Standard Model FORMULA  gauge group, no insertions of the Standard Model Higgs doublet are needed to make the dimension six operators of Eq. (REF ) gauge invariant (we take the right-handed neutrino to be a Standard Model gauge singlet). Dimensional analysis then implies that FORMULA  where FORMULA  is the energy scale of the new physics.
+Only certain real combinations of these coupling constants will appear in the expressions for the calculated observables. To first order in FORMULA  we have
+FORMULA 
+which in principle could be present even in the abscence of a right-handed neutrino. However, the last three of these can only appear for non-zero lepton mass. We expect these five parameters, which arise by interference with FORMULA , to give the most significant contribution to signals of new physics. Eq. (REF ) includes only the interference with the leading order part of the Standard Model term. In reality, it should be modified by higher order Standard Model effects (such as radiative corrections), which we ignore here.
+The remaining parameters are second order in the FORMULA  and are suppressed in comparison to the previous set. We classify them by the following types:
+
+Scalar-scalar:
+FORMULA 
+
+Vector-vector:
+FORMULA 
+
+Tensor-tensor:
+FORMULA 
+
+Scalar-tensor
+FORMULA 
+
+Scalar-vector (only appear for non-zero lepton mass):
+FORMULA 
+
+Tensor-vector (only appear for non-zero lepton mass):
+FORMULA 
+
+
+ FORMULA
+As in {{cite:fe5321b8-428b-4625-b556-b06e4201e639}}, we write, in the rest frame of the FORMULA -meson:
+FORMULA 
+where FORMULA  is the FORMULA  three-momentum in the FORMULA  rest frame, FORMULA  is the angle between the lepton and the FORMULA  meson in the rest frame of the `virtual FORMULA -boson,' (i.e, the frame in which FORMULA ) and FORMULA . FORMULA  and FORMULA  are helicity amplitudes, which we decompose as:
+FORMULA 
+In these expressions, FORMULA  and FORMULA  are the helicity amplitudes computed assuming only the Standard Model FORMULA  coupling. The terms FORMULA , FORMULA  are contributions from the interference of the Standard Model part of the amplitude (taken only to leading order) and other terms in Eq. (REF ). Finally, the terms FORMULA  and FORMULA  are second order in the new interactions of Eq. (REF ). Here we calculate the interference and the second order terms by matching hadronic matrix elements of the quark-quark operators in Eq. (REF ) to HQET matrix elements, neglecting both perturbative FORMULA  and non-perturbative FORMULA  corrections. Higher order corrections to the Standard Model contribution to the decays FORMULA  can be found in {{cite:2235cdce-84ee-4d26-80b3-433690c6d164}}.
+Writing FORMULA  and denoting the Isgur-Wise function {{cite:a67e89fd-5ac2-47a5-820b-631e0517fec2}} by FORMULA , we find for the interference tems:
+FORMULA 
+and
+FORMULA 
+Likewise, the second order terms are
+FORMULA 
+where FORMULA  and FORMULA  represent corrections due to non-zero lepton mass (which are only non-negligible for decays into FORMULA -leptons):
+FORMULA 
+
+ FORMULA
+As in the previous case, we write in the FORMULA  rest frame
+FORMULA 
+The kinematic variables FORMULA , FORMULA  and FORMULA  are defined as before (just replace FORMULA  with FORMULA  in the definitions of the previous section). Also as before, we separate the helicity amplitudes as
+FORMULA 
+Once again, the interference terms only take into account the leading order part of the Standard Model amplitude. Calculating these as well as the second order terms by matching hadronic matrix elements onto HQET ones (neglecting FORMULA  or FORMULA  corrections), we find:
+FORMULA 
+The second order terms are
+FORMULA 
+with the following corrections due to the effects of a non-zero lepton mass:
+FORMULA 
+
+ FORMULA
+Starting from the operator product expansion (OPE), it can be shown that in the limit FORMULA  the inclusive semileptonic FORMULA  decay rate is equivalent to the perturbative quark level FORMULA  decay rate {{cite:44f59ea5-a737-452c-b173-c07a71552d30}}. This makes it possible to calculate the effects of new physics on the inclusive decay FORMULA  directly from Eq. (REF ), by calculating the rate for the quark level process FORMULA . We write the differential decay rate as
+FORMULA 
+where FORMULA  and FORMULA , FORMULA  are the FORMULA  quark rest frame energies of the lepton and neutrino respectively. Eq. (REF ) is not meant to imply that the differential rate is a contribution from three distinct processes. Instead, we are merely decomposing the observable into a piece arising solely from Standard Model physics, an interference term, and a term that is second order in the new physics. At present, nonperturbative corrections to the Standard Model term are known to order FORMULA  {{cite:03e4163c-23d8-4695-9361-2e6f52ea15fe}}, while only the part proportional to FORMULA  of the NLO perturbative corrections is known {{cite:22836ffd-4d73-48e4-9437-5781473d90da}} (FORMULA  being the coefficient of the one-loop QCD beta function). Here, we calculate the last two terms in Eq. (REF ), neglecting FORMULA  or FORMULA  corrections. Introducing the kinematic variables
+FORMULA 
+and FORMULA  with FORMULA , as well as FORMULA  and FORMULA , we find, in the rest frame of the FORMULA  quark
+FORMULA 
+which, as in the exclusive decays, includes only the interference with the leading order Standard Model contribution. The remaining contributions are of second order in the new physics:
+FORMULA 
+Integration of these expressions over FORMULA  is trivial. Performing the FORMULA  integral over its physically allowed region gives the lepton spectrum
+FORMULA 
+where
+FORMULA 
+is the FORMULA  integral of Eq. (REF ) and
+FORMULA 
+is that of Eq. (REF ). In these last two expressions, the coefficient functions are defined by:
+FORMULA 
+
+Discussion
+Any effects of physics beyond the Standard Model should become more apparent with the improved data from the next generation FORMULA  factories, some of which are scheduled to go on line in the near future. Therefore, a detailed extraction of our parametrization of new physics should await these results. For completeness, however, we will use the formulas derived in the previous sections together with the existing data to obtain bounds on some of the parameters of Section . Our analysis is only meant to be illustrative and therefore should not be taken too seriously.
+One place to look for constraints on the parametrization of Section  is in the extraction of FORMULA  from the exclusive decays FORMULA . Because in the zero recoil limit (FORMULA ), the FORMULA  HQET corrections to FORMULA  vanish {{cite:e833574b-124f-4416-acbd-ffbd034dd24e}}, and because FORMULA  {{cite:a67e89fd-5ac2-47a5-820b-631e0517fec2}}, these observables provide a theoretically clean way of extracting the CKM matrix element FORMULA  from experiment {{cite:e4791eda-51df-45f9-99d0-ec2b09968d6f}}, {{cite:f30406e9-44a9-4d43-9f61-3c41f6d1c70f}}. In the abscence of new physics, we expect the value of FORMULA  obtained from FORMULA  to agree with that from the decay FORMULA . Therefore, a discrepancy between the two measurements of FORMULA  could be used to put constraints on the parametrization of Section .
+Integrating Eq. (REF ) and Eq. (REF ) over FORMULA , and making a change of variables from FORMULA  to FORMULA , the exclusive decay rates can be written in the form {{cite:fe5321b8-428b-4625-b556-b06e4201e639}}
+FORMULA 
+where FORMULA  and FORMULA . From the results of Section  and Section , we find
+FORMULA 
+Note that although the decay rate for FORMULA  is well-behaved at FORMULA , the quantity FORMULA  actually has a pole there. This is only because the scalar contribution to the decay rate (the terms involving FORMULA  and FORMULA ) vanishes more slowly than FORMULA  as FORMULA . In fact, the observation of this behavior as FORMULA  in the experimental data for FORMULA  could be seen as evidence for the possibility of scalar contributions to the process  FORMULA
+We expect the second order parameters in Eq. (REF ) and Eq. () to be suppressed by a factor of FORMULA  in comparison to the interference terms. Ignoring their contribution, we find in the zero recoil limit:
+FORMULA 
+The CLEO Collaboration has used data on the exclusive decay FORMULA  at zero recoil to extract FORMULA  {{cite:e4791eda-51df-45f9-99d0-ec2b09968d6f}}. From the data on FORMULA , it has also found FORMULA  {{cite:f30406e9-44a9-4d43-9f61-3c41f6d1c70f}}. If we neglect FORMULA  corrections, FORMULA  (the FORMULA  corrections vanish automatically by Luke's theorem {{cite:e833574b-124f-4416-acbd-ffbd034dd24e}}). Eq. (REF ) then reads
+FORMULA 
+which to lowest order in the parameters, gives  FORMULA
+We can also use the data on the inclusive decays to put constraints on the parameters of Section . The OPE for the lepton spectrum does not agree locally with the physical spectrum near the maximum lepton energy. Therefore, the result of Section  can only be compared with experiment by constructing an observable which integrates the OPE result over a sufficiently large region. A suitable observable (introduced in {{cite:08a902da-b7ca-4666-a4fd-e0bc9e7af6d7}}) for comparison of the OPE with the inclusive data is given by
+FORMULA 
+which is independent of the value of FORMULA . Using the inclusive FORMULA  data from CLEO, the authors of {{cite:08a902da-b7ca-4666-a4fd-e0bc9e7af6d7}} extracted a central value of FORMULA  (This includes contributions from FORMULA  which introduce an error of only a few percent.) If we split FORMULA  into a piece coming from Standard Model physics alone, and a correction FORMULA  due to new physics, we find
+FORMULA 
+where FORMULA  is the Standard Model contribution to FORMULA  For the purposes of this crude analysis, we can replace it by the full FORMULA  with negligible error. Similar reasoning allows us to approximate the Standard Model part of the lepton spectrum by its leading order contribution. Using Eq. (REF ) and Eq. (REF ) to do the integrals of Eq. (REF ),
+FORMULA 
+where we have used the values FORMULA  and FORMULA  {{cite:08a902da-b7ca-4666-a4fd-e0bc9e7af6d7}}. Note, however, that the magnitude of the coefficients in Eq. (REF ) is rather sensitive to the particular values of FORMULA  and FORMULA . Therefore, the bounds on new physics that are obtained from this equation will be highly dependent on the numerical values of the FORMULA  and FORMULA  quark masses that are used to evaluate them.
+In {{cite:08a902da-b7ca-4666-a4fd-e0bc9e7af6d7}}, the Standard Model FORMULA  corrections to the theoretical value of FORMULA  are estimated to be
+FORMULA 
+where FORMULA  is the spin-averaged FORMULA  meson mass, which we take to be FORMULA  {{cite:77187dda-3fdb-4792-a859-e122b5e854d0}}. Assume that the first three terms of this equation are fixed by the values FORMULA  FORMULA  FORMULA  of {{cite:08a902da-b7ca-4666-a4fd-e0bc9e7af6d7}}. The term involving FORMULA  has larger uncertainty. Varying it between FORMULA  and the estimated value FORMULA  of {{cite:08a902da-b7ca-4666-a4fd-e0bc9e7af6d7}} gives
+FORMULA 
+Without a better knowledge of FORMULA , a contribution to FORMULA  from new physics in the range of Eq. (REF ) cannot be excluded, even if the other HQET parameters were known to arbitrary precision. Therefore, assuming that the corrections to the theoretical value of FORMULA  from new physics also lie in this range, we can derive constraints on our parameters by comparing Eq. (REF ) with Eq. (REF ). We will do so by choosing only one parameter from Eq. (REF ) to be non-zero at a time. Then the bounds are derived by taking the ratio of Eq. (REF ) to the coefficient of that parameter in Eq. (REF ). Of course, this is not entirely satisfactory, since some of these parameters are not independent of each other. For instance, setting FORMULA  forces FORMULA  to vanish as well. However, this procedure should be sufficient if all we are interested in is a rough numerical estimate. Thus, given the uncertainty on FORMULA , we cannot rule out the following range for the scalar terms:
+FORMULA 
+Likewise, for the vector parameters
+FORMULA 
+and finally FORMULA  and FORMULA . Note in particular that the bounds on FORMULA  are consistent with the value derived from the exclusive data.
+I would like to thank Mark Wise for guidance throughout the completion of this work. Also, I would like to thank Zoltan Ligeti for helpful comments on the manuscript. This work was supported in part by the Department of Energy under grant number DE-FG03-92-ER 40701.

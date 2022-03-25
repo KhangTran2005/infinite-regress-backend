@@ -1,0 +1,1019 @@
+
+[aps,preprint,epsfig]revtex
+IFA-97/04
+The Inverse Amplitude Method and Chiral Perturbation Theory to
+two Loops
+Torben HannahElectronic address: hannah@dfi.aau.dk
+Institute of Physics and Astronomy, Aarhus University,
+DK-8000 Aarhus C, Denmark
+
+The inverse amplitude method is analysed to two-loop order in the
+chiral expansion in the case of FORMULA  scattering and the pion form
+factors. The analysis is mainly restricted to the elastic approximation
+but the possible extension to the inelastic case is also discussed in
+some detail. It is shown how the two-loop approach improves the
+inverse amplitude method applied to one-loop order in the chiral
+expansion. For both FORMULA  scattering and the pion form factors, it
+is in fact found that the inverse amplitude method to two-loop order
+agrees remarkable well with the experimental data up to energies where
+inelasticities become essential. At somewhat lower energies, the
+two-loop approach compares well with the one-loop approximation, and in
+the threshold region they both agree with chiral perturbation theory.
+This suggests that the inverse amplitude method is indeed a rather
+systematic way of improving chiral perturbation theory order by
+order in the chiral expansion.
+
+PACS number(s): 13.75.Lb, 11.30.Rd, 11.55.Fv, 13.40.Gp
+INTRODUCTION
+The effective field theory of QCD, called chiral perturbation theory
+(ChPT) {{cite:72e837ba-e40c-4fa0-b6c0-30999a42463f}}, {{cite:1d9b270a-8103-468e-9980-a93394b91810}}, {{cite:c28b6813-54b1-40c3-8af3-b2d716e2dad8}}, has become a very
+successful methodology for low-energy hadron physics. This effective
+field theory is based upon the Goldstone character of the low-lying
+pseudoscalar mesons and incorporates the appropriate symmetries of the
+strong interaction. In this approach, one obtains a systematic
+expansion in powers of external momentum and light quark masses, or
+equivalently in the number of loops. However, in order to be
+renormalized order by order, additional low-energy constants have to
+be introduced at each order in the chiral expansion. These low-energy
+constants are not fixed by chiral symmetry alone but have to be
+determined phenomenologically.
+At one-loop order in the chiral expansion only a small number of
+low-energy constants have to be introduced {{cite:1d9b270a-8103-468e-9980-a93394b91810}}. These are
+known rather accurately {{cite:1d9b270a-8103-468e-9980-a93394b91810}}, {{cite:a3668cd2-f2d2-485c-af8d-83efae36b7bf}} and have been used
+in order to relate different observables to each other. Therefore,
+one-loop ChPT provides finite predictions for many different
+low-energy observables in terms of only a very limited amount of
+empirical input. Even though this has been remarkably successful, the
+two-loop corrections are important in order to improve the accuracy
+of the predictions. However, two-loop computations are very laborious
+and have until now only been accomplished in a limited number of
+cases. Furthermore, the total number of low-energy constants increases
+dramatically at this order in the chiral expansion {{cite:301a6858-9299-4df4-84e2-4127e81f2413}}.
+Since an extensive phenomenological analysis of these new two-loop
+low-energy constants is not available at present, they have so far
+been evaluated either from the given process or from underlying
+models.
+Since ChPT provides a systematic perturbative expansion in powers of
+external momentum and light quark masses, it will satisfy unitarity
+perturbatively. This implies that the deviation from exact unitarity
+at a given order provides an estimate of the energy range where the
+truncation of the chiral expansion is applicable, i.e. the energy
+range where higher order corrections can be neglected. Although these
+higher order corrections could in principle be calculated and thereby
+increase the energy range of the chiral expansion, ChPT is in
+practice limited to the first few powers in the loop expansion. This
+is due to the rapid increase in both computational effort and new
+low-energy constants at each additional order. Thus, the unitarity
+restriction will give a major limitation on the applicability of
+ChPT. An important special case of this fact is in the presence of
+resonances where higher order unitarity corrections become essential.
+Therefore, in order to extend the range of applicability of ChPT,
+unitarity will be of the utmost importance. A rather general way to
+impose unitarity on the chiral expansion is by the inverse amplitude
+method (IAM) {{cite:79054e25-020d-48fc-bd46-943f6830c6cd}}, {{cite:ae8c8b6d-9d9d-4793-bfec-f9c1e99ec2b3}}, {{cite:7d2b1d15-b970-4a1d-9449-0a06d17cd089}}, {{cite:2d539d91-e7f4-4aaa-add8-f1518ff88ec1}}, {{cite:0deb5803-9345-43dc-b0ed-66b0a34b6ccd}},
+which can be justified by the use of unitarity in a dispersive
+approach. Since this method combines unitarity and dispersion
+relations with the chiral expansion, it is likely that it will be more
+powerful than ChPT alone. The IAM applied to one-loop order in the
+chiral expansion has been extensively analysed
+{{cite:79054e25-020d-48fc-bd46-943f6830c6cd}}, {{cite:ae8c8b6d-9d9d-4793-bfec-f9c1e99ec2b3}}, {{cite:7d2b1d15-b970-4a1d-9449-0a06d17cd089}}, {{cite:2d539d91-e7f4-4aaa-add8-f1518ff88ec1}}, {{cite:0deb5803-9345-43dc-b0ed-66b0a34b6ccd}} and has indeed
+proven to be a successful method to extend the range of applicability
+of one-loop ChPT. However, the IAM is not restricted to the one-loop
+approximation but can in general
+be applied to any given order in the chiral
+expansion. Therefore, it might well be that the IAM applied to a given
+order can be improved by applying it to the next order. If this turns
+out to be the case, the IAM could be considered as a systematic way
+of improving ChPT order by order in the chiral expansion.
+The IAM was originally applied to FORMULA  scattering and the pion
+form factors to one loop in ChPT {{cite:79054e25-020d-48fc-bd46-943f6830c6cd}}, {{cite:ae8c8b6d-9d9d-4793-bfec-f9c1e99ec2b3}}. By now,
+the full two-loop FORMULA  scattering amplitude has been evaluated by
+a dispersive analysis {{cite:3b089f11-067a-4803-b6a5-9b523e7ed4d3}} and a field theory calculation
+{{cite:2c704658-672b-4273-b486-23a6f39511e5}}, respectively. The pion form factors have also been
+evaluated to two loops some time ago {{cite:ab3a7fae-aebc-4fe7-b8f8-4eba47e25f7b}}. Therefore, it is
+now possible to apply the IAM to two loops in the chiral expansion for
+both FORMULA  scattering and the pion form factors. In the present
+paper, this extension of the IAM is analysed and compared to both the
+one-loop case and one- and two-loop ChPT in order to study whether the
+IAM is a systematic way of improving ChPT. Section  is
+devoted to FORMULA  scattering, Sec.  to the pion form
+factors, and the conclusions are given in Sec. .
+
+FORMULA  SCATTERING
+FORMULA  scattering is of fundamental theoretical importance, both
+because it only involves the self-interaction of the lightest
+strongly interacting particle, and because it plays a significant
+role for low-energy hadron phenomenology. The FORMULA  scattering
+amplitude can be expressed in terms of a single function
+FORMULA  as
+FORMULA 
+where FORMULA , FORMULA , and FORMULA  are the
+Mandelstam variables. The definite isospin amplitudes FORMULA  are given
+in terms of the function FORMULA  as
+FORMULA 
+and the projection of these isospin amplitudes onto partial waves is
+given by
+FORMULA 
+In the elastic region FORMULA , unitarity implies
+that the partial waves satisfy the following relation
+FORMULA 
+where FORMULA  is the phase-space factor.
+As a consequence of Eq. (REF ), the partial waves can be
+parametrized in terms of real phase shifts
+FORMULA  as
+FORMULA 
+The elastic unitarity relation (REF ) is in practice useful
+up to the FORMULA  threshold {{cite:032a5ba7-75a2-4513-91b3-5958dc6ef570}}. Above this energy the
+extended unitarity relation becomes
+FORMULA 
+where FORMULA  is the partial wave for the process
+FORMULA  and FORMULA  is the corresponding
+phase-space factor. At still higher energies, other important
+inelastic channels must be included and the unitarity relation has to
+be generalized further. The inelastic channels can be included in
+the parametrization (REF ) by adding an imaginary part to
+the phase shifts.
+Chiral perturbation theory
+In the framework of ChPT, the FORMULA  scattering amplitude is
+obtained as an expansion in powers of external momentum and light
+quark masses
+FORMULA 
+where FORMULA  is of FORMULA . The leading order term FORMULA 
+corresponds to the current algebra result derived by Weinberg
+{{cite:95cd8581-288d-4cf0-ad83-58eb793d5542}}, whereas FORMULA  is the one-loop correction
+determined by Gasser and Leutwyler {{cite:1d9b270a-8103-468e-9980-a93394b91810}}. Recently, the
+two-loop correction FORMULA  has also been evaluated by a dispersive
+analysis {{cite:3b089f11-067a-4803-b6a5-9b523e7ed4d3}} and a field theory calculation
+{{cite:2c704658-672b-4273-b486-23a6f39511e5}}, respectively. These two approaches agree insofar as
+the general structure of the amplitude is concerned. However, the
+field theory calculation contains additional information regarding the
+dependence of the chiral low-energy constants which is not obtained in
+the dispersive analysis.
+The full FORMULA  scattering amplitude to two loops in ChPT is given
+in Ref. {{cite:2c704658-672b-4273-b486-23a6f39511e5}} where the contributions of FORMULA  have
+been omitted here. At one-loop order, there are four low-energy
+constants FORMULA , FORMULA , FORMULA , and FORMULA , whereas six
+additional low-energy constants FORMULA , FORMULA , FORMULA , FORMULA ,
+FORMULA , and FORMULA  have to be introduced at two-loop order. The
+superscript FORMULA  indicates that these low-energy constants depend on
+the renormalization scale FORMULA , whereas the full amplitude is scale
+independent. The projection onto partial waves of the chiral FORMULA 
+scattering amplitude (REF ) gives the following expansion
+FORMULA 
+These partial waves will satisfy the elastic unitarity relation
+(REF ) perturbatively, i.e. one has to two-loop order
+FORMULA 
+The first inelastic channel is the four pion intermediate state, which
+is a three-loop effect of FORMULA . Other inelastic channels with more
+pions are of even higher order in the chiral expansion. This implies
+that the perturbative elastic unitarity relations to two loops
+will hold at least up to the FORMULA  threshold. In
+fact, in the framework of SU(2) ChPT the relations (REF )
+are satisfied for all energies above threshold, whereas in SU(3) ChPT
+they have to be generalized above the FORMULA  and
+FORMULA  thresholds. The generalization above the FORMULA 
+threshold is obtained from the perturbative interpretation of Eq.
+(REF )
+FORMULA 
+The further extension of these perturbative relations above the
+FORMULA  threshold is obtained in a straightforward manner.
+
+Inverse amplitude method
+The two-loop FORMULA  scattering amplitude has hitherto only been
+evaluated within the framework of SU(2) ChPT
+{{cite:3b089f11-067a-4803-b6a5-9b523e7ed4d3}}, {{cite:2c704658-672b-4273-b486-23a6f39511e5}}. This implies that in the derivation of
+the IAM applied to two loops in the chiral expansion, the elastic
+approximation is used. However, the limitations of this approximation
+and the possible extension to SU(3) ChPT will also be discussed in
+some detail.
+Elastic approximation
+From the fundamental principles of S matrix theory, it can be shown
+that the FORMULA  partial waves are analytic in the complex FORMULA  plane
+with a right or unitarity cut for FORMULA  and a left cut
+for FORMULA . Therefore, the FORMULA  partial waves can be
+expressed in terms of dispersion relations with a number of
+subtractions to ensure the convergence of the integrals. The same is
+also true for the inverse of the partial waves or more exactly for the
+function FORMULA . Neglecting possible pole
+contributions arising from zeros in the partial waves
+{{cite:ae8c8b6d-9d9d-4793-bfec-f9c1e99ec2b3}}, the four times subtracted dispersion relation for
+the IAM is
+FORMULA 
+Four subtractions are used in order to ensure that two-loop ChPT
+satisfies a similar dispersion relation. On the right cut, the elastic
+unitarity relation (REF ) gives FORMULA , i.e. this part can
+be computed exactly. The same is not true for the left cut, which,
+however, can be approximated by means of two-loop ChPT. Expanding the
+function FORMULA  to two loops in the chiral expansion FORMULA , one finds that the left
+cut can be approximated by FORMULA . Finally,
+the subtraction constants can also be evaluated to two-loop order in
+the chiral expansion. Denoting these subtraction constants FORMULA ,
+FORMULA , FORMULA , and FORMULA , the following dispersion relation is obtained
+for the IAM
+FORMULA 
+This dispersion relation implies that the partial wave FORMULA  can be
+obtained from the two-loop chiral expansion. However, the relation
+between the IAM and two-loop ChPT can be simplified by writing down a
+four-subtracted dispersion relation for the function FORMULA . Since this is the
+function FORMULA  expanded to two-loop order, the left cut and
+subtraction constants in the dispersion relation for FORMULA 
+will be the same as in Eq. (REF ). For the right cut, the
+perturbative elastic unitarity relations (REF ) imply that
+FORMULA . Thus, the
+following dispersion relation is obtained
+FORMULA 
+which is exactly the same as in Eq. (REF ). Therefore,
+the IAM to two loops in the chiral expansion gives the partial wave
+FORMULA  in the simple form
+FORMULA 
+Since this is formally equivalent to the [0,2] Padé approximant
+applied on ChPT, the expression (REF ) will coincide with
+the chiral expansion up to two-loop order. However, in deriving
+(REF ) two-loop ChPT has only been used for the left cut
+and the subtraction constants, whereas the important unitarity cut was
+computed exactly. This is in contrast to ChPT where the unitarity cut
+was only computed perturbatively. As a consequence of this, the [0,2]
+Padé approximant (REF ) satisfies the elastic unitarity
+relation (REF ) exactly and not only perturbatively as in
+ChPT.
+The IAM can in general be applied to any given order in the chiral
+expansion, but has up to now almost entirely been restricted to the
+one-loop approximation
+{{cite:79054e25-020d-48fc-bd46-943f6830c6cd}}, {{cite:ae8c8b6d-9d9d-4793-bfec-f9c1e99ec2b3}}, {{cite:7d2b1d15-b970-4a1d-9449-0a06d17cd089}}, {{cite:2d539d91-e7f4-4aaa-add8-f1518ff88ec1}}, {{cite:0deb5803-9345-43dc-b0ed-66b0a34b6ccd}}. In this case,
+the IAM gives the partial waves in the form
+FORMULA 
+which is formally equivalent to the [0,1] Padé approximant. This
+form also satisfies unitarity exactly and coincides with the chiral
+expansion up to one-loop order. It is derived in the same way
+as described above, the only difference being that the left cut and
+subtraction constants in Eq. (REF ) are now approximated
+only to one-loop order in the chiral expansion. This shows how the IAM
+to two loops improves the IAM to one loop, even though the dominantly
+unitarity cut is computed exactly in both cases.
+The above discussion rests upon the assumption that the leading order
+term FORMULA  does not vanish. In fact, this is only true for the
+lowest partial waves with FORMULA , whereas the higher partial waves
+start at one-loop order in the chiral expansion. In these cases, the
+IAM must be slightly modified by writing down a dispersion relation
+for the function FORMULA . Since perturbative unitarity implies
+that FORMULA  is real on the right cut for these higher partial
+waves, the elastic unitarity relation (REF ) gives
+FORMULA . Hence, the right cut can also in these cases be computed
+exactly, whereas the left cut and subtraction constants can be
+approximated by means of ChPT as above. However, in order to relate
+the dispersion relation for the IAM to a corresponding one for ChPT,
+one has to go to three loops in the chiral expansion. This is due to
+the fact that for the higher partial waves the imaginary part on the
+right cut starts at FORMULA  in ChPT. Should such a three-loop
+calculation be undertaken in the future, the IAM could also in these
+cases be directly related to ChPT in the same way as discussed above.
+
+Inclusion of inelasticities
+It would be desirable if the IAM could be applied beyond
+the elastic approximation. The first important inelastic channel in
+FORMULA  scattering opens up at the FORMULA  threshold and is due to
+the FORMULA  intermediate state. At a slightly higher energy the
+FORMULA  inelastic channel will also appear, but this is a rather
+unimportant effect. Only at still higher energies will the four-pion
+intermediate state begin to be significant, together with other
+inelastic channels. The FORMULA  and FORMULA  intermediate states
+are already present at one-loop order in SU(3) ChPT {{cite:8c1475a0-f9cc-48c5-9bfb-d3214f253253}},
+and will therefore also appear in an extension of the present two-loop
+calculation to the SU(3) case. Thus, it might be that the IAM applied
+to two loops in the SU(3) chiral expansion could include these
+inelasticities. In order to try to include the four-pion intermediate
+state, one would need to apply the IAM to three loops since this
+effect is of FORMULA  in the chiral expansion.
+Therefore, the following discussion is restricted to the FORMULA  and
+FORMULA  inelastic channels. In fact, it will be limited to the
+important FORMULA  case since the extension to the
+FORMULA  case is rather obvious. To include the FORMULA 
+inelastic channel, the extended unitarity relation (REF )
+has to be used above the FORMULA  threshold in computing the right
+cut in Eq. (REF ), whereas the other parts are computed
+in exactly the same way as before. Thus, since the relation
+(REF ) gives FORMULA , this
+expression has to be used above the FORMULA  threshold in Eq.
+(REF ). However, in this case it is not possible to
+compute the inelastic part FORMULA  exactly, so this part
+must be evaluated to two loops in the SU(3) chiral expansion
+FORMULA 
+In order to simplify the relation between the IAM and ChPT for the
+SU(3) case, the right cut in Eq. (REF ) has to be
+evaluated with the inclusion of the FORMULA  intermediate state.
+From the extended perturbative unitarity relations
+(REF ), one finds that FORMULA  is given by
+an expression exactly similar to Eq. (REF ). Thus, the
+inelastic case also gives a result of the form (REF ), the
+only difference being that in this case the chiral SU(3) expansion is
+used. In a similar way, by expanding the inelastic part
+FORMULA  to one-loop order, the IAM gives a result of the
+form (REF ) with ChPT evaluated within SU(3).
+In the presence of the FORMULA  inelasticity, the unitarity cut
+cannot be computed exactly, but one has to expand the inelastic part to
+a given chiral order. Since the inelastic part starts at the
+FORMULA  threshold, the one- and two-loop chiral expansions would
+seem to lead to rather unreliable approximations.
+However, it is important to realize that for the inelastic IAM the
+exact extended unitarity relation has been applied before the
+inelastic part is approximated by the chiral expansion. Furthermore,
+if one compare the expansion of the inelastic part for the IAM
+(REF ) with the corresponding expansion for ChPT
+(REF ), the two-loop correction in Eq. (REF )
+is likely to be more suppressed compared to the two-loop correction in
+Eq. (REF ). Therefore, one might expect that the expansion
+of the inelastic quantity FORMULA  converges rather rapidly,
+i.e. the one- and two-loop expansion could be used over a large energy
+range. Indeed, as will be shown in the case of the pion form factors,
+the expansion of a similar quantity works very well up to rather high
+energies.
+In order to evaluate how well the inelastic IAM agrees with
+the extended unitarity relation (REF ), one needs to
+determine the FORMULA  partial waves. To do this, the IAM could be
+applied to one- and two-loop order for these partial waves. In this
+way one finds that the inelastic IAM satisfies Eq. (REF )
+exactly, provided that the quantity FORMULA  is determined
+by the leading order term. Thus, the IAM is a rather consistent
+approach, but there is of course no way to know a priori to what extent
+this method can reproduce the inelasticities.
+
+Comparison with experiment
+The chiral expansion depends on a number of low-energy constants not
+fixed by chiral symmetry alone. These have to be determined before
+ChPT and the IAM can be compared with experimental data. In the
+present paper, this comparison is limited to the lowest FORMULA 
+partial waves with FORMULA , since they are the best known
+experimentally.
+The low-energy constants
+Since the chiral low-energy constants depend on the renormalization
+scale FORMULA , this scale has to be chosen before the low-energy
+constants can be fixed. This scale will be set at the mass of the
+FORMULA (770) resonance, i.e. FORMULA  MeV. In addition,
+throughout this paper the
+values FORMULA  MeV and FORMULA  MeV are used for the
+pion decay constant and pion mass, respectively.
+The FORMULA  partial waves depend on four low-energy constants
+FORMULA , FORMULA , FORMULA , and FORMULA  to one-loop order in the chiral
+expansion. These have been determined phenomenologically rather
+accurately in one-loop ChPT {{cite:1d9b270a-8103-468e-9980-a93394b91810}}, {{cite:a3668cd2-f2d2-485c-af8d-83efae36b7bf}} with results
+displayed in the first column in Table REF . For ChPT to two
+loops, these low-energy constants should in principle be re-evaluated
+taking into account the two-loop corrections. However, since
+a thorough reevaluation seems
+rather out of reach at the moment, the one-loop values of FORMULA ,
+FORMULA , FORMULA , and FORMULA  are also used in two-loop ChPT. The
+additional low-energy constants to two loops FORMULA , FORMULA ,
+FORMULA , FORMULA , FORMULA , and FORMULA  may be estimated with the
+assumption that they are dominated by resonance contributions at the
+scale of the resonance, an assumption that is well satisfied in
+one-loop ChPT {{cite:1d9b270a-8103-468e-9980-a93394b91810}}, {{cite:b855cf9e-7ba6-4ca5-9040-9a3343f70c56}}. In particular, including
+contributions from vector and scalar exchange together with terms of
+FORMULA  coming from SU(3) one-loop ChPT {{cite:2c704658-672b-4273-b486-23a6f39511e5}}, one obtains
+the values for these two-loop low-energy constants given in the second
+column in Table REF  {{cite:4d2954b7-5a40-4003-9342-63cf232d618c}}.
+The IAM to a given order depends on the same low-energy constants as
+ChPT to the same order. However, the phenomenological determination of
+these low-energy constants by the IAM do not necessarily coincide
+precisely with the values obtained in ChPT. This is due to the fact
+that the IAM contains higher order unitarity corrections, which will
+effect the phenomenological determination of the low-energy constants.
+Some of the low-energy constants in the IAM to one and two loops may
+be determined phenomenologically by fitting the experimental FORMULA 
+phase shifts. In this fitting, the data obtained from FORMULA  decays
+{{cite:f1ea34cf-7279-4459-baac-45e369b91542}} are used together with the data from high statistics
+medium energy experiments
+{{cite:0339af42-4c03-439d-a6ac-b2cc07d2e7d9}}, {{cite:f0213ad5-a335-4c46-a74e-e6eb352c2480}}, {{cite:b7cc0f57-3151-43cb-8c62-5a476d271b53}}, {{cite:0c702bfa-a90c-4161-bbf4-4b79313d12dd}}, {{cite:66c5cbcb-9682-4134-bf5c-be656b66943b}}. For a
+recent discussion of the experimental
+FORMULA  scattering data see Ref. {{cite:8d500a01-50ab-4143-9d56-b67f88329294}}.
+The low-energy constants FORMULA  and FORMULA  in the
+IAM to one loop may be determined in this way, whereas the fit will be
+rather insensitive to the precise values of the other low-energy
+constants FORMULA  and FORMULA . For these latter low-energy constants,
+the values obtained in one-loop ChPT are also used in the IAM to one
+loop. In the case of FORMULA  and FORMULA , one is
+used to fix the FORMULA (770) resonance defined to be at
+FORMULA , whereas the other is determined by
+fitting the FORMULA  and FORMULA  experimental phase shifts
+for FORMULA  GeV. This will give an acceptable
+fit with values of FORMULA  and FORMULA  given in the third
+column in Table REF , whereas if one increase the energy range
+to FORMULA  GeV, the fit will not be acceptable.
+However, the IAM to two loops might
+improve the agreement with the experimental phase shifts up to
+FORMULA  GeV. In this case the fit is mainly sensitive to
+FORMULA , FORMULA , FORMULA , and FORMULA , so the other low-energy
+constants will be given by the same values as in two-loop ChPT.
+With the use of the FORMULA (770) resonance
+to fix FORMULA  and varying FORMULA ,
+FORMULA , and FORMULA  around the values used in two-loop ChPT, these
+low-energy constants are determined by fitting the FORMULA  and
+FORMULA  experimental phase shifts up to FORMULA  GeV. In
+this case one obtains an acceptable fit with values of the
+low-energy constants given in the fourth column in Table REF .
+There is no point in extending this fit further up in energy since
+inelastic effects will become essential above approximately 0.9 GeV.
+The low-energy constants in Table REF  have not been assigned
+any error bars since it is difficult to estimate these error bars
+taking into account the higher order corrections. In addition, it is
+not possible to assign reliable error bars on the two-loop low-energy
+constants estimated from resonance exchange. Nevertheless, from Table
+REF  it is observed that the values of the low-energy
+constants in ChPT and the IAM to both one and two loops are rather
+consistent with each other. However, some variations are indeed
+to be expected due to the different treatments of the higher order
+corrections.
+
+Threshold parameters and phase shifts
+Close to threshold, the FORMULA  partial waves can be parametrized in
+terms of scattering lengths FORMULA  and slope parameters FORMULA 
+{{cite:991f2ea1-3744-4175-ae96-351442de2722}}. In Table REF , the values obtained from
+ChPT and the IAM are compared to the experimental information for
+these threshold parameters. It is observed that one-loop ChPT gives
+relatively large corrections to the leading order current algebra
+results, whereas the additional two-loop ChPT corrections are somewhat
+smaller. However, the difference between one and two-loop ChPT is in
+general larger than the corresponding difference between the IAM to
+one and two loops, which supports the expectation that the IAM to one
+loop already includes the most important unitarity corrections. In
+fact, the IAM to both one and two loops compares remarkably well with
+two-loop ChPT for the FORMULA  S wave, where the unitarity corrections
+are important even at low energies. For the other channels, where the
+higher order unitarity corrections are less important at low energies,
+the IAM compares in general rather well with both one and two-loop
+ChPT.
+Regarding the comparison with the experimental information, both
+the IAM and ChPT to one and two loops are quite consistent with the
+data. Unfortunately, the precision of these data does not allow one
+to distinguish the higher order corrections from the one-loop
+contribution, but this might be improved with the forthcoming
+accurately determination of FORMULA  from the measurement
+of the lifetime of the FORMULA  atom {{cite:ec830cbb-d281-4ee2-bb1e-57f4297161d1}}.
+Even though the chiral expansion only satisfies unitarity
+perturbatively, ChPT is not in general restricted to the threshold
+region. However, the deviation from exact unitarity will give an
+estimate of the actual energy range where the given truncation of the
+chiral expansion is applicable. This deviation is shown in the Argand
+diagrams in Fig. REF  for the three lowest partial waves. This
+shows that unitarity is indeed improved at low energies at each
+additional order in the chiral expansion. On the other hand, two-loop
+ChPT begins to deviate significantly from exact unitarity above
+approximately 0.5 GeV for all three partial waves. Therefore, two-loop
+ChPT should only be trusted up to about this energy, whereas the
+energy range for one-loop ChPT is somewhat smaller.
+Despite the fact that ChPT only satisfies unitarity perturbatively,
+it is possible to define a chiral expansion for the phase shifts
+FORMULA  {{cite:3b089f11-067a-4803-b6a5-9b523e7ed4d3}}, {{cite:9095cf57-cb48-45a2-9c9a-f2ac3b48ee85}}. In Fig. REF , the phase
+shift difference FORMULA  given by the IAM and ChPT is
+compared to the experimental data obtained from FORMULA  decays
+{{cite:f1ea34cf-7279-4459-baac-45e369b91542}}. The IAM to one and two loops gives very similar
+results in the displayed energy region. Furthermore, since these
+results compare very well to both two-loop ChPT and the central
+experimental data, the higher order unitarity corrections are indeed
+very well approximated by the IAM.
+As for one-loop ChPT, this appears to
+be systematically below the central experimental data, although it is
+still consistent with these data within the error bars. At DAFORMULA NE,
+it is expected that these error bars can be significantly reduced from
+new high statistics measurements of the FORMULA  decays
+{{cite:5ca91900-4f73-4736-a2f5-50c96fec9a91}}. From this, it will also be possible to determine
+accurately some of the low-energy constants in the IAM from
+independent observables {{cite:7d2b1d15-b970-4a1d-9449-0a06d17cd089}} and thereby test the
+consistency of the IAM in great detail.
+In Fig. REF , the phase shift FORMULA  is shown below
+FORMULA  GeV. It is observed that the IAM to two loops agrees
+rather well with the data up to approximately 0.9 GeV, whereas the IAM
+to one loop only describes the data well up to about 0.7 GeV. For one
+and two-loop ChPT, both begin to disagree with the data somewhat above
+0.5 GeV, which is consistent with
+the unitarity requirement. In fact, the IAM to two loops describes the
+data rather well up to energies where the elastic approximation will no
+longer be applicable. Therefore, before one tries to apply this
+method to even higher energies, the FORMULA  inelasticity must be
+included in the IAM as discussed previously. However, whether this
+inelastic IAM will actually be able to reproduce the FORMULA (980)
+resonance, which is closely related to the FORMULA  inelastic channel,
+has to await further investigations.
+In Fig. REF , the phase shift FORMULA  is shown below
+FORMULA  GeV. In this case, the IAM to two loops also seems to
+improve the IAM to one loop at higher energies, even though the data
+are not very conclusive. In addition, the IAM also in this case
+successfully extends the range of applicability of ChPT. In this
+channel, the first important inelastic effect is due to the four
+pion intermediate state, which should begin to be significant somewhat
+above 1.2 GeV. Thus, the IAM to two loops describes the data well up
+to energies where this inelasticity should be included. It also
+seems that two-loop ChPT is rather consistent with the data all the
+way up to about 1 GeV. However, this is in conflict with the unitarity
+requirement, which shows that two-loop ChPT can only be trusted up
+to approximately 0.5 GeV.
+Finally, in Fig. REF  the phase shift FORMULA  is shown
+below FORMULA  GeV. This channel is dominated by the FORMULA (770)
+resonance, which was used in the determination of the low-energy
+constants for the IAM. However, it is observed that the IAM is not
+only consistent with the experimental data close to the resonance
+mass, but also for energies rather far away from this resonance.
+Furthermore, for energies somewhat above 1 GeV the IAM to two loops
+improves the IAM to one loop, although inelastic effects should begin
+to be significant at these energies. As for ChPT, this only describes
+the low-energy tail of the FORMULA (770) resonance.
+It has recently been shown that the IAM gives the correct analytical
+structure in the complex FORMULA  plane {{cite:0deb5803-9345-43dc-b0ed-66b0a34b6ccd}}. Of course, this
+method produces the appropriate cuts on the first Riemann sheet, since
+these cuts are already present in ChPT. However, contrary to ChPT, the
+IAM can also produce poles on the second Riemann sheet, where
+resonances are related to such poles in the vicinity of the real axis.
+Indeed, the IAM gives the correct pole structure associated with the
+FORMULA (770) resonance. Furthermore, consistent with recent
+phenomenological analysis {{cite:4721077d-b119-46c0-a153-0c7a9203eafa}}, this method also gives a
+pole in the FORMULA  S wave responsible for the strong final-state
+interaction in this channel. In fact, these poles have only been
+obtained for the IAM to one loop {{cite:0deb5803-9345-43dc-b0ed-66b0a34b6ccd}} but the same should
+also be true in general. Since this analytical structure is not
+trivial at all, this strongly supports the applicability of the IAM.
+
+PION FORM FACTORS
+The pion vector form factor (FORMULA ) provides important information
+about the internal structure of the pion. Another quantity of interest
+is the pion scalar form factor (FORMULA ) defined by the matrix element
+of the quark density. These form factors depend on one kinematical
+variable FORMULA , giving by the square of the four-momentum transfer. They
+are analytical functions in the complex FORMULA  plane with a unitarity cut
+starting at the FORMULA  threshold. The form factors will only be
+considered in the isospin limit, and the scalar form factor will be
+normalized according to FORMULA . Thus, they may be expanded around
+FORMULA  as
+FORMULA 
+where FORMULA  is a generic symbol for the vector and scalar form factors.
+In the elastic region, one has the following unitarity relation
+FORMULA 
+which implies that the phase of FORMULA  will coincide with the FORMULA 
+phase shift FORMULA  in accordance with Watson's final-state
+theorem {{cite:851a5e51-e5b0-43ff-aa06-e23ca4b6dd68}}. More precisely, in the elastic region the
+phase of FORMULA  will coincide with the FORMULA  FORMULA  P phase shift
+FORMULA , whereas the phase of FORMULA  will be given by the FORMULA  S
+phase shift FORMULA . Above the FORMULA  threshold, the
+elastic unitarity relation (REF ) has to be modified due
+to the important FORMULA  inelasticity. This extended unitarity
+relation can be written as
+FORMULA 
+where FORMULA  is the properly normalized kaon vector or scalar form
+factor. At still higher energies, other important inelastic channels
+must be included and the unitarity relation has to be generalized
+further.
+Chiral perturbation theory
+The chiral expansion of the pion vector and scalar form factors can
+be written as
+FORMULA 
+where FORMULA  is of FORMULA . Since the scalar form factor is
+normalized according to FORMULA , one has for the leading order term
+FORMULA  for both form factors. Regarding the one-loop correction
+FORMULA , this has been determined by Gasser and Leutwyler both in
+SU(2) ChPT {{cite:1d9b270a-8103-468e-9980-a93394b91810}} and in the SU(3) case {{cite:b7a42963-b052-49b6-8159-d67f8d163f0a}}.
+For the two-loop correction FORMULA , this part has been evaluated by
+a dispersive analysis {{cite:ab3a7fae-aebc-4fe7-b8f8-4eba47e25f7b}} in the elastic SU(2)
+approximation. This dispersive approach is based upon the two-loop
+perturbative interpretation of the elastic unitarity relation Eq.
+(REF )
+FORMULA 
+These relations are satisfied for all energies above the FORMULA 
+threshold in the SU(2) approximation. Therefore, in this case
+the full two-loop pion form factors may be expressed in terms of a
+dispersion relation as {{cite:ab3a7fae-aebc-4fe7-b8f8-4eba47e25f7b}}
+FORMULA 
+For the vector form factor, the subtraction constants FORMULA  and FORMULA  can be written as
+FORMULA 
+whereas in the case of the scalar form factor, they may be
+expressed in the following way:
+FORMULA 
+The subtraction constants are given in terms of
+the scale-independent one-loop
+low-energy constants FORMULA  and FORMULA  and
+the additional two-loop coupling constants FORMULA , FORMULA ,
+FORMULA , and FORMULA . These coupling constants could in the
+future be expressed in terms of chiral logs and two-loop renormalized
+chiral low-energy constants.
+The dispersive analysis is not restricted to the elastic SU(2)
+approximation, but may be generalized to the inelastic case as well.
+The important FORMULA  inelasticity can be included in this approach
+by considering the two-loop perturbative extended unitarity relations
+FORMULA 
+In the inelastic case, these expressions have to be used above the
+FORMULA  threshold in the dispersion relation Eq. (REF ).
+The other inelastic channels may also be included in the dispersive
+approach, but these will only be important somewhat above the
+FORMULA  threshold.
+
+Inverse amplitude method
+Also for the form factors, the elastic approximation will be used
+in the derivation of the IAM applied to two loops in the chiral
+expansion. However, some short remarks on the possible inclusion
+of inelasticities will also be given in this case.
+Elastic approximation
+The starting point for the IAM applied to the pion form factors is to
+write down a dispersion relation for the inverse of the form factor
+FORMULA . In this dispersion relation, the elastic unitarity
+relation (REF ) gives FORMULA . Unfortunately, this part cannot be computed
+exactly, as was the case for FORMULA  scattering, but it may be
+expanded to two-loop order in the chiral expansion FORMULA . The
+subtraction constants can also be evaluated by expanding the
+function FORMULA  to two-loop order as FORMULA . Thus, neglecting any pole contribution arising
+from possible zeros in the form factors {{cite:79054e25-020d-48fc-bd46-943f6830c6cd}}, {{cite:ae8c8b6d-9d9d-4793-bfec-f9c1e99ec2b3}},
+the following dispersion relation is obtained for the IAM
+FORMULA 
+In order to simplify the connection between the IAM and two-loop ChPT,
+one can write down a dispersion relation for the function
+FORMULA . Since this is the
+function FORMULA  expanded to two-loop order in the chiral expansion,
+the subtraction constants in the dispersion relation for
+FORMULA  will be the same as in Eq. (REF ).
+Furthermore, the perturbative elastic unitarity relations
+(REF ) give FORMULA , so the following dispersion relation is
+obtained for ChPT
+FORMULA 
+Since this is identical to Eq. (REF ), the IAM to two-loop
+order in the chiral expansion can be written as
+FORMULA 
+Even though the unitarity cut in the IAM for the pion form factors
+cannot be computed exactly, it is still expected that this method is
+superior to the truncation of the chiral expansion. This is based upon
+the fact that the expansion of FORMULA  used in the IAM converges
+significantly faster than the corresponding expansion of
+FORMULA  used in ChPT. Actually, even the one-loop expansion
+FORMULA  is a rather good approximation over a
+relatively large energy region {{cite:79054e25-020d-48fc-bd46-943f6830c6cd}}. With this
+approximation and the FORMULA  partial waves given by Eq.
+(REF ), the IAM to two loops will satisfy the elastic
+unitarity relation (REF ) exactly. Hence, the IAM is
+a rather consistent way of imposing the unitarity restriction on the
+chiral expansion.
+The IAM was originally applied to the pion form factors in the
+one-loop approximation {{cite:79054e25-020d-48fc-bd46-943f6830c6cd}}, which gives the result
+FORMULA 
+With the FORMULA  partial waves given by Eq. (REF ), this
+form will also satisfy the elastic unitarity relation (REF )
+exactly, provided that the one-loop approximation FORMULA 
+is satisfied. However, in this case FORMULA  and the subtraction
+constants are only expanded to one-loop order in the chiral expansion.
+Thus, even though the one-loop expansion of FORMULA  is a rather good
+approximation, it is clear that the IAM to two loops will improve this
+approximation.
+
+Inclusion of inelasticities
+The first important inelastic channel is due to the FORMULA 
+intermediate state. In order to include this inelastic channel in the
+IAM, the extended unitarity relation (REF ) has to be
+used above the FORMULA  threshold. This gives FORMULA , which can be evaluated to two-loop order in the
+chiral expansion
+FORMULA 
+This expression has to be used above the FORMULA  threshold in the
+dispersion relation (REF ) for the IAM. In order to
+simplify the relation between the IAM and ChPT in this inelastic case,
+the perturbative extended unitarity relations (REF ) may
+be used to evaluate FORMULA  to two-loop order in the
+chiral expansion. Since this will give an expression exactly similar
+to Eq. (REF ), the inelastic IAM to two loops can also be
+written in the form (REF ) with the FORMULA  inelasticity
+included in ChPT. In the same way, by expanding to one-loop order in
+the chiral expansion, the inelastic IAM to one loop will be given by a
+form similar to Eq. (REF ). As was the case in the elastic
+approximation, it is also expected that the inelastic higher order
+corrections are substantially more suppressed for the IAM than for
+ChPT. However, it still has to be investigated whether the IAM is
+actually able to correctly describe the FORMULA  and other
+inelasticities.
+
+Comparison with experiment
+The pion vector form factor is well known experimentally both in the
+time-like region FORMULA  {{cite:7b1b9334-d95c-447e-8575-d6c2dfb428a1}} and in the space-like
+region FORMULA  FORMULA  {{cite:c4f16349-fc6e-4deb-bde7-0784dbdbf1f0}}, {{cite:aaefcb62-c8e1-429a-a4e0-ba3f87d3000a}}. As for the
+scalar form factor, this is not directly accessible to experiment.
+However, it has been determined in terms of the experimental phase
+shifts for the FORMULA  system by a dispersive analysis
+{{cite:ab3a7fae-aebc-4fe7-b8f8-4eba47e25f7b}}, {{cite:95d0cc78-5d2e-4c69-bccb-f9ebcc07e92c}}. In the following, the theoretical form
+factors will be limited to the elastic approximation when compared to
+the experimental information.
+Vector form factor
+The vector form factor to one loop depends on the single
+scale-independent low-energy constant FORMULA . This can be fixed
+for both ChPT and the IAM from the experimental value of the pion
+charge radius FORMULA  FORMULA 
+{{cite:c4f16349-fc6e-4deb-bde7-0784dbdbf1f0}}. With the central experimental value, one obtains the
+results for FORMULA  displayed in the first and third column in
+Table REF , which is consistent with independent information
+on this low-energy constant {{cite:2d539d91-e7f4-4aaa-add8-f1518ff88ec1}}. For two-loop ChPT, the
+value of FORMULA  should in principle be re-evaluated taking into
+account the two-loop corrections. However, since a thorough
+re-evaluation seems rather out of reach at the moment, the one-loop
+value of FORMULA  is also used in two-loop ChPT. Therefore, from
+the central experimental value of the pion charge radius
+{{cite:c4f16349-fc6e-4deb-bde7-0784dbdbf1f0}}, one obtains the result
+that the two-loop contribution to
+FORMULA  contained in the coupling constant FORMULA 
+vanishes. For the other coupling constant FORMULA , this can be
+fixed from the value FORMULA  FORMULA  {{cite:ab3a7fae-aebc-4fe7-b8f8-4eba47e25f7b}} with a
+result displayed in the second column in Table REF . Finally,
+for the renormalized low-energy constants FORMULA , FORMULA , FORMULA ,
+and FORMULA  occuring in the FORMULA  partial waves to one loop, they
+will be given by the values shown in the second column in
+Table REF .
+For the IAM to two loops, the low-energy constant
+FORMULA  and the coupling constants FORMULA  and FORMULA  may
+be determined simultaneously by fitting the time-like experimental
+data below FORMULA  GeV {{cite:7b1b9334-d95c-447e-8575-d6c2dfb428a1}} together with the
+space-like experimental data {{cite:c4f16349-fc6e-4deb-bde7-0784dbdbf1f0}}. For the other
+renormalized low-energy constants FORMULA , FORMULA , FORMULA , and
+FORMULA , the values shown in the fourth column in Table REF 
+are used. This gives a rather good fit with values of FORMULA ,
+FORMULA , and FORMULA  displayed in the fourth column in Table
+REF . For the the pion charge radius FORMULA 
+and the low-energy parameter FORMULA  also shown in Table REF ,
+it is observed the the predictions for
+the IAM to two loops agree remarkably well with the experimental
+information FORMULA  FORMULA 
+{{cite:c4f16349-fc6e-4deb-bde7-0784dbdbf1f0}} and FORMULA  FORMULA  {{cite:ab3a7fae-aebc-4fe7-b8f8-4eba47e25f7b}}. In
+addition, with this method one finds that the two-loop correction to
+FORMULA  contained in the coupling constant FORMULA 
+is approximately 20% of the one-loop contribution, which is quite
+reasonable. From Table REF , it is furthermore observed that
+the prediction for FORMULA  obtained from the IAM to one loop also
+agrees remarkably well with the experimental information, whereas the
+corresponding prediction obtained from one-loop ChPT is far too small.
+The vector form factor FORMULA  is shown for FORMULA 
+FORMULA 
+FORMULA  in Fig. REF . The IAM to two loops describes the
+data very well both in the time-like and in the space-like
+regions. In fact, also the space-like data for FORMULA  FORMULA 
+{{cite:aaefcb62-c8e1-429a-a4e0-ba3f87d3000a}}, which were not included in the fit, agree well
+with the IAM to two loops. Of course, the small isospin violating
+FORMULA  mixing is not reproduced by this method, since the
+isospin limit has been applied throughout this paper. In addition,
+this method should only be reliable below approximately FORMULA 
+FORMULA , since the elastic approximation has be used for the
+vector form factor. As for the IAM to one loop, this agrees well with
+the space-like experimental data. However, in the time-like region
+this method only approximates the FORMULA (770) resonance, as has been
+discussed in greater detail in Ref. {{cite:2d539d91-e7f4-4aaa-add8-f1518ff88ec1}}. Nevertheless, it
+is obvious that the IAM to both one and two loops significantly
+improves the behavior of ChPT, which only accounts for the low-energy
+tail of the FORMULA (770) resonance. The agreement between one and
+two-loop ChPT and the space-like experimental data {{cite:c4f16349-fc6e-4deb-bde7-0784dbdbf1f0}}
+can be slightly improved by fitting these experimental data
+{{cite:c5b6011c-a06b-48f7-a792-439732ff36c6}}, but this will not change the range of applicability
+of ChPT significantly.
+In Fig. REF , the predictions for the phase FORMULA  are
+shown below FORMULA  GeV. Only the IAM are
+shown since one and two-loop ChPT will give the chiral FORMULA  I=1 P
+phase shifts to leading and one-loop order respectively. For the IAM
+to two loops, the phase agrees very well with the experimental data
+and gives a resonance at FORMULA  GeV defined to be at
+FORMULA . Furthermore, since this method also
+agrees well with the results of the IAM for the FORMULA  I=1 P
+phase shifts shown in Fig. REF , the IAM to two loops satisfies
+the elastic unitarity relation (REF ) very well indeed. As
+for the IAM to one loop, since this only approximates the experimental
+data, the elastic unitarity relation (REF ) will be somewhat
+violated in this case. However, the IAM to one loop is also quite
+consistent with a resonance structure {{cite:56abdba9-8757-406c-bbb2-517c1e781f97}} and will
+give a resonance at FORMULA  GeV. Thus, the IAM to both one
+and two loops are rather consistent approaches to extend the range of
+applicability of ChPT in the case of the vector form factor.
+
+Scalar form factor
+The normalized scalar form factor to one loop is given in terms of the
+single scale-independent low-energy constant FORMULA . The same
+low-energy constant also occurs in FORMULA  scattering to one loop,
+where the central value FORMULA  obtained
+from the ratio FORMULA  {{cite:1d9b270a-8103-468e-9980-a93394b91810}}, {{cite:b7a42963-b052-49b6-8159-d67f8d163f0a}} was used.
+Changing to scale-independent low-energy constants {{cite:1d9b270a-8103-468e-9980-a93394b91810}}
+gives FORMULA , which is used both in ChPT and the IAM to one
+loop. The same value of FORMULA  is also used in two-loop ChPT,
+whereas the coupling constants FORMULA  and FORMULA  are
+determined from the values FORMULA  FORMULA 
+and FORMULA  FORMULA  {{cite:ab3a7fae-aebc-4fe7-b8f8-4eba47e25f7b}}, {{cite:95d0cc78-5d2e-4c69-bccb-f9ebcc07e92c}},
+respectively. For the additional low-energy constants to two loops
+FORMULA , FORMULA , and FORMULA , they will be given by the values shown
+in the second column in Table REF .
+For the IAM to two
+loops, the low-energy constant FORMULA  and the coupling constants
+FORMULA  and FORMULA  cannot be determined in the same way
+as was applied for the vector form factor. This is because the scalar
+form factor is not directly accessible to experiment. However, in the
+elastic region the phase of the scalar form factor is given by the
+FORMULA  I=0 S phase shift, which is known experimentally. Therefore,
+the coupling constants FORMULA  and FORMULA  may be determined
+by fitting the experimental phase shift FORMULA  below
+FORMULA  GeV {{cite:f1ea34cf-7279-4459-baac-45e369b91542}}, {{cite:0339af42-4c03-439d-a6ac-b2cc07d2e7d9}}, {{cite:f0213ad5-a335-4c46-a74e-e6eb352c2480}}, {{cite:b7cc0f57-3151-43cb-8c62-5a476d271b53}},
+whereas FORMULA  can be fixed from the requirement
+FORMULA  FORMULA . With the remaining
+low-energy constants FORMULA , FORMULA , and FORMULA  given by the values
+in the fourth column in Table REF , this gives an acceptable
+fit for the FORMULA  I=0 S phase shift.
+In Table REF , the results for the low-energy constant
+FORMULA  and the coupling constants FORMULA  and FORMULA  are
+shown both for ChPT and the IAM. As for the IAM to two loops, the value
+of FORMULA  is slightly different from the one-loop value
+FORMULA . This might well be due to the inclusion of the
+higher order corrections in the determination of this low-energy
+constant in the two-loop case. However, the value of FORMULA  for
+the IAM to two loops is still consistent with the value
+FORMULA  obtained from the ratio FORMULA  to
+one-loop order in ChPT {{cite:1d9b270a-8103-468e-9980-a93394b91810}}, {{cite:b7a42963-b052-49b6-8159-d67f8d163f0a}}. In fact, using the
+value FORMULA  in the IAM to two loops, the previous numerical
+analysis of FORMULA  scattering and the pion vector form factor will
+only change insignificantly. The largest numerical difference will be
+for the FORMULA  threshold parameters, but the values given for the
+IAM to two loops in Table REF  will at most change by 5%. In
+the future it might be possible to determine the two-loop value of
+FORMULA  from independent observables.
+The corresponding values of the pion scalar radius
+FORMULA  and the low-energy parameter FORMULA  are
+also given in Table REF . For the pion scalar radius,
+the predictions obtained from
+ChPT and the IAM to one loop agree rather well with the result from
+the dispersive analysis FORMULA  FORMULA 
+(solution B) {{cite:ab3a7fae-aebc-4fe7-b8f8-4eba47e25f7b}}, {{cite:95d0cc78-5d2e-4c69-bccb-f9ebcc07e92c}}. For the low-energy parameter
+FORMULA , the predictions from the IAM to one and two loops agree within
+10-15% with the result FORMULA  FORMULA  (solution B)
+{{cite:ab3a7fae-aebc-4fe7-b8f8-4eba47e25f7b}}, {{cite:95d0cc78-5d2e-4c69-bccb-f9ebcc07e92c}}, whereas the corresponding prediction from
+one-loop ChPT is too small.
+The scalar form factor is known up to FORMULA  GeV from the
+dispersive analysis in Refs. {{cite:ab3a7fae-aebc-4fe7-b8f8-4eba47e25f7b}}, {{cite:95d0cc78-5d2e-4c69-bccb-f9ebcc07e92c}}. In Fig.
+REF , solution B from this dispersive analysis is compared to the
+scalar form factor obtained from the IAM and ChPT. It is observed that
+the IAM to two loops agrees very well with the dispersive analysis
+over the whole energy region, whereas the same is only true for the
+IAM to one loop below approximately 0.5 GeV. As for two-loop ChPT,
+this works rather well up to about 0.4 GeV, while one-loop ChPT only
+agrees with the dispersive analysis below the FORMULA  threshold. This
+is due to the strong final-state interaction, which makes the higher
+order corrections important even at low energies.
+In Fig. REF , the phase FORMULA  obtained from the IAM is
+shown below FORMULA  GeV. For the IAM to two loops, it is observed
+that below approximately 0.9 GeV, the phase agrees rather well with
+both the experimental data and the two-loop IAM result for the
+FORMULA  I=0 S phase shift shown in Fig. REF . Thus, the IAM to
+two loops satisfies the elastic unitarity relation (REF )
+rather well. Slightly above 0.9 GeV, the IAM to two loops shows a very
+rapid phase variation of approximately FORMULA , which might be
+a signal indicating that this method could reproduce the FORMULA (980)
+resonance. However, in order to investigate this the FORMULA 
+inelasticity must be included in the IAM. As for the IAM to one loop,
+this method only describes the data well at rather low energies. The
+agreement could be improved at somewhat higher energies by reducing
+the value of the low-energy constant FORMULA  within the error bars
+FORMULA , but this will at the same time give a value
+for the pion scalar radius less consistent with the dispersive result
+FORMULA  FORMULA .
+Finally, the phase difference FORMULA  between the
+scalar and vector form factors is shown in Fig. REF  below
+FORMULA  GeV. The IAM to two loops agrees very well with both
+the central experimental data and the results of the IAM for the
+FORMULA  phase shift difference shown in Fig. REF . The IAM to
+one loop also agrees with the experimental data within the error bars,
+but is slightly different from the corresponding phase shift
+differences shown in Fig. REF . As already pointed out, it is
+expected that forthcoming kaon facilities like DAFORMULA NE can
+reduce the error bars on FORMULA  significantly
+{{cite:5ca91900-4f73-4736-a2f5-50c96fec9a91}}, which will allow one to test the
+consistency of the IAM at low energies in greater detail.
+
+CONCLUSIONS
+The IAM is based upon the use of unitarity and dispersion relations
+together with the chiral expansion. It has previously been shown that
+this method applied to one-loop order successfully extends the range of
+applicability of ChPT. However, the IAM is not restricted to the
+one-loop approximation but can in general be applied to any given
+order in the chiral expansion. In the present paper, the extension of
+the IAM to two loops has been analysed in the case of FORMULA 
+scattering and the pion form factors. The analysis has mainly been
+restricted to the elastic approximation but the possible extension to
+the inelastic case has also been discussed in some detail.
+From the derivation of the IAM applied to two loops in the chiral
+expansion, it is found that this approach indeed improves
+the IAM to one loop both for FORMULA  scattering and in
+the case of the pion form factors. For FORMULA  scattering, a
+comparison with the experimental data shows that the IAM applied to
+two loops is in fact rather consistent with the experimental data up
+to energies where inelasticities become essential. At somewhat lower
+energies, the two-loop approach compares well with the one-loop
+approximation, and in
+the threshold region they both agree with ChPT. In the case of the
+pion form factors, it is also found that the IAM to two loops is
+consistent with the experimental information up to the first important
+inelastic threshold. For the IAM to one loop, although this also
+successfully extends the range of applicability of ChPT, it only
+approximates the form factors at higher energies.
+Thus, the present analysis suggests that the IAM is indeed a rather
+systematic way of extending the range of applicability of ChPT.
+However, in order to investigate this in greater detail, the IAM to
+two loops should be applied to other processes. In this way, some of
+the two-loop low-energy constants in the IAM might be determined from
+independent observables. There are also other ways of extending the
+range of applicability of ChPT and work is still in progress in this
+subject. However, at present the IAM provides one of the most
+intriguing methods to improve ChPT in a systematic manner.
+The author thanks A. Miranda and G. C. Oades for discussions and
+comments, and J. Bijnens for a private communication regarding the
+two-loop low-energy constants estimated from resonance exchange. The
+support from The Faculty of Science, Aarhus University is also
+acknowledged.
+S. Weinberg, Physica ¦96A¦, 327 (1979).
+J. Gasser and H. Leutwyler, Ann. Phys. (N.Y.) ¦158¦, 142 (1984); Nucl. Phys. ¦B250¦, 465 (1985).
+H. Leutwyler, Ann. Phys. (N.Y.) ¦235¦, 165
+(1994).
+J. Bijnens, G. Colangelo, and J. Gasser, Nucl.
+Phys. ¦B427¦, 427 (1994).
+H. W. Fearing and S. Scherer, Phys. Rev. D ¦53¦, 315 (1996).
+T. N. Truong, Phys. Rev. Lett. ¦61¦, 2526
+(1988).
+A. Dobado, M. J. Herrero, and T. N. Truong, Phys.
+Lett. B ¦235¦, 134 (1990);
+T. N. Truong, Phys. Rev. Lett. ¦67¦, 2260 (1991);
+A. Dobado and J. R. Peláez, Phys. Rev. D ¦47¦, 4883 (1993); Z.
+Phys. C ¦57¦, 501 (1993).
+T. Hannah, Phys. Rev. D ¦51¦, 103 (1995); ¦52¦, 4971 (1995).
+T. Hannah, Phys. Rev. D ¦54¦, 4648 (1996).
+A. Dobado and J. R. Peláez, “The inverse
+amplitude method in Chiral Perturbation Theory,” Report No.
+hep-ph/9604416.
+M. Knecht ¦et al.¦, Nucl. Phys. ¦B457¦,
+513 (1995).
+J. Bijnens ¦et al.¦, Phys. Lett. B ¦374¦,
+210 (1996).
+J. Gasser and U. G. Meissner, Nucl. Phys. ¦B357¦, 90 (1991).
+M. Alston-Garnjost ¦et al.¦, Phys. Lett.
+¦36B¦, 152 (1971).
+S. Weinberg, Phys. Rev. Lett. ¦17¦, 616 (1966).
+V. Bernard, N. Kaiser, and U. G. Meissner, Nucl.
+Phys. ¦B357¦, 129 (1991).
+G. Ecker ¦et al.¦, Nucl. Phys. ¦B321¦, 311
+(1989);
+G. Ecker ¦et al.¦, Phys. Lett. B ¦223¦, 425 (1989).
+J. Bijnens, (private communication).
+L. Rosselet ¦et al.¦, Phys. Rev. D ¦15¦,
+574 (1977).
+S. D. Protopopescu ¦et al.¦, Phys. Rev. D
+¦7¦, 1279 (1973).
+B. Hyams ¦et al.¦, Nucl. Phys. ¦B64¦,
+134 (1973);
+W. Ochs, thesis, Ludwig-Maximilians-Universität, 1973
+(unpublished).
+P. Estabrooks and A. D. Martin, Nucl. Phys. ¦B79¦, 301 (1974).
+M. J. Losty ¦et al.¦, Nucl. Phys. ¦B69¦,
+185 (1974).
+W. Hoogland ¦et al.¦, Nucl. Phys. ¦B126¦,
+109 (1977).
+D. Morgan and M. R. Pennington, in ¦The
+Second DAFORMULA NE Physics Handbook¦, edited by L. Maiani, G. Pancheri,
+and N. Paver (INFN, Frascati, 1995), Vol. 1, p. 193.
+M. M. Nagels ¦et al.¦, Nucl. Phys. ¦B147¦, 189 (1979).
+B. Ananthanarayan, D. Toublan, and G. Wanders,
+Phys. Rev. D ¦53¦, 2362 (1996).
+B. Adeva ¦et al.¦, “Lifetime measurement of
+FORMULA  atoms to test low-energy QCD predictions,” Report No.
+CERN/SPSLC 95-1.
+J. Gasser and U. G. Meissner, Phys. Lett. B ¦258¦, 219 (1991).
+M. Baillargeon and P. J. Franzini, in ¦The
+Second DAFORMULA NE Physics Handbook¦, edited by L. Maiani, G. Pancheri,
+and N. Paver (INFN, Frascati, 1995), Vol. 1, p. 413.
+Particle Data Group, R. M. Barnett ¦et al.¦,
+Phys. Rev. D ¦54¦, 1 (1996).
+K. M. Watson, Phys. Rev. ¦95¦, 228 (1954).
+J. Gasser and H. Leutwyler, Nucl. Phys. ¦B250¦,
+517 (1985).
+L. M. Barkov ¦et al.¦, Nucl. Phys. ¦B256¦,
+365 (1985);
+L. M. Kurdadze ¦et al.¦, Yad. Fiz. ¦40¦, 451 (1984) [Sov. J.
+Nucl. Phys. ¦40¦, 286 (1984)];
+G. V. Anikin ¦et al.¦, Report No. INP 83-85 (unpublished);
+S. R. Amendolia ¦et al.¦, Phys. Lett. ¦138B¦, 454 (1984);
+I. B. Vasserman ¦et al.¦, Yad. Fiz. ¦33¦, 709 (1981) [Sov. J.
+Nucl. Phys. ¦33¦, 368 (1981)];
+A. Quenzer ¦et al.¦, Phys. Lett. ¦76B¦, 512 (1978).
+NA7 Collaboration, S. R. Amendolia ¦et al.¦,
+Nucl. Phys. ¦B277¦, 168 (1986).
+C. J. Bebek ¦et al.¦, Phys. Rev. D ¦17¦,
+1693 (1978).
+J. F. Donoghue, J. Gasser, and H. Leutwyler, Nucl.
+Phys. ¦B343¦, 341 (1990).
+J. Bijnens and F. Cornet, Nucl. Phys. ¦B296¦,
+557 (1988);
+G. Colangelo, M. Finkemeier, and R. Urech, Phys. Rev. D ¦54¦, 4403
+(1996).
+L. V. Dung and T. N. Truong, “Equivalence Between
+Vector Meson Dominance and Unitarised Chiral Perturbation Theory,”
+Report No. hep-ph/9607378.
+TABLE 
+TABLE 
+TABLE 
+TABLE 
+FIGURE 
+FIGURE 
+FIGURE 
+FIGURE 
+FIGURE 
+FIGURE 
+FIGURE 
+FIGURE 
+FIGURE 
+FIGURE 

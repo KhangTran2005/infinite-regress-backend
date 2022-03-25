@@ -1,0 +1,35 @@
+# sampling outline
+
+- randomly select 1000 cited papers from the unarXive reference item data base
+- extract citation contexts for sampled cited papers
+
+
+# sampling steps
+
+$ python3 unarXive/code/extract_contexts.py unarXive/papers/ -f citation_context_sample.csv -u s -e 0 -o 0 -s 1000
+
+
+# csv format
+
+format:
+    <cited_paper_mag_id>␞<adjacent_citations_mag_ids>␞<citing_paper_mag_id>␞<cited_paper_arxiv_id>␞<adjacent_citations_arxiv_ids>␞<citing_paper_arxiv_id>␞<citation_context>
+    (separated by a record separator (U+241E))
+
+format <adjacent_citations_*_ids> if length == 0:
+    empty
+
+format <adjacent_citations_*_ids> if length == 1:
+    <id>
+
+format <adjacent_citations_*_ids> if length > 1:
+    <id>␟<id>␟...
+(separated by a unit separator (U+241F))
+
+notes:
+- because of how sampling in the citation context extraction script is done,
+  small samples like this are unlikely to list any adjacent citations (this
+  is not the case in the full data set)
+- adjacent_citations_mag_ids and adjacent_citations_arxiv_ids are, per line,
+  always in the same order
+- missing values (e.g. when a citing paper (which all have an arXiv ID) does
+  not have a corresponding citing_paper_mag_id) are given as "None"

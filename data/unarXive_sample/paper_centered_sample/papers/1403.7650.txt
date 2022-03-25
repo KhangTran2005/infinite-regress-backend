@@ -1,0 +1,509 @@
+
+Electronic structure and excitations in oxygen
+deficient CeOFORMULA 
+from DFT calculations
+T. JarlborgFORMULA , B. BarbielliniFORMULA , C. LaneFORMULA ,
+Yung Jui WangFORMULA , R.S. MarkiewiczFORMULA ,
+Zhi LiuFORMULA , Zahid HussainFORMULA  and A. Bansil FORMULA
+FORMULA DPMC, University of Geneva, 24 Quai Ernest-Ansermet, CH-1211 Geneva 4,
+Switzerland
+FORMULA Department of Physics, Northeastern University,
+Boston, Massachusetts 02115, USA
+FORMULA  Advanced light Source, Lawrence Berkeley National Laboratory,
+Berkeley, California 94720, USA
+The electronic structures of supercells of CeOFORMULA 
+have been calculated within
+the Density Functional Theory (DFT).
+The equilibrium properties such as lattice constants, bulk moduli
+and magnetic moments are well reproduced by the
+generalized gradient approximation (GGA).
+Electronic excitations are simulated by
+robust total energy calculations for constrained states
+with atomic core holes or valence holes. Pristine ceria
+CeOFORMULA  is found to be a non-magnetic insulator with
+magnetism setting in as soon as oxygens are removed from the structure.
+In the ground state of defective ceria, the Ce-FORMULA 
+majority band resides near the Fermi level,
+but appears at about 2 eV below
+the Fermi level in photoemission spectroscopy experiments
+due to final state effects.
+We also tested our computational method by calculating
+threshold energies in Ce-MFORMULA  and O-K x-ray absorption
+spectroscopy and comparing theoretical
+predictions with the corresponding measurements.
+Our result that FORMULA  electrons
+reside near the Fermi level in the
+ground state of oxygen
+deficient ceria
+is crucial for understanding the catalytic
+properties of
+CeOFORMULA  and related materials.
+71.28.+d,
+71.15.Mb
+71.15.Qe
+79.60.-i
+Introduction
+Mixed-valency cerium oxides (ceria) are
+technologically important materials
+{{cite:32e4e3a8-8b07-459f-aab6-5625dc297965}}, {{cite:6cc6b4c6-f35c-4def-bdbc-23e970d22318}}, {{cite:737f70b5-d845-44f8-8773-482f0b5dde02}}
+with remarkable properties that are useful
+for applications
+in heterogeneous chemical {{cite:53b4c97a-44c9-48bc-b2e7-4a9f260f1182}}
+and electrochemical catalysis
+{{cite:5ca0bf64-0c6e-4ea9-ba13-c3072f1bb729}}, {{cite:4e69b857-354e-4dab-857d-eca54b710271}}, {{cite:58ebf05b-3978-4ddc-9151-1ea5532d3a12}}, {{cite:d48badcd-73e2-4687-b027-f0368ded83a7}}.
+In chemical catalysis, ceria is used as an active support.
+Ceria at an interface catalyzes surface reactions {{cite:33da0d07-96c7-43d8-923a-40ff5c2a7872}}, {{cite:7d12ccc5-5b21-4d15-bada-91c13f73e0f4}},
+while the bulk material is used as an oxygen reservoir.
+In electro-catalysis, on the other hand,
+mixed ionic and electronic conductivity
+(with electrons localized around Ce) {{cite:640eaa16-232b-489a-892b-ba3613760c71}}, {{cite:b63ca6dd-b480-4413-b527-0e435166bc76}}
+is essential for making ceria a potentially good
+electrode in solid oxide fuel cells {{cite:8a8daa12-5733-42b7-b081-790b14882b3e}}, {{cite:d4b97bf2-0052-4ec9-b24a-ced744255d47}}, {{cite:0fff499a-d126-4e3c-97c3-df6b9b2c3c70}}, {{cite:214c6eb7-583e-48a1-9883-d1d9efde40a2}}
+with an outstanding electrocatalytic
+activity even without any metal
+co-catalyst {{cite:64a6a3a4-6cb6-4d70-97da-5c38792ad9bd}}.
+CeFORMULA  and oxygen vacancies are thought to be the active sites
+on ceria surfaces {{cite:93d6d10e-2566-49eb-9caa-17375aa40893}}, {{cite:4c457da9-c025-4fd7-a9b5-bd688d0b03db}}, {{cite:65d6c663-b41c-45cf-9ba3-6d7922de4df2}}
+in reactions such as hydrolysis, with the
+surface undergoing a CeFORMULA / CeFORMULA  redox cycle during
+the complete catalytic reaction.
+In the pristine CeOFORMULA  compound, Ce atoms assume a +4 oxidation state, but
+the phase diagram of ceria contains a continuous range of partially reduced
+phases CeOFORMULA  in which oxygen vacancies can be easily formed or eliminated.
+The formation of oxygen vacancies in CeOFORMULA 
+results in changes in cerium oxidation state
+similar to those implicated in the cuprates {{cite:b7a38c95-617f-467f-a9f7-c107acfb6326}}.
+Notably, the Ce valence and defect structure in ceria
+can change in response to physical parameters such as temperature,
+voltage, and oxygen partial pressure {{cite:4e69b857-354e-4dab-857d-eca54b710271}}.
+The nature of the Ce active site remains not well-understood
+because studies with ceria are complicated by the fact
+that the FORMULA  electrons appear to be far from the Fermi
+level. The degree of participation of FORMULA -electrons in catalytic reactions
+{{cite:07747942-f8a4-449b-b9bd-d253c7bedabe}}, {{cite:53682065-a064-4505-a64c-5029231456ab}}, {{cite:a5209cc0-8974-4e8a-ad4c-350add66c9dc}}, {{cite:de18b370-e478-4d85-be7d-1ac9a83cd7a0}} is therefore not clear, since
+the standard theory of catalysis heavily relies on localized FORMULA  orbitals
+at the Fermi energy, FORMULA  {{cite:87f8f089-79f5-4489-b4bf-30aef27bf0ed}}. Fortunately,
+the computational description of perfect CeOFORMULA 
+structure is not so complicated due to the
+absence of Ce 4FORMULA  electrons in the insulating material
+{{cite:cb388f3e-5508-418d-862c-18a7684bfca7}}, {{cite:ea5f5e84-3070-421e-b04a-604c502d6e54}}. However, in CeOFORMULA ,
+when partially filled FORMULA  orbitals are involved,
+the ground state predicted by the density-functional theory
+(DFT) clearly places the FORMULA  electrons in narrow bands
+piled at FORMULA , interacting only weakly with other electrons.
+Since the elusive FORMULA -transition
+in pure Ce can be described quite accurately
+by temperature dependent DFT calculations
+in which vibrational, electronic and magnetic free energies are
+taken into account, {{cite:9f151ba8-b1a5-4213-b109-8692a8c94ea8}}, DFT should be expected to provide
+a reasonable description of ceria. In fact, corrections to the value of
+the chemical expansion coefficient FORMULA  {{cite:da54da34-8a47-406d-aba9-98f7b298c042}}
+have been explained via disorder and entropy effects
+enhancing lattice expansion {{cite:9f151ba8-b1a5-4213-b109-8692a8c94ea8}} rather than via correlations beyond the
+Generalized Gradient Approximation (GGA) {{cite:2da573bf-30bb-4d81-95d9-7898c02faf07}}.
+In sharp contrast, however, signatures of FORMULA  bands are often found in
+spectroscopic measurements not at the Fermi energy FORMULA ,
+as GGA predicts, but several eV's above
+or below FORMULA  depending on the nature of the spectroscopy.
+These shortcomings may be cured in an advanced DFT approach
+{{cite:a4a129fd-7e16-4356-8e8f-ed6893b1ebc4}}, which includes relaxation energies relevant for excitation
+of occupied and empty states in various spectroscopic probes.
+These relaxation energies are of the order
+of the corrections obtained within quasi-particle
+schemes {{cite:09671614-03c0-47b7-aca8-43c77c08ecf3}}, {{cite:30457c04-2de4-4739-be34-c858270e76c4}} or modeled by adding a Hubbard FORMULA 
+term {{cite:690d21b7-c539-4f74-b0e0-a2386cbc4fd4}}. Overall, the published studies that consider
+CeOFORMULA  cover the range of FORMULA  parameter between 2 and 8 eV,
+depending on the property of interest
+{{cite:d4e2813e-0720-4f8e-a8e1-c30071810b66}}, {{cite:064ae845-30d1-4484-a1f0-d2753be20369}}, {{cite:79ec9b5d-a6e5-4d33-bc39-6fa707f9e757}}, {{cite:79440c47-fb9b-4cb4-be49-9648d5582481}}, {{cite:ba664c0e-9d96-4dec-b89e-b70cc6c26b33}}, {{cite:a9bb9e95-b518-4f6d-9549-61969e09f872}}, {{cite:431d3084-5ca8-4840-ad7d-ba3495144678}}.
+Many-body perturbation theory with FORMULA  {{cite:f74d7c75-65b7-4636-8048-77daa0d1e3ca}},
+self-interaction corrections {{cite:065a5d20-1291-4502-84de-1105e79eae03}},
+and hybrid DFT functionals have also been considered
+{{cite:b5f6e5c0-6767-4625-9bb8-67f84b5f4fb1}}, {{cite:caa1ef24-5593-4c8b-b796-b2e7c730c04e}}. In the present study, we explore the relaxation energy
+approach {{cite:a4a129fd-7e16-4356-8e8f-ed6893b1ebc4}} to find a reasonable description
+of x-ray photoemission (XPS) as well as x-ray absorption spectroscopy (XAS) results in CeOFORMULA .
+An outline of this paper is as follows. In Sec. II, we present
+details of our electronic structure and total energy computations
+for various CeOFORMULA  supercells where FORMULA .
+Results of the calculations are presented and compared
+with relevant experimental data in Sec. III, and the conclusions
+are given in Sec. IV.
+
+Experimental setup and Method of calculation
+The photoelectron spectroscopy experiments were performed at beamline 9.3.2 at
+the Advanced Light Source (Berkeley). Detailed description of the AP-XPS
+endstation used in this study and the ceria thin films sample preparation can be
+found in Refs. Ref1,Ref2.
+The Fermi level was determined by using a gold foil.
+The binding energy was also calibrated by using the Pt 4FORMULA  core level.
+The Ce 4FORMULA  spectrum was collected at a photon energy of 270 eV
+{{cite:b3fb4245-83af-4ea9-8158-59711d5c29e6}}. In the interest of brevity, we refer to previous publications for
+further details of measurements. {{cite:b3fb4245-83af-4ea9-8158-59711d5c29e6}}, {{cite:49029616-79be-4c34-bd34-214620d2f9a8}}
+In order to determine various equilibrium properties, we used
+the pseudo-potential projected augmented wave method {{cite:583559cc-fc8d-4b1e-8b30-817f83a4ba85}}
+implemented in the VASP package {{cite:b4864bc0-73e8-459d-b9fb-6375a56ecc2a}}
+with an energy cutoff of 520 eV for the plane-wave basis set.
+CeOFORMULA  has a cubic fluorite lattice (FmFORMULA m)
+with four cerium and eight oxygen atoms per unit cell.
+The exchange-correlation energy was computed
+using the GGA functional {{cite:7b5d29ee-9320-4a4d-a5af-d10c96115da2}},
+which gives a reasonable agreement
+with experimental low temperature
+equilibrium volumes for CeOFORMULA  and CeFORMULA OFORMULA .
+Andersson et al. {{cite:d4e2813e-0720-4f8e-a8e1-c30071810b66}}
+have pointed out that this agreement is not maintained if
+a non-zero Coulomb parameter FORMULA  is deployed in the GGA scheme.
+To estimate the XPS and XAS relaxation effects, we have
+performed self-consistent first-principles calculations
+using the the Linear Muffin-Tin Orbital (LMTO) method {{cite:125cd168-c169-464f-b90e-3518dcc5c258}}
+within the Local Spin Density Approximation
+(LSDA) {{cite:24b20bed-442a-41ae-80b0-68535865a6e6}} as in Ref. {{cite:a4a129fd-7e16-4356-8e8f-ed6893b1ebc4}}
+for supercells containing 4 or 8 formula units of CeOFORMULA .
+The same LMTO method has been successfully applied previously
+to study the effect of doping copper oxide high temperature
+superconductors {{cite:b7a38c95-617f-467f-a9f7-c107acfb6326}}, {{cite:514e6823-55ce-41c0-9d63-a1ba15129f2f}}.
+Here, empty spheres were inserted in the interstitial
+region opposite to the oxygen atoms, a total of 16 or 32 spheres per supercell.
+Defective ceria CeOFORMULA  configurations
+were modeled with the supercell method by considering
+two concentrations: FORMULA  and FORMULA , in the 16
+and 32 atom supercells, respectively.{{cite:1bae58af-dfda-45c8-83bc-bb6aa611dcd6}}
+The converged self-consistent results were obtained
+using a mesh of 286 or 89 FORMULA -points
+within the irreducible Brillouin zone for the small and large
+supercells, respectively.
+These calculations were made for a lattice constant FORMULA  of
+5.45 Å  for stoichiometric CeOFORMULA 
+and 5.54 Å  when vacancies are present.
+The atomic sphere radii in the LMTO calculations are
+0.303FORMULA  for Ce, 0.230FORMULA  for O and 0.196FORMULA 
+for the empty spheres.
+A precise tetrahedron method was used to determine the
+density-of-states (DOS) {{cite:83eb5290-e797-445c-9791-1a0f5e13e97a}}.
+In order to calculate the XAS threshold energy,
+we start with the electronic structure
+obtained within the LMTO method.
+Our approach for modeling XAS {{cite:e2c339c6-0f54-47b5-845a-7cb86fffa227}} assumes
+that the absorption is essentially a screened single-particle process.
+A step to account for many-body relaxation effects is to extract an electron
+from the core shell and add it into the valence states.
+The electronic structure computations were carried out self-consistently
+under these constrained conditions.
+After the system has relaxed, we consider the
+total energy difference between the unperturbed
+state and the relaxed state to determine
+the XAS threshold energy.
+The calculation of the excitation energy
+in x-ray photoemission spectroscopy (XPS)
+from the occupied Ce-FORMULA  state is made in the same way as
+in our earlier study of NdFORMULA CuOFORMULA  {{cite:a4a129fd-7e16-4356-8e8f-ed6893b1ebc4}}.
+Excitation energies for localized FORMULA -electrons are different from
+those for itinerant electrons, since relaxation
+effects are smaller for itinerant bands.
+An electron is removed at an energy lying just
+below the Fermi level from the occupied
+majority state on one of the Ce atoms, and it is then spread out uniformly
+over the cell to account for a final
+state at high energy. The difference in total
+energy per electron between this state and the
+ground state gives the relaxation energy,
+FORMULA  defined in Appendix A. In particular, the final state will
+appear shifted by an amount FORMULA  with
+respect the Fermi level. The procedure for simulating inverse photoemission
+(or bremsstrahlung isocromat spectroscopy, BIS) is
+reversed. The final state then has one FORMULA -electron in
+an empty Ce-FORMULA  state and the same
+amount of opposite neutralizing charge is spread
+uniformly over the cell. These procedures assume
+large excitation energies because the compensating
+uniform charges are valid approximations
+for free electron states ignoring the lattice potential
+{{cite:90aece90-477e-43fd-ab86-b26e8c28a4bf}}.
+
+Results
+Ground-state properties
+
+ FIGURE
+(Color online) Lattice constant (points connected by solid line)
+and magnetic moment (points connected by dashed line)
+results of the VASP based calculations on a CeFORMULA OFORMULA  cell
+as function of the number FORMULA  of oxygen vacancies.
+Both volume and atomic positions were relaxed while
+keeping the cubic symmetry. For each FORMULA  the configuration with the lowest energy was chosen.
+
+The VASP calculation on a CeFORMULA OFORMULA  cell gives an equilibrium lattice constant
+FORMULA  Å  and a bulk modulus FORMULA  GPa, which compare well with the corresponding
+low-temperature experimental values FORMULA  Å  {{cite:e17003ce-22eb-49fc-85d1-a7c866e528be}}
+FORMULA  GPa {{cite:0a95c5f1-054c-497d-963c-fd967b297195}}. By removing an oxygen atom and by letting
+the volume and the atomic positions relax,
+the lattice constant was found to expand to FORMULA  Å ,
+the bulk modulus reduced to FORMULA  GPa,
+and the total spin magnetic moment was 2 FORMULA .
+This predicted ferromagnetic structure is consistent
+with experiments {{cite:5411ce17-9812-44c1-96be-20e191a9d478}}, {{cite:5b5335ca-35b5-44df-b635-ab6d48bcb7f2}}, {{cite:ec32d5f4-c7d2-4092-9962-d3a5eb882c29}}
+and other first principles studies {{cite:6eaf7766-322c-44a2-ac04-08484b588fb9}}.
+We note that by removing all the oxygen atoms, one recovers
+the fcc-phase of Ce, and the
+calculated bulk modulus is only 51.4 GPa for
+the non-magnetic FORMULA  phase
+at an equilibrium lattice constant of 4.714Å.
+Our results for CeFORMULA OFORMULA 
+as a function of the number FORMULA  of oxygen vacancies
+are summarized in Fig. REF .
+The calculated chemical expansion coefficient
+of CeOFORMULA  is given by
+FORMULA .
+However, our results for O-vacancies in the
+small unit cell CeFORMULA OFORMULA 
+show that FORMULA  is not at all linear. In fact,
+between FORMULA  and FORMULA , FORMULA  is FORMULA , while
+between FORMULA  and FORMULA ,
+FORMULA , which is slightly below the experimental value
+FORMULA  {{cite:da54da34-8a47-406d-aba9-98f7b298c042}}.
+Part of the anomalous behavior of FORMULA 
+can be explained in term of oxygen vacancy ordering leading to
+lattice contractions opposite to the chemical expansion{{cite:f73e9abb-b8b3-46bc-a831-dead6066b3c0}}.
+The GGA calculation for one vacancy in a large FORMULA 
+supercell with 95 atoms gives a larger dilute vacancy limit (FORMULA ) FORMULA  as shown by Marrocchelli et al..
+Therefore, calculated values of FORMULA  are not easy to compare with experiment within large ranges of FORMULA  and FORMULA .
+The discrepancy between DFT and the experiment
+could be explained by disorder and entropy effects leading to larger
+high-temperature equilibrium volumes {{cite:9f151ba8-b1a5-4213-b109-8692a8c94ea8}}.
+The electronic entropy will increase the
+lattice constant of oxygen-deficient ceria, since the
+DOS near the Fermi level is higher at large volume and large FORMULA ,
+although this effect is rather weak.
+Lattice disorder is caused both by zero-point
+motion {{cite:2da573bf-30bb-4d81-95d9-7898c02faf07}} and thermal vibrations {{cite:efe71cf5-453c-4f6b-9df1-8cf959062e6a}},
+which produce a pressure given by FORMULA ,
+where the phonon frequency FORMULA  is proportional to
+FORMULA . Also the effect of spin and orbital magnetic fluctuations
+usually produce lattice expansions as shown in Ref. {{cite:9f151ba8-b1a5-4213-b109-8692a8c94ea8}}.
+The relevant temperature range for catalytic applications is rather high
+(i.e. FORMULA  FORMULA C) {{cite:b3fb4245-83af-4ea9-8158-59711d5c29e6}} and the effects
+from lattice vibrations on magnetic fluctuations
+in this range make the total entropy balance complicated.
+
+ FIGURE
+Total DOS for CeFORMULA OFORMULA  calculated from 286 FORMULA -points.
+The Fermi level is at zero.
+
+The LMTO electronic structure of CeOFORMULA 
+is found to be non-magnetic and
+insulating as shown in Fig. REF .
+The distance between the valence band
+and the Ce 4FORMULA  edge is about 1.6 eV,
+to be compared with 3 eV
+in experiments {{cite:cb388f3e-5508-418d-862c-18a7684bfca7}}, {{cite:daefb1bd-e18e-4509-9007-4e81b316b1fe}}.
+Ferromagnetism (FM) is not expected because
+of the absence of occupied Ce 4FORMULA  electrons.
+An oxygen atom has 4 valence FORMULA  electrons.
+But all 3 O-2FORMULA  bands are below FORMULA  and
+can harbor 6 electrons (2 spins in each band).
+Therefore, each removal of an O-atom
+removes 3 occupied FORMULA -bands, but since the system has
+only 4 fewer electrons, this
+means that FORMULA  will rise, and one more band will
+be occupied to account for the two additional electrons. Thus,
+an oxygen vacancy introduces partially filled Ce FORMULA  states and the FM ordering sets in because the high DOS of Ce-FORMULA  states produces a Stoner exchange splitting. The calculated moment is 0.52 FORMULA  per Ce atom in CeOFORMULA  and the FM state has a lower total energy (FORMULA ) than the non-magnetic state by 0.14 eV per formula unit. The induced moment per oxygen is negative, about 0.01 FORMULA , and the total moment per CeFORMULA OFORMULA  cell is exactly 2.0 FORMULA , or 0.50 FORMULA  per CeOFORMULA  unit. The FM state is half-metallic with no minority bands at FORMULA , and as expected from the qualitative discussion above,
+the charge transfer to the majority states is exactly 2 spin states per cell,
+see Figs. REF  and REF .
+Consequently, there also are exactly 2 more majority states than minority states
+in the calculation for the 32-site cell CeFORMULA OFORMULA ,
+which corresponds to CeOFORMULA . Here there are two types of Ce sites, the 4 closest to the O-vacancy, CeFORMULA , has each a moment of 0.33 FORMULA  and the 4 towards the interior, CeFORMULA , have 0.19 FORMULA  each {{cite:be1e7cd3-26a3-4e9b-bcab-74427450163d}}. Together with the small negative moments on the oxygen this gives
+exactly 2.0 FORMULA  per CeFORMULA OFORMULA  cell, or
+0.25 FORMULA  per CeOFORMULA  unit. In other words, the removal of one
+oxygen atom gives rise to a spin magnetic moment of FORMULA 
+in the dilute vacancy limit (FORMULA ).
+
+Excited-state properties
+Table REF  compares measured positions of
+several Kohn-Sham core energy levels with the corresponding
+calculated XAS threshold energies.
+Clearly, the total energy calculations give XAS threshold
+energies in much better agreement
+with experiments {{cite:633eca33-a49b-4ecf-8d9e-3cdc04972bd0}}, {{cite:bca93297-3d1d-4739-9133-699813649766}}, {{cite:ec32d5f4-c7d2-4092-9962-d3a5eb882c29}}
+compared to just taking the Kohn-Sham energy of the core level relative
+to FORMULA . Note that we are not looking for absolute values,
+but rather for relative differences between
+FM and non-magnetic configurations with or without vacancies.
+In particular, the value of the Ce M-edge threshold is reduced by about
+1 eV for an oxygen vacancy in the small supercell CeFORMULA OFORMULA 
+and this value is consistent with the displacements
+of the CeFORMULA OFORMULA  {{cite:bca93297-3d1d-4739-9133-699813649766}} and
+of the metallic Ce {{cite:633eca33-a49b-4ecf-8d9e-3cdc04972bd0}} threshold energies toward lower values.
+In the large super-cell, CeFORMULA OFORMULA , the Ce-3FORMULA  Kohn-Sham core levels
+differ by 0.44 eV between the two types of Ce sites.
+The threshold of oxygen K-edge position seems less affected
+by the formation of O vacancies in ceria in agreement with
+measurements performed in oxygen-deficient CeOFORMULA  nanoparticles {{cite:ec32d5f4-c7d2-4092-9962-d3a5eb882c29}}.
+
+ FIGURE
+(Color online) Total spin-polarized DOS for
+CeFORMULA OFORMULA  calculated from 286 FORMULA -points using the LSDA.
+The Fermi level is at zero.
+
+
+ FIGURE
+(Color online) Total spin-polarized DOS for
+CeFORMULA OFORMULA  calculated from 89 FORMULA -points using the LSDA.
+The Fermi level is at zero.
+
+Core level Kohn-Sham energies FORMULA 
+and the calculated threshold energies FORMULA 
+for x-ray absorption for the upper spin-orbit
+Ce-dFORMULA  state (MFORMULA -level)
+and O-1FORMULA  state (K-level), all in units of eV.
+The spin polarized potentials FORMULA  produced
+by magnetic valence (non-relativistic) electrons
+affect the position of the MFORMULA -level.
+(FORMULA  for the insulating CeFORMULA OFORMULA  is assumed to be in the middle of
+the gap of 1.54 eV.)
+The calculated Ce-3FORMULA  spin-orbit splitting is 18.82 eV.
+
+ TABLE
+
+The results for the XPS and BIS excitation energy per electron
+given in Table REF  show trends similar to those given
+in Ref. {{cite:a4a129fd-7e16-4356-8e8f-ed6893b1ebc4}} for NdFORMULA CeFORMULA CuOFORMULA .
+In particular, the relaxation corrections for defective ceria
+split the single FORMULA  peak in LSDA to an occupied
+and an unoccupied FORMULA  band.
+The former falls below and the latter lies above FORMULA .
+Our XPS calculations predict that the FORMULA  occupied peak appears at
+about 1 eV below the Fermi level while
+experimentally the position of this peak seems to be even lower.
+Typical in situ or in operando Ce 4FORMULA  and Ce 3FORMULA  x-ray photoelectron
+spectra of a ceria electrode are shown in Fig. 3a of Ref. {{cite:b3fb4245-83af-4ea9-8158-59711d5c29e6}}.
+Figure 7 of Ref. {{cite:49029616-79be-4c34-bd34-214620d2f9a8}} provides the
+spatially resolved spectral image of the Ce 4FORMULA  valence band, allowing visualization of
+regions of electrochemical activity in a
+ceria electrode. In fact, the presence of CeFORMULA  species is revealed
+by the intensity of the Ce 4FORMULA  occupied peak at about 2 eV binding energy
+as already demonstrated by ex situ results {{cite:da22685b-d9f8-4999-9ab7-f009324d2ef8}}.
+The Ce 3FORMULA  XPS core-level spectra display
+different final-state populations of 4FORMULA ,
+which lead to the peak splitting shown
+in Fig. 3b of Ref. {{cite:b3fb4245-83af-4ea9-8158-59711d5c29e6}}.
+The final state effects lead to
+an upward shift of the lowest binding Ce-3FORMULA 
+peak attributed to the CeFORMULA  state
+[see also Ce 3FORMULA  XPS spectra in Fig.1 of Ref. {{cite:da22685b-d9f8-4999-9ab7-f009324d2ef8}}],
+which is consistent with the shift of the calculated
+Ce 3FORMULA  XAS threshold {{cite:13962f6f-87b6-477c-87e4-d2c793aa7535}} given in Table REF .
+For the smaller unit cell, CeFORMULA OFORMULA , where all the Ce atoms are equivalent,
+we find that the occupied FORMULA  band shifts only by FORMULA  eV,
+indicating that the degree of localization of the FORMULA  orbital
+plays an important role in the value of the energy shift.
+If we take the atomic positions relaxed by VASP,
+the energy shift becomes FORMULA  eV.
+Therefore, the correction due to atomic relaxation is of the order of FORMULA  eV.
+Calculations were also made for the large cell, CeFORMULA OFORMULA , where
+both CeFORMULA  and CeFORMULA  give the same position for the FORMULA  occupied peak
+at about 1 eV below FORMULA  {{cite:26f0ddcc-d76a-4a56-8678-cf904c83eff0}}.
+This is consistent with the observation that
+the Ce 4FORMULA  binding energy does not change much with
+the vacancy concentration, but that different contributions from different sites
+lead to some broadening. Therefore, the excess electrons left behind by the removal of neutral oxygen atoms produce occupied FORMULA  states with practically the same 2 eV binding energy. The reason for the underestimation of the theoretical XPS relaxation is not known, but several mechanisms may be involved.
+As shown above, part of the correction is due to lattice relaxation near the vacancies. Other possible modifications of the Ce potential would result at surface sites or due to atomic vibrations. Interestingly, the calculated shift for the FORMULA  states in NdFORMULA CeFORMULA CuOFORMULA  {{cite:a4a129fd-7e16-4356-8e8f-ed6893b1ebc4}} has also been found to be about 2 eV. It is also possible that the approximation of a completely
+delocalized excited state is less appropriate for Ce at these energies.
+Calculated relaxation, FORMULA , of Ce-FORMULA  states in XPS and BIS in eV.
+
+ TABLE
+
+
+Conclusions
+We have obtained electronic structures of supercells of CeOFORMULA  within
+the framework of the DFT. The experimental equilibrium lattice constants,
+bulk moduli and magnetic moments are well reproduced by the
+generalized gradient approximation (GGA) without
+the need to introduce a large Coulomb parameter FORMULA .
+The computed value of lattice chemical expansion FORMULA  as a function of O-vacancy concentration
+is not linear for FORMULA  ranging from 0 to 1.
+Pristine CeOFORMULA  is found to be a non-magnetic insulator with
+magnetism setting in as soon as oxygens are removed from the structure.
+Excitation properties are simulated via constrained total energy calculations,
+and Ce-M and O-K edge x-ray absorption threshold energies are discussed.
+Our study shows that the way the ground state is probed by different
+spectroscopies can be modified significantly through final state effects. {{cite:a4a129fd-7e16-4356-8e8f-ed6893b1ebc4}}
+In particular, these relaxation effects yield
+a renormalization of FORMULA -levels away from the
+Fermi Level for electron excitation spectroscopies.
+Our result that FORMULA  electrons reside near the Fermi level in the ground state of oxygen
+deficient ceria is crucial for understanding catalytic
+properties of CeOFORMULA  and related materials.{{cite:87f8f089-79f5-4489-b4bf-30aef27bf0ed}}.
+We acknowledge useful discussions with Dario Marrocchelli.
+The work at Northeastern University is supported by the
+US Department of Energy (USDOE) Contract No. DE-FG02-07ER46352.
+The Advanced Light Source is supported by the Director,
+Office of Science, Office of Basic Energy Sciences,
+of the USDOE under Contract No. DE-AC02-05CH11231.
+We benefited from computer time from Northeastern
+University's Advanced Scientific Computation Center (ASCC)
+and USDOEÕs NERSC supercomputing center.
+
+Details of Constrained DFT Computations
+In the XPS final state, one whole electron is
+transferred from the ground-state to a homogeneous
+plane-wave single-particle state. We can simulate this process by creating
+a hole obtained by removing states from the local DOS (LDOS)
+over a narrow energy window FORMULA , where FORMULA  is the Fermi energy
+in the excited state and FORMULA 
+is a cut-off energy.
+The electronic density FORMULA  associated with the hole at the site FORMULA  is
+FORMULA 
+Here, FORMULA  is the self-consistent LDOS and FORMULA 
+is the radial wave function component at the site FORMULA  with angular momentum FORMULA .
+The total electron density FORMULA  for the excited state thus is
+FORMULA 
+where the last term in Eq. REF  imposes charge neutrality within
+the simulation cell of volume FORMULA .
+The charge density in the final state FORMULA  allows us to
+determine the total energy FORMULA  of the excited state.
+The electrostatic and exchange-correlation contributions
+are evaluated straightforwardly from FORMULA .
+The kinetic energy corresponding to the
+excited charge density does not involve a single energy level of the solid
+but rather a group of states and it can be calculated
+using the standard expression given by Janak {{cite:c76f0b7b-0580-4f68-82e2-8352dc809812}}, which involves
+the Kohn-Sham energy average
+FORMULA 
+In this way, the total energy FORMULA  can be obtained in terms of the Kohn-Sham
+energy average FORMULA  and the hole density FORMULA 
+exactly as in the XAS threshold energy calculations within the FORMULA 
+self-consistent-field (FORMULA SCF) method {{cite:e2c339c6-0f54-47b5-845a-7cb86fffa227}}, {{cite:28fadcea-6806-4738-9b84-960396ea17c9}}.
+Finally, the energy FORMULA  of the XPS photoelectron
+is given by {{cite:f7b14c33-cda8-4565-9ab6-3d5a29989a3a}}
+FORMULA 
+where FORMULA  is the photon energy, FORMULA  is the ground state energy,
+and FORMULA  is the Fermi level for the excited state. If KoopmansÕ theorem applies
+FORMULA 
+where the Kohn-Sham energy average
+FORMULA 
+is calculated in the ground state. The difference between
+Eq. REF  and Eq. REF 
+defines the relaxation energy FORMULA .
+DFT is expected to give a reasonable description
+of the energy difference FORMULA 
+involved in the photoemission process{{cite:fa2896a0-95e3-4bce-b2d3-e297486419d8}}.
+In order to focus on the excitation corresponding
+to a given DOS peak, in actual computations, we considered a narrow
+energy interval FORMULA  containing
+a fraction FORMULA  of an electron per site FORMULA ,
+and renormalized the result to obtain FORMULA 
+to account for a whole electron
+involved in the XPS process {{cite:26f0ddcc-d76a-4a56-8678-cf904c83eff0}}.
+We have performed test computations using a range of FORMULA  values
+and found that the relaxation energy is very insensitive to the value of FORMULA  used,
+which is also anticipated from the analysis of Ref. {{cite:26d9f802-faa4-40bf-ad26-19aae905ac0b}}.
+Note that placing the hole on only one of the sites in the unit
+cell is an approximation for removing a band electron in that it
+neglects
+the overlap of the wave function with neighboring sites.
+This however is expected to be a reasonable approximation for localized
+FORMULA -electrons of interest here. To check this point,
+we computed the excitation energy self-consistently in CeFORMULA OFORMULA 
+where we removed 1/4th of an FORMULA -electron from each of the 4 Ce atoms
+in the unit cell, i.e. a total of one electron from the unit cell.
+The value of the relaxation energy so obtained was 0.75 eV compared to 0.7 eV
+shown in Table II, which
+is within the intrinsic error of 0.05 eV in our total energy computations.

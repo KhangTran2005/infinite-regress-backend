@@ -1,0 +1,841 @@
+
+
+Jump loci in the equivariant spectral sequence
+Stefan PapadimaAlexander I. Suciu
+Jump loci in the equivariant spectral sequence
+Stefan Papadima FORMULA
+Alexander I. Suciu FORMULA
+Simion Stoilow Institute of Mathematics,
+P.O. Box 1-764,
+RO-014700 Bucharest, RomaniaStefan.Papadima@imar.ro
+Department of Mathematics,
+Northeastern University,
+Boston, MA 02115, USAa.suciu@neu.edu
+FORMULA Partially supported by the Romanian Ministry of
+National Education, CNCS-UEFISCDI, grant PNII-ID-PCE-2012-4-0156FORMULA Partially supported by NSF grant DMS–1010298
+and NSA grant H98230-13-1-0225October 19, 2013
+Primary
+55N25. Secondary
+14M12, 20J05, 55T99. 
+Affine algebra, maximal spectrum, homology
+jump loci, support varieties, equivariant spectral sequence,
+resonance variety, characteristic variety, Alexander invariants,
+completion.
+
+We study the homology jump loci of a chain complex over
+an affine FORMULA -algebra. When the chain complex is the first
+page of the equivariant spectral sequence associated to
+a regular abelian cover of a finite-type CW-complex, we
+relate those jump loci to the resonance varieties
+associated to the cohomology ring of the space.
+As an application, we show that vanishing resonance
+implies a certain finiteness property for the completed
+Alexander invariants of the space. We also show that,
+generically, a connected, finite-dimensional commutative
+graded algebra has vanishing resonance.
+
+Introduction
+Overview
+The study of the homology groups of abelian covers
+goes back to the 1920s, when J.W. Alexander
+introduced his eponymous knot polynomial.
+Given a knot in FORMULA , let FORMULA  be the
+universal abelian cover of its complement.
+The Alexander polynomial of the knot, then,
+is the order of FORMULA , a finitely
+generated, torsion module over the group-ring
+FORMULA .
+More generally, consider a connected, finite-type
+CW-complex FORMULA , with fundamental group FORMULA .
+The homology groups of FORMULA , with coefficients in FORMULA ab]FORMULA Hi(Xab,FORMULA XFORMULA 1FORMULA We revisit here this theory from a more general point of view.
+The key new ingredient in our approach is the equivariant
+spectral sequence from {{cite:a552b272-e0e6-460a-b421-95b0fc1132ad}}. Using techniques
+from commutative algebra, we establish a tight
+connection between the homology jump loci of the first page
+of this spectral sequence, on one hand, and the resonance
+varieties associated to the cohomology ring of the space,
+on the other hand. In turn, this connection allows us to
+prove an infinitesimal analogue of the Dwyer–Fried finiteness
+test for the completed homology groups of abelian Galois covers.
+
+The equivariant spectral sequence
+Let FORMULA  be an epimorphism from
+the fundamental group of FORMULA  to a (finitely generated)
+abelian group FORMULA , and let FORMULA  be the
+corresponding regular cover. The homology groups
+of FORMULA  with coefficients in an
+algebraically closed field FORMULA  are modules
+over the group-ring FORMULA .
+Let FORMULA  be the augmentation ideal of FORMULA . The associated
+graded ring, FORMULA , then, is a finitely generated
+FORMULA -algebra.
+As shown in {{cite:a552b272-e0e6-460a-b421-95b0fc1132ad}}, there is a spectral sequence
+that converges to the FORMULA -adic completion of FORMULA .
+The first page of this spectral sequence is a chain complex
+FORMULA , with terms the finitely generated FORMULA -modules
+FORMULA  and differentials
+that can be written in terms of the co-multiplication in FORMULA 
+and the induced homomorphism FORMULA .
+The homology jump loci of FORMULA  are the
+subsets FORMULA  of the maximal spectrum FORMULA 
+consisting of those maximal ideals FORMULA  for which the
+FORMULA -vector space FORMULA  has dimension
+at least FORMULA .
+To understand these sets in a more geometric fashion,
+consider the projection FORMULA 
+onto the maximal free-abelian quotient of FORMULA .
+Then, as we show in Lemma REF ,
+the set FORMULA  may be identified
+with FORMULA . Thus, we may view the
+sets FORMULA  as subvarieties of the
+FORMULA -vector space FORMULA .
+The above definition of homology jump loci works for arbitrary
+chain complexes FORMULA  over a finitely generated FORMULA -algebra FORMULA .
+In the case when FORMULA  is the cellular chain complex of the
+universal abelian cover FORMULA , with coefficients in FORMULA ,
+and FORMULA , the corresponding jump loci
+(also known as the characteristic varieties of FORMULA )
+are Zariski closed subsets of the character group
+FORMULA . These sets, which were
+introduced by Green and Lazarsfeld in {{cite:65ddb90f-78cf-44c7-84f9-685a97b1debd}}, are
+extremely useful in a variety of settings, see for
+instance {{cite:60a861c6-5319-4b8c-8c43-36b03538a4e8}}, {{cite:34f1e07b-3c3b-4e12-b127-8cf5e500cd70}}, {{cite:5bcb67b8-3a47-47e5-a700-a7a868e1b897}}, {{cite:31af53c0-0b84-4e61-8f43-be05cd817cf2}}, {{cite:13d7831c-e875-4d8e-99fd-d55532885d80}}.
+
+Resonance varieties
+To state our main result, we need to recall one more concept.
+Using the cohomology algebra FORMULA  as input, we define
+the resonance varieties of FORMULA  as the sets FORMULA 
+consisting of those square-zero elements FORMULA  for which
+the FORMULA -vector space FORMULA  has dimension at least FORMULA ,
+where FORMULA  is the cochain complex with terms FORMULA  and
+differentials given by left-multiplication by FORMULA . As we show
+in Corollary REF , it is enough to assume that FORMULA 
+has finite FORMULA -skeleton, in order to conclude that the sets
+FORMULA  are Zariski closed, for all FORMULA  and FORMULA .
+Furthermore, as we show in Theorem REF ,
+the resonance varieties of commutative graded algebras
+generically vanish. More precisely, if FORMULA  is a connected,
+finite-dimensional, graded FORMULA -vector space, and FORMULA 
+is the parameter space for all commutative graded algebras
+whose underlying graded vector space is FORMULA , then the
+subset of those cgas whose resonance varieties
+are trivial is a Zariski open subset of FORMULA .
+
+Resonance and the completed Alexander invariants
+We are now ready to state our main result, which relates
+the resonance varieties of a space to the finiteness properties
+of the completed homology groups of its abelian Galois covers.
+(Proofs for the two parts of this result will be given in
+Theorems REF  and REF , respectively.)
+Theorem 1.1 
+Let FORMULA  be a connected CW-complex, let FORMULA 
+be a homomorphism onto a finitely generated abelian group FORMULA ,
+and let FORMULA  be
+the homomorphism induced in cohomology by FORMULA .
+
+
+If FORMULA  is of finite type, and FORMULA  is the first page of the
+corresponding equivariant spectral sequence, then
+FORMULA ,
+for all FORMULA  and FORMULA .
+
+
+
+Suppose FORMULA  has finite FORMULA -skeleton for some FORMULA ,
+and, for each FORMULA , the
+linear subspace FORMULA  intersects the resonance variety
+FORMULA  at most at 0. Then, for each FORMULA ,
+the completion of FORMULA  with respect to the
+FORMULA -adic filtration is finite-dimensional.
+
+
+As an application, we obtain the following corollary.
+Corollary 1.2 
+If FORMULA  has finite FORMULA -skeleton, and
+all the resonance varieties FORMULA  with FORMULA 
+vanish or are empty, then the completions of the Alexander
+invariants FORMULA  are finite-dimensional FORMULA -vector
+spaces, for all FORMULA .
+
+This corollary generalizes Theorem C(2) from {{cite:5bcb67b8-3a47-47e5-a700-a7a868e1b897}},
+a result proved in that paper in the case when FORMULA  equals 1
+and the coefficient field is  FORMULA
+
+The homology jump loci of a chain complex
+In this section we introduce the support varieties and
+homology jump loci of a chain complex over a finitely
+generated FORMULA -algebra, and study some of their properties.
+Maximal spectrum and supports
+We start by reviewing some standard notions from commutative
+algebra, as they can be found, for instance, in {{cite:213c7052-e58b-47ed-845e-b59924dd5fb3}}.
+Fix a ground field FORMULA . Let FORMULA  be a commutative,
+finitely generated FORMULA -algebra (also known as an
+affine FORMULA -algebra), and let FORMULA  be the
+maximal spectrum of FORMULA . This set comes
+endowed with the Zariski topology, whereby
+a subset FORMULA  is closed if and only if there is an ideal
+FORMULA  such that FORMULA  equals
+FORMULA ,
+the ozero set of the ideal FORMULA .
+Now suppose FORMULA  is algebraically closed. Then
+FORMULA , for every maximal ideal FORMULA ,
+and we have a natural identification
+FORMULA 
+under which a maximal ideal FORMULA 
+corresponds to the FORMULA -algebra morphism
+FORMULA .
+Denote by FORMULA  the localization of the ring FORMULA 
+at the maximal ideal FORMULA . Clearly, the above morphism
+FORMULA  factors through a ring morphism
+FORMULA .
+Given an FORMULA -module FORMULA , denote by FORMULA  its localization
+at the maximal ideal FORMULA ; then FORMULA  acquires in a natural
+way the structure of an FORMULA -module. Define the support
+of FORMULA  as
+FORMULA 
+If FORMULA  is a finitely generated FORMULA -module, the
+support of FORMULA  is a Zariski closed subset of FORMULA , since
+FORMULA 
+where FORMULA  is the annihilator FORMULA .
+
+Support loci
+Let FORMULA  be a non-negatively graded chain
+complex over FORMULA ; in other words, a sequence of FORMULA -modules
+FORMULA  and FORMULA -linear maps between them,
+FORMULA 
+satisfying FORMULA . Evidently, the homology groups of
+the chain complex, FORMULA , are again FORMULA -modules.
+Definition 2.1 
+The support varieties of the FORMULA -chain complex FORMULA  are
+the supports of the exterior powers of the homology modules
+FORMULA :
+FORMULA 
+
+These subsets of FORMULA  are defined for all integers FORMULA  and all
+non-negative integers FORMULA ; they are empty if FORMULA  and FORMULA .
+Furthermore, for each FORMULA , we have a nested sequence
+FORMULA 
+It is readily checked that these sets depend
+only on the chain-homotopy equivalence class
+of the FORMULA -chain complex FORMULA .
+Now suppose FORMULA  is a chain complex of finitely
+generated FORMULA -modules. Then the sets FORMULA  are
+Zariski closed subsets of FORMULA , for all integers FORMULA 
+and FORMULA . Indeed, if FORMULA  is a finitely generated FORMULA -module,
+then FORMULA  is also finitely generated, and so are all its exterior
+powers; thus, the assertion follows from formula (REF ).
+
+Homology jump loci
+Let FORMULA  be a chain complex of FORMULA -modules as in (REF ).
+From now on, we will assume that the coefficient field FORMULA  is
+algebraically closed, to insure that the residue fields FORMULA 
+are isomorphic to FORMULA , for all FORMULA .
+Definition 2.2 
+The homology jump loci of the FORMULA -chain complex FORMULA  are
+defined as
+FORMULA 
+
+As before, these sets are defined for all integers FORMULA  and all
+non-negative integers FORMULA ; they are empty if FORMULA  and FORMULA ;
+and, for each FORMULA , they form a nested sequence
+FORMULA 
+Furthermore, the sets FORMULA  depend
+only on the chain-homotopy equivalence class
+of FORMULA . Under some mild restrictions on the chain
+complex FORMULA , its homology jump loci
+are Zariski closed subsets. The next lemma
+makes this statement
+more precise.
+Lemma 2.3 
+Suppose FORMULA  is a chain complex of free, finitely
+generated FORMULA -modules, and FORMULA  is algebraically closed.
+Then the sets FORMULA  are
+Zariski closed subsets of FORMULA , for all integers FORMULA 
+and FORMULA .
+
+By definition, a maximal ideal FORMULA 
+belongs to the set FORMULA  if and only if
+FORMULA ,
+where FORMULA  and FORMULA .
+Hence, FORMULA  is the zero-set of the ideal generated
+by all minors of size FORMULA  of the block-matrix
+FORMULA .
+As the next example indicates, the freeness assumption
+from Lemma REF  is crucial for the conclusion to hold,
+even in the presence of the finite-generation assumption.
+We refer to {{cite:fd14e796-3212-4ac4-831c-25d7d09aea15}} for other, more
+exotic examples, where both the freeness and the finite-generation
+assumptions are violated.
+Example 2.4 
+Let FORMULA  be an algebraically closed field, and
+let FORMULA . Consider the chain complex
+of (finitely-generated) FORMULA -modules
+FORMULA ,
+where FORMULA ,
+viewed as a trivial FORMULA -module, and
+FORMULA  is the FORMULA -algebra map
+given by FORMULA . It is readily verified that
+FORMULA , which, of course,
+is not a Zariski closed subset of FORMULA .
+
+
+Comparing the two sets of loci
+We are particularly interested in the sets
+FORMULA  and
+FORMULA .
+The next theorem (which, as we shall see in
+§REF , generalizes a result from {{cite:34f1e07b-3c3b-4e12-b127-8cf5e500cd70}}),
+establishes a comparison between these two types of sets.
+Theorem 2.5 
+Let FORMULA  be a finitely generated algebra over an algebraically
+closed field FORMULA , and
+let FORMULA  be a chain complex of free, finitely generated
+FORMULA -modules. Then, for all integers FORMULA ,
+FORMULA 
+
+If FORMULA , we have
+FORMULA .
+The case FORMULA  is done by induction on FORMULA , starting at FORMULA .
+Let FORMULA  be a maximal ideal in FORMULA , and let
+FORMULA  be the corresponding FORMULA -algebra morphism.
+Consider the Künneth spectral sequence associated to the
+free chain complex FORMULA  and the change-of-rings
+map FORMULA :
+FORMULA 
+First suppose FORMULA . Then,
+for each FORMULA , we have FORMULA , and so
+FORMULA , and thus FORMULA .
+Consequently, FORMULA , for all FORMULA ,
+which means that
+FORMULA .
+Now suppose FORMULA .
+We may assume FORMULA ,
+for all FORMULA , and FORMULA , for
+otherwise we'd be done, by the induction hypothesis.
+These assumptions mean that FORMULA , for FORMULA ,
+and FORMULA .
+In particular, we have FORMULA , for FORMULA , and thus
+FORMULA . Hence,
+FORMULA 
+By assumption, FORMULA  is a finitely generated FORMULA -module;
+thus, FORMULA  is also finitely generated. Hence,
+FORMULA  is a non-zero, finitely generated FORMULA -module.
+By Nakayama's Lemma, the module FORMULA 
+is also non-zero. Using (REF ), we conclude that
+FORMULA , and this completes the proof.
+Note that the freeness assumption is again crucial for this
+theorem to hold. For instance, if FORMULA  is the chain complex from
+Example REF , then FORMULA ,
+whereas FORMULA .
+
+The resonance varieties of a graded algebra
+We now turn to the resonance varieties associated to a
+commutative graded algebra, and set up a parameter
+space where these varieties generically vanish.
+Resonance varieties
+Let FORMULA  be a commutative graded algebra over a field FORMULA ,
+for short, a cga. We will assume throughout that FORMULA  is
+connected, i.e., FORMULA .
+Let FORMULA , and assume FORMULA  (this condition
+is redundant if FORMULA , by graded-commutativity
+of the multiplication in FORMULA ).
+The Aomoto complex of FORMULA  (with respect to FORMULA )
+is the cochain complex of FORMULA -vector spaces,
+FORMULA 
+with differentials given by FORMULA , for FORMULA .
+We define the resonance varieties of FORMULA  as
+FORMULA 
+It follows at once from the definition that
+FORMULA  and FORMULA  for FORMULA ,
+since FORMULA  is connected.
+Lemma 3.1 
+Suppose FORMULA  is locally finite, i.e., FORMULA , for all FORMULA .
+Then the sets FORMULA  are Zariski closed cones inside the
+affine space FORMULA .
+
+Let FORMULA ; clearly, FORMULA  is a
+Zariski closed cone in FORMULA .
+By definition, an element FORMULA  belongs to
+the set FORMULA  if and only if
+FORMULA ,
+where FORMULA .
+An argument as in Lemma REF  now shows that
+FORMULA  is a Zariski closed subset of FORMULA .
+Clearly, FORMULA  if and only if FORMULA ,
+for all FORMULA ; thus, FORMULA  is a
+cone in FORMULA .
+
+A parameter space for graded algebras
+Let
+FORMULA  be a graded FORMULA -vector
+space, with FORMULA  and FORMULA .
+Given these data, we define
+a parameter space for all commutative graded algebras
+whose underlying graded vector space is FORMULA , as follows:
+FORMULA 
+It is readily seen that FORMULA  is an affine cone in the vector space
+FORMULA 
+cut out by homogeneous quadrics (corresponding to the associativity
+conditions for a cga), and linear equations (corresponding to
+graded-commutativity conditions for a cga).
+Example 3.2 
+Suppose FORMULA . In that case, a
+commutative graded algebra
+FORMULA  corresponds to an anti-symmetric FORMULA -linear map
+FORMULA . Thus, FORMULA 
+is an affine space; in fact,
+FORMULA  if FORMULA .
+
+
+Vanishing resonance
+We are now ready to state and prove the main result of
+this section.
+Theorem 3.3 
+Let FORMULA  be a connected, finite-dimensional, graded vector space over
+an algebraically closed field FORMULA . For each FORMULA , let
+FORMULA 
+be the set of commutative graded algebras whose underlying
+graded vector space is FORMULA  and whose degree FORMULA 
+resonance varieties are trivial. Then FORMULA  is
+a Zariski open subset of FORMULA .
+
+We need to show that, for each FORMULA , the set
+FORMULA 
+is Zariski closed.
+To that end, consider the set
+FORMULA 
+A look at the proof of Lemma REF 
+shows that this set is defined by bi-homogeneous
+equations. In particular, the same equations define a
+Zariski closed subset FORMULA  inside FORMULA .
+Now consider the first-coordinate projection map
+FORMULA . Since FORMULA 
+is a complete variety, FORMULA  is a closed
+map. On the other hand, FORMULA ,
+and this completes the proof.
+Remark 3.4 
+In {{cite:57119c01-ee3d-4e44-a9fb-b58501ba091e}}, we study a related question, albeit from
+a different point of view. Namely, we consider all connected,
+finite-dimensional cgas FORMULA  over the field FORMULA A=A1 A2FORMULA A1FORMULA (A1A1A2)FORMULA {A R11(A){0}} FORMULA
+The characteristic and resonance varieties of a CW-complex
+In this section, we present a topological context in which the
+support varieties, homology jump loci, and resonance varieties
+arise, and reduce their computation to the case of finite CW-complexes.
+Homology with twisted coefficients
+Let FORMULA  be a connected CW-complex.
+Without loss of generality, we may assume FORMULA  has a single
+0-cell, call it FORMULA . Let FORMULA  be the fundamental
+group of FORMULA , based at FORMULA .
+Let FORMULA  be the universal cover of our CW-complex.
+The cell structure on FORMULA  lifts to a cell structure on FORMULA .
+Fixing a lift FORMULA  identifies
+the fundamental group of FORMULA  with the
+group of deck transformations of FORMULA , which
+permute the cells. Therefore, we may view the
+cellular cell complex FORMULA ,
+with differential FORMULA , as a chain complex
+of free left modules over the group ring FORMULA .
+Given a right FORMULA -module FORMULA , consider the chain complex
+FORMULA ,
+with differential FORMULA .
+The homology groups of FORMULA  with coefficients
+in FORMULA  are then defined as FORMULA .
+Noteworthy is the following situation.
+Let FORMULA  be the universal abelian cover of FORMULA ,
+with group of deck transformations FORMULA .
+The cellular chain complex FORMULA  is
+a chain complex of free modules over the commutative
+ring FORMULA . The homology groups
+FORMULA 
+are FORMULA -modules, called the
+Alexander invariants of FORMULA .
+
+Homology jump loci
+Fix a field FORMULA , and let FORMULA  be the group
+of characters of FORMULA , with values in the multiplicative group of
+units of FORMULA . Since FORMULA  is an abelian group, every
+character factors through the abelianization FORMULA , and so
+we may identify FORMULA  with FORMULA .
+Given a homomorphism
+FORMULA , let FORMULA  be the rank 1
+local system on FORMULA  defined by FORMULA , and let FORMULA 
+be the resulting twisted homology groups.
+There are three types of (co)homology jumping loci traditionally
+associated to a CW-complex FORMULA  as above. First, the
+characteristic varieties of FORMULA  (with coefficients in FORMULA )
+are the sets
+FORMULA 
+Second, the Alexander varieties of FORMULA  (with coefficients
+in FORMULA ) are the supports of the exterior powers of the
+Alexander invariants of FORMULA ,
+FORMULA 
+And finally, the resonance varieties of FORMULA  (with coefficients
+in FORMULA ) are the jumping loci associated to the cohomology
+algebra FORMULA ,
+FORMULA 
+In absolute generality, there is not much structure on these sets.
+To remedy this situation, we need to impose some finiteness
+restrictions on FORMULA  in order to be able to say more about its jump loci.
+To start with, let us assume that FORMULA  has finite 1-skeleton,
+and FORMULA  is algebraically closed. Then the fundamental group
+FORMULA  is finitely generated, and the character group
+FORMULA  is an affine algebraic group, with coordinate
+ring the group algebra of the abelianization, FORMULA .
+Every character FORMULA  extends
+FORMULA -linearly to a ring morphism, FORMULA ,
+and thus gives rise to a maximal ideal FORMULA  of FORMULA .
+Conversely, since FORMULA  is algebraically closed, each maximal
+ideal FORMULA  determines a character
+FORMULA . Thus,
+FORMULA 
+Let FORMULA  be the equivariant
+chain complex of the universal abelian cover, with coefficients in FORMULA .
+It is clear from the definitions that
+FORMULA  and
+FORMULA .
+Now suppose that FORMULA  has finite FORMULA -skeleton,
+for some FORMULA . Then, for each FORMULA  and FORMULA ,
+the sets FORMULA  and FORMULA 
+are Zariski closed subsets of the character group
+FORMULA , either by definition, for the former,
+or by Lemma REF , for the latter. Likewise,
+the sets FORMULA  are Zariski closed subsets
+of the affine space FORMULA , by Lemma REF .
+In fact, as we shall see next, these statements also hold for FORMULA .
+
+Reducing to the finite-dimensional case
+For the purpose of computing resonance varieties or
+homology with certain twisted coefficients, in the
+finiteness range of FORMULA , the following proposition allows
+us to replace FORMULA  by a finite CW-complex.
+Proposition 4.1 
+Let FORMULA  be a connected CW-complex with finite FORMULA -skeleton,
+for some FORMULA . There exists then a finite CW-complex FORMULA 
+of dimension at most FORMULA , with FORMULA , and a map
+FORMULA  such that the following hold.
+
+ The induced homomorphism,
+FORMULA , is an isomorphism.
+
+ For every commutative ring FORMULA ,
+and for every homomorphism FORMULA ,
+the induced homomorphism,
+FORMULA ,
+is an FORMULA -module isomorphism, for all FORMULA .
+
+ The isomorphism FORMULA 
+restricts to isomorphisms FORMULA ,
+for all FORMULA .
+
+ The isomorphism FORMULA 
+restricts to isomorphisms FORMULA ,
+for all FORMULA .
+
+ The isomorphism FORMULA 
+restricts to isomorphisms FORMULA ,
+for all FORMULA .
+
+
+The cellular chain complex FORMULA 
+is a chain complex of free modules over the (commutative)
+Noetherian ring FORMULA . Since FORMULA  is
+finitely generated as an FORMULA -module, the FORMULA -submodule
+FORMULA  is also finitely
+generated, let's say, by the images of the FORMULA -cells
+FORMULA . Set
+FORMULA 
+Clearly, FORMULA  is a finite subcomplex of FORMULA ;
+let FORMULA  be the inclusion map.
+Consider the cup-product map,
+FORMULA .
+Passing to FORMULA -duals, we obtain the comultiplication map,
+FORMULA .
+The dual of FORMULA  may be identified with FORMULA .
+Proceeding in the same fashion with the space FORMULA , and
+comparing the resulting maps via the induced homomorphism
+FORMULA , we obtain the following
+commuting diagram:
+FORMULA 
+In general, the vertical arrow in the center of the above
+diagram is not surjective. So pick a (finite) FORMULA -basis,
+FORMULA  for FORMULA ,
+lift those homology classes back to
+FORMULA ,
+and represent the cycles FORMULA  as FORMULA -linear
+combinations of finitely many FORMULA -cells of FORMULA , say,
+FORMULA . Then, the CW-complex
+FORMULA 
+is again a finite subcomplex of FORMULA ; let FORMULA 
+be the inclusion map. Redrawing diagram (REF )
+with FORMULA  replaced by FORMULA , FORMULA  by FORMULA , etc, we see
+that the middle arrow is now surjective. Hence, the
+dual map, FORMULA ,
+is injective.
+Clearly, FORMULA  is an isomorphism,
+thus proving part (REF ), and showing that the maps FORMULA 
+in parts (REF )–(REF ) are also isomorphisms.
+By construction, the map FORMULA 
+from part (REF )
+is an FORMULA -isomorphism, for all FORMULA , since
+FORMULA  corresponds to a change-of-rings map, FORMULA .
+Furthermore, parts (REF ) and (REF ) are
+now a direct consequence of part (REF ).
+Also by construction, the map FORMULA 
+restricts to isomorphisms FORMULA ,
+for all FORMULA  and all FORMULA . This finishes the proof of part (REF ).
+The following corollary is now immediate.
+Corollary 4.2 
+Let FORMULA  be a connected CW-complex with finite FORMULA -skeleton,
+for some FORMULA . Then, for each FORMULA  and FORMULA ,
+the sets FORMULA  and FORMULA 
+are subvarieties of the character group
+FORMULA , while
+the sets FORMULA  are subvarieties
+of the affine space FORMULA .
+
+Using Theorem REF  and Proposition REF ,
+we obtain the following result, which recovers Corollary 3.7
+from {{cite:34f1e07b-3c3b-4e12-b127-8cf5e500cd70}}.
+Corollary 4.3 
+Let FORMULA  be a connected CW-complex with finite FORMULA -skeleton,
+for some FORMULA . Then, for all integers FORMULA ,
+FORMULA 
+
+
+The equivariant spectral sequence
+We now relate the homology jump loci associated
+to the first page of the equivariant spectral sequence of
+a space to the resonance varieties of its cohomology
+algebra.
+The spectrum of the associated graded ring of a group ring
+Let FORMULA  be a finitely generated abelian group, and let
+FORMULA  be the group-ring over an algebraically closed field FORMULA .
+The powers of the augmentation ideal,
+FORMULA , define
+a descending filtration on FORMULA . The associated
+graded ring, FORMULA , is an affine FORMULA -algebra,
+whose maximal spectrum we denote by FORMULA .
+Let FORMULA  be the maximal torsion-free
+quotient of FORMULA , and let FORMULA  be the augmentation ideal
+of FORMULA . The associated graded ring,
+FORMULA , may be identified
+with the polynomial ring FORMULA , where FORMULA .
+Consequently, FORMULA  may be identified with
+the affine space FORMULA .
+The natural projection FORMULA  extends to a
+ring epimorphism FORMULA . In general, this
+morphism is not injective. For instance, if FORMULA  and
+FORMULA , then FORMULA ,
+and thus FORMULA , whereas FORMULA .
+Passing to maximal spectra, though, fixes this fat point issue.
+Lemma 5.1 
+Suppose FORMULA  is algebraically closed. Then, the
+morphism FORMULA  induces an isomorphism
+FORMULA .
+
+First suppose that FORMULA , and that the
+morphisms FORMULA  induce isomorphisms
+FORMULA , for FORMULA , 2.
+We claim that FORMULA 
+is then an isomorphism.
+To prove this claim, recall that the group-ring of a direct product of groups
+is canonically isomorphic to the tensor product of the group-rings
+of the factors. Thus, we have an isomorphism of FORMULA -algebras,
+FORMULA .
+Now let FORMULA  and FORMULA  be the respective
+augmentation ideals. A standard inductive argument shows that
+FORMULA 
+for all FORMULA . Hence, the map FORMULA 
+induces an isomorphism of graded FORMULA -algebras,
+FORMULA .
+Applying the same argument to the decomposition
+FORMULA , we obtain
+an isomorphism
+FORMULA  which fits into the commuting diagram
+on the left side of (REF ),
+FORMULA 
+Applying the functor FORMULA 
+to this diagram, we obtain the commuting diagram on the
+right side of (REF ). Now, the left-hand arrow
+in this diagram is an isomorphism, by our hypothesis.
+Thus, the right-hand arrow is also an isomorphism,
+and our claim is proved.
+Returning now to the proof of the lemma,
+it is enough to consider the case when FORMULA  is an elementary
+cyclic group. If FORMULA , the lemma is tautologically true, so
+we may assume that FORMULA , for some prime FORMULA 
+and integer FORMULA . In this case, FORMULA , and so
+FORMULA  and FORMULA .
+If FORMULA , then FORMULA 
+vanishes, and thus FORMULA . If FORMULA , then
+FORMULA , and thus FORMULA 
+where FORMULA  is given by FORMULA .
+In either case, the desired conclusion holds, and we are done.
+
+The first page of the equivariant spectral sequence
+Let FORMULA  be a connected, finite-type CW-complex,
+and fix a coefficient field FORMULA . As before, let FORMULA  be
+the cup product map in FORMULA , and let FORMULA  be the
+co-multiplication map in FORMULA .
+Next, let FORMULA  be an epimorphism from the
+fundamental group FORMULA  to an abelian group FORMULA 
+(necessarily, FORMULA  must be finitely generated). Let FORMULA  be
+the group-ring of FORMULA , and let FORMULA  be the completion
+of this ring with respect to the filtration by powers of the augmentation
+ideal. Composing the completion map FORMULA 
+with the extension of FORMULA  to group rings yields a ring morphism,
+FORMULA . Clearly, this morphism
+makes the completion FORMULA  into a module
+over FORMULA .
+Following the setup from {{cite:a552b272-e0e6-460a-b421-95b0fc1132ad}}, let
+FORMULA 
+be the first page of the equivariant spectral sequence of FORMULA 
+with coefficients in FORMULA . This is a chain complex
+of free, finitely-generated modules over the
+affine algebra FORMULA . The FORMULA -th term of this chain complex
+is
+FORMULA 
+while the FORMULA -th differential,
+FORMULA , when restricted to the generating set
+FORMULA , is the composite
+FORMULA 
+By definition, the transpose of FORMULA  is the cup-product map
+FORMULA . Thus, the transpose of FORMULA  is the composite
+FORMULA 
+
+Homology jump loci and resonance varieties
+Now assume FORMULA  is algebraically closed.
+By Lemma REF , we may identify the maximal
+spectrum FORMULA  with FORMULA , where
+recall FORMULA  is the maximal torsion-free quotient of FORMULA .
+Using this identification, we may view the homology jump loci
+FORMULA  of the chain complex FORMULA  from (REF )
+as subsets of the FORMULA -vector space FORMULA .
+The next result compares these loci with the
+resonance varieties of FORMULA , viewed as subsets
+of FORMULA .
+Theorem 5.2 
+Let FORMULA  be an epimorphism
+onto an abelian group,
+and set FORMULA .
+Let FORMULA . Then
+FORMULA 
+
+By definition, an element FORMULA 
+belongs to FORMULA  if and only if
+FORMULA  and FORMULA ,
+where recall FORMULA 
+is left-multiplication by FORMULA .
+Now let FORMULA .
+Clearly, FORMULA , and thus FORMULA .
+Let FORMULA  be the
+FORMULA -algebra morphism defined by FORMULA .
+Denote by FORMULA  the specialization of FORMULA  at FORMULA .
+Using sequence (REF ), we find that
+FORMULA 
+Therefore,
+FORMULA 
+
+and this completes the proof.
+Remark 5.3 
+Noteworthy is the situation when FORMULA  is torsion-free
+and FORMULA  is the abelianization map, FORMULA ,
+in which case FORMULA .
+Let FORMULA  be the first page of the corresponding spectral
+sequence. Applying Theorem REF , we may
+then identify FORMULA  with FORMULA .
+
+Remark 5.4 
+It would be interesting to find a similar interpretation for the
+homology jumping loci of the other pages in the equivariant
+spectral sequence. Such an interpretation would likely
+involve the higher-order Massey products in FORMULA .
+
+
+Jump loci and finiteness properties
+In this section, we relate the vanishing of the resonance
+varieties of a space to the finiteness properties of its
+completed Alexander-type invariants. First, we need
+to recall a well-known fact from commutative algebra.
+For the reader's convenience, we give a sketch of a proof
+(see also {{cite:13d7831c-e875-4d8e-99fd-d55532885d80}}).
+Lemma 6.1 
+Let FORMULA  be an algebraically closed field, and
+let FORMULA  be a finitely generated module over an affine
+FORMULA -algebra FORMULA . Then:
+FORMULA 
+
+The module FORMULA  is finite-dimensional over FORMULA 
+if and only if FORMULA  has finite length. This condition
+is equivalent to FORMULA  having 0 Krull
+dimension, i.e., FORMULA . In turn, this
+means that the support of FORMULA  is 0-dimensional,
+i.e., FORMULA  is finite.
+Now let FORMULA  be a connected CW-complex
+with finite FORMULA -skeleton, for some FORMULA .
+Given an epimorphism FORMULA  from
+FORMULA  to a (finitely generated) abelian
+group FORMULA , let FORMULA  be the
+projection onto the maximal free-abelian quotient of FORMULA ,
+and set FORMULA .
+Let FORMULA  be the group-ring of FORMULA , with coefficients in an
+algebraically closed field FORMULA , let FORMULA  be its augmentation
+ideal, and let FORMULA  be the FORMULA -adic completion
+of FORMULA . As shown in Lemma REF , the associated
+graded ring FORMULA  is an affine FORMULA -algebra,
+whose maximal spectrum FORMULA  may be identified
+with FORMULA .
+Theorem 6.2 
+Let FORMULA  be the Galois cover associated to an
+epimorphism FORMULA , and let FORMULA 
+be the FORMULA -adic completion of the FORMULA -module
+FORMULA . Then
+FORMULA 
+
+By Proposition REF , we may assume FORMULA  is
+a finite complex.
+We use the equivariant spectral sequence FORMULA 
+associated to the Galois cover FORMULA  corresponding to
+the epimorphism FORMULA , with coefficients given by
+the ring morphism FORMULA .
+The first page of the spectral sequence is FORMULA ,
+a chain complex of free, finitely generated FORMULA -modules,
+with FORMULA . We then have:
+FORMULA 
+Using our assumption and the injectivity of FORMULA ,
+we conclude that the support of FORMULA 
+is the set FORMULA . Hence, by Lemma REF ,
+the FORMULA -vector space FORMULA  is
+finite-dimensional. It follows that FORMULA 
+is also finite-dimensional.
+On the other hand, as shown in {{cite:a552b272-e0e6-460a-b421-95b0fc1132ad}}, the equivariant
+spectral sequence converges to FORMULA ,
+and the spectral sequence filtration on the limit is separated.
+The desired conclusion readily follows.
+Corollary 6.3 
+If FORMULA  for FORMULA , then
+FORMULA 
+for FORMULA .
+
+In the particular case when FORMULA  and FORMULA 1FORMULA XFORMULA 1FORMULA H1(Xab,FORMULA R11(X,{0}FORMULA In general, though, the converse to Corollary REF 
+does not hold. For instance, if FORMULA  is the Heisenberg
+3-dimensional nilmanifold, then the cup-product vanishes
+on FORMULA , and so FORMULA .
+On the other hand, FORMULA , and thus
+FORMULA It should also be pointed out that it is really necessary
+to take the completion of the Alexander invariant in
+Corollary REF , even when FORMULA  is formal.
+For instance, if FORMULA  is the presentation 2-complex for
+the group FORMULA 
+from {{cite:34f1e07b-3c3b-4e12-b127-8cf5e500cd70}},
+we have that FORMULA , yet
+ FORMULA
+Acknowledgments This work was started in May-June 2010, when both authors
+visited the Centro di Ricerca Matematica Ennio De Giorgi in Pisa,
+and was continued in Spring 2011, when the first author visited
+Northeastern University. The work was completed while the
+authors visited the University of Sydney, in December 2012.
+We are grateful for the support and hospitality provided,
+and we also thank Krzysztof Kurdyka and
+Laurenţiu Păunescu for helpful discussions.
+

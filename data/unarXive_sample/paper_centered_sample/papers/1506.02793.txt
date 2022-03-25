@@ -1,0 +1,530 @@
+
+
+
+An Analysis of the Weak Finite
+Element Method for Convection-Diffusion
+Equations
+Correspondence to: Tie Zhang, Department of
+Mathematics, Northeastern University,
+Shenyang, 110004, China (e-mail: ztmath@ 163.com)
+Contract grant sponsor: National Natural Science Funds of China:
+No. 11371081; and the State Key Laboratory of Synthetical
+Automation for Process Industries Fundamental Research Funds, No.
+2013ZCX02.
+Tie Zhang and Yanli Chen
+
+Department
+of Mathematics and the State Key Laboratory of Synthetical
+Automation for Process Industries, Northeastern University,
+Shenyang
+110004, China
+
+We study the weak finite element method solving
+convection-diffusion equations. A weak finite element scheme is
+presented based on a spacial variational form. We established a
+weak embedding inequality that is very useful in the weak finite
+element analysis. The optimal order error estimates are derived in
+the discrete FORMULA -norm, the FORMULA -norm and the FORMULA -norm,
+respectively. In particular, the FORMULA -superconvergence of order
+FORMULA  is given under certain condition. Finally, numerical
+examples are provided to illustrate
+our theoretical analysis.
+Keywords: weak finite element method; optimal error estimate;
+superconvergence; convection-diffusion equation.
+Introduction
+Recently, the weak
+Galerkin finite element method attracts much attention in the
+field of numerical partial differential equations
+{{cite:5841b255-1870-4382-ae86-03f36476c1f2}}, {{cite:087d0522-0ead-4a39-9711-7b6f0ecd7597}}, {{cite:842e9a3a-373b-4c87-9562-87d5ade86f72}}, {{cite:14c53a73-6774-4bcd-a6e1-91f99ef6f167}}, {{cite:48fb5840-225d-4232-8651-f4bef6865037}}, {{cite:53bd4287-a54b-4550-8f7b-4172334f7210}}, {{cite:8e68eb45-1f06-4b2b-b7a3-456c85b154c9}}, {{cite:1d0d8e36-cb09-4397-a98b-92c263082b4f}}, {{cite:8c3a9d0d-c0bc-43bc-8565-f29377fd2399}}. This method is
+presented originally by Wang and Ye for solving general elliptic problems
+in multi-dimensional domain {{cite:5841b255-1870-4382-ae86-03f36476c1f2}}. Since then, some modified
+weak Galerkin methods have also been studied, for example, see
+{{cite:1b6efb03-12e2-49a0-bcaa-6045d9db6307}}, {{cite:1bb6f6a9-8c7f-41d2-80a9-8354b0d11ee2}}, {{cite:c72d12bb-ec08-494d-8b2f-abc6c4a898db}}, {{cite:dc81d6f1-2ccd-4cd3-80b2-08dca171c49d}}. In general, a weak finite element method can be
+considered as an extension of the standard finite element method
+where classical derivatives are replaced in the variational
+equation by the weakly defined derivatives on discontinuous
+functions. The main feature of this method is that it allows the
+use of totally discontinuous finite element function and the trace
+of finite element function on element edge may be independent with
+its value in the interior of element. This feature make this
+method possess all advantages of the usual discontinuous Galerkin
+(DG) finite element method {{cite:9ffdbcd3-45f8-4e97-9411-c9323487776c}}, {{cite:4ccff9f7-ba71-42b6-bf42-a8e61cc39bd1}}, {{cite:7f447392-b89b-486f-b660-40adfea1b00f}}, and it has
+higher flexibility than the DG method. The readers are referred to
+articles {{cite:087d0522-0ead-4a39-9711-7b6f0ecd7597}}, {{cite:842e9a3a-373b-4c87-9562-87d5ade86f72}}, {{cite:4ccff9f7-ba71-42b6-bf42-a8e61cc39bd1}} for more detailed explanation of
+this method and its relation with other finite element methods.
+In this paper, we study the weak finite element method for
+convection-diffusion equations:
+FORMULA 
+where FORMULA , coefficient matrix FORMULA  and FORMULA  is a vector function.
+We first introduce the weak gradient and discrete weak gradient
+following the way in {{cite:5841b255-1870-4382-ae86-03f36476c1f2}}. Then, we consider how to
+discretize problem (REF ) by using weak finite elements. In
+order to make the weak finite element equation have a positive
+property, we present a spacial weak form for problem (REF ).
+This weak form is different from the conventional one and is very
+suitable for the weak finite element discretization. We establish
+a discrete embedding inequality on the weak finite element space
+which provides a useful tool for the weak finite element analysis.
+In analogy to the usual finite element research, we derive the
+optimal order error estimates in the discrete FORMULA -norm, the
+FORMULA -norm and the FORMULA -norm, respectively. In particular,
+for the pure elliptic problems in divergence form
+(FORMULA , FORMULA ), we obtain an FORMULA -order
+superconvergence estimate for the gradient approximation of the
+weak finite element solution, when the FORMULA -order finite
+element polynomial pair (interior and edge of element) is used.
+Both our theoretical analysis and numerical experiment show that
+this weak finite element method is a high accuracy and efficiency
+numerical method.
+This paper is organized as follows. In Section 2, we establish the
+weak finite element method for problem (REF ). In Section 3,
+some approximation functions are given and the stability of the
+weak finite element solution is analyzed. Section 4 is devoted to
+the optimal error estimate and superconvergence estimate in
+various norms. In Section 5, we discuss how to solve the weak
+finite element discrete system of equations and then provide some
+numerical examples to illustrate our theoretical analysis.
+Throughout this paper, for a real FORMULA , we adopt the notations
+FORMULA  to indicate the usual Sobolev spaces on domain
+FORMULA  equipped with the norm FORMULA  and
+semi-norm FORMULA , and if FORMULA , we set
+FORMULA , FORMULA . When
+FORMULA , we omit the index FORMULA . The notations FORMULA 
+and FORMULA  denote the inner product and norm in the space
+FORMULA , respectively. We will use letter FORMULA  to represent a
+generic positive constant, independent of the mesh size FORMULA .
+
+Problem and its weak finite element approximation
+Consider the
+convection-diffusion equations:
+FORMULA 
+where FORMULA  is a polygonal or polyhedral
+domain with boundary FORMULA , coefficient matrix
+FORMULA  is uniformly positive definite in
+FORMULA , i.e., there exists a positive constant FORMULA  such that
+FORMULA 
+We assume that FORMULA ,
+FORMULA  and FORMULA . As usual, we further assume that
+FORMULA 
+Let FORMULA  be a regular triangulation of
+domain FORMULA  so that FORMULA , where the mesh size FORMULA , FORMULA  is the
+diameter of element FORMULA .
+In order to define the weak finite element approximation to
+problem (REF ), we first need to introduce the concepts of weak
+derivative and discrete weak derivative, which are originally
+presented in {{cite:5841b255-1870-4382-ae86-03f36476c1f2}}.
+Let element FORMULA , denote the interior and boundary of FORMULA  by
+FORMULA  and FORMULA , respectively. A weak function on element
+FORMULA  refers to a function FORMULA  with FORMULA . Note that for
+a weak function FORMULA , FORMULA  may not be necessarily the
+trace of FORMULA 
+on FORMULA .
+Definition 2.1.   The weak derivative FORMULA  of a weak
+function FORMULA  with respect to variable FORMULA  is defined as a linear
+functional in the dual space FORMULA  whose action on each
+FORMULA  is given by
+FORMULA 
+where FORMULA  is the outward unit
+normal vector on FORMULA .
+Obviously, as a bounded linear functional on FORMULA ,
+FORMULA  is well defined. Moreover, for FORMULA ,
+if we consider FORMULA  as a weak function with components
+FORMULA , FORMULA , then by the Green formula,
+we have for FORMULA  that
+FORMULA 
+which implies that FORMULA  is the
+usual derivative of function FORMULA .
+According to Definition 2.1, the weak gradient FORMULA  of a
+weak function FORMULA  should be such that FORMULA 
+satisfies
+FORMULA 
+Below we introduce the discrete weak gradient which is actually
+used in our analysis.
+For any non-negative integer FORMULA , let FORMULA  be the space
+composed of all polynomials on set FORMULA  with degree no more than
+FORMULA . Introduce the discrete weak function space on  FORMULA
+FORMULA 
+Definition 2.2.   For FORMULA , the discrete weak derivative
+FORMULA  is defined as the unique solution
+of equation:
+FORMULA 
+According to Definition 2.2, for weak function FORMULA ,
+its discrete weak gradient
+FORMULA  is the unique solution of equation:
+FORMULA 
+Remark 2.1.   We here first define the (discrete) weak
+derivative, and then the (discrete) weak gradient follows
+naturally. This method of defining (discrete) weak gradient is
+slightly different from that in {{cite:5841b255-1870-4382-ae86-03f36476c1f2}}, in which the
+(discrete) weak gradient is defined solely.
+From (REF ) and (REF ), we have
+FORMULA 
+This shows that FORMULA  is a discrete approximation of
+FORMULA  in FORMULA . In particular, if FORMULA , we
+have from (REF ) and (REF ) that
+FORMULA 
+That is, FORMULA  is the FORMULA  projection of FORMULA  in
+FORMULA  if FORMULA .
+We have introduced the weak derivative (gradient) and discrete
+weak derivative (gradient), but only the discrete weak gradient
+given in (REF ) will be used throughout this paper. The others
+also should be useful in the study of numerical partial
+differential equations.
+A important property of FORMULA  can be stated as follows,
+see {{cite:5841b255-1870-4382-ae86-03f36476c1f2}}.
+Lemma 2.1.   Let FORMULA  be a weak
+function and FORMULA . Then, FORMULA  on FORMULA  if and only if
+FORMULA , that is, FORMULA  on FORMULA .
+Now, we construct the weak finite element space. Denote by
+FORMULA  the
+union of all boundary faces or edges (FORMULA ) of elements in FORMULA 
+that are not contained in FORMULA . Let FORMULA  and FORMULA  be
+two adjacent elements with the common face FORMULA , and FORMULA  and FORMULA  are the outward unit normal
+vectors on FORMULA  and FORMULA , respectively. For weak function
+defined on FORMULA , set
+FORMULA . We define
+the jump of weak function FORMULA  on FORMULA  by
+FORMULA 
+Then, weak function FORMULA  is single value on FORMULA  if and only if
+FORMULA . The weak finite element space is now defined by
+FORMULA 
+In order to define the weak finite element approximation to
+problem (REF ), we need to derive a spacial weak form for
+problem (REF ). From the differential formula
+FORMULA 
+and the Green formula, we see that a weak form for problem
+(REF ) is to find FORMULA  FORMULA 
+such that
+FORMULA 
+where FORMULA . Denote
+the discrete FORMULA  inner product and norm by
+FORMULA 
+Motivated by weak form (REF ), we define the weak finite
+element approximation of problem (REF ) by finding FORMULA  such that
+FORMULA 
+where FORMULA  is a proper approximation of function FORMULA  and the
+bilinear form
+FORMULA 
+Bilinear form FORMULA  is not based on the conventional one:
+FORMULA 
+The advantage of our bilinear form is that it always is positive
+definite on the weak function space FORMULA , and the
+conventional one is not, since the integration by parts does not
+hold on weak function space FORMULA  or FORMULA .
+Theorem 2.1.   Let FORMULA . Then, the solution of weak finite
+element equation (REF ) uniquely exists. 
+Proof.   Since equation (REF ) is essentially a linear system
+of equations, we only need to prove the uniqueness. Let FORMULA ,
+we need to prove FORMULA . Taking FORMULA  in (REF ), we
+obtain
+FORMULA 
+This implies that FORMULA  on FORMULA . Thus, from Lemma
+2.1, we know that FORMULA  is a piecewise constant on FORMULA . Since
+FORMULA  and FORMULA , so we have FORMULA .  FORMULA
+
+Projection and approximation
+In this section,
+we give some projections and approximation properties which will
+be used in next section.
+In order to balance the approximation accuracy between spaces
+FORMULA  and FORMULA  used to compute FORMULA , from now on,
+we always set the index FORMULA  in (REF )–(REF ). The other
+choice of weak finite element space can be found in
+{{cite:5841b255-1870-4382-ae86-03f36476c1f2}}, {{cite:842e9a3a-373b-4c87-9562-87d5ade86f72}}.
+For FORMULA , let FORMULA  is the local FORMULA  projection operator,
+restricted on each element FORMULA , FORMULA  such that
+FORMULA 
+By the Bramble-Hilbert lemma, it is easy to prove that (see
+{{cite:7f447392-b89b-486f-b660-40adfea1b00f}})
+FORMULA 
+We now define a projection operator FORMULA  such that
+FORMULA 
+where FORMULA  is the FORMULA  projection operator in
+space FORMULA .
+Lemma 3.1.FORMULA    Let FORMULA . Then, FORMULA  has the following
+approximation properties
+FORMULA 
+Proof.   Since FORMULA , then estimate (REF ) follows
+from (REF ). Furthermore, from (REF ) and the definition of
+FORMULA , we have
+FORMULA 
+This implies FORMULA  and estimate
+() holds, noting that FORMULA . FORMULA
+For the error analysis, we still need to introduce a special
+projection function {{cite:16fa7c47-2efc-43aa-aa0a-045dd39ade8e}}. For simplifying, we only
+consider the case of two-dimensional domain (FORMULA ).
+Let FORMULA  and FORMULA  (FORMULA ) are the edge and
+barycenter coordinate of FORMULA , respectively. For function FORMULA ,
+FORMULA . Let
+Space FORMULA  and FORMULA .
+Define the projection operator FORMULA , restricted
+on FORMULA , FORMULA  satisfies
+FORMULA 
+Some properties of projection FORMULA  had been
+discussed in {{cite:16fa7c47-2efc-43aa-aa0a-045dd39ade8e}}, we here give a more detailed analysis
+for our argument requirement.
+Lemma 3.2.   For FORMULA ,
+the projection FORMULA  uniquely exists and
+satisfies
+FORMULA 
+Furthermore, if FORMULA , then
+FORMULA 
+Proof.   We first prove the unique existence of
+FORMULA . Since the number of dimensions (noting that
+(REF ) is trivial for FORMULA ):
+FORMULA 
+so the linear system of equations (REF )FORMULA () is
+consistent. Thus, we only need to prove the uniqueness. Assume that
+FORMULA  in (REF )FORMULA (), we need to prove
+FORMULA . From (REF )–(), we have
+FORMULA  on FORMULA  and
+FORMULA 
+This implies FORMULA  on FORMULA . So there
+exists a function FORMULA  so that FORMULA  (see {{cite:685fe301-55a3-46b2-a8b2-f3c5d81c1e94}}). Since the
+tangential derivative FORMULA  on FORMULA , so FORMULA  on FORMULA .
+Let FORMULA . Then, FORMULA  and FORMULA . Taking FORMULA  in (), we obtain
+FORMULA  so that FORMULA .
+Next, we prove (REF )–(). Equation (REF ) comes
+directly from the Green formula and (REF )–(). From the
+solution representation of linear system of equations
+(REF )FORMULA (), it is easy to see that on the reference
+element FORMULA ,
+FORMULA 
+where we have used the trace inequality. Then,
+(REF ) follows from (REF ) and a scale argument between FORMULA  and FORMULA . From
+(REF ), we also obtain
+FORMULA 
+Hence, estimate () can be derived by using the
+Bramble-Hilbert lemma. FORMULA
+The following discrete embedding inequality is an analogy of the
+Poincaré inequality in FORMULA .
+Lemma 3.3.   Let FORMULA  be a polygonal or polyhedral
+domain. Then, for FORMULA , there is a positive constant FORMULA 
+independent of FORMULA  such that
+FORMULA 
+Proof.   For FORMULA , we first make a smooth domain
+FORMULA  ( if FORMULA  is convex, we may set
+FORMULA ) and extend FORMULA  to domain FORMULA  by setting
+FORMULA . Then, there exists a function
+FORMULA  such that
+FORMULA 
+Now we set FORMULA , then FORMULA  satisfies
+FORMULA 
+Hence, we have from (REF ), (REF ) and (REF ) that
+FORMULA 
+where we have used the fact that FORMULA  and
+FORMULA 
+The proof is completed. FORMULA
+A direct application of Lemma 3.3 is the stability estimate of
+weak finite element solution FORMULA .
+Lemma 3.4.   Let FORMULA  be the solution of problem
+(REF ), FORMULA  and FORMULA  the solution of problem
+(REF ) with FORMULA  and FORMULA . Then we have
+FORMULA 
+Proof.   Let FORMULA . Then, from (REF ), we see that
+FORMULA  satisfies
+FORMULA 
+Taking FORMULA  and noting that FORMULA  and
+FORMULA , we have
+FORMULA 
+Using embedding inequality (REF ) and the a priori estimate for
+elliptic problem (REF ), the proof is completed. FORMULA
+
+Error analysis
+In this section,
+we do the error analysis for the weak finite element method
+(REF ). We will see that the weak finite element method
+possesses the same (or better) convergence order as that of the
+conventional finite element method.
+In following error analysis, we always assume that the data
+FORMULA  and FORMULA  in problem (REF ) is smooth enough
+for our argument.
+Lemma 4.1.   Let FORMULA  be the solution of
+problem (REF ). Then we have
+FORMULA 
+Proof.   Let FORMULA . From Lemma 3.2
+and (REF ), we have
+FORMULA 
+Next, from equations (REF ) and (REF ), we obtain
+FORMULA 
+Together with (REF ) in which setting FORMULA 
+and FORMULA , respectively, we arrive at the conclusion.
+ FORMULA
+We first give an abstract error estimate for FORMULA  in the discrete FORMULA -norm.
+Theorem 4.1.   Let FORMULA  and FORMULA  be the solutions of problems
+(REF ) and (REF ), respectively, FORMULA  and
+FORMULA . Then, we have
+FORMULA 
+Proof.   From Lemma 4.1, we see that FORMULA  satisfies the equation
+FORMULA 
+Combining this with equation (REF ), we obtain the error
+equation
+FORMULA 
+Taking FORMULA  in (REF ) and using embedding inequality (REF ), we arrive at the conclusion of Theorem 4.1. FORMULA
+By means of Theorem 4.1, we can derive the following error
+estimates.
+Theorem 4.2.   Let FORMULA  and FORMULA  be the solutions of problems
+(REF ) and (REF ), respectively, FORMULA , and FORMULA . Then we have the optimal order error
+estimates
+FORMULA 
+In particular, for the pure elliptic problem in divergence form
+(FORMULA ) and FORMULA ,
+we have the superconvergence estimate
+FORMULA 
+Proof.   Using the approximation properties (REF )–() and
+(), we obtain
+FORMULA 
+Substituting these estimates into (REF ), we obtain
+FORMULA 
+Hence, using the triangle inequality
+FORMULA 
+and approximation property (), estimate (REF ) is derived
+for the discrete FORMULA -norm. Since
+FORMULA 
+then the FORMULA -error estimate follows from the discrete embedding
+inequality (REF ), estimates (REF ) and (REF ).
+Furthermore, if FORMULA , from Theorem 4.1, we have
+FORMULA 
+Then, the superconvergence estimate (REF ) can be derived by
+using approximation properties () and () and the
+triangle inequality. FORMULA
+Theorem 4.2 shows that the weak finite element method is a high
+accuracy numerical method, in particular, in the gradient
+approximation.
+From Theory 4.2, we see that, for FORMULA -order finite element, weak
+finite element method usually has higher accuracy than other
+finite element methods in the gradient approximation. The reason
+is that the discrete weak gradient is computed by using
+FORMULA -order polynomial. This action will add some computation
+expense, but all additional computations are implemented locally,
+in the element level, see (REF ) and Section 5.
+Below we give a superclose estimate for error FORMULA . To
+this end, we assume problem (REF ) has the FORMULA -regularity and consider the auxiliary problem: FORMULA  satisfies
+FORMULA 
+From the argument of Lemma 4.2, we know that FORMULA  satisfies
+equation:
+FORMULA 
+Theorem 4.3.   Let FORMULA  and FORMULA  be the solutions of problems
+(REF ) and (REF ), respectively, FORMULA . Then we have the following superclose estimate
+FORMULA 
+and the optimal FORMULA -error estimate
+FORMULA 
+Proof.   Taking FORMULA  in (REF ), we have
+FORMULA 
+where we have used embedding inequality (REF ),
+estimate (REF ) and the approximation properties of
+FORMULA  and FORMULA . Below we only need to
+estimate FORMULA . Using error equation (REF ), we
+have
+FORMULA 
+Since FORMULA  and FORMULA , then by using
+Green's formula and Lemma 3.2, we have
+FORMULA 
+Similarly, we obtain
+FORMULA 
+Substituting estimates FORMULA  into (REF ) and combining
+(REF ), we arrive at estimate (REF ), noting that
+FORMULA . Estimate (REF ) follows from
+(REF ) and the triangle inequality.  FORMULA
+The difference between estimates (REF ) and (REF ) is that
+for getting the FORMULA -order error estimate in the
+FORMULA -norm, the regularity requirement in (REF ) is optimal
+and lower than that in (REF ).
+In order to derive the FORMULA -error estimate, we need to
+impose the quasi-uniform condition on partition FORMULA  so that the
+finite element inverse inequality holds in FORMULA .
+Theorem 4.4.   Assume that partition FORMULA  is quasi-uniform,
+and FORMULA  and FORMULA  are the solution of problems (REF ) and
+(REF ), respectively, FORMULA . Then, we have
+FORMULA 
+Proof.   From Theorem 4.3 and the finite element inverse
+inequality, we have that
+FORMULA 
+Hence, by using the approximation property of FORMULA , we
+obtain
+FORMULA 
+The proof is completed.  FORMULA
+For two-dimensional problem FORMULA , Theorem 4.4 gives the optimal
+order error estimate in the FORMULA -norm.
+
+Numerical experiment
+In this section,
+we discuss how to solve the weak finite element equation (REF )
+and give some numerical examples to illustrate our theoretical
+analysis.
+Weak finite element linear system of equations
+In order to form the discrete linear system of equations from weak
+finite element equation (REF ), we first introduce the basis
+functions of space FORMULA . Let FORMULA  is a element and FORMULA  is an
+edge of FORMULA . Further let FORMULA  be
+the basis functions of space FORMULA ,
+FORMULA  the basis functions of
+space FORMULA  and FORMULA  be
+the basis functions of polynomial set FORMULA .
+Set the weak basis functions FORMULA  and
+FORMULA . Then, we have
+FORMULA . By definition (REF ) of discrete weak gradient, we
+see that the support set of FORMULA  is in FORMULA 
+and the support set of FORMULA  is in FORMULA . Thus, weak finite
+element equation (REF ) is equivalent to the following linear
+system of equations: FORMULA , FORMULA ,
+such that
+FORMULA 
+where FORMULA  is the restriction of FORMULA  on set FORMULA ,
+i.e., all integrals in FORMULA  are restricted on FORMULA . Equations
+(REF )–() form a linear system composed of FORMULA  equations with FORMULA  unknowns, where FORMULA  is
+the total number of elements in FORMULA .
+To solve equations (REF )–(), we need to design a solver
+to compute the discrete weak gradient FORMULA  or
+FORMULA . According to (REF ), for given
+FORMULA  (FORMULA ), FORMULA  can be computed by the following formula
+FORMULA 
+where FORMULA , FORMULA  and FORMULA  are the vectors associated with
+functions FORMULA , FORMULA  and
+FORMULA , respectively. The matrixes in
+(REF ) are as follows
+FORMULA 
+Now, linear system of equations (REF )–() can be solved
+in the following way. We first use formula (REF ) to derive the
+linear relation FORMULA . Then, by substituting FORMULA  into equations
+(REF )–(), we can obtain a linear system of equations
+that only concerns unknowns FORMULA . This linear system can be solved by using a proper linear
+solver, in which FORMULA  is computed by formula
+(REF ).
+
+Numerical example
+Let us consider problem (REF ) with the following data:
+FORMULA 
+and the source term FORMULA , domain FORMULA .
+In the numerical experiments, we first partition FORMULA  into a
+regular triangle mesh FORMULA  with mesh size FORMULA . Then, the
+refined mesh FORMULA  is obtained by connecting the midpoint of
+each edge of elements in FORMULA  by straight line. Thus, we obtain a
+mesh series FORMULA . We use the polynomial pair
+FORMULA  for space FORMULA  and set
+FORMULA  in the weak finite element discretization
+(REF ). We examine the computation error in the discrete
+FORMULA -norm, the FORMULA -norm and the FORMULA -norm, respectively.
+The numerical convergence rate is computed by using the formula
+FORMULA , where FORMULA  is the computation
+error. Table I give the numerical results. We see that the
+convergence rates are consistent with or better than the
+theoretical prediction. Then, we further examine the
+superconvergence of the weak finite element solution (see Theorem
+4.2). We take the data as in (REF ) with FORMULA  and
+FORMULA . The desired FORMULA -superconvergence is observed from the
+numerical results, see Table II. In particular, from Table I-II,
+we see that the numerical convergence rates in FORMULA -norm and
+FORMULA -norm are also superconvergent, although we have no such
+conclusion in theory.
+TABLE I   History of convergence
+
+
+ TABLE
+TABLE II   History of convergence with
+FORMULA  and
+ FORMULA
+
+
+ TABLE
+

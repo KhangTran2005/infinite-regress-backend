@@ -1,0 +1,208 @@
+
+Accuracy of a teleported trapped field state inside a single bimodal
+cavity
+Iara P. de Queirós
+Instituto de Física, Universidade Federal de Goiás, 74.001-970, Goiânia (GO), Brazil
+Simone Souza
+Departamento de Física, Universidade Federal de São Carlos,
+13565-905, São Carlos (SP), Brazil
+W. B. Cardoso
+[Corresponding author: ]wesleybcardoso@gmail.com
+Instituto de Física, Universidade Federal de Goiás, 74.001-970, Goiânia (GO), Brazil
+N.G. de Almeida
+Instituto de Física, Universidade Federal de Goiás, 74.001-970, Goiânia (GO), Brazil
+Núcleo de Pesquisas em Física, Universidade Católica de Goiás, 74.605-220, Goiânia (GO), Brazil.
+We propose a simplified scheme to teleport a superposition of coherent
+states from one mode to another of the same bimodal lossy cavity. Based on
+current experimental capabilities, we present a calculation of the fidelity  that can be achieved, demonstrating accurate teleportation if
+the mean photon number of each mode is at most FORMULA . Our scheme applies as
+well for teleportation of coherent states from one mode of a cavity to
+another mode of a second cavity, both cavities embedded in a common
+reservoir.
+42.50.Dv, 03.65.Bz
+The teleportation phenomenon {{cite:33261c49-022d-49c2-ab82-b34e0966c780}} has received increasing
+attention, and a number of protocols have been suggested for its
+implementation in various contexts, for example running waves {{cite:203005e3-0e04-4673-83ef-2a3d23537d25}}, {{cite:f92e0eb3-1fe0-4411-ad89-45cd60c157ae}}
+and cavity-QED {{cite:6e3bf9a5-985e-4531-9788-5e1466ce6f7d}}. Experimentally, teleportation has been
+demonstrated for discrete variables {{cite:7bb7ed99-182e-452f-80c1-d968f61ba651}}, {{cite:b302687e-1ca6-4915-b37d-f899509830f0}}, {{cite:8047791f-e7d5-4da9-b6dd-a5757b61ae14}}, {{cite:7ee9d183-9c19-4ebf-9a24-75a650d748a8}}, {{cite:95c76ab6-3462-469b-844a-0a1ddbb53d2e}}, and
+for a single mode of the electromagnetic field with continuous variables
+{{cite:a84e926e-ae6f-4012-aac4-3591433c3db9}}, {{cite:76587d13-0887-48ce-86e6-22362cc197ff}}. More recently, teleportation between matter and light was
+announced {{cite:f2d90bfb-f834-4fed-941a-bf8897e9379b}}, where matter and light are respectively the
+stationary and flying media.
+In the realm of cavity QED, schemes for teleportation of two-particle
+entangled atomic states {{cite:7c0dd023-745a-42a0-969e-32ccfe1f8e11}}, multiparticle entangled atomic states and
+also entangled field states inside highFORMULA  cavities {{cite:d6eafe25-867c-4348-94c3-7a6f0dd258b2}}, {{cite:03f51b25-e0ed-4762-a040-d6dd59c11904}}, {{cite:2878acac-15f6-4f50-a5f6-684d3e04a82f}}
+have been proposed. Although these foregoing schemes using highFORMULA  cavities represent advances by simplifying the procedures required to
+teleport states of cavity modes, all experiments implemented till now have
+involved only a single highFORMULA  cavity, for reasons related to the complex
+experimental challenges such as decoherence and the difficulty of
+controlling the interactions. Nonetheless, the cavity is undoubtedly an
+important scenario for testing fundamentals of quantum mechanics {{cite:91b538d1-a22b-4c85-8443-e8dc85ece7e9}} as well as for demonstrating quantum information processing
+{{cite:2df57a19-71c9-41ba-9e8a-0b814286a056}}; hence experiments involving teleportation - the
+cornerstone of universal quantum computation {{cite:177d8122-b99f-4535-9d7d-4408204110d9}} - are
+expected to be reported soon in the context of highFORMULA  cavity. Aiming at
+this goal, our group recently proposed a simplified scheme to teleport a
+superposition of zero- and one-photon state {{cite:e98e46dd-7e87-4ff3-a743-9fbeaab88228}}, which makes use
+of only a single bimodal highFORMULA  cavity, the teleportation occurring from
+one mode to another inside the highFORMULA  cavity. Pursuing this idea, here we
+propose an oversimplified scheme to teleport a trapped field state with
+continuous spectra, the “Schrödinger
+cat”-like state (SCS). The experimental setup is shown in
+Fig.1. As in ref.{{cite:e98e46dd-7e87-4ff3-a743-9fbeaab88228}}, our scheme uses only one bimodal cavity,
+supporting mode 1 and mode 2, and two two-level atoms, comprehending the
+circular states FORMULA  and FORMULA , plus Ramsey zones and selective atomic state detectors. The Hamiltonian
+including the required dispersive interaction between an atom and the
+dissipating cavity field is FORMULA , where
+FORMULA 
+Here FORMULA  FORMULA  and FORMULA  are, respectively, the creation and
+annihilation operators for the iFORMULA  cavity mode of frequency FORMULA ,
+and FORMULA  and FORMULA  are the analogous operators for the kFORMULA 
+reservoir oscillator mode, whose corresponding frequency and coupling with
+the mode FORMULA  are FORMULA  and FORMULA . The atom-field
+coupling parameter FORMULA  will always be
+adjusted to ensure FORMULA , where FORMULA  is the Rabi
+frequency, FORMULA  is the atom-field interaction time, and FORMULA  is the detuning between the
+field frequency FORMULA  and the atomic frequency FORMULA . The
+evolution outside the cavity occurs with FORMULA . It is important to
+note that the last term in Eq.(REF ) involving FORMULA  will be
+effective only with one mode at a time. Thus, while the interaction of an
+atom with mode 1 (2) of the cavity field is taking place, the relative
+phase due to dispersive interaction of this atom with mode 2 (1) of the
+cavity field will be negligible. This is true provided that the difference FORMULA  between the two modes be large enough. In addition, to simplify our
+estimation of the fidelity of the teleported SCS, we will assume that the
+atom-field coupling is turned on (off) suddenly at the instant the atom
+enters (leaves) the cavity.
+The evolution of coherent states governed by the Heisenberg equations
+corresponding to Eqs.(REF -) are given in detail in Ref. {{cite:41283bfb-f632-4d2f-b5a9-f09792bcb686}}. Here, for brevity, we collect only the main results, assuming a
+reservoir at absolute zero temperature, which is an excellent approximation{{cite:91b538d1-a22b-4c85-8443-e8dc85ece7e9}}. The results of interest for modes FORMULA  are
+FORMULA 
+where
+FORMULA 
+and
+FORMULA 
+The FORMULA  and FORMULA , FORMULA  as explained in Ref.{{cite:41283bfb-f632-4d2f-b5a9-f09792bcb686}}, are the damping rates
+and the Lamb-shifts for the two modes, obtained through the Wigner-Weisskopf
+approximation {{cite:52bae8b5-d1db-4ee0-a9bb-446f934fc219}} FORMULA ,FORMULA  and FORMULA  can be obtained from FORMULA  and FORMULA , respectively, by simply swapping FORMULA  and FORMULA ; and FORMULA  is an unimportant function when the reservoir is kept at zero
+temperature. Eqs.(REF -) can be further simplified by assuming
+the following experimental parameters, in the microwave domain. For the
+field mode damping times, FORMULA  and FORMULA , corresponding respectively to modes 1 and 2, whose frequencies obey the relation FORMULA ,
+where FORMULA  can be adjusted in the range 100 FORMULA  to 2 FORMULA 
+{{cite:952c21ec-a49c-4dc7-a852-c229bbe44e5a}}. The two-level atom must be prepared in such way that the
+frequency FORMULA  of the atomic transition FORMULA , when the atom enters the cavity, be detuned from mode 1 by FORMULA  and fulfilling the condition FORMULA , where FORMULA  is the rate of spontaneous emission and FORMULA  is the mean photon number in mode 1. This condition thus
+implies, for the detuning with mode 2, FORMULA . Experimentally, the atomic frequency can be Stark shifted using a
+time-varying electric field to detune the atomic frequency with each mode
+{{cite:952c21ec-a49c-4dc7-a852-c229bbe44e5a}} by the large amount FORMULA . As an example, let us
+consider an experiment setup prepared obeying FORMULA , FORMULA , FORMULA . Then, the interaction with mode 2
+(which we are assuming as possessing higher frequency), will be also
+dispersive, and when the atom – mode 1 interaction produces a FORMULA  pulse,
+the coherent state in mode two will evolve according to FORMULA  FORMULA , with FORMULA , which we take into account when calculating the fidelity. Further, we
+can assume the cross-damping rates FORMULA  and FORMULA  taking
+as maximum values those of each mode separately, i.e, FORMULA , FORMULA  {{cite:adc5cfcd-1cec-4507-99b1-77877889668e}}. With these assumptions and
+taking into account the dispersive interaction in Eq.(REF ), Eqs.(REF )-() are simplified as following. FORMULA .
+When the atom is out of or enters the cavity in the ground state, FORMULA  and FORMULA . When the atom is in the cavity
+in the excited state, FORMULA  and FORMULA  when the
+atom is interacting with mode 1; or FORMULA  and FORMULA  when the atom is interacting with mode 2. Here FORMULA , and therefore we have the
+important result that the damping rate for each of the two modes is simply
+the mean damping rate of the two modes.
+Ideal process. The ideal SCS to be teleported is prepared by
+injecting a coherent state FORMULA  into mode 2, assuming FORMULA  in Hamiltonian (). Then a two-level
+atom 1 is laser-excited and rotated in FORMULA  to an arbitrary
+superposition FORMULA . After that, the atom 1 crosses the cavity, having
+being velocity-selected to interact off-resonantly with mode 2 such that FORMULA , where FORMULA  is the atom-field interaction time. The atom
+1 then crosses FORMULA , undergoing a FORMULA  pulse, and is detected,
+inducing a collapse of the cavity field to the even (FORMULA ) or odd (FORMULA ) SCS, FORMULA , where FORMULA  and FORMULA  are unknown coefficients
+obeying FORMULA . The FORMULA  FORMULA  sign occurs if the atom 1 is detected in the state FORMULA  FORMULA . From now on let us suppose that the even SCS has been
+prepared.
+FIGURE 
+The procedure to teleport the SCS is as follows. Firstly, the atom 2
+crosses the Ramsey zone FORMULA , undergoing a FORMULA  pulse, as
+shown in Fig.1, being rotated to the superposition FORMULA .
+Assuming mode 1 has previously been prepared in the coherent state FORMULA , the whole state of the system is
+FORMULA 
+Next, atom 2 interacts off-resonantly with mode 1, such that FORMULA , resulting in:
+FORMULA 
+Soon after the atom 2 and mode 1 interaction, which leads to Eq.(REF ), the Stark shift is switched to a large detuned FORMULA , thus freezing the evolution corresponding to mode
+1 and, at the same time, initiating the atom 2 and mode 2 interaction.
+The result, after this interaction, is
+FORMULA 
+After crossing the bimodal cavity, atom 2 crosses the Ramsey zone RFORMULA  undergoing a FORMULA  pulse, such that Eq.(REF ) evolves
+to
+FORMULA 
+Therefore, by detecting the atom 2 and measuring the phase of the field in
+mode 2, the field state in mode 1 is projected on to one of the four
+possibilities allowed by Eq.(REF ). Assuming atom 2 being detected in
+its ground state, the phase of the field in mode 2 can be measured by
+injecting a reference field of known amplitude FORMULA  into mode 2, which
+makes the field states FORMULA  and FORMULA  in Eq.(REF ) evolve respectively to the
+states FORMULA  and FORMULA . Such states can then easily be distinguished by sending a stream of
+two-level atoms, all of them in the ground state FORMULA , to interact resonantly with mode 2 of the cavity field. Thus, if at
+least one of these atoms are detected in their excited state FORMULA , indicating the result FORMULA  in Eq.(REF ), then mode 1 is
+projected exactly on the desired state FORMULA , thus completing successfully the teleportation process.
+On the other hand, if the measurement result is always FORMULA , indicating the result FORMULA  in Eq.(REF ), a second atom
+interacting off-resonantly with mode 1 leads to FORMULA  FORMULA . For measurements revealing the states FORMULA  and FORMULA  in Eq.(REF ),
+the teleportation process cannot be completed unless additional cavities
+and/or atoms be introduced, thus overcomplicating the scheme. The
+teleportation is accomplished provided we let FORMULA , and the
+probability of success for the ideal case is then limited to FORMULA .
+Real process. In real processes, the state FORMULA  to be teleported will evolve under the influence of the
+reservoir, becoming a mixture FORMULA  after traced out the reservoir. To
+estimate losses in teleportation, we have to compute i) the known value of
+the reference field FORMULA  we have to inject in the cavity
+in order to obtain FORMULA , as remarked
+after Eq.(REF ), and ii) the fidelity FORMULA   of the teleported
+SCS. To answer question i), we have to compute the evolution FORMULA  and then to trace out mode 1 and the infinite
+modes of the reservoir, denoted by FORMULA , in order to obtain FORMULA . Again we quote the result in {{cite:41283bfb-f632-4d2f-b5a9-f09792bcb686}}: starting from the initial state FORMULA  we obtain FORMULA , where FORMULA , thus answering question i). Note that the
+remarkable result that at zero temperature a coherent state loses excitation
+coherently remains valid, even when more than one mode is considered. To
+answer question ii), we need the evolution of the teleported ideal state FORMULA  in the presence of mode 2 and the
+reservoir, i.e., we have to calculate the evolution of the
+combined state FORMULA , and, after that, to trace out mode 2
+the and reservoir. This calculation only differs from that in i) by the
+second term. The result is the mixed SCS
+FORMULA 
+where FORMULA  means Hermitian conjugate, FORMULA  , andFORMULA  is the term responsible for
+decoherence. It is important to note that while FORMULA  in step i) is the time
+spent preparing SCS in mode 2, in step ii) FORMULA  is the time after the SCS
+is teleported to mode 1. Restricting ourselves to the joint measurement
+corresponding to FORMULA , which is the only result promptly leading to
+teleportation without requiring additional unitary operations (see Eq.(REF )), in about 25% of the trials the final teleported state will be
+exactly the original SCS provided that we let FORMULA .  According to {{cite:952c21ec-a49c-4dc7-a852-c229bbe44e5a}}, the time the atom spends inside the
+cavity is FORMULA  FORMULA , while the total flight time in the experiment is
+in the FORMULA  FORMULA  range, which implies an error around 12% when, as
+usually is done, the time during which the atom interacts with the modes is
+neglected. Our calculation, however, is more realistic, since it takes into
+account the time the atom crosses the cavity.
+In Fig. 2 we present the fidelity for the teleported SCS, calculated with
+experimental parameters appropriate for present-day technology {{cite:69a3e4a0-8dbe-4376-ba8a-78e8ed562dbc}}, {{cite:2df57a19-71c9-41ba-9e8a-0b814286a056}}, {{cite:952c21ec-a49c-4dc7-a852-c229bbe44e5a}}. Although these experimental parameters
+were quoted from experiments involving orthogonally polarized modes, the
+experimental capabilities such as time-varying electric field for
+controllable Stark shift, two-level Rydberg atoms, the value of the Rabi
+frequency FORMULA , and so on are expected to work as well for non-orthogonally
+polarized modes of a same cavity. For orthogonally polarized modes, apart
+from a relative FORMULA  phase, each mode will couple with a different
+reservoir, and the dynamical fidelity for the prepared and teleported SCS in
+a given mode will depend solely on the presence of its corresponding
+reservoir, being independent of the second reservoir as well as of the
+excitation in the second mode {{cite:4e54a05a-d7f2-4529-aa0f-0baa263e8760}}. Also, our scheme applies as
+well for teleportation of SCS from one mode of a cavity to another mode of a
+second cavity, if both cavities are placed in the same reservoir. In this
+last case our scheme will work irrespective of the difference FORMULA .
+FIGURE 
+Note from Fig.2 that a successful realization of the teleportation process
+is obtained for FORMULA  ranging from FORMULA  to FORMULA . However, while for FORMULA  the fidelity remains around unity for all times, for FORMULA  the fidelity decays to around FORMULA  by the time teleportation is
+completed, reaching the lowest value FORMULA  at long times, still a
+significantly high value. For FORMULA  the fidelity of the SCS by the
+time the teleportation is concluded is around FORMULA , higher than the
+classical limit FORMULA , showing that the teleported SCS has not been
+substantially degraded. On the other hand, our result shows that
+teleportation fails for FORMULA  given current experimental
+capabilities. Note that, although we have calculated a conditional fidelity,
+i.e., the fidelity resulting from 25FORMULA  of the trials, it would be
+possible to recover, from any of the measurement results, the original SCS
+to be teleported, at the expense of introducing additional cavities and/or
+atoms.  However, this procedure would demand considerable effort, in itself
+decreasing the fidelity of the teleportation process and overcomplicating
+the present protocol.
+We thank the VPG/Vice-Reitoria de Pós-Graduação e Pesquisa-UCG
+(NGA), CAPES(SS, WBC, IPQ), and CNPq (NGA), Brazilian Agencies, for the
+partial support.

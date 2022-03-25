@@ -1,0 +1,602 @@
+
+A three dimensional Dirichlet-to-Neumann operator for water waves over topographyD. Andrade and A. NachbinSurface water waves are considered propagating over highly variable non-smooth topographies. For this three dimensional
+problem a Dirichlet-to-Neumann (DtN)
+operator is constructed reducing the numerical modeling and evolution to the two dimensional free surface. The
+corresponding Fourier-type operator is defined through a matrix decomposition. The topographic component of the
+decomposition requires special care and a Galerkin method is provided accordingly. One dimensional numerical
+simulations, along the free surface, validate the DtN formulation in the presence of a large amplitude,
+rapidly varying topography. An alternative, conformal mapping based, method is used for benchmarking. A two dimensional
+simulation in the presence of a Luneburg lens (a particular submerged mound) illustrates the accurate performance of the
+three dimensional DtN operator.
+Introduction
+Water wave dynamics in coastal regions, where surface waves are affected by depth variations, is a problem of great
+interest from the environmental point of view as well as due to its mathematical (formulation, theory and computational)
+diversity. It is a long lasting source of problems, with still many challenges.
+The problems are very complex, in particular in the presence of a bottom
+topography. Some of these problems are related to the Euler (potential theory) equations, while others to
+its reduced models, such as the weakly nonlinear, weakly dispersive Bousssinesq system.
+The topography may come into the problem
+in a geometric fashion
+as a variable boundary or, as a variable coefficient (in an algebraic form).
+Inclusion of topographic features, in either way, is a relevant physical ingredient of current research interest and has been
+addressed from the Analysis viewpoint, as well as regarding
+computational modeling and related issues.
+Non-local water wave formulations make use of the harmonic properties of the velocity potential. In incompressible and
+irrotational flows this has been know for quite some time, in particular in two dimensions. Boundary integral equations
+and complex function theory, by the Cauchy integral formula, have been widely used. The literature is abundant,
+accessible and therefore
+we will refrain from citing just a few authors.
+Nevertheless the papers cited herein are a good sources of references.
+More recently non-local formulations through the Dirichlet-to-Neumann operator
+became popular, both theoretically and numerically. The operator collapses all information onto the free surface.
+The dimension of the problem is reduced. For example, the dynamics in a three dimensional fluid body is reduced
+to computing only with information along the two dimensional free surface.
+The non-local operators here considered arise in the form of Fourier integrals:
+FORMULA 
+The Fourier operator FORMULA  acts on FORMULA , where FORMULA  is the Fourier multiplier (symbol). If the multiplier
+is a polynomial in FORMULA , then FORMULA  is a differential operator.
+Due to the presence of the topography in the present formulation, the symbol will be
+FORMULA -dependent.
+An early derivation is due to {{cite:4cd15371-dde3-4d66-a13e-ae4a3c49ecc2}}, where the author proposes a Fourier integral equation for the water wave problem.
+Milewski uses the two (linearly independent) hyperbolic functions for harmonically extending
+boundary data into the fluid domain.
+By expanding the symbol appropriately the Fourier integral, to leading order, characterizes a differential
+operator. Milewski then recovers the standard long-wave (asymptotic) equations such as the Benny-Luke, the
+Boussinesq, and the KdV equations. His models incorporate topographical effects through
+variable coefficients and forcing terms. These approximations are valid when the topographical
+variations are slowly varying with respect to the wave field.
+Recently the non-local formulation proposed by {{cite:b3a2100f-8788-44a1-8336-ce4d8ec2771f}} has called attention as an
+alternative water wave modeling. The authors
+derive a set of global relations that couple free surface equations together with Fourier components. The Fourier
+components expressed through hyperbolic functions, when expanded, given rise to differential operators defined
+as powers of the wavenumber FORMULA  in Fourier space. Hereafter the formulation proposed in
+{{cite:b3a2100f-8788-44a1-8336-ce4d8ec2771f}} will be called the AFM formulation.
+{{cite:48021416-638b-4f3e-8137-cc5337f17743}} used the AFM formulation to compute periodic traveling wave solutions.
+Their work represents one of the first steps towards the use of the AFM (non-local) equations
+in the numerical simulation of water waves.
+They studied wave stability, showing that it is possible to solve the non-local equations accurately.
+The AFM formulation has been considered in other water wave problems, as for example by
+{{cite:4a19296c-3eee-4126-91eb-26076d8c86c1}} for internal waves and by {{cite:1641e8aa-495a-4c5d-af3c-d138dd504188}} for waves with vorticity.
+{{cite:f77b46c2-7b18-449b-8bcb-5aff59b49542}} made a contribution in the context of time dependent AFM simulations,
+in the presence of a topography. Their goal was the recover the bottom profile
+from surface measurements. This task required an accurate time dependent numerical modeling.
+Long, small amplitude waves were used for the bottom reconstruction.
+The dispersion parameter FORMULA  (the ratio between wavelength FORMULA  and depth FORMULA ) was set to FORMULA 
+in most of the simulations.
+Attention was paid on the number of Fourier modes needed to reconstruct the bottom accurately.
+The smooth obstacles considered were wavy bottoms and Gaussian mounds, among others. Their amplitude
+ranged up to FORMULA  of the total depth of the fluid.
+In most cases the typical number of Fourier modes is about 12 for the bottom and around 60 for the wave.
+As discussed in detail in {{cite:f77b46c2-7b18-449b-8bcb-5aff59b49542}}, the use of a large number of Fourier modes can become an issue, in
+particular in the presence of a topography and of moderate values of FORMULA .
+A very detailed comparison between five different
+Dirichlet-to-Neumann formulations is provided by {{cite:9c367eaf-a9f2-4ebe-9a98-517334671ea0}}.
+They compare expansion methods against methods for solving the non-local equations directly.
+They focus on the two dimensional non-linear regime with a flat bottom.
+Among others they consider the AFM-method as well as their dual formulation,
+called the AFMFORMULA -method. The formulation found in {{cite:4cd15371-dde3-4d66-a13e-ae4a3c49ecc2}}, {{cite:44e30999-cb15-4958-9b51-e9c2bebf54b7}} is namely an AFMFORMULA -method.
+{{cite:9c367eaf-a9f2-4ebe-9a98-517334671ea0}} propose the use of arbitrary precision to deal with the ill-conditioned nature of the problem.
+Our formulation follows the line of {{cite:4cd15371-dde3-4d66-a13e-ae4a3c49ecc2}} (AFMFORMULA  formulation) together with a Galerkin method,
+leading to accurate results in the presence of highly variable topographies, including in three dimensions.
+Non-local equations in the presence of topography also appear in the work of {{cite:44e30999-cb15-4958-9b51-e9c2bebf54b7}}. The authors define the
+respective Fourier multiplier operators as will be briefly described.
+Having in mind their work
+from {{cite:90cb10ff-a338-4910-8c20-5cbcf4305880}}, they show that the topographical contribution is given by an extra term in the
+Fourier representation.
+For simplicity, consider the Fourier multiplier operator-notation in two dimensions, ignoring for a
+moment the time-dependence of the potential:
+FORMULA 
+where FORMULA . It is easy to see, by separation of variables, that the Fourier integral
+representation of the potential satisfies Laplace's equation in a two dimensional strip, of height FORMULA , together
+with the following boundary conditions: a
+homogeneous Neumann condition at the bottom FORMULA  and a Dirichlet condition FORMULA  at the top
+boundary FORMULA .
+In three dimensions the notation becomes FORMULA . In the presence of a
+bottom topography FORMULA  the Fourier operator has an additional term in order to account for the presence
+of the topography FORMULA . {{cite:44e30999-cb15-4958-9b51-e9c2bebf54b7}} present their ansatz by expressing the velocity potential as
+FORMULA 
+The Fourier operator FORMULA  is defined implicitly (see equation (2.23) and Appendix in {{cite:44e30999-cb15-4958-9b51-e9c2bebf54b7}}),
+through a relation which contains two, topography dependent, Fourier operators FORMULA  and FORMULA :
+FORMULA 
+In their appendix, assuming that the bottom topography is small with respect to the reference depth,
+{{cite:44e30999-cb15-4958-9b51-e9c2bebf54b7}} give a series expansion for the topographical operator.
+The authors comment, in the conclusions, that “Preliminary numerical results appear in
+{{cite:4f2253db-e2d6-4767-824b-041e6afbb3bd}}. More in-depth numerical computations constitute a substantial contribution in their own right(...)."
+{{cite:4f2253db-e2d6-4767-824b-041e6afbb3bd}} considered expansions for the wave and the bottom topography operators.
+Their model was used to simulate the shoaling of solitary waves propagating over inclined planes. High-frequency
+instabilities were reported and treated with a low-pass filter for the velocity potential and wave elevation functions.
+However it is not clear what is exactly the source of the instability.
+As reported by the authors, it could be due to the ill-possedness of the truncation process that arises
+in the wave expansion, as recently investigated by {{cite:f2601182-95d0-45dc-9f6a-38c701d93f9d}}, or it could be due to the topographic operator
+component?
+In the present work we focus on the topographic component of the Fourier operator
+which is computed numerically as a matrix decomposition,
+along the lines mentioned above. Our ansatz for the topographic component is different from that
+displayed in (REF ) and follows the simpler expression given by {{cite:4cd15371-dde3-4d66-a13e-ae4a3c49ecc2}}.
+We take into account highly variable non-smooth topographies,
+which inhibits the use of a series expansion. A physically-motivated Galerkin method
+acts only on low frequencies of the topographic component of the Dirichlet-to-Neumann
+operator, keeping only modes that can indeed interact with the bottom variations.
+The velocity potential FORMULA  and the wave elevation FORMULA  are not filtered.
+Hence with the ingredients we considered the topographic-formulation, along the lines of {{cite:4cd15371-dde3-4d66-a13e-ae4a3c49ecc2}} and {{cite:44e30999-cb15-4958-9b51-e9c2bebf54b7}},
+performed very well for a range of nontrivial problems. These include large amplitude rapidly varying topographies, as well as
+three dimensional landscapes, where the non-local formulation had not been tested before.
+Three dimensional simulations can be very time consuming and the Galerkin method played an important role.
+A recent work by {{cite:89f2fc04-7e05-498e-97df-e26967844e14}} regards the analysis and two dimensional computations with the formulation provided by {{cite:44e30999-cb15-4958-9b51-e9c2bebf54b7}}.
+Cathala takes a second order expansion in both the wave and the topographic operators.
+{{cite:89f2fc04-7e05-498e-97df-e26967844e14}} considers, in particular, the case of polygonal topographies: a submerged step that rises
+up to half the depth of the channel. He compares his result with that of {{cite:cedf415d-ddb2-4851-9962-b66adbaaa530}} and
+obtains a satisfactory comparison.
+Based on conformal mapping, Nachbin considers a Boussinesq system in the presence of a polygonal topography.
+In another recent work, {{cite:5c9c9bb6-685f-4a0d-96ce-f1621e1f4edc}} use the series expansion of {{cite:44e30999-cb15-4958-9b51-e9c2bebf54b7}} and deduce a
+Whitham-Boussinesq model with topography. The numerical modeling is two dimensional.
+Their approach simplifies the contribution of the topographic operators
+by introducing a simpler non-local equation. They show that their operator captures the right asymptotic behaviour
+for the high wavenumbers. Their numerical scheme also uses a Galerkin approximation similar to ours and is tested for
+a smooth submerged Gaussian mound.
+The references mentioned base their numerical methods on series expansions of the Dirichlet-to-Neumann operator.
+However as pointed out by {{cite:44e30999-cb15-4958-9b51-e9c2bebf54b7}}, when the topography profile is FORMULA  a Taylor expansion
+is not what one should seek.
+In summary, the technique here presented is validated
+for solving the nontrivial linear water wave problems in three dimensions. The method uses a non-local
+formulation that reduces the evolution system to a two dimensional surface. As our main
+goal, a Dirichlet-to-Neumann (DtN) operator
+is constructed in the presence of large amplitude, non-smooth
+topographies retaining, along the two dimensional surface, information from the vertical flow structure.
+A Galerkin method in Fourier space is used to make the topographic component of the DtN operator
+amenable to accurate computations.
+This article is organized as follows. In section 2 we introduce the potential theory equations and the associated
+elliptic boundary value problem for constructing the Dirichlet-to-Neumann operator over a flat bottom.
+Section 3 considers the variable-depth non-local formulation and the associated decomposition for the
+three dimensional DtN operator.
+Section 4 presents several water wave simulations in two and three dimensions.
+The conclusions are given in section 5.
+
+Governing equations
+Water wave equations
+Potential theory is the classical hydrodynamic model that describes the motion of an incompressible, irrotational flow under the action of gravity ({{cite:13b09966-0579-4ee1-82bd-f51d706a9bf7}}):
+FORMULA 
+In these equations FORMULA  denotes the horizontal variables, FORMULA  is the acceleration due to gravity, FORMULA  denotes the height of the surface wave, FORMULA  is the velocity potential of the fluid flow and finally FORMULA  denotes the
+impermeable bottom topography. We assume that FORMULA , FORMULA  and its derivatives vanish at infinity.
+The bottom of the fluid domain is described as
+FORMULA 
+where FORMULA  is a positive constant and the depth-variation function FORMULA  is bounded:
+FORMULA 
+This restriction implies that no islands nor beaches are present in the fluid domain. But it allows for high amplitude, non-smooth obstacles, as will be presented herein.
+Non-dimensional form
+It is customary to work with a non-dimensional form of the equations. This can be accomplished by replacing all the variables in equations (REF )-() with primes and making the following substitutions:
+FORMULA 
+In these new variables FORMULA  denotes a typical length-scale for both horizontal directions, FORMULA  denotes a typical depth of the fluid domain, FORMULA  denotes a typical amplitude of the wave and FORMULA  is the typical speed of long waves propagating over an ocean of constant depth FORMULA . The following dimensionless parameters arise: FORMULA  and FORMULA .
+The dimensionless equations are
+FORMULA 
+
+Linear model
+The potential theory equations have two main sources of difficulties, namely, the effects of the underwater topography and the nonlinear effects. Our objective is to study the effects due to the bottom topography. Therefore
+we keep the nonlinear effects aside and consider
+FORMULA 
+In terms of physical scales the linear dispersive system of equations is well suited for the investigation of
+small amplitude surface waves, as for instance, a tsunami that propagates offshore.
+See {{cite:efc90518-3b4b-47bf-bc58-b018f3318215}} for further details on this matter.
+Time evolution equations
+The three-dimensional linearized water wave equations can be put into an equivalent two-dimensional form,
+restricted to the free surface, by means of the Dirichlet-to-Neumann operator. We introduce the variable FORMULA 
+and denote by FORMULA  the compatible Neumann data
+regarding the respective elliptic problem. The linearized water wave equations become:
+FORMULA 
+In the next section we define the corresponding elliptic problem and show how to compute the Dirichlet-to-Neumann operator FORMULA ,
+which captures features of the vertical structure of the flow including the presence of a highly
+variable topography.
+Once the operator FORMULA  is constructed for a given bottom topography FORMULA , we proceed to solving the evolution equations (REF ) and () with a fourth order Runge-Kutta method. We will obtain accurate results with this formulation for
+three dimensional flows in the presence of
+a highly variable topography, a regime not yet explored with the DtN operator.
+
+The elliptic boundary value problem for water waves
+In this section we define the elliptic boundary value problem associated with the linear equations for gravity waves over topography. We assume that the wave dynamics takes place inside a bounded region of space.
+For the free surface we choose a sufficiently large square of sides FORMULA , that contains the region of interest. Without loss of generality we impose periodic boundary conditions at the ends of this region.
+Under these considerations, let
+FORMULA 
+be the fluid domain and consider the following elliptic boundary value problem:
+FORMULA 
+The solution to this problem determines the dimensionless velocity potential FORMULA  inside the fluid domain FORMULA . The problem is linear and the domain FORMULA  is fixed. Therefore the solution only depends on the boundary value FORMULA  at any given time FORMULA .
+Hence time will be temporarily omitted in the presentation that follows.
+Regarding the solvability of the above elliptic boundary value problem, {{cite:54aa8c0a-db17-424c-8929-3e28cfa4ec18}} proved that in the presence of a smooth bottom and appropriate decaying conditions at infinity, the problem always admits a unique smooth solution FORMULA .
+For our evolution equations a quantity of great interest is the vertical speed of the fluid (FORMULA ) along
+the linearized free surface FORMULA . This term has the information of an underlying harmonic function FORMULA , satisfying a Neumann
+condition on the variable bottom boundary.
+It is obtained through the Dirichlet-to Neumann (DtN) operator applied to the function FORMULA , which mathematically
+reduces one dimension of the problem. The respective Fourier-type DtN operator
+collapses the three dimensional dynamics onto free surface equations. We use the notation
+FORMULA 
+Flat bottom case
+In order to motivate our strategy for the constructing the variable-depth Dirichlet-to-Neumann operator,
+we first discuss the (FORMULA ) flat bottom case.
+In the flat bottom case, Fourier analysis immediately gives us an explicit formula for the solution FORMULA  of equations (REF )-():
+FORMULA 
+where FORMULA , FORMULA .
+The Fourier coefficient of the Dirichlet data FORMULA  is
+defined by
+FORMULA 
+where we have denoted the undisturbed free surface (FORMULA ) by
+FORMULA 
+Doubly periodic functions in FORMULA  have their Fourier spectrum in the set
+FORMULA 
+We denote the set of non-zero wavenumbers by
+FORMULA 
+From (REF ) we compute the vertical derivative of FORMULA  along the undisturbed free surface:
+FORMULA 
+Formula (REF ) defines the Dirichlet-to-Neumann operator for channels with a flat bottom.
+
+Variable-depth non-local formulation
+In order to study the elliptic boundary value problem (REF )-() we revisit an alternative non-local formulation of the problem which captures the effects of the bottom topography through the vertical velocity of the fluid, at the linearized free surface, FORMULA . As mentioned in the introduction, this non-local formulation was proposed in the work of {{cite:4cd15371-dde3-4d66-a13e-ae4a3c49ecc2}}, and more recently by {{cite:44e30999-cb15-4958-9b51-e9c2bebf54b7}} and {{cite:b3a2100f-8788-44a1-8336-ce4d8ec2771f}}.
+The work of {{cite:f77b46c2-7b18-449b-8bcb-5aff59b49542}} was one of the first articles in which the AFM formulation was used with
+bathymetry variations. The authors studied the possibility of reconstructing the sea-bed topography
+based on surface-wave measurements.
+Our version of the AFMFORMULA  formulation is linear and in three dimensions, as opposed to that of {{cite:f77b46c2-7b18-449b-8bcb-5aff59b49542}}
+which was nonlinear and in two dimensions. Our goal is to take one step forward by
+modeling complex (not necessarily smooth) topographies that involve large and rapid variations and, as mentioned,
+perform simulations with fully three dimensional configurations.
+This is the first time that the non-local method is used under these conditions.
+The non-local variable-depth formulation arises from the following representation formula, for the solution FORMULA  to the elliptic boundary value problem (REF )-():
+FORMULA 
+In this representation formula (REF ), the complex coefficients FORMULA  have to be determined from
+the bottom boundary condition ().
+Notice that if FORMULA  vanished for all FORMULA , then we would recover (REF ), the solution of the flat bottom case.
+Therefore FORMULA  contains information related to the geometry of the topography. We will call it the topographic coefficients.
+The impermeability boundary condition () yields the following linear relation between the
+topographic coefficients and the (given) Dirichlet data FORMULA :
+FORMULA 
+In this equation FORMULA . Equation (REF ) couples the topographic
+coefficients FORMULA  with the Dirichlet data, where the topography profile FORMULA  appears in the relation.
+Assuming that the coefficients FORMULA  have been computed by means of equation (REF ), we can use the representation formula (REF ) to compute the vertical derivative of the velocity potential at FORMULA ,
+thus characterizing the Dirichlet-to-Neumann operator acting on FORMULA :
+FORMULA 
+Notice that the presence of a non trivial topography FORMULA  yields an extra term in the Fourier representation of the operator FORMULA ,
+when we compare (REF ) with (REF ). We have still to describe how to compute the topographic coefficients
+FORMULA .
+We define the following linear operators, acting on the space of bounded sequences FORMULA  as follows: for any FORMULA ,
+FORMULA 
+By introducing these linear operators, equation (REF ) becomes
+FORMULA 
+As a consistency test we compute these operators in the flat bottom case FORMULA .
+Then for any bounded sequence of complex numbers FORMULA , FORMULA  vanishes because of the FORMULA  function in the numerator, whereas for the operator FORMULA  we have
+FORMULA 
+So in the case FORMULA , equation (REF ) simplifies to
+FORMULA 
+This is only possible if the coefficients FORMULA  vanish because of the orthogonality of the complex exponential functions. Thus the operator given in (REF ) reduces to the classical flat bottom operator FORMULA  in (REF ).
+What happens when the depth is constant (FORMULA ) but different from the reference depth?
+We show that the operator defined through expressions (REF ) and (REF ) is the DtN
+operator corresponding to the constant depth FORMULA . This gives us an idea for the vertical flow structure over
+a locally flat region.
+Assuming that FORMULA  is constant, and FORMULA  is a bounded sequence of complex numbers,
+FORMULA 
+On the other hand we have that
+FORMULA 
+Equation (REF ) now yields the following relation between the known Fourier coefficients FORMULA  and the unknown coefficients FORMULA :
+FORMULA 
+This equation determines FORMULA  uniquely in terms of FORMULA  because of the orthogonality of the basis functions. The solution is:
+FORMULA 
+Finally equation (REF ) yields the consistent result that
+FORMULA 
+From the point of view of functional analysis the linear operator FORMULA  is a Hilbert-Schmidt operator whose kernel is given by:
+FORMULA 
+Such operators are limits of finite rank operators ({{cite:efa1a01c-660e-4719-ba07-58d31edbfdb8}}) and therefore they are compact operators.
+An important result due to {{cite:44e30999-cb15-4958-9b51-e9c2bebf54b7}}, regards the solvability of equation (REF ):
+the operator FORMULA  is always invertible and thus, in principle, it is always possible to solve for the coefficients FORMULA 
+in terms of FORMULA .
+On the other hand inverting FORMULA , whose range in nearly finite dimensional, must be done with care
+in order to avoid ill-conditioned behaviour that may arise from the
+discrete versions of the problem.
+Some ill-conditioned problems, that arise from this kind of operators, have been a matter of research in recent years, particularly in the work of
+{{cite:48021416-638b-4f3e-8137-cc5337f17743}} and {{cite:f77b46c2-7b18-449b-8bcb-5aff59b49542}} through the AFM formulation.
+More recently, a very detailed numerical study was carried out by {{cite:9c367eaf-a9f2-4ebe-9a98-517334671ea0}} comparing different DtN formulations (including AFM and AFMFORMULA ).
+Under this perspective, the action of the Dirichlet-to-Neumann operator will be examined in the presence of
+highly variable topographies. In the next section, we present accurate computational results
+for unexplored regimes of the bottom topography.
+But first, we describe our pseudo-spectral numerical method, based on a (physically motivated) Galerkin approximation
+for the topographic components of the DtN operator.
+The Galerkin approximation
+We now introduce a Galerkin approximation for equation (REF ).
+We have a compact linear operator
+FORMULA 
+together with a linear problem of the form
+FORMULA 
+where FORMULA  is a continuous function of the space variable FORMULA .
+Let FORMULA  be the canonical vector. For FORMULA , let FORMULA . Let FORMULA , be the corresponding linear subspace of FORMULA . Notice that both finite dimensional vector spaces have the same dimension.
+For any sequence of complex numbers FORMULA , the action of the operator FORMULA  is given by the truncated sum:
+FORMULA 
+Although the right hand side of (REF ) defines a differentiable function, the spectral content of such function is unknown.
+If we consider momentarily the case where FORMULA , then the right hand side of (REF ) defines a band limited function. However due to variations of the bottom geometry FORMULA , the spectral content, of the otherwise band limited function, is spread over the Fourier spectrum in FORMULA .
+According to the truncated expression (REF ) define FORMULA  as the residual, for a
+given value of the Galerkin parameter. We will find conditions for the residual to be orthogonal to the subspace FORMULA .
+We first compute the inner product of the residual with one of the basic functions FORMULA .
+FORMULA 
+A necessary and sufficient condition for the orthogonality of the reminder function is that for FORMULA ,
+FORMULA 
+The right hand side of (REF ) corresponds to the Fourier coefficient of the function FORMULA , denoted by FORMULA . Then equation (REF ) yields the following square system of linear equations:
+FORMULA 
+Let FORMULA  be a solution to the system of linear equations (REF ).
+In order to compute the action of the Dirichlet-to-Neumann operator on a given input function FORMULA  we proceed as follows:
+(i) the first term in equations (REF ) is easily computed with an FFT;
+(ii) for the second term, we fix a value of the parameter FORMULA  and compute an approximate solution FORMULA 
+through system (REF ). This approximate solution is zero-padded and plugged into the second term of equation (REF ). These steps yield an approximation for the Neumann data FORMULA .
+As noted, the “flat part" of the DtN operator (REF ) is straightforward and stable numerically. We use all Fourier modes available on our mesh. In order to find the topographic coefficients
+of the DtN's Fourier decomposition (REF ) the linear system (REF )
+has to be inverted.
+The dimension of the respective subspace of interest can be kept small.
+Next we present
+a physically motivated strategy to truncate to topographic component of the DtN operator, namely keeping only the relevant modes
+that do interact with the topography. This guides our choice for the Galerkin parameter FORMULA .
+Higher (short-wave) modes which do not interact with the topography are discarded by the projection onto the lower
+dimensional subspace determined by the Galerkin method. The presence of higher modes (in a deep water
+regime) would only contribute to the ill-conditioning of system (REF ).
+A physically motivated choice for the Galerkin parameter FORMULA .
+As mentioned above, the Galerkin parameter FORMULA  plays an important role in the simulations.
+It can be chosen independently of the number of Fourier modes available on our mesh and it controls
+the size of the linear system to be inverted. Therefore it has an impact on the numerical performance of the DtN operator.
+The choice of the Galerkin parameter comes from physical properties related to the water wave problem.
+Namely related to particle trajectories underneath the surface waves.
+Lets assume momentarily that we are in the flat bottom case. The fluid particle trajectories, beneath a time harmonic wave,
+describe approximately an elliptical orbit. Let:
+FORMULA 
+be the time harmonic free surface elevation and its corresponding velocity potential.
+Then a classical result, found in {{cite:863694cf-aefb-4a87-9422-ff6a147999bb}} and {{cite:dc4e9729-8359-4b5b-b779-f7a7088f66d2}}, shows that at depth FORMULA 
+the semi-axis of the ellipse are given by:
+FORMULA 
+In order to choose the Galerkin parameter FORMULA  we set FORMULA . For a
+given tolerance FORMULA , we let FORMULA  be the smallest wavenumber such that:
+FORMULA 
+We set FORMULA .
+Particle orbits due to higher modes (FORMULA ) are very small near the topography.
+Hence these short waves do not contribute to the topographic coefficients.
+It is important to notice that our physical choice of the Galerkin parameter FORMULA  depends only on FORMULA , FORMULA , and FORMULA .
+This procedure selects the wavenumber band whose interaction with the bottom is nontrivial and uses this smaller subspace
+in the computation of the topographical contribution to the Dirichlet-to-Neumann operator. We will exhibit
+accurate simulations in the presence of highly nontrivial topographies.
+In most of our simulations the large amplitude topography reaches half the depth.
+Therefore we have chosen FORMULA  in finding FORMULA .
+The dispersion parameter is FORMULA  and our tolerance for particle motion was FORMULA .
+The corresponding value of the Galerkin parameter is FORMULA .
+For a periodic domain of (dimensionless) length equal to 10, this implies that only the first 366
+Fourier modes are needed for constructing the topographic component of the DtN operator.
+The typical mesh size considered in our simulations,
+per side of the free surface,
+ranges from FORMULA  to FORMULA . The advantage of choosing an appropriate,
+physically motivated FORMULA  is clear.
+
+The DtN operator through conformal mapping
+In the presence of a non trivial bottom geometry, the elliptic boundary value problem (REF ) - (REF ) has no closed form analytical solution.
+In two dimensions it is very efficient to define the DtN operator through the conformal mapping of the variable-depth channel.
+But this strategy does not apply in three dimensions.
+Nevertheless in order to benchmark our present method we will first compare two dimensional solutions with those
+obtained by a conformal mapping technique ({{cite:cedf415d-ddb2-4851-9962-b66adbaaa530}}) which we here briefly summarize.
+The cornerstone of the method is finding a conformal mapping from a uniform strip, in the FORMULA plane, onto the
+variable-depth fluid domain in the FORMULA plane. In the physical domain the level-curves
+FORMULA -constant and FORMULA -constant generate an orthogonal curvilinear coordinate system. In this new coordinate
+system the Laplacian remains invariant and the bottom boundary is flatten out, being a level-curve in FORMULA .
+In general the determination of the conformal mapping is a difficult task. However in the case of polygonal topographies
+this is achieved with the Schwarz-Christoffel Toolbox ({{cite:d454e5ad-c00c-4ee2-9496-4bb2d435cb1b}}, {{cite:3ef3553d-5e23-4a31-928e-e8b9551f0146}}).
+Having the conformal mapping at hand, the elliptic boundary value problem is written
+in the curvilinear coordinate system FORMULA as:
+FORMULA 
+In this setting it is very easy to compute FORMULA  by means of formula (REF ).
+We then proceed to compute FORMULA  from FORMULA  using the following formula ({{cite:cedf415d-ddb2-4851-9962-b66adbaaa530}}):
+FORMULA 
+The variable coefficient FORMULA  is defined as
+FORMULA 
+and is the square root of the Jacobian evaluated at the undisturbed free surface. Hence a smooth coefficient.
+This metric coefficient is easily computed using the Schwarz-Christoffel Toolbox as described in {{cite:3ef3553d-5e23-4a31-928e-e8b9551f0146}}.
+FIGURE 
+In order to compare both methods we start with the time independent example as given by (REF )-().
+As our Dirichlet data, we consider a Gaussian pulse located above the sloping bottom, as
+depicted at the left of figure REF . The bottom topography is not smooth.
+At the central panel of figure REF  the solution with the present nonlocal method (solid line) is in very
+good agreement with that computed through the conformal mapping method (crosses).
+At the right panel of figure REF  we perform a resolution study for the Galerkin approximations, as the parameter FORMULA  increases.
+The solid line represents the relative error between the Galerkin approximation and the solution with the conformal mapping technique.
+For example when FORMULA  the relative error is FORMULA .
+
+Water wave simulations
+We now present numerical results for the time evolution of surface water waves propagating over
+highly variable topographies.
+The time evolution has been performed with the fourth-order Runge-Kutta method.
+We use the following initial data along the free surface FORMULA :
+FORMULA 
+is the initial velocity potential. We use FORMULA  so that the pulse is approximately of unit width,
+centered at FORMULA ; the initial wave elevation is
+FORMULA 
+By FORMULA  we indicate the use of an FFT and its inverse FORMULA  accordingly.
+In the three dimensional simulations we have a plane wave with the above profile.
+Two dimensional results
+We start with two-dimensional simulations where results are known and we can further compare with the conformal mapping
+technique.
+
+Waves over a submerged structure
+We again consider a non-smooth topography, now in the form of a large submerged trapezoidal structure.
+In the conformal mapping technique the Jacobian is a
+smooth function along the free surface and therefore the corners of the submerged structure have been regularized. In the
+present method the topography comes into the formulation in its original form.
+A Gaussian pulse of unit width for FORMULA , (similar to that of figure REF ) propagates from the left (FORMULA ) towards the submerged
+structure located at FORMULA  (see inset of figure REF ).
+The conformal mapping method follows the work presented in {{cite:9e2a2be1-7d00-4e6d-b24b-92e69d3d3635}}.
+A snapshot of the wave elevation at time FORMULA  is shown in figure REF . The agreement
+between the two methods is very good, regarding both the dispersive wave profile as well as phase speed.
+The solid line depicts the solution with the present method while the crosses depict results with the conformal mapping
+technique.
+Also the two
+reflected waves (due to climbing and descending from the structure) are accordingly captured by the methods.
+For both simulations we used FORMULA  points in physical space, and we considered all the Fourier modes available in our computational grid.
+FIGURE 
+We should also mention that we found a maximum relative error of FORMULA  confirming the
+very good agreement between the two methods in this example.
+
+Periodic topographies
+In this section we study a wave moving from a region of constant depth towards a periodic patch of
+large amplitude depth variations.
+This is a problem with known mathematical results and is a good test for our DtN formulation, in particular the calculation of its topographic
+coefficients with our Galerkin approach.
+We consider mean-zero periodic depth variations with an amplitude as high as half of the channel depth.
+The wave-topography interaction is considered in two different regimes.
+First the topographic variations are on the same scale as the wave field. Then we allow for large amplitude, rapidly varying depth variations,
+a nontrivial test for the present DtN formulation. In this regime the bottom slope is large, while the wave feels the topography in
+an averaged form, as reported by {{cite:6f398b94-8193-4c85-9571-57aa7812f25f}}.
+From now on only our numerical solution will be presented.
+Bragg resonance
+In the context of water waves Bragg resonance arises when the wavelength is twice as long as the topography's period.
+The reflection is maximum in this regime.
+This is a known problem in water waves and to provide a few references we mention the work of {{cite:647d178e-f75c-412b-80c7-88746f62c9a9}}, regarding linear waves, and
+the more recent work of {{cite:7d081c9a-9bcd-4900-8eef-a2899da547a5}}, regarding nonlinear waves.
+The setting for our simulations differs from the theoretical work of {{cite:647d178e-f75c-412b-80c7-88746f62c9a9}} and {{cite:7d081c9a-9bcd-4900-8eef-a2899da547a5}}.
+The topographies considered in the theoretical investigations had small amplitudes of order of FORMULA .
+In the present simulations the channel's depth oscillates from FORMULA  to FORMULA .
+FIGURE 
+In the figure REF  we present a snapshot of the solution at time FORMULA . A pulse propagates to the right, from the constant
+depth region located at FORMULA  (see figure REF ). As the wave propagates over the periodic patch a
+(nearly) monochromatic reflected wave
+is observed (moving to the left) with a wavelength twice as long as the topography's period.
+The observed reflected wavelength is FORMULA  (for FORMULA ), where the sinusoidal
+topography has period FORMULA .
+
+Homogenization with a rapidly varying topography
+Now we investigate rapidly varying periodic topographies. This is an important test to see if our DtN formulation
+accurately captures fine features of the topography. The topography has large slopes and we want to observe numerically
+the impact of our Galerkin approximation in handling the topographic component of the DtN operator.
+Through a multiscale analysis {{cite:6f398b94-8193-4c85-9571-57aa7812f25f}} showed that a long wave feels the fine features
+of the topography in an averaged form. Namely a homogenization effect takes place to leading order.
+The wave behaves as if propagating over an “effectively flat" region: no reflection is observed and the wave speed
+is smaller than the (dimensionless) unit speed. The periodic topography is mean-zero but the wave behaves as
+if there was an effective depth smaller than 1.
+This was found by {{cite:6f398b94-8193-4c85-9571-57aa7812f25f}} in the weakly nonlinear, weakly dispersive case.
+The same result holds in the linear case, as reported in {{cite:2deaea66-a14d-45f8-b135-11f2da451eb7}}.
+The non-local formulation has been used in theoretical investigations of this phenomena. {{cite:44e30999-cb15-4958-9b51-e9c2bebf54b7}} derived an asymptotically valid KdV equation from the non-local equations. Their KdV equation also has a smaller effective speed of propagation.
+Our simulations consider a large amplitude, rapidly varying topography.
+As before, our topography varies from FORMULA  to FORMULA  and the sinusoidal bottom oscillates 12 times per (unit) pulse width.
+FIGURE 
+In figure REF  we superimpose three simulations: (a) a flat bottom case; (b) a large amplitude, zero-mean, rapidly varying
+periodic topography; (c) a step obtained as the envelope of the rapidly varying topography. The dispersion parameter is
+taken as FORMULA . We should recall that the Galerkin parameter FORMULA  depends on FORMULA . The shallow water regime is easier to solve than a dispersive regime. The tests reported below were also done for a (nearly) traveling pulse in a very shallow
+channel, but we only report the more demanding dispersive case.
+The (green) dotted line corresponds to the flat bottom case. No reflected wave is observed. At the wavefront we
+notice the dispersive oscillatory tail.
+We focus on the speed at the wave front, which in this case is FORMULA  due the initial wave profile and
+dispersion.
+The (red) dashed-dotted line corresponds to the envelope of the bottom topography, namely a step.
+The wave front appears behind the flat bottom case because over the step the speed of propagation is smaller, about FORMULA .
+Finally the (blue) solid line is the solution in the presence of the rapidly varying topography.
+The effective speed is smaller than the flat bottom case but larger than the step. This is our numerically
+homogenized wave field.
+No reflection is produced over the rapidly varying periodic topography.
+The bottom's fine features where captured accordingly along the free surface through the
+DtN operator. The solution is free from numerical noise indicating that the Galerkin approximation for the
+topographic coefficients of the non-local operator performed well.
+The numerically observed (effective) wave speed is of FORMULA .
+In the shallow water case we clearly see a (nearly) traveling wave over the topography, with no reflected wave observed.
+The only reflected signal comes from the transition from flat to periodic.
+
+The three dimensional DtN operator: refraction by a submerged mound
+In this section we investigate the refraction of two dimensional surface waves due to bathymetric variations.
+We explore with changes in propagation direction as the wave passes over a circular submerged mound.
+We will report on a special mound, known as the Luneburg lens, where the front of an incoming plane wave
+bends in a particular fashion.
+The Luneburg lens
+We consider a particular submerged mound which, as we shall see, plays a role analogous to that of the Luneburg lens in optics.
+The mound focuses the wave energy at a determined point in space.
+Our goal is to show that the Dirichlet-to-Neumann operator, in our two-dimensional surface model, accurately captures
+the complex refraction pattern that arises due to the non-trivial change in depth.
+The underwater mound is given by
+FORMULA 
+We consider FORMULA , FORMULA  and FORMULA . The water depth above the center of the mound is about
+FORMULA .
+The numerical method used FORMULA  Fourier modes in each direction
+and the Galerkin method used FORMULA  for the topographic component of the DtN operator. The use of a smaller FORMULA  is
+due to memory restrictions. For a two dimensional surface and FORMULA  we have FORMULA  Fourier modes representing
+functions in our respective subspace for the topographic component of DtN. In order to find the contribution for
+each of these Fourier modes we need to build and invert a matrix FORMULA  by FORMULA .
+Four snapshots of the solution are presented in figure REF  and figure REF . In the top
+panel of figure REF , corresponding to time FORMULA , we see the incoming plane wave (from the left)
+already displaying some dispersive effect. We have used FORMULA .
+A short oscillatory tail is apparent behind the wave front.
+The topography is in the middle of the computational domain and no change of direction of propagation is observed.
+FIGURE 
+In the lower panel of figure REF , at time FORMULA , we see a strong deformation along the wavefront due to its interaction with the
+submerged mound. The depth in the middle is decreasing and therefore the speed at the central part of wavefront is smaller.
+FIGURE 
+At the top of figure REF  we have the solution at time FORMULA . We observe the effect of the Luneburg lens:
+it focuses the wave energy at a point behind the mound.
+At this time the largest wave amplitude is observed, exactly at the focusing point as will be confirmed below.
+The wave amplitude at the focusing point is about twice as high as that of the initial incoming wave.
+As the high amplitude peak moves down due to gravity smaller waves (of the dispersive tail) will focus behind it,
+giving rise to a circular pattern that eventually dominates the wave field, at time FORMULA  (bottom of figure REF ).
+We tested with other shapes of the submerged mound (such as a Gaussian profiles) and of course the focusing
+effect does not take place.
+In particular if the submerged Luneburg mound becomes concave, namely a circular cavity, the wavefront bending is in the other
+direction. The water becomes deeper and the wave propagates faster over the cavity.
+The submerged cavity is given by FORMULA  as in (REF ). Snapshots of the corresponding
+numerical solution are given in figure REF  and figure REF .
+At time FORMULA  we have the usual incoming plane wave as shown at the top of figure REF .
+At time FORMULA  we start to observe the refraction pattern, now with the wavefront moving forward at its central part.
+FIGURE 
+FIGURE 
+Both simulations show that our numerical method, based on the construction of a three dimensional Dircihlet-to-Neumann
+operator, accurately captured interesting refraction patterns due to lens-like bottom topographies. In the next subsection an
+approximate ray theory, for the dispersive equations, confirms the accuracy in the Luneburg lens case.
+
+Ray theory
+We aim to compare the refraction pattern of the numerical wavefield agains predictions from the
+theory of refraction for monochromatic waves.
+This is a classical subject in the geometrical optics theory for water waves. A detailed treatment can be found in {{cite:13b09966-0579-4ee1-82bd-f51d706a9bf7}}, {{cite:40b66367-74bf-4ccf-afb5-81726c114e7d}}, {{cite:8e1d277d-394b-42af-80dc-9c89887c9ba3}}. Our model is reduced to three equations
+that provide a first order approximation for the refraction pattern of a nearly monochromatic wavetrain.
+The monochromatic approximation is suitable for our purposes since we have a linear wave model.
+We consider the long wave regime, where dispersion is weak (FORMULA  is small).
+The approximation begins with the following ansatz for the velocity potential:
+FORMULA 
+The velocity potential is taken as an oscillatory wavetrain that is modulated with an amplitude function FORMULA  and
+a phase function FORMULA  .
+Both functions FORMULA  and FORMULA  are assumed to vary on a scale faster than the depth variations
+of the Luneburg lens.
+The phase FORMULA  is determined by the eikonal equation
+FORMULA 
+We have an FORMULA -dependent dispersion relation that determines the variable wavenumber FORMULA .
+It plays the role of a variable index of refraction in the eikonal equation for FORMULA .
+We use the method of characteristics to solve equation (REF ). In this context it is customary to call the
+characteristic curves FORMULA  as rays. It is also known that the wavefronts (level curves in FORMULA ) are orthogonal
+to the rays/characteristics ({{cite:0e68a4c0-6844-4017-aa36-39de901aad2d}}).
+The Cauchy problem for the eikonal equation consists in determining the phase function FORMULA  from an “initial" constant data FORMULA  along the FORMULA  axis.
+First we need to determine the function FORMULA  from the dispersion relation (). Notice that outside the circle FORMULA , FORMULA  vanishes and therefore, in that region, the solution to () is given by a constant FORMULA . Inside the circle we solve the dispersion equation numerically by means of the Newton's method.
+Once the function FORMULA  and its derivatives are determined,
+we are ready to solve the characteristic equations given by:
+FORMULA 
+In these equations we define FORMULA  along the rays, which are parametrized by FORMULA .
+The complete set of initial data must satisfy the following conditions, known as the strip conditions ({{cite:0e68a4c0-6844-4017-aa36-39de901aad2d}}):
+FORMULA 
+The characteristic system (REF ) is solved using the fourth-order Runge-Kutta method.
+In figure REF  and figure REF  the black solid lines correspond to the rays FORMULA .
+Notice how the rays bend and focus into one point inside the lens, represented by the red circle.
+This focusing property distinguishes the Luneburg lens from other types of submerged mounds.
+FIGURE 
+In figure REF  we also plot some level curves of our numerical wave solution,
+computed with the non-local DtN method. Notice that before the caustics, where the method of characteristics breaks down,
+the rays and wave fronts are nearly orthogonal, as expected.
+FIGURE 
+Later in time, in figure REF , we see the focusing of the wave field at exactly the point where the rays meet.
+The point where the rays focus through the method of characteristics is FORMULA , whereas
+the wave field, from our non-local method, attains its maximum at FORMULA .
+Our three dimensional simulations captured very well theoretical predictions.
+In the examples considered the topography had a non-trivial amplitude and our method captured remarkably well the
+predicted dynamical features.
+
+Conclusions
+We have constructed a Dirichlet-to-Neumann (DtN) operator for a three dimensional (surface) water wave problem in the
+presence of highly variable, non-smooth, topographies. The DtN operator captures the vertical structure of the flow and
+allows the three dimensional problem to be reduced to a two dimensional surface. The few existing articles on the DtN
+formulation in the presence of topography consider mostly small amplitude, smooth bottom variations. Due to memory and
+numerical stability issues, the three dimensional (3D) problem had not been explored numerically. By using a Galerkin projection
+onto the relevant modes that indeed interact with the topography, we have been able to exhibit several accurate simulations
+in the presence of non-trivial bottom profiles.
+In particular we considered a circular submerged mound that plays the role of a Luneburg lens, known in optics. The mound
+bends the wave front, through refraction, focusing the energy behind the lens. Our 3D DtN formulation captured quite accurately
+the focusing/refraction of the incident plane wave. Using an approximate ray theory for the dispersive (long) wave formulation
+we showed that the focusing point is found with excellent accuracy.
+DA gratefully acknowledges support by the PNPD/CAPES program.
+The work of AN was supported in part by CNPq under (PQ-1B) 301949/2012-2 and FAPERJ Cientistas do Nosso Estado
+project no. E-26/201.164/2014.
+The authors acknowledge fruitful discussions with Paul Milewski.

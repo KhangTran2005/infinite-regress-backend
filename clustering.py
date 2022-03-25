@@ -3,7 +3,7 @@
 # Query format: python -m clustering "[User query here]" depth (put 1 for testing)
 #---- End Must Install ----
 
-#TODO: Make the graph weighted
+#TODO: Make the graph weighted -> use the similarity between any two abstracts/title/anything
 
 import sys
 import s2

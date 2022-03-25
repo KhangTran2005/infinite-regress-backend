@@ -1,0 +1,552 @@
+
+
+A new approach to quantum measurement problem: cluster
+separability
+
+P. Hájíček
+Institute for Theoretical Physics
+University of
+Bern
+Sidlerstrasse 5, CH-3012 Bern, Switzerland
+hajicek@itp.unibe.ch
+
+March 2011
+Based on the talk at
+Fifth International Workshop DICE2010,
+Castiglioncello (Tuscany), September 13–17, 2010
+
+PACS number: 03.65.Ta
+
+The paper describes a solution to the problem of quantum
+measurement that has been proposed recently. The literal understanding of the
+basic rule of quantum mechanics on identical particles violates the cluster
+separation principle and so leads to difficulties. A proposal due to Peres of
+how such difficulties could be removed is reformulated and extended. Cluster
+separability leads to a locality requirement on observables and to the key
+notion of separation status. Separation status of a microsystem is shown to
+change in preparation and registration processes. The indispensability of
+detectors plays an important role. Changes of separation status are
+alterations of kinematic description rather than some parts of dynamical
+trajectories and so more radical than 'collapse of the wave
+function'. Textbook quantum mechanics does not provide any information of how
+separation status changes run, hence new rules must be formulated. This
+enables to satisfy the objectification requirement for registrations. To show
+how the ideas work, a simplified model of registration apparatus is
+constructed.
+Introduction
+It is well known that the state of quantum theory of
+measurement is unsatisfactory. Let us mention just the excellent book
+{{cite:320611fb-bd5c-48e3-a9c5-bf5f44a9ed2a}} and more recent clearly written critical review {{cite:8f31a7a9-6a40-44c5-b784-a8108d1c45e3}}.
+In a series of papers {{cite:7691560f-0656-4b01-907d-456327d0d7ab}}, {{cite:dfd036b8-18d9-4ce6-b959-c0064234a761}}, {{cite:f88eb839-ef91-4aa1-82e4-0fa1bc4c1a46}}, {{cite:4baa9826-5e9d-41a7-942c-c422dc87ed13}}, we looked for
+solutions of three interrelated problems of quantum mechanics, those of
+measurement, of classical properties and of realist interpretation. The three
+main ideas that we proposed were very different from what had ever been
+published and it seems that we have been successful.
+All previous attempts to formulate a realist interpretation of quantum
+mechanics failed because everybody was looking for objective properties where
+they could not be found, namely among values of observables. Quantum
+observables are not objective, see e.g. {{cite:320611fb-bd5c-48e3-a9c5-bf5f44a9ed2a}}. Their values can be
+obtained only after an interaction of a quantum system with a registration
+apparatus and so they are properties of a composite: microsystem +
+macrosystem, and not of the microsystem alone.
+Hence, we have rejected all these attempts and proposed (an extended
+discussion is given in {{cite:7691560f-0656-4b01-907d-456327d0d7ab}}, {{cite:4baa9826-5e9d-41a7-942c-c422dc87ed13}}) instead the following:
+ Basic ontological hypothesis of quantum mechanics A
+property is objective if its value is uniquely determined by a preparation
+according to the rules of standard quantum mechanics. The 'value' is the value
+of the mathematical expression that describes the property and it may be more
+general than just a real number. No registration is necessary to establish
+such a property but a correct registration cannot disprove its value; in many
+cases, registrations can confirm the value.
+
+Our interpretation of quantum mechanics differs further from Copenhagen
+interpretation by assuming the universality of quantum mechanics: all physical
+systems are quantum systems. Thus, classical systems are only a special kind
+of quantum systems. Our theory of classical properties is given in
+{{cite:dfd036b8-18d9-4ce6-b959-c0064234a761}}, {{cite:4baa9826-5e9d-41a7-942c-c422dc87ed13}}. It is based on the principle of maximum entropy rather
+than on the popular but incorrect ideas about coherent states. For example, we
+have introduced quantum states called maximum-entropy packets and shown them
+to match trajectories of classical mechanics better than Gaussian wave
+packets.
+The present paper contains only a simplified version of some selected points
+concerning the problem of measurement.
+
+Identical particles
+We have to start with the standard theory of
+identical particles. The basic rule is:
+Rule 1 Let system FORMULA  consists of FORMULA  particles of the same
+type, each particle having Hilbert space FORMULA . Then, the Hilbert
+space of FORMULA  is the symmetrised tensor product of FORMULA  copies of
+FORMULA , FORMULA , for bosons and the anti-symmetrised one,
+FORMULA , for fermions. States and observables of FORMULA  are
+then described by operators on the respective Hilbert space FORMULA 
+or FORMULA .
+
+It is known that the literal understanding of Rule 1 leads to
+problems (see e.g. {{cite:85ae0f37-3653-4c51-9f0f-b9b41b7e969e}} p 128). To explain the problems, let us
+consider two experiments.
+
+Experiment I: State FORMULA  of
+particle FORMULA  is prepared in our laboratory.
+
+Experiment II: State FORMULA  is
+prepared as in Experiment I and state FORMULA  of particle FORMULA  of the same type is prepared simultaneously in a remote laboratory.
+
+Now, our laboratory claims: the state of
+FORMULA  is FORMULA  because this has been prepared according
+to all rules of experimental art. An adherent of Rule 1 who knows about both
+laboratories will, however, claim: the true preparation is a combination of
+the two sub-preparations, one in each laboratory, and the state is
+FORMULA 
+as Rule 1 requires.
+Thus, it seems that the notions of preparation and of state are ambiguous. In
+fact, Rule 1 requires to work with the state of all particles of the
+same type in the universe and the uncertainty is much higher than that in the
+above example.
+Has this ambiguity any observable consequences? To answer this question, let
+us first consider Experiment I supplemented by a registration corresponding to
+the observable of FORMULA  with kernel FORMULA , and
+let the registration be made in our laboratory. Measurements of this kind lead
+to average value
+FORMULA 
+Second, perform Experiment II supplemented by the same
+registration in our laboratory as above. The correct observable corresponding
+to this registration, as required by Rule 1, now is:
+FORMULA 
+Such measurements lead to the average value defined by Eqs. (REF ) and (REF ):
+FORMULA 
+Expressions (REF ) and (REF ) differ by a term
+that is equal to the average of observable FORMULA  in state
+FORMULA . Hence, measurements on FORMULA  are in general disturbed by
+other identical systems.
+
+Cluster separability
+Cluster separability principle is a kind of
+locality assumption that has been fruitful in several branches of quantum
+physics, see e.g. {{cite:8c279c3c-49fb-4dab-b76b-db2e36ebae68}} and Chap. 4 of {{cite:85bdd6a8-e8e1-433f-bc6c-ce72b11a3f8f}}. An application
+of the principle to identical particles can be found for instance in
+{{cite:85ae0f37-3653-4c51-9f0f-b9b41b7e969e}} p 128. We formulate it as follows:
+
+Cluster Separability Principle No quantum
+experiment with a system in a local laboratory is affected by the mere
+presence of an identical system in remote parts of the universe.
+
+Peres also observed that the principle was in
+general violated by results similar to those of the previous section, and he
+suggested a solution. This solution will now be reformulated and extended.
+We introduce an important locality property of observables (for generalisation
+to composite systems, see {{cite:4baa9826-5e9d-41a7-942c-c422dc87ed13}}):
+Definition 1 Let FORMULA  be open. Operator with kernel
+FORMULA  is FORMULA -local if
+FORMULA 
+for any test function FORMULA  that vanishes in FORMULA .
+
+Now assume for Experiment II that
+
+our laboratory is inside open set FORMULA ,
+
+FORMULA .
+
+Then, clearly the second term in (REF ) vanishes for
+FORMULA -local observables and Eqs. (REF ) and (REF ) agree in this
+case (for a more general theorem see {{cite:4baa9826-5e9d-41a7-942c-c422dc87ed13}}). This suggests our
+strategy. In fact, what we shall do will formalise and explain the common
+practice that serenely ignores all unknown identical systems and that is
+intuitive, irrational but successful.
+
+We introduce the key notion of our theory:
+Definition 2 Let FORMULA  be a particle and FORMULA  an
+open set satisfying the conditions:
+
+Registrations of any FORMULA -local observable FORMULA  of FORMULA  lead to average FORMULA 
+for all states FORMULA  of FORMULA .
+
+FORMULA  is prepared in state FORMULA  such that
+supp FORMULA .
+
+In such a case, we say that FORMULA  has
+separation status FORMULA .
+
+(For generalisation to composite systems and non-vector states, see
+{{cite:4baa9826-5e9d-41a7-942c-c422dc87ed13}}.) Thus, the registration is not disturbed by other states of
+identical systems. This can be the case e.g. if wave functions of all other
+identical systems vanish in FORMULA .
+
+We assume: Any preparation of FORMULA  must give it a non-trivial
+separation status FORMULA . Then FORMULA -local observables are
+individually registrable on FORMULA  but only these are if
+FORMULA  has not separation status FORMULA  such that FORMULA  is a proper subset
+of FORMULA . Indeed, registration of observables that are not FORMULA -local are then
+disturbed by other identical systems. Now, Peres did not warn that standard
+observables of quantum mechanics (position, momentum, energy, angular
+momentum, spin...) were not FORMULA -local with FORMULA .
+This problem can be removed by a construction of FORMULA -local observables that
+are registered in real experiments and that resemble, in certain sense, the
+standard ones {{cite:4baa9826-5e9d-41a7-942c-c422dc87ed13}}.
+
+We list the cases in which Rule 1 does not hold:
+Rule 2 Let system FORMULA  be prepared in a state described by state
+operator FORMULA  so that it has separation status FORMULA . Then its state is FORMULA  and its observables form algebra
+FORMULA  of all FORMULA -local observables of FORMULA .
+
+Composition of such states and observables satisfy
+Rule 3 Let systems FORMULA  and FORMULA  be prepared in
+states FORMULA  and FORMULA  with separation statuses FORMULA  and
+FORMULA , respectively. Then system FORMULA  has state
+FORMULA  and the algebra of its observables is
+FORMULA .
+
+Clearly, the preparation described in Rule 3 is a preparation of
+FORMULA  in state FORMULA  with separation status FORMULA  only if FORMULA .
+
+Now, cluster separability holds.
+
+Preparations and registrations
+As usual, we assume that any
+measurement on microsystems can be divided into a preparation and a
+registration procedure. The preparation determines a state and the
+registration gives a value of an observable. What do the above ideas imply for
+preparation and registration?
+As we have seen in point 2 of our strategy, any preparation must transfer
+system FORMULA  from a trivial into a non-trivial separation
+status. Thus, the separation status changes during a preparation. What is the
+relation of registrations to separation status change?
+An important assumption of our theory of measurement is:
+Rule 4 Any registration apparatus for microsystems must
+contain at least one detector and every 'reading of a pointer value' (see
+e.g. {{cite:320611fb-bd5c-48e3-a9c5-bf5f44a9ed2a}}) is a signal from a detector.
+
+Hence, during registration, system must enter the sensitive matter of
+a detector. In this way, its non-trivial separation status changes into a
+trivial one. More discussion of this important point is given in
+{{cite:f88eb839-ef91-4aa1-82e4-0fa1bc4c1a46}}, {{cite:4baa9826-5e9d-41a7-942c-c422dc87ed13}}.
+Let us give an example of separation status change. Let the states in Rule 3
+be vector states of identical particles,
+FORMULA 
+Then the state of FORMULA  is
+FORMULA 
+Let the time evolution leads to FORMULA  entering FORMULA 
+and FORMULA  having separation status FORMULA . Then the
+state of FORMULA  will be
+FORMULA 
+where FORMULA  denotes symmetrisation or
+anti-symmetrisation of FORMULA  arguments and FORMULA  is the
+projection to the unit sphere. The map
+FORMULA 
+is a non-invertible and non-linear map between two different Hilbert
+spaces. Second, in state (REF ), the observables that are registrable
+on FORMULA  form the algebra FORMULA . In state
+(REF ), the algebra would be FORMULA : there are no observables that would be registrable individually on
+FORMULA . Thus, the set of observables changes from FORMULA  to FORMULA .
+In classical mechanics, the possible states of system FORMULA  are all
+positive normalised functions (distribution functions) on the phase space
+FORMULA  and possible observables are all real function on FORMULA 
+(at least, all such observables have definite averages on FORMULA 
+independently of external circumstances). FORMULA  is fixed and uniquely
+associated with the system alone and forms the basis of this kinematic
+description. Hence, transitions between different sets of observables similar
+to those described above would be impossible in classical mechanics. They are
+only enabled in quantum mechanics by the non-objective character of
+observables: not only their values cannot be ascribed to microsystem
+FORMULA  alone but some of them are not even registrable in principle
+due to external conditions in which FORMULA  is.
+We assume that the quantum kinematics of a microsystem is defined
+mathematically by the possible states represented by all positive normalised
+(trace one) operators, and possible observables represented by some
+self-adjoint operators, on the Hilbert space associated with the system. Then
+the transitions of states and observables that go with changes of separation
+status cannot be viewed as a part of a dynamical trajectory due to some new
+version of the dynamics of FORMULA , but as a change of its kinematic
+description. Thus, although the change of separation status is similar to the
+collapse of the wave function (the non-local character included), it is both
+more radical and better understood.
+What has been said up to now shows that textbook quantum mechanics is
+incomplete in the following sense:
+
+It accepts and knows only two separation statuses:
+
+that of isolated systems, FORMULA , with the standard
+operators as observables, and
+
+that of a member of a system of identical particles, FORMULA ,
+with no registrable observables of its own.
+
+
+It provides no rules for changes of separation status.
+
+Our main idea is: Quantum mechanics must be supplemented by a
+theory of general separation status and by new rules that govern processes in
+which separation status changes. The new rules must not contradict the rest of
+quantum mechanics and ought to agree with and explain observational facts.
+
+Extended understanding of separation status
+Definition 2 leaves open
+the question of what the nature of disturbances is that might prevent
+registrations on FORMULA . As yet, all examples of such a disturbance
+had to do with entanglement of identical particles. In the light of Rule 4,
+the absence of such entanglement need not be sufficient for FORMULA  to
+allow undisturbed registrations. To explain that, it is helpful to distinguish
+two kinds of registration.
+A direct registration first manipulates FORMULA  by classical
+fields and shields so that the prepared beam is split into spatially separated
+beams, each of which associated with one eigenvalue of the registered
+observable. Then, there is a set of detectors each of which can be hit by only
+one beam. Hence, FORMULA  must be separated from other microsystems, not
+only of the same type, so hat it is FORMULA  that is available to those
+manipulation by fields and shields and has sufficient kinetic energy to excite
+a detector.
+An indirect registration, such as scattering or QND measurement (see
+e.g. {{cite:8694e41b-df04-4fd4-9c18-29bf4e88a6dc}} and {{cite:85ae0f37-3653-4c51-9f0f-b9b41b7e969e}} p 400), lets FORMULA  interact with
+another microsystem FORMULA  and it is only FORMULA  that is
+then subject to a direct registration. For the measurement to be QND, several
+further conditions must be satisfied, but this does not concern us here. After
+a QND procedure, FORMULA  remains available to another one: another
+system FORMULA  of the same type as FORMULA  interacts with
+FORMULA  and is then directly registered etc. Information given by the
+detectors of the direct registrations reveals also something about FORMULA . Thus, detectors are necessary for indirect registrations, too, and
+FORMULA  must be suitably separated from other microsystems, not only of
+the same type, so that we can be sure that it was FORMULA  that
+interacted with FORMULA , FORMULA  etc.
+There are interesting consequences for macroscopic systems. In general, a
+macroscopic system FORMULA  contains very many different
+particles. Consider the observable with kernel FORMULA  that
+concerns particle FORMULA  of FORMULA . Suppose that there would
+be an apparatus FORMULA  associated with registration of
+FORMULA  on FORMULA , if FORMULA  were prepared
+individually. Then, the apparatus FORMULA  cannot be applied to
+FORMULA  to register FORMULA  because FORMULA  is
+not suitably separated.
+For example, in a direct registration, readings of FORMULA  are signals
+of a detector that registers FORMULA  and FORMULA  must be
+isolated to be manipulable, have sufficient kinetic energy, etc. Hence, to
+register FORMULA , we need a method that makes measurements
+directly on FORMULA  and which is, therefore, different from apparatus
+FORMULA .
+Consider a scattering as an example of indirect registration. Let FORMULA  be a crystal. By scattering FORMULA -rays off it, relative positions of its
+ions can be recognised. But rather than a position of an individual ion it is
+a space dependence of the average density due to all ions. In general,
+scattering of a microsystem FORMULA  off a macrosystem FORMULA 
+can be determined in terms of potential FORMULA  that
+describes the interaction between FORMULA  and FORMULA -th microscopic
+subsystem FORMULA  of FORMULA  so that the whole interaction
+Hamiltonian is the sum
+FORMULA 
+Hence, the scattering yields only information on a sum of over all subsystems
+FORMULA  of FORMULA  that can interact with FORMULA  and
+FORMULA 's need not be identical with FORMULA . Although
+ingenious potentials can be invented, nature provides only a small number of
+potentials.
+Another example is the kinetic energy of FORMULA . Again, this
+observable cannot be measured by the method kinetic energy is measured on
+individual systems of type FORMULA  (proportional counter, scattering
+off a crystal, etc.). In the case that FORMULA  is in a state of
+thermodynamic equilibrium, the average kinetic energy can be calculated from
+the temperature. Hence, a viable method to measure the average is to measure
+the temperature of FORMULA . Again, this is a special case that works
+only under specific conditions. Further examples could be other additive
+quantities, such as momentum and angular momentum. Average total values of
+these quantities can be measured directly on FORMULA . We notice that
+only the averages of some observables with rather large variances can be
+observed in these cases. It is impossible to obtain the single eigenvalues of
+these observables as results of registration (for an example, see Ref. {{cite:85ae0f37-3653-4c51-9f0f-b9b41b7e969e}} p 181).
+Thus, the qualitative difference between macroscopic and microscopic systems
+is due to quantum properties of macroscopic systems rather than to some kind
+of limits on the validity of quantum mechanics for them.
+
+ Beltrametti-Cassinelli-Lahti model of quantum measurement
+We shall
+proceed from account {{cite:320611fb-bd5c-48e3-a9c5-bf5f44a9ed2a}} (p 38) of model {{cite:526415a3-8c52-4dfb-b059-7a5c1b857d7c}}. Let a discrete
+observable FORMULA  of microsystem FORMULA  with Hilbert space
+FORMULA  is registered. Let FORMULA  be the eigenvalues and FORMULA 
+be the complete orthonormal set of eigenvectors of FORMULA ,
+FORMULA 
+We assume that FORMULA  so that there is only a finite number of
+different eigenvalues FORMULA . This is justified by the fact that no real
+registration apparatus can distinguish all elements of an infinite set from
+each other. It can therefore measure only a function of an observable that
+maps its spectrum onto a finite set of real numbers. Our observable FORMULA  is such a function.
+Let the registration apparatus be a quantum macrosystem FORMULA  with
+Hilbert space FORMULA . Let FORMULA  and FORMULA  be prepared in some independent initial states and then interact for a
+finite time by coupling FORMULA , where FORMULA  is a unitary
+transformation on FORMULA . Then, a theorem has been shown in {{cite:526415a3-8c52-4dfb-b059-7a5c1b857d7c}}:
+Theorem 1 For any initial vector state FORMULA  of FORMULA , there is a
+set FORMULA  of unit vectors in FORMULA 
+satisfying the orthogonality conditions
+FORMULA 
+such that FORMULA  is a unitary extension of the map
+FORMULA 
+where FORMULA  is a set of FORMULA  orthonormal vectors in
+FORMULA .
+
+One assumes that states FORMULA  are uniquely associated with what will be
+read on the apparatus after the measurement. Then, an important requirement is
+that the apparatus is in one of the states FORMULA 
+after each individual registration. This is called objectification
+requirement.
+Suppose that the initial state of FORMULA  is an eigenstate, FORMULA , with the eigenvalue FORMULA . Then, Eq. (REF ) implies that the final state of apparatus FORMULA  is
+FORMULA , and the registration does lead to a definite
+result. However, suppose next that the initial state is an arbitrary vector
+state, FORMULA . Decomposing FORMULA  into the
+eigenstates,
+FORMULA 
+we obtain from Eq. (REF )
+FORMULA 
+where
+FORMULA 
+and
+FORMULA 
+is the probability that a registration of FORMULA  performed on vector
+state FORMULA  gives the value FORMULA .
+The final state of apparatus FORMULA  is the partial trace over
+FORMULA :
+FORMULA 
+If the objectification requirement is to be satisfied, two
+condition must be met:
+(A)
+The final state of the apparatus must the convex combination of the
+form
+FORMULA 
+(B)
+The right-hand side of Eq. (REF ) must be the gemenge structure of the state.
+
+The notion of gemenge will play an important role. The term has been
+introduced in Ref. {{cite:320611fb-bd5c-48e3-a9c5-bf5f44a9ed2a}}, some authors use the term 'proper mixture' or
+'direct mixture'. The crucial point is that the convex decomposition
+FORMULA 
+of any state FORMULA  can be a gemenge only if its
+preparation procedure FORMULA  is a random mixture with
+rates (frequencies) FORMULA  of preparations FORMULA , where
+each FORMULA  is some preparation procedure for FORMULA , FORMULA . The preparation mixture can be done by humans or
+result from some process in nature.
+Thus, gemenge concerns a physical property of preparation rather than any
+mathematical characteristic of the right-hand side of Eq. (REF )
+(such as FORMULA  being vector states or being mutually orthogonal,
+etc). From the mathematical point of view, many different convex
+decompositions of a general state FORMULA  may exist. A state is
+'extremal' if it cannot be written as a non-trivial convex
+combination. Extremal states are described by projections onto one-dimensional
+subspaces of the Hilbert space. A preparation of non-extreme state FORMULA  selects only some of the mathematically possible convex decompositions of
+FORMULA .
+A random mixture of preparations is not uniquely determined by the preparation
+process. It can be coarsened or refined i.e. some of FORMULA  can be combined into one preparation procedure or FORMULA  for some FORMULA  can itself be a random mixture of other preparations.
+Definition 3 The finest convex decomposition of state FORMULA  defined by
+its preparation as gemenge is called gemenge structure of FORMULA .
+
+Thus, gemenge structure of FORMULA  is uniquely determined by
+its preparation.
+It may be advantageous to distinguish the mathematical convex combination of
+states from its gemenge structure by writing the sum in Eq. (REF ) as
+follows
+FORMULA 
+in the case that the right-hand side is a gemenge structure of
+FORMULA .
+The properties that follow directly from the definition of gemenge structure
+and that will be needed later are described by the following theorem.
+Theorem 2
+
+Gemenge structure is preserved by unitary dynamics,
+FORMULA 
+if the sum on the left-hand side describes a gemenge structure of FORMULA , then the gemenge structure of its evolution is described by the sum on
+the right-hand side.
+
+In the following sense, gemenge structure is also preserved by
+composition of systems. Let FORMULA  be a state of a composite system
+FORMULA . The necessary and sufficient condition for the
+partial trace over FORMULA  to have the gemenge structure described by
+FORMULA 
+is that FORMULA  itself has gemenge structure described by
+FORMULA 
+where FORMULA  are some states of FORMULA .
+
+
+All these ideas on gemenges seem to be well known. Now, an important new point
+will be added: the Basic Ontological Hypothesis of Quantum Mechanics (see
+Introduction). It leads to a new meaning of gemenge structure: any individual
+system prepared in the state (REF ) is objectively in one of the
+states FORMULA , because each of the systems has been prepared by one
+of the preparations FORMULA , and the probability that
+FORMULA  has been used is FORMULA .
+It follows that the contents of both points (A) and (B) can be
+concisely written as
+FORMULA 
+Beltrametti-Cassinelli-Lahti model does not satisfy the objectification
+criterion because the end state FORMULA 
+of the system is FORMULA  (Eq. (REF )),
+which is a vector state and can therefore have only a trivial gemenge
+structure. Then, Point 2 of Theorem 2 implies that this is not compatible with
+state FORMULA  being a non-trivial gemenge.
+
+Model of registration apparatus
+To show, how our ideas on
+measurement work, we have constructed a model of registration apparatus
+{{cite:f88eb839-ef91-4aa1-82e4-0fa1bc4c1a46}}, {{cite:4baa9826-5e9d-41a7-942c-c422dc87ed13}}. It starts by extending and modifying
+Beltrametti-Cassinelli-Lahti model by additional assumptions:
+
+Particle FORMULA  is prepared in state FORMULA  and separation
+status FORMULA .
+
+FORMULA  is an array of FORMULA  detectors FORMULA  and each
+detector has separation status FORMULA  where all FORMULA  are mutually disjoint and
+disjoint from FORMULA .
+
+The support of state FORMULA  is FORMULA  for all FORMULA  and FORMULA . It
+follows then that,
+FORMULA 
+
+Each detector is composite, FORMULA , where FORMULA  consists of all particles of
+FORMULA  identical with FORMULA . Let the number of particles in
+FORMULA  be FORMULA  and let the state of FORMULA  be FORMULA . Systems FORMULA  either are 'natural' parts of FORMULA 's or they are created quickly after the start of the measurement by
+pollution.
+
+FORMULA  is the part of the sensitive matter interacting with
+FORMULA  so that FORMULA  is a state of FORMULA .
+
+State (REF ) is not of an end state of FORMULA  but a choice of an intermediate state before an
+amplification procedure.
+
+.
+The existence of systems FORMULA  leads to a change of the separation
+status of FORMULA  after FORMULA  enters a detector. There are
+several mathematical possibilities for the choice of the intermediate
+state. One of the possibilities is:
+Rule 5 The intermediate state of FORMULA  (before amplification) is
+FORMULA 
+
+Choices:
+
+The term
+FORMULA 
+expresses our choice of symmetrisation or anti-symmetrisation and FORMULA  is
+a normalisation factor that makes FORMULA  to a state (action of
+FORMULA ).
+
+Some correlations have been erased so that the state operator FORMULA  is diagonal.
+
+The convex decomposition (REF ) is postulated to be the gemenge
+structure of FORMULA .
+
+The choices 2. and 3. are dictated by the objectification
+requirement which can be regarded as an experimental fact.
+Finally, we can show that the new rule cannot be disproved by measuring the
+'erased' correlations if standard quantum mechanical rules on jointly
+measurable observables hold {{cite:f88eb839-ef91-4aa1-82e4-0fa1bc4c1a46}}, {{cite:4baa9826-5e9d-41a7-942c-c422dc87ed13}}.
+
+Conclusion
+We have improved understanding of the theory of identical
+particles and removed a disorder in textbook quantum mechanics. This has lead
+to the notion of separation status. We have discovered the crucial role that
+detectors have in the theory. Then, both preparations and registrations
+include changes of separation status, which are changes of kinematic
+description and so even more radical than 'collapse of the wave function'. The
+theoretical freedom in changes of separation status has been used to satisfy
+objectification requirement. Thus, a deep revision of quantum theory of
+measurement results that has been derived with the help of standard principles
+of quantum mechanics from analysis of real measurement processes.
+As yet, our results are limited to non-relativistic quantum mechanics and to
+measurements performed on microsystems. Moreover, only special kind of
+measurements have been considered, registrations of discrete observables with
+the help of unitary measurement couplings, the definition assumptions of
+Beltrametti-Cassinelli-Lahti model. Much work remains to be done.
+Acknowledgements
+The author is indebted to Štefan
+Jánoš and Jiří Tolar for important suggestions.

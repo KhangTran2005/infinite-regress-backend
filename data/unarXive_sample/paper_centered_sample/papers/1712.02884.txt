@@ -1,0 +1,549 @@
+
+Parton correlations in double parton scatteringDPS correlations
+[T. Kasemets]T. Kasemets
+PRISMA Cluster of Excellence & Mainz Institute for Theoretical Physics Johannes Gutenberg University, 55099 Mainz, Germany
+[T. Kasemets and S. Scopetta]S. Scopetta
+
+Department of Physics and Geology, University of Perugia
+and INFN, Sezione di Perugia, Via A. Pascoli, I-06123, Perugia, Italy
+
+Double parton scattering events are directly sensitive
+to the correlations between
+two partons inside a proton
+and can answer fundamental questions on the connections
+between the proton constituents.
+In this chapter, the different types
+of possible correlations,
+our present knowledge of them, and the
+processes where they are likely to be important,
+are introduced and explained.
+The increasing integrated
+luminosity at the LHC
+and the refinements of the theory of
+double parton scattering,
+lead to interesting prospects for measuring,
+or severely constraining, two-parton correlations
+in the near future.
+
+Introduction
+The study
+of double parton scattering (DPS) events can open up a window to see,
+for the first time,
+how the constituents of the proton are connected to each other.
+The correlations between the properties of
+two partons in one proton can be directly probed,
+measuring how two partons inside the proton affect
+one another. So far, only indirect
+tests of these correlations have been possible,
+studying for example, by means of electromagnetic interactions,
+how the collective
+behavior of the constituents sums up
+to give the proton spin.
+This allows us to answer questions such as:
+How does the probability to find one parton in a certain spin state
+affect the probability to find the second parton in the same spin state?
+In this chapter we
+will look at two quarks or gluons inside the proton,
+explain the different ways they can be connected to one another,
+describe the state-of-the-art of the field
+as well as the perspectives for future studies of these correlations.
+This will be possible in
+processes where DPS forms a major contribution, such as
+same-sign double-FORMULA  production.
+Assuming factorization (see Ref. Diehl:book),
+the DPS cross section for the production of
+final states FORMULA  and FORMULA  takes the form
+{{cite:58e75461-5ec5-4770-b897-b65c38d0c074}}, {{cite:236d65ec-f9f1-41d5-8283-e12dc2c677c9}}
+FORMULA 
+where FORMULA 
+if FORMULA  = FORMULA , FORMULA  otherwise, FORMULA  denotes the different possible
+color representations and
+FORMULA  label simultaneously the species (parton-type and flavor)
+and polarization of the partons contributing
+to the production of the final states. In Eq. (REF ),
+FORMULA  represents the differential partonic cross section
+(for example, differential in the rapidities of the
+produced particles).
+The functions FORMULA 
+are the double parton distributions (dPDFs),
+encoding the probability to find the two interacting
+partons, with longitudinal
+fractional momenta FORMULA  at a relative transverse distance
+FORMULA  inside the proton.
+They depend additionally
+on factorization scales FORMULA , and for FORMULA , on
+a rapidity scale {{cite:58e75461-5ec5-4770-b897-b65c38d0c074}}. If extracted from data,
+as noticed a long time ago {{cite:a5a6c9c2-864a-4eb7-987a-13de8d14bb6d}},
+dPDFs would offer for the first time
+the opportunity to investigate two-parton correlations.
+This would be a two-body property,
+carrying information
+which is
+different and
+complementary to that encoded in
+one-body distributions, such as generalized parton distributions
+(GPDs) {{cite:4c6d3878-6d6a-4b71-9d98-94d3ab966041}}.
+This is illustrated in figure REF .
+For cross sections differential also in the net
+transverse momenta of each of the
+two hard interactions, the dPDFs are replaced in the factorization theorem
+by the
+double transverse momentum dependent parton distributions (dTMDs).
+These distributions
+depend on two additional transverse vectors
+and allow for
+a number of further correlations, for example between the spin and transverse
+momenta of the partons. They are interesting also from a
+more theoretical point of view, with the rich color structure in combination with the non-trivial dependence
+on the soft gluon exchanges {{cite:a6060330-dbe6-4136-9c02-89f321226c7f}}.
+In the region where the two net transverse momenta are small,
+DPS and single parton scattering (SPS)
+both contribute to the cross section at the same power, which makes
+it promising for DPS extractions.
+However, for simplicity
+we will focus on the dPDFs during the rest of this chapter.
+In the following, we will have a closer look at what is currently known about the
+different correlations, describe the effects
+expected in cross sections and the prospects
+for their measurement. The chapter is structured as follows:
+In the next section, we will look at the correlations
+between the kinematic variables FORMULA  and FORMULA  of the dPDFs.
+In section 3, we will focus instead on the correlations
+between color, spin, flavor and fermion number of
+the two partons.
+In section 4 we will summarize and give an outlook to what we
+consider are the most promising future directions.
+
+Kinematic correlations
+As stressed in the introduction, the two-body information
+encoded in dPDFs is different and complementary to that
+described by one-body parton distributions.
+Nevertheless, a connection between dPDFs,
+presently largely unknown, and
+one-body quantities can be obtained by making
+a number of assumptions on the dPDFs.
+First, all color representations
+different from the color singlet are neglected
+(i.e., only FORMULA  is considered),
+together with all possible
+correlations between spins, flavors and fermion-numbers.
+Thereafter, correlations between FORMULA  and FORMULA 
+are neglected. The dPDFs then take the form
+FORMULA 
+where FORMULA  is a parton
+distribution dependent on the impact parameter
+FORMULA , the transverse distance of
+the parton from the transverse center of mass of the hadron
+{{cite:4c6d3878-6d6a-4b71-9d98-94d3ab966041}}.
+This function is the Fourier transform
+of a GPD in a process where
+the momentum transfer is transverse.
+Neglecting moreover correlations between FORMULA , FORMULA  and
+FORMULA , one can write
+FORMULA 
+where FORMULA  is a parton distribution
+function (PDF) and the transverse profile
+FORMULA  has been assumed to be equal
+for all parton species.
+One should notice that
+Eq. (REF ) has been
+found to fail in all model calculations of GPDs (see, e.g.,
+Refs.
+{{cite:142533f4-f363-454b-8fe1-0d8676d277dd}}, {{cite:05f95b04-f71b-4ce1-9e00-34eb215d3903}}),
+as well as in the first analyses of
+data from deeply virtual Compton scattering {{cite:cd7eb27d-4f46-403d-8655-a17f5df92d03}}.
+The assumptions
+described above are often used to infer
+properties of dPDFs from those of single particle distributions.
+FIGURE 
+Since dPDFs are largely unknown, and only
+sum rules relating them to PDFs are available
+{{cite:3ee418ae-3c0e-4d2b-8d78-6a464f721486}}, {{cite:74c3ba56-7866-4209-aeb4-383467709ad7}}, {{cite:d28f633f-4a91-4794-b874-f4a3f5f34a5c}}, {{cite:05cc428e-143e-4d4c-b88b-470d6dc62be5}},
+model calculations can be very useful and have been performed.
+Models
+are usually developed at low energy, but are able
+to reproduce some relevant features of nucleon parton
+structure.
+Since in models the number of degrees of freedom
+is fixed,
+they can be predictive in particular in the valence region,
+at FORMULA  larger than, say, 0.1.
+In such model calculations, the factorized structures in
+Eqs. (REF ) and (REF ) do not arise.
+Relevant correlations between FORMULA  and FORMULA ,
+violating Eq. (REF ),
+and between FORMULA  and FORMULA , violating Eq. (REF ),
+have been found in the valence region in a variety
+of approaches. This result was obtained, for example, in
+a modified version of the simplest bag model
+{{cite:f48e113e-b389-4224-9d9a-00722cb537bf}}, in constituent
+quark models {{cite:c544400d-1908-4aa1-8191-95f1e1946a30}}, {{cite:5cd48950-49c9-4f6f-a8ce-4c5b3e5ef7a5}} in a valon model
+{{cite:bd0bb687-ed31-4ffb-929c-88f842f17d44}}
+and in dressed
+quark models {{cite:a9f802ab-1dbd-4c5b-bd5e-f657ba689ad0}}.
+FIGURE 
+In particular, in Ref. Rinaldi:2014ddl
+a light-front (LF)
+Poincaré covariant approach,
+reproducing the essential sum rules of dPDFs
+without ad hoc assumptions and containing
+natural two-parton correlations, has been described.
+An example of the information that model calculations
+can provide is shown in Fig. REF , where
+the effect of the breaking of the factorization between
+longitudinal and transverse variables is emphasized.
+It is crucial to explore
+if the breaking of the properties,
+Eqs. (REF ) and (REF ), found
+in the valence region, survive at LHC kinematics,
+dominated by low-FORMULA  and high energy scales.
+As a matter of fact, model estimates are valid in general
+at a low scale
+FORMULA , the so-called hadronic scale.
+The results of the calculations
+should therefore be evolved using perturbative QCD (pQCD)
+in order to compare them with data taken at a momentum scale
+FORMULA , according to a well established procedure, proposed already
+in Refs. {{cite:74d5bf62-1232-436b-ad99-108d60dc36b2}}, {{cite:25cf7a62-55fe-4ceb-873b-1c1e1fec9590}}.
+The evolution of dPDFs has been
+studied for a long time.
+The first studies were performed in the late '70s/early '80s{{cite:750a2d5b-f96d-49e8-9871-249729da71e1}}, {{cite:f48c9400-d2b1-4c19-ae83-14dab68c0306}} with much theoretical progress being made in recent years – for a detailed discussion on this topic we invite the reader to look at Ref. Diehl:book.
+One should notice that, even if a factorized structure of the dPDF
+were valid at a given scale, the different evolution properties
+of dPDFs and PDFs would break it at a different scale,
+generating perturbative correlations.
+These correlations
+have been discussed in a largely model-independent way in Ref.
+Diehl:2014vaa, incorporating the homogeneous evolution equations.
+The evolution tends to pull the average transverse separation in quark
+and gluon distributions towards a common value,
+but this is a relatively slow process and differences can remain up
+to high scales. Similarly, correlations between the momentum fractions
+and the transverse separation present at a low scale can remain in
+large scale processes, as described here below.
+The interplay of perturbative and non-perturbative
+correlations between
+different kind of partons has been described also using
+homogeneous QCD evolution
+applied to the results of the correlated LF model {{cite:14df4421-c661-4d68-9e6f-1c811518be0f}}.
+It was found that their effect tends
+to be washed out at low- FORMULA  for the valence,
+flavor non-singlet distributions, while they can affect
+singlet distributions in a sizable way.
+This different behavior can be understood
+in terms of a delicate interference of non-perturbative correlations,
+generated by the dynamics of the model, and perturbative ones,
+generated by the model independent evolution procedure.
+Concerning the correlation between the FORMULA 
+and FORMULA  dependences in dPDFs,
+some qualitative understanding can be inferred
+from studies of hard exclusive processes,
+involving
+FORMULA  of a single parton inside the proton. In particular,
+measurements of FORMULA  at HERA
+{{cite:db433932-ce72-4878-b18d-33e978fd6a53}}, {{cite:759b7821-9d5e-4301-ad11-8b28b619fdcd}} indicate a logarithmic dependence
+FORMULA  with
+FORMULA  for gluons with FORMULA . Studies of nucleon form factors
+{{cite:805d2b93-702e-422f-986e-066b360f72d2}} and
+calculations of Mellin moments FORMULA  with
+FORMULA  in lattice QCD {{cite:3b2dbeee-84ca-4c6b-b20d-d03b2beaec7c}} indicate that for FORMULA  above
+FORMULA  the decrease of FORMULA  with FORMULA  is even
+stronger. Although this is one-body
+information,
+one could wonder whether the
+correlations between the FORMULA 
+dependence and FORMULA  in double
+parton distributions could follow the behavior
+of the one-body quantity,
+with the FORMULA  distribution becoming more
+narrow with increasing FORMULA .
+If this is the case,
+important consequences could be expected
+for multiparton interactions
+{{cite:c03531e0-e045-4c3b-9f88-ff6c18eba30d}}.
+The production
+of hard final states requires relatively
+large momentum fractions of the partons entering the corresponding hard
+interaction. This would favor
+small values of FORMULA , which is the
+transverse distance of the parton from the transverse
+center of the proton.
+The collision would therefore be rather central
+and thus the
+transverse interaction area for the colliding protons
+would be rather large,
+a fact which in turn favors
+additional interactions.
+Such
+correlations may have a sizable impact, e.g., on the underlying
+event activity in FORMULA  production,
+as shown in a study with Pythia 8
+{{cite:af39ae7a-2079-4ad3-bb61-eec2a75e432c}}.
+
+Quantum-number correlations
+Two partons inside a single proton can have their quantum numbers
+correlated. Perhaps the most straightforward example comes from the
+valence sector of the proton. If we, for one interaction,
+extract one valence up quark from the proton, it is natural to expect
+that the chance to find another valence up quark in the proton is reduced.
+It seems reasonable to expect such effects to be sizable at relatively large
+momentum fractions and to reduce as the density of partons increases
+towards small momentum fractions. This phenomenon naturally fits into the
+dPDFs, FORMULA , of two partons FORMULA  and FORMULA 
+inside a proton.
+We will focus here on another type of correlation and interference which
+occurs at the quantum level, and for which we reserve the label
+quantum-number correlations. This includes correlations and
+interferences in color, spin, flavor and fermion number
+{{cite:3ce20558-02e0-4d04-9213-37c62b8980f1}}, {{cite:f4723665-a942-4831-ac39-4dba2af3ea91}}, {{cite:b86af071-3d09-46ef-907c-5dff75579a4b}}.
+Understanding how this occurs in double parton scattering,
+but not in single parton scattering, is not complicated.
+From a diagram such as the one in figure REF , we can see that
+two quarks leave the right-moving proton
+(represented by the lower green ellipse) on the left side of the final-state
+cut and two quarks return to the proton on the right side of the cut.
+The quantum numbers of the two quarks in the amplitude have to sum up to
+the quantum numbers in the conjugate amplitude, which still leaves
+room for the two quarks in the amplitude to individually have different
+quantum numbers from their partners in the conjugate amplitude.
+FIGURE 
+In particular, this allows for quantum number interferences, which is another
+way of viewing the correlations. If we take color as example
+(even though, as we will see, it might not have the largest impact),
+and couple each parton in the amplitude with its partner in the conjugate
+amplitude (i.e. parton with the same longitudinal momentum fraction FORMULA )
+we have two possible combinations:
+FORMULA .
+Repeating this with the other pair we obtain
+
+(3 3)(3 3) = (11) (1 8) (8 1) (8 8) = 1 1 ...
+
+where the "..." refer to combinations that do not produce a total color
+singlet. The requirement that the sum of the quantum numbers on the left
+and right side of the final-state cut have to be equal amounts to the
+requirement that when coupling all four partons, we need to obtain a color
+singlet. We therefore see that for the quark case we can obtain the
+singlet in two ways: either by coupling two individual color singlet
+pairs or by
+coupling two color octet pairs. This results in two independent
+double quark distributions for the two color states in Eq. REF , labeled as FORMULA 
+with FORMULA . In the cross section, both distributions contribute and
+color-singlet production is proportional to
+FORMULA  (with the normalization of the
+distributions as in {{cite:dac84e58-10a4-4bf8-bd73-823d6f6964f0}}). The color-octet term
+has hard interactions with color interferences between the amplitude and
+conjugate, i.e. it is a genuine quantum effect which can never
+appear in a single hard scattering. Under the
+assumption of zero correlations between the two hard interactions, no such
+interference could take place and the octet distributions would vanish.
+Similar to the color, also the spin of the two partons can be correlated and
+give rise to a large number of different polarized dPDFs.
+There can be interferences in flavor, for example between up and down quarks
+in double-FORMULA  boson production. This type of interference is illustrated by the
+diagrams in figure REF .
+FIGURE 
+Furthermore, there can be interference in fermion number between quarks,
+antiquarks and gluons as examplified in figure REF .
+FIGURE 
+It is interesting to note, that
+spin correlations leading to distributions
+of transversely polarized quarks and linearly polarized gluons
+have a
+rather unique signature. They induce a dependence on the azimuthal angle
+(for example between the FORMULA -boson decay planes) and lead to azimuthal spin
+asymmetries in unpolarized proton scattering {{cite:2528baa1-f41d-4b49-a321-554280379c6c}}. It is important to realize that experimental extractions of DPS signals are based on Monte Carlo generators which assume a flat azimuthal distributions, which might no longer be true in the presence of correlations.
+The result of all the correlations is a flora of independent double parton distributions, of which we have little knowledge and no experimental extractions. One might question what predictive power we have, and can hope to obtain. The answer to this question leads us into a discussion of what we know about the different correlation effects, when they are likely to play an important role and when we believe they can be safely neglected. The information available to this end comes from two main categories of studies. The first studies the distributions in different types of hadron models, or derives theoretical bounds, and attempts to quantify the size of the correlations. The second examines how the perturbatively calculable evolution of these distributions influences their shapes and sizes.
+Models and bounds
+There are a couple of different hadron model calculations which consider
+different quantum-number correlations. Focus has been on the polarization of the partons (apart from the kinematic correlations already discussed)
+and large correlations have been observed.
+For quark and antiquark distributions, large spin correlations were found in the MIT bag model {{cite:f48e113e-b389-4224-9d9a-00722cb537bf}} and in light-front constituent quark models {{cite:5cd48950-49c9-4f6f-a8ce-4c5b3e5ef7a5}}. The domain of validity of these models is principally the region of large momentum fractions, and thus they serve best as initial conditions to the double DGLAP evolution equations. This was done in {{cite:5cd48950-49c9-4f6f-a8ce-4c5b3e5ef7a5}} with the observation that the spin correlations are sizable even after evolution. Within a dressed-quark model of the mixed quark-gluon distributions, the spin
+correlations
+were observed to be large for certain polarization types, such as two longitudinally polarized partons and the combination of a transversely polarized quark and an unpolarized gluon {{cite:a9f802ab-1dbd-4c5b-bd5e-f657ba689ad0}}. In addition to model calculations, theoretical upper bounds on the correlations, including spin, flavor, fermion number and color, have been derived from the probability interpretation (or positivity) of dPDFs {{cite:7b9761c9-e0ac-49e9-b453-60fde2784b7f}}, {{cite:649e9262-6f3d-4cef-9390-bc4387b04223}}.
+
+Evolution
+The dPDFs evolve according to a double ladder version of the DGLAP evolution equations, i.e. a double DGLAP evolution {{cite:58e75461-5ec5-4770-b897-b65c38d0c074}}. Cross talk between the ladders is suppressed by the large distance FORMULA  separating the two partons, which is typically of the size of the proton. The evolution starts at a scale of the order of
+FORMULA  and evolves up to the scale of the respective hard interaction{{cite:23e59966-90d1-4049-b4dd-f4d3844d2b66}}. This evolution generically leads to a reduction of the correlations between the two partons and decreases the importance of the two interference/correlation dPDFs. However, the rate at which this occurs varies significantly for the different types of correlations and the momentum fractions of the partons.
+If we allow for a slight oversimplification, the current state of
+knowledge can be summarized in a short paragraph: The color correlations are
+Sudakov suppressed and expected to be small in large-scale processes{{cite:3ce20558-02e0-4d04-9213-37c62b8980f1}}, {{cite:ac1d53c3-dd21-419d-badb-116b567d406a}}, {{cite:6ce3e7d8-f653-4a01-9ed7-89bfbc2fccac}}. This can be understood from the fact that those correlations require color information to travel over the large distance FORMULA  inside the proton. Therefore, for processes above FORMULA  they are expected to play a minor role.
+Gluon polarizations at low momentum fractions (where DPS is most relevant) are also quite rapidly suppressed through the evolution. This suppression can be understood from the gluon splitting kernels: The unpolarized gluon splitting kernel at small FORMULA  goes as FORMULA , leading to the large increase of the gluon density for small momentum fractions (as is well known from single parton distributions). The polarized splitting kernels on the other hand go as FORMULA  for longitudinal polarization and FORMULA  for linearly polarized gluons. The quark polarizations on the other hand can remain sizable up to high scales{{cite:3fcb2040-bf50-4358-908d-cf6dc6462d8b}}. Figure REF  shows two examples of the suppression for the most suppressed gluon polarization and the least suppressed quark polarization, starting with maximal polarization (i.e. polarized equal to unpolarized) at the input scale of 1 GeV. Fermion-number interference is expected to be small at large scales, since the interference distributions do not mix with the gluon distributions (which drives the evolution at small to moderate FORMULA ) under leading order evolution and always involve color interference. Flavor interference on the other hand is still relatively unexplored, but also does not mix with the gluon distributions.
+FIGURE 
+
+Prospects
+We have seen that two-parton correlations are very interesting
+properties of the non-perturbative proton structure, and they can
+be relevant in specific DPS channels.
+So far, it has been challenging to
+observe them at the LHC and
+extract dPDFs from data.
+While waiting for precise data expected from LHC
+at high luminosity in the near future,
+one could look for signatures of the presence of correlations
+in an extracted quantity,
+the so-called effective
+cross-section, FORMULA .
+Let us introduce now this quantity.
+Since dPDFs are largely unknown,
+it has been useful
+to describe DPS cross sections independently of dPDFs, through the
+approximation
+FORMULA 
+where FORMULA  is the SPS
+cross section with final
+state FORMULA :
+FORMULA 
+The physical meaning of Eq. (REF ) is that,
+once the process FORMULA  has occurred with cross section FORMULA ,
+the ratio FORMULA  represents the probability of process FORMULA 
+to occur.
+So far, a constant value of FORMULA 
+has been assumed in
+the experimental analyses performed.
+In this way, different collaborations have extracted values of
+FORMULA , analyzing events with
+different final states and with different
+center-of-mass energies of the hadronic
+collisions. The results have large error bars
+and their central values vary
+in the range FORMULA  mb (see, for example,
+Figures 8 and 9 in {{cite:74d088e2-2588-4837-b371-6ae04e0ff4ee}}). However,
+these numbers are to be taken with
+caution as the different extractions rely on different assumptions,
+for example,
+with regards to the SPS cross sections.
+It is interesting
+to realize that
+the approximations leading to Eq. (REF ),
+with a constant FORMULA ,
+from Eq. (REF ), are the same leading the dPDF to
+its full factorized form.
+As a matter of fact,
+by inserting Eqs. (REF ) and (REF )
+into Eq. (REF ),
+one obtains
+FORMULA  from Eq.
+(REF ) and (REF ) as follows:
+FORMULA 
+with the quantity
+FORMULA 
+controlling the
+double parton interaction rate.
+The fact that FORMULA  does not show any dependence on
+parton fractional momenta, hard scales or parton species,
+is clearly a consequence of the assumptions in Eqs. (REF )
+and (REF ).
+If those assumptions were relaxed
+FORMULA  would explicitly depend on
+scales and flavors, and on all momentum fractions,
+and would be a complicated average
+(with FORMULA  dependent weights) of all the correlations
+described by the double parton distributions.
+One could therefore
+analyze data looking for such a dependence.
+Besides, model calculations show that
+correlations in momentum fractions
+cannot be treated separately from
+those involving also FORMULA :
+the way the dPDF differs from the product of
+single parton densities changes with FORMULA 
+{{cite:5cd48950-49c9-4f6f-a8ce-4c5b3e5ef7a5}}, {{cite:d7a909aa-bb7b-4514-9256-fc722833ba8b}}.
+Using model calculations
+without the assumptions leading to Eqs. (REF )
+and Eq. (REF ),
+FORMULA  was found to depend
+non-trivially on longitudinal momenta.
+In particular, this was obtained in the LF
+constituent quark model
+{{cite:6445e1fa-6512-43be-8a53-eabcd7ec8674}},
+as well as
+in a holographic approach {{cite:73cf2814-404a-4cf1-bcdf-f8b9cc1b281c}}.
+Very recently, the LF model calculation of dPDFs
+has been used to evaluate the cross section for
+same-sign FORMULA  boson pair production, a promising channel to look for
+signatures of double parton interactions at the LHC.
+In this way, the average value of the DPS cross section
+was found to be
+in line with previous estimates
+which make use of a constant FORMULA  as an external parameter,
+not necessary in this approach. The novel obtained dependence
+on longitudinal momenta
+addresses the possibility to observe
+two-parton correlations, in this channel,
+in the next LHC runs {{cite:e973931e-ad80-41b2-94c2-04f19223b2c2}}.
+An example of these results is shown in Fig.
+REF .
+FIGURE 
+Since in the DPS cross section the dependence upon
+FORMULA  is integrated over,
+a direct test of the breaking of Eq. (REF ) in DPS,
+addressing correlations between FORMULA 
+and FORMULA  in dPDFs, appears difficult at the moment.
+An indirect test of these correlations is expected
+from future measurements at Jefferson Lab, COMPASS and at a possible
+future electron-ion collider
+{{cite:75b57259-e2ed-4dbe-bb4b-3eef5fcc998c}}, where at least
+a detailed picture of the one-body distribution
+FORMULA , should be at hand.
+As for the correlations between quantum numbers described
+in the previous section,
+their impact on cross sections has been studied only in
+a limited number of cases. For the production of two FORMULA  mesons,
+as measured by LHCb {{cite:b13dceae-1d89-4c94-83da-8fb375ef89b2}},
+the low masses of the final states allows for a large impact
+on the size of the cross section
+from longitudinally polarized gluons,
+reaching a contribution of up to
+50% of the unpolarized {{cite:3c4bb6d4-405c-4d9f-a38e-535ca26dea43}}.
+This is an example of the importance of further
+exploratory studies of
+DPS
+to find channels and phase space regions
+in which two-parton correlations are more pronounced
+and easily measured.
+In this sense, input is expected also from proton-nucleus
+scattering, where the DPS contribution is known to be enhanced
+{{cite:33794de7-1199-4205-b691-12c008560dda}}.
+There are several
+elements working together to provide a promising
+near future for DPS in general, and measurement of correlations in
+particular. 1) The
+continuous refinements of the DPS theory, including for example a
+scheme to combine, without double-counting, the SPS and DPS cross sections
+described in Ref. Diehl:book,
+2) The increasing integrated luminosity collected by the experiments
+at the LHC and 3) The improved precision to which the SPS cross sections
+are known. Combined, this provides good reasons to further develop
+the theory for DPS, motivation for phenomenological studies
+of the effects correlations have on actual observables, and good
+prospects for interesting experimental results to confront the theory
+with in the upcoming years.
+Double TMDs enter cross sections when the transverse momenta of
+for example two vector bosons are measured and small.
+In this region, there is no factorization theorem
+without considering both single and double parton scattering.
+The formalism to treat this region in both single and double parton
+scattering {{cite:a6060330-dbe6-4136-9c02-89f321226c7f}}, will allow for interesting prospects
+to investigate the correlations in DPS, including those between
+the transverse momenta of the two partons.
+The experimental searches have now measured same-sign double-FORMULA  production {{cite:003bf2fe-e157-4280-a7b9-82714b03ad25}},
+often put forward as the
+cleanest signal for DPS.
+Interesting results are expected
+also in channels
+where the separation between single and double parton scattering is
+less straightforward. An increased precision on both DPS
+and SPS sides
+will lead to a situation where the double parton distributions are
+the main unknown. Using differential calculations
+and resummation at high logarithmic accuracy, for example in double
+boson production, the combination of DPS and SPS will be important
+and comparisons to data will enable
+extractions of dPDFs and interparton correlations,
+or experimentally constrain them.
+In summary, the increased luminosity will allow for more differential measurements. Moving towards a theory that allow for more complete phenomenological explorations, simultaneously treating both SPS and DPS, provides the basis for our belief that inter-parton correlations might soon be an experimentally established fact, or a heavily constrained hypothesis.
+
+Acknowledgements
+Many discussions with
+F.A. Ceccopieri, L. Fanò, J. Gaunt, M. Rinaldi, M. Traini, D. Treleani, V. Vento
+are gratefully acknowledged. We thank S. Cotogno and T. van Daal for useful comments on the manuscript. Special thanks go to J. Gaunt and P. Bartalini for all their efforts as editors of this book. TK acknowledges support from the Alexander von Humboldt Foundation and the European Community under the "Ideas" program QWORK (contract 320389).

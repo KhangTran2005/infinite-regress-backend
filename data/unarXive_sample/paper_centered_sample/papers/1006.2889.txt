@@ -1,0 +1,453 @@
+
+Quantum Dielectric Fluctuation in an Electronic Ferroelectricity
+studied by Variational Monte-Carlo Method
+
+ Tsutomu Watanabe,FORMULA  and Sumio IshiharaFORMULA  
+
+FORMULA Department of Natural Science,
+Chiba Institute of Technology, Narashino 275-0023, Japan
+FORMULA Department of Physics, Tohoku University, Sendai 980-8578, Japan
+FORMULA CREST, JST, Sendai 980-8578, Japan
+
+2018/12/11 16:30:24
+
+Electronic structure and dielectric property in an electronic ferroelectricty, where electric polarization is driven by an electronic charge order without inversion symmetry, are studied.
+Motivated from layered iron oxides, roles of quantum fluctuation on ferroelectricity in a paired-triangular lattice are focused on.
+Three types of the extended FORMULA  model are examined by the variational Monte-Carlo method with the Gutzwiller-type correlation factor.
+It is shown that electron transfer between the triangular layers corresponding to the inter-layer polarization fluctuation promotes the three-fold charge order associated with an electric polarization.
+This result is in highly contrast to the usual manner of quantum fluctuation in the hydrogen-bond type ferroelectricities and the quantum paraelectric oxides.
+Spin degree of freedom of electron and a realistic crystal structure for the layered iron oxides further stabilize the polar charge ordered state.
+Implications of the numerical results for layered iron oxides are discussed.
+Ferroelectricity, Frustration, Charge Order
+Introduction
+Roles of electronic degree of freedom in ferroelectricity and related phenomena have attracted much attention for a long time.
+In particular, covalency contribution on the displasive-type ferroelectricity has been revealed by the modern FORMULA -initio electronic-structure calculation and the Berry phase theory for the electric polarization.
+Recently discovered multiferroics, i.e. coexistence of ferroelectricty and magnetism, are another example. {{cite:35d091c2-189a-46fe-84bb-d7aa86b5804d}}, {{cite:44c64398-a5f4-4b66-8160-5ffa57dc538a}}, {{cite:ba344fb5-5d46-4a57-b140-1d68dc381d96}}, {{cite:0c9e8b7c-c134-4ea6-8955-03df08f9a103}}, {{cite:ef93b603-b93b-4751-8773-e111c91bca90}}, {{cite:c4feace9-8585-4af3-93f8-a05c15b519b3}}
+Through the intensive theoretical and experimental examinations, it has been uncovered that the symmetric/anti-symmetric exchange interactions and the exchange striction effect are origin of this type ferroelectricity.
+It is known that there is different type of ferroelectricity driven by electronic degree of freedom.
+A long-range order of the electronic charge without inversion symmetry is responsible for a macroscopic electric polarization. This phenomenon is termed the electronic ferroelectricity or the charge-order type ferroelectricity. {{cite:9a1b028c-811b-47fa-ae08-0200b51e1b3c}}, {{cite:8ecfb40f-6be8-4639-8c0b-eaaba8e0769c}}
+A possibility of this type of ferroelectricity has been suggested experimentally in a variety of transition-metal oxides, e.g. Pr(SrFORMULA CaFORMULA )MnFORMULA OFORMULA , {{cite:2b0373c7-a7dc-4788-9f1d-ff534d8e060b}} LuFeFORMULA OFORMULA , {{cite:6a64d5f0-08f2-47cb-8895-61ddbaf1cecb}}, {{cite:2e7bd6e8-9072-41bc-b97d-ccfcef7079fa}} low-dimensional organic salts, e.g. TMTTFFORMULA X (FORMULA =PFFORMULA , AsFFORMULA ), {{cite:e67fe112-2b17-479e-ae52-aff6da56093d}} FORMULA -(BEDT-TTF)FORMULA IFORMULA  {{cite:ea55ada6-d989-419e-9e3c-6e17fcd26c51}}, FORMULA -(BEDT-TTF)FORMULA CuFORMULA (CN)FORMULA  {{cite:8436f72c-f338-40d9-b835-cbd514bb6a33}}, {{cite:2b4e2ccf-7274-4ba1-86f7-8c73b2e3dafd}}, {{cite:0a1ac2db-7104-42bb-8f2c-bc3b6b3dce6c}} and others.
+Most of this type of material belongs to the so-called quarter-filled system where the number of carrier per site is 0.5.
+The electronic ferroelectricity has some similarities to the hydrogen-bond type ferroelectricity; localization and delocalization of charged particles, i.e. electron or proton, are concerned in the ferroelectric transition.
+One noticeable difference between the two is that the electron mass is much smaller than the proton mass. Therefore, large dielectric fluctuation is expected to play crucial roles in the electronic ferroelectricity.
+Layered iron oxide FORMULA FeFORMULA OFORMULA  (FORMULA =Lu, Yb, Y) is recognized as a representative electronic ferroelectricity.
+The crystal structure in FORMULA FeFORMULA OFORMULA  consists of a stacking of the FORMULA -O layers and the Fe-O layers where Fe ions form the paired-triangular lattices. {{cite:39947cb5-b8ec-4843-83aa-06dcd4f59e18}}
+A nominal valence of an Fe ion is 2.5+, and an equal amount
+of FeFORMULA  with a FORMULA  configuration and FeFORMULA  with FORMULA  coexists.
+A charge order of Fe FORMULA  electrons in LuFeFORMULA OFORMULA  was found by the x-ray and electron diffraction experiments {{cite:327a642d-4ae8-45a8-b32a-17bde2160701}}, {{cite:1ca9c905-157e-44b9-9f74-0b265d4e0e9e}}, {{cite:103b68a0-32cd-470f-9b7a-21d0bde639e3}}, {{cite:b229d207-3275-45c1-adfa-52887298351a}}
+where the superlattice peaks appear at FORMULA  below about 320K.
+A ferrimagnetic long-range order was confirmed by the neutron diffraction experiments where the magnetic peaks at FORMULA  are observed below about 250K {{cite:bd500bfd-b97d-4cbb-b209-4ef9a171e8da}}, {{cite:e8ab0073-3619-4a2f-9427-d24aca33fcff}}, {{cite:04cf4aca-fdd6-4bed-aef0-34a350433da6}}.
+The temperature dependence of the electric polarization was measured by the pyroelectric current.
+It was found that the polarization appears around 320K and increases around 250K. {{cite:2e7bd6e8-9072-41bc-b97d-ccfcef7079fa}}, {{cite:6a64d5f0-08f2-47cb-8895-61ddbaf1cecb}}
+These results are interpreted that the electric polarization is deduced by the FeFORMULA /FeFORMULA  charge order, and
+is strongly coupled with the spins in Fe ions.
+A primitive model for the observed charge order in FORMULA FeFORMULA OFORMULA  associated with the electric polarization was first proposed by Yamada and coworkers {{cite:327a642d-4ae8-45a8-b32a-17bde2160701}}, {{cite:1ca9c905-157e-44b9-9f74-0b265d4e0e9e}}.
+It was considered that Fe ions are aligned as FORMULA  FeFORMULA -FeFORMULA - FeFORMULA  FORMULA  along one of the crystal axes in a upper triangular layer and as
+FORMULA  FeFORMULA -FeFORMULA -FeFORMULA  FORMULA  in a lower layer.
+As a result, charge imbalance in a paired triangular lattice induces the electric dipole moment.
+Recently, detailed microscopic calculations for stability of the polar CO structure have been presented. {{cite:56081a2a-8db7-4c0f-bdd1-3b35923cd1a6}}, {{cite:7e087f3a-1ba3-44b7-abdc-c343620df38a}}, {{cite:21c27cc3-918b-4a8c-9024-613966d690d2}}, {{cite:b4fadadb-2a7f-4837-815e-f44a94b96354}}, {{cite:875ac7b0-ad06-4177-93de-21b061a313d2}}, {{cite:1b3a0aa8-db9a-461c-886c-d73d3e8797bb}}.
+One of the present authors and coworkers presented a microscpic theory for the electronic structure and dielectric properties. {{cite:7e087f3a-1ba3-44b7-abdc-c343620df38a}}, {{cite:21c27cc3-918b-4a8c-9024-613966d690d2}}
+They treated the electronic charge and spin degrees of freedom as classical variables in the calculation, and showed that the polar charge order does not appear at zero temperature and is stabilized by the thermal fluctuation effect.
+This result is consistent with the recent optical experiments where large charge fluctuation remains far below the charge ordering temperature {{cite:4882eeac-4555-4b15-8631-7135c251f9b1}}.
+As well as the thermal fluctuation, the quantum fluctuation of the electronic charge, i.e. the electron transfer between the sites where the electronic potential takes its minima, is expected to have major contribution to this-type of ferroelectric transition.
+This is because most of this type of ferroelectricity is located at vicinity of the metal-insulator transition.
+Role of the quantum fluctuation on ferroelectricity has been examined for a long time in the hydrogen-bond type ferroelectricity {{cite:19b4fb83-7cb0-4c96-a4f8-ff1773f5cf30}}, {{cite:a34776fb-4b7a-4df5-b6d0-06588aca1032}}, i.e. the proton tunneling between the double-potential well, and the quantum paraelectric oxides, such as SrTiOFORMULA  and KTaOFORMULA . {{cite:2bc8def9-0f08-4291-b2e3-5a9e9e222db3}}
+It is known that the quantum motion of protons/ions prevents the system from the long-range ferroelectric order.
+More remarkable quantum fluctuation effect is expected in the electronic ferroelectricity, because the electron mass is much smaller than the ion/proton mass.
+It is highly nontrivial whether the conventional quantum fluctuation effects seen in the hydrogen-bond type ferroelectricy and the quantum paralectric oxides are naively applicable to the electronic ferroelectricity or not.
+The present paper addresses the issue of the quantum fluctuation effect in the electronic ferroelectricity, in particular, the dielectric and magneto-dielectric properties in the layered iron oxides.
+We introduce the three-types of the extended FORMULA  model in a paired-triangular lattice and focus on the electron transfer effect between the layers, corresponding to the quantum fluctuation of the electric dipole moment.
+The models are analyzed by the variational Monte-Carlo (VMC) method by which the quantum fluctuation effect, the long-range Coulomb interaction and the geometrical frustration are treated properly.
+It is shown that the electron transfer between the layers tends to stabilize the polar charge order, in contrast to the conventional manner of the quantum fluctuation effect on the ferroelectricity.
+The spin degree of freedom and the realistic lattice structure in FORMULA FeFORMULA OFORMULA  reinforce the electric polarization.
+In Sect. II, the extended FORMULA  model in the paired-triangular lattice and the formulation of the VMC method are introduced, and the numerical results in this model are presented.
+In Sect. III, roles of the spin degree of freedom in the dielectric and magneto-dielectric properties are examined.
+In Sect. IV, the numerical results in the model, where the realistic crystal structure in FORMULA FeFORMULA OFORMULA  is taken into account, are presented.
+Section V is devoted to summary and discussion.
+A part of the present results were briefly reported in Ref. {{cite:3c206bc0-9d8a-4523-b26b-fbb4faa63f84}}.
+
+Electric Polarization in FORMULA  Model 
+As mentioned in the previous section, the crystal lattice of FORMULA FeFORMULA OFORMULA  consists of the alternate stacking of the Fe-O double-triangle layers, termed W-layer, and the FORMULA -O layers along the FORMULA  axis. A unit cell with the RFORMULA c symmetry includes the three W-layers and the three FORMULA -O layers.
+We focus on electronic structure in a W-layer which dominates the electric and magnetic properties in FORMULA FeFORMULA OFORMULA . We consider the three types of the FORMULA  model in the W-layer,
+and start from the spin-less FORMULA  model in a regularly stacked paired-triangular lattice.
+The double triangular lattices are stacked along the FORMULA  axis as shown in Fig. REF .
+The long-range Coulomb interactions and the inter-site electron transfers between the spin-less fermions are taken into account.
+A way of a stacking of the triangular lattices is somewhat different from that in FORMULA FeFORMULA OFORMULA .
+Effects of the spin degrees of freedom and the realistic stacking of the triangular layers will be introduced in Sects.  and , respectively.
+FIGURE 
+The model Hamiltonian is given as
+FORMULA 
+with
+FORMULA 
+and
+FORMULA 
+where
+FORMULA  is the creation operator for
+a spin-less fermion at site FORMULA  on the upper layer FORMULA 
+or the lower layer FORMULA ,
+and FORMULA  is the number operator.
+A subscript FORMULA  takes a two-dimensional coordinate in a triangular lattice.
+To examine roles of frustration,
+we consider an anisotropic triangular lattice where bonds along the [110] direction are inequivalent to the bonds along [100] and [010] as shown in Fig. REF .
+We introduce the three kinds of the transfer integrals FORMULA , FORMULA  and FORMULA  for the [100]/[010], [110] and [001] directions, respectively.
+In the same way,
+we introduce the three kinds of the inter-site Coulomb interactions FORMULA , FORMULA  and FORMULA  for the nearest-neighbor (NN) pairs.
+Symbols FORMULA  and
+FORMULA 
+represent summations for the NN pairs in the [100]/[010] and [110] directions, respectively.
+Ratios FORMULA  and FORMULA  represent magnitude of frustration.
+The number of the fermion per site is 0.5.
+We analyze this model by using the VMC method.
+A variational wave function is given by a following product form,
+FORMULA 
+where FORMULA  is the one-body Hartree-Fock (HF) part and FORMULA 
+is the many-body correlation factor.
+We introduce the Gutzwiller-type correlation factor given by
+FORMULA 
+
+where FORMULA , FORMULA  and FORMULA  are the variational parameters.
+FIGURE 
+As shown in Fig. REF ,
+in the one-body part of the wave function, we consider the following four-types CO structures:
+(i) a two-fold CO along the [110] direction termed COFORMULA -I,
+(ii) a two-fold CO along [100] termed COFORMULA -II,
+(iii) a three-fold CO along [110] termed COFORMULA , and
+(iv) a four-fold CO along [110] termed COFORMULA .
+These CO structures are the candidates for the mean-field (MF) ground state.
+In the COFORMULA -I, COFORMULA -II and COFORMULA  structures,
+stackings of the CO patterns in the two triangular-layers are out-of-phase.
+In each CO, the one-body part of the wave function is given by the HF wave function where the corresponding CO's are assumed in the MF order parameter.
+We take that black, white and grey circles in Fig. REF  correspond to the MF charge densities of
+FORMULA , FORMULA  and zero, respectively.
+The MF order parameter FORMULA  is regarded as a variational parameter and is optimized in FORMULA .
+For example, FORMULA  for the COFORMULA  structure is obtained by
+diagonalizing the following HF Hamiltonian,
+FORMULA 
+where
+FORMULA 
+FORMULA 
+FORMULA 
+We define
+FORMULA 
+and
+FORMULA 
+where FORMULA  and FORMULA  are the wave-vectors along the FORMULA  and FORMULA  directions, respectively.
+A subscript FORMULA  represents the three sublattices in the COFORMULA  structure shown in Fig. REF (c), and
+the summation FORMULA  runs over the reduced two-dimensional Brillouin zone.
+The operator FORMULA  is the Fourier transform of FORMULA  where site coordinate is redefined by the two subscripts FORMULA  and FORMULA .
+The one-body parts of the wave-functions for other CO's are defined in the same way.
+A polar COFORMULA  structure of the present interest has a possibility to be realized in the COFORMULA  structure, when all the grey circles in the upper (lower) plane in Fig. REF (c) becomes charge rich (poor) sites due to the correlation factor FORMULA  in a case of the full electric polarization.
+In the numerical calculation, we adopt FORMULA 10FORMULA  samples in most of the VMC simulations.
+The fixed-sampling method is used to optimize the variational parameters {{cite:5b83dc06-1e60-4ba8-871c-a9672dcbebb1}}.
+An error of the energy expectation value is of the order of FORMULA .
+Cluster sizes are of FORMULA  FORMULA 
+sites with the periodic-boundary condition and the antiperiodic-boundary condition.
+FIGURE 
+In Fig. REF , the phase diagram is presented
+in the plane of FORMULA  and FORMULA .
+We chose FORMULA  and FORMULA .
+This phase diagram is obtained from the calculated energy and charge correlation function defined by
+FORMULA 
+where FORMULA  and FORMULA  is a position of site FORMULA  on the FORMULA  layer.
+In the classical limit, i.e. FORMULA , the COFORMULA -I and COFORMULA  structures are realized in the regions of FORMULA  and FORMULA , respectively.
+At FORMULA  with FORMULA , three CO structures, i.e.
+COFORMULA -II, COFORMULA , and
+COFORMULA , are degenerate.
+When the electron transfer FORMULA  is introduced,
+the COFORMULA  structure is stabilized in a finite parameter region.
+FIGURE 
+FIGURE 
+Let us focus on the results in FORMULA  in more detail.
+In Fig. REF (a), the energy expectation
+FORMULA  is plotted as
+a function of FORMULA .
+Reduction of FORMULA  in COFORMULA  with increasing FORMULA  is more remarkable than those in the other CO structures.
+A stabilization of the COFORMULA  structure is attributed to the FORMULA -linear dependence of FORMULA , in contrast to the quadratic dependence in other CO's.
+The charge correlation function at
+FORMULA  is presented in Fig. REF (b).
+A possible maximum value of FORMULA  is FORMULA  for the COFORMULA  structure.
+Magnitude of FORMULA  is about FORMULA  of its maximum value below FORMULA  and is almost independent of the system size FORMULA .
+This correlation almost disappears above FORMULA  where the metallic phase appears as shown later.
+In Fig. REF (c),
+we plot the correlation function of the electric polarization defined by
+FORMULA 
+with
+FORMULA 
+A possible maximum value of FORMULA  in COFORMULA  is one.
+We also present the results for FORMULA  and FORMULA  in Fig. REF 
+to compare FORMULA 's in several CO's.
+Magnitude of FORMULA  in COFORMULA  is much larger than those in COFORMULA -I and COFORMULA .
+However, values of FORMULA  decrease almost by half with increasing the system size FORMULA  from 6 to 12. These results indicate that the electric polarization in the thermodynamic limit is supposed to be much smaller than the maximum value.
+We conclude that a large polarization fluctuation appears in the COFORMULA  phase, in comparison with other CO's, but the robust electric polarization is not expected in the thermodynamic limit.
+As explained below, the energy gain in COFORMULA  is caused by the inter-layer electron transfer, FORMULA .
+Let us focus on a pair of sites represented by grey circles
+in the upper and lower planes in Fig. REF (c).
+Since these sites are surrounded by the in-plane three NN charge-rich sites and the NN three poor sites, the Coulomb interactions between NN sites are canceled out, and the classical energy does not depend on the charge configurations at the pair of grey-circle sites.
+Thus, the stabilization of the COFORMULA  structure is caused by the first order of FORMULA  between the grey-circle sites.
+This situation does not realize in other CO structures.
+Even when the longer-range Coulomb interactions than
+FORMULA , FORMULA  and FORMULA  are taken into account,
+the above scenario for stabilization of COFORMULA  is expected to survive in the case where FORMULA  is larger than those interactions.
+To support this scenario, the energy expectations are calculated in
+the second-order perturbation with respect to FORMULA  for several CO's.
+The results are shown in Fig. REF (a).
+In the region of small FORMULA , the FORMULA -linear dependence of FORMULA  in COFORMULA  obtained by the VMC method is well reproduced by the perturbational calculation.
+It is concluded that the COFORMULA  is stabilized by a combined effect of the
+the geometrical frustration effect in the triangular lattice and the electron transfer between the layers.
+We briefly touch the metal-insulator transition in this model.
+Discontinuous changes in FORMULA  and FORMULA  at FORMULA  shown in Figs. REF (b) and 4(c) are associated with the metal-insulator transition.
+This is directly confirmed by calculating the momentum-distribution function
+defined by
+FORMULA 
+In Fig. REF , FORMULA  at FORMULA  is shown
+for various values of FORMULA  along the high-symmetry lines in the Brillouin zone.
+In FORMULA , discontinuous changes are seen in FORMULA  along FORMULA -FORMULA  and FORMULA -FORMULA .
+FIGURE 
+Let us compare the present results with the ones in the single-layer FORMULA  model.
+It was reported in Refs. {{cite:d039558e-4c57-4a58-9217-24e473ae4488}}, {{cite:a28ab4bf-51f9-43e0-995a-2f4c7c49e259}}, {{cite:791c7e3a-ed1c-42bf-9b46-8c5b786e8cc1}} that
+a long-range three-fold CO coexists with a metallic character in the case of FORMULA  and FORMULA 
+in the single-layer FORMULA  model.
+This is termed a "pinball liquid" (PBL) state.
+Here we set up the trial wave function for the PBL state in the paired-triangular lattice obtained by diagonalizing the following HF Hamiltonian,
+FORMULA 
+where
+FORMULA 
+and
+FORMULA 
+We introduce FORMULA  and FORMULA  as the wave-vectors along the FORMULA  and FORMULA  directions, respectively,
+and define
+FORMULA 
+FORMULA 
+and
+FORMULA 
+where FORMULA  is a numerical factor taking 1 and FORMULA .
+When FORMULA , the trial wave function represents the so-called electron-pinned PBL state where one of the three sublattices in the triangular lattice is occupied by 1/3-electrons per site and remaining 1/6-electrons per site move on other two subllatices.
+In this state, the mean fields in three sublattices
+are taken to be FORMULA  and FORMULA .
+When FORMULA , the wave function represents the so-called hole-pinned PBL state,
+where one of the three sublattices is occupied by 1/3-holes per site and
+1/6-holes per site move on others.
+The mean fields are taken to be
+FORMULA  and FORMULA .
+The stabilities for the two PBL states are compared with the COFORMULA  state.
+The electron-pinned PBL has much higher energy in comparison with COFORMULA 
+in the present parameter range.
+In Fig. REF , we present the energy expectations of the hole-pinned PBL state and the COFORMULA  state at FORMULA  and FORMULA .
+The PBL is realized only in a region of the small inter-layer Coulomb interaction, FORMULA < FORMULAFORMULA  0.1FORMULA V-t FORMULA
+FIGURE 
+
+Role of Spin Order
+
+So far, we examine the spin-less FORMULA  model in a paired triangular lattice.
+It is shown that the inter-plane transfer integral stabilizes the COFORMULA  phase where a larger polarization fluctuation appears in comparison with other types of CO's.
+However, magnitude of the electric polarization in the thermodynamic limit is supposed to be much smaller than the possible maximum value.
+We consider that additional small factors, which are not taken into account so far, may stabilize the electric polarization in the COFORMULA  phase.
+In this section, we investigate roles of the spin degree of freedom on the dielectric and magneto-dielectric properties in a paired-triangular lattice.
+We consider the spin degree of freedom on the basis of LuFeFORMULA OFORMULA  where two kinds of spin, FORMULA  for FeFORMULA  and FORMULA  for FeFORMULA , exist.
+The electron configurations of FeFORMULA  and FeFORMULA  are FORMULA  and FORMULA , respectively. It is thought that an excess electron in FeFORMULA  occupy one of the doubly degenerate FORMULA  and FORMULA  orbitals which have a larger transfer integral in the plane than other FORMULA  orbitals. {{cite:7e087f3a-1ba3-44b7-abdc-c343620df38a}}, {{cite:21c27cc3-918b-4a8c-9024-613966d690d2}}
+We introduce, in the model Hamiltonian,
+a localized spin with FORMULA  at each site, itinerant carriers corresponding to the excess electrons in FeFORMULA ,
+and the ferromagnetic Hund couple between them at each site.
+The number of itinerant carriers per site is set to be 0.5.
+This is the generalized double-exchange model.
+For simplicity, we assume that the Hund coupling is infinite, and the localized spins are the Ising type denoted by FORMULA  FORMULA  which takes FORMULA .
+The Hamiltonian is given by
+FORMULA 
+The first and second terms represent the electron transfer and the inter-site Coulomb interaction, respectively, given by
+FORMULA 
+and
+FORMULA 
+where FORMULA  is the electron annihilation operator at site FORMULA  on the FORMULA  layer
+with spin FORMULA .
+The third term in Eq. (REF ) is for the antiferromagnetic superexchange interaction between the localized spins given by
+FORMULA 
+where the bond-dependence of the antiferromagnetic superexchange interaction FORMULA  is neglected.
+In FORMULA , we consider that the transfer integrals depend on configuration of the localized spins.
+In the infinite-limit of the Hund coupling,
+it is reasonable to assume the following form of the transfer integral,
+FORMULA 
+where FORMULA  is introduced in Eq. (REF ).
+We also define FORMULA  and
+FORMULA  in FORMULA  in the same way.
+A schematic view of the Hamiltonian is presented in Fig. REF .
+As for the localized spin structure, we consider all possible ordered structures characterized by the momenta FORMULA  which corresponds to the observed neutron diffraction peak at FORMULA  in LuFeFORMULA OFORMULA . {{cite:bd500bfd-b97d-4cbb-b209-4ef9a171e8da}}, {{cite:e8ab0073-3619-4a2f-9427-d24aca33fcff}}, {{cite:04cf4aca-fdd6-4bed-aef0-34a350433da6}}
+These magnetic structures are shown in Fig. REF 
+where equivalent patterns are not shown.
+FIGURE 
+FIGURE 
+We analyze this model Hamiltonian by using the VMC method.
+The one-body part of the variational wave function FORMULA  introduced in Eq. (REF ) for the COFORMULA  structure is obtained from the HF Hamiltonian.
+Here, we redefine the HF Hamiltonian in the three sublattices as follows,
+FORMULA 
+with
+FORMULA 
+FORMULA 
+where we introduce
+FORMULA  and
+FORMULA .
+The correlation factor FORMULA  is defined in Eq. (REF ).
+The energy is optimized in each spin configuration shown in Fig. REF . A ratio of the number of the spin-up and spin-down electrons, FORMULA , is also optimized.
+We restrict our calculations to the case of
+FORMULA  and FORMULA .
+FIGURE 
+FIGURE 
+In Fig. REF , the optimized energies in the six spin configurations are plotted as a function of FORMULA .
+It is shown that the energy in the spin configuration 4 (see Fig. REF ) is the lowest.
+In Fig. REF ,
+the energy and the electric polarization correlation in the spin configuration (4) are plotted as a function of FORMULA  where FORMULA .
+At FORMULA , the energy minima and a large magnitude of the polarization are realized.
+These magnitudes are almost independence of the system size FORMULA .
+That is, the spin degree of freedom induces the robust electric polarization.
+FIGURE 
+The spin structure realized at the energy minima shown in Fig. REF (a) is presented in Fig. REF .
+Let us focus on sites A and B in the upper layer and consider the electron transfer from these sites to the sites just below them.
+When the spin degree of freedom is neglected, the classical energy is not changed by these electron transfer processes.
+This is the similar situation to the COFORMULA  structure in the spin-less FORMULA  model as explained in the previous section.
+Therefore, the energy in this structure is gained by the linear order of the electron transfer between the layers.
+However, in contrast to the previous spin-less case, the spin order suppresses the electron transfer between the layers and promotes the charge imbalance between the two layers as follows;
+1) In the upper layer, 2/3 of the localized spins are polarized toward the upper direction. Therefore, the up-spin conduction electrons (A) are confined in the upper layer to gain the in-plane kinetic energy.
+2) The transfer of the down-spin electron (B) from the upper layer to the lower layer is prevented, because increasing of the number of the down-spin electron in the lower layer enhances the kinetic energy.
+As the results, 2/3 of the electrons are confined in the upper layers and the charge imbalance between the layers occurs.
+That is, the electric and magnetic polarizations are induced cooperatively.
+
+Effect of Realistic Crystal Structure in FORMULA FeFORMULA OFORMULA 
+
+In this section, we introduce the realistic crystal structure in FORMULA FeFORMULA OFORMULA 
+as a candidate to stabilize the electric polarization in the COFORMULA  structure.
+In FORMULA FeFORMULA OFORMULA , a position of a Fe ion in the upper layer is not upon
+a Fe ion in the lower layer, but is upon an O ion surrounded
+by three in-plane Fe ions as shown in Fig. REF .
+We modify the Hamiltonian FORMULA  defined in Eq. (REF )
+by taking this crystal structure into account. The model Hamiltonian is given by
+FIGURE 
+FORMULA 
+with
+FORMULA 
+and
+FORMULA 
+A schematic view of the lattice structure and the interactions are shown in Fig. REF .
+We consider the long-range Coulomb interactions between the in-plane NN sites (FORMULA ), those between the inter-plane NN sites (FORMULA ), and those between the inter-plane next-nearest-neighbor (NNN) sites (FORMULA ).
+Symbols FORMULA , FORMULA  and
+FORMULA  represent summations for the pairs corresponding to FORMULA , FORMULA  and FORMULA , respectively.
+When the FORMULA -type Coulomb interaction is assumed,
+we have FORMULA  and FORMULA 
+for the crystal structure in FORMULA FeFORMULA OFORMULA . {{cite:39947cb5-b8ec-4843-83aa-06dcd4f59e18}}
+As for the electron transfer term FORMULA ,
+the transfer integral between the in-plane NN sites (FORMULA ),
+and that between the inter-plane NN sites (FORMULA ) are considered.
+FIGURE 
+This model is analyzed by the VMC method.
+In the many-body correlation term FORMULA , we consider the variational parameters FORMULA , FORMULA  and FORMULA 
+which correspond to the interactions FORMULA , FORMULA  and FORMULA , respectively, instead of Eq. (REF ).
+In the one-body term of the wave function FORMULA , we adopt the following CO structures:
+(i) a three-fold CO along the [100] direction termed COFORMULA ,
+(ii) a six-fold CO along the [100] direction termed COFORMULA ,
+(iii) two types of two-fold CO's along [100], i.e. (iii) COFORMULA -A
+and (iv) COFORMULA -B, and (v) a four-fold CO along [100] termed COFORMULA .
+These are schematically shown in Fig. REF .
+We define that the COFORMULA  structure in this realistic lattice has a polar CO configuration which is schematically given as
+FORMULA 
+(FORMULA ) along FORMULA  in the upper (lower) plane.
+Symbols FORMULA  and FORMULA  are for the charge densities of FORMULA 
+and FORMULA , respectively, where FORMULA  is the variational parameter in the one-body part of the wave function.
+When this CO is fully ordered,
+the electric polarization FORMULA  in Eq. (REF ) is one.
+The CO configuration along FORMULA  in the non-polar COFORMULA  structure is schematically given as
+FORMULA 
+(FORMULA  )
+in the upper (lower) plane.
+In each CO's, the one-body part of the wave function is obtained from the HF Hamiltonian.
+For example, the HF Hamiltonian for the polar COFORMULA  is given by
+FORMULA 
+with
+FORMULA 
+FORMULA 
+FORMULA 
+where
+FORMULA 
+FORMULA 
+and
+FORMULA 
+The summation FORMULA  runs over the Brillouin zone
+for the CO structure with the momentum FORMULA .
+The charge densities in sublattices A and B in the upper plane and
+that in C in the lower plane are FORMULA , and those in other sublattices are FORMULA .
+The one-body parts of the wave functions in other CO's are also obtained in the same way.
+FIGURE 
+FIGURE 
+In Fig. REF , the phase diagram in the plane of FORMULA  and FORMULA  is presented.
+We chose the relations FORMULA  and FORMULA ,
+although the results introduced below are robust qualitatively around these parameter.
+This phase diagram is obtained by the energy and the charge correlation function introduced in Eq. (REF ).
+A point of FORMULA  at FORMULA  is a fully frustrated point which corresponds to FORMULA  and FORMULA  in Fig. REF .
+In this point, the polar COFORMULA  is degenerate with COFORMULA  and COFORMULA -A.
+It is shown that the polar COFORMULA  is realized in finite parameter region, when the electron transfer is taken into account.
+We show the results in FORMULA  in more detail.
+In Fig. REF (a), we plot the energy differences of the several CO's from that in the COFORMULA  structure.
+The result for COFORMULA -B is much larger than the scale in the figure.
+The polar COFORMULA  phase competes mainly with the non-polar COFORMULA ,
+and is stabilized in FORMULA < FORMULAFORMULA  0.15FORMULA 1/3FORMULA LFORMULA PFORMULA 1/6FORMULA 1/3FORMULA A stability of the polar COFORMULA  is attributed to a combination of the inter-layer
+charge transfer, FORMULA , and the long-range Coulomb interaction, FORMULA , in this realistic crystal structure as follows.
+Let us focus on the bonds represented by the gray bars in the Fig. REF (a).
+These bonds connect the black-and-white circles and are responsible for the electric dipole moments.
+The inter-layer Coulomb interaction FORMULA  causes the interaction along the FORMULA  direction between the bonds, and induces the ferroelectric interaction between the dipole moments along this direction.
+Although the dipole moments are induced in the local bonds,
+there is still competition between the polar COFORMULA 
+and the antiferro-electric COFORMULA 
+which are in the different configurations of the dipole moments along [100],
+as shown in Figs. REF (a) and (b).
+This degeneracy is lifted by FORMULA  as follows.
+In Fig. REF , we compare the inter-layer charge fluctuation process by FORMULA  in COFORMULA  with that in COFORMULA .
+The energy reduction due to this type of the charge fluctuation
+is of the order of FORMULA ;
+this fluctuation easily occurs, because the intermediate-state energy FORMULA  is the smallest Coulomb interaction in the model of FORMULA .
+In the COFORMULA  structure, the charge fluctuation occurs at the sites represented by the black (white) circles connected by arrows in the upper (lower) layer in Fig. REF (a).
+On the other hand, in the case of the COFORMULA  structure, the number of sites where this type of charge fluctuation occurs are half of that in COFORMULA , as shown in Fig. REF (b). In other CO's, i.e. COFORMULA 's and COFORMULA , this fluctuation process is prohibited.
+FIGURE 
+In order to support this scenario, we calculate the energies by the second-order perturbation in terms of FORMULA  and FORMULA .
+A general form of the energies in the CO's, shown in Fig. REF (a), are given by
+FORMULA 
+where FORMULA  and FORMULA  are positive numerical constants.
+The second and third terms imply energy gains from the intra-layer and inter-layer charge
+fluctuations, respectively.
+We have FORMULA (2.00,2.76) in polar COFORMULA , (2.60,1.83) in COFORMULA ,
+(2.67,0.67) in COFORMULA -A and (2.67,1.33) in COFORMULA .
+That is, in the polar COFORMULA , FORMULA  is smallest,
+while FORMULA  is largest among them.
+This indicates that the stabilization of the polar COFORMULA  phase
+is mainly caused by the inter-layer charge fluctuation due to FORMULA .
+
+Summary and Discussion
+
+In this section, we discuss the relation between the present results and our previous results in Ref. {{cite:21c27cc3-918b-4a8c-9024-613966d690d2}}, and their implications for the layered iron oxides.
+In our previous examinations, we study the dielectric properties in a paired-triangular lattice;
+the long-range Coulomb interactions are introduced between the electronic charges which are treated as classical variables.
+The model Hamiltonian was analyzed by the mean-field method and the classical Monte-Carlo simulation in finite size clusters.
+It was shown that the three-fold charge ordered state, i.e. COFORMULA , does not appear at zero temperature except for the fully frustrated point, corresponding to FORMULA  in Fig. 7 in Ref. {{cite:21c27cc3-918b-4a8c-9024-613966d690d2}} and FORMULA  in Fig. REF ,
+and is stabilized in finite temperatures due to thermal fluctuation.
+The obtained V-shape phase diagram in the temperature and FORMULA  plane (see Fig. 7 in Ref. {{cite:21c27cc3-918b-4a8c-9024-613966d690d2}}) is similar to that in Fig. REF  where the electron transfer integral corresponds to the temperature.
+This comparison suggests that the thermal and quantum fluctuations play similar roles for stabilization of the polar three-fold charge ordered state.
+Naively speaking, the COFORMULA  state is not a robust charge ordered state, since, as shown in Fig. REF (a),
+the intra-layer NN Coulomb interactions at black (white) circles in the upper (lower) plane are canceled out. Therefore, the thermal motion and the quantum virtual motion of charges at these sites easily occur, and these contribute to the entropy gain and the transfer energy gain in the classical and quantum cases, respectively.
+This is the so-called order-by-fluctuation process.
+One notable difference between the two types of the fluctuation is that the polarization correlation FORMULA  defined in Eq. (REF ) is weaken with increasing system size in the finite temperature classical calculation, while it is robust with increasing FORMULA  in the present quantum calculation at FORMULA .
+In the classical Monte Carlo simulation in finite temperatures, a large number of non-polar structure coexists with the polar COFORMULA  structure.
+As a result, the thermal expectation value of the polarization correlation tends to decrease with the system size.
+On the other hand, in the present VMC calculation where the long-rage charge ordered states are assumed in the variational wave function,
+the fully polarized charge ordered state is energetically stabilized due to the inter-layer electron transfer and the realistic crystal structure, as explained above.
+Through these two theoretical examinations, i.e. the classical Mote-Carlo simulation in finite temperature and the VMC simulation at FORMULA , we conclude that charge fluctuation plays essential roles in the dielectric properties in layered iron oxides.
+These theoretical results have implications for the experimental results in layered iron oxides. The charge fluctuation between FeFORMULA  and FeFORMULA  has been observed in the optical absorption experiments and the MFORMULA ssbauer spectroscopy measurements. {{cite:4882eeac-4555-4b15-8631-7135c251f9b1}}, {{cite:3ba62874-516e-462e-b482-bb354b005f3f}} It was suggested in the temperature dependence of the optical absorption spectroscopy that the charge fluctuation remains to be large even far below the charge ordering temperature. This is consistent with our scenario that the thermal/quantum charge fluctuation stabilizes the polar charge order.
+The diffusive nature in the dielectric constant observed near the charge ordering temperature is also related to the remarkable charge fluctuation predicted in the COFORMULA  state.
+Another relation of the present results to the layered iron oxides is the several different charge ordered states observed by changing the rare-earth ion in FORMULA FeFORMULA OFORMULA .
+In LuFeFORMULA OFORMULA , the three-fold charge order associated is stabilized below 320K. On the other hand, in YFeFORMULA OFORMULA , a sequential phase transition occurs as (the charge disordered state) FORMULA  (the polar three-fold CO) FORMULA  (the non-polar CO's with different periodicities) by decreasing temperature. {{cite:e323ad83-3fa5-4f0d-9740-232fba032970}} That is, the polar CO phase only appears in a middle range of temperature.
+This result is consistent with our results of Fig. REF  and Fig. 7 in our previous paper {{cite:21c27cc3-918b-4a8c-9024-613966d690d2}}, when we speculate that a change of the FORMULA  ion corresponds to a change of the Coulomb interaction parameter FORMULA  and/or the electron transfer intensity.
+In summary, we examine roles of the quantum fluctuation, i.e. the electron transfer effect, in the electronic ferroelectricity.
+In particular, we focus on the dielectric properties in a paired triangular lattice, motivated by the multiferroic layered iron oxides.
+The variational Monte-Carlo simulation is applied to the three types of the extended FORMULA  models.
+It is found that the quantum transfer between the triangular lattice layers tends to promote the three-fold polar charge ordered state.
+Both the spin degree of freedom and the realistic crystal structure in the layered iron oxides reinforce the electric polarization.
+Present roles of the quantum fluctuation on the ferroelectric transition are in highly contrast to the conventional manner of the quantum dielectric fluctuation in the hydrogen-bond type ferroelectricity and the quantum paraelectric oxides.
+Authors would like to thank S. Mori, N. Ikeda, H. Takashima,
+M. Naka and J. Nasu for their valuable discussions.
+This work was supported by JSPS KAKENHI, TOKUTEI from MEXT,
+and Grand challenges in next-generation integrated nanoscience.

@@ -1,0 +1,418 @@
+
+Spin polarization in the Hubbard model with Rashba spin-orbit coupling
+on a ladder
+José A. Riera
+Instituto de Física Rosario y Departamento de
+Física,
+Universidad Nacional de Rosario, Rosario, Argentina
+2018/12/10 06:54:09
+The competition between on-site Coulomb repulsion and Rashba spin-orbit
+coupling (RSOC) is studied on two-leg ladders by numerical techniques. By
+studying persistent currents in closed rings by exact diagonalization,
+it is found that the contribution to the current due to the RSOC
+FORMULA ,
+for a fixed value of the Hubbard repulsion FORMULA  reaches a maximum at
+intermediate values of FORMULA . By increasing the repulsive
+Hubbard coupling FORMULA , this spin-flipping current is suppressed and
+eventually it becomes opposite to the spin-conserving current. The main
+result is that the spin
+accumulation defined as the relative spin polarization between the two
+legs of the ladder is enhanced by FORMULA . Similar results for this
+Hubbard-Rashba model are observed for a completely different setup in which
+two halves of the ladders are connected to a voltage bias and the ensuing
+time-dependent regime is studied by the density matrix-renormalization
+group technique. It is also interesting a combined effect between FORMULA 
+and FORMULA  leading to a strong enhancement of antiferromagnetic order which
+in turn may explain the observed behavior of the spin-flipping current.
+The implications of this enhancement of the spin-Hall effect with electron
+correlations for spintronic devices is discussed.
+71.27.+a, 71.70.Ej, 73.23.-b
+Introduction
+Recent trends in the field of spintronics{{cite:9d34db76-ae45-4384-bf16-5ea8d99e01df}}, {{cite:afd0d29b-3e87-498f-b423-2428678d6351}}, {{cite:34b01edd-4430-4cf9-b12a-1525dde327e5}} exploit
+the possibility of controlling electron spins by purely electrical
+means without using magnetic materials,{{cite:46b6b5f3-8f77-4d1c-b70f-a7f733403a15}} which is at
+the heart of the conceptual proposal of the Datta-Das spin field-effect
+transistor.{{cite:8e9083a8-5362-42c8-9964-986307d69d0b}} Key to this possibility is the Rashba
+spin-orbit (SO) interaction{{cite:b0282917-6121-460b-bf0b-4c85ffc5a18e}}, {{cite:6ef46cf4-9dbe-412c-9643-cfcf0951de7a}}
+appearing due to structure inversion asymmetry of materials and which has
+been shown to be tuned by gate voltages in semiconductor
+heterostructures.{{cite:a46aa67f-1d84-4baa-ab1a-e3c8c3dd84ee}}
+Although the main interest in the study of RSOC has been on its
+ability of generating and controlling spin polarized currents,
+another consequence of the interplay between
+charge and spin degrees of freedom induced by the RSOC is a flow of
+spins transversal to the flow of charge which is known as the
+spin-Hall effect.{{cite:e05161e1-69f0-4046-a01f-969a9b2e1b9e}}, {{cite:889a8087-00ed-48ad-9f65-d13cf77ab5e8}}, {{cite:3a891c36-302b-4d28-93a1-0985811aa01f}}, {{cite:8b6b4f4f-c34a-4c97-b43d-b8517884c95a}} If
+transport takes place along a planar strip, the spin-Hall effect leads
+to a spin accumulation with opposite projection on both edges of the
+strip.{{cite:73c6368b-18ef-4357-a944-cc87d63a4b27}}, {{cite:489a9b9f-7492-4192-99a2-1f842c88e2fe}} This has been experimentally
+observed.{{cite:ef0a9d5e-6177-4d58-bb0c-172ee982695b}}, {{cite:4dc35879-c53b-46b8-8009-d5d20c764ed4}}
+Hence, the spin-Hall effect provides a real-space separation between
+up and down spin electrons, like two ferromagnets with
+opposite polarizations, thus enhancing the metallic state and its
+conductance, and these features could also be employed in spintronics
+devices.
+Since most devices and experiments about RSOC have involved
+semiconductors, electron correlations have mostly not been included so
+far in theoretical models.
+However, there are some systems which have been recently considered
+in this field where such correlations may play an important role.
+In the first place, RSOC has been observed in oxide
+heterostructures.{{cite:acbf55f4-bd32-4849-afbe-5d7f425dd0fb}}, {{cite:b3830b07-e29b-46ac-882d-a5639560568b}}, {{cite:72f16a68-dc56-4e9b-988e-279588f90735}} Important
+effects of a RSOC have been experimentally observed in other
+transition metal oxides, particularly the iridates where the relevant
+degrees of freedom are the 5d electrons on the IrFORMULA  ions, and
+where strong correlation effects are expected.{{cite:124dfc32-31e5-4fc1-a4d3-9fdf3a24fd03}}, {{cite:adcd8746-a7ee-483e-ad58-21223334fc74}}
+It should be also taken into account that correlation
+effects become increasingly important in systems with low
+spatial dimensions. Interesting crossovers have been reported when
+moving from two-dimensional (2D) systems to quantum wires.{{cite:9443bdfa-0d9d-4435-be22-63e56160ecab}}
+In this sense, spin-orbit effects, predominantly of the Rashba type
+have been studied in quantum wires.{{cite:0a1ee986-b9e2-4922-881b-54a2fbee1e03}}, {{cite:4aff8202-bd74-4dfa-8bfe-ac4da73ba2ed}}
+The presence of RSOC in graphene and carbon nanotubes has been
+pointed out{{cite:a6a0a993-1bd5-4197-a90c-eb06f5f65a78}} and in fact a theoretical study with up
+to two interacting electrons has been done on a nanotube quantum
+dot.{{cite:bbc35fba-36f9-4cd2-8fd0-b83ddf87f618}}
+In this work, an attempt of studying the interplay between electron
+correlations and RSOC will be performed by considering a Hubbard model
+with a Rashba SOC. During the last two decades it has been realized the
+difficulties of tackling electron correlations theoretically. In studies
+of RSOC, electron correlations have been included only locally regarding
+quantum dots{{cite:16fcc0d1-bfe1-47aa-8b03-733a22f23b2b}}, {{cite:23b8f8ee-b0bd-40da-84d8-431c1d68c38c}} or on effective onedimensional (1D)
+systems using Tomonaga-Luttinger liquid approach{{cite:d08aef4f-5f2e-4b75-a305-ddbcaa115245}}
+and conformal field theory.{{cite:7b7f1931-e0fc-417d-a12d-e4d82bc0e02c}} For
+this reason, in the present work a two-leg ladder, which may be the
+narrowest quasi-1D geometry on which a spin-Hall effect
+could take place will be considered. The Hubbard-Rashba model on a
+two-leg ladder is suitable for treatment using essentially exact,
+unbiased, computational techniques, which have been enormously
+valuable in the field of strongly correlated electron systems.
+Particularly for mesoscopic systems, the full quantum many-body
+interplay between different terms of the Hamiltonian can be
+reliably captured. There are many compounds that contain two-leg
+ladder structures such as cuprates{{cite:21e30856-2c32-4ac7-8c78-55e93c1a0c2d}}, {{cite:c500dad1-af9d-491e-ae08-8366a43a4af2}},
+vanadates{{cite:b2f3a375-8cb1-4069-a799-36e0e212bf57}}, iron chalcogenides{{cite:9a790b27-2ce8-46e5-baf2-de70228ea801}}, and other
+organic and inorganic compounds, although so far the presence of a
+SOC has not been reported on such materials. It should be also
+stressed that a Hubbard model in a two-leg ladder has been proposed
+for carbon nanotubes.{{cite:b6bed595-17f1-4b1b-b49d-5bf0fd45a5b4}}
+Then, the main goal is to determine and understand
+the behavior of the spin accumulation as a function of the RSOC and
+the Hubbard repulsion FORMULA . The interplay between RSOC and FORMULA  with
+respect to a possible metal-insulator transition{{cite:d3dfba7e-8bb2-4609-89e4-b7d7c14340dc}} will not
+be discussed in the present work.
+FIGURE 
+
+Model and methods
+The Hamiltonian of the Hubbard-Rashba model in a
+square lattice is defined as:
+FORMULA 
+where the notation is standard. The first two terms corresponds to the
+usual Hubbard
+model and the last term contains the RSOC.{{cite:9a4cd760-3e1d-489c-8e46-8e96095efa37}}
+The couplings FORMULA  and FORMULA  are normalized in such a way
+that FORMULA  (which is henceforth taken as the unit of energy).
+The longitudinal (transversal) direction of the ladder corresponds to the
+FORMULA -axis (FORMULA -axis), as shown in Fig. REF (a). The RSOC in
+(REF ) corresponds to an effective Rashba electric field FORMULA 
+along the FORMULA -axis, i.e. perpendicular to the plane of the ladder. Open
+boundary conditions (OBC) are applied in the transversal direction. The
+total number of lattice sites is FORMULA . Hamiltonian
+(REF ) corresponds to the isotropic ladder, in which couplings
+are the same along both directions.
+The present study is limited to the quarter filled system (FORMULA ).
+Weak-coupling analysis{{cite:5c69ee15-94d9-4241-bf54-9fba784d1666}} has shown that the Hubbard
+model on the isotropic ladder at FORMULA  is at the boundary between
+a metal (C1S0) and an insulating (C0S1) phase.{{cite:4f288698-55b3-4db4-a37a-62a8fc92ca4b}} Exactly at
+the boundary,
+where additional metallic phases are predicted to be stable, both this
+study as well as numerical studies{{cite:f0ceff9d-5a93-46d8-b412-ffc3a3ed9aae}}, {{cite:4a072e29-4877-4d22-950d-704a136009ec}} and the present
+results point to a metallic phase, even for the values of FORMULA 
+here examined. As soon as FORMULA  is turned on, the occupied
+bonding band will split leading to a four-point Fermi surface
+and the system will behave as a metal.
+In all cases, the length FORMULA , equal to the total number of electrons,
+was set equal to FORMULA  (FORMULA  integer).
+In order to induce persistent currents, a magnetic flux piercing the
+ring formed by a closed ladder has to be applied (Fig. REF (b)).
+This magnetic flux FORMULA  is included in the Hamiltonian by the usual
+Peierls factors, which in momentum space is equivalent to replacing
+FORMULA  by FORMULA  (units
+in which FORMULA  have been adopted). These Peierls factors are
+included in both the hopping and SO terms of (REF ). The
+resulting Hamiltonian is studied using exact diagonalization (ED)
+for FORMULA . For the noninteracting case, FORMULA , by working in
+momentum space, ladders with FORMULA  up to 6400 have been
+considered.
+Due to the RSOC the total FORMULA  is not conserved hence all possible
+values of total FORMULA  have to be included in the Hilbert
+space. In order to reduce the Hilbert space dimension, translation
+symmetry along the longitudinal direction has been implemented thanks
+to the use of periodic boundary conditions (PBC) along the FORMULA -axis.
+Notice that the ladder ring shown in Fig. REF (b)
+is different from the 2D ring (Fig. REF (c)) that has been
+intensively studied in the
+non-interacting case.{{cite:a10dd7f0-a0dc-4a06-b317-a5eb457d1796}}, {{cite:5b045cd5-bc48-4baf-baa1-f7e44ea219a4}}, {{cite:1cc2a503-21db-4e89-9593-6ef88bc8937c}} Studies
+including Coulomb interactions for these rings have been limited to few
+electrons.{{cite:c6776105-c293-49f3-a67a-654cf5918d44}}
+The total current is defined as
+FORMULA 
+where FORMULA  is the ground state energy. The contribution from
+the hopping term in (REF ), the hopping or spin-conserving
+current, is then given by the usual current operator along the legs,
+FORMULA . A similar current operator can be easily
+derived for the contribution from the RSOC term in (REF ),
+that is, the SO or spin-flipping current, FORMULA . Notice
+that FORMULA  turns out to be proportional to FORMULA . Using the
+Feynman-Hellmann theorem, the total current is given by
+FORMULA . In ED calculations, FORMULA , FORMULA , and FORMULA  have
+been independently computed.
+The spin polarization due to the spin-Hall effect
+is defined as FORMULA , where FORMULA  is the
+total z-component of the spin on leg FORMULA . All physical quantities are
+ground state averages, and hence, they are functions of the magnetic
+flux FORMULA . In order to determine the effects of the Rashba and
+Hubbard couplings on these quantities, the reasonable choice of looking
+at their maximum values as a function of the flux FORMULA  was adopted.
+The second setup considered in this work is shown in Fig. REF (d),
+which corresponds to OBC along the FORMULA -axis. Here, at a given time the
+two ends of a ladder are
+connected to a voltage bias FORMULA  generating a time-dependent
+regime which is studied by DMRG. Although various sophisticated
+approaches have been proposed within DMRG to deal with this time
+evolution,{{cite:6f364f8f-d360-4762-98fe-f981c4c036f5}}, {{cite:490508f5-fe51-44db-a9c7-4340f486a0fb}}, {{cite:eb0f6b66-8d95-4e1b-9de7-f595b9db9664}} the simple
+“static" approach is implemented in the present work which is
+enough to reliably capture the main physical features in the
+small lattices studied. This is a non-equilibrium process, but a
+small value FORMULA  was adopted. In this case, the total
+current is computed as FORMULA , where
+FORMULA  is the total charge in the left half of the ladder, and FORMULA  is
+the time measured in units of the time increment FORMULA .
+FORMULA  is computed as the average of FORMULA  between the first two
+peaks of its time evolution, which can be precisely determined with a
+relatively small number of retained states FORMULA  within the static
+approach. The spin-conserving current
+FORMULA  was computed at the central links of the ladder. FORMULA 
+was computed using the same criterion as for FORMULA .
+In DMRG calculations, FORMULA  and FORMULA  have been independently computed.
+
+Results
+Noninteracting case
+The tight-binding part of the Hamiltonian is,
+in momentum space:
+FORMULA 
+in the basis: FORMULA , where “1",
+and “2" are the two legs of the ladder.
+FIGURE 
+For the general spatially anisotropic ladder:
+FORMULA 
+In the isotropic case here considered,
+FORMULA , FORMULA .
+In the tight-binding formalism, the currents FORMULA , FORMULA , and FORMULA 
+are independently computed for each value of the magnetic flux FORMULA ,
+and hence the relation FORMULA  provides an internal check of
+the calculations.
+FIGURE 
+For the case of persistent currents, Fig. REF (b), results for
+the noninteracting FORMULA  case are shown in Fig. REF  for
+various lattice sizes ranging from FORMULA  to 6400. For the total and
+the hopping currents ((Fig. REF (a),(b)), a general trend to
+decrease with increasing FORMULA  can be observed, although there
+is a considerable noise due to various level crossings as a function
+of the flux FORMULA . In addition it can be observed that
+the maximum values of the spin-flipping current (Fig. REF (c))
+and the spin accumulation (Fig. REF (d)) occur at
+FORMULA . The general decrease of FORMULA  and
+FORMULA  can be explained by a shift of the chemical potential
+away from the bottom of the anti-bonding bands (Fig. REF (a)).
+The behavior of FORMULA  is more complex and it is determined
+by the competition between the fact that FORMULA  is an overall factor
+in the operator FORMULA , and the increase in the shift between
+the upper and lower spin bands (Fig. REF (a)) with FORMULA ,
+which works against spin-flipping processes. For FORMULA 
+the band structure does not change too much and FORMULA 
+increases approximately linearly with FORMULA . For
+FORMULA , the band structure changes more strongly and
+FORMULA  starts to be suppressed. The behavior of
+FORMULA  follows that of FORMULA , and it is remarkable
+that in spite of the noise introduced by level crossings, the
+ratio FORMULA  follows a smooth monotonous
+behavior as a function of FORMULA  for large FORMULA , as shown in
+Fig. REF (b).
+FIGURE 
+
+Interacting case
+Let us discuss the correlation effects for the case of persistent
+currents, for FORMULA . Fig. REF  shows the results
+for the maximum values of the total
+current, FORMULA , the hopping and spin-orbit contributions to the current,
+FORMULA  and FORMULA , and the spin-leg polarization FORMULA 
+on the FORMULA  ladder at FORMULA . As it can be seen in
+Fig. REF (a), the total current for a fixed value of
+FORMULA  decreases with increasing FORMULA . This result is expected
+for FORMULA , i.e. for the pure Hubbard model, where it is well known
+that the conductance FORMULA  decreases with increasing FORMULA , as in the
+one-dimensional Hubbard model presenting a Luttinger liquid behavior
+where FORMULA ,{{cite:393ed2a5-a35b-49ea-9d42-69f421a24039}} where FORMULA  is the
+Luttinger exponent that determines the long-range distance
+behavior of correlations. This behavior was examined for ladders in
+Ref. orignac. The maximum value of the hopping current,
+shown in
+Fig. REF (b), follows roughly the same behavior with FORMULA  and
+FORMULA  as the total current since it is much larger than the
+spin-flipping contribution. The dip in FORMULA  and FORMULA  at
+FORMULA  (Fig. REF (a),(b)) is just a finite
+size effect as discussed above. On the
+other hand, the behavior of the maximum value of the SO current is
+quite interesting (Fig. REF (c)). For all values of FORMULA ,
+FORMULA  increases with FORMULA  until reaching a
+maximum which depends on FORMULA , and then starts to decrease becoming
+eventually negative, indicating that its direction is opposed
+to the hopping current, by convention. The most important results
+correspond to the maximum value of the spin-leg polarization shown
+in Fig. REF (d). One should first notice that FORMULA 
+increases as a function of the Coulomb repulsion FORMULA  for all values of
+FORMULA . In addition, its maximum value near FORMULA 
+observed for the noninteracting case is preserved for finite FORMULA .
+FIGURE 
+The dependence of FORMULA  and FORMULA  as a function of the
+magnetic flux, for FORMULA  and 1, is shown in
+Fig. REF . Notice that increasing FORMULA  produces a smooth
+change in the overall shape of the curve of the flux dependence of
+the computed quantities, thus justifying the adopted criterion of
+analyzing their maximum values as a function of FORMULA  and FORMULA .
+In particular, what is interesting in this plot is that the
+spin-flipping current FORMULA  (Fig. REF (a)) is inverted
+for FORMULA  for FORMULA  thus becoming opposite to the
+spin-conserving current FORMULA , as discussed before. For
+FORMULA , this feature is observed already for FORMULA 
+Fig. REF (b).
+FIGURE 
+Results for the voltage bias setup (Fig. REF (d)), for the
+FORMULA  ladder, are shown in
+Fig. REF . The behavior of the maximum values of the total,
+spin-conserving and spin-flipping currents, and of the spin accumulation
+as a function of FORMULA  for various values of FORMULA , are qualitatively
+strikingly similar to those shown for the setup involving persistent
+currents (Fig. REF ) in spite of the quite different background
+physics involved. Notice that actually the maximum values of the currents
+divided by the voltage bias FORMULA  are shown, which correspond to the
+conductance FORMULA  up to a factor of FORMULA . Comparison with results for
+the FORMULA  do not show appreciable finite-size effects.
+FIGURE 
+In Fig. REF  some typical time evolution of the total
+current and of the spin accumulation are shown for various values of
+FORMULA  and FORMULA . It is well-known that the time evolution of
+the current follows an oscillatory behavior due to the interplay
+between kinetic and potential energies. As the number of retained
+states increases, or by adopting an adaptive scheme{{cite:490508f5-fe51-44db-a9c7-4340f486a0fb}}
+in time-dependent DMRG, the current reaches a smooth plateau during
+each half-period of the time evolution. The value of the current at
+the plateau divided by the voltage bias FORMULA  is equal FORMULA ,
+where FORMULA  is the conductance (remember that units where FORMULA 
+were adopted). In the present case, the adopted criteria of
+measuring FORMULA  as the average of FORMULA  between the first
+two peaks leads to a slight overestimation of FORMULA  with respect to its
+exact value at FORMULA .
+FIGURE 
+
+Magnetic properties
+Some possible explanations of the behaviors shown in Figs. REF 
+and REF  can be obtained by examining the dependence
+of various magnetic properties with the parameters FORMULA  and FORMULA .
+FORMULA  and the static magnetic structure factor FORMULA  are
+defined as usual from the FORMULA  spin correlations:
+FORMULA 
+where the normalization FORMULA  equal FORMULA  (FORMULA ) for up (down)
+spin projections was used. With this definition, it is easy to find
+that for the non-interacting case
+FORMULA , where FORMULA  (FORMULA ) is the density
+of electrons with FORMULA  (FORMULA ) spin in a state with
+fixed total FORMULA . For FORMULA , FORMULA ,
+and when FORMULA , FORMULA ,
+since doubly-occupied sites become forbidden.
+In Fig. REF (a) the average value of FORMULA , a measure of the
+magnetic moment per site as a function of
+FORMULA  and for various values of FORMULA  is shown. As expected,
+FORMULA  increases with FORMULA , as it is well-known for Hubbard-like
+models, and it is almost independent of FORMULA . Results for
+the FORMULA  ladder PBC at zero flux are virtually indistinguishable
+with the ones obtained for the FORMULA  ladder OBC using DMRG.
+Note that for FORMULA , one gets the same value as for FORMULA ,
+in spite of the fact that since FORMULA  is not a quantum number
+for the model here considered, the ground state is a combination of
+subspaces with all possible FORMULA .
+More interesting are the results for the peak value of the static
+magnetic structure factor FORMULA , which are shown in
+Fig. REF (b) as a function of FORMULA  and for various values
+of FORMULA . For large values of FORMULA , FORMULA  has a peak
+at FORMULA , while for small values of FORMULA ,
+FORMULA  is maximal at other values of FORMULA , all of
+them with FORMULA , and in most cases at FORMULA . In
+the first place, as in Fig. REF (a), it is expected that
+FORMULA  is enhanced by FORMULA . What is unexpected is the
+strong dependence of FORMULA  with FORMULA :
+FORMULA  increases with increasing FORMULA , and
+FORMULA  increases with decreasing FORMULA .
+This is a combined effect of FORMULA  and FORMULA  since for FORMULA ,
+FORMULA  is constant and clearly the slope of
+FORMULA  with FORMULA  increases with FORMULA . Results for
+the FORMULA  ladder show a stronger dependence than the ones
+corresponding to the FORMULA  ladder and this could be explained
+by the fact that in DMRG FORMULA  calculations, the only
+included spin-spin correlations are the ones
+measured from one of the central sites of the ladder.
+The increase of the z-component of the magnetic moment can at least
+partially explain the larger values of the spin accumulation observed
+as a function of the Hubbard repulsion for a fixed value of FORMULA .
+This is shown in Fig. REF (c) where it can be observed an almost
+linear dependence of FORMULA  with FORMULA  which is expected
+for an density operator. Of course, it is not trivial the dependence
+of the slope and FORMULA  values with FORMULA .
+The peak of the magnetic structure factor at
+FORMULA , indicating the presence of an antiferromagnetic
+(AFM) order could in turn
+provide some insight on the suppression of the spin-flipping current
+FORMULA  for large FORMULA  and FORMULA , shown in Figs. REF (c)
+and REF (c). For an AFM order, two electrons occupying nearest
+neighbors sites along one leg of the ladder would likely have spins
+with opposite projections on the FORMULA -axis. For this configuration,
+a spin-flipping hopping would be impossible while there would be no
+problem for a spin-conserving hopping (except for a cost FORMULA ). Now,
+once a FORMULA -hopping has occurred, creating a doubly-occupied site
+and leaving behind an empty site, a FORMULA -hopping is now possible
+from the doubly-occupied
+site to the empty one. Hence the spin-flipping hopping takes place in
+a direction opposite to the spin-conserving one thus possibly
+explaining the observed change of sign of the spin-flipping current.
+
+Conclusions
+To summarize, we have considered perhaps the
+simplest system where some features associated to Rashba spin-orbit
+coupling can be observed.{{cite:489a9b9f-7492-4192-99a2-1f842c88e2fe}} This two-leg ladder
+system is suitable to be studied by unbiased, essentially
+exact, computational techniques, which allow to consider electron
+correlations on an equal foot with spin-conserving and spin-flipping
+hoppings. At quarter-filling it was observed that spin accumulation
+is maximal at an intermediate value of FORMULA , independently of
+FORMULA . By increasing a repulsive FORMULA , the spin-flipping current is
+suppressed and it becomes negative for large FORMULA  and FORMULA , while
+spin accumulation is enhanced. These two last features can be
+explained by the increase of FORMULA  and AFM correlations,
+the latter being a combined effect of FORMULA  and FORMULA . The present
+approach could be extended to wider strips which could in principle
+be studied by DMRG, and also by variational and diffusion Monte Carlo
+(plus a fixed-node approximation), and to
+different electron fillings.
+In addition, some subtle and so far controversial properties, such
+as spin currents, could be studied numerically on this class of strips
+including electron correlations. Although the present study does not
+include any dissipative mechanism, an enhancement of spin accumulation
+by electron interactions together with a reduction of the overall
+current are positive features that could be taken advantage in
+spintronic devices.
+The author wishes to acknowledge Sadamichi Maekawa for calling his
+attention to related problems and to George Martins for a careful
+reading of the manuscript. The author is supported in part by the
+Consejo Nacional de Investigaciones Científicas y Técnicas,
+Argentina.

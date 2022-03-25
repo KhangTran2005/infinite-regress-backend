@@ -1,0 +1,117 @@
+
+=4
+A Deterministic Annealing Optimization Approach for Witsenhausen's and Related Decentralized Control Settings
+
+Mustafa Mehmetoglu, Emrah Akyol, and Kenneth RoseThis work was supported in part by the NSF under grant CCF-1118075Mustafa Mehmetoglu and Kenneth Rose are with Department of Electrical and Computer Engineering, University of California at Santa Barbara, CA 93106, USA,
+{mehmetoglu, rose}@ece.ucsb.eduEmrah Akyol is with the Department of Electrical Engineering, University of Southern California, Los Angeles, CA, 90089, USA,
+eakyol@usc.edu
+
+
+This paper studies the problem of mapping optimization in decentralized control problems. A global optimization algorithm is proposed based on the ideas of “deterministic annealing" - a powerful non-convex optimization framework derived from information theoretic principles with analogies to statistical physics. The key idea is to randomize the mappings and control the Shannon entropy of the system during optimization. The entropy constraint is gradually relaxed in a deterministic annealing process while tracking the minimum, to obtain the ultimate deterministic mappings. Deterministic annealing has been successfully employed in several problems including clustering, vector quantization, regression, as well as the Witsenhausen's counterexample in our recent work{{cite:a61a03f0-cfcf-4d6e-9563-8eddc8760cc5}}. We extend our method to a more involved setting, a variation of Witsenhausen's counterexample, where there is a side channel between the two controllers. The problem can be viewed as a two stage cancellation problem. We demonstrate that there exist complex strategies that can exploit the side channel efficiently, obtaining significant gains over the best affine and known non-linear strategies.
+Introduction
+Decentralized control systems have multiple controllers designed to collaboratively achieve a common objective while taking actions based on their individual observations. No controller, in general, has direct access to the observations of the other controllers. This makes the design of optimal decentralized control systems a very challenging problem. One of the most studied structures, termen “linear quadratic Gaussian" (LQG), involves linear dynamics, quadratic cost functions and Gaussian distributions. Since in the case of centralized LQG problems, the optimal mappings are linear, it was naturally conjectured that linear control mappings remain optimal even in decentralized settings. However, Witsenhausen proposed in {{cite:c02a1eb9-1f05-45a2-a3c6-58507d5149ec}} an example of a decentralized LQG control problem, commonly referred to as Witsenhausen's counterexample (WCE), for which he provided a simple non-linear control strategy that outperforms all affine strategies.
+Decentralized control systems such as WCE arise in many practical applications, and numerous variations of WCE have been studied in the literature (see, e.g., {{cite:2a15e26a-3448-421c-b665-e4f7928f76ca}}, {{cite:1dcc4314-5f54-4c91-bb19-105fafbb0c31}}). One example introduced in {{cite:e7c58313-0a80-4af7-bae0-1a1ab45a0346}} considers a two stage noise cancellation problem. This variant includes an additional noisy channel over which the two controllers can communicate. The second controller, therefore, has access to some (corrupted) side information which is controlled by the first controller. We refer to this setting as the “side channel problem" motivated by the class of "decoder side information" problems in communications and information theory{{cite:3a9e2c11-fd94-44df-99ab-261314fc08d4}}. Specifically, this problem is a zero-delay source-channel coding variation of the coded side information problem studied in the seminal papers of Wyner {{cite:f151c25a-4db4-485d-86c8-cb4d571585bd}}, and Ahlswede and Korner {{cite:7977f788-e9ed-4092-ad87-c23fabdfca2a}}. It has been demonstrated in {{cite:e7c58313-0a80-4af7-bae0-1a1ab45a0346}} that nonlinear strategies may outperform the best affine strategies, however, the question of how to approach the optimal solution remains open. Finding the optimal mappings for such problems is usually a difficult task unless they admit an explicit (and usually as simple as linear) solution, see e.g. {{cite:2a15e26a-3448-421c-b665-e4f7928f76ca}} for a set of problems, some are tractable and others not.
+In prior work{{cite:a61a03f0-cfcf-4d6e-9563-8eddc8760cc5}}, we proposed an optimization method, derived from information theoretic principles, which is suitable to a class of decentralized control problems. Specifically, the method was successfully employed for WCE and the best known cost for this benchmark problem was obtained. The method proposed in this work is an extension of our prior work, developed to account for the complex effects of the side channel problem introduced in {{cite:e7c58313-0a80-4af7-bae0-1a1ab45a0346}}. The introduction of the side channel in this setting results in complex mappings that are highly nontrivial.
+Deterministic annealing (DA) is motivated by statistical physics, but derived from basic principles in information theory. It has been successfully used in non-convex optimization problems, including clustering {{cite:6302834e-6229-41b7-bb5f-139286132fda}}, vector quantization {{cite:af47aefc-d23d-4554-bc78-b7459e86f76b}}, and more (see review in {{cite:e369e4de-119a-4002-81ba-18090f660744}}). DA introduces controlled randomization into the optimization process by incorporating a constraint on the level of randomness (measured by Shannon entropy) while minimizing the expected cost of the system. The resultant Lagrangian functional can be viewed as the “free energy" of a corresponding physical system, and the Lagrangian parameter as the “temperature". The optimization is equivalent to an annealing process that starts by minimizing the cost (free energy) at a high temperature, which effectively maximizes the entropy. The minimum cost is then tracked at successively lower temperatures as the system typically undergoes a sequence of phase transitions through which the complexity of the solution (mappings) grows. As the temperature approaches zero, hard (nonrandom) mappings are obtained.
+In Section II we give the problem definition. In Section III we describe the proposed method, and in Section IV the experimental results are given. Discussion and concluding remarks are in Section V.
+
+Problem Definition
+Let FORMULA , FORMULA  and FORMULA  denote the expectation, conditional expectation and probability operators, respectively. FORMULA  and FORMULA  are the entropy and conditional entropy. FORMULA  denotes the set of real numbers. The gaussian density with mean FORMULA  and variance FORMULA  is denoted as FORMULA .
+FIGURE 
+Original WCE
+The problem setting for the original WCE is given for reference purposes, and depicted in Figure REF a. The source FORMULA  and noise FORMULA  are independent. The two controllers FORMULA  and FORMULA  aim to minimize the cost
+FORMULA 
+where FORMULA  and FORMULA . The given constant FORMULA  governs the trade-off between the control cost FORMULA  and the estimation error FORMULA .
+
+Side Channel Variation
+The following two-stage control problem was introduced in {{cite:e7c58313-0a80-4af7-bae0-1a1ab45a0346}}:
+FORMULA 
+
+where FORMULA  and FORMULA . The problem setting for this problem is given in Figure REF b. There are two admissible controllers given by:
+FORMULA 
+
+where FORMULA  and FORMULA . FORMULA , FORMULA  and FORMULA  are mutually independent. The problem is to find the optimal controllers FORMULA  and FORMULA  that minimize the cost
+FORMULA 
+for given FORMULA , FORMULA  and positive parameters FORMULA , FORMULA . The addition of the side channel over the original WCE problem is evident in Figure REF .
+The cost function defined in {{cite:e7c58313-0a80-4af7-bae0-1a1ab45a0346}} does not include the term FORMULA . Instead, the cost is minimized subject to the following constraint:
+FORMULA 
+for a given FORMULA . Side channel signal to noise ratio (SNR) is therefore FORMULA . We incorporate this constraint into the cost function by forming an overall Lagrangian cost with FORMULA  as Lagrange parameter. Different SNR values are obtained depending on the value of FORMULA .
+The simple nonlinear mappings suggested in {{cite:e7c58313-0a80-4af7-bae0-1a1ab45a0346}}, which widely outperform the best affine solution in a large range of SNR values, are depicted in Figure REF . Similar to the case of WCE, FORMULA  is a staircase function of FORMULA , whereas FORMULA  is a scaled version of it to match the SNR constraint.
+FIGURE 
+
+Proposed Method
+The motivation for the DA algorithm is drawn the process of annealing in statistical physics, however, the method is founded on principles of information theory. Importantly, it replaces the stochastic operation of “stochastic annealing" with the deterministic optimization of the effective expectation, namely, the free energy. DA introduces randomness into the optimization process, where the deterministic mappings (controllers) are replaced by random mappings. The optimization problem is recast as minimization of the expected cost subject to a constraint on the randomness (Shannon entropy) of the system. The resulting Lagrangian functional can be viewed as the free energy of a corresponding physical system whose Lagrange parameter is the “temperature". The entropy constraint is gradually relaxed (by lowering the temperature) while the minimum cost is tracked, and deterministic mappings are obtained at the limit of zero entropy.
+Derivation
+Consider the structured mapping FORMULA  written as
+FORMULA 
+where FORMULA . Each FORMULA  is a parametric function called “local model" and FORMULA  denotes a partition region in input space. We have
+FORMULA 
+Effectively, the mapping FORMULA  is defined with a structure determined by two components: a space partition and a parametric local model per partition cell. While noting that local models can be in any parametric form, in this work we use affine local models given by
+FORMULA 
+We similarly define a structure for FORMULA :
+FORMULA 
+where FORMULA  and local models are affine: FORMULA .
+The crucial idea in DA is to replace the deterministic partition of space by a random partition, i.e. to associate every input point with each one of regions in probability. We define association probabilities
+FORMULA 
+for FORMULA  and for all FORMULA . Let FORMULA  and FORMULA  denote the random variables representing the index of the local models. The system has a joint Shannon entropy which can be expressed as
+FORMULA 
+since, by construction, FORMULA  and FORMULA  are independent given FORMULA . Since the first term is a constant determined by source, we conveniently remove it and define
+FORMULA 
+
+where FORMULA  is the average level of uncertainty in the partition of space.
+In DA, the cost defined in (REF ) is minimized at prescribed levels of uncertainty as defined in (REF ). Accordingly, we construct the Lagrangian
+FORMULA 
+as the objective function to be minimized, with FORMULA  being the Lagrange multiplier associated with the entropy constraint. The Lagrangian in (REF ) is referred to as the (Helmholtz) “free energy", and the Lagrange parameter FORMULA  is called “temperature", to emphasize the intuitively compelling analogy to statistical physics.
+
+Algorithm Sketch
+We begin by optimizing the free energy in (REF ) at high temperature, which effectively maximizes the entropy. Accordingly, the association probabilities are uniform and all local models are identical, in other words, there is effectively a single distinct local model. Thus, at the beginning we obtain the optimum solution when both FORMULA  and FORMULA  are restricted to be linear. As the temperature is decreased, a bifurcation point is reached where the current solution is no longer a minimum but a saddle point, such that there exist a better solution with the local models divided into two or more groups. As the current solution becomes a saddle point, a slight perturbation of local models will trigger the discovery of the new solution with increased number of effective local models. Such bifurcations are referred to as “phase transitions", in the sense of symmetry breaking with increase in effective model size, and the corresponding temperatures are called “critical temperatures". At the limit FORMULA , minimizing FORMULA  corresponds to minimizing FORMULA  directly, which produce deterministic mappings, as it is always advantageous to fully assign a source point to the model that makes the smallest contribution to FORMULA .
+Therefore, the practical algorithm consists of minimizing FORMULA , starting at a high value of FORMULA  and tracking the minimum while gradually lowering FORMULA . A brief sketch of the algorithm can be given as follows.
+
+Start at high temperature, single model.
+
+Duplicate local models.
+
+Minimization of FORMULA .
+
+Optimize FORMULA  for all FORMULA , FORMULA .
+
+Optimize FORMULA  and FORMULA , for all FORMULA , FORMULA , using gradient descent.
+
+Optimize FORMULA .
+
+Convergence test: If not converged go to (a).
+
+
+If temperature is above stopping threshold, lower temperature and go to step 2.
+
+
+Update Equations
+Here we give the expressions for optimal FORMULA  which are, naturally, Gibbs distributions.
+FORMULA 
+
+where FORMULA  and FORMULA  is the cost of associating FORMULA  with local model FORMULA  and FORMULA , respectively:
+FORMULA 
+The optimal second controller, FORMULA , can be expressed in closed from as
+FORMULA 
+which can be written in terms of known quantities using the approach in {{cite:d69ac9aa-b9ba-4837-9951-c284f108e8dc}}.
+
+Experimental Results
+The integrals in the algorithm are numerically calculated by sampling the space on the uniform grid, and the support of the Gaussian distribution is bounded to (5FORMULA  to 5FORMULA ) interval.
+Original WCE
+The DA method was applied to the original WCE problem and the results are reported in {{cite:a61a03f0-cfcf-4d6e-9563-8eddc8760cc5}}, where we obtained the lowest known cost thus far, 0.16692291. We reproduce the results in comparison to prior work in Table REF . The 5-step mapping we obtained after a sequence of phase transitions is given in Figure REF .
+TABLE 
+FIGURE 
+
+Extension to Side Channel Variation
+In the experiments, we used the standard benchmark parameters that were used for the original WCE, that is, FORMULA  and FORMULA . We have varied FORMULA  to obtain results at different side channel SNR values. Following the convention in {{cite:e7c58313-0a80-4af7-bae0-1a1ab45a0346}}, we use FORMULA .
+In Table REF  we compare the cost of our solutions (denoted by FORMULA ) to the ones given in {{cite:e7c58313-0a80-4af7-bae0-1a1ab45a0346}} (denoted by FORMULA ), and the best affine mappings. Significant cost reductions can be observed. The relative improvement over the solution of {{cite:e7c58313-0a80-4af7-bae0-1a1ab45a0346}} is listed in the last column.
+Remark 1 When FORMULA , the problem degenerates to WCE, thus the cost is 0.1669, the best known to date.
+
+TABLE 
+We present several mappings obtained by our method in Figure REF . Several interesting features of these mappings are observed. The mappings for FORMULA  are approximately staircase functions similar to the ones obtained for the original WCE problem, however, the steps get smaller and increase in number as the side channel SNR increases; that is, FORMULA  approaches FORMULA . Note that the control cost term in (REF ), FORMULA , is minimum when FORMULA , in which case FORMULA . This is, however, not optimum due to the estimation error at the second stage. Intuitively, as the second controller has access to better side information (i.e. at higher SNR), the estimation error is decreased and as observed in Figure REF , FORMULA  tends to FORMULA . The relative improvement in cost, given in Table REF , increases with SNR, which is consistent with the above observation.
+The mappings for the side channel, FORMULA , are highly irregular and the overall shape varies with SNR. This observation, together with the above for FORMULA , suggests that the mappings for FORMULA  and FORMULA  are not scale invariant. The discontinuities in FORMULA  and FORMULA  coincide as expected, as the discontinuities in side information FORMULA  signal those in FORMULA  to the second controller (estimator).
+FIGURE 
+Note: Matlab code for our calculations of the total cost, including our decision functions can be found in {{cite:de1cf034-b8d1-4a5c-9fc7-bafd2c36bf8a}}.
+
+Conclusions
+In this paper we extended our numerical method, introduced in prior work to obtain the best known solution for Witsenhausen's counterexample, to compute the elusive nonlinear mappings (controllers) in more involved decentralized control problems. As a test case we focused on the setting introduced in {{cite:e7c58313-0a80-4af7-bae0-1a1ab45a0346}}, where it is motivated as a two stage noise cancellation problem. The mappings obtained are highly nontrivial and raise interesting questions about the functional properties of the optimal solution (mappings) in decentralized control, which are the focus of ongoing research.

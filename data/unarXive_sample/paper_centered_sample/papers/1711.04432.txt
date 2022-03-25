@@ -1,0 +1,441 @@
+
+.    *
+
+1]Jiannan LuAddress for correspondence: Jiannan Lu, One Microsoft Way, Redmond, Washington 98052-6399, U.S.A. Email: jiannl@microsoft.com
+[1]Analysis and Experimentation, Microsoft Corporation
+Sharpening randomization-based causal inference for FORMULA  factorial designs with binary outcomesForthcoming in Statistical Methods in Medical Research.[2018/12/10 04:50:52
+In medical research, a scenario often entertained is randomized controlled FORMULA  factorial design with a binary outcome. By utilizing the concept of potential outcomes, {{cite:ed868d4d-1fa3-4f7e-ae57-ddd1eb21afe5}} proposed a randomization-based causal inference framework, allowing flexible and simultaneous estimations and inferences of the factorial effects. However, a fundamental challenge that {{cite:ed868d4d-1fa3-4f7e-ae57-ddd1eb21afe5}}'s proposed methodology faces is that the sampling variance of the randomization-based factorial effect estimator is unidentifiable, rendering the corresponding classic “Neymanian” variance estimator suffering from over-estimation. To address this issue, for randomized controlled FORMULA  factorial designs with binary outcomes, we derive the sharp lower bound of the sampling variance of the factorial effect estimator, which leads to a new variance estimator that sharpens the finite-population Neymanian causal inference. We demonstrate the advantages of the new variance estimator through a series of simulation studies, and apply our newly proposed methodology to two real-life datasets from randomized clinical trials, where we gain new insights.
+Keywords: factorial effect; finite-population analysis; inclusion-exclusion principle; partial identification; potential outcome.
+
+Introduction
+Since originally introduced to conduct and analyze agricultural experiments {{cite:e0cc7fe6-7748-4ad6-a6ca-c35cbbc18e9b}}, {{cite:d214d1c0-aff2-462c-9371-6482c4cc82dc}}, factorial designs have been widely applied in social, behavioral and biomedical sciences, because of their capabilities to evaluate multiple treatment factors simultaneously. In particular, over the past half-century, randomized controlled FORMULA  factorial designs have become more well-adopted in medical research, in which the research interest often lies in assessing the (main and interactive) causal effects of two distinct binary treatment factors on a binary outcome. Among the lengthy list of medical studies that are powered by FORMULA  factorial designs {{cite:5de109fe-9d05-42f2-9fea-f69a3ca5cf51}}, {{cite:be6358b6-9ad7-46b3-a3de-98bedb4550bb}}, {{cite:24852ea7-5d9e-42da-8c09-016c14ebe469}}, {{cite:feb91989-c1fb-418f-b9c5-15b4bdbd5fb6}}, {{cite:10b296f8-5c16-404c-b021-f1023fc6ad2d}}, {{cite:3c4a6500-e50c-4d18-85a4-01814801a9e7}}, {{cite:31b57786-fc12-4c01-ba23-1f00537fa7a6}}, {{cite:04cc516c-6f99-4bbf-a47a-2b3c50431c42}}, {{cite:2fb07597-a553-4e28-b302-5253a7715792}}, {{cite:95560c64-2337-4b21-a6cc-0e90a61f3668}}, one of the most impactful examples is the landmark Physicians' Health Study {{cite:67155906-9289-4b3f-8a34-0f1f6868f96b}}, in which over ten thousand patients were randomly assign to four experimental arms – 1. placebo aspirin and placebo FORMULA carotene; 2. placebo aspirin and active FORMULA carotene; 3. active aspirin and placebo FORMULA carotene; 4. active aspirin and active FORMULA carotene. This study contained multiple important end-points that were binary, e.g., cardiovascular mortality.
+For traditional treatment-control studies (i.e., FORMULA  factorial designs), a well-developed and popular methodology to conduct causal inference is the potential outcomes framework {{cite:55c0bc3f-5934-4cc6-82b2-169a22aaead1}}, {{cite:f6ae7175-83a8-482a-ac47-636fdd588a99}}, where we define causal effects as comparisons (difference, ratio, et al.) between the treated and control potential outcomes, which are assumed to be fixed for each experimental unit. Consequently, estimation and inference of causal effects solely depend on treatment assignment randomization, which is often regarded as the gold standard for causal inference {{cite:5db63659-d917-40b9-9b11-99fcfc299d9a}}. As a randomization-based methodology, the potential outcomes framework possesses several advantages against other existing approaches, many of which are model-based. For example, it is fully non-parametric and therefore more robust to model mis-specification, and better suited for finite population analyses, which under certain circumstances are more appropriate as pointed by several researchers {{cite:fd4d0a4a-51f7-435f-bbe3-ddd2bc67c0e4}}.
+Realizing the salient feature of the potential outcomes framework, {{cite:ed868d4d-1fa3-4f7e-ae57-ddd1eb21afe5}} formally extended it to FORMULA  factorial designs, by defining the factorial effects as linear contrasts of potential outcomes under different treatment combinations, and proposing the corresponding estimation and inferential procedures. {{cite:ed868d4d-1fa3-4f7e-ae57-ddd1eb21afe5}} argued that by utilizing the concept of potential outcomes, the proposed randomization-based framework “results in better understanding
+of” factorial effects, and “allows greater flexibility in statistical inference.” However it is worth mentioning that, while “inherited” many desired properties of the potential outcomes framework, inevitably it also inherited a fundamental issue – the sampling variance of the randomization-based estimator for the factorial effects is unidentifiable, and therefore the corresponding classic “Neymanian” variance estimator suffers from the issue of over-estimation in general (see Section 6.5 of {{cite:0e5b2dbd-6ac8-4869-9434-0a7815f83752}} for a detailed discussion) – in fact, as pointed by {{cite:06433cd5-1258-4ae4-8647-bb3f4205ff85}}, it is generally impossible to unbiasedly estimate the sampling variance, because we simply cannot directly infer the association between the potential outcomes. For treatment-control studies, this problem has been extensively investigated and somewhat well-resolved, for binary {{cite:42d0ab4d-11c9-419d-adc0-60d070753496}}, {{cite:a3aa2817-9501-462d-9904-da9743f352fe}} and more general outcomes {{cite:06433cd5-1258-4ae4-8647-bb3f4205ff85}}. However, to our best knowledge, similar discussions appear to be absent in the existing literature for FORMULA  factorial designs, which are of both theoretical and practical interests. Motivated by several real-life examples in medical research, in this paper we take a first step towards filling this important gap, by sharpening randomized-based causal inference for FORMULA  factorial designs with binary outcomes. To be more specific, we derive the sharp (formally defined later) lower bound of the sampling variance of the factorial effect estimator, and propose the corresponding “improved” Neymanian variance estimator.
+The paper proceeds as follows. In Section  we briefly review the randomization-based causal inference framework for FORMULA  factorial designs, focusing on binary outcomes. Section  presents the bias (i.e., magnitude of over-estimation) of the classic Neymanian variance estimator, derives the sharp lower bound of the bias, proposes the corresponding improved Neymanian variance estimator, and illustrate our results through several numerical and visual examples. Sections  conducts a series of simulation studies to highlight the performance of the improved variance estimator. Section  applied our newly proposed methodology to two real-life medical studies, where new insights are gained. Section  discusses future directions and concludes. We relegate the technical details to Appendices  and .
+
+Randomization-based causal inference for FORMULA  factorial designs with binary outcomes
+FORMULA  factorial designs
+To review Neymanian causal inference for FORMULA  factorial designs, we adapt materials by {{cite:ed868d4d-1fa3-4f7e-ae57-ddd1eb21afe5}} and {{cite:1402fcbb-6541-4d75-9a77-f8e3a4146306}}, and tailor them to the specific case with binary outcomes. In FORMULA  factorial designs, there are two treatment factors (each with two-levels coded as -1 and 1) and 4 distinct treatment combinations FORMULA  FORMULA  To define them, we rely on the model matrix {{cite:033e5299-e65b-4214-b4f8-23c0e49c4eab}}
+FORMULA 
+The treatment combinations are FORMULA  FORMULA  FORMULA  and FORMULA  and later we will use FORMULA  FORMULA  and FORMULA  to define the factorial effects.
+
+Randomization-based inference
+By utilizing potential outcomes, {{cite:ed868d4d-1fa3-4f7e-ae57-ddd1eb21afe5}} proposed a framework for randomization-based causal inference for FORMULA  factorial designs. For our purpose, we consider a FORMULA  factorial design with FORMULA  experimental units. Under the Stable Unit Treatment Value Assumption {{cite:b546ae8e-6718-4e6e-8303-84c86cdb14c1}}, for FORMULA  we define FORMULA  as the potential outcome of unit FORMULA  under treatment combination FORMULA  and let
+FORMULA 
+In this paper we only consider binary outcomes, i.e., FORMULA  for all FORMULA  and  FORMULA
+To save space, we introduce two sets of notations. First, we let
+FORMULA 
+Consequently, instead of specifying the potential outcomes
+FORMULA 
+entry by entry, we can equivalently characterize them using the “joint distribution” vector
+FORMULA 
+where the indices are ordered binary representations of zero to fifteen. Second, for all non-empty sets
+FORMULA 
+we let
+FORMULA 
+Therefore, for FORMULA  the average potential outcome for FORMULA  is
+FORMULA 
+and let
+FORMULA 
+Define the FORMULA th (individual and population) factorial effects as
+FORMULA 
+for FORMULA  which correspond to the main effects of the first and second treatment factors, and their interaction effect, respectively.
+Having defined the treatment combinations, potential outcomes and factorial effects, next we discuss the treatment assignment and observed data. Suppose for FORMULA  we randomly assign FORMULA  (a pre-specified constant) units to treatment combination FORMULA  Let
+FORMULA 
+be the treatment assignments, and
+FORMULA 
+be the observed outcome for unit FORMULA  and
+FORMULA 
+Therefore, the average observed potential outcome for FORMULA  is
+FORMULA 
+for all
+FORMULA 
+Denote
+FORMULA 
+and the randomization-based estimators for
+FORMULA 
+is
+FORMULA 
+which are unbiased with respect to the randomization distribution.
+Motivated by several relevant discussions in the existing literature {{cite:3fd70522-dd4b-4ddb-9a26-93a255091c4e}}, {{cite:3d17fc57-72a0-4996-8a37-7a6c4ad29421}}, {{cite:ed868d4d-1fa3-4f7e-ae57-ddd1eb21afe5}}, {{cite:a3aa2817-9501-462d-9904-da9743f352fe}}, {{cite:97e2f14b-de69-4ebc-b1e3-671262256eee}}, {{cite:1402fcbb-6541-4d75-9a77-f8e3a4146306}}, {{cite:136647c2-949f-4197-a608-dec021fc1a07}} proved the consistency and asymptotic Normality of the randomization-based estimator in (REF ), and derived its sampling variance as
+FORMULA 
+where for  FORMULA
+FORMULA 
+is the variance of potential outcomes for FORMULA  and
+FORMULA 
+is the variance of the FORMULA th (individual) factorial effects in (REF ).
+
+Improving the Neymanian variance estimator
+Background
+Given the sampling variance in (REF ), we estimate it by substituting FORMULA  with its unbiased estimate
+FORMULA 
+and substituting
+FORMULA 
+with its lower bound 0 (due to the fact that it is not identifiable, because none of the individual factorial effects FORMULA 's are observable). Consequently, we obtain the “classic Neymanian” variance estimator is
+FORMULA 
+This estimator over-estimates the true sampling variance on average by
+FORMULA 
+unless strict additivity {{cite:ed868d4d-1fa3-4f7e-ae57-ddd1eb21afe5}} holds, i.e.,
+FORMULA 
+which is unlikely to happen in real-life scenarios, especially for binary outcomes {{cite:4544a74f-4212-4bb7-83f2-37a1f946f04b}}, {{cite:5b38c994-6d7c-40f9-b2a4-2a845e5ada44}}. We summarize and illustrate the above results by the following example.
+Example 1 Consider a hypothetical FORMULA  factorial design with FORMULA  units, whose potential outcomes, factorial effects and summary statistics are shown in Table REF , from which we draw several conclusions – first, the population-level factorial effects in (REF ) are -0.1563, -0.0313 and -0.0313, respectively; second, the sampling variances of the randomization-based estimators in (REF ) are 0.0425, 0.0493 and 0.0493, respectively; third, if we employ the classic Neymanian variance estimator in (REF ), on average we will over-estimate the sampling variances by 52.5%, 31.6% and 31.6%, respectively.
+TABLE 
+
+
+Sharp lower bound of the sampling variance
+As demonstrated in previous sections, the key to improve the classic Neymanian variance estimator (REF ) is obtaining a non-zero and identifiable lower bound of
+FORMULA 
+To achieve this goal, we adopt the partial identification philosophy, commonly used in the existing literature to bound either the randomization-based sampling variances of causal parameters {{cite:06433cd5-1258-4ae4-8647-bb3f4205ff85}}, or the causal parameters themselves {{cite:3e33d05a-63c1-49cf-b228-54e4e83dd05b}}, {{cite:c8e9d12b-96c1-4cbb-96de-106b01095100}}, {{cite:3a205385-2dda-4d9a-84c9-077fda7dfd03}}.
+We first present two lemmas, which play central roles in the proof of our main theorem.
+Lemma 1 
+Let
+FORMULA 
+for all FORMULA  Then
+FORMULA 
+
+
+Lemma 2 
+For all FORMULA  define
+FORMULA 
+Then
+FORMULA 
+and the equality in (REF ) holds if and only if
+FORMULA 
+or
+FORMULA 
+
+
+We provide the proofs of Lemmas REF  and REF  in Appendix . With the help of the lemmas, we present an identifiable sharp lower bound of
+ FORMULA
+Theorem 1 
+The sharp lower bound for
+FORMULA 
+is
+FORMULA 
+The equality in (REF ) holds if and only if (REF ) or (REF ) holds.
+
+By employing the inclusion-exclusion principle and Bonferroni's inequality, we provide the proof of Theorem REF  in Appendix . The lower bound in Theorem REF  is sharp in the sense that it is compatible with the marginal counts of the potential outcomes
+FORMULA 
+(and consequently FORMULA ). To be more specific, for fixed values of
+FORMULA 
+there exists a hypothetical set of potential outcomes
+FORMULA 
+such that
+FORMULA 
+Theorem REF  effectively generalizes the discussions regarding binary outcomes by {{cite:42d0ab4d-11c9-419d-adc0-60d070753496}} and {{cite:a3aa2817-9501-462d-9904-da9743f352fe}}, from treatment-control studies to FORMULA  factorial designs. In particular, the conditions in (REF ) and (REF ) echo the parallel results by {{cite:a3aa2817-9501-462d-9904-da9743f352fe}}, and therefore we name them the “generalized” monotonicity conditions on the potential outcomes. However, intuitive and straightforward as it seems, proving Theorem REF  turns out to be a non-trivial task.
+
+The “improved” Neymanian variance estimator
+The sharp lower bound in (REF ) leads to the “improved” Neymanian variance estimator
+FORMULA 
+which is guaranteed to be smaller than the classic Neymanian variance estimator in (REF ) for any observed data, because the correction term on the right hand side of (REF ) is always non-negative. For example, for balanced designs (i.e., FORMULA ) with large sample sizes, the relative estimated variance reduction is
+FORMULA 
+We illustrate the above results by the following numerical example.
+Example 2 Consider a balanced FORMULA  factorial design with FORMULA  experimental units, so that
+FORMULA 
+For the purpose of visualizing the estimated variance reduction under various settings, we repeatedly draw
+FORMULA 
+for 5000 times, and plot the corresponding FORMULA 's in Figure REF . We can draw several conclusions from the results. First, for 13% of the times FORMULA  is smaller than 1%, corresponding to cases where FORMULA  0 or FORMULA  Second, for 13% of the times FORMULA  is larger than 10%. Third, the largest FORMULA  is approximately 20.5%, corresponding to the case where
+FORMULA 
+and
+ FORMULA
+
+FIGURE 
+As pointed out by several researchers {{cite:06433cd5-1258-4ae4-8647-bb3f4205ff85}}, {{cite:a3aa2817-9501-462d-9904-da9743f352fe}}, the probabilistic consistency of the factorial effect estimator
+FORMULA 
+guarantees that the improved Neymanian variance estimator still over-estimates the sampling variance on average, unless one of the generalized monotonicity conditions in (REF )–(REF ) holds. Nevertheless, it does improve the classic Neymanian variance estimator in (REF ), and more importantly, this improvement is the “best we can do” without additional information. In the next section, we conduct simulation studies to demonstrate the finite-sample properties of, and to compare the performances of, the classic and improved Neymanian variance estimators.
+
+Simulation studies
+To save space, we focus on the first factorial effect
+FORMULA 
+and its randomization-based statistical inference. To mimic the empirical examples that we will re-analyze in the next section, we choose the sample size FORMULA  Moreover, to (at least to some extent) explore the complex dependence structure of the potential outcomes, we adopt the latent multivariate Normal model for the underlying data generation mechanism is. To be more specific, let
+FORMULA 
+and assume that for each  FORMULA
+FORMULA 
+We consider the following six cases:
+FORMULA 
+We choose the above values for FORMULA  so that the corresponding factorial effects FORMULA  (the approximaition is due to finite-sample fluctuation) for Cases 1–2. Similarly, FORMULA  for Cases 3 and 4, and FORMULA  for Cases 5 and 6. Therefore, we can examine the scenarios where the sharp lower bound
+FORMULA 
+in (REF ) are either small or large in magnitude. Moreover, we partially adopt the simulation settings by {{cite:ed868d4d-1fa3-4f7e-ae57-ddd1eb21afe5}} and let
+FORMULA 
+which corresponds to negatively correlated, independent and positively correlated potential outcomes, respectively. The aforementioned data generation mechanism resulted eighteen “joint distributions” of the potential outcomes
+FORMULA 
+which we report in the third column of Table . For each simulation case (i.e., row of Table ), we adopt the following three-step procedure:
+
+Use (REF ) and (REF ) to calculate
+FORMULA 
+the sampling variance of its randomization-based estimator and its lower bound, respectively, and report them in the fourth to sixth columns of Table ;
+
+Independently draw 10000 treatment assignments from a balanced FORMULA  factorial design with  FORMULA
+
+For each observed data-set, use (REF ), (REF ) and (REF ) to calculate the point estimate of FORMULA  the classic and improved Neymanian variance estimates respectively, based on which we construct two 95% confidence intervals.
+
+To examine the performances of the classic and improved Neymanian variance estimators in (REF ) and (REF ), in the last six columns of Table , we report the relative (i.e., percentage wise) over-estimations of the true sampling variance, the average lengths and the coverage rates of their corresponding confidence intervals of the two estimators, respectively.
+We can draw several conclusions from the results. First, because of the non-negative correction term
+FORMULA 
+for all cases the improved Neymanian variance estimator (REF ) reduces the over-estimation of the sampling variance, shortens the confidence intervals and achieves better coverage rates without under-covering. For example, in Case 4 with FORMULA  the improved Neymanian variance estimator reduces the coverage rate from 0.974 to 0.956, achieving near nominal level. Second, by comparing Case 1 with Case 2 (or 3 with 4, 5 with 6), we can see that for a fixed FORMULA  although the absolute magnitude of the correction term is the same, the performance (i.e., reduction of percentage of over-estimation, average length and coverage rate) of the improved Neymanian variance estimator might differ significantly, depending on the “marginal distributions” of the potential outcomes (characterized by the mean parameter FORMULA ). Third, for a fixed marginal distribution, the performance of the improved Neymanian variance estimator might also differ significantly, depending on the dependence structure of the potential outcomes (characterized by the association parameter FORMULA ). Fourth, in certain scenarios, while the improved Neymanian variance estimator only slightly shortens the confidence interval, it leads to a non-ignorable improvement on coverage rates. For example, in Case 5 with FORMULA  a less than 5% shorter confidence interval reduces the coverage rate from 0.976 to 0.966.
+To take into account alternative data generation mechanisms and thus provide a more comprehensive pircute, in Appendix  we conduct an additional series of simulation studies, where we focus on several discrete outcome distributions. The results largely agree with the above conclusions.
+[htbp]
+Simulation study results. The first three columns contain the case label, the value of the association parameter FORMULA  and the corresponding joint distribution of the potential outcomes. The next three columns contain the true values of the first factorial effect, the sampling variance of the individual factorial effects FORMULA  FORMULA  and its sharp lower bound. To examine the performances of the classic and improved Neymanian variance estimators in (REF ) and (REF ), the last six columns contain their percentages of over-estimation of the true sampling variance, and the average lengths and coverage rates of their corresponding confidence intervals.
+
+ TABLE
+
+Empirical examples
+A study on smoking habits
+In 2004, the University of Kansas Medical Center conducted a randomized controlled FORMULA  factorial design to study the smoking habits of African American light smokers, i.e., those “who smoke 10 or fewer cigarettes per day for at least six months prior to the study” {{cite:87766f2a-e7f5-4ea5-b096-056e2127df19}}. The study focused on two treatment factors – nicotine gum consumption (2gm/day vs. placebo), and counseling (health education vs. motivational interviewing). Among FORMULA  participants, FORMULA  were randomly assigned to FORMULA  (placebo and motivational interviewing), FORMULA  to FORMULA  (placebo and health education), FORMULA  to FORMULA  (nicotine gum and motivational interviewing), and FORMULA  to FORMULA  (nicotine gum and health education). The primary outcome of interest was abstinence from smoking 26 weeks after enrollment, determined by whether salivary cotinine level was less than 20 ng/ml. {{cite:87766f2a-e7f5-4ea5-b096-056e2127df19}} reported that
+ FORMULA
+We re-analyze this data set in order to illustrate our proposed methodology. To save space we only focus on FORMULA  the main effect of counseling. The observed data suggests that its point estimate FORMULA  the 95% confidence intervals based on the classic and improved Neymanian variance estimators are (-0.129, -0.035) and (-0.127, -0.037), respectively. While the results largely corroborate {{cite:87766f2a-e7f5-4ea5-b096-056e2127df19}}'s analysis and conclusion, the improved variance estimator does provide a narrower confidence interval – the variance estimate by the improved Neymanian variance estimator is 92.1% of that by the classic Neymanian variance estimator.
+
+A study on saphenous-vein coronary-artery bypass grafts
+The Post Coronary Artery Bypass Graft trial is a randomized controlled FORMULA  factorial design conducted between March 1989 and August 1991, on patients who were “21 to 74 years of age, had low-density lipoprotein (LDL) cholesterol levels of no more than 200 mg/deciliter, and
+had had at least two saphenous-vein coronary bypass grafts placed 1 to 11 years before the start of the study” {{cite:137c388b-a4de-4f27-a1d2-542ca10955e1}}. The study concerned two treatment factors – LDL cholesterol level lowering (aggressive, goal is 60–85 mg/deciliter vs. moderate), and low-dose anticoagulation (1mg warfarin vs. placebo). Among FORMULA  participants, FORMULA  were randomly assigned to FORMULA  (moderate LDL lowering and placebo), FORMULA  to FORMULA  (moderate LDL lowering and warfarin), FORMULA  to FORMULA  (aggressive LDL lowering and placebo), and FORMULA  to FORMULA  (aggressive LDL lowering and warfarin). For the purpose of illustration, we define the outcome of interest as the composite end point (defined as death from cardiovascular or unknown causes, nonfatal myocardial infarction, stroke, percutaneous transluminal coronary angioplasty, or coronary-artery bypass grafting) four years after enrollment. {{cite:137c388b-a4de-4f27-a1d2-542ca10955e1}} (in Table 5 and Figure 2, pp. 160) reported that
+FORMULA 
+which implies that
+ FORMULA
+We re-analyze the interactive effect FORMULA  The observed data suggests that FORMULA  and the 95% confidence intervals based on the classic and improved Neymanian variance estimators are (0.130, 0.202) and (0.133, 0.200), respectively. Again, the improved Neymanian variance estimator provides a narrower confidence interval, because its variance estimate is only 87.7% of that by the classic Neymanian variance estimator. Moreover, the results suggest a statistically significant interactive effect between LDL cholesterol lowering and low-dose anticoagulation treatments, which appeared to be absent in {{cite:137c388b-a4de-4f27-a1d2-542ca10955e1}}'s original paper.
+
+Concluding remarks
+Motivated by several empirical examples in medical research, in this paper we studied {{cite:ed868d4d-1fa3-4f7e-ae57-ddd1eb21afe5}}'s randomization-based causal inference framework, under which factorial effects are defined as linear contrasts of potential outcomes under different treatment combinations, and the corresponding difference-in-means estimator's only source of randomness is the treatment assignment itself. However, as pointed out by {{cite:06433cd5-1258-4ae4-8647-bb3f4205ff85}}, a long standing challenge faced by such finite-population frameworks is estimating the true sampling variance of the randomization-based estimator. In this paper, we solve this problem and therefore sharpen randomization-based causal inference for FORMULA  factorial designs with binary outcomes, which is not only of theoretical interest, but also arguably the most common and important setting for medical research among all factorial designs. To be more specific, we propose a new variance estimator improving the classic Neymanian variance estimator by {{cite:ed868d4d-1fa3-4f7e-ae57-ddd1eb21afe5}}. The key idea behind our proposed methodology is obtaining the sharp lower bound of the variance of unit-level factorial effects, and using a plug-in estimator for the lower bound. Through several numerical, simulated and empirical examples, we demonstrated the advantages of our new variance estimator.
+There are multiple future directions based on our current work. First, although more of theoretical interests, it is possible to extend our methodology to general FORMULA  factorial designs, or even more complex designs such as FORMULA  or fractional factorial designs. Second, we can generalize our existing results for binary outcomes to other scenarios (continuous, time to event, et al.). Third, although this paper focuses on the “Neymanian” type analyses, the Bayesian counterpart of causal inference for FORMULA  factorial designs might be desirable. However, it is worth mentioning that, instead of adopting model-based approaches {{cite:e60fe74e-3493-410c-aa6e-66341d0bd6a4}}, we seek to extend {{cite:b6507a18-01a2-4c20-be07-48a65e8539c7}}'s and {{cite:a3aa2817-9501-462d-9904-da9743f352fe}}'s finite-population Bayesian causal inference framework to factorial designs, which requires a full Bayesian model on the joint distribution of the potential outcomes under all treatment combinations. However, this direction faces several challenges. For example, characterizing the dependence structure in multivariate binary distributions can be extremely complex, as pointed out by {{cite:2a157049-afb2-4e81-a57e-a95ed40a560c}} and {{cite:b91e1db3-325a-47d7-9bbc-49ad9fe0acad}}. Fourth, it would be interesting to explore the potential use of our proposed variance estimator for constructions of non-parametric tests in factorial designs {{cite:fced20d7-76bb-4b3f-aa8f-3d18f43493ed}}, {{cite:6c03d809-5261-4ed6-8693-939d6d52c94b}}. Fifth, it is possible to further improve our variance estimator, by incorporating pre-treatment covariate information. All of the above are our ongoing or future research projects.
+
+Acknowledgement
+The author thanks Professor Tirthankar Dasgupta at Rutgers University and Professor Peng Ding at UC Berkeley for early conversations which largely motivated this work, and several colleagues at the Analysis and Experimentation team at Microsoft, especially Alex Deng, for continuous encouragement. Thoughtful comments from the Editor-in-Chief Professor Brian Everitt and two anonymous reviewers have substantially improved the quality and presentation of the paper.
+Ahluwalia, J. S., Okuyemi, K., Nollen, N., Choi, W. S., Kaur, H., Pulvers, K.,
+and Mayo, M. S. (2006).
+The effects of nicotine gum and counseling among African American
+light smokers: A 2FORMULA  2 factorial design.
+Addiction, 101:883–891.
+Aronow, P., Green, D. P., and Lee, D. K. (2014).
+Sharp bounds on the variance in randomized experiments.
+Ann. Stat., 42:850–871.
+Ayles, H. M., Sismanidis, C., Beyers, N., Hayes, R. J., and Godfrey-Faussett,
+P. (2008).
+ZAMSTAR, the Zambia South Africa TB and HIV reduction
+study: Design of a 2FORMULA  2 factorial community randomized trial.
+Trials, 9:63.
+Campeau, L., Knatterud, G., Domanski, M., Hunninghake, B., White, C., Geller,
+N., Rosenberg, Y., et al. (1997).
+The effect of aggressive lowering of low-density lipoprotein
+cholesterol levels and low-dose anticoagulation on obstructive changes in
+saphenous-vein coronary-artery bypass grafts.
+New Engl. J. Med., 336:153–163.
+Chalmers, T. C., Eckhardt, R. D., Reynolds, W. E., Cigarroa Jr, J. G., Deane,
+N., Reifenstein, R. W., Smith, C. W., Davidson, C. S., Maloney, M. A.,
+Bonnel, M., Niiya, M., Stang, A., and O'Brien, A. M. (1955).
+The treatment of acute infectious hepatitis: Controlled studies of
+the effects of diet, rest, and physical reconditioning on the acute course of
+the disease and on the incidence of relapses and residual abnormalities.
+J. Clin. Invest., 34:1163–1235.
+Cox, D. R. (1972).
+The analysis of multivariate binary data.
+Appl. Stat., 21:113–120.
+Dai, B., Ding, S., and Wahba, G. (2013).
+Multivariate Bernoulli distribution.
+Bernoulli, 19:1465–1483.
+Dasgupta, T., Pillai, N., and Rubin, D. B. (2015).
+Causal inference from FORMULA  factorial designs using the potential
+outcomes model.
+J. R. Stat. Soc. Ser. B., 77:727–753.
+Ding, P. (2017).
+A paradox from randomization-based causal inference (with
+discussions).
+Stat. Sci., 32:331–345.
+Ding, P. and Dasgupta, T. (2016).
+A potential tale of two by two tables from completely randomized
+experiments.
+J. Am. Stat. Assoc., 111:157–168.
+Eisenhauer, E. A., ten Bokkel Huinink, W., Swenerton, K. D., Gianni, L., Myles,
+J., Van der Burg, M. E., Kerr, I., Vermorken, J. B., Buser, K., and Colombo,
+N. (1994).
+European-Canadian randomized trial of paclitaxel in relapsed
+ovarian cancer: High-dose versus low-dose and long versus short infusion.
+J. Clin. Oncol., 12:2654–2666.
+Fan, Y. and Park, S. S. (2010).
+Sharp bounds on the distribution of treatment effects and their
+statistical inference.
+Economet. Theor., 26:931–951.
+Fisher, R. A. (1935).
+The Design of Experiments.
+Edinburgh: Oliver and Boyd.
+Franke, A., Franke, K., Gebauer, S., and Brockow, T. (2000).
+Acupuncture massage vs. Swedish massage and individual exercises
+vs. group exercises in low back pain sufferers: A randomised clinical trial
+in a 2FORMULA  2-factorial design.
+Focus Altern. Complement. Ther., 5:88–89.
+Freedman, D. A. (2008).
+On regression adjustments in experiments with several treatments.
+Ann. Appl. Stat., 2:176–196.
+Greimel, E., Wanderer, S., Rothenberger, A., Herpertz-Dahlmann, B., Konrad, K.,
+and Roessner, V. (2011).
+Attentional performance in children and adolescents with tic disorder
+and co-occurring attention-deficit/hyperactivity disorder: New insights from
+a 2FORMULA  2 factorial design study.
+J. Abnorm. Child Psych., 39:819–828.
+Hennekens, C. H. and Eberlein, K. (1985).
+A randomized trial of aspirin and FORMULA -carotene among US
+physicians.
+Prev. Med., 14:165–168.
+Imbens, G. and Rubin, D. B. (2015).
+Causal Inference in Statistics, Social, and Biomedical Sciences:
+An Introduction.
+New York: Cambridge University Press.
+James, R. D., Glynne-Jones, R., Meadows, H. M., Cunningham, D., Myint, A. S.,
+Saunders, M. P., Maughan, T., McDonald, A., Essapen, S., Leslie, M., Falk,
+S., Wilson, C., Gollins, S., Begum, R., Ledermann, J., Kadalayil, L., and
+Sebag-Montefiore, D. (2013).
+Mitomycin or cisplatin chemoradiation with or without maintenance
+chemotherapy for treatment of squamous-cell carcinoma of the anus (ACT II):
+A randomised, phase 3, open-label, 2FORMULA  2 factorial trial.
+Lancet Oncol., 14:516–524.
+LaVange, L. M., Durham, T. A., and Koch, G. (2005).
+Randomization-based non-parametric methods for the analysis of
+multi-centre trials.
+Stat. Methods Med. Res., 14:281–301.
+Lin, W. (2013).
+Agnostic notes on regression adjustments to experimental data:
+Reexamining freedman's critique.
+Ann. Appl. Stat., 7:295–318.
+Lu, J. (2016a).
+Covariate adjustment in randomization-based causal inference for
+FORMULA  factorial designs.
+Stat. Prob. Lett., 119:11–20.
+Lu, J. (2016b).
+On randomization-based and regression-based inferences for FORMULA 
+factorial designs.
+Stat. Prob. Lett., 112:72–78.
+Lu, J., Ding, P., and Dasgupta, T. (2015).
+Treatment effects on ordinal outcomes: Causal estimands and sharp
+bounds.
+arXiv preprint: 1507.01542.
+Manson, J. E., Bassuk, S. S., Lee, I., Cook, N. R., Albert, M. A., Gordon, D.,
+Zaharris, E., MacFadyen, J. G., Danielson, E., Lin, J., Zhang, S. M., and
+Buring, J. E. (2012).
+The Vitamin D and Omega-3 trial (VITAL): Rationale and design
+of a large randomized controlled trial of vitamin d and marine Omega-3
+fatty acid supplements for the primary prevention of cancer and
+cardiovascular disease.
+Contemp. Clin. Trials, 33:159–171.
+Mhurchu, C. N., Blakely, T., Jiang, Y., Eyles, H. C., and Rodgers, A. (2010).
+Effects of price discounts and tailored nutrition education on
+supermarket purchases: A randomized controlled trial.
+Am. J. Clin. Nutr., 91:736–747.
+Miller, S. (2006).
+Experimental Design and Statistics.
+New York: Taylor & Francis.
+Neyman, J. S. (1990[1923]).
+On the application of probability theory to agricultural experiments.
+essay on principles: Section 9 (reprinted edition).
+Stat. Sci., 5:465–472.
+Pesarin, F. and Salmaso, L. (2010).
+Permutation tests for complex data: Theory, applications and
+software.
+New York: John Wiley & Sons.
+Rapola, J. M., Virtamo, J., Ripatti, S., Huttunen, J. K., Albanes, D., Taylor,
+P. R., and Heinonen, O. P. (1997).
+Randomised trial of FORMULA -tocopherol and FORMULA -carotene
+supplements on incidence of major coronary events in men with previous
+myocardial infarction.
+Lancet, 349:1715–1720.
+Rigdon, J. and Hudgens, M. G. (2015).
+Randomization inference for treatment effects on a binary outcome.
+Stat. Med., 34:924–935.
+Robins, J. M. (1988).
+Confidence intervals for causal parameters.
+Stat. Med., 7:773–785.
+Rubin, D. B. (1974).
+Estimating causal effects of treatments in randomized and
+nonrandomized studies.
+J. Educ. Psychol., 66:688–701.
+Rubin, D. B. (1978).
+Bayesian inference for causal effects: The role of randomization.
+Ann. Stat., 6:34–58.
+Rubin, D. B. (1980).
+Comment on “Randomized analysis of experimental data: The fisher
+randomization test” by D. Basu.
+J. Am. Stat. Assoc., 75:591–593.
+Rubin, D. B. (2008).
+For objective causal inference, design trumps analysis.
+Ann. Appl. Stat., 2:808–840.
+Simon, R. and Freedman, L. S. (1997).
+Bayesian design and analysis of FORMULA  factorial clinical trials.
+Biometrics, 53:456–464.
+Solari, A., Salmaso, L., Pesarin, F., and Basso, D. (2009).
+Permutation tests for stochastic ordering and ANOVA: Theory and
+applications in R.
+New York: Springer.
+Stampfer, M. J., Buring, J. E., Willett, W., Rosner, B., Eberlein, K., and
+Hennekens, C. H. (1985).
+The 2FORMULA 2 factorial design: Its application to a randomized
+trial of aspirin and us physicians.
+Stat. Med., 4:111–116.
+Wu, C. F. J. and Hamada, M. S. (2009).
+Experiments: Planning, Analysis, and Optimization.
+New York: Wiley.
+Yates, F. (1937).
+The design and analysis of factorial experiments.
+Technical Communication, 35.
+Imperial Bureau of Soil Science, London.
+Zhang, J. L. and Rubin, D. B. (2003).
+Estimation of causal effects via principal stratification when some
+outcomes are truncated by “death”.
+J. Educ. Behav. Stat., 28:353–368.
+
+Proofs of lemmas, theorems and corollaries
+[Proof of Lemma REF ]
+The proof in large follows . By (REF )
+FORMULA 
+
+By combining the above and the fact that
+FORMULA 
+the proof is complete.
+[Proof of Lemma REF ]
+We only prove the case where FORMULA  and
+FORMULA 
+because other cases (FORMULA ) are analogous. We break down (REF ) to two parts:
+FORMULA 
+and
+FORMULA 
+and prove them one by one. It is worth emphasizing that, for the equality in (REF ) to hold, we only need the equality in either (REF ) or (REF ) to hold.
+To prove (REF ), note that
+FORMULA 
+and therefore (REF ) is equivalent to
+FORMULA 
+We use the inclusion-exclusion principal to prove the above. First, it is obvious that
+FORMULA 
+and the equality holds if and only if the set
+FORMULA 
+or equivalently
+FORMULA 
+Second, note that
+FORMULA 
+
+The equality in (REF ) holds if and only if
+FORMULA 
+Third, by the same argument we have
+FORMULA 
+and the equality in (REF ) holds if and only if
+FORMULA 
+Fourth, by applying the similar logic, we have
+FORMULA 
+
+and the equality in (REF ) holds if and only if
+FORMULA 
+By combining (REF ), (REF ), (REF ) and (REF ), we have proved that (REF ) holds. Moreover, the equality in (REF ) holds if and only if (REF ), (REF ), (REF ) and (REF ) hold simultaneously, i.e., the four conditions in (REF ), (REF ), (REF ) and (REF ) are met simultaneously. We leave it to the readers to verify that this is indeed
+equivalent to (REF ), i.e. for all  FORMULA
+FORMULA 
+The proof of (REF ) is symmetrical, because it is equivalent to
+FORMULA 
+In particular, the equality in (REF ) holds if and only if (REF ) holds (again we leave the verification to the readers). The proof is complete.
+[Proof of Theorem REF ]
+The proof directly follows from (REF ), and Lemma REF  and REF .
+
+Additional simulation studies
+We conduct an additional series of simulation studies to take into account data generation mechanisms different from those described in Section . In order to generate a “diverse” set of joint distributions of the potential outcomes
+FORMULA 
+while keeping the simulation cases closer to our empirical examples, we let
+FORMULA 
+and
+FORMULA 
+The main rationale behind the above data generation mechanism is that, in many medical studies the (potential) primary endpoint (e.g., mortality) is zero for most patients under any treatment combination. Indeed, our setting guarantees that on average 66.7% of the experimental units have FORMULA  for all  FORMULA
+We use the aforementioned data generation mechanism to produce 50 simulation cases. For each simulation case, we follow the procedure described in Section , and (to make the article concise) report only the coverage results in Figure REF . The results largely agree with the conclusions made in Section , i.e., the improved Neymanian variance estimator in (REF ) always, and sometimes greatly, mitigates the over-estimation issue of the classic Neymaninan variance estimator.
+FIGURE 

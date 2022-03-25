@@ -1,0 +1,302 @@
+
+[12pt]article
+ITP-SB-94-23
+USITP-94-10
+hep-th/9406062
+May 1994
+
+The Nonlinear Multiplet Revisited
+U. Lindströmemail:ul@vana.physto.se
+Institute of Theoretical Physics
+University of Stockholm
+Vanadisvägen 9
+S-113 46 Stockholm SWEDEN
+Byungbae Kimemail:bkim@insti.physics.sunysb.edu
+and M. Ročekemail:rocek@insti.physics.sunysb.edu
+Institute for Theoretical Physics
+State University of New York
+Stony Brook, NY 11794-3840 USA
+
+
+
+Using a reformulation of the nonlinear multiplet as a gauge
+multiplet, we discuss its dynamics. We show that the nonlinear
+“duality” that appears to relate the model to a conventional
+FORMULA -model introduces a new sector into the theory.
+
+
+Introduction
+Conformal field theories provide string backgrounds. Different
+supermultiplets in general give rise to different superconformal field
+theories. The nonlinear multiplet was first introduced as a
+compensating multiplet for FORMULA  FORMULA  supergravity {{cite:968954c1-d291-43c0-a91b-cad764e0497c}}. It
+was later used to construct hyperkähler metrics {{cite:a6dcbe6c-cdac-4227-8336-4c4f49720906}}. In this
+letter we study it as a FORMULA  dynamical system in its own right. We
+find a number of novel features: It can be formulated as a theory
+with a sector linear in a gauge field analogous to a FORMULA 
+topological theory {{cite:c5d95b12-27df-419e-a9e9-ab1e106b4451}}, {{cite:a5824cc4-9f3a-4b2a-aca8-aff53f234ffc}}. It is “dual” to an ordinary
+FORMULA -model via a nonlinear “duality” that introduces new
+solutions to the classical field equations (and presumably new states
+in the quantum theory).
+We begin this letter with a quick review of the nonlinear multiplet
+and FORMULA  superspace. We then reformulate the nonlinear multiplet as
+a kind of FORMULA  gauge multiplet, and give a construction of a
+nontrivial string theory background (a hyperkähler manifold). Next
+we define gauge-covariant components and give the component
+action. Finally, we discuss the nonlinear “duality”.
+
+
+Review of the nonlinear multiplet
+We begin with a quick review of higher FORMULA  superspaces in two
+dimensions. Dimensional analysis of the
+superspace measure and the superfield component content implies that to
+construct superspace actions one needs to find invariant subspaces and
+corresponding restricted measures. Such subspaces are analogous to
+FORMULA , FORMULA  chiral and antichiral superspaces. To this end, in a
+series of papers {{cite:b048f573-5209-4f3d-91f4-e13223b81ac2}}, {{cite:ff411714-8141-4dda-b7f7-c953ae50ad4c}}, {{cite:1c84926d-4de1-4a29-888e-292d605e7274}}, {{cite:1d365c6b-524e-439a-a200-8c63bb90cc30}}, we have constructed and
+used a projective superspace. In the present FORMULA  context, it is
+introduced as follows {{cite:a6dcbe6c-cdac-4227-8336-4c4f49720906}}, {{cite:ff411714-8141-4dda-b7f7-c953ae50ad4c}} (see also {{cite:b048f573-5209-4f3d-91f4-e13223b81ac2}}, {{cite:1c84926d-4de1-4a29-888e-292d605e7274}}): The
+complex FORMULA  doublet spinor derivatives FORMULA , FORMULA 
+that describe FORMULA  supersymmetry obey the commutation relations
+FORMULA 
+(all others vanish). When we work with FORMULA  superfields, we
+identify FORMULA  as the FORMULA  spinor covariant
+derivative and FORMULA  as the generator of the
+nonmanifest supersymmetries. We use a complex variable FORMULA  to
+define a set of anticommuting spinor derivativesIn
+{{cite:a6dcbe6c-cdac-4227-8336-4c4f49720906}}, {{cite:ff411714-8141-4dda-b7f7-c953ae50ad4c}}, FORMULA  are rescaled by a factor:
+FORMULA .:
+FORMULA 
+A real structure FORMULA  acts on FORMULA  by hermitian
+conjugation composed with the antipodal map, i.e.;
+FORMULA 
+Since FORMULA , the map FORMULA  preserves the
+subspaces annihilated by the derivatives (REF ). To describe the
+nonlinear multiplet {{cite:968954c1-d291-43c0-a91b-cad764e0497c}}, {{cite:a6dcbe6c-cdac-4227-8336-4c4f49720906}}, we consider a superfield
+FORMULA , with particular FORMULA  dependence and a reality condition:
+FORMULA 
+The reality condition implies that the FORMULA  superfields FORMULA 
+obey
+FORMULA 
+which we solve by writing
+FORMULA 
+Finally, we require that FORMULA  is
+annihilated by the derivatives in (REF ); these FORMULA 
+constraints lead to the FORMULA  component relations
+FORMULA 
+which imply
+FORMULA 
+where FORMULA .
+To construct FORMULA  actions for FORMULA  superfields we use a second set of
+linearily independent covariant spinor derivatives:
+FORMULA 
+An action may then be written as
+FORMULA 
+where FORMULA  is an appropriate contour. Using
+FORMULA 
+and (of course) FORMULA , the FORMULA  superspace
+form of the
+action (REF ) is:
+FORMULA 
+Up to a sign (FORMULA ) and the relabelling
+(FORMULA , FORMULA ), this is the description of
+the nonlinear multiplet given in {{cite:a6dcbe6c-cdac-4227-8336-4c4f49720906}}.
+We may also consider an FORMULA  nonlinear multiplet that obeys only the
+constraint (REF ) and
+FORMULA 
+and has an action
+FORMULA 
+for arbitrary FORMULA . Clearly, the FORMULA  symmetric action (REF )
+is a special case of this, and our subsequent discussion applies to
+the general case (REF ).
+We do not know how to solve the constraints
+(REF ) and (REF ) in superspace (Actually, not even in
+FORMULA  superspace!). Consequently, it is not clear what the superfield
+equations are, and in {{cite:a6dcbe6c-cdac-4227-8336-4c4f49720906}} we did not look directly at the
+dynamics of the nonlinear multiplet. To do so, we would have needed to
+go to components, and the component expansion of the action
+(REF ) subject to the constraints (REF ), (REF )
+is very tedious. In the next section, we reformulate the nonlinear
+multiplet in a way that makes the computation of the component action
+tractable.
+In {{cite:a6dcbe6c-cdac-4227-8336-4c4f49720906}}, we studied the action in another way: We found a
+“duality” transformation to a formulation in terms of ordinary
+FORMULA  chiral superfields; in terms of these, the dynamics can be
+understood straightforwardly. The “duality” transformation
+resembles the well known target space duality of string theory, but
+is nonlinear. It is performed as follows: we replace the action by a
+first-order action
+FORMULA 
+where FORMULA  is now an unconstrained superfield, and FORMULA  is a
+chiral superfield: FORMULA . Integrating out FORMULA , we
+recover the constraint (REF ); integrating out FORMULA  gives
+FORMULA , and substituting back gives a
+standard FORMULA  action for the chiral superfields FORMULA .
+However, as noted in {{cite:a6dcbe6c-cdac-4227-8336-4c4f49720906}}, this is a peculiar “duality”: the
+trivial action FORMULA  gives rise to a nontrivial free action
+for FORMULA . We resolve this paradox in the section 4.
+
+
+The nonlinear multiplet as a gauge multiplet.
+As discussed in the introduction, the formalism can be simplified by
+rewriting the nonlinear multiplet as a gauge multiplet. We do this
+by rescaling
+FORMULA 
+Then the superfield FORMULA  becomes
+FORMULA 
+and the constraints and transformations (REF ) become
+(suppressing the FORMULA  indices on the spinor operators FORMULA ):
+
+FORMULA 
+a ,    
+a
+FORMULA Q(e-iYa)=-abaDb .
+The superfield FORMULA  is left unchanged by a gauge transformation:
+FORMULA 
+Because of this invariance, the transformations (REF ) do not
+determine the transformations of the fields FORMULA ; We can
+consistently choose:
+FORMULA 
+and
+FORMULA 
+(Note that (REF ) breaks the manifest FORMULA  invariance
+of (REF ) to an FORMULA  subgroup.) The transformations and
+constraints (REF ), (REF ) are invariant under
+the gauge transformations (REF ) as long as FORMULA  is
+chiral: FORMULA . In this case, FORMULA  transforms as an
+ordinary FORMULA  FORMULA  gauge supermultiplet. This allows us to find
+component actions in a Wess-Zumino gauge, greatly simplifying our
+calculations.
+We work in a chiral representation of the gauge group, and define
+FORMULA 
+We also define gauge covariant derivatives  FORMULA
+FORMULA 
+where FORMULA  is the charge of the field that FORMULA  acts on (FORMULA  and
+FORMULA  both have FORMULA ). These derivatives obey the usual algebra
+FORMULA 
+Here FORMULA  is the superfield strength of FORMULA , and is a
+twisted chiral superfield with charge FORMULA : FORMULA .
+The FORMULA  action (REF ) becomes:
+FORMULA 
+where FORMULA  is restricted to be gauge invariantActually, gauge
+invariance of the action implies invariance of FORMULA  only up to
+superspace total derivatives; this has no effect on our analysis.:
+FORMULA 
+and where FORMULA  and FORMULA . We use (REF ) and its derivatives frequently
+below. The condition that the action (REF ) has FORMULA 
+supersymmetry is Laplace's equation
+FORMULA 
+The constraint (REF ) (and its complex conjugate) become
+simply
+FORMULA 
+These constraints are
+actually gauge covariant; thus when we go to first order form
+and impose them via chiral Lagrange multipliers FORMULA  and
+FORMULA  (recall that we are replacing
+FORMULA  with the unconstrained gauge superfield FORMULA ), the action
+(REF ) is gauge invariant if FORMULA  both have charge
+FORMULA :
+FORMULA 
+The gauge invariance of the action allows us to choose a gauge that
+is very convenient for performing the “duality” transformation:
+FORMULA . In this gauge, we may for example consider FORMULA ; this gives
+FORMULA 
+(Equivalently, we may choose as the action a Fayet-Iliopoulos term for
+FORMULA .) Eliminating FORMULA  by the equation FORMULA , we get the Kähler potential for the Eguchi-Hansen
+gravitational instanton with the “wrong” sign of the mass-parameter.
+This gives a nontrivial example of a hyperkähler metric constructed
+using the nonlinear multiplet and “duality” transformation.
+
+
+Components
+In this section, we descend from superspace to spacetime, and
+compute the component action. We work with the first order
+system (REF ), and derive the component form of the
+constraints by integrating out the component Lagrange multiplier
+fields. After giving the full action in a compact geometric
+formulation, we focus on the bosonic sector and resolve the paradox
+that our nonlinear “duality” introduced.
+As usual, we define component fields as FORMULA  independent
+projections of the superfields and their spinor derivatives. The
+Wess-Zumino gauge components of the gauge superfield are:
+FORMULA 
+where FORMULA  is the component gauge field, and FORMULA , etc., are
+various gauge invariant superpartners of FORMULA .
+The components of the chiral superfields FORMULA 
+(recall that FORMULA  is the Lagrange multiplier field) are:
+FORMULA 
+We denote the set FORMULA  collectively by FORMULA  (similarly, we
+denote FORMULA , etc.), and the total super-Lagrangian
+FORMULA  by the
+Kähler potential FORMULA .
+The component Lagrangain, after integrating by parts and eliminating
+the auxiliary fields FORMULA  to bring out the geometric features, is:
+FORMULA 
+where the metric FORMULA , the
+Levi-Civita connection FORMULA , and the curvature FORMULA  of the Kähler manifold with potential FORMULA  are
+FORMULA 
+(for Kähler manifolds, these and their complex conjugates are the
+only nonvanishing components). Further, FORMULA  is the killing vector
+FORMULA , FORMULA , and the
+world-sheet covariant derivatives
+FORMULA 
+are both gauge and diffeomorphism covariant. In deriving the
+Lagrangian FORMULA  (REF ), we have used the following identities:
+FORMULA 
+where FORMULA  is the charge of FORMULA . To get the pure
+nonlinear multiplet action, we separate out the dependence on the
+Lagrange-multiplier multiplet
+FORMULA , and integrate it out. This gives the constraints:
+FORMULA 
+Aa+(i 2DI -ww)Aa
+--+a ++-a)=0 ,
+and their complex conjugates.
+The basic features of the model can be seen in the bosonic
+sector of the Lagrangian (REF ); after integrating by parts
+and collecting terms, we find
+FORMULA 
+Aa) ) -i 2(C- C)(DI |A|2-i 2Aa
+
+ FORMULAAa) ,                                          
+where FORMULA {++,=}FORMULA |A1|=1FORMULA |C|=1FORMULA w,V,DI FORMULA wFORMULA w=0FORMULA VFORMULA V(A,C)FORMULA DI FORMULA C- CFORMULA AFORMULA LboseFORMULA |C|=1 FORMULAFORMULA Aa,AaFORMULA LdualFORMULA =1 2 FORMULAFORMULA Integrating out the Lagrange multiplier field FORMULA  gives
+
+FORMULA 
+Aa2|A|2 ,        ww=-Aa Aa+Aa Aa4|A|2 .
+Substituting back into FORMULA  (REF ), we find
+FORMULA 
+4|A|2 +1 2(++Aa=Ab+=Aa++Ab)) -18(Aa La-AaLa)Ac
+ FORMULAAc|A|2 .                              
+This still depends on the gauge field FORMULA ; however, the dependence is
+now only linear, and hence FORMULA  cannot be integrated out. Thus
+we appear to have found a “duality” between a conventional
+FORMULA -model and a model with a sector that is first order in
+derivatives. The most extreme form of this paradox occurs when the
+superspace lagrangian FORMULA  (REF ) vanishes: then
+FORMULA , but its “dual” is FORMULA AaFORMULA wFORMULA wFORMULA LboseFORMULA w=0FORMULA C+C=LabAaAb|A|2FORMULA w=0 FORMULAFORMULA C+C=LabAaAb|A|2FORMULA LnonlinFORMULA Lbose FORMULA FORMULA
+
+
+Conclusions
+We have reformulated the nonlinear multiplet as a gauge multiplet.
+This allowed us to compute the component Lagrangian in a Wess-Zumino
+gauge. We found a system with a subsystem linear in the gauge field
+(REF ). We considered a nonlinear “duality” transformation
+that eliminates this unusual subsystem and gives an ordinary
+FORMULA -model. We found that the two theories are not dual in the
+sense of representing different formulations of the same theory, but
+correspond to different sectors of the first order model
+(REF ).
+Our analysis has been entirely classical; it would be interesting to
+study the nonlinear multiplet at the quantum level. In particular,
+one would like to see if the nonlinear “dual” of a superconformal
+field theory is superconformal, and if it is, what, if any, relation
+the two theories have. A second unsolved problem is classical and
+more geometric: which FORMULA -models admit a nonlinear “duality”
+to a nonlinear multiplet formulation.
+
+Acknowledgments
+It is a pleasure to thank the ITPs at Stony Brook and Stockholm,
+as well as the Physics Department at Oslo University, for hospitality.
+We would like to thank Jan de Boer for his comments on the manuscript.
+UL acknowledges partial support from the NFR under Grant No. F-FU
+4038-300 and NorfA under Grant No. 93.35.088/00, and MR
+and BBK acknowledge partial support from the NFS under Grant No. PHY 93 09888.

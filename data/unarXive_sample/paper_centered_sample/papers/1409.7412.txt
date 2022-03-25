@@ -1,0 +1,406 @@
+
+Electron Structure: Shape, Size and GPDs in QED
+                                                  NT@UW-14-20
+Gerald A. Miller
+University of Washington, Seattle WA 9819-1560
+2018/12/12 09:38:44
+ The shape of the electron is studied using lowest-order perturbation theory. Quantities used to probe the structure of the proton:
+form factors, generalized parton distributions, transverse densities, Wigner distributions and the angular momentum content are computed for the electron-photon component of the electron wave function. The influence of longitudinally polarized photons, demanded by the need for infrared regularization via a non-zero photon mass, is included. The appropriate value of the photon mass depends on experimental conditions, and consequently the size of the electron (as defined by the slope of its Dirac form factor) bound in a hydrogen atom is found to be about four times larger than when the electron is free. The shape of the electron, as determined from the transverse density and generalized parton distributions is shown to not be round, and the free electron is shown to be far less round than the bound electron. An electron distribution function (analogous to the
+quark distribution function) is defined, and that of the bound electron is shown to be suppressed compared to that of the free electron.
+If the relative transverse momentum of the virtual electron and photon is large compared with the electron mass, the virtual electron and photon each carry nearly the total angular momentum of the physical electron (1/2), with the orbital angular momentum being nearly (-1/2). Including the non-zero photon mass leads to the suppression of end-point contributions to form factors. Implications for proton structure and color transparency are discussed.
+
+Introduction
+Recent experimental progress in measuring improved upper limits for the electric dipole moment of the electron
+{{cite:0c223215-29fd-4509-b692-92c995cd63ef}}, {{cite:98f3040d-9d2a-43b6-b0df-8f74d240d999}} has focussed attention on the non-spherical shape of the electron. These new limits have been interpreted in terms of the deviation of the shape of the electron from spherical symmetry.
+A non-zero dipole moment arises from forces that violate parity and time reversal invariance, and its measurement at a much larger value than the standard model prediction would represent new physics.
+However, a non-spherical shape of the electron arises naturally within the standard model via the standard effects of quantum electrodynamics (QED). In particular, the electron fluctuates into a virtual photon and virtual electron, giving the electron both a non-zero spatial extent and a non-spherical shape. These density fluctuations are of first-order in the fine structure constant, FORMULA . A schematic representation of the wave function of the electron is given by
+FORMULA 
+where FORMULA . We shall refer to the state FORMULA  as the physical electron and the electron in the FORMULA 
+component as a virtual electron.
+The primary purpose of this paper is to investigate the structure of the electron within QED. Quantities such as the extent of the electron and its orbital angular momentum can only be described within field theory if the light-front or infinite momentum frame approach is used {{cite:1e4b1dfe-f1c4-410b-bee7-db659f9837e5}}, {{cite:9cab18c8-38f0-480f-8e8d-44be0e48d319}}, and we will use that approach here.
+The effects of pair-production from the vacuum are eliminated in this approach, allowing one to use Fock-space expansions of wave functions.
+In the light front approach the longitudinal and transverse momenta of the constituents are treated differently, with the longitudinal expressed in terms of the ratio FORMULA  with FORMULA  of the constituent plus-component of the momentum to the total plus component of the momentum, and the transverse momentum FORMULA  allowed all real values. Thus one refers to roundness as azimuthal symmetry or dependence only on FORMULA . The use of the spin degree of freedom is needed to perceive a lack of roundness, see for example {{cite:3b320408-b6f5-4f68-a615-44fd4fdedd8d}}.
+The light-front formalism has been extensively and successfully applied to understand the structure of the proton, and a variety of formal tools have been developed.
+These tools include transverse charge distributions{{cite:72fc353c-a279-4f5c-8016-ff6e21491c3c}}, {{cite:63b87b92-6d4f-4c91-b21e-733a180fe662}}, {{cite:9aab08eb-8475-4c5e-b718-9ec7dd861996}}, generalized parton distributions
+{{cite:a02cf180-fd1f-4a80-8dd9-f4c6c67650a9}}-{{cite:b3858fa9-63f6-4728-aca2-802d6d6fd9ae}}
+transverse momentum distributions
+{{cite:729439c9-5b6d-46e4-a896-4baeff979b66}}-{{cite:25624013-7314-4c3f-9b97-bac18475393a}},
+and
+Wigner distributions {{cite:5eacc2ef-2387-4755-8747-1059432455e3}}-{{cite:d28eaeb2-e9af-427e-b3dc-dfa79c5335f6}}. It is our intention to use these very same tools to elucidate the structure of the electron. This approach has already been used
+in {{cite:b78104b2-3300-4946-b1bd-aeb4182a1382}} to provide a qualitative explanation of the sign of the anomalous magnetic moment of the electron and also in {{cite:a38c780e-0b1b-4abf-9f60-d0541f17c23a}} to study the angular momentum content.
+A secondary purpose of this paper is use the advantages of knowing the wave function to provide insights useful for constructing models of the nucleon wave function. The FORMULA  component of the electron is analogous to a quark-vector-diquark component of the nucleon. Refs. {{cite:4fc37972-1341-4bb3-b375-bd72a75d35f2}}, {{cite:3afadb2a-838d-4c02-b330-19855e964dc3}} used this analogy to model nucleon electromagnetic form factors.
+The lowest-order, two-component formulation of the electron has been used for a long time {{cite:94f3e8cc-1183-4348-a67f-aefb7057e339}}, {{cite:5643211f-fd7c-4607-835b-e8b0a5f668d3}}, but one detail is added here. It is standard procedure to let the virtual photon have a mass (here, FORMULA ) to handle the infrared regularization, with the specific value of this mass depending on experimental conditions {{cite:5c69f7d7-dbad-49e2-b0e7-8dd4c29ef9b7}}, {{cite:d2552095-94a2-4c36-94a9-94df978ffbeb}}, or
+the atomic conditions for a bound state {{cite:c5ae0d27-1f0e-4a58-97b3-ae87abc1f2a6}}.
+In particular, for an electron bound in an atom FORMULA , with FORMULA  the election mass {{cite:b99932cb-885e-420d-a5c1-46adc2cbfb6b}}
+and FORMULA  is the Rydberg constant. For a free electron, the value of FORMULA  is determined by the energy resolution {{cite:5c69f7d7-dbad-49e2-b0e7-8dd4c29ef9b7}}, {{cite:d2552095-94a2-4c36-94a9-94df978ffbeb}}, for which we take FORMULA  as a typical value.
+It is worthwhile to explain how it is that the photon mass ends up being replaced by the energy resolution. Peskin & Schroeder {{cite:d2552095-94a2-4c36-94a9-94df978ffbeb}} show, for on-shell (free) electrons, that
+FORMULA  is infrared (IR) divergent unless the virtual photon has a mass and the resulting elastic electron-target cross section contains this regulated IR divergence.
+But the measured cross section is the sum of the elastic and brehmstrahlung cross sections, and the IR divergence is removed when the sum is taken. The summed cross section is IR safe but depends on the experimental resolution. The net result is that the correct answer is is obtained by
+using the computed value of FORMULA  with the photon mass replaced with the energy resolution. Modern experimental facilities have excellent energy resolution (see for example {{cite:6a83599d-dcd7-4746-8d1e-163c9848e0d4}})
+so we use the value of the electron mass, 0.51 MeV, which is very small, as the energy resolution. We shall see that for any values of FORMULA , that there is very little variation with FORMULA , so taking FORMULA  is a reasonable simplification.
+The Lamb shift has been interpreted as arising from an increase in the spatial extent of the bound electron relative to the free one {{cite:c5ae0d27-1f0e-4a58-97b3-ae87abc1f2a6}}. This means that there could be substantial differences between the structure of a bound electron with FORMULA  and a free one with FORMULA . The difference in structure between bound and free nucleons is the cause of the EMC effect {{cite:2de9991e-b745-4d18-a817-5b3e70960975}}, {{cite:37260685-3716-485e-bfba-a1e602edde90}}. Thus the electron, with its known wave function has interesting properties that can lend insight into nucleon properties, and
+exploring the dependence of the various electron structure metrics on FORMULA  is an essential part of this paper.
+The remainder of the paper follows the outline: Sect. II is concerned with a brief review of the light-front tools discussed above. Then our treatment of the electron wave function is described in Sect. III. Sect.IV is concerned with the Dirac form factor, and its dependence on the value of the mass of the virtual photon. Sect. V is concerned with the Pauli form factor. The transverse charge distributions and end point effects are discussed in in Sect. VI. The generalized parton distribution FORMULA  is shown to vanish in Sect. VII. Wigner distributions are discussed in Sect. VIII. The angular momentum content is discussed in Sect. IX. A summary and discussion Sect. X concludes the paper.
+
+Generalized Parton Distributions, Transverse Momentum Distributions and the Wigner Distribution
+Our aim in this Section is to briefly review the various distributions used to describe the structure of the nucleon, restricting the discussion to the case
+of skewness 0 (momentum transfer only in the transverse direction). These distributions are used to describe the electron in later Sections.
+The generalized parton distributions of twist
+two {{cite:a02cf180-fd1f-4a80-8dd9-f4c6c67650a9}}, {{cite:b1957374-d6b3-4440-babe-15b95fc209a9}}, {{cite:747b928e-8d67-4b84-9628-f0d4a8f360d2}}, {{cite:391b3d2b-5069-4c24-a655-06b73315a885}}, {{cite:b5ac42b9-9a77-4099-b9a0-7b10f62e3455}} are given by
+FORMULA 
+where FORMULA  represents the electron field operator, and FORMULA .
+The integral of the above quantities over FORMULA  give the elastic form factors FORMULA  for FORMULA  and FORMULA  for FORMULA . There are also {{cite:b5ac42b9-9a77-4099-b9a0-7b10f62e3455}}
+FORMULA 
+The integral of FORMULA  gives the axial form factor, when weighted with the appropriate charges.
+Our notation for a four-vector FORMULA  is FORMULA ,
+with transverse part:
+FORMULA . Scalar products of boldface vectors obey FORMULA .
+Roman indices FORMULA , FORMULA , FORMULA  denote
+the two transverse directions. The kinematical variables are FORMULA , FORMULA , with FORMULA . The
+electron mass is denoted by FORMULA . The polarization of the electron states FORMULA 
+and FORMULA  are not labelled here and the momentum and polarization labels
+of the initial and final electron spinors FORMULA  and FORMULA  are omitted. We work only to first order in FORMULA , so no
+Wilson line between the electron field and its conjugate is needed to preserve gauge invariance.
+Transforming the generalized parton distributions at skewness 0 to impact parameter space yields functions that have a probability
+interpretation {{cite:6fc6234e-1af2-4925-9421-6d0526caea0a}}, {{cite:72fc353c-a279-4f5c-8016-ff6e21491c3c}}, {{cite:63b87b92-6d4f-4c91-b21e-733a180fe662}}. A two-dimensional Fourier
+transform gives
+FORMULA 
+The two-dimensional Fourier transform in Eq. (REF ) causes
+electron field operators to be evaluated at a definite transverse position {{cite:6fc6234e-1af2-4925-9421-6d0526caea0a}}, {{cite:b1957374-d6b3-4440-babe-15b95fc209a9}}.
+Integration of Eq. (REF ) over FORMULA 
+gives the transverse charge density, which is the matrix element of the quark charge density
+in a state of definite transverse position.
+The Fourier transforms
+FORMULA  and FORMULA  are also defined by a two-dimensional Fourier transform as in
+Eq. (REF ).
+Consider the spin states.
+It is useful to use states of definite
+light-cone helicity {{cite:1cf9ac98-f189-48b8-9104-cb0964795829}} because the light-cone helicity of
+a state is invariant under boosts along the FORMULA -axis. It is now conventional procedure to denote the state
+FORMULA 
+as a state of transverse (FORMULA )
+polarization of the electron.
+A state with both longitudinal and transverse polarization is written as
+FORMULA 
+with spin vector FORMULA 
+Thus FORMULA  and FORMULA  characterizes the transverse and longitudinal polarizations, FORMULA  being the general polarization vector.
+Impact parameter generalized parton distribution functions are coordinate space densities for transverse coordinates.. One can access transverse momentum space densities
+through transverse momentum distributions {{cite:729439c9-5b6d-46e4-a896-4baeff979b66}} defined by the correlation function
+FORMULA 
+where the Wilson line is again absent, and the proton states have no transverse momentum. The superscript FORMULA  stands for a twist-two Dirac operator FORMULA  with FORMULA . The functions FORMULA  are momentum space densities.
+Both generalized parton distributions and transverse momentum distributions are captured by using
+five-dimensional Wigner distributions (two position and three momentum coordinates) {{cite:d28eaeb2-e9af-427e-b3dc-dfa79c5335f6}} as seen from the infinite momentum frame (IMF)
+ {{cite:72fc353c-a279-4f5c-8016-ff6e21491c3c}}, {{cite:63b87b92-6d4f-4c91-b21e-733a180fe662}}, {{cite:9aab08eb-8475-4c5e-b718-9ec7dd861996}}, {{cite:6fc6234e-1af2-4925-9421-6d0526caea0a}}, {{cite:54b7d4d6-3b50-428f-9eaf-c1c59c64dd26}}, {{cite:266291f7-b896-4e33-a560-4fb490a40dc6}}, {{cite:b5ac42b9-9a77-4099-b9a0-7b10f62e3455}}.
+The Wigner operators for electrons at a fixed light-cone time FORMULA  {{cite:f689bb30-b7c3-4e37-aab8-696ba8fa287c}} are defined as follows
+FORMULA 
+with FORMULA , FORMULA  the average nucleon longitudinal momentum and FORMULA  the average fraction of nucleon longitudinal momentum carried by the active quark. In general, a Wilson line is needed for gauge invariance, but we work only to order FORMULA , so no Wilson line is needed for the present applications.
+Take matrix elements in nucleon states that differ by a transverse momentum
+to obtain
+FORMULA 
+Then take a two-dimensional Fourier transform so that
+FORMULA 
+The functions FORMULA  are the
+generalized parton densities mentioned above.
+Integration of Wigner distributions over position and/or momentum leads to probability distributions. For example,
+integrating over FORMULA  simply sets FORMULA , so the Wigner distributions reduce to the standard TMDs FORMULA  {{cite:b3858fa9-63f6-4728-aca2-802d6d6fd9ae}}, {{cite:692e9b99-03a4-442c-92d2-54bfbeacea6b}}
+FORMULA 
+which can be interpreted as quark densities in three-dimensional momentum space.
+Integrating over FORMULA  sets FORMULA  to FORMULA , so the Wigner distributions reduce to two-dimensional Fourier transforms of the standard GPD correlation functions {{cite:b3858fa9-63f6-4728-aca2-802d6d6fd9ae}}, {{cite:692e9b99-03a4-442c-92d2-54bfbeacea6b}}
+FORMULA 
+with
+FORMULA 
+We see that one obtains quark densities in transverse position and longitudinal momentum space.
+
+Electron Light Cone Wave Function
+The lowest-order light cone wave function of the electron has been known for a long time {{cite:94f3e8cc-1183-4348-a67f-aefb7057e339}}, {{cite:5643211f-fd7c-4607-835b-e8b0a5f668d3}}. Our only addition to the formalism is
+to explicitly include the longitudinal states of the virtual photon, which are necessary to handle the infrared divergences.
+The light front model of the FORMULA  component of the electron consists of the following light front wave function (LFWF)
+FORMULA 
+
+where FORMULA  are the virtual electron, photon and electron momentum respectively, where FORMULA ,
+and FORMULA  are the related light front helicities, and spinors FORMULA  are Lepage-Brodsky spinors {{cite:b41603b2-17de-459e-8711-3b49c67f2d53}}.
+In our evaluations the mass of the physical electron and that of the bare electron are both taken as FORMULA  because
+we work to first order in FORMULA .
+The photon is allowed a mass, FORMULA , to regulate the infrared divergence. The transverse polarization vectors in light cone gauge {{cite:62ecc21c-e82e-4f15-9794-b78241cb144b}} have the form
+FORMULA 
+
+These polarization vectors satisfy the Lorentz condition FORMULA . However, the one for longitudinal massive photons does not satisfy this
+condition {{cite:62ecc21c-e82e-4f15-9794-b78241cb144b}}. In the interest of clarity
+we are explicit:
+FORMULA 
+
+where we have also included the longitudinal polarization vectors that are absent in previous treatments.
+In the Lepage-Brodsky {{cite:b41603b2-17de-459e-8711-3b49c67f2d53}} light cone convection the dot product is given by
+FORMULA 
+so that
+FORMULA 
+The light-front helicity components of the LFWFs are defined relative to
+Eq. (REF ) via
+FORMULA 
+
+We find
+FORMULA 
+FORMULA 
+
+The FORMULA  and FORMULA  wavefunctions are given by
+FORMULA 
+
+with
+FORMULA 
+
+We have taken the initial electron to have momentum FORMULA  in writing the above equations.
+With the exception of the terms FORMULA ,
+these wave functions have been known for a long time {{cite:94f3e8cc-1183-4348-a67f-aefb7057e339}}, {{cite:5643211f-fd7c-4607-835b-e8b0a5f668d3}}.
+For states with transverse spin in the FORMULA  direction (as in Eq. (REF )) we use the wave function {{cite:b78104b2-3300-4946-b1bd-aeb4182a1382}}
+FORMULA 
+These are
+FORMULA 
+
+FORMULA  of the Electron With An Infrared Regulator
+Our first step is to verify our light cone wave function by computing FORMULA  and comparing with text-book results {{cite:d2552095-94a2-4c36-94a9-94df978ffbeb}}.
+The form factor FORMULA  is defined as
+FORMULA 
+with FORMULA  as the electromagnetic current operator, and FORMULA  where FORMULA  is the four-momentum transferred to the electron.
+Renormalize using {{cite:d2552095-94a2-4c36-94a9-94df978ffbeb}}
+FORMULA 
+where FORMULA  is the first-order correction to FORMULA .
+Then the renormalized form factor FORMULA  is given by
+FORMULA 
+Using our wave functions yields:
+FORMULA 
+where the subscripts FORMULA  refer to the initial (final) transverse momentum of the struck virtual electron, and
+FORMULA 
+Then
+FORMULA 
+The integrals FORMULA  are performed by combining the denominators using the Feynman trick,integrating over FORMULA  and the Feynman parameter. The results are
+FORMULA 
+Now that FORMULA  is known via Eq. (REF ), the expression Eq. (REF ) for FORMULA  can be evaluated with a one-dimensional numerical integral.
+This expression differs from previous ones via the inclusion of the effects of the longitudinal photon through the terms proportional to FORMULA .
+To check that this expression is correct we compare with the one from Peskin & Schroeder. This is their eq(6.56),
+FORMULA 
+amended to retain the terms FORMULA  in the FORMULA  term of Eq. (REF ) as stated in the text.
+Using either Eq. (REF ) or Eq. (REF ) gives numerically identical
+results shown in Fig. REF . We see the asymptotic FORMULA  dependence, and also the substantial effect of longitudinally polarized virtual photons.
+FIGURE 
+For FORMULA  the dependence on FORMULA  is essentially FORMULA , and potentially large effects of changing the value of FORMULA  are not well-displayed in Fig. REF .
+For small values of FORMULA  such that FORMULA  is written as
+FORMULA 
+where (as we shall see in the next Sect.) FORMULA . To find FORMULA  use Eq. (REF )-Eq. () to obtain
+FORMULA 
+where FORMULA .
+For small values of FORMULA  we may use the approximation
+FORMULA 
+which is accurate for FORMULA . This shows a dramatic FORMULA  dependence.
+A plot of FORMULA  is shown in Fig. REF . The lower limit on FORMULA  corresponds with the appropriate value for electrons bound in hydrogen. The upper limit of FORMULA  is taken
+from typical experimental resolutions on the electron energy in electron scattering experiments.
+The electron “size" that enters in interpreting the Lamb shift is defined in terms of the slope of FORMULA  at FORMULA  {{cite:c5ae0d27-1f0e-4a58-97b3-ae87abc1f2a6}}. This size, denoted by FORMULA  is given by FORMULA  Note that the proton size that enters in atomic spectroscopy calculations is
+determined by the slope of the proton's electromagnetic form factor FORMULA  {{cite:c5ae0d27-1f0e-4a58-97b3-ae87abc1f2a6}}.
+We see that
+the size FORMULA  of the electron varies from about FORMULA  to FORMULA  as FORMULA  ranges from its lowest to highest values. This is about a factor of four variation. Most of the variation is from the FORMULA  term. Remarkably, the bound electron is about four times larger than the free electron.
+FIGURE 
+
+FORMULA  of the electron with infrared regulator
+The Pauli form factor FORMULA  is given by
+FORMULA 
+where FORMULA , FORMULA  and FORMULA  corresponds to a proton at rest.
+These matrix elements have neither an ultraviolet or infrared divergence, so if we take FORMULA  to be zero we
+recover the standard results. However, in the interest of examining implications for nucleon structure, and as preparation for the computation of the transverse charge density of a transversely polarized electron, we present results for non-zero values of FORMULA .
+Using the above wave functions we find
+FORMULA 
+which in taking FORMULA  to zero and integrating by parts reduces to the standard expression:
+FORMULA 
+The very strong FORMULA  dependence of FORMULA  is shown in Fig. REF . If FORMULA  represents a di-quark mass (with roughly twice a constituent quark mass) then using FORMULA  is appropriate and gives about a factor of five suppression.
+For larger values of FORMULA , the FORMULA  dependence is weaker.
+FIGURE 
+
+Transverse Charge Density of the Electron
+The usual procedure is to obtain the transverse charge density FORMULA  from the two-dimensional Fourier transform of FORMULA  or with equivalent manipulations on the appropriate GPDs.
+This can not be done in the present case because of the asymptotic behavior of FORMULA 
+To see this,
+rewrite Eq. (REF ) as
+FORMULA 
+The GPD FORMULA  is the two-dimensional Fourier transform of FORMULA  It is well known that asymptotically FORMULA  arising from the asymptotic form of FORMULA ,
+so the Fourier transform into FORMULA  space does not exist.
+The GPD transverse charge density of an electron polarized in the transverse direction FORMULA  is given by
+FORMULA 
+where FORMULA , FORMULA  and FORMULA  corresponds to a proton at rest.
+We find
+FORMULA 
+with
+FORMULA 
+This reduces to the result of {{cite:b78104b2-3300-4946-b1bd-aeb4182a1382}} if FORMULA .
+These densities are well behaved as FORMULA  approaches unity for non-zero values of FORMULA .
+It is important to understand this if one wants to understand the implications for models of proton structure.
+The end-point singularities are severely suppressed by significant values of FORMULA  which for the proton case correspond to di-quark masses. To see this we note that as FORMULA  approaches unity, the squares of the modified Bessel functions contain an exponential suppression factor: FORMULA .
+Thus, for non-zero values of FORMULA , we may numerically integrate over FORMULA  to obtain transverse densities.
+Results are shown in Fig REF  for two values of FORMULA  corresponding respectively to a bound and free electron.
+FIGURE 
+Observe a strong dependence on the value of FORMULA  with the lower value corresponding to an electron of larger spatial extent. This is consistent with the results of the previous section. The displayed behavior for small values of FORMULA  is roughly consistent with FORMULA , which originates in the small argument behavior of FORMULA .
+Next we wish to examine how much the azimuthal symmetry is violated by FORMULA . This is shown in
+Fig. REF . We see that lines of constant FORMULA  have a sinusoidal variation on the polar angle FORMULA .
+FIGURE 
+This plot shows that the electron charge density is not azimuthally symmetric. If one uses the spin degree of freedom as a spatial direction, it turns out that the electron is not round.
+Use of moments to reconstruct the form factor FORMULA  from  FORMULA
+Computing the transverse density at the point at FORMULA  is troublesome because asymptotically FORMULA , and so has no short-distance two-dimensional Fourier transform. Since the usual procedure to obtain the transverse density is to take a two-dimensional Fourier transform,
+one needs another operational procedure to relate the transverse charge density to FORMULA .
+This is to take moments
+FORMULA 
+Evaluation leads to
+FORMULA 
+For small FORMULA ,
+FORMULA 
+so one needs only FORMULA , which is given by
+FORMULA 
+This value of FORMULA , obtained as a moment of FORMULA ,
+is the same as obtained from FORMULA . Indeed,
+analytic integration yields the result of Eq. (REF ).
+We reiterate that
+for electrons bound in an atom FORMULA  but in free space FORMULA , as discussed in the Introduction. This leads to the result that the bound electron is about
+4 times larger (in radius) than the free one.
+The utility of the nucleon transverse density is that is directly observable once FORMULA  is sufficiently well known. The purpose of the present subsection is to demonstrate this same observability for the electron transverse density.
+Usually, integration over FORMULA  in Eq. (REF ) leads to
+FORMULA 
+To relate this expression to moments we use the expansion
+FORMULA 
+The influence of the term with FORMULA  in FORMULA  is removed by the renormalization procedure. Thus use the above sum starting at FORMULA  in Eq. (REF ) to
+find
+FORMULA 
+The alternating series expansion in FORMULA  converges rapidly for FORMULA , but fails for larger values of FORMULA . The success of this series in reproducing FORMULA  partially justifies the interpretation of FORMULA  as the two-dimensional FT of FORMULA .
+
+End point singularities-implications for nucleon structure
+The electron-photon component of the physical electron provides an example for building models of nucleon structure because one component of the nucleon wave function consists of a quark and a vector di-quark. In particular, the transverse size of composite systems is relevant for understanding whether or not color transparency (suppression of initial or final state interactions) in high momentum transfer processes {{cite:f51ecbb8-adc4-4548-bdb3-1e78cbb9761f}}, {{cite:3f6b5c99-6644-450d-ae52-e7b8ac747846}}. For large values of FORMULA  at fixed values of FORMULA , it is expected that only Fock states with transverse size less than about FORMULA  contribute to
+form factors {{cite:b41603b2-17de-459e-8711-3b49c67f2d53}}, {{cite:91e7f11f-cabc-4c7c-8e0a-d5179c678fe1}}
+.
+In this case, interactions with surrounding particles, which depend on the square of the transverse size are suppressed. However,
+for values of near the the endpoints, FORMULA  or 1, contributions of large transverse size could be relevant. The transverse size of the electron-photon state is the relative distance between the electron and the photon FORMULA  and becomes large for values of FORMULA  near 1.
+Ref. {{cite:b78104b2-3300-4946-b1bd-aeb4182a1382}} addressed this issue, concluding that “the power suppressed contributions to the electron's Dirac form factor cannot be restricted to small impact parameters FORMULA  at any FORMULA .". However, that reference did not include the necessary effect of the virtual photon mass, FORMULA . If one is considering an analogy with the proton wave function the relevant value of FORMULA  corresponds to roughly twice the mass of the fermion because the di-quark is made of
+two constituent quarks. This mass is not at all small. Moreover, including a non-zero value of FORMULA  enables one to compute quantities that are integrals over all values of FORMULA .
+This issue is already addressed in Fig. REF , which shows the FORMULA -integrated transverse density for FORMULA  and
+FORMULA . Both densities are strongly peaked at FORMULA , falling roughly as FORMULA  for small values of FORMULA .
+Increasing the value of FORMULA  makes the electron-photon state more compact. A further increase of FORMULA  to 2FORMULA  would make the state even more compact. Another way of looking at
+the importance of end-point contributions is shown in Fig. REF  which shows
+FORMULA 
+for FORMULA  and FORMULA .
+The curve obtained using FORMULA  has been multiplied by a factor of 10 so as to become visible on the plot.
+We see that there is a significant contribution to FORMULA  at large FORMULA  if FORMULA , but this is completely suppressed by using FORMULA . Given Figs REF  and REF  we conclude that (for Fock state components analogous to the electron-photon component) end point contributions can not be expected to
+give significant contributions to form factors at large values of FORMULA .
+FIGURE 
+
+Shape of the Electron
+The non-spherical shape of the proton was addressed using spin-dependent
+densities {{cite:3b320408-b6f5-4f68-a615-44fd4fdedd8d}}, {{cite:c24e7289-a411-487a-a814-7a53842f16b7}}
+As a spin 1/2 object the proton has no net quadrupole moment. However, the probability that quark of position FORMULA  (or momentum FORMULA  ) and spin direction FORMULA  confined in a proton polarized in a direction FORMULA  does have a wide variety of interesting shapes depending on the directions of the three vectors that are involved. This probability is the matrix element of a spin-dependent density. Later {{cite:48cf4104-297c-47f5-b8af-c8d4ff7a322f}}
+it was realized that the coordinate space spin-dependent density is related to a generalized parton distribution and the momentum space distribution is related to a transverse momentum distribution.
+Given the known wave function of the electron, we have an opportunity to compute the spin-dependent densities of the electron.
+We take the electron to be polarized along the FORMULA  axis, work to order FORMULA  and compute the matrix element of the relativistic spin-dependent density operator
+FORMULA 
+for a virtual electron with spin in a direction FORMULA . This is the electron version of the
+projection operator for quarks of transverse polarization FORMULA  {{cite:b5ac42b9-9a77-4099-b9a0-7b10f62e3455}}.
+The related transverse charge density FORMULA  of a physical electron polarized in the transverse direction FORMULA  is given by
+FORMULA 
+The first term of FORMULA  is just the transverse charge density of the previous section. The second term of
+FORMULA  depends on FORMULA  and gives FORMULA .
+Evaluation of the matrix element leads to
+FORMULA 
+where FORMULA , FORMULA  and FORMULA  corresponds to a proton at rest.
+Then evaluation leads to
+FORMULA 
+Thus we have contributions to the GPDs FORMULA and FORMULA , Eq. ().
+Evaluating using the wave functions of Eq. (REF ) gives
+FORMULA 
+The term FORMULA .
+Results are shown in Fig. REF  as lines of constant FORMULA . Examination shows that FORMULA  for a bound electron is roughly independent of FORMULA , but this is not so for the free electron. We conclude that the bound electron is rounder than the free electron!
+FIGURE 
+
+Electron GPD  FORMULA
+The only GPD of Sect. II not yet computed is FORMULA .
+Evaluation leads to
+FORMULA 
+We find using Eq. (REF )
+FORMULA 
+FORMULA 
+Thus to order FORMULA , FORMULA .
+
+Wigner Distributions of the electron
+There are many possible Wigner distributions (Sect. II) for the operators FORMULA  and each has its own related transverse densities and TMDs. We shall only give two examples.
+The Wigner distribution (FORMULA ) for a electron with positive longitudinal polarization is given by
+FORMULA 
+The related Fourier transform from FORMULA  to FORMULA  leads to the transverse densities treated extensively above.
+Electron distribution function
+To get the transverse momentum distribution TMD FORMULA ,
+set FORMULA  to 0. Using Eq. (REF ) yields
+FORMULA 
+Further integration over FORMULA  would yield the analog of a quark distribution function. The integral over FORMULA  diverges and must be renormalized. Following conventional procedure {{cite:5643211f-fd7c-4607-835b-e8b0a5f668d3}}, we use Pauli-Villars regularization and integrate on FORMULA  to an upper limit, FORMULA , which can be a function of FORMULA . Thus we define the electron distribution function in analogy to the usual quark distribution function:
+FORMULA 
+For illustrative purposes we take FORMULA . This gives
+FORMULA 
+The function FORMULA  is plotted in Fig. REF . We see a difference between bound and free electrons that is reminiscent of the EMC effect {{cite:2de9991e-b745-4d18-a817-5b3e70960975}}: the distribution function is suppressed for large values of FORMULA , except for FORMULA . At FORMULA  FORMULA  independent of the value of FORMULA .
+FIGURE 
+
+Position and momentum together
+Ref. {{cite:d28eaeb2-e9af-427e-b3dc-dfa79c5335f6}} showed that integration of FORMULA  over FORMULA  and FORMULA  gives the probability for the virtual electron to have given values of FORMULA ,
+FORMULA  . This is possible because FORMULA  and FORMULA  are not canonically conjugate variables and not constrained by the uncertainty principle. Use Eq. (REF ) in Eq. (REF ) to find
+FORMULA 
+Evaluation leads to the result
+FORMULA 
+for FORMULA ,
+where FORMULA  and
+FORMULA 
+The function FORMULA  for FORMULA  is displayed in Fig. REF .
+If one considers a bound electron, the extent in FORMULA  is comparable to that of FORMULA , but for a free electron (lower panel)
+the extent in FORMULA  is much broader than the extent in FORMULA .
+If FORMULA  FORMULA  contains a factor
+FORMULA  reflecting the point-like nature of the bare electron.
+FIGURE 
+The derivation above implies that one may obtain FORMULA  from FORMULA  by the interchange FORMULA .
+
+Angular Momentum Content
+We want to examine the angular momentum content of the electron. For the electron-photon state there are three contributions: the spin of the virtual electron, the spin of the virtual photon and the orbital angular momentum. This topic was
+taken up in Ref. {{cite:b78104b2-3300-4946-b1bd-aeb4182a1382}} in terms of the transverse coordinate FORMULA . Here we use transverse momentum FORMULA . Additionally the inclusion of the virtual photon mass FORMULA  allows us to integrate over FORMULA  and obtain the various contributions as a function of only one variable, FORMULA .
+The normalization of the FORMULA  Fock state of a spin-up electron for given values of FORMULA 
+is given by
+FORMULA 
+where the second line is obtained from using Eq. (REF ).
+The expectation value of the electron spin FORMULA  in the FORMULA  Fock state of a parent electron with spin FORMULA  as
+FORMULA 
+where FORMULA  is the electron spin operator. The expectation value for the photon helicity FORMULA  is given by
+FORMULA 
+The orbital angular momentum is given by
+FORMULA 
+We find:
+FORMULA 
+With these expressions one finds that
+FORMULA 
+Taking the sum of the three terms of Eq. (REF ) leads to the correct result that entire total angular momentum of the electron is accounted for:
+FORMULA 
+Note that increasing the photon mass increases the fractional spin carried by the virtual electron, while increasing the electron mass
+decreases the fractional spin carried by the virtual electron, but increases the fractional spin carried by the photon. The orbital angular momentum is negative as found by {{cite:b78104b2-3300-4946-b1bd-aeb4182a1382}}.
+Next we obtain the three contributions as quantities that are integrated over FORMULA .
+Define
+FORMULA 
+and integrate using FORMULA  to find
+FORMULA 
+where FORMULA 
+Then
+FORMULA 
+Fig. REF  shows the numerical results. We see that
+for values FORMULA  the photon and virtual electron each carry almost the entirety of the spin of the physical electron and the orbital
+angular momentum is the almost the negative of the spin of the physical electron.
+This feature is also qualitatively obtained for a bound electron with FORMULA .
+FIGURE 
+
+Summary
+This paper is aimed at elucidating the interesting structure of the electron within QED. Lowest-order perturbation theory is used
+to obtain the virtual electron-photon component of the physical electron wave function. The first remark is that indeed this structure is indeed interesting. The application of tools developed to understand nucleon structure to the electron reveals several unexpected features. Many quantities related to electron structure can be computed, and we have tried to concentrate on the most interesting ones.
+Here we specifically include the effects of longitudinally polarized photons that emerge through the need to use a non-zero photon mass FORMULA  to treat infrared divergences. This enables us to show that using the light-cone Fock state wave function of the electron reproduces the well-known text book results for the electron Dirac form factor.
+(The Pauli form factor has been treated this way for a long time {{cite:94f3e8cc-1183-4348-a67f-aefb7057e339}}.)
+The transverse size of the electron is found to depend strongly on the value of FORMULA , with the bound electron being about four times larger than the free electron. The electron-photon component is found to be very compact, with small values of FORMULA  dominant in any case. End-point contributions to form factors are strongly suppressed for values of FORMULA  greater than the fermion mass.
+The shape of the electron is addressed through the use of transverse charge densities and generalized parton distributions. The direction of the spin provides an axis so that one can assess the azimuthal symmetry (in transverse space) of the electron wave function. We find that azimuthal symmetry is not obtained so that the electron is not round. The generalized parton distribution FORMULA , Eq. (REF ), is shown to vanish, if one uses lowest-order perturbation theory.
+Since the electron wave function is known, one may compute the various Wigner distributions. These depend strongly on the value of FORMULA . In particular, the electron distribution function (analogous to the quark distribution function) is shown to be strongly suppressed for a bound electron. This is similar to the EMC effect for nucleons bound in nuclei.
+The angular momentum content of the electron is also interesting. The spin of the electron, the spin of the photon and the relative orbital angular momentum each contribute significantly. For large values of the virtual electron-photon relative momentum, the spin of the electron and spin of the photon add up to almost one unit angular momentum, with the orbital angular momentum being almost the minus one-half unit of angular momentum.
+One might ask about the experiments that could directly measure some of the distributions of the electrons that are used here.
+These are already included as part of the standard radiative corrections that are normally included in analyzing electron scattering data.
+
+Acknowledgements
+This material is based upon work supported by the U.S. Department of Energy Office of Science, Office of Basic Energy Sciences program under Award Number DE-FG02-97ER-41014.
+I thank I. Cloët for important technical help and S. D. Ellis, P. Hoyer, S. J. Brodsky, M. Eides and M. Peskin for useful discussions.

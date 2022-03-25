@@ -1,0 +1,276 @@
+
+decorations.pathreplacing
+
+Doing More for LessThis work was partially supported by DFG Grant 933. – Cache-Aware Parallel Contraction Hierarchies PreprocessingDennis Luxen and Dennis SchieferdeckerKarlsruhe Institute of TechnologyInstitute for Theoretical Computer ScienceKarlsruhe, Germany{luxen,schieferdecker}@kit.edu 2018/12/11 08:54:17Contraction Hierarchies is a successful speedup-technique to Dijkstra's seminal shortest path algorithm that has a convenient trade-off between preprocessing and query times. We investigate a shared-memory parallel implementation that uses FORMULA  space for storing the graph and FORMULA  space for each core during preprocessing.
+The presented data structures and algorithms consequently exploits cache locality and thus exhibit competitive preprocessing times. The presented implementation is especially suitable for preprocessing graphs of planet-wide scale in practice.
+Also, our experiments show that optimal data structures in the PRAM model can be beaten in practice by exploiting memory cache hierarchies.
+Introduction and Related Work
+Computing point-to-point shortest (or fastest) path queries in a graph has been solved by Dijkstra's seminal algorithm {{cite:af5b221c-9aea-49f1-bca7-b01507d17ff4}} since the early times of computer science.
+A road network is modelled as a graph FORMULA  with FORMULA  nodes and FORMULA  edges.
+Each edge FORMULA  is associated with a cost FORMULA  that is required to traverse that edge.
+For the sake of simplicity, consider that nodes are identified by their ID, i.e. FORMULA  is treated as a number if appropriate.
+While the running time of Dijkstra's algorithm is clearly polynomial, its running time does not scale to large instances, e.g. road networks of continental size.
+A well-tuned implementation still needs a few seconds for a single shortest path query on such a network even on today's hardware.
+Heuristics to prune the search space provide a sense of goal direction {{cite:dbb59053-22c1-4a69-9967-8d46cef65e42}}, {{cite:793a488b-e7e6-4f00-aa42-26d97ad53c3f}}.
+At one point, the algorithm engineering community picked up the problem and started providing so-called speedup-techniques to Dijkstra's algorithm that deliver much better query performance.
+An early technique with substantial speedup and optimal (guaranteed) shortest paths is called Arc-Flags {{cite:70ea7f71-3777-4dfb-b78c-ce2d1b3e72ae}}, {{cite:6351440b-7e8b-449a-823e-1d64f9c548f4}}, where the graph is partitioned into regions and each edge stores a flag for each region if there exists some shortest paths over it into the respective region.
+The authors refer the interested reader to {{cite:eb4bdf12-5aab-4a17-a113-a1bdfc386ddf}} for a survey on a number of route planning techniques.
+One of the optimal speedup-techniques is Contraction Hiearchies (CH) {{cite:e0afe5ce-9ec3-4310-9ed9-4d40c11f98b0}}.
+CH has a convenient trade-off between preprocessing and query time and exploit the inherent hierarchy of a road network.
+CH shortcut all nodes of the graph in some order.
+Here, shortcutting means that a node is (temporarily) removed from the network and replaced by as few shortcut edges as possible to preserve shortest path distances.
+A so-called witness search, which is a unidirectional Dijkstra run, is applied to check if a shortcut is actually necessary.
+The union of the set of original edges and and the set of shortcut edges form a directed acyclic graph (DAG).
+A CH query is essentially a bidirected Dijkstra query and needs only to relax an edge when the target node was contracted after the starting node.
+The number of settled nodes during a query is in the order of a few hundred nodes and the query times are about 100 microseconds.
+The fastest CH variant is CHASE {{cite:8af6544e-ff51-42d4-bb4e-d12529a507fa}}, where CH is combined with Arc-Flags and queries run in the order of ten microseconds.
+The priority function FORMULA  by which the nodes are ordered to be contracted is heuristic.
+Its purpose is to reflect which nodes are more important than others, i.e. the node reflecting a junction with high traffic is said to be more important than the node modelling the end of a dead-end street in a quiet neighborhood.
+Usually, it is a simulated witness search that (among other things) inspects the number of edges that would have to be inserted if a certain node would have been removed.
+For example, the priority functions of more or less all known CH implementations use a very local search only for the sake of preprocessing efficiency, e.g. {{cite:e0afe5ce-9ec3-4310-9ed9-4d40c11f98b0}}, {{cite:b05b2db9-ce64-46cc-8771-d69022aa22a2}}, {{cite:3414f3af-ad0e-4a7f-adef-c2affe2c32fc}}, {{cite:dd6cadd1-86e4-4e1e-8da0-dee936ce0b6f}}. Here, local means that only a FORMULA -neighborhood around a node is considered to determine its priority.
+Batz et al. {{cite:f501d221-39bd-40b1-b2b4-a1f885070e16}} and Batz and Sanders {{cite:655fc304-99ee-4837-b580-f1fbcdcd9f8d}} explore a 16-hop neighborhood, while Kieritz et al. {{cite:89a0f337-256d-4da3-a780-54684d5aab4c}} consider a 5-hop neighborhood in a distributed memory parallel implementation of CH.
+Other implementations {{cite:c6d83d57-e7fc-47de-904b-8749ff2e963e}}, including the one at hand, prune the search space by setting a fixed limit on the number of settled nodes during the witness search.
+The Parallel Random Access Machine (PRAM), e.g. {{cite:346318c5-48e9-4737-8022-55a783e24875}}, is a simple model of parallel computation.
+A PRAM has a global (shared memory) and FORMULA  processors, each equipped with a private local memory.
+Each processor can access either shared or global memory in unit time, as well as perform a computation with respect to a memory access.
+The cost of accessing memory is uniform for all processors and all accessible memory locations.
+The PRAM model is simple and easy to understand but does not reflect the several levels of on-chip cache memory that are present in modern CPUs.
+Arge et al. {{cite:057d7c42-d15f-4328-ae73-5654d7c2487f}} proposed the parallel external memory (PEM) model to capture the memory hierarchies of modern processor architectures.
+This model is cache-aware and the authors present how to conduct a number of fundamental operations like prefix sums and sorting efficiently.
+Tabulation hashing is a simple hashing scheme that dates back to as early as the late 1960s when first published by Zobrist {{cite:18e796e2-92a7-4c30-9041-d9b224ab03ec}} and the late 1970s when rediscovered by Carter and Wegmann {{cite:63afb351-080f-4918-88ce-9f77ec6694d2}}.
+It uses simple table lookups and exclusive or (XOR) operations.
+Later Patrascu and Thorup {{cite:56ebc0b0-7399-411e-a8a1-60db8390b60f}} gave a theoretical analysis of the scheme.
+Tabulation hashing interprets input keys as a string of FORMULA  characters FORMULA .
+For each of the possible character positions a random table FORMULA  is initialized and the following hash function is used:
+FORMULA 
+Parallel Preprocessing of Contraction Hierarchies
+Vetter {{cite:ea21922c-e5f5-4214-8a7c-5c72e0d4b6f7}} proposed a parallel preprocessing algorithm that identifies nodes, which can be contracted in parallel.
+The method gives good speedups until the memory bandwidth is saturated.
+More formally, an independent node set is a set of nodes that can be contracted independently of any other remaining nodes in the graph.
+Every node that is of lowest priority within a neighborhood of FORMULA  hops is added to the independent set, where FORMULA  is tuning parameter.
+While FORMULA  is a tuning parameter, notice that FORMULA  is sufficient.
+Kieritz et al. {{cite:89a0f337-256d-4da3-a780-54684d5aab4c}} generalize this approach to a distributed memory setting where nodes are contracted on separate compute nodes of a cluster and graph changes are only communicated when necessary.
+Since the priority of two nodes may be equal, it is necessary to install a tie-breaking rule.
+Note that the actual order in which the nodes of an independent set are contracted can be arbitrary.
+Although, Vetter {{cite:ea21922c-e5f5-4214-8a7c-5c72e0d4b6f7}} verbalizes the need for a tie-breaking mechanism, it is not further specified.
+
+Our Contribution
+The contribution of this paper is twofold.
+First, it shows how well-chosen data structures and algorithms deliver better perfomance than others that are optimal in the PRAM model of computation by exploiting caching effects.
+Second, it describes a shared-memory parallel implementation of CH that uses only constant space per CPU core.
+The remainder of this paper is structured as follows.
+Chapter  explains the tie-breaking mechanism more thoroughly and shows basic properties.
+Subsequently, a tie-breaker based on tabulation hashing with theoretical perfomance guarantees is developed.
+The experimental evaluation shows that it pays off to invest into executing more processor instructions when a large number of cache faults can be avoided.
+Building on theoretical performance guarantees, Section  generalizes this hashing technique to build a key-value storage for the priority queue that is used during the witness searches of the CH preprocessing.
+Sections  and  show the performance in practice while Section  gives concluding remarks and identifies future work.
+To the best of the authors' knowledge this is the first work that describes a sophisticated shared-memory parallel implementation of CH with an emphasis on cache-awareness.
+
+Tie-Breaking using Tabulation Hashing
+As mentioned briefly in the related work section, the role of tie-breaking is to facilitate the decision which node to contract only when neighboring nodes have equal priorities.
+A tie-breaking mechanism cannot be an arbitrary decision process but has to fulfill certain properties as the following paragraph shows.
+Definition 1 (Node Ordering and Tie-Breaking) 
+Consider two nodes FORMULA .
+A node FORMULA  is smaller than node FORMULA  from the FORMULA -neighborhood if FORMULA  or if FORMULA  in case FORMULA , where FORMULA  defines an order on the nodes. The order (or tie-breaker) is called consistent iff. FORMULA .
+
+One can show that the property of consistency is an essential property of any correct CH implementation.
+Consider the contraction of a single node to be a basic operation during the preprocessing.
+Lemma 1 CH preprocessing with an inconsistent tie-breaker does not terminate for all inputs.
+
+It suffices to show that there exists an input graph and an inconsistent tie-breaker for which no node is selected during an iteration.
+Proof 1 Consider a triangle of three nodes FORMULA  each of degree two with equal priority.
+Further assume that the tie-breaker is inconsistent with FORMULA , FORMULA .
+No node will be selected to be an element of the independent set that is to be contracted.
+Thus, the contraction does not terminate, i.e. is not wait-free for all inputs.
+
+Simple Tie-Breaking
+The easiest implementation of a consistent tie-breaker is a random shuffle of the node IDs and a subsequent renumbering of the graph.
+A random shuffle of node IDs implies linear work in the number of nodes and edges.
+From a theoretical point of view, one could argue that this is as good as it gets since the work is constant per decision.
+On the other hand, the constants associated with such a scheme may render it impractical.
+Doing a random shuffle and a subsequent renumbering on the nodes of a large graph, e.g. for the entire planet, can be prohibitively expensive in practice.
+Preliminary experiments preceding this paper showed that this can take as long as contracting the first 20-25% of the nodes.
+Furthermore, a disadvantage of random shuffling is that it breaks any inherent cache-efficiency that the data has.
+In real-world data sets node IDs are given in the order in which they are created, i.e. consecutive numbering of the nodes of an entire street when it is added into the data set.
+There are conflicting interests for the numbering of the nodes.
+On one hand, the strength of CH is that its data structure is quite different from the intuition of a hierarchy of road types.
+And thus, one would want a preprocessing that is independent from any existing ordering or presentation of the input data.
+On the other hand, the preprocessing mostly consists of small graph searches and one would like the data to display a certain amount of locality, i.e. close-by nodes have close-by IDs, to leverage cacheing effects.
+The simplest data structure that has (PRAM) optimal query time of FORMULA  to implement the tie-breaking with a bias array of size FORMULA , e.g. in the implementations of {{cite:89a0f337-256d-4da3-a780-54684d5aab4c}}, {{cite:ea21922c-e5f5-4214-8a7c-5c72e0d4b6f7}}.
+An array FORMULA  is populated with numbers FORMULA  and randomly shuffled at the beginning of the preprocessing.
+This yields a precomputed pairwise distinct random number for each node FORMULA  in the graph.
+When a tie-break is necessary for nodes FORMULA  and FORMULA  then the values of FORMULA  and FORMULA  are compared.
+The memory overhead is FORMULA  space per element, which is acceptable from a practical as well as from a theoretical point of view.
+The main advantage of this rule is its simplicity and that it desirably preserves the locality of any existing numbering.
+This is formalized by the following
+Definition 2 (Independence from Input Numbering) 
+A tie-breaking ordering is called ID-independent, or short independent, if its outcome is irrespective of any input numbering. Likewise, an ordering is said to be FORMULA -independent from the node ordering if the probability that FORMULA  is an independent and identically (i.i.d.) random choice is larger or equal to FORMULA ,
+FORMULA 
+
+The above straight-forward implementation of tie-breaking has one major disadvantage in practice that is a direct result of its simplicity.
+While one expects this tie-breaker to be fast, the number of cache misses is large.
+Contrary to the PRAM model and somewhat following along the lines of the more realistic PEM model, memory accesses are not uniform in reality.
+Generally speaking, access to a small local cache is fast while accessing the shared memory is quite expensive.
+The bias array is much larger than any cache size even for medium-sized graphs and one must expect an expensive cache miss for each call to the tie-breaking rule, even if the data exhibits some locality preserving node numbering.
+A preliminary experiment with a memory debugging tool revealed that most of the accesses to the bias array were actually cache faults.
+While literature is generally scarce on the subject, the number of clock cycles wasted in a cache miss easily amount to a few hundred {{cite:c4d10c23-af1d-42e6-ace9-b01be7656cb2}}.
+
+A Fast FORMULA -Independent Tie-Breaker
+The following hashing-based scheme gives the basis of a tie-breaking mechanism that takes constant time to evaluate and uses constant space only.
+It is not only independent with high probability, but surprisingly fast in practice and even faster than the above simple schemes.
+To build a tie-breaker for two nodes FORMULA  the hash values of FORMULA  and FORMULA  are compared and in the (unlikely) event that they are equal, FORMULA  and FORMULA  are compared directly.
+More formalized
+Definition 3 (Tie-Breaking by Tabulation Hashing) 
+Given a (tabulation) hash function FORMULA  and two elements FORMULA , then the boolean expression
+FORMULA 
+obviously defines an order on the elements of FORMULA .
+
+
+Analysis of Performance Guarantees
+The following analysis gives performance guarantees for the tabulation hash based tie-breaker and leads to showing the following lemma:
+Lemma 2 (Perfomance Guarantees) 
+Tabulation hash based tie-breaking uses sublinear space, evaluates in constant time and is FORMULA -independent for FORMULA .
+Furthermore, the resulting ordering is consistent.
+
+Proof 2 The first two properties follow from the construction of the data structure.
+To show the third property, it is necessary to show that the expected fraction hash collisions is bounded above by FORMULA .
+The analysis of the tabulation hash based tie-breaker builds on an earlier result of Carter and Wegmann {{cite:63afb351-080f-4918-88ce-9f77ec6694d2}} and the definition of FORMULA -independent hashing:
+Definition 4 (FORMULA -Independent Hashing) 
+A family of hash functions FORMULA  is said to be FORMULA -independent if randomly selecting a function FORMULA  guarantees for FORMULA  distinct keys FORMULA  and FORMULA  hash codes FORMULA  that
+FORMULA 
+
+A property that directly results from this definition is the fact that for fixed keys FORMULA  and a randomly drawn hash function FORMULA , the hash values FORMULA  are independent random numbers.
+Carter and Wegmann {{cite:63afb351-080f-4918-88ce-9f77ec6694d2}} show that tabulation hashing is 3-independent.
+Thus, the probability of a hash collision is less than FORMULA  and thus the order it defines is random with high probability.
+Only in the rare case, of a collision the ordering is derived from the IDs of the nodes.
+Note that plugging the previous result into the above construction directly establishes the FORMULA -independence.
+Actually, the previous result by Carter and Wegmann is even stronger than necessary as a 2-independent (1-universal) hashing scheme would have sufficed.
+To show the last claim of consistency, consider two node IDs FORMULA  and FORMULA  for which the ordering is determined.
+It suffices to show that FORMULA .
+To the contrary, consider that the tie-breaker evaluates FORMULA  and also FORMULA  to true.
+The tie-breaker either evaluates the hash values FORMULA  and FORMULA  or FORMULA  and FORMULA  directly if hash values are equal.
+In both cases the above contraposition leads to a contradiction.
+This concludes the proof of Lemma REF .
+
+
+The Actual Implementation
+The implementation splits the 32-bit sized input ID of any node into two words of size 16 bit.
+Thus, two lookup tables with FORMULA  entries have to be filled with pairwise distinct random numbers.
+This is done by filling the tables consecutively with numbers FORMULA  and then applying a random shuffle.
+The overhead of initializing these arrays is neglectable, since this has to be done only once and the associated work is linear in the size (and number) of the lookup tables.
+A query is straight-forward.
+Input ID FORMULA  is split into the most and least significant halves, a lookup is performed for each of the sub words and then combined by a XOR operation.
+Note that the work necessary to perform a query is constant.
+See Figure REF  for an illustration of the implementation of this scheme.
+FIGURE 
+The above hashing data structure can then be combined to the following tie-breaking algorithm by implementing Definition REF .
+Consider the following code fragment of Listing 
+bool bias(const NodeID a, const NodeID b) {
+    unsigned short hasha = h(a);
+    unsigned short hashb = h(b);
+ 
+    if(hasha != hashb)
+        return hasha < hashb;
+    return a < b;
+}
+The number of expected collisions is tiny as shown in the analysis.
+The observed rate of collisions in practice is less than FORMULA .
+The entire tie-breaking mechanism, including hashing, uses as few as 22 assembly instructions on an X86 CPU in practice, when letting GCC optimize the code (-O3 flag).
+See Appendix  for the actual assembly listing.
+Most interestingly, it is possible to evaluate the if-statement without any branching by using conditionally set flags in the registerX86 assembly instruction setg.
+The space requirement for this tie-breaking mechanism is 256kb of RAM, which fits into the L2 cache of any recent X86 processor.
+As mentioned before, the literature on processor cache timings is scarce, but L2 cache latency is approximately ten cycles.
+Table REF  gives the results of experiments of running times of CH preprocessing either with bias-array based tie-breaking or tabulation hash-based tie-breaking.
+
+Experimental Evaluation
+The experiments to evaluate the practical impact of this tie-breaking scheme have been evaulated on 8 cores of an AMD Opteron 6212 clocked at 2.6 GHz running Linux kernel version 3.0.0 and 128 GB of RAM.
+The processor has FORMULA  KBytes of L1 data caches, FORMULA  MB shared exclusive L2 caches and 16Mbytes of L3 cache memory.
+The datastructures and algorithms were implemented in C++ and compiled with GCC 4.6.1 using full optimizations (-O3).
+The graph instances represent road networks of various sizes ranging from the metropolitan area of Berlin, Germany to the planet-wide data of the OpenStreetMaphttp://www.openstreetmap.org Project as of July, 4th, 2012.
+TABLE 
+The graphs used in the experiments are edge-expanded, i.e. each possible turn is explicitly modelled and U-turns are forbidden {{cite:3a3be39a-78a5-4800-86ac-e9b42dc21531}}.
+Moreover, existing turn restrictions present in the input data are preserved.
+Note that the CH preprocessing time is higher for edge-expanded networks than for unexpanded graphs as previously observed by Delling et al. {{cite:b4d065ee-2fc6-482e-b753-c7eb60d81c3c}}.
+Table REF  gives the basic properties of the road networks after edge-expansion.
+Table REF  reports on the impact of the hashing scheme on the duration of the preprocessing.
+Columns bias array and xorhash denote the preprocessing times for a bias-array based tie-breaker and for the tabulation hash based tie-breaker, while column speedup denotes the observed speedup.
+saving indicates the amount of memory saved by the tabulation hashing scheme over the bias array.
+TABLE 
+The experiments show that a tie-breaking mechanism based on tabulation hashing not only reduces the memory requirements, but also that it pays off to trade some processing cycles for much better cache efficiency.
+The benefits of tabulation hash based tie-breaking are twofold.
+The speedup is consistently between 25–30% and the space requirement is constant.
+An extended profile run was conducted on a smaller edge-expanded graph resembling the street network of Berlin instance from Table REF .
+This was done using the cachegrind plugin of Valgrindhttp://www.valgrind.org, a tool for (memory usage) debugging and profiling.
+Examining larger instances is impractical since the tool entirely simulates the cache hierarchy of a modern processor, which takes orders of magnitude longer than running on real hardware.
+However, the experiment revealed that while the overall instruction count increased but slightly, the number of (simulated L1 and LL) cache misses dropped significantly by more than 20%.
+The overall number of executed instruction rose by less than 1%, which again shows the low computational overhead of tabulation hashing.
+
+Heap Storage using Tabulation Hashing
+The application of tabulation hashing is not limited to implemented of a tie-breaking with guarantees for independent set generation.
+The parallel preprocessing needs a priority queue per thread.
+The data structure used to implement the priority queue is a binary heap that stores its content in a table.
+The standard implementation is an array of size linear in the number of nodes of the graph.
+This Section shows that the simplicity and formidable cacheing behavior explored in Section  make tabulation hashing a great candidate to construct a hash table from.
+As already mentioned in the related work of Section  the subgraphs that are explored during witness searches are rather small.
+The implementation used for this paper prunes these searches at 1 000 nodes for simulation and at 2 000 nodes for actual contractions.
+As the analysis of Section REF  shows, the probability of a hash collision is small for tabulation hashing.
+Also, the range of the hash function is FORMULA  and is of much larger cardinality than the set of at most 2 000 explored nodes.
+Thus, it is worthwile to implement a hash table using tabulation hashing that can be used as a storage table for the priority queue implementation.
+It is necessary to use a collision resolution strategy, since a hash function points only to a records location and not to the record itself.
+It seems obvious to use linear probing as resolution strategy for two reasons.
+First, the number of collisions is small and so is the expected number of cells in the hash tables that have a non-vacant neighbor.
+Second, the next cells are very likely to lie in the same cacheline as the original cell and therefore accesses to it are virtually cost-free.
+The Actual Implementation
+The implementation is mostly straight-forward.
+A hash value is generated for each input key and its value is stored at the corresponding hash cell.
+Collision, i.e. when the cell is not empty, are resolved by linear probing.
+After each witness search the storage table of the priority queue is reinitialized.
+While this seems non-obvious at first sight, one has to pay special care for the reinitialization of the storage array.
+Resetting an array to initial values is expensive as it either involves a reallocation or a sweep over the memory or even both.
+Therefore each cell has a local timestamp that indicates the time when was written last.
+Initially, the global timestamp is zero and incremented each time the storage table is cleared.
+This way, it is not necessary to actually zero out any memory, and it suffices to do a simple comparison during collision resolution.
+The implementation uses 4 bytes each for key and value as well as for the timestamp which yields cell sizes of 12 bytes and therefore an overall memory consumption of 384 kilobytes per queue for the storage table.
+Note that the table has only FORMULA  entries which is half the range of the hash function.
+Experiments showed that the collision rate was virtually unaffected while the memory consumption further decreased by 50%.
+
+Experimental Evaluation
+The experiments on the performance of the tabulation hash based heap storage have been evaluated on 8 cores of an AMD Opteron 6212 clocked at 2.6 GHz running Linux kernel version 3.0.0 and 128 GB of RAM again.
+The datastructures and algorithms were implemented in C++ and compiled with GCC 4.6.1 using full optimizations (-O3).
+The graph instances resemble the same edge-expanded road networks of various sizes also used in the experiments of Section .
+The implementation of CH already includes the tabulation hash based tie breaker from above.
+Preprocessing was run for the same instances as before and compared against two standard hash table implementations.
+The first one is a hash table implementation from the Boosthttp://boost.org C++ library version 1.4.6, namely boost::unordered_map.
+This hash table is said to be close to the implementation of GCC C++0x hash table implementation.
+The second implementation is Google's sparsehashhttp://code.google.com/p/sparsehash library version 1.10, namely google::dense_hash_map.
+This hash table has the reputation of being among the fastest hash table implementations.
+Table REF  gives the results from the experiments on a number of input graphs, where xorbreak denotes the implementation of Section  and xorhash denotes the implementation of this Section.
+The reference values of the plain bias-array implementation are given in line bias.
+Note that this variant also uses an array based storage for the priority queue.
+Best values are printed in bold font.
+Note that preprocessing the planets road network did not complete within 18 hours for the Boost and Google hash table implementations.
+Column Bytes Per Core gives the overhead of the data structures per core that is used during preprocessing.
+Reliable overhead values could not be retrieved and therefore left out from the comparison.
+TABLE 
+Most notably, the performance of the xorbreak is the fastest among all experiments.
+The gap between xorhash and xorbreak decreases as the road networks grow in size.
+For the planet data set, the relative difference is as small as FORMULA .
+An explanation for this is that cache faults occur more often the larger the storage table of the priority queue gets.
+The memory consumption of xorhash is only constant per core.
+Hence, the number of cache faults occuring in the xorhash variant is robust against the size of the graph.
+
+Concluding Remarks and Future Work
+We presented an algorithmic tuning parameter between preprocessing efficiency and space requirements.
+Speaking in generalized terms, applying tabulation to tie-breaking gives a reasonable speedup in preprocessing efficiency that gives room for further optimization on the space required during preprocessing.
+The high performance of the tabulation hashing applications can be attributed to much better cache locality of the intermediate data structures.
+This locality has been leveraged during data structure design and implementation.
+Carefully chosen and engineered data structures and associated algorithms allow for much flexibility during the preprocessing of large real-world road network instances.
+For example, if speed is of essence and memory available then only the tabulation hash based tie-breaking may be applied while in a setting where memory is tight it may be both.
+We showed a consequent application of tabulation hashing in CH preprocessing not only gives data structures that have constant size per core, but also preprocessing performance that is en par with previous implementations that use the theoretical best data structures in the PRAM model.
+Furthermore, we would like to investigate the application of succinct graph data structures to bring the space requirement of preprocessing closer to the information theoretical lower bound while enjoying competitive preprocessing and query times.
+
+Acknowledgements
+The authors would like to thank Peter Sanders for bringing up tabulation hashing in the first place and Nodari Sitchinava for great discussions on the topic.
+
+X86 Assembly Code of Tabulation Hashing
+ movq    table2( movl     movzwl   shrl    $16,  movzwl   movzbl  ( movq    table1( xorb    ( movzbl   ret

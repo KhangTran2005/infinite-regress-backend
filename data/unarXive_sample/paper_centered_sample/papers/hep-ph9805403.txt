@@ -1,0 +1,1348 @@
+
+[epsfig,12pt]article
+
+
+
+
+
+
+
+
+
+
+
+
+12pt
+DESY 98-056
+hep-ph/9805yyy
+May 1998
+CP-Violating Asymmetries in Charmless
+Non-Leptonic Decays FORMULA , FORMULA , FORMULA  in the Factorization Approach
+
+A. Ali
+Deutsches Elektronen-Synchrotron DESY, 22607 Hamburg,
+Germany
+
+G. KramerSupported
+by Bundesministerium für Bildung und
+Forschung, Bonn, under Contract 057HH92P(0) and EEC Program “Human Capital
+and Mobility” through Network “Physics at High Energy Colliders” under
+Contract CHRX-CT93-0357 (DG12COMA). and
+Cai-Dian LüAlexander von Humboldt Foundation Research Fellow.
+II. Institut für Theoretische Physik, Universität
+Hamburg, 22761 Hamburg, Germany
+
+
+Abstract
+
+We present estimates of the direct (in decay amplitudes) and indirect
+(mixing-induced) CP-violating asymmetries in the
+non-leptonic charmless two-body
+decay rates for FORMULA , FORMULA  and FORMULA  decays and
+their charged conjugates,
+where FORMULA  is a light
+pseudoscalar (vector) meson. These estimates are based on a generalized
+factorization approach making use of next-to-leading order
+perturbative QCD contributions
+which generate the required strong phases. No soft final state interactions
+are included. We study the dependence of the
+asymmetries on a number of input parameters and show that there are at least
+two (possibly three) classes of decays in which the asymmetries
+are parametrically stable in this approach. The decay modes of particular
+interest are:
+FORMULA ,
+FORMULA , FORMULA ,
+FORMULA  and FORMULA .
+Likewise, the CP-violating asymmetry in the decays FORMULA  with
+FORMULA 
+is found to be parametrically stable and large. Measurements of
+these asymmetries will lead to a determination of the phases FORMULA  and FORMULA  and we work out the relationships
+in these modes in the
+present theoretical framework. We also show the extent of
+the so-called “penguin
+pollution” in the rate asymmetry FORMULA  and of the “tree
+shadow” in the asymmetry FORMULA  which will effect
+the determination of
+FORMULA  and FORMULA  from the respective measurements.
+CP-violating asymmetries in FORMULA  decays depend on a model parameter
+in the penguin-amplitudes and theoretical predictions require
+further experimental or theoretical input.
+Of these, CP-violating asymmetries in FORMULA ,
+FORMULA , FORMULA  and FORMULA  are potentially interesting and are studied here.
+
+(Submitted to Physical Review D)
+
+Introduction
+Recent measurements by the CLEO Collaboration {{cite:8597515b-b661-4de5-9c3e-603fdced89b5}}, {{cite:52ee9ff5-3ab7-484a-9d30-522f4ce406a6}} of a
+number
+of decays FORMULA , where FORMULA  and FORMULA  are light hadrons
+such as FORMULA ,
+have lead to renewed theoretical
+interest in understanding hadronic FORMULA  decays {{cite:0df88e6c-ba38-4816-97c9-5e8390f7e3f4}}.
+In a recent work {{cite:99ad300d-a0c5-49e1-ba84-535094c66d40}} we have calculated the branching fractions of
+two-body non-leptonic decays FORMULA , FORMULA , FORMULA , where FORMULA  and FORMULA 
+are the lowest lying light pseudoscalar and vector mesons, respectively.
+The theoretical framework used was based on the next–to-leading logarithmic
+improved effective Hamiltonian and a factorization Ansatz for the
+hadronic matrix elements of the four-quark operators {{cite:90079d3d-644b-4f92-aa8c-9473ac396045}}.
+We worked out the parametric dependence of the decay rates using currently
+available information on the weak mixing matrix elements, form factors,
+decay constants and quark masses.
+In total we considered seventy six decay channels with a large fraction of
+them having branching ratios of order FORMULA  or higher which hopefully
+will be measured in the next round of experiments on FORMULA  decays.
+The recently measured decay modes FORMULA ,
+FORMULA , FORMULA , FORMULA  and FORMULA  are shown to be largely in agreement with the
+estimates based on factorization ?Citation `akl98-1' on page 1 undefined–?Citation `acgk' on page 1 undefined.
+This encourages us to further pursue this framework and calculate
+quantities of experimental interest in two-body non-leptonic FORMULA  decays.
+Besides branching fractions, other observables which will help to
+test the factorization approach and give information on the
+Cabibbo-Kobayashi-Maskawa (CKM) matrix {{cite:8d452c33-189a-498c-9cab-e5fe788e5fb4}} are CP-violating rate
+asymmetries in partial decay rates.
+In the past a large variety of ways has been proposed to observe CP
+violation in FORMULA  decays {{cite:07c92346-265d-4114-8338-8742386a6dd4}}.
+One method is to study CP-violating asymmetries
+in the time-dependence of the neutral FORMULA  meson decay rates in specific
+modes, which involve an interference between two weak amplitudes.
+Asymmetries in charged FORMULA  decays require an interference between two
+amplitudes involving both a CKM phase and a final state strong
+interaction phase-difference.
+Such asymmetries occur also in decays of neutral FORMULA  mesons in which
+FORMULA  and FORMULA  do not decay into common final states or where
+these states are not CP-eigenstates.
+In these decays the weak phase difference arises from the superposition of
+various penguin contributions and the usual tree diagrams in case they
+are present.
+The strong-phase differences
+arise through the absorptive parts of perturbative penguin diagrams (hard
+final state interaction) {{cite:e2c778e2-d897-4c86-b6d7-7cfd35514416}} and non-perturbatively
+(soft final state interaction).
+When a FORMULA  and FORMULA  decay to a common
+final state FORMULA , FORMULA -FORMULA  mixing plays a crucial role in determining
+the CP-violating asymmetries, requiring time-dependent measurements.
+For the final states which are both CP-eigenstates and involve only one
+weak phase in the decays, the CP-violating asymmetry is independent of the
+hadronic matrix elements.
+This occurs in the well studied FORMULA  decays
+making it possible to extract
+the value of FORMULA  with no hadronic uncertainties.
+For neutral FORMULA  decays into two light mesons such a direct translation of
+the CP-violating asymmetries in terms of CP-violating phases FORMULA ,
+FORMULA  and
+FORMULA  will not be possible, in general.
+Hence, the predicted asymmetries are subject to hadronic uncertainties.
+In principle, these uncertainties can be removed by resorting to a set
+of time-dependent and time-independent measurements as suggested in the
+literature ?Citation `GL90' on page 1 undefined–?Citation `DH94' on page 1 undefined. In practice, this program requires a number
+of difficult measurements. We pursue here the other alternative, namely
+we estimate these uncertainties in a specific model, which can be tested
+experimentally in a variety of decay modes.
+CP-violating asymmetries are expected in a large number of FORMULA 
+decays; in particular the partial rate asymmetries in all the
+FORMULA  decay modes and their charge conjugates studied in {{cite:99ad300d-a0c5-49e1-ba84-535094c66d40}}
+are potentially interesting for studying CP violation.
+We recall that CP-violating asymmetries in FORMULA  decays
+have been studied earlier in
+the factorization framework {{cite:07c92346-265d-4114-8338-8742386a6dd4}},?Citation `sw' on page 1 undefined–?Citation `dg97' on page 1 undefined.
+With the measurement of some of the FORMULA  decays
+{{cite:8597515b-b661-4de5-9c3e-603fdced89b5}}, {{cite:52ee9ff5-3ab7-484a-9d30-522f4ce406a6}}, some selected modes have received renewed interest
+in this approach ?Citation `dds97-1' on page 1 undefined–?Citation `Petrov97' on page 1 undefined. These papers, however, make
+specific assumptions about FORMULA  (here FORMULA  is the number of
+effective colors) and certain other input parameters;
+in particular, the earlier ones used CKM-parameter values which are now
+strongly disfavored by recent unitarity fits {{cite:4bcbe205-7f17-4148-91c2-9e8f885f0db9}}, {{cite:71518117-9536-473c-818d-2cf9dbaf8a0b}}
+and/or they do not include the anomaly contributions (or not quite
+correctly) and the latter ones make specific
+assumptions about FORMULA , which may or may not be consistent with data on
+FORMULA  decays. We think it is worthwhile to study again these
+CP-violating asymmetries by including theoretical improvements
+{{cite:90079d3d-644b-4f92-aa8c-9473ac396045}}, {{cite:4c45ea92-5d74-42df-95cb-2256d314b4ab}} and determine their FORMULA -and other parametric dependences.
+Following our previous work {{cite:99ad300d-a0c5-49e1-ba84-535094c66d40}} we study this on the basis of the
+factorization approach.
+We consider the same seventy six decay channels as in {{cite:99ad300d-a0c5-49e1-ba84-535094c66d40}} and
+calculate
+the CP-violating asymmetries for charged and neutral FORMULA  decays with the
+classification
+I to V as in {{cite:99ad300d-a0c5-49e1-ba84-535094c66d40}} to distinguish those channels which can be
+predicted with some certainty in the factorization approach. These are the
+class-I and class-IV (and possibly some class-III) decays, whose decay
+amplitudes
+are FORMULA -stable and which do not involve delicate cancellations among
+components of the amplitudes. In our study here, we invoke two
+models to estimate the form factor dependence of the asymmetries,
+study their dependence on the effective
+coefficients of the QCD and electroweak penguin operators in term of FORMULA ,
+the dependence on FORMULA , the virtuality of the gluon, photon or Z
+in the penguin amplitudes decaying into
+the quark-antiquark pair FORMULA  in FORMULA 
+and, of course, the CKM parameters. The last of these
+is the principal interest in measuring the CP-violating asymmetries.
+Our goal, therefore, is to identify, by explicit calculations, those decay
+modes whose CP-violating asymmetries are relatively insensitive to the
+variations of the rest of the parameters.
+In this pursuit, the sensitivity
+of the asymmetries on FORMULA  is a stumbling block. As the branching
+ratios are relatively insensitive to the parameter FORMULA , this
+dependence can be removed only by the measurement of at least one of the
+CP-violating asymmetries sensitive to it (examples of which are abundant),
+enabling us to predict quite a few others. A mean value of FORMULA  can also be
+estimated in specific wave function models {{cite:73b0362c-70bb-4366-83a5-9939098d76a9}} - an alternative, we
+do not consider here. However, quite interestingly, we show that a number of
+class-I and class-IV (hence FORMULA -stable) decays involving FORMULA 
+mesons have CP-violating asymmetries which are also stable against
+variation in FORMULA . Hence, in this limited number of decays, the asymmetries
+can be reliably calculated within the factorization framework.
+We find that the CP-violating asymmetries in the
+following decays are
+particularly interesting and relatively stable: FORMULA ,
+FORMULA , FORMULA ,
+FORMULA  and FORMULA .
+Likewise, the CP-violating asymmetry in the decays FORMULA  with FORMULA  is
+large as the individual decay modes have the same intrinsic CP-parity.
+The FORMULA -dependences in the individual asymmetries in this sum, which are
+small to start with but not negligible, compensate each other resulting
+in a CP-violating asymmetry which is practically independent of FORMULA .
+Ideally, i.e., when only one decay amplitude dominates, the
+asymmetries in the mentioned decays measure one of
+the CP-violating phases FORMULA  and FORMULA . In actual decays, many
+amplitudes are present and we estimate their contribution in the
+asymmetries. To quantify this more pointedly, we work out the dependence of
+the time-integrated partial rate asymmetry FORMULA  in the
+decays FORMULA  on FORMULA  and show the extent
+of the so-called “penguin pollution". Likewise, we work out the dependence
+of FORMULA , FORMULA , FORMULA  and FORMULA  on FORMULA . We also study the effect
+of the tree contribution - which we call a “tree shadow" of the
+penguin-dominated amplitude, on FORMULA .
+The CP-violating asymmetries in FORMULA  decays are in general
+FORMULA -dependent.
+Supposing that this can be eventually fixed, as discussed above, the
+interesting
+asymmetries in FORMULA  decays in our approach are:
+FORMULA ,
+FORMULA , FORMULA  and FORMULA . We study the asymmetries in the mentioned decays and also in
+FORMULA  in detail in this paper.
+The effects of
+soft final state interactions (SFI) may influence some (or
+all) of the estimates presented here for the asymmetries. By the same token,
+decay rates are also susceptible to such
+non-perturbative effects ?Citation `DGPS96' on page 1 undefined–?Citation `DLWZ98' on page 1 undefined, which are, however,
+notoriously
+difficult to quantify. We think that the role of SFI in FORMULA 
+decays will be clarified already as the measurements of the branching ratios
+become more precise and some more decays are measured. Based on the “color
+transparency" argument {{cite:3855aa0e-a3c5-44ea-ba79-0464333f712a}}, we subscribe to the point of view
+that the effects of SFI are subdominant in decays whose amplitudes are not
+(color)-suppressed. However, it should be noted that the effects of the
+so-called non-perturbative “charm penguins" {{cite:8491cee6-02c1-4b1f-95a6-d78803935964}}
+are included here in the factorization approach in terms of the
+leading power (FORMULA ) corrections which contribute only to the decays
+FORMULA  involving an FORMULA  or FORMULA  {{cite:4c45ea92-5d74-42df-95cb-2256d314b4ab}}, as
+explained in the next section.
+This paper is organized as follows:
+In section 2 we review the salient features of the generalized factorization
+framework used in estimating the FORMULA  decay rates in
+{{cite:99ad300d-a0c5-49e1-ba84-535094c66d40}}. In section 3
+we give the formulae from which the various CP-violating asymmetries
+for the charged and neutral FORMULA  decays are calculated.
+Section 4 contains the numerical results for the CP-violating
+coefficients, required for time-dependent measurements of the
+CP-violating asymmetries in FORMULA  and FORMULA  decays, and
+time-integrated CP-violating asymmetries. The numerical results are
+tabulated for three specific values of the effective number of colors
+FORMULA , varying FORMULA  in the range FORMULA , and two sets of the CKM parameters. We show the
+CKM-parametric dependence of the CP-violating asymmetries for some
+representative
+decays belonging to the class-I, class-III and class-IV decays, which
+have stable asymmetries and are
+estimated to be measurably large in forthcoming experiments at FORMULA  factories
+and hadron machines.
+Finally, in this section we study some decay modes which
+have measurable but FORMULA -dependent CP-violating asymmetries, mostly
+involving FORMULA  decays but also a couple of FORMULA  decays.
+Section 5 contains a summary of our results and conclusions.
+
+Generalized Factorization Approach and Classification of FORMULA  Decays
+The calculation of the CP-violating asymmetries
+reported here is based on our work described in {{cite:99ad300d-a0c5-49e1-ba84-535094c66d40}}.
+There, we started from the short-distance effective weak Hamiltonian
+FORMULA  for FORMULA  and FORMULA  transitions.
+We write below FORMULA  for the FORMULA  transitions with five active
+quark
+flavors by integrating out the top quark and the FORMULA  bosons:
+FORMULA 
+where FORMULA ; FORMULA  are the Wilson coefficients evaluated at the
+renormalization scale FORMULA  and FORMULA  are the
+CKM matrix elements for which we shall use the Wolfenstein
+parameterization {{cite:aee5b741-8ac5-4a79-9ac8-8b3a2845542c}}. The operators FORMULA  and FORMULA 
+with FORMULA 
+are the current-current four-quark operators inducing the FORMULA  and FORMULA  transitions, respectively. The rest of
+the operators are the QCD penguin operators
+(FORMULA ), electroweak penguin
+operators (FORMULA ), and FORMULA  represents the chromo-magnetic
+penguin operator.
+The operator basis for FORMULA  is given in {{cite:99ad300d-a0c5-49e1-ba84-535094c66d40}} together with
+the coefficients FORMULA , ..., FORMULA , evaluated in NLL precision, and
+FORMULA , ..., FORMULA  and FORMULA , evaluated in LL precision.
+Effects of weak annihilation and W-exchange diagrams have been neglected.
+Working in NLL precision, the quark level matrix elements of FORMULA 
+are treated at the one-loop level.
+They can be rewritten in terms of the tree-level matrix
+elements of the effective operators with new coefficients
+FORMULA 
+(For details see {{cite:99ad300d-a0c5-49e1-ba84-535094c66d40}} and the references quoted therein.).
+The effective coefficients FORMULA , FORMULA , FORMULA ,
+and FORMULA 
+have no absorptive parts to the order we are working.
+The effective coefficient FORMULA , FORMULA , FORMULA , FORMULA ,
+FORMULA 
+and FORMULA  contain contributions of penguin diagrams with insertions of
+tree operator FORMULA , denoted by FORMULA  and FORMULA  in {{cite:99ad300d-a0c5-49e1-ba84-535094c66d40}} and with
+insertions of the QCD penguin operators FORMULA , FORMULA  and FORMULA  (denoted by
+FORMULA  in {{cite:99ad300d-a0c5-49e1-ba84-535094c66d40}}).
+These penguin-like matrix elements have absorptive parts which generate the
+required strong phases in the quark-level matrix elements.
+The contributions FORMULA  and FORMULA  depend on the CKM matrix elements.
+All three functions FORMULA , FORMULA  and FORMULA  depend on quark masses, the scale
+FORMULA , and FORMULA , and are given explicitly in eqs. (10), (11) and (14),
+respectively, of ref. {{cite:99ad300d-a0c5-49e1-ba84-535094c66d40}}.
+Having defined FORMULA  in terms of the four-quark operators FORMULA  and
+their effective coefficients FORMULA  the calculation of the hadronic
+matrix elements of the type FORMULA 
+proceeds with the generalized
+factorization assumption {{cite:b1892cd7-7fad-4214-a546-b03aeb7e7554}}.
+The result of this calculation for the various FORMULA , FORMULA  and FORMULA 
+decays are written down in detail in {{cite:99ad300d-a0c5-49e1-ba84-535094c66d40}}.
+The hadronic matrix elements depend on the CKM matrix elements, which contain
+the weak phases, the form factors and decay constants of current matrix
+elements, various quark masses and other parameters. The quantities FORMULA ,
+given in terms of the effective short-distance coefficient FORMULA ,
+FORMULA 
+where FORMULA  runs from FORMULA ,
+are of central phenomenological importance.
+The terms in eq. (REF ) proportional to FORMULA  originate from
+fierzing the operators FORMULA  to produce quark currents to match the quark
+content of the hadrons in the initial and final state after adopting the
+factorization assumption.
+This well-known procedure results in general in matrix elements with the
+right flavor quantum number but involves both color singlet-singlet and
+color octet-octet operators.
+In the naive factorization approximation, one discards the color
+octet-octet operators.
+This amounts to having FORMULA  in (REF ).
+To compensate for these neglected octet-octet and other non-factorizing
+contribution one treats FORMULA  in
+eq. (REF ) as a phenomenological
+parameter. In theory, FORMULA  can be obtained only by fully calculating the
+octet-octet and other non-factorizing contributions and can, in principle,
+be different for each of the ten FORMULA .
+Starting from the numerical values of the ten perturbative short distance
+coefficients FORMULA  (FORMULA ) we investigated in {{cite:99ad300d-a0c5-49e1-ba84-535094c66d40}}
+the FORMULA 
+dependence of the ten effective coefficients FORMULA  for the four types of
+current-current and penguin induced decays, namely FORMULA  (FORMULA ) and FORMULA  (FORMULA ).
+It was found, that FORMULA , FORMULA , FORMULA , FORMULA  and FORMULA  are rather stable
+with respect to variations of FORMULA  in the usually adopted interval FORMULA  (or FORMULA ) for all four types of transitions, whereas
+FORMULA , FORMULA , FORMULA , FORMULA  and FORMULA  depend very much on FORMULA .
+Based on this result we introduced a classification of factorized amplitudes
+which is an extension of the classification for tree decays in {{cite:a68385f6-aeff-4c75-995b-a0e4acfd1ac7}}
+relevant for FORMULA  decays involving charmed hadrons.
+These classes I, II, III, IV and V are fully described in {{cite:99ad300d-a0c5-49e1-ba84-535094c66d40}} and
+will be used also in this work.
+The classes I, II and III in the decays FORMULA  are defined as in
+previous work {{cite:a68385f6-aeff-4c75-995b-a0e4acfd1ac7}}. They involve dominantly (or only) current-current
+transitions.
+Class IV and V involve pure penguin or penguin-dominated decays.
+The classification is such, that decays in classes I and IV are
+stable against variations of FORMULA , whereas decays in classes II and V depend
+strongly on FORMULA  and decays in class III have an intermediate status,
+sometimes depending more, sometimes less on FORMULA .
+We concluded in {{cite:99ad300d-a0c5-49e1-ba84-535094c66d40}} that decay rates in the classes I and IV
+decays can be predicted in the factorization approximation.
+The decays in class II and V have sometimes rather small weak transition
+matrix elements, depending on the values of the effective FORMULA  and
+CKM matrix elements. This introduces delicate cancellations which makes
+their amplitudes rather unstable as a function of FORMULA .
+Predicting the decay rates in these
+classes involves a certain amount of theoretical fine-tuning, and hence we
+are less sure about their estimates in the factorization approach.
+Depending on the value of FORMULA , it is probable that other contributions
+not taken into account in the factorization approach used in {{cite:99ad300d-a0c5-49e1-ba84-535094c66d40}},
+like annihilation, W exchange or soft final state interactions, are
+important. We expect that the matrix elements of the decays in class-I and
+class-IV (and most class-III), being dominantly of FORMULA  as far as their
+FORMULA -dependence is concerned will be described, in the first approximation,
+by a universal value of the parameter FORMULA . We are less sure that this will
+be the case for class-II and class-V decays. As we show here, this
+FORMULA -sensitivity of the decay rates reflects itself also in estimates
+of the CP-violating rate asymmetries.
+There is also an uncertainty due to the non-perturbative penguin
+contributions {{cite:8491cee6-02c1-4b1f-95a6-d78803935964}}, as we do not know how to
+include their effects in the amplitudes FORMULA  from first principles. However, these
+effects can be calculated as an expansion in FORMULA  in the factorization
+approach.
+The dominant diagram contributing to the power corrections is the process
+FORMULA , which was calculated in the
+full theory (Standard Model) in {{cite:9fd1a5aa-2775-4c26-9632-a53ed4958242}}. In the operator product
+language which we are using, this contribution can be expressed as
+a new induced effective Hamiltonian {{cite:4c45ea92-5d74-42df-95cb-2256d314b4ab}}:
+FORMULA 
+where the operator FORMULA  is defined as:
+FORMULA 
+with FORMULA ,
+and FORMULA  being the QCD field strength tensor.
+This formula holds for on-shell gluons
+FORMULA , and the sum over the color indices
+is understood. The function
+FORMULA  is defined as {{cite:4c45ea92-5d74-42df-95cb-2256d314b4ab}}:
+FORMULA 
+The FORMULA  gives a non-local contribution but
+one can expand the function FORMULA  in FORMULA  for
+FORMULA  and the leading
+term in this expansion can be represented as a higher dimensional
+local operator.
+In fact, it is just the chromo-magnetic analogue of the operator
+considered by Voloshin {{cite:e968d60e-329f-43f3-ae6c-7806fb120642}} to calculate the power (FORMULA 
+corrections in the radiative decay FORMULA . Now comes the
+observation made in {{cite:4c45ea92-5d74-42df-95cb-2256d314b4ab}} that in
+the assumption of factorization, only the states which
+have non-zero matrix elements FORMULA 
+contribute to the FORMULA  corrections in the decay rates for FORMULA .
+For FORMULA , this
+matrix element is determined by the QCD anomaly, and FORMULA  also
+gets fixed with FORMULA  which justifies
+the expansion.
+For the decays
+FORMULA , the FORMULA  effects
+were calculated in {{cite:4c45ea92-5d74-42df-95cb-2256d314b4ab}}
+in the decay rates. For the two-body FORMULA  decays, these are
+the only FORMULA  contributions in the factorization approach.
+They are included here in the estimates
+of the rates and the asymmetries. Note that as the function FORMULA  has no absorptive part, there is no phase
+generated by the anomaly contribution in FORMULA 
+decays.
+Concerning the actual estimates of
+the FORMULA  matrix elements in the factorization approximation, we
+note that they are
+calculated as in {{cite:99ad300d-a0c5-49e1-ba84-535094c66d40}} using two different theoretical approaches
+to calculate the form factors.
+First, we use the quark model due to Bauer, Stech and Wirbel {{cite:a68385f6-aeff-4c75-995b-a0e4acfd1ac7}}.
+The second approach is based on lattice QCD and light-cone QCD sum
+rules. The specific values of the form factors and decay constants
+used by us and the references to
+the literature are given in {{cite:99ad300d-a0c5-49e1-ba84-535094c66d40}}.
+The implementation of the FORMULA  mixing
+follows the prescription of {{cite:90079d3d-644b-4f92-aa8c-9473ac396045}}, {{cite:4c45ea92-5d74-42df-95cb-2256d314b4ab}}.
+Of particular importance for calculating the CP-violating asymmetries is
+the choice of
+the parameter FORMULA ,
+which appears in the quantities FORMULA , FORMULA  and FORMULA  in the effective
+coefficients FORMULA .
+Due to the factorization assumption any information on FORMULA  is lost when
+calculating two-body decays, except for the anomaly contribution as
+discussed earlier.
+In a specific model and from simple two-body kinematics
+the average FORMULA  has been estimated to lie in the range FORMULA  {{cite:73b0362c-70bb-4366-83a5-9939098d76a9}}. In {{cite:99ad300d-a0c5-49e1-ba84-535094c66d40}} it was found that the branching ratios
+(averaged over FORMULA  and FORMULA  decays) are not sensitively dependent on FORMULA 
+if varied in the vicinity of FORMULA . Based on earlier work
+{{cite:c70bb541-a22f-4bea-bf2b-67eb9d17297e}}, we do not expect the same result to hold for the asymmetries.
+Therefore, we calculated the CP-violating asymmetries by varying FORMULA  in
+the range FORMULA  GeVFORMULA ,
+which should cover the expected range of FORMULA  in
+phenomenological models. Quite interestingly, we find that a number of decay modes
+in the class-I and class-IV decays have asymmetries which are insensitive to
+the variation of FORMULA . These then provide suitable avenues to test the
+assumption that strong interaction phases in these decays are dominantly
+generated perturbatively.
+
+CP-Violating Asymmetries in FORMULA  Decays - Formalism
+For charged FORMULA  decays the CP-violating rate-asymmetries
+in partial decay rates are defined as follows:
+FORMULA 
+As these decays are all self-tagging, measurement of these CP-violating
+asymmetries
+is essentially a counting experiment in well defined final states.
+Their rate asymmetries require both weak and strong phase differences in
+interfering amplitudes.
+The weak phase difference arises from the superposition of amplitudes from
+various tree (current-current) and penguin diagrams.
+The strong phases,
+which are needed to obtain non-zero values for FORMULA  in (REF ),
+are generated by final state interactions.
+For both FORMULA  and FORMULA  transitions, the strong phases
+are generated in our model
+perturbatively by taking into account the full NLO corrections,
+following earlier suggestions along these lines {{cite:e2c778e2-d897-4c86-b6d7-7cfd35514416}}.
+CP-violating Asymmetries Involving FORMULA  Transitions
+For the FORMULA , and the charge conjugated FORMULA , transitions, the respective decay amplitudes FORMULA  and
+FORMULA ,
+including the weak and strong phases, can be generically written as:
+FORMULA 
+where FORMULA .
+Here we denote by FORMULA 
+the contributions from the current-current operators proportional
+to the effective coefficients FORMULA  and/or FORMULA ; FORMULA , FORMULA 
+and FORMULA  denote the contributions from penguin operators proportional to
+the product of the CKM matrix elements FORMULA , FORMULA  and FORMULA ,
+respectively. The corresponding
+strong phases are denoted by FORMULA , FORMULA  and FORMULA ,
+respectively.
+Working in the standard model,
+we can use the unitarity relation FORMULA 
+to simplify the above equation (REF ),
+FORMULA 
+where we define
+FORMULA 
+Thus, the direct CP-violating asymmetry is
+FORMULA 
+where
+FORMULA 
+FORMULA 
+In the case of FORMULA  transitions the weak phase entering in FORMULA  is
+equal to FORMULA , as we are using the Wolfenstein approximation
+{{cite:aee5b741-8ac5-4a79-9ac8-8b3a2845542c}} in which FORMULA  has no weak phase and the phase of
+FORMULA  is FORMULA . Thus, the weak phase dependence factors out in an
+overall FORMULA  in FORMULA . Despite this,
+the above equations for the CP-violating asymmetry FORMULA  are quite
+involved due to the fact
+that several strong phases are present which are in general hard to
+calculate except in specific models such as the ones being used here.
+However, there are several small parameters involved in the numerator and
+denominator given above. Expanding in these small parameters,
+much simplified forms for FORMULA  and FORMULA  and hence FORMULA  can be
+obtained in specific decays.
+First, we note that FORMULA , with an upper bound FORMULA .
+In some channels, such as FORMULA , FORMULA ,
+FORMULA , FORMULA , FORMULA , FORMULA ,
+typical
+value of the ratio FORMULA  is of FORMULA , with both FORMULA  and FORMULA 
+comparable with typically FORMULA .
+The importance of including the contributions proportional to FORMULA  has
+been stressed earlier in the literature {{cite:fbcd18ce-4a77-4dd6-a4d4-24803cbdd78b}} (see, also
+{{cite:7de51455-e694-4f7c-8d66-48aea22fef4e}}, {{cite:20f004cb-4041-4926-9bfb-953ff04c405b}}).
+These estimates are based on perturbation theory but the former
+inequality FORMULA  should hold generally as the top quark
+contribution is genuinely short-distance. The other inequality can
+be influenced by non-perturbative penguin contributions. However, also in
+this case, for the mentioned transitions, we expect that FORMULA 
+should hold. Using these approximations, eq. (REF ,
+REF ) become simplified:
+FORMULA 
+FORMULA 
+The CP-violating asymmetry in this case is
+FORMULA 
+where FORMULA , where we use the notation
+used in {{cite:99ad300d-a0c5-49e1-ba84-535094c66d40}}.
+This relation was suggested in the context of the decay FORMULA  by
+Fleischer and Mannel {{cite:99b89d58-0dc8-4343-ac5d-b151779c1dbd}}.
+Due to the circumstance that the suppression due to FORMULA  is
+stronger than the enhancement
+due to FORMULA , restricting the value of FORMULA , the CP-violating
+asymmetry for these kinds of decays are
+O(10%).
+To check the quality of the approximation made in eq. (),
+we have calculated the CP-violating asymmetry using this formula for FORMULA ,
+which yields FORMULA  at FORMULA , very close to the value FORMULA  in
+Table 5 calculated using the full formula, with FORMULA , FORMULA  and
+FORMULA  in both cases. The results for other values of FORMULA  are similar.
+Thus, we conclude that
+eq. () holds to a good approximation in the factorization
+framework for the decays mentioned earlier on.
+However, the CP-violating asymmetries FORMULA  in the mentioned decays
+are found to depend on FORMULA , making their theoretical predictions
+considerably uncertain. These can be seen in the various tables for
+FORMULA .
+Of course, the relation (REF ) given above, and others given below,
+can
+be modified through SFI - a possibility we are not entertaining here.
+There are also some decays with vanishing tree contributions, such as
+FORMULA , FORMULA , FORMULA . For these decays,
+FORMULA , and FORMULA , then for these decays
+FORMULA 
+FORMULA 
+The CP-violating asymmetry is
+FORMULA 
+Without the FORMULA  contribution, the suppression due to both FORMULA  and
+FORMULA  is much stronger and the CP-violating asymmetries are only
+around
+FORMULA (1-2)%. This is borne out by the numerical results obtained with
+the complete contributions, which can be seen in the Tables.
+
+CP-violating Asymmetries Involving FORMULA  Transitions
+For FORMULA  transitions, we have
+FORMULA 
+where FORMULA , and again using CKM unitarity relation
+FORMULA , we have
+FORMULA 
+FORMULA 
+FORMULA 
+For the tree-dominated decays involving FORMULA  transitions, such as
+FORMULA , FORMULA , FORMULA ,
+the relation FORMULA  holds. This makes the formulae
+simpler, yielding
+FORMULA 
+FORMULA 
+with FORMULA .
+The CP-violating asymmetry is now approximately given by
+FORMULA 
+with FORMULA .
+Note, the CP-violating asymmetry is approximately proportional to
+FORMULA  in this
+case.
+Here the suppression due to FORMULA  is accompanied with some
+enhancement from
+FORMULA  (the central value of this quantity is about 3
+{{cite:4bcbe205-7f17-4148-91c2-9e8f885f0db9}}),
+making the CP-violating asymmetry in this kind of decays to have a
+value FORMULA -FORMULA .
+We have calculated the CP-violating asymmetry of FORMULA  using the
+approximate
+formula (REF ). The number we got for FORMULA  is FORMULA ,
+which is very close to the value FORMULA  in Table 11 calculated
+using the exact formula, with FORMULA , FORMULA  and FORMULA .
+For the decays with a vanishing tree contribution, such as
+FORMULA , FORMULA , FORMULA , we have
+FORMULA . Thus,
+FORMULA 
+FORMULA 
+The CP-violating asymmetry is approximately proportional to FORMULA 
+again,
+FORMULA 
+with FORMULA .
+As the suppressions from
+FORMULA  and FORMULA 
+are not very big, the CP-violating asymmetry can again be
+of order FORMULA -FORMULA . However, being direct CP-violating
+asymmetries, the mentioned asymmetries in the specific FORMULA  modes depend on FORMULA  and are uncertain.
+
+CP-violating Asymmetries in Neutral FORMULA  Decays
+For the neutral FORMULA  decays, there is an additional
+complication due to FORMULA  - FORMULA  mixing.
+These CP-asymmetries may require time-dependent
+measurements, as discussed in the literature
+{{cite:07c92346-265d-4114-8338-8742386a6dd4}},?Citation `gr89' on page 1 undefined–?Citation `PW95' on page 1 undefined.
+Defining the time-dependent asymmetries as
+FORMULA 
+there are four cases that one encounters for neutral FORMULA 
+decays:
+
+case (i): FORMULA , FORMULA , where FORMULA  or FORMULA 
+is not a common final state
+of FORMULA  and FORMULA , for example FORMULA .
+
+case (ii): FORMULA  with
+FORMULA , involving final
+states which are CP eigenstates, i.e., decays such as FORMULA  etc.
+
+case (iii): FORMULA  with
+FORMULA , involving final states which are not CP eigenstates. They include
+decays such as FORMULA , as the FORMULA  states are not CP-eigenstates.
+
+case (iv): FORMULA  with FORMULA , i.e., both FORMULA  and FORMULA  are common
+final states of FORMULA  and FORMULA , but they are not CP eigenstates.
+Decays FORMULA , FORMULA  and FORMULA , FORMULA  are two examples of interest for us.
+
+Here case (i) is very similar to the charged FORMULA  decays. For case (ii),
+and (iii), FORMULA  would involve FORMULA  - FORMULA  mixing.
+Assuming FORMULA 
+and FORMULA , which hold in the standard model for
+the mass and width differences FORMULA  and
+FORMULA  in the neutral FORMULA -sector, one can express
+FORMULA  in a simplified form:
+FORMULA 
+The quantities FORMULA  and FORMULA , for which we follow the definitions given in
+{{cite:0115c804-0f91-44ab-aa37-1c211bc64126}}, depend on
+the hadronic matrix elements which we have calculated in our model.
+FORMULA 
+FORMULA 
+where
+FORMULA 
+For case (i) decays, the coefficient FORMULA  determines
+FORMULA , and since no mixing is involved for these decays, the
+CP-violating asymmetry is independent of time. We shall call these,
+together with the
+CP-asymmetries in charged FORMULA  decays, CP-class (i) decays.
+For case (ii) and (iii),
+one has to separate the FORMULA  and FORMULA 
+terms to get the CP-violating asymmetry FORMULA .
+The time-integrated asymmetries are:
+FORMULA 
+with FORMULA  for the FORMULA  - FORMULA 
+case {{cite:94a73c8f-5511-4303-afc8-5901d8299bc2}}.
+Case (iv) also involves mixing but requires additional formulae. Here one
+studies the four
+time-dependent decay widths for FORMULA , FORMULA ,
+FORMULA  and FORMULA  {{cite:56c0c12f-490b-49f5-8fc9-b1c35c7c13ff}}, {{cite:e1b6adf2-a58c-4828-9f12-e484e4bcea1b}}, {{cite:0115c804-0f91-44ab-aa37-1c211bc64126}}.
+These time-dependent widths can be expressed by four basic matrix elements
+FORMULA 
+which determine the decay matrix elements of FORMULA  and
+of FORMULA  at FORMULA .
+For example, when FORMULA  the matrix element FORMULA  is given in
+appendix B of {{cite:99ad300d-a0c5-49e1-ba84-535094c66d40}} in eq. (99) and FORMULA  for the decay FORMULA  is written down in eq. (100) in appendix B of {{cite:99ad300d-a0c5-49e1-ba84-535094c66d40}}.
+The matrix elements FORMULA  and FORMULA  are obtained from FORMULA  and FORMULA  by
+changing the signs of the weak phases contained in the products of the
+CKM matrix elements. We also need to know the CP-violating parameter
+coming from the FORMULA  - FORMULA  mixing. Defining:
+FORMULA 
+with FORMULA  and FORMULA ,
+with FORMULA  representing the
+FORMULA  and FORMULA  Hamiltonian {{cite:07c92346-265d-4114-8338-8742386a6dd4}}.
+For the decays of FORMULA  and FORMULA , we use,
+as before,
+FORMULA 
+So, FORMULA , and this ratio has only a phase given by FORMULA .
+Then, the four time-dependent widths
+are given by the following formulae (we follow the notation of {{cite:0115c804-0f91-44ab-aa37-1c211bc64126}}):
+FORMULA 
+where
+FORMULA 
+By measuring the time-dependent spectrum of the decay rates of FORMULA  and
+FORMULA , one can find the coefficients of the two functions FORMULA 
+and FORMULA  and extract the quantities FORMULA ,
+FORMULA , FORMULA , FORMULA ,
+FORMULA  and FORMULA  as well as
+FORMULA  and FORMULA , which, however, are already well measured
+{{cite:94a73c8f-5511-4303-afc8-5901d8299bc2}}. The signature of CP violation is
+FORMULA  and
+FORMULA  which means,
+that FORMULA  and/or
+FORMULA .
+In the two examples, FORMULA  and FORMULA ,
+the amplitudes FORMULA  and FORMULA  contain contributions of several terms similar
+to what we have written down above for the charged FORMULA  decays. They have weak
+and strong phases with the consequence that
+FORMULA  and FORMULA .
+TABLE 
+TABLE 
+
+Numerical Results for CP-Violating Coefficients and  FORMULA
+Given the amplitudes FORMULA  and FORMULA , one can
+calculate the CP-violating asymmetry FORMULA 
+for all the FORMULA , FORMULA  and FORMULA  decay
+modes and their charged conjugates whose branching ratios were calculated
+by us recently in
+the factorization approach {{cite:99ad300d-a0c5-49e1-ba84-535094c66d40}}. The asymmetries
+depend on several variables, such as the CKM parameters,
+FORMULA , the virtuality FORMULA  discussed earlier, and the scale FORMULA .
+The scale dependence of FORMULA  is important in only a few decays and we
+shall estimate it by varying FORMULA  between FORMULA  and FORMULA 
+at the end of this section for these decays and fix the scale at
+FORMULA . The dependence on the
+rest of the parameters is worked out explicitly. We show the results for
+FORMULA , for two representative choices of the CKM parameters
+in the tables:
+TABLE 
+TABLE 
+
+Central values emerging from the CKM unitarity fits of the existing
+data, yielding: FORMULA  {{cite:4bcbe205-7f17-4148-91c2-9e8f885f0db9}}.
+
+For values of FORMULA  and FORMULA  which correspond to their
+central values FORMULA , yielding FORMULA  and FORMULA .
+{{cite:4bcbe205-7f17-4148-91c2-9e8f885f0db9}}.
+
+For each decay mode and given a value of FORMULA , the errors shown on
+the numbers in the tables reflect the uncertainties due to the variation of
+FORMULA  in the range FORMULA  GeVFORMULA .
+For some selected CP-asymmetries, we show
+in figures, however, the dependence
+on the CKM parameters for a wider range of FORMULA  and FORMULA  which
+are allowed by the present FORMULA  C.L. unitarity fits {{cite:4bcbe205-7f17-4148-91c2-9e8f885f0db9}}.
+TABLE 
+TABLE 
+The results are presented taking into account the following considerations.
+For decays belonging to the CP class-(i), the CP-asymmetry is
+time-independent.
+Hence for this class, FORMULA . For the CP class-(ii)
+and CP class-(iii) decays, the measurement of FORMULA  will be done in
+terms of the coefficients FORMULA  and
+FORMULA , which are the measures of direct and
+indirect (or mixing-induced) CP-violation, respectively. In view of this,
+we give in Tables REF  and REF  these coefficients for the
+thirty decay modes of the FORMULA  and FORMULA  mesons, which belong
+to these classes, for the two sets of CKM parameters given above.
+For the four decays belonging to the CP class-(iv) decays, one would
+measure by time-dependent decay rates the quantities FORMULA ,
+FORMULA , FORMULA  and
+FORMULA . They are given in
+Tables REF  and REF  for the two sets of CKM parameters,
+respectively. Having worked out these quantities, we then give the
+numerical values of the CP-violating asymmetries for all the seventy six
+decays FORMULA , FORMULA  transition), FORMULA  transition) and FORMULA 
+in Tables REF  - REF .
+TABLE 
+TABLE 
+TABLE 
+TABLE 
+Parametric Dependence of CP-violating Parameters and  FORMULA
+We now discuss the CP-asymmetries given in Tables REF  - REF 
+and their parametric dependence.
+
+Form factor dependence of  FORMULA:
+The CP-violating asymmetries depend very weakly on the form factors. We
+have calculated the CP-violating asymmetries for the form factors based on
+both the BSW {{cite:a68385f6-aeff-4c75-995b-a0e4acfd1ac7}} and the
+hybrid Lattice-QCD/QCD-SR models. The form factor values
+used are given in {{cite:99ad300d-a0c5-49e1-ba84-535094c66d40}}.
+However, the dependence of FORMULA  on the form
+factors is weak. Hence, we show results only for the former case.
+
+FORMULA -dependence of  FORMULA:
+The classification of the FORMULA  decays using FORMULA -dependence of
+the rates that we introduced in {{cite:99ad300d-a0c5-49e1-ba84-535094c66d40}} is also very useful in
+discussing FORMULA .
+We see that the CP-asymmetries in the class-I
+and class-IV decays have mild dependence on FORMULA ,
+reflecting very much the characteristics of the decay rates. As already
+remarked, this
+can be traced back to the FORMULA -dependence of the effective coefficients.
+However, in some decays classified as class-IV decays in {{cite:99ad300d-a0c5-49e1-ba84-535094c66d40}}, we
+have found that FORMULA  shows a marked FORMULA  dependence. All these cases
+are on the borderline as far as the FORMULA -sensitivity of the decay rates is
+concerned due to the presence of several competing amplitudes.
+The decays, which were classified in {{cite:99ad300d-a0c5-49e1-ba84-535094c66d40}} as class-IV decays but
+are now classified as class-V decays, are as follows:
+TABLE 
+TABLE 
+FORMULA  decays: FORMULA .
+FORMULA  decays involving FORMULA  transitions: FORMULA . (The decay mode FORMULA  was already
+classified in {{cite:99ad300d-a0c5-49e1-ba84-535094c66d40}} as a class-V decay.)
+FORMULA  decays: FORMULA .
+With this, we note that the FORMULA -dependence of FORMULA  in
+the class-I and class-IV decays is at most FORMULA , as one varies
+FORMULA  in the range FORMULA  to FORMULA .
+Concerning class-III decays, in most cases FORMULA  is
+found to vary typically by a factor 2 as FORMULA  is varied, with one
+exception: FORMULA , in which case the estimate for
+FORMULA  is
+uncertain by an order of magnitude. This is in line with the observation
+made on the decay rate for this process in {{cite:99ad300d-a0c5-49e1-ba84-535094c66d40}}.
+Both CP-violating asymmetries and decay rates for the class-II and class-V
+decays are
+generally strongly FORMULA -dependent. We had shown this for the decay rates
+in {{cite:99ad300d-a0c5-49e1-ba84-535094c66d40}} and for the CP-violating asymmetries this feature can be
+seen in the
+tables presented here.
+
+FORMULA -dependence of  FORMULA:
+The CP-violating asymmetries depend on the
+value of FORMULA , as discussed in the literature {{cite:c70bb541-a22f-4bea-bf2b-67eb9d17297e}}. The value of FORMULA 
+relative to the charm threshold, i.e., FORMULA ,
+plays a central role here. For the choice FORMULA , the
+FORMULA  loop will not generate a strong phase.
+We treat FORMULA  as a variable parameter
+and have studied the sensitivity of the CP-asymmetries by varying it in the
+range FORMULA . This range may appear somewhat
+arbitrary, however, it is large enough to test which
+of the asymmetries are sensitive to the choice of FORMULA .
+One sees from the tables, that FORMULA  as well as the CP-violating
+parameters are sensitive to FORMULA  in most cases. Fortunately,
+there are some decays which have large FORMULA  with only moderate
+theoretical errors from the FORMULA -dependence.
+
+FORMULA -dependence of  FORMULA:
+It should be remarked that the CP-asymmetries depend on the renormalization
+scale FORMULA . Part of this dependence is due to the fact that the strong
+phases are generated only by the explicit FORMULA  corrections.
+This can be seen in the numerator FORMULA  given in eq. (REF ). In
+other words, NLO corrections to FORMULA , which are of of FORMULA 
+remain to be
+calculated. Despite this,
+the scale-dependence of FORMULA  in FORMULA  decays is not very
+marked, except for a few decays for which the relevant Wilson coefficients
+do show some scale dependence. We give a list of these decays in Table 13.
+This feature is quantitatively different from the scale-dependence of
+FORMULA  in the inclusive radiative decays
+FORMULA  and FORMULA  {{cite:430fffd7-8dfa-4162-8efa-2048f844b3d6}}, for which the
+FORMULA -dependence of the Wilson coefficient in the electromagnetic penguin
+operator introduces quite significant scale dependence in the
+CP-asymmetries. In contrast, the Wilson
+coefficients contributing to FORMULA  in the decays FORMULA  are less
+FORMULA -dependent. Of course, there is still some residual scale dependence
+in the quark masses. For all numbers and figures shown here, we use
+FORMULA , a scale suggested by NLO corrections in the decay rates for
+FORMULA  and FORMULA  {{cite:430fffd7-8dfa-4162-8efa-2048f844b3d6}}, for which NLO
+corrections are small.
+
+TABLE 
+
+Decay Modes with Stable FORMULA  in the Factorization Approach
+We use the parametric dependence of FORMULA  just discussed to pick out the
+decay modes which are stable against the variation of FORMULA , FORMULA  and
+the scale FORMULA .
+As only class-I and class-IV (and some class III) decays are stable against
+FORMULA , we need concentrate only on decays in these classes. With the help
+of the entries in Tables 5-13, showing the FORMULA  and FORMULA  dependence, we
+find that the following decay modes have measurably large asymmetries, i.e.,
+FORMULA  (except for FORMULA  which is estimated
+to be more
+like FORMULA ) with
+large branching ratios, typically FORMULA  (except for FORMULA , which is
+estimated to be of FORMULA  {{cite:99ad300d-a0c5-49e1-ba84-535094c66d40}}).
+
+FORMULA , FORMULA ,
+FORMULA ,
+FORMULA  and FORMULA .
+
+We discuss these cases in detail showing the CKM-parametric
+dependence of FORMULA  in each case. Since these decays measure, ideally,
+one of the phases in the unitarity triangle, we shall also plot FORMULA 
+as a function of the relevant phase, which is FORMULA 
+for FORMULA , and FORMULA  for FORMULA ,
+FORMULA  and
+FORMULA .
+FIGURE 
+
+CP-violating asymmetry in  FORMULA
+We show in Fig. REF (a) and REF (b) the CP-asymmetry parameters
+FORMULA  and
+FORMULA , defined in eq. (REF ) and (REF ),
+respectively, plotted as a
+function of the CKM-Wolfenstein parameter FORMULA  with the indicated values
+of FORMULA .
+The shadowed area in this and all subsequent figures
+showing the FORMULA -dependence corresponds to the
+range FORMULA , which is the FORMULA  allowed values of this
+parameter from the unitarity fits {{cite:4bcbe205-7f17-4148-91c2-9e8f885f0db9}}.
+The three curves in Fig. REF (a) and REF (b)
+represent three different values of the
+CKM-Wolfenstein parameter: FORMULA  (solid curve), FORMULA  (dashed
+curve) and
+FORMULA  (dotted curve).
+The time-integrated asymmetry FORMULA  calculated with the help of
+eq. (REF ) is shown for three values of FORMULA  (FORMULA ,
+FORMULA , FORMULA )
+with FORMULA  in Fig. REF (a).
+One notes that the CKM-dependence of FORMULA  is very significant.
+The FORMULA -dependence of FORMULA  is found to be very weak as
+shown is
+Fig. REF (b), where we plot this quantity as a function of FORMULA  for
+FORMULA  by varying FORMULA  in the range FORMULA  GeVFORMULA .
+Hence, there is a good case for FORMULA  yielding information
+on the CKM parameters.
+FIGURE 
+FIGURE 
+To have a closer look at this, we plot in Fig. REF (a) and
+REF (b), the asymmetry FORMULA  as a function of
+FORMULA  to study the effect of the penguin contribution
+(called in the jargon “penguin pollution") and the dependence on
+FORMULA , respectively. The lower (upper) curve in
+Fig. REF (a)
+corresponds to keeping only the tree contribution in the decays
+FORMULA  (tree + penguin). We see that in the entire
+FORMULA  expected range of FORMULA , depicted as a shadowed
+region, the “penguin pollution" is quite significant, changing both
+FORMULA  and its functional dependence on FORMULA .
+Based on REF (b), we estimate FORMULA , with FORMULA  as an allowed solution,
+varying FORMULA  in the FORMULA  range:
+FORMULA  {{cite:4bcbe205-7f17-4148-91c2-9e8f885f0db9}}.
+
+CP-violating asymmetry in  FORMULA
+FIGURE 
+The parameters FORMULA  and FORMULA 
+for the decays
+FORMULA  are shown in Fig. REF (a) and
+REF (b), respectively, for FORMULA , FORMULA , FORMULA 
+with fixed FORMULA . As can be seen from these figures,
+the time-integrated CP-violating asymmetry FORMULA  is
+completely dominated by the FORMULA  term. The
+CP-violating asymmetry FORMULA  is shown in
+Fig. REF (a) for three values of FORMULA  (FORMULA , FORMULA , FORMULA ).
+The upper curve for each value of FORMULA  is obtained by neglecting the tree
+contribution in FORMULA  and the
+lower curves represent the corresponding full (tree + penguin)
+contribution.
+Fig. REF (b) shows the FORMULA -dependence of FORMULA 
+with the three (almost) overlapping curves corresponding to FORMULA  and
+FORMULA  GeVFORMULA  for fixed value, FORMULA .
+As we see from this set of figures, the CKM-parametric dependence of
+FORMULA  is marked and the effect of the “tree shadow” is relatively
+small. To illustrate this further, we plot in Figs. REF (a) and
+REF (b) this asymmetry as a function of FORMULA , showing the
+effect of the “tree-shadowing" and dependence of FORMULA 
+on FORMULA , respectively. Restricting to the range FORMULA , which is the FORMULA  range for this quantity from the
+unitarity fits {{cite:4bcbe205-7f17-4148-91c2-9e8f885f0db9}}, we find
+that FORMULA  has a value in the range
+FORMULA .
+This decay has been measured by the CLEO Collaboration with a branching ratio
+FORMULA  and is well accounted for in the factorization-based approach
+?Citation `akl98-1' on page 1 undefined–?Citation `acgk' on page 1 undefined.
+As the “tree shadow' is small in the decay FORMULA 
+and the electroweak penguin contribution is also small {{cite:99ad300d-a0c5-49e1-ba84-535094c66d40}},
+FORMULA  is a good measure of FORMULA . This was
+anticipated by London and Soni {{cite:76e20d7c-7611-48e1-957c-243be199892b}}, who also advocated FORMULA  as a measure of the angle FORMULA , following the earlier
+suggestion of the same in
+ref. {{cite:83c14f3e-d7eb-45c3-96c2-ccb5bce50ff7}}. The CP-asymmetry for this decay, like FORMULA , is
+dominated by the FORMULA  term.
+The quantity FORMULA  is found to
+be stable against variation in FORMULA  and FORMULA  (see Tables 9 and 10). However,
+being a class-V decay, the branching ratio for FORMULA 
+(and its charged
+conjugate) is very sensitively dependent on FORMULA , with FORMULA , with the lower (higher) range corresponding to
+FORMULA 
+(FORMULA  {{cite:99ad300d-a0c5-49e1-ba84-535094c66d40}}. Moreover, the electroweak penguin effect in this
+decay is
+estimated to be rather substantial. The present upper bound on this decay is
+FORMULA  {{cite:52ee9ff5-3ab7-484a-9d30-522f4ce406a6}}.
+Depending on FORMULA ,
+the above experimental bound is between one and two orders of magnitude away
+from the expected rate.
+Despite the large and stable value of FORMULA , it may turn out
+not to be measurable in the first generation of B factory experiments.
+FIGURE 
+FIGURE 
+
+CP-violating asymmetry in  FORMULA
+FIGURE 
+The decay FORMULA  is dominated by the penguins, with significant
+electroweak penguin contribution {{cite:99ad300d-a0c5-49e1-ba84-535094c66d40}}.
+The estimated decay rate in the factorization approach is FORMULA , with the present experimental
+bound
+being FORMULA  {{cite:8597515b-b661-4de5-9c3e-603fdced89b5}}, with
+these
+numbers to be understood as averages over the charge conjugated decays.
+We expect that with FORMULA  FORMULA  events, several hundred FORMULA 
+decays will be measured. The CP-asymmetry FORMULA  is dominated by
+the FORMULA  term (see Tables 1 and 2), which is
+large, stable
+against variation in FORMULA  and shows only a mild dependence on FORMULA .
+The quantities FORMULA  and FORMULA 
+for this decay
+(together with the others in the FORMULA  and FORMULA 
+decays)
+were worked out by Kramer and Palmer in {{cite:c70bb541-a22f-4bea-bf2b-67eb9d17297e}}. As remarked already,
+there are detailed
+differences in the underlying theoretical framework used here and in {{cite:c70bb541-a22f-4bea-bf2b-67eb9d17297e}}
+and also in the values of the CKM and other input parameters, but using
+identical values of the various input parameters for the sake of comparison,
+the agreement
+between the two is fair.
+We show in Fig. REF (a), FORMULA 
+as a function of FORMULA  for three values of FORMULA :
+FORMULA , FORMULA , FORMULA  and note that this dependence is quite marked.
+The FORMULA -dependence of FORMULA  is found to be small,
+as shown in Fig. REF (b). Thus, we expect that FORMULA  is
+also a good measure of FORMULA . This is shown in Fig. REF ,
+with the three
+curves showing the additional dependence of FORMULA 
+on FORMULA . Restricting the value of FORMULA  in the FORMULA  range shown by the shadowed region, we find
+FORMULA .
+FIGURE 
+
+CP-violating asymmetry in  FORMULA
+FIGURE 
+The decay FORMULA , like the preceding decay, is dominated by
+the penguins with significant electroweak penguin contribution {{cite:99ad300d-a0c5-49e1-ba84-535094c66d40}}.
+The branching ratio for this mode is estimated to be about a factor 3 too
+small compared to
+FORMULA , with FORMULA .
+The CP-violating asymmetry FORMULA  is, however, found to be
+very similar
+to FORMULA .
+This is shown in Fig. REF (a) where we plot FORMULA  as a
+function of FORMULA  for the three indicated values of FORMULA , keeping
+FORMULA  fixed.
+The FORMULA -dependence of FORMULA  is shown in Fig. REF (b)
+and is found to be moderately small in the range FORMULA  GeVFORMULA .
+We show in Fig. REF  FORMULA  as a function of FORMULA , with the
+three curves showing three different values of FORMULA .
+Restricting again
+to the FORMULA  range of FORMULA , we estimate: FORMULA .
+FIGURE 
+
+CP-violating asymmetry in
+FORMULA , with  FORMULA
+FIGURE 
+As the CKM-parametric dependence of the CP-violating asymmetries FORMULA ,
+FORMULA , FORMULA  are very similar, one could combine these asymmetries.
+We estimate FORMULA ,
+with FORMULA , for FORMULA  and
+FORMULA .
+As the branching ratio for the decay FORMULA  is estimated
+to be
+small, typically FORMULA ,
+the above estimates of
+FORMULA  and FORMULA  hold also to a
+very good approximation if we now also include FORMULA  in FORMULA .
+The dependence of FORMULA  on the CKM parameters FORMULA  and
+FORMULA  is shown in Fig. REF (a) and the FORMULA -dependence in
+Fig. REF (b). Interestingly, the FORMULA -dependence in various components
+which is already small gets almost canceled in the sum, yielding
+FORMULA  which is practically independent of FORMULA . We show the
+dependence of FORMULA  on FORMULA  in Fig. REF ,
+with the three curves
+representing each a different value of FORMULA .
+Thus, we predict FORMULA ,
+for FORMULA , FORMULA , FORMULA  and FORMULA  for the
+FORMULA  range of FORMULA .
+FIGURE 
+
+CP-violating asymmetry in  FORMULA
+As another example of the decay whose FORMULA  is stable against variation
+in FORMULA  and FORMULA , we remark that the decay mode FORMULA  is
+estimated to have an asymmetry FORMULA , as can be seen in
+Table 11 and 12.
+This decay mode is dominated by the tree amplitudes (like FORMULA )
+and belongs to the CP class (iii) decays.
+Estimated branching ratio for this mode is FORMULA .
+
+
+The Decays FORMULA , FORMULA  and
+CP-Violating
+Asymmetries
+Next, we discuss decay modes which belong to the CP class (iv) decays.
+There are four of them FORMULA , FORMULA ,
+FORMULA  and FORMULA . Of these the decay
+FORMULA  belongs to the Class-V decay and is estimated to
+have a very small branching ratio in the factorization approach
+FORMULA  {{cite:99ad300d-a0c5-49e1-ba84-535094c66d40}}.
+The other FORMULA  is a Class-IV decay but is expected
+to have also a small branching ratio, with FORMULA .
+In view of this, we concentrate on the decays FORMULA  and
+FORMULA .
+FIGURE 
+With FORMULA  and FORMULA , the time evolution of the
+four
+branching ratios is given in eq. (REF ). They have each three
+components with
+characteristic time-dependences proportional to FORMULA ,
+FORMULA  and FORMULA ,
+with the relative and overall normalization explicitly stated there.
+The time dependence of the branching ratio FORMULA  and of the branching ratio for the charge conjugate decay
+FORMULA 
+is shown in Fig. REF (a) and REF (b), respectively.
+The time dependence of the branching ratio FORMULA 
+and of FORMULA 
+is shown in Fig. REF (a) and REF (b), respectively.
+The three components and the sum are depicted by the four curves.
+FIGURE 
+The resulting time-dependent CP-violating asymmetry FORMULA  for
+FORMULA  defined as
+FORMULA 
+is shown in Fig. REF  through the solid curve.
+The corresponding asymmetry FORMULA  defined in an
+analogous way as for FORMULA  is given by the dashed curve
+in this figure.
+FIGURE 
+We recall that the decay rate for FORMULA  averaged over its
+charge conjugated decay FORMULA  is estimated to have
+a value in the range FORMULA -FORMULA  {{cite:99ad300d-a0c5-49e1-ba84-535094c66d40}}; the time-integrated CP-asymmetry is estimated to be
+FORMULA -FORMULA .
+Being a Class-I decay, both the branching ratio FORMULA  and FORMULA  are FORMULA -stable.
+In addition, FORMULA  is also FORMULA -stable, as shown in
+Table 7.
+The branching ratio for the decay FORMULA , averaged over
+its charge conjugate decay FORMULA , is expected to be
+FORMULA -FORMULA 
+{{cite:99ad300d-a0c5-49e1-ba84-535094c66d40}}, i.e.,
+typically a factor 4 smaller than FORMULA .
+Also, FORMULA  is estimated somewhat smaller for the central
+value of the CKM-parameter FORMULA , FORMULA .
+For these CKM parameter, we estimate FORMULA -FORMULA .
+For FORMULA , FORMULA , FORMULA  (see Table 8).
+We note that our estimate of the ratio FORMULA  derived in {{cite:99ad300d-a0c5-49e1-ba84-535094c66d40}} is
+in reasonable agreement with the corresponding ratio estimated in {{cite:e1b6adf2-a58c-4828-9f12-e484e4bcea1b}}
+but we also find FORMULA , which is drastically different from the estimates presented in
+{{cite:e1b6adf2-a58c-4828-9f12-e484e4bcea1b}}.
+
+Decay Modes with Measurable but FORMULA -dependent  FORMULA
+In addition to the decay modes discussed above,
+the following decay modes have FORMULA  which are FORMULA - and
+FORMULA - stable but show significant or strong FORMULA -dependence.
+However, we think that further theoretical work and/or measurements of
+FORMULA  in one or more of the following decay modes will greatly help in
+determining FORMULA  and hence in reducing the present theoretical dispersion
+on FORMULA .
+FIGURE 
+
+FORMULA , FORMULA ,
+FORMULA , FORMULA , FORMULA ,
+FORMULA , FORMULA .
+
+These decays have branching ratios which are estimated to be several multiples
+of FORMULA  to several multiples of FORMULA  and may have FORMULA  at
+least of FORMULA , but being uncertain due to the FORMULA -dependence may reach
+rather large values. The CP-violating asymmetries in these cases belong to the
+class (i), i.e., they are direct CP-violating asymmetries.
+In Fig. REF (a) and REF (b), we show the CP-violating asymmetry
+FORMULA  as a function of FORMULA .
+The three curves in Fig. REF (a) correspond to the three choices of
+FORMULA ,
+with FORMULA , whereas the three curves in Fig. REF (b) correspond
+to using FORMULA  GeVFORMULA  (dotted curve), FORMULA  (dashed-dotted
+curve), FORMULA  GeVFORMULA  (dashed curve) with FORMULA .
+Depending on the value of FORMULA , FORMULA  could reach a
+value FORMULA .
+The branching ratio is estimated to lie in the range FORMULA .
+The decay mode FORMULA  has very similar CKM and
+FORMULA -dependence, which is shown in Fig. REF (a) and (b), respectively,
+where we plot the CP-asymmetry FORMULA .
+Also, the branching ratio FORMULA  estimated in {{cite:99ad300d-a0c5-49e1-ba84-535094c66d40}} is
+very similar to FORMULA .
+FIGURE 
+In Fig. REF (a) and REF (b),
+we show the CP-violating asymmetry FORMULA 
+in the decays FORMULA .
+This is a Class-III decay dominated by the tree amplitude and is expected
+to have a branching ratio FORMULA , where an average over the
+charge conjugated decays is implied.
+However, depending on the value of FORMULA  this decay mode may show a large
+CP-violating asymmetry, reaching FORMULA 
+for FORMULA , FORMULA  and FORMULA  GeVFORMULA .
+For FORMULA  GeVFORMULA , the CP-asymmetry comes down to a value
+FORMULA .
+All of these values are significantly higher than the ones reported in
+{{cite:8f3795a4-a55d-42af-ab18-6f79506a0dc3}}.
+Large but FORMULA -sensitive values of this quantity have also been reported
+earlier in {{cite:c70bb541-a22f-4bea-bf2b-67eb9d17297e}}.
+We also mention here the decay modes FORMULA , whose branching
+ratio is estimated as FORMULA  {{cite:90079d3d-644b-4f92-aa8c-9473ac396045}}, {{cite:4c45ea92-5d74-42df-95cb-2256d314b4ab}}, {{cite:99ad300d-a0c5-49e1-ba84-535094c66d40}} and which may have CP-violating asymmetry
+in the
+range FORMULA -FORMULA  depending on the CKM
+parameters and FORMULA  (see Tables 9 and 10).
+FIGURE 
+Finally, we mention two more decay modes FORMULA  and
+FORMULA  which are both Class-IV decays, with branching ratios
+estimated as FORMULA  and FORMULA  {{cite:99ad300d-a0c5-49e1-ba84-535094c66d40}}. The CP-violating asymmetries in these decays are
+estimated
+to lie in the range FORMULA -FORMULA .
+In Fig. REF (a) and REF (b), we show FORMULA 
+as a function of FORMULA  by varying FORMULA  and FORMULA , respectively.
+FIGURE 
+
+Summary and Conclusions
+Using the NLO perturbative framework and a generalized factorization
+approach discussed in detail in {{cite:99ad300d-a0c5-49e1-ba84-535094c66d40}}, we have calculated the
+CP-violating asymmetries
+in partial decay rates of all the two-body non-leptonic decays FORMULA , where FORMULA  and FORMULA  are the light pseudoscalar and vector
+mesons. Our results can be summarized as follows:
+
+We find that the decay classification scheme presented in
+{{cite:99ad300d-a0c5-49e1-ba84-535094c66d40}} for the branching ratios is also very useful in
+discussing the CP-violating asymmetries. In line with this, Class-I and
+class-IV
+decays yield asymmetries which are stable against the variation of FORMULA .
+There are two exceptions, FORMULA  and
+FORMULA , which vary by a factor 3 and 1.65, respectively,
+for FORMULA .
+
+Estimates of CP-violating asymmetries in Class-II and class-V
+decays depend rather sensitively on FORMULA  and hence are very
+unreliable. There is one notable exception FORMULA , which is
+parametrically stable and large. However being a class-V decay, the
+branching ratio FORMULA  is uncertain in the
+factorization approach by at least an order of magnitude {{cite:99ad300d-a0c5-49e1-ba84-535094c66d40}}.
+
+The CP-asymmetries in Class-III decays vary by approximately a
+factor 2, as one varies FORMULA  in the range FORMULA , with
+the exception of FORMULA  and FORMULA 
+which are much more uncertain. The FORMULA -sensitivity of FORMULA  was already pointed out in {{cite:99ad300d-a0c5-49e1-ba84-535094c66d40}}.
+
+The CP-violating asymmetries worked out here are in most cases
+relatively insensitive to the scale FORMULA , i.e., this dependence is below
+FORMULA ,
+for FORMULA ,
+except in some decays which we have listed in Table 13.
+
+As opposed to the branching ratios, asymmetries do not depend in the
+first approximation on the form factors and decay constants. However,
+in most cases, they depend on the parameter FORMULA , the virtuality of the
+FORMULA  and FORMULA  decaying into FORMULA  from the penguin
+contributions. This has been already studied in great detail in {{cite:c70bb541-a22f-4bea-bf2b-67eb9d17297e}},
+a behavior which we have also confirmed.
+
+Interestingly, we find that a number of FORMULA  decays
+have CP-violating asymmetries which can be predicted within a reasonable
+range in the factorization approach. They include:
+FORMULA , FORMULA , FORMULA ,
+FORMULA  and FORMULA .
+The decay modes involved have reasonably large branching ratios and the
+CP-violating asymmetries are also measurably large in all these cases.
+Hence,
+their measurements can be used to put
+constraints on the CKM parameters FORMULA  and FORMULA .
+Likewise, these decay modes are well suited to test the hypothesis
+that strong phases in these decays are generated dominantly by
+perturbative QCD. This, in our opinion, is difficult to test
+in class-II and class-V decays.
+Of particular interest
+is FORMULA , which is expected to have a value
+FORMULA -FORMULA . This decay mode has already
+been measured by the CLEO collaboration {{cite:8597515b-b661-4de5-9c3e-603fdced89b5}} and estimates of
+its branching ratio in the factorization approach are in agreement with
+data ?Citation `akl98-1' on page 1 undefined–?Citation `acgk' on page 1 undefined.
+
+The CP-asymmetry FORMULA , where FORMULA  is found to be remarkably stable in FORMULA , due to the
+compensation in the various channels. The resulting CP-asymmetry is found
+to be large, with FORMULA -FORMULA , with the range
+reflecting the CKM-parametric dependence.
+
+We have studied the dependence of FORMULA  on FORMULA , studying
+the effect of the “penguin pollution”, which we find to be significant.
+The effect
+of the “tree-shadowing” in FORMULA  is, however,
+found to be
+small. Thus, FORMULA , likewise FORMULA ,
+FORMULA  and FORMULA  are good measures of FORMULA .
+
+We have studied time-dependent CP-violating asymmetries FORMULA 
+and FORMULA , working out the various characteristic
+components in the time evolution of the individual branching ratios. With the
+branching ratio averaged over the charge-conjugated modes FORMULA  and time-integrated CP-violating asymmetry FORMULA , for the central values FORMULA  and FORMULA , it is an
+interesting process
+to measure, as stressed in {{cite:e1b6adf2-a58c-4828-9f12-e484e4bcea1b}}. The branching ratio FORMULA  is estimated by us as typically a factor 4 below FORMULA  and hence FORMULA  is a relatively more difficult
+measurement.
+
+There are several class-IV decays whose CP-asymmetries are small
+but stable against variation in FORMULA , FORMULA  and FORMULA . They include:
+FORMULA , FORMULA  and FORMULA .
+CP-asymmetries well over FORMULA  in these decay modes can arise through
+SFI and/or new physics. We argue that
+the role of SFI can be disentangled already in decay rates
+and through the measurements of a number of CP-violating asymmetries which
+are predicted to be large. As at this stage it is hard to quantify the
+effects of SFI, one can not stress too strongly that a measurement of
+CP-violating asymmetry in any of these partial rates significantly above
+the estimates presented here will be a sign of new physics.
+
+There are quite a few other decay modes which have measurably large
+CP-violating asymmetries, though without constraining the
+parameter FORMULA  experimentally, or removing this dependence in an improved
+theoretical framework,
+they are at present rather uncertain. A good measurement of
+the CP-asymmetry in any one of these could be used to determine FORMULA .
+We list these potentially interesting asymmetries below:
+FORMULA , FORMULA ,
+FORMULA , FORMULA , FORMULA  and FORMULA .
+
+In conclusion, by systematically studying the FORMULA  decays
+in the factorization approach, we hope
+that we have found classes of decays where the factorization approach can be
+tested as it makes predictions within a reasonable range. If the predictions
+in the rates
+in these decays are borne out by data, then it will strengthen the notion
+based on
+color transparency that non-factorization effects in decay rates are small
+and QCD dynamics in
+FORMULA  decays can be largely described in terms of perturbative
+QCD and factorized amplitudes. This will bring in a number of CP-violating
+asymmetries under quantitative control of the factorization-based theory.
+If these expectations did not stand the experimental tests, attempts to
+quantitatively study two-body
+non-leptonic decays would have to wait for a fundamental step in the QCD
+technology
+enabling a direct computation of the four-quark matrix elements in the decays
+FORMULA . However, present data on FORMULA  decays are
+rather encouraging and perhaps factorization approach is well poised
+to becoming a useful theoretical tool in studying non-leptonic FORMULA  decays -
+at least in class-I and class-IV decays.
+We look forward to new experimental results where many of the predictions
+presented here and in {{cite:99ad300d-a0c5-49e1-ba84-535094c66d40}} will be tested in terms of branching
+ratios and CP-violating asymmetries in partial decay rates.
+
+Acknowledgments
+We thank Christoph Greub and Jim Smith for helpful discussions. We would
+also like to thank Alexey Petrov for clarifying some points in his
+paper {{cite:8f3795a4-a55d-42af-ab18-6f79506a0dc3}}. One of us (A.A.) would like to thank Matthias
+Neubert for discussions on the factorization approach, and the CERN-TH
+Division for hospitality where this work was completed.

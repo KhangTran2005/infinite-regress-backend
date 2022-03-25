@@ -1,0 +1,1188 @@
+
+[prb,twocolumn,aps,epsbox]revtex
+
+
+[
+Tricritical Behavior in the Extended Hubbard Chains
+Masaaki Nakamura{{cite:3e0048cd-087e-4a0e-a641-332e753be509}}
+Institute for Solid State Physics,
+University of Tokyo, Roppongi, Tokyo 106-8666, Japan
+Phys. Rev. B 61, 16377 (2000)
+Phase diagrams of the one-dimensional extended Hubbard model (including
+nearest-neighbor interaction FORMULA ) at half- and quarter-filling are
+studied by observing level crossings of excitation spectra using the
+exact diagonalization. This method is based on the Tomonaga-Luttinger
+liquid theory including logarithmic corrections which stem from the
+renormalization of the Umklapp- and the backward-scattering effects.
+Using this approach, the phase boundaries are determined with high
+accuracy, and then the structure of the phase diagram is clarified. At
+half-filling, the phase diagram consists of two
+Berezinskii-Kosterlitz-Thouless (BKT) transition lines and one Gaussian
+transition line in the charge sector, and one spin-gap transition line.
+This structure reflects the U(1) FORMULA  SU(2) symmetry of the
+electron system. Near the FORMULA  line, the Gaussian and the spin-gap
+transitions take place independently from the weak- to the
+intermediate-coupling region, but these two transition lines are
+coupled in the strong-coupling region. This result demonstrates
+existence of a tricritical point and a bond-charge-density-wave (BCDW)
+phase between charge- and spin-density-wave (CDW, SDW) phases. To
+clarify this mechanism of the transition, we also investigate effect of
+a correlated hopping term which plays a role to enlarge BCDW and
+bond-spin-density-wave (BSDW) phases. At quarter-filling, a similar
+crossover phenomenon also takes place in the large-FORMULA  region involving
+spin-gap and BKT-type metal-insulator transitions.
+
+71.10.Hf,71.30.+h,74.20.Mn
+]
+INTRODUCTION
+One-dimensional (1D) electron systems have been extensively studied
+motivated not only by theoretical interest but also by the discovery of
+quasi-1D conductors and high-FORMULA  superconductivity. In the 1D
+electron systems, due to the charge-spin separation, the low-energy
+excitations in the charge and the spin sectors may have gaps
+independently, and then various phases can appear. However, phenomena
+caused by interplay between these two degrees of freedom have not been
+fully understood even in simple models. In this paper, we turn our
+attention to the phase transitions in the so-called extended Hubbard
+model (EHM),
+FORMULA 
+at half- and quarter-filling, where both charge and spin gaps can open.
+The EHM at half-filling has been studied using various approaches. In
+the weak-coupling limit, the phase diagram is analytically obtained by
+the g-ology{{cite:0950e123-72e8-431c-b93f-52cfcf0c2459}}, {{cite:8daf66f6-9d03-4af5-a321-9117d48e4f3f}}, {{cite:90b9776b-c02d-420a-8b5e-cfa159065808}}, {{cite:427caf9c-4f7a-42a0-9923-93e5d34178ec}} (see Appendix
+). According to the result, there appear
+insulating charge- (CDW) and spin-density-wave (SDW) phases, and
+metallic phases where the singlet superconducting (SS) or the triplet
+superconducting (TS) correlation is dominant [see
+Fig. REF (b)]. On the other hand, in the strong-coupling
+limit, the perturbation theory gives the phase boundary of the CDW-SDW
+transition{{cite:93787d41-00f0-42b9-9e83-3fd402053cbd}}, {{cite:aafd578f-7049-40f9-b133-50934f54987d}}, {{cite:5bb3f045-157d-46a0-9bef-7d29aec80dca}} and of the phase
+separation.{{cite:5d883932-1cd9-4e16-85ac-7b359c26ad8a}}, {{cite:4b69ec40-a32e-4e7c-9ec1-eecc5f90e125}}, {{cite:c223e0ff-dcc5-4d76-aa47-f7cdd5348d76}} The rest of region has been
+discussed by numerical
+analysis.{{cite:aafd578f-7049-40f9-b133-50934f54987d}}, {{cite:d4e12baf-8eed-4126-aa78-9c29cf235926}}, {{cite:3fb77712-3598-4d41-87e5-552a57980463}}, {{cite:e6f73a4b-7e10-44e9-9df5-ce82d9ebe4e8}}, {{cite:0fabf06e-c990-4a3e-a461-fcd4b5a941cb}}, {{cite:4640020b-f44a-4701-a2fb-9bf4bb980ba2}}
+However, the phase diagrams are not fully understood, because the charge
+and the spin gaps open exponentially slow [see Eqs. (REF )
+and (REF )], which makes it difficult to determine the
+phase boundaries by the conventional finite-size scaling method.
+Especially for the transition between the CDW and the SDW phases, even
+the property of the transition itself is not clear, because the
+transition is of the second order in the weak-coupling theory, while it
+is of the first order in the strong-coupling theory.
+FIGURE 
+Recently, the author has clarified the mechanism of the CDW-SDW
+transition.{{cite:c86e68ef-9dc6-4714-b2bf-c72dfb0dd0db}} According to the result, the phase
+boundary consists of two independent transition lines, and the crossover
+of the CDW-SDW transition is related with whether these two transition
+lines are separated or coupled. The result also demonstrates the
+existence of the bond-charge-density-wave (BCDW){{cite:ac487258-021e-4c29-87d9-b94575bbf71f}} phase
+in the very narrow region between the CDW and the SDW states. In this
+paper, we not only give the details of the letter, but also clarify the
+entire phase diagram of the EHM at half-filling.
+In order to clarify the above scenario for the phase transition between
+the CDW and the SDW phases, we also consider generalizing the EHM by
+adding the following correlated hopping interactions:
+{{cite:312611c9-2ba7-4eec-a476-f61f1a5de1b4}}, {{cite:fca4edc5-cadb-4384-8855-70026454c5ed}}, {{cite:17144aa1-c4e5-4d84-b794-45b5e242f2e1}}, {{cite:9ff78475-6f2e-41c0-b9df-34af0c52a02b}}
+FORMULA 
+This interaction can be derived as a site-off-diagonal element of the
+Coulomb integral.{{cite:312611c9-2ba7-4eec-a476-f61f1a5de1b4}} Especially, the three-body part is
+justified as an effective interaction of the three-band
+model.{{cite:fca4edc5-cadb-4384-8855-70026454c5ed}} The weak-coupling phase diagram is known by the
+g-ology{{cite:17144aa1-c4e5-4d84-b794-45b5e242f2e1}} as shown in Figs. REF  (a) and
+(c) (see Appendix ). In these phase diagrams, the
+two transition lines between the CDW and the SDW phases do not
+synchronize. And a BCDW or a bond-spin-density-wave{{cite:cbc22f78-6be1-4f19-b3b5-363ceb7aabed}}
+(BSDW) phase appears. The analysis of the generalized model will clarify
+the tricritical behavior in the pure EHM. The final results are shown in
+Fig. REF .
+A charge-gap phase is known to appear not only at half-filling but also
+at quarter-filling,{{cite:ccd33ea1-85b8-4803-b9f4-12af044f490b}}, {{cite:a94de807-8414-4214-87f7-fce95b9ba32b}}, {{cite:d9dc9831-b361-4610-9f66-0ed43958c8d0}}, {{cite:b17f808a-08ac-4a4a-acb0-9a78c6925d11}} due to the
+effect of the Umklapp scattering in the higher
+order.{{cite:19e863d0-2ba2-4369-a731-bee6ab90eca1}}, {{cite:4bc33bee-57e9-4a5c-b820-98b2cd9863e2}}, {{cite:b768bae1-aa1f-4c7c-ad04-c77ddb0acf55}}, {{cite:44b8ab6b-95f7-4185-9f98-4c7657bc0c4e}} In this
+case, the interplay between charge and spin instabilities is also
+expected. In fact, we will conclude that a crossover phenomenon also
+exists in the large-FORMULA  region at quarter-filling (see
+Fig. REF ).
+Throughout this paper, we use the level-crossing approach to determine
+the phase boundaries.{{cite:c86e68ef-9dc6-4714-b2bf-c72dfb0dd0db}}, {{cite:6048c25a-5d9d-406b-82c3-0306c04ded76}}, {{cite:12ac0db3-0b7a-4dd1-be57-812cf647bce3}}, {{cite:ff0dc223-e99d-4e14-963c-e69cdc315c7d}}, {{cite:5095fee5-ca7b-4427-9755-4b85dffd243e}}, {{cite:e77eb5be-18ee-42a2-bb13-9b834d37f696}}, {{cite:6281d691-4317-4923-ac3b-4ed63f23e217}}, {{cite:568398b0-21d8-4d89-b50c-84c9e7d1c9b6}} This method is based
+on the Tomonaga-Luttinger (TL) liquid theory{{cite:3e97e8e0-d578-428b-aae5-bbfd16b27575}} (which is
+equivalent to the FORMULA  conformal field theory) including the
+logarithmic corrections, which stem from the renormalization of the
+Umklapp- and the backward-scattering effects. In the theoretical
+scheme, the transition points are identified by the level crossing of
+the excitation spectra in the finite-size ring with size dependence
+FORMULA , where FORMULA  is the system size. Therefore, the phase
+boundaries are obtained with high accuracy, using the numerical data of
+finite-size clusters.
+This paper is organized as follows. In Sec. , we review
+the level-crossing approach based on the TL liquid theory and the
+renormalization group, developed in
+Refs. -. In Sec. ,
+we discuss the discrete symmetries of wave functions to connect
+excitation spectra and the corresponding physical states. In
+Sec. , we discuss the character of the phases that
+appear in the phase diagrams. In Sec. , we analyze the
+instabilities of the EHM at half-filling, and clarify the phase diagram.
+In Sec. , we analyze the metal-insulator transition at
+quarter-filling. Finally, a summary and discussions are given in
+Sec. . In Appendix , we briefly
+explain the traditional g-ology analysis for the generalized EHM at
+half-filling.
+
+PHASE BOUNDARIES
+First, let us perform a general argument for 1D electron systems based
+on the bosonization
+theory.{{cite:0950e123-72e8-431c-b93f-52cfcf0c2459}}, {{cite:8daf66f6-9d03-4af5-a321-9117d48e4f3f}}, {{cite:90b9776b-c02d-420a-8b5e-cfa159065808}}, {{cite:427caf9c-4f7a-42a0-9923-93e5d34178ec}}, {{cite:5a4f5a57-9dee-44f9-8629-3bb318459eaf}}, {{cite:bf7fbe24-4053-4775-a302-0c9b0865741f}} The continuous
+fermion fields are defined by FORMULA  (the lattice constant FORMULA ,
+FORMULA ) with
+FORMULA 
+where FORMULA  and FORMULA  refer to FORMULA  and
+FORMULA  in that order. FORMULA  is a short-distance cutoff. FORMULA  is
+the Fermi wave number defined by FORMULA , with FORMULA 
+being the electron density. The field FORMULA  and the dual field
+FORMULA  of the charge (FORMULA ) and the spin (FORMULA )
+degrees of freedom satisfy the relation
+FORMULA 
+FORMULA  ensures anticommutation relations of the different fermion
+fields.{{cite:3e97e8e0-d578-428b-aae5-bbfd16b27575}}, {{cite:bf7fbe24-4053-4775-a302-0c9b0865741f}} These operators are Hermitian and satisfy
+the relation
+FORMULA 
+Using the formalism, the low-energy behavior of 1D electron system can
+be described by the sine-Gordon models for the charge and the spin
+sectors. When FORMULA  (FORMULA : integer) electrons contribute to the Umklapp
+scattering, the effective Hamiltonian for the system with length FORMULA  is
+given by
+FORMULA 
+where FORMULA  and FORMULA  are the velocity and the Gaussian
+coupling, respectively for each sector. FORMULA  and FORMULA 
+denote the amplitude of the backward and the Umklapp scattering,
+respectively. The Umklapp term vanishes except for the case
+FORMULA  where FORMULA  is also an integer, and
+FORMULA  is an irreducible fraction. Thus, the electron filling that a
+charge gap can open is quantized to commensurate cases FORMULA .
+{{cite:19e863d0-2ba2-4369-a731-bee6ab90eca1}}, {{cite:4bc33bee-57e9-4a5c-b820-98b2cd9863e2}}, {{cite:b768bae1-aa1f-4c7c-ad04-c77ddb0acf55}} This condition can also be
+derived from the generalized Lieb-Schultz-Mattis theorem.
+{{cite:b768bae1-aa1f-4c7c-ad04-c77ddb0acf55}}, {{cite:44b8ab6b-95f7-4185-9f98-4c7657bc0c4e}} In this paper, we consider FORMULA 
+(half-filling) and FORMULA  (quarter-filling) cases. At half-filling, in
+the weak-coupling limit, the couplings of the backward and the Umklapp
+scattering for the EHM are identified as FORMULA 
+(see Appendix ).
+In addition to the FORMULA  term, there exists another Umklapp
+operator with coupling constant FORMULA , which transfers finite
+spin.{{cite:427caf9c-4f7a-42a0-9923-93e5d34178ec}}, {{cite:3fb77712-3598-4d41-87e5-552a57980463}}, {{cite:4bc33bee-57e9-4a5c-b820-98b2cd9863e2}} In the weak-coupling limit,
+this parameter is identified as FORMULA . In the present
+analysis, we will not consider this term explicitly, because the scaling
+dimension of this term is always higher than that of the other nonlinear
+terms in Eq. (REF ). However, in the strong-coupling
+region, a charge-spin coupling effect may appear due to this term.
+If these nonlinear terms are absent
+(FORMULA ), the excitation spectra and
+their wave numbers in the finite-size system are described by
+FORMULA 
+where the scaling dimensions and the conformal spins are given by
+FORMULA 
+Here FORMULA  is the change of FORMULA  electrons, and FORMULA 
+is the total FORMULA -spins FORMULA . FORMULA  (FORMULA )
+denotes the number of particles moved from the left charge (spin) Fermi
+point to the right one. The non-negative integers FORMULA  and
+FORMULA  are the particle-hole excitations near the right and the
+left Fermi points, respectively. The scaling dimensions are related to
+the critical exponents for the correlation functions in the large
+distance as
+FORMULA 
+where the operator is given by
+FORMULA 
+or linear combinations of these operators. Therefore, there are
+one-to-one correspondences between the excitation spectra and the
+operators.
+Now we turn our attention to the excitation spectra which correspond to
+the following operators:
+FORMULA 
+
+where FORMULA  is the “marginal field”,{{cite:d5ee0243-9ecd-478f-895e-f4818a2f580c}} and
+the derivatives are defined by
+FORMULA  with imaginary time FORMULA . This operator corresponds
+to particle-hole excitations near the right and the left Fermi points
+FORMULA . FORMULA  and FORMULA 
+are linear combinations of current excitations (FORMULA ). FORMULA  is an excitation accompanying variation of the number of
+electrons or spins (FORMULA ). We have to choose antiperiodic
+boundary conditions FORMULA  to extract the
+excitation spectra for FORMULA  and FORMULA  fields,
+when FORMULA  is odd, and FORMULA 
+field,{{cite:5095fee5-ca7b-4427-9755-4b85dffd243e}}, {{cite:e77eb5be-18ee-42a2-bb13-9b834d37f696}}, {{cite:6281d691-4317-4923-ac3b-4ed63f23e217}} because the phase
+fields satisfy the following boundary conditions:{{cite:3e97e8e0-d578-428b-aae5-bbfd16b27575}}
+FORMULA 
+
+and the Fermi operator is given by these phase fields as in
+Eq. (REF ).
+The effects of the FORMULA  and the FORMULA  terms in
+Eq. (REF ) are renormalized in the scaling dimensions
+FORMULA  as logarithmic corrections which are analyzed by the
+renormalization group (RG) equations derived under the change of the
+cutoff FORMULA 
+(Ref. ). Within the one-loop order, the RG equations are
+given by
+FORMULA 
+
+where FORMULA , FORMULA , FORMULA ,
+FORMULA , and we have set FORMULA . These equations determine the RG flow diagrams. Note that there is
+a difference between the cases for the charge and the spin sectors
+reflecting their symmetries (see Fig. REF ). In the
+following subsections, we discuss the phase transitions for each sector
+described by these RG flow diagrams.
+Spin-gap transition
+First, we consider the phase transition in the spin degree of freedom
+(FORMULA ). The spin sector with an SU(2) symmetry belongs to the
+universality class of the level-1 SU(2) Wess-Zumino-Novikov-Witten
+(WZNW) model.{{cite:565e5509-7dc2-487d-8859-815792a2c804}} In this case, the RG flow in
+Fig. REF  (a) is fixed on the FORMULA  line. Then for FORMULA , the
+exponent is renormalized as FORMULA , and the solution of
+Eq. () is obtained as
+FORMULA 
+where FORMULA  is the bare coupling constant. Combining the
+renormalized coupling and the operator-product-expansion coefficients,
+the singlet (FORMULA ) and the triplet (FORMULA )
+excitation spectra split as{{cite:c5cf0bb1-b2ff-41e4-9b52-dc9205f99c6b}}, {{cite:b32db014-b98e-461e-84aa-fa3c86ce81cf}}, {{cite:6048c25a-5d9d-406b-82c3-0306c04ded76}}
+FORMULA 
+
+
+When FORMULA , FORMULA  is renormalized as
+FORMULA , then a spin gap appears. At
+the critical point [FORMULA ], there are no logarithmic
+corrections in the excitation spectra. Therefore, the critical point is
+obtained by the intersection of the singlet and the triplet excitation
+spectra (FORMULA ).{{cite:6048c25a-5d9d-406b-82c3-0306c04ded76}}, {{cite:5095fee5-ca7b-4427-9755-4b85dffd243e}}, {{cite:e77eb5be-18ee-42a2-bb13-9b834d37f696}}, {{cite:6281d691-4317-4923-ac3b-4ed63f23e217}} This level
+crossing corresponds to the condition for the spin-gap phase boundary
+FORMULA  in the standard g-ology analysis, (see
+Appendix  and Table REF ).
+FIGURE 
+The asymptotic behavior of the spin gap against a parameter of a model
+FORMULA  near the critical point FORMULA  is obtained by the
+two-loop RG equation and the definition of correlation length FORMULA  as{{cite:5095fee5-ca7b-4427-9755-4b85dffd243e}}, {{cite:6281d691-4317-4923-ac3b-4ed63f23e217}}
+FORMULA 
+where we have used a relation FORMULA . Note that this is the same behavior as that of the spin gap in
+the 1D negative-FORMULA  Hubbard model at half-filling.{{cite:6673f061-0320-4d50-a9ac-f3df6bb9347a}}
+
+Berezinskii-Kosterlitz-Thouless transition
+SU(2) symmetric case
+Next, we consider the instabilities in the charge sector (FORMULA ),
+which are described by the RG flow diagram given in
+Fig. REF (b). At half-filling (FORMULA ) and FORMULA  (the
+Hubbard model), the sign of the on-site interaction FORMULA  in the
+Hamiltonian (REF ) is reversed by the following canonical
+transformation:{{cite:6fe34f97-e18c-4214-8e83-af8ca487c945}}
+FORMULA 
+This transformation also projects the spin (FORMULA -pairing) operators
+onto the FORMULA -pairing ones
+FORMULA 
+without losing the SU(2) symmetry.{{cite:f4cf2d5b-9885-4576-9f21-9fdf2f9a096b}} It follows from
+Eq. (REF ) this transformation corresponds to the
+replacement of the indices as FORMULA . Therefore,
+the spin part of the sine-Gordon model of Eq. (REF ) is
+mapped onto the charge part, and the operators FORMULA  and
+FORMULA , FORMULA  denote the “singlet” and the
+“triplet” for the charge part, respectively. Thus, the exponent is
+renormalized as FORMULA  for FORMULA , and the charge gap opens for
+FORMULA .
+In the case when the SU(2) symmetry in the charge sector is broken by
+finite FORMULA , FORMULA , FORMULA , and FORMULA  refer to “dimer”, “Néel”, and “doublet”,
+respectively, by following Ref. . Then, if the initial
+value of the RG flow moves across the SU(2)-symmetric line
+[FORMULA ], a Berezinskii-Kosterlitz-Thouless
+(BKT)-type transition{{cite:2a27098a-bf90-4845-8912-46dee4aa6f8f}}, {{cite:95d61401-c92e-451f-8573-29da18a664b8}}, {{cite:15a11f7d-6975-44c9-8053-dc0160a1db85}} occurs
+between the TL liquid phase and the twofold-degenerate gapped state.
+For this transition, one can show that a charge gap opens
+as{{cite:15a11f7d-6975-44c9-8053-dc0160a1db85}}
+FORMULA 
+where FORMULA , and FORMULA  stands for the deviation from the BKT
+critical line. Note that Eq. (REF ) is a different
+asymptotic behavior from that of the spin-gap transition described by
+Eq. (REF ), so that we discriminate the spin-gap
+transition from BKT-type transitions in this paper. The critical point
+for this BKT transition can be obtained without calculations, because it
+is fixed by the SU(2) symmetry of the Hamiltonian. In the case of the
+EHM, the BKT transition line is fixed on the FORMULA  line for FORMULA .
+Now, we consider the region for FORMULA . The sine-Gordon
+model has a symmetry under the transformation to reverse the sign of the
+nonlinear term FORMULA . This transformation
+corresponds to the shift of the phase fields:
+FORMULA 
+This operation interchanges the roles of the operators FORMULA  and FORMULA  as
+FORMULA 
+
+Therefore, this symmetry indicates that the SU(2)-symmetric line in the
+RG flow diagram is mapped onto the opposite side of the FORMULA 
+axis, and another BKT transition may occur at FORMULA . We call the symmetry of this BKT line “hidden SU(2)
+symmetry”. Since this symmetry originates from that of the sine-Gordon
+model, it is not contained explicitly in the original Hamiltonian. The
+renormalized scaling dimensions of FORMULA , FORMULA , and FORMULA  near the critical line of the hidden SU(2)
+symmetry are calculated as follows:{{cite:b32db014-b98e-461e-84aa-fa3c86ce81cf}}, {{cite:12ac0db3-0b7a-4dd1-be57-812cf647bce3}}
+FORMULA 
+
+
+Therefore, the critical point for the hidden SU(2) BKT transition can be
+determined by the level crossing between the “dimer” and the
+“doublet” excitation spectra (FORMULA ).{{cite:12ac0db3-0b7a-4dd1-be57-812cf647bce3}} This level crossing corresponds to the condition
+FORMULA  in the g-ology analysis (see Appendix
+ and Table REF ).
+
+Non-SU(2) symmetric case
+We consider the BKT transition for FORMULA  case. This situation may
+appear in the metal-insulator transition at quarter-filling (FORMULA ). In
+this case, the critical line no longer has an SU(2) symmetry. However,
+by replacing the variables as FORMULA ,
+FORMULA , and FORMULA , the
+sine-Gordon model for the charge part of Eq. (REF ) is
+mapped onto the case of FORMULA . Then, the BKT transition between the TL
+liquid and the FORMULA -fold-degenerate gapped state takes place when the
+renormalized exponent becomes FORMULA . The scaling
+dimensions for the FORMULA  and the FORMULA 
+fields near the BKT critical line remain unchanged, while the FORMULA  field changes as
+FORMULA 
+Therefore, the BKT critical point corresponding to FORMULA  is given by the level-crossing point of FORMULA .
+There is another excitation spectrum that can be used to determine the
+BKT critical point. This is the “marginal field” (REF )
+whose renormalized scaling dimension is given by{{cite:ff0dc223-e99d-4e14-963c-e69cdc315c7d}}
+FORMULA 
+In this case, the critical point can be determined by the level crossing
+of FORMULA .
+
+Gaussian transition
+In addition to these BKT-type transitions, a Gaussian transition occurs
+at FORMULA  and FORMULA . This is a second-order
+transition between the two gapped states which corresponds to the
+different fixed points [FORMULA ],
+and the gap vanishes just on the critical point. The transition point is
+given by the level crossing between the “dimer” and the “Néel”
+excitations (FORMULA ), because the FORMULA  and the FORMULA  fields interchange their roles
+at FORMULA  as was explained in
+Sec. REF . In the g-ology, this level crossing
+corresponds to the condition FORMULA  with FORMULA  (see
+Appendix  and Table REF ).
+Since the nonlinear term vanishes on the critical line, there is no
+effect of the renormalization. Therefore, the scaling dimensions on the
+Gaussian line are given by
+FORMULA 
+
+
+without logarithmic corrections, and FORMULA  is satisfied. The
+asymptotic form of the gap near the Gaussian transition point can be
+obtained by solving Eq. (REF ) with an approximation
+FORMULA  and definition of the correlation
+length FORMULA  as{{cite:12ac0db3-0b7a-4dd1-be57-812cf647bce3}}
+FORMULA 
+where we have used the relation
+FORMULA . The valley of the gap
+becomes steeper as FORMULA  is decreased.
+TABLE 
+
+Discrete Symmetries
+To perform the level-crossing analysis discussed in
+Sec. , we need to identify the relevant excitation
+spectra. For this purpose, we discuss the discrete symmetries of wave
+functions corresponding to the excited states. The physical meaning of
+these symmetries will be clarified in Sec. .
+The discrete symmetries are defined under particle-hole (FORMULA ), space-inversion (FORMULA ), and spin-reversal (FORMULA ) transformations. They give eigenvalues
+FORMULA . In addition, shift operation by one site (FORMULA ) is defined which has an eigenvalue FORMULA . The symmetries of wave functions can be explained by
+combining those of the ground state and those of the operators for the
+excited states.{{cite:6281d691-4317-4923-ac3b-4ed63f23e217}} For the ground state of the EHM, we
+choose periodic (antiperiodic) boundary conditions when FORMULA  is odd
+(even), where FORMULA  is the number of electrons. Then, according to the
+Perron-Frobenious theorem, the discrete symmetries of the ground state
+are FORMULA  and FORMULA , if we choose the
+representation for the basis and use the symmetry operations defined in
+Ref. .
+TABLE 
+Next, we consider the symmetries of operators. The operator of the
+marginal field (REF ) has the same quadratic form of the
+Gaussian part of the Lagrangian density of Eq. (REF ), so
+that it has the same symmetry as the ground state (FORMULA , FORMULA ). We can find the symmetries of the FORMULA  and the FORMULA  operators by considering the
+change of the phase fields. Since we restrict our attention to the
+Hilbert space with fixed electron number and total FORMULA -spin, we do not
+consider the change of the FORMULA  fields in the symmetry
+operations. At half-filling (FORMULA ), it follows from
+Eq. (REF ) that the phase fields FORMULA  are
+transformed under particle-hole (FORMULA :
+FORMULA ), space-inversion (FORMULA : RFORMULA L, FORMULA ), spin-reversal
+transformations (FORMULA : FORMULA ), and
+shift operation (FORMULA ) as
+FORMULA 
+
+In this case, FORMULA  is always satisfied, so that the
+independent discrete symmetries are FORMULA , FORMULA , and FORMULA . At quarter-filling (FORMULA ), the phase fields change as
+FORMULA 
+Thus the discrete symmetries of the operator FORMULA  for
+FORMULA  are FORMULA . The relations between the operators and their
+symmetries are summarized in Table REF .
+In the present numerical calculation based on the Lanczös algorithm,
+the identification is performed by projecting the initial vector as
+FORMULA 
+where the signs in front of the operators correspond to their
+eigenvalues, and FORMULA  is a configuration that satisfies FORMULA . Furthermore, FORMULA  is
+classified by the wave numbers FORMULA .
+
+phases
+In this section, we discuss the character of each phase that appears in
+the phase diagrams. In general, there are no long-range orders (LRO's)
+in 1D systems due to strong quantum fluctuations, so that, in such
+cases, the phases are characterized by the dominant correlation
+functions. The correlation functions (REF )
+including the logarithmic corrections are given by integrating the
+renormalized scaling dimensions over the RG trajectory as
+FORMULA 
+First, we consider Eq. (REF ) for the spin and charge
+degrees of freedom independently. For the spin part which has the SU(2)
+symmetry, the singlet (FORMULA ) and the triplet (FORMULA ) correlation functions with logarithmic corrections are
+obtained explicitly in the gapless region (FORMULA ) as{{cite:b32db014-b98e-461e-84aa-fa3c86ce81cf}}
+FORMULA 
+
+where we have used Eqs. (REF ),
+(REF ), and (REF ). Therefore, the
+triplet correlation is more logarithmically dominant than the singlet
+one. On the other hand, when the spin gap opens
+(FORMULA ), the singlet excitation degenerates with the
+ground state in the thermodynamic limit, so that the singlet correlation
+becomes constant, while the triplet one decays exponentially. In this
+way, the triplet correlation is suppressed in the spin-gap region.
+For the charge part, at half-filling, explicit forms of the correlation
+functions including logarithmic corrections are not obtained except for
+the BKT or the Gaussian lines. On the BKT line, the exponent is
+renormalized as FORMULA , so that FORMULA  is always
+satisfied in the gapless region (FORMULA ), and then the
+correlation for the “doublet” (FORMULA ) is dominant. In
+the charge-gap region with FORMULA , the “Néel”
+(FORMULA ) state degenerates with the ground state, and the
+“dimer” (FORMULA ) and the “doublet” correlations decay
+exponentially. On the other hand, for FORMULA , the
+“dimer” state degenerates with the ground state, and the “Néel”
+and the “doublet” correlations decay exponentially.
+Next, we discuss the physical states that consist of the charge and the
+spin parts. In the metallic region (FORMULA ), the triplet superconducting (TS) correlation is dominant when the
+spin part is gapless. The operators for the TS phase consist of the
+“doublet” and the triplet ones,
+FORMULA 
+
+On the other hand, the singlet superconducting (SS) correlation whose
+operator is given by the “doublet” and the singlet ones
+FORMULA 
+is dominant when the spin part has a gap.
+In the insulating region, which corresponds to the fixed point
+FORMULA , the bond-spin-density-wave (BSDW)
+phase{{cite:cbc22f78-6be1-4f19-b3b5-363ceb7aabed}} characterized by
+FORMULA 
+
+appears when the spin sector is gapless. On the other hand, the
+charge-density-wave (CDW) phase
+FORMULA 
+appears when the spin gap opens. In the CDW phase, both charge and spin
+gaps open, so that a LRO exists.
+FIGURE 
+TABLE 
+In the insulating region for the opposite fixed point
+FORMULA , the spin-density-wave (SDW) correlation
+characterized by
+FORMULA 
+
+is dominant when the spin part is gapless. The bond-charge-density-wave
+(BCDW) phase characterized by
+FORMULA 
+appears when the spin gap opens. In the BCDW phase, both charge and spin
+gaps open, so that a LRO exists. The correspondence between the above
+six phases at half-filling and the fixed points are summarized in Table
+REF .
+At quarter-filling (FORMULA ), the FORMULA -charge-density wave
+(FORMULA -CDW) appears when the Umklapp scattering is relevant. The
+operator is given by the FORMULA  field with FORMULA ,
+FORMULA 
+In the rest of this section, we further clarify the differences among
+the four charge-gapped states (CDW, SDW, BCDW, and BSDW) discussed
+above. For this purpose, we change the basis of the bosonized operators
+from the charge and spin picture to the spin up and down one by
+introducing the following new phase fields:
+FORMULA 
+where FORMULA  refer to the upper and lower signs,
+respectively. Then, the system is interpreted as coupled spinless
+fermion systems (FORMULA  spin chains). In this case, the (B)CDW and
+FORMULA -components of the (B)SDW operators are given by
+FORMULA 
+where the CDW and the BCDW (the SDWFORMULA  and the BSDWFORMULA ) operators
+refer to the upper (lower) signs in the right-hand sides, and
+FORMULA  and FORMULA  fields denote Néel
+and dimer states of the FORMULA  spin chains, respectively. In addition,
+it follows from Eqs. () and (REF ) that the
+shift operation by one site gives
+FORMULA 
+so that both CDW and SDWFORMULA  states are described by two Néel
+ordered spin chains, where the two sectors (FORMULA ) are
+synchronized in the former, while they are displaced by one site in the
+latter. On the other hand, the BCDW and the BSDWFORMULA  states are given
+by synchronized and displaced dimer-ordered spin chains,
+respectively (see Fig. REF ). Therefore, in
+the BCDW phase, the charge is polarized on the bonds alternatively, and
+the spins are dimerized. In the BSDW state, the charge is polarized on
+the each bond, and the spins are located on the bonds and remain gapless
+like the SDW state.{{cite:cbc22f78-6be1-4f19-b3b5-363ceb7aabed}}
+The discrete symmetries discussed in Sec. 
+characterize the differences among these physical states. It follows
+from Eq. (), that the spin reversal symmetry corresponds
+to whether FORMULA  sectors are synchronized (FORMULA ) or displaced by one site (FORMULA ). Similarly, the parity
+and the charge conjugation distinguish whether the electrons are
+polarized on the sites (FORMULA ) or on the bonds (FORMULA ). This interpretation for the parity is consistent with
+the fact that the FORMULA -CDW with a site LRO has the odd parity
+(FORMULA ) at quarter-filling.
+
+HALF-FILLING
+Using the method explained in Sec. , we analyze the
+phase diagram of the EHM at half-filling. Since there are many
+instabilities, we consider the phase diagram separately in the charge
+and the spin parts by assuming the charge-spin separation. However, for
+the CDW-SDW transition, there is a possibility that the charge and the
+spin degrees of freedom are coupled. So we discuss two cases where the
+two degrees of freedom are separated and coupled. And then we identify
+the valid scenario from the comparison with the result of the
+strong-coupling perturbation theory. For the phase separation, which is
+considered to be a first-order transition, we need an approach different
+from the one applied to the charge- and the spin-gap phases. We discuss
+the way to determine the phase-separation boundary and check the
+validity of the result by the strong-coupling theory. Using the above
+strategy, we also analyze the EHM with the correlated hopping term
+[Eq. (REF )]. The results are summarized in
+Fig. REF .
+Spin sector
+First, we determine the spin-gap phase boundary following the method
+explained in Sec. REF . By observing the singlet-triplet
+level crossing, the phase boundary is found to be near the FORMULA  line.
+Since the critical point is almost independent of the system size (see
+Fig. REF ), we can determine the phase boundary without any
+extrapolations. In order to check the consistency of our argument, we
+calculate scaling dimensions of the singlet and the triplet excitations
+from Eq. (REF ), and confirm the ratios of the logarithmic
+corrections. Here the spin-wave velocity is given by the excitation
+spectra for FORMULA  or
+FORMULA  as
+FORMULA 
+where the extrapolation is performed by the function FORMULA , which is explained by FORMULA 
+irrelevant fields.{{cite:314486b9-2a8a-437d-aea1-9a8f8576eba7}}, {{cite:ec511ff4-733b-406b-a6b9-4870a8ccd419}} Physically, this correction
+is related to the deviation from the linearized dispersion relation
+assumed in the TL model. Thus, the ratio of the logarithmic corrections
+can be checked as FORMULA  for the singlet and the triplet states by using
+the following relation near the critical point,
+FORMULA 
+Here we use the numerical data of FORMULA  systems to check the
+scaling dimensions, and extrapolate them by the form FORMULA 
+as in the same way of the spin velocity. As shown in
+Fig. REF , the extrapolated data become FORMULA  in the
+gapless region. Thus, the universality of the transition is identified
+as the level-1 SU(2) WZNW model.
+FIGURE 
+
+Charge sector
+Due to the SU(2) symmetry of the FORMULA -pairing (REF ),
+a BKT transition takes place on the FORMULA  line for FORMULA  region. This
+phase boundary is fixed on this line for any strength of FORMULA . In
+Fig. REF (a), the degeneracy of the “Néel”
+(FORMULA ) and the “doublet” (FORMULA ) excitation spectra on
+FORMULA  corresponds to this SU(2) symmetry. On the other hand, for the
+FORMULA  region, there appear two relevant level crossings as shown in
+Fig. REF (b). The one corresponds to the BKT transition
+due to the hidden SU(2) symmetry, and the other corresponds to the
+Gaussian transition, as was explained in Sec. . The
+rest of the three level crossings in Fig. REF  do not
+correspond to any phase transitions, because they correspond to the
+lines FORMULA  and the line
+FORMULA  with FORMULA  (Gaussian fixed line), in the
+RG flow diagram of Fig. REF (b).
+FIGURE 
+The hidden SU(2) BKT transition obtained by the “dimer”-“doublet”
+level crossing (FORMULA ) appears near the FORMULA  line
+as was predicted by the g-ology. The size dependence of this transition
+at FORMULA  is shown in Fig. REF . In order to check the
+consistency of our argument, we calculate the scaling dimensions of
+FORMULA  using Eq. (REF ). Here, we calculate the charge
+velocity using the excitation spectra for FORMULA 
+as
+FORMULA 
+Using Eqs. (REF ), we check the following
+relation on the critical line,
+FORMULA 
+As shown in Fig. REF , the extrapolated data become FORMULA .
+Here, the extrapolation is performed as in the same way of the spin-gap
+transition. Thus, the universality class of this transition is
+identified as a BKT type. The deviation from the expected value FORMULA  in
+Fig. REF  stands for the effect of the phase separation
+where the TL liquid theory breaks down.
+FIGURE 
+The Gaussian transition takes place along the FORMULA  line as was
+predicted by the g-ology. The size dependence of this transition at
+FORMULA  is shown in Fig. REF . It follows from
+Eq. (REF ), the following relation should
+be satisfied just on the Gaussian transition line,
+FORMULA 
+The result is shown in Fig. REF . The extrapolated data
+become FORMULA  from the weak- to the intermediate-coupling region. Thus,
+the transition is identified as a Gaussian type except for the
+strong-coupling region.
+FIGURE 
+
+Transition between CDW and SDW phases
+We have determined the spin-gap and Gaussian transition lines near the
+FORMULA  line assuming the charge-spin separation, however, if the
+FORMULA  term in Eq. (REF ) is relevant, the
+charge-spin coupling may take place. Therefore, we should consider the
+possibility that the charge and the spin degrees of freedom are not
+separated, and that a direct transition between the CDW and the SDW
+phases takes place. To examine this possibility, we also observe the
+level crossing of excitation spectra of the CDW and the SDW operators
+(see Table REF ), which consist of both charge and spin
+components. These spectra can be obtained under conditions given in
+Table REF .
+FIGURE 
+The level-crossing points for the three assumed transition lines are
+close to the FORMULA  line, but slightly deviate (see
+Fig. REF ). The deviations from FORMULA  to FORMULA 
+are shown in Fig. REF . These three lines coincide in the
+weak- and the strong-coupling limits. For the Gaussian line, the
+finite-size effect is small for all regions. For the spin-gap phase
+boundary, the finite-size effect is small in the weak-coupling region,
+but it becomes large in the strong-coupling region. The direct CDW-SDW
+level-crossing point has large size effect for all regions.
+In order to identify the actual transition lines from these three lines,
+we use the strong-coupling perturbation theory following
+Hirsch{{cite:aafd578f-7049-40f9-b133-50934f54987d}} and van Dongen.{{cite:5bb3f045-157d-46a0-9bef-7d29aec80dca}} The energy of the SDW
+state in the strong-coupling region of the EHM are analytically obtained
+up to the fourth order. If we include the correlated hopping term
+(REF ) in the EHM, the energies of the CDW and the SDW
+states are given by
+FORMULA 
+where FORMULA  and FORMULA . In Eq. (), we
+have used the Bethe-ansatz result of the FORMULA  Heisenberg spin
+chain:{{cite:9ee063a6-173d-41bd-84aa-990654f63bb2}}, {{cite:ef0b116d-9b3e-47b8-897e-64d4fcaa01c3}}
+FORMULA 
+
+The phase boundary between the CDW and the SDW phases is given by the
+equation{{cite:350ad35f-cec3-4567-802a-a4b081e2fb6b}}
+FORMULA 
+The strong-coupling theory shows a good agreement with the Gaussian
+transition in the charge part, among the three transition lines that we
+have considered. We should also note that the present Gaussian critical
+point agrees with Cannon et al.'s result obtained by the direct
+evaluation of the CDW order parameter:{{cite:e6f73a4b-7e10-44e9-9df5-ce82d9ebe4e8}} FORMULA  for FORMULA , and FORMULA 
+for FORMULA  (see Figs. REF  and REF ).
+FIGURE 
+From the above results, we conclude that the actual transition near the
+FORMULA  line is not a direct CDW-SDW transition, but two independent
+Gaussian and spin-gap transitions, at least from the weak- to the
+intermediate-coupling region. In the strong-coupling region, these two
+boundaries approach and appear to be coupled at finite FORMULA  and FORMULA .
+Unfortunately, in the present analysis, we cannot determine this
+tricritical point, but it is considered to be identical to the crossover
+point between the second- and the first-order transitions. This
+phenomenon is considered to be an effect of the charge-spin coupling
+term [the FORMULA  term in Eq. (REF )] as was
+discussed by Voit in Ref. . In this way, our analysis
+suggests that the crossover along the FORMULA  line is closely related to
+the validity of the charge-spin separation. Our result also
+demonstrates that there is a finite region of a charge- and spin-gapped
+state between the Gaussian and the spin-gap transition lines. It
+follows from the discussion in Sec.  that the third
+phase is identified as a BCDW state.
+In order to clarify the above interpretation for the CDW-SDW transition,
+we analyze the EHM including the correlated hopping term
+[Eq. (REF )]. This term is known to enlarge the BCDW phase
+for FORMULA  even in the FORMULA  limit, without disturbing the
+Y- and the I-shaped structure of the phase diagram for the charge and
+the spin parts (see Fig. REF ). Because this term makes the
+magnitude of the backward and the Umklapp scattering couplings different
+[FORMULA ] conserving the
+SU(2)FORMULA SU(2) symmetry of the Hubbard model.{{cite:17144aa1-c4e5-4d84-b794-45b5e242f2e1}} As
+was predicted by the g-ology, the BCDW phase appears from the weak- to
+the intermediate-coupling region.{{cite:a3753357-60ab-4631-8290-80c6a395273e}} On the other
+hand, in the strong-coupling region, the two transition lines are
+coupled, and the direct CDW-SDW transition takes place. The
+strong-coupling theory also agrees with the Gaussian line as is shown in
+Fig. REF (a). This is the same behavior as in the case of
+the pure EHM. Therefore, the tricritical point in the pure EHM is
+considered to have the same property of the one that separates the CDW,
+the SDW, and the BCDW phases in the case of FORMULA .
+FIGURE 
+For FORMULA , the order of the Gaussian and the spin-gap transitions
+becomes vice versa, so that the BSDW phase appears. However, in
+Fig. REF (b), we find that the two transition lines cross in
+the intermediate-coupling region, and a finite BCDW phase appears. This
+BCDW region becomes narrower as the system size is increased. In the
+present analysis, we cannot conclude whether this BCDW phase remains or
+vanishes in the thermodynamic limit. We will consider this phenomenon
+again in Sec. .
+
+Phase separation
+Here, we determine the phase-separation boundary from the numerical data
+of the exact diagonalization.{{cite:0114d3fc-d75e-43d5-8558-8f0daaf8196d}} Usually, the phase
+boundary is determined by the divergence of the
+compressibility.{{cite:f23a9403-2ac6-4eba-a276-478290afeed7}} However, for the FORMULA  region of
+the EHM, the phase separation can take place in the SDW state where the
+compressibility cannot be defined. Consequently, the method of observing
+the divergence of the compressibility is no longer valid. In this paper,
+we determine the phase boundary by comparing the energy of the ground
+state and that of the phase-separated state. In the phase-separated
+state at half-filling, the system is separated into doubly occupied
+sites and a vacuum. In this case, the energy in the thermodynamic limit
+is exactly obtained as
+FORMULA 
+Therefore, we use the relation FORMULA  as a criterion for the
+phase separation.{{cite:743b3477-fdb8-4d9a-905b-5385e41f3b6a}} We show in Fig. REF  the
+ground-state energy of the EHM measured from the fully phase separated
+state. The zero point gives the critical point for the phase separation.
+The finite-size effect of the phase boundary is sufficiently small.
+FIGURE 
+In order to check the validity of the numerical results, we compare our
+result with the asymptotic phase boundary in the strong-coupling limit.
+For FORMULA  region, using Eqs. () and (REF ),
+the phase boundary is given by{{cite:c223e0ff-dcc5-4d76-aa47-f7cdd5348d76}}
+FORMULA 
+On the other hand, for FORMULA  region, the system can be mapped onto
+the FORMULA  XXZ spin chain with antiferromagnetic coupling
+FORMULA  and FORMULA , by using the FORMULA -pairing
+operators (REF ) and the second-order perturbation
+theory. Then, the phase boundary is given by FORMULA , which
+corresponds to the first-order transition between the XY and the
+ferromagnetic phases in the spin system.{{cite:5d883932-1cd9-4e16-85ac-7b359c26ad8a}}, {{cite:4b69ec40-a32e-4e7c-9ec1-eecc5f90e125}} If the
+effect of the correlated hopping term (REF ) is included,
+the phase boundary is given by
+FORMULA 
+The numerical result given by FORMULA  well agrees with these
+asymptotic phase boundaries (see Fig. REF ).
+FIGURE 
+
+QUARTER-FILLING
+Finally, we analyze the phase diagram of the EHM at
+quarter-filling{{cite:ccd33ea1-85b8-4803-b9f4-12af044f490b}}, {{cite:a94de807-8414-4214-87f7-fce95b9ba32b}}, {{cite:d9dc9831-b361-4610-9f66-0ed43958c8d0}} by the level-crossing
+approach. In this case, the metal-insulator transition is considered as
+a BKT transition due to the higher-order Umklapp scattering
+(FORMULA ). Then, the phase boundary should be given by the level crossing
+between the marginal and four times of the FORMULA -CDW spectra
+FORMULA  or FORMULA , as was discussed in
+Sec. REF . In the present numerical analysis, we use the
+former level crossing, because FORMULA  needs larger Hilbert space
+than FORMULA  and FORMULA . Based on this assumption, we obtain
+the result shown in Fig. REF . Since the level-crossing point
+for the transition is higher (FORMULA ) than the case of the
+half-filling (FORMULA ), the finite-size effect from the
+irrelevant field (the deviation from the linearized dispersion relation)
+becomes larger. In this case, we need an extrapolation of the critical
+point to make the phase diagram. In the FORMULA  limit,
+the transition point for the charge-gap phase is given by FORMULA , because it corresponds to the XY-Néel transition in the
+FORMULA  XXZ spin chain.{{cite:f5b7e785-3ef7-49eb-ac87-b7033abec8dd}}, {{cite:77fcde8e-dba5-4e14-aef5-9769c8e313c7}} For the FORMULA 
+region, the extrapolated phase boundary flows into the point
+FORMULA  as we expected. In order to check the consistency
+in the finite-FORMULA  region, we calculate the following averaged scaling
+dimension
+FORMULA 
+Except for the large-FORMULA  region, the extrapolated value becomes FORMULA 
+with error less than FORMULA , as shown in Fig. REF . Thus,
+the universality class of the transition is considered to be a BKT-type.
+FIGURE 
+On the other hand, for FORMULA  region, since the finite-size effect
+is too large, it is hard to perform the systematic
+extrapolation. However, the phase boundary appears to flow into the
+exact transition point FORMULA  in the FORMULA 
+limit as the system size is increased. Now let us review how the
+critical point of the charge-gap phase in the FORMULA 
+limit is derived.{{cite:ccd33ea1-85b8-4803-b9f4-12af044f490b}} The charge gap is defined by
+FORMULA 
+At quarter-filling, FORMULA . If one electron is add to this, then the
+energy is FORMULA . Conversely, if one electron is removed, two free
+holes appear, then they have a kinetic energy FORMULA . Therefore, the critical point for the charge-gap phase
+is given by FORMULA  in the thermodynamic limit. We should note
+that the critical point in the FORMULA  and
+FORMULA  limits are given by a completely different
+argument. Therefore, we expect that a tricritical behavior may also be
+seen along the BKT transition line.
+FIGURE 
+In a similar way as the half-filling, we consider the effect of a
+charge-spin coupling operator which is derived from the FORMULA  Umklapp
+scattering between three parallel spins and one antiparallel spin [the
+FORMULA  term in Eq. (REF )]. This operator may
+cause the synchronization of the BKT transition (FORMULA ) in the charge
+part and the spin-gap transition. In order to examine this possibility,
+we determine the spin-gap phase boundary by the singlet-triplet level
+crossing in the large-FORMULA  region. Then, the phase boundary of the spin
+gap appears to be coupled with that of the charge gap, and flows into
+the point FORMULA , as the system size is
+increased. Therefore, this result suggests that the crossover in the
+metal-insulator transition also takes place by the mechanism similar to
+the case of half-filling. In the large-FORMULA  region, there are
+phase-separated states,{{cite:b17f808a-08ac-4a4a-acb0-9a78c6925d11}} but that has not been studied in
+the present analysis. We should also consider the effect of the phase
+separation in the future.
+
+SUMMARY AND DISCUSSION
+Let us summarize the results obtained in this paper. We have determined
+the phase diagrams of the 1D EHM at half- and quarter-filling using the
+level-crossing approach, which is based on the TL liquid theory and the
+renormalization group. The metal-insulator transitions in half-
+(quarter-) filling are classified as BKT-type transitions due to the
+first- (second-) order Umklapp scattering. This fact reflects the
+“fractional quantization” discussed by the bosonization theory
+{{cite:19e863d0-2ba2-4369-a731-bee6ab90eca1}}, {{cite:4bc33bee-57e9-4a5c-b820-98b2cd9863e2}}, {{cite:b768bae1-aa1f-4c7c-ad04-c77ddb0acf55}}, {{cite:44b8ab6b-95f7-4185-9f98-4c7657bc0c4e}} and the
+generalized Lieb-Schultz-Mattis theorem.{{cite:b768bae1-aa1f-4c7c-ad04-c77ddb0acf55}}, {{cite:44b8ab6b-95f7-4185-9f98-4c7657bc0c4e}}
+In the case of half-filling, for the charge sector, there are two BKT
+lines reflecting the SU(2) and hidden SU(2) symmetries, and one Gaussian
+line. These three critical lines meet at the multicritical point
+FORMULA , and they form a Y-shaped structure. Note that the
+same structure is also known in the phase diagram of the FORMULA 
+frustrated XXZ spin chain.{{cite:74c2c866-7b0c-488f-b7f9-af59a2edb992}}, {{cite:12ac0db3-0b7a-4dd1-be57-812cf647bce3}} For the spin sector,
+a spin-gap transition occurs due to the attractive backward scattering.
+Since the transition takes place at the origin of the RG flow diagram,
+the phase boundary has an I-shaped structure. Thus, the entire phase
+diagram is given by the combination of the “Y” and the “I”.
+The transition between the CDW and the SDW phases has been considered by
+assuming the following two scenarios: one is the independent Gaussian
+and spin-gap transitions under the charge-spin separation, the other is
+a direct CDW-SDW transition under the charge-spin coupling. By checking
+the relations between the scaling dimensions, and by comparing the
+numerical results with the strong-coupling theory, we have concluded
+that the first scenario is realized from the weak- to the
+intermediate-coupling (FORMULA ) region, and the second scenario is
+realized in the strong-coupling region. In the former case, a BCDW phase
+exists between the CDW and the SDW phases. Thus, the crossover of the
+CDW-SDW transitions from the second order to the first order turned out
+to be a phenomenon that reflects the validity of the charge-spin
+separation.
+To clarify the mechanism of the crossover in more detail, we have
+investigated the phase diagram of the EHM including the correlated
+hopping term (REF ). In this case, there appear BCDW and
+BSDW phases, depending on the order of the Gaussian and the spin-gap
+transitions. Note that the direct CDW-SDW transition also takes place in
+the strong-coupling region.
+Therefore, we can understand the crossover of the CDW-SDW transition in
+the EHM as a kind of these generalized cases. The reason why the
+mechanism of the CDW-SDW transition has been left ambiguous for long
+times is that the analytical solutions both in weak- and strong-coupling
+limits give the same phase boundary FORMULA , and the numerical analysis
+for the intermediate-coupling region does not have enough precision to
+distinguish the Gaussian and the spin-gap transition lines. Recently,
+the similar mechanism of transition was reported in studies of the
+Hubbard chain with periodic potential, which has the transition between
+Mott and band insulators.{{cite:e1d19730-47d5-4c06-b78b-11cb385c5975}}, {{cite:fd7d75da-c8d8-47e6-b377-33862f55852b}}
+At quarter-filling, the phase boundary of the metal-insulator transition
+has also been determined by assuming that it is the BKT-type transition
+of the higher-order Umklapp scattering. The obtained phase boundary is
+consistent with the known exact results in the FORMULA  and
+the FORMULA  limits. In the present parameter space, there
+are neither a BKT transition with the hidden symmetry, nor a Gaussian
+transition. Although the finite-size effect in FORMULA  region is
+large, the phase boundaries of the charge- and the spin-gap phases
+appear to be coupled as the system size is increased. Therefore, there
+may be a crossover from the BKT to the first-order transitions in this
+region.
+The rest of the section is devoted to discussions. We have clarified
+the mechanism of the CDW-SDW transition of the EHM at half-filling.
+However, we have not revealed the reason why the intermediate state in
+Figs. REF  and REF (b) is not a BSDW but a BCDW.
+We can interpret the appearance of the BCDW phase considering roles of
+the FORMULA  term in Eq. (REF ). When the charge
+gap opens in the FORMULA  region (FORMULA ), the phase field
+is locked as FORMULA  with FORMULA  being an integer,
+which minimize the classical potential energy associated with the
+FORMULA  term. In this case, the charge part of the
+FORMULA  term is also locked, so that FORMULA  is
+reduced as
+FORMULA 
+where FORMULA . Thus, if we estimate the spin-gap phase
+boundary in the weak-coupling region using Eq. (REF ), it
+shifts toward the FORMULA  side of the FORMULA  line. Similarly, we can
+estimate the shift of the Gaussian line. In the FORMULA  region, the spin
+gap opens (FORMULA ), then FORMULA  shifts as
+FORMULA 
+where the phase field is locked as FORMULA .
+Therefore, the Gaussian line shifts toward the opposite side of the
+spin-gap phase boundary. Consequently, the BCDW phase appears between
+the CDW and the SDW phases. Thus, it turns out that the
+FORMULA  term enhances the BCDW phase when it is irrelevant, and
+it couples the Gaussian line and the spin-gap phase boundary when it is
+relevant. The deviations from the FORMULA  line may be analyzed
+quantitatively in the weak-coupling region by the renormalization group
+analysis including FORMULA . The above explanation may also be
+applicable to the phenomenon that a BCDW phase appears for FORMULA  in
+the strong-coupling region [see Fig. REF (b)].
+We should consider the reason why the size dependence of the Gaussian
+transition line is smaller than that of the spin-gap phase boundary, in
+the strong-coupling region of Figs. REF  and
+REF . The reason is considered to be the difference between
+the behavior of the charge and the spin gaps. As was discussed in
+Sec. , the spin gap opens exponentially slow
+(REF ), while the valley of the charge gap near the
+Gaussian transition becomes steeper as the strength of the interaction
+is increased (REF ). In the present analysis based
+on the TL liquid theory, we have assumed that both charge and spin parts
+are gapless, so that the Gaussian (spin-gap) transition line may be
+affected by the spin (charge) gap in the strong-coupling region. In the
+present case, magnitude and variation of the charge gap are considered
+to be much larger than those of the spin gap near the FORMULA  line in the
+strong-coupling region, so that the Gaussian line has less size
+dependence than the spin-gap phase boundary.
+In the present paper, we have not determined the tricritical point.
+This problem has been discussed by many
+authors.{{cite:aafd578f-7049-40f9-b133-50934f54987d}}, {{cite:d4e12baf-8eed-4126-aa78-9c29cf235926}}, {{cite:3fb77712-3598-4d41-87e5-552a57980463}}, {{cite:e6f73a4b-7e10-44e9-9df5-ce82d9ebe4e8}}, {{cite:427caf9c-4f7a-42a0-9923-93e5d34178ec}} Recently,
+the tricritical point is explored by the
+density-matrix-renormalization-group
+method,{{cite:4640020b-f44a-4701-a2fb-9bf4bb980ba2}}, {{cite:bf1bb310-fcde-4efe-8930-0aca36d01b43}} but we may also determine the
+tricritical point by comparing the numerical result of the Gaussian
+transition line and the strong-coupling perturbative expansions in the
+higher order. It may also be worth studying the level crossing for the
+tricritical point by considering the logarithmic corrections to the
+excitation spectra which stem from the FORMULA  term. In
+addition to the tricritical point between the CDW and the SDW phases,
+there is another tricritical point that separates the TS, the SDW, and
+the PS states. In Fig. REF , the phase boundaries between the
+SDW and the PS states obtained by the strong-coupling theory seem to be
+bent near the tricritical point. This tricritical point may also be
+identified by the further strong-coupling calculation.
+Finally, we discuss the effect of site-off-diagonal interactions. In
+this paper, we have considered the correlated hopping term given by
+Eq. (REF ), however the generalized form of this term is
+given by{{cite:fca4edc5-cadb-4384-8855-70026454c5ed}}
+FORMULA 
+
+In the present paper, we have set FORMULA  to keep the particle-hole
+symmetry and the SU(2)FORMULA SU(2) symmetry of the Hubbard model. If
+this relation is not chosen, these symmetries are lost, so that the
+FORMULA  line is no longer the phase boundary of the metal-insulator
+transition at half-filling. Besides, an additional Umklapp term
+FORMULA  appears in the effective
+Hamiltonian.{{cite:427caf9c-4f7a-42a0-9923-93e5d34178ec}}, {{cite:17144aa1-c4e5-4d84-b794-45b5e242f2e1}} The analysis for this situation
+(FORMULA ) is the subject of future research.
+There are other types of site-off-diagonal interactions. For example,
+the bond-bond interaction term is given by{{cite:312611c9-2ba7-4eec-a476-f61f1a5de1b4}}
+FORMULA 
+This term also makes the difference in the magnitude of the g-parameters
+for the backward and the Umklapp scattering in the weak-coupling limit
+[FORMULA ](Ref. )
+conserving the symmetries of the Hubbard model. Therefore, we expect
+that this term play a role similar to the correlated hopping terms
+[Eq. (REF )]. On the other hand, since this term can be
+rewritten as the exchange of the spins and of the pseudospins
+(REF ), it may affect the first-order transition to a
+ferromagnetic state{{cite:312611c9-2ba7-4eec-a476-f61f1a5de1b4}} or the phase separation.
+Besides, in a parameter region of the EHM including this term, the BSDW
+state is shown to be the exact ground state.{{cite:4dd9db01-7bb8-4d1b-9ac5-e04972f3986a}} The analysis
+of the effect of this term by the level-crossing approach will be
+reported elsewhere.{{cite:393bfaf7-108d-46e3-960a-052636dfa7b6}}
+
+ACKNOWLEDGMENTS
+The author is grateful to S. Hirata, K. Itoh, T. Kawarabayashi,
+A. Kitazawa, K. Kusakabe, N. Muramoto, H. Nakano, K. Okamoto,
+M. Oshikawa, H. Otsuka, H. Shiba, M. Shiroishi, M. Takahashi, and
+J. Voit for useful discussions. The computation in this work was partly
+done with the facilities of the Supercomputer Center, Institute for
+Solid State Physics, University of Tokyo.
+
+Weak-coupling limit
+In the weak-coupling limit, the parameters of the sine-Gordon model
+(REF ) can be identified in terms of the bare coupling
+constants of the original model, and consequently the phase boundaries
+are obtained analytically.{{cite:0950e123-72e8-431c-b93f-52cfcf0c2459}}, {{cite:8daf66f6-9d03-4af5-a321-9117d48e4f3f}}, {{cite:90b9776b-c02d-420a-8b5e-cfa159065808}}, {{cite:427caf9c-4f7a-42a0-9923-93e5d34178ec}}, {{cite:17144aa1-c4e5-4d84-b794-45b5e242f2e1}}
+This approach is often called the g-ology.
+The parameters of Eq. (REF ) are given by the g-parameters
+defined in Refs. , , and  as follows
+FORMULA 
+where the upper (lower) sign corresponds to FORMULA  (FORMULA ),
+and FORMULA  is the Fermi velocity. For the EHM
+including the FORMULA  [Eq. (REF )] and FORMULA 
+[Eq. (REF )] terms at half-filling, the g-parameters can be
+identified as follows:
+FORMULA 
+This calculation can be performed straightforwardly except for the FORMULA 
+term. For the FORMULA  term which contains a three-body term, the
+operator-product-expansion technique is needed to identify the
+g-parameters.{{cite:17144aa1-c4e5-4d84-b794-45b5e242f2e1}}
+The instabilities for the charge and the spin gaps are discussed based
+on the renormalization group (RG) analysis as explained in
+Sec. . Since FORMULA  is approximated as
+FORMULA , the parameter in the RG flow
+diagram (Fig. REF ) is given by FORMULA . Then, the spin-gap opens when FORMULA , and
+the phase boundary is
+FORMULA 
+On the other hand, the charge gap opens when FORMULA .
+The condition FORMULA  is the BKT-type transition due to
+the SU(2) symmetry in the charge sector. Then, the phase boundary is
+obtained as
+FORMULA 
+The condition FORMULA  is the BKT-type transition due to
+the hidden SU(2) symmetry in the charge sector. Then, we obtain the
+phase boundary as
+FORMULA 
+The Gaussian-type transition takes place at FORMULA , for
+FORMULA . Thus, we obtain the Gaussian line for the charge sector
+as
+FORMULA 
+Thus, we obtain the phase diagrams in the weak-coupling limit as is
+shown in Fig. REF  which have the Y- and the I-shaped
+structures in the charge and the spin degrees of freedom, respectively.
+In the present g-ology analysis, the parameters FORMULA  and FORMULA  appear only
+through FORMULA , so that the FORMULA  and FORMULA  terms play similar roles in
+respect of the enhancement of the BCDW (FORMULA ) or the BSDW
+(FORMULA ) phases. The correspondence between the g-ology and the
+level-crossing approach is summarized in Table REF .
+In this paper, we have taken FORMULA  into account in the
+identification of FORMULA  and FORMULA  by following
+Ref. . The Clifford algebra for FORMULA 
+(REF ) can be expressed by tensor products of the Pauli
+matrices, which are chosen so the effective Hamiltonian
+(REF ) is to be diagonal in the space of FORMULA . For
+example, the following representation is possible:
+FORMULA 
+These operators contribute to the FORMULA  and the FORMULA 
+terms as FORMULA , and one eigenvalue of the matrix is
+chosen. Consequently, the signs of FORMULA  and FORMULA  become
+opposite as in Eqs. (). When we consider the bosonization
+of a physical operator, it should be diagonalized simultaneously with
+the Hamiltonian. Therefore, if the physical operator cannot be
+diagonalized by Eq. (REF ), we should choose other
+representations for FORMULA . In the derivation of the physical
+operators in Sec. , we need one more representation such
+as
+FORMULA 
+In this case, the contribution to the FORMULA  and the FORMULA 
+terms is FORMULA . If the contribution of FORMULA  is
+neglected, the sign of the FORMULA  term is reversed, and the roles
+of FORMULA  and FORMULA  are interchanged.
+Present address: Max-Planck-Institut für Physik komplexer Systeme,
+Nöthnitzer Str. 38, 01187 Dresden, Germany
+V. J. Emery, in ¦Highly Conducting One-Dimensional Solids¦,
+edited by J. T. Devreese, R. Evrand, and V. van Doren, (Plenum, New
+York, 1979), p. 327.
+
+J. Sólyom, Adv. Phys. ¦28¦, 201 (1979).
+
+J. Voit, Rep. Prog. Phys. ¦57¦, 977 (1995).
+
+J. Voit, Phys. Rev. B ¦45¦, 4027 (1992).
+R. A. Bari, Phys. Rev. B ¦3¦, 2622 (1971).
+J. E. Hirsch, Phys. Rev. Lett. ¦53¦, 2327 (1984).
+
+P. G. J. van Dongen, Phys. Rev. B ¦49¦, 7904 (1994).
+V. J. Emery, Phys. Rev. B ¦14¦, 2989 (1976).
+M. Fowler, Phys. Rev. B ¦17¦, 2989 (1978).
+
+H. Q. Lin and J. E. Hirsch, Phys. Rev. B ¦33¦, 8155 (1985).
+B. Fourcade and G. Spronken,
+Phys. Rev. B ¦29¦, 5089 (1984); ¦29¦, 5096 (1984).
+J. W. Cannon and E. Fradkin, Phys. Rev. B ¦41¦, 9435 (1990).
+
+J. W. Cannon, R. T. Scalettar, and E. Fradkin,
+Phys. Rev. B ¦44¦, 5995 (1991).
+H. Q. Lin, E. R. Gagliano, D. K. Campbell, E. H. Fradkin, and
+J. E. Gubernatis, in ¦The Hubbard Model¦, edited by
+D. Baeriswyl, D. K. Campbell, J. M. P. Carmelo, F. Guinea, and
+E. Louis (Plenum Press, New York, 1995), p. 315.
+
+G. P. Zhang, Phys. Rev. B ¦56¦, 9189 (1997).
+
+M. Nakamura, J. Phys. Soc. Jpn. ¦68¦, 3123 (1999)
+(cond-mat/9903227).
+In the preceding works (Refs.  and ), BCDW
+is called “bond-order wave (BOW)”.
+
+D. K. Campbell, J. Tinka Gammel, and E. Y. Loh, Jr.,
+Phys. Rev. B ¦42¦, 475 (1990).
+M. E. Simón and A. A. Aligia,
+Phys. Rev. B ¦48¦, 7471 (1993).
+
+G. I. Japaridze and A. P. Kampf,
+Phys. Rev. B ¦59¦, 12822 (1999).
+
+A. A. Aligia, K. Hallberg, C. D. Batista, and G. Ortiz,
+Phys. Rev. B ¦61¦, 7883 (2000);
+J. Low Temp. Phys. ¦117¦, 1747 (1999).
+G. I. Japaridze,
+Phys. Lett A ¦201¦ 239 (1995).
+
+F. Mila and X. Zotos, Europhys. Lett. ¦24¦, 133 (1993).
+K. Penc and F. Mila, Phys. Rev. B ¦49¦, 9670 (1994).
+K. Sano and Y. Ōno, J. Phys. Soc. Jpn. ¦63¦, 1250 (1994).
+R. T. Clay, A. W. Sandvik, and D. K. Campbell,
+Phys. Rev. B ¦59¦, 4665 (1999).
+T. Giamarchi, Physica B ¦230-232¦, 975 (1997).
+E. B. Kolomeisky and J. P. Straley, Rev. Mod. Phys. ¦68¦, 175 (1996).
+M. Oshikawa, M. Yamanaka, and I. Affleck,
+Phys. Rev. Lett. ¦78¦, 1984 (1997).
+M. Yamanaka, M. Oshikawa, and I. Affleck,
+Phys. Rev. Lett. ¦79¦, 1110 (1997).
+
+K. Okamoto and K. Nomura, Phys. Lett. A ¦169¦, 433 (1992).
+
+K. Nomura and K. Okamoto, J. Phys. A ¦27¦, 5773 (1994).
+
+K. Nomura, J. Phys. A ¦28¦, 5451 (1995).
+
+M. Nakamura, K. Nomura, and A. Kitazawa,
+Phys. Rev. Lett. ¦79¦, 3214 (1997).
+
+M. Nakamura, J. Phys. Soc. Jpn. ¦67¦, 717 (1998).
+
+M. Nakamura, A. Kitazawa, and K. Nomura, Phys. Rev. B ¦60¦, 7850 (1999).
+R. J. Bursill, R. H. McKenzie, and C. J. Hamer,
+Phys. Rev. Lett. ¦80¦, 5607 (1998).
+F. D. M. Haldane, J. Phys. C ¦14¦, 2585 (1981).
+H. J. Schulz, Phys. Rev. Lett. ¦64¦, 2831 (1990);
+Int. J. Mod. Phys. B ¦5¦, 57 (1991).
+
+D. Sénéchal,
+Lecture given at the CRM workshop, Montreal, May 1999
+(cond-mat/9908262).
+L. P. Kadanoff and A. C. Brown, Ann. Phys. ¦121¦, 318 (1979).
+
+J. M. Kosterlitz, J. Phys. C ¦7¦, 1046 (1974).
+For example see, A. M. Tsvelik, ¦Quantum Field Theory in Condensed
+Matter Physics¦ (Cambridge Univ. Press, 1995).
+I. Affleck, D. Gepner, H. J. Schulz, and T. Ziman,
+J. Phys. A ¦22¦, 511 (1989).
+T. Giamarchi and H. J. Schulz, Phys. Rev. B ¦39¦, 4620 (1989).
+A. A. Ovchinnikov, Zh. Eksp. Teor. Fiz. ¦57¦, 2137 (1969)
+[Sov. Phys. JETP ¦30¦, 1160 (1970)].
+H. Shiba, Prog. Theor. Phys. ¦48¦, 2171 (1972).
+C. N. Yang and S. C. Zhang, Mod. Phys. Lett. B ¦4¦, 759 (1990).
+V. L. Berezinskii, Zh. Eksp. Teor. Fiz. ¦61¦, 1144 (1971)
+[Sov. Phys. JETP ¦34¦, 610 (1972)].
+J. M. Kosterlitz and D. J. Thouless, J. Phys. C ¦6¦, 1181 (1973).
+J. L. Cardy, Nucl. Phys. B ¦270¦, 186 (1986).
+P. Reinicke, J. Phys. A ¦20¦, 5325 (1987).
+L. Hulthen, Arkiv. Math. Astro. Fys. ¦26¦ A, 938 (1938).
+M. Takahashi, J. Phys. C ¦10¦, 1289 (1977).
+We solved the equation numerically without using approximations. An
+approximation used in Ref.  is not appropriate for the
+quantitative analysis, as the author himself discussed. In the
+approximated case, the region where the CDW-SDW transition agrees with
+the Gaussian line is overestimated up to FORMULA .
+In Ref. , the authors determined the phase diagram of
+the 1D Hubbard model (FORMULA ) including the correlated hopping term at
+half-filling [SU(2)FORMULA SU(2) symmetric case], by observing the
+quantum numbers corresponding to the current excitations (FORMULA )
+using the Berry phase. Therefore, if the SU(2) symmetry in the charge
+sector is broken (FORMULA ), their method may correspond to the level
+crossing of the Gaussian-type transition, but may not correspond to the
+one of the BKT-type transition.
+In Ref. , the authors calculated the phase-separation
+boundary in the 1D EHM by observing the divergence of the spin
+susceptibility at wave number FORMULA  using the Monte Carlo simulation.
+M. Ogata, M. U. Luchini, S. Sorella, and F. F. Assaad,
+Phys. Rev. Lett. ¦66¦, 2388 (1991).
+This method is equivalent to the way of determining the critical points
+for the dimer-ferromagnet and the XY-ferromagnet transitions in the
+FORMULA  frustrated XXZ spin chain: S. Hirata and K. Nomura,
+Phys. Rev. B ¦61¦, 9453 (2000).
+A. A. Ovchinnikov, Zh. Eksp. Teor. Fiz. ¦64¦, 342 (1972)
+[Sov. Phys. JETP ¦37¦, 176 (1973)].
+A. Luther and I. Peschel, Phys. Rev. B ¦12¦, 3908 (1975).
+F. D. M. Haldane,
+Phys. Rev. B ¦25¦, 4925 (1982);¦26¦, 5257 (1982).
+M. Fabrizio, A. O. Gogolin, and A. A. Nersesyan,
+Phys. Rev. Lett. ¦83¦, 2014 (1999).
+Y. Takada and M. Kido, cond-mat/0001239.
+In Ref. , the phase boundary between the CDW and the SDW
+phases is determined by observing the CDW and the SDW structure factors
+using the density-matrix-renormalization-group method. This result
+agrees with our level-crossing point of the CDW and the SDW
+excitations.
+K. Itoh, M. Nakamura, and N. Muramoto, preprint.
+M. Nakamura, K. Itoh, and N. Muramoto, cond-mat/0003419.

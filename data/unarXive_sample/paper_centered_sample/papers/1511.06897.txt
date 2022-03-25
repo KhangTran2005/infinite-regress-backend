@@ -1,0 +1,450 @@
+
+
+Black Holes with Scalar Hairs in Einstein-Gauss-Bonnet Gravity
+Y. Brihaye FORMULAemail: yves.brihaye@umons.ac.be ,
+L. Ducobu  FORMULAemail: ludovic.ducobu@student.umons.ac.be
+ FORMULAPhysique-Mathématique, Université de
+Mons, 7000 Mons, Belgium2018/12/11 02:35:57The Einstein-Gauss-Bonnet gravity in five dimensions is extended by scalar fields and the corresponding
+equations are reduced to a system of non-linear differential equations.
+A large family of regular solutions of these equations is shown to exist. Generically, these solutions are
+spinning black holes with scalar hairs.
+They can be characterized (but not uniquely) by an horizon and an angular velocity on this horizon.
+Taking particular limits the black holes approach boson star or become extremal, in any case the limiting configurations
+remain hairy.
+   PACS Numbers: 04.70.-s, 04.50.Gh, 11.25.Tq
+Introduction
+Much attention was devoted during the recent years to gravity theories supplemented by scalar fields.
+There are several reasons for that : scalar fields appear as fundamental constituents in
+the standard model of particle physics as well as in numerous models attempting to go beyond this well tested theory.
+Bypassing the long standing 'No Hair Theorem', black holes solutions with scalar hairs have been constructed
+in {{cite:638f4121-5e8e-45d0-9f28-c7f36398439e}}, {{cite:657df10f-1ec3-480d-bca7-df97d4efe667}}. These new solutions
+of the Einstein-Klein-Gordon equations were constructed for a single massive complex
+scalar field and exist provide the black hole rotates sufficiently fast; as so they provide
+hairy generalizations of Kerr black holes.
+The influence of a self-gravitating potential on these solutions was studied in {{cite:4a332459-5bf4-4a31-b8df-73559428e694}}.
+Among the numerous theoretical ideas explored to encompass the standard model and, hopefully, to improve our
+understanding of the Universe, models formulated in more than four dimensional space-times
+emerge as promising candidates. Progressively they motivate the study of general relativity in FORMULA  dimensions.
+The understanding of the gravitational interaction in higher dimensions and the classification of the underlying
+classical solutions, like black holes and other compact objects, constitue a research topic by itself.
+Even in the vacuum,
+the richness of the solutions available in FORMULA  dimensions {{cite:a722d88d-10c8-4cf1-86d1-36313bcd3c5d}} is remarkable.
+In particular the black holes are characterized by FORMULA  independent angular momenta.
+For odd number of dimensions, spinning solutions
+with all equal angular momentum present an enhanced symmetry, the underlying equations can be set
+in co-dimension one problem allowing for simplifications in the more elaborated dynamical equations.
+This feature can be used, in some circumstances, to study some dynamical processes,
+(e.g. collapsing shells in rotations {{cite:206cdb4c-6ac2-4f94-8888-59d31e63afd3}}).
+Some calculations can be performed more easily in a space-time with five -rather than four-
+dimensions.
+The construction of hairy black holes in higher dimensions therefore appeared as a natural continuation
+of the work {{cite:638f4121-5e8e-45d0-9f28-c7f36398439e}} and it was the object of {{cite:43acc68c-29b5-4049-9012-3b6e7f59634e}}. In that paper
+it was shown that Myers-Perry black holes with scalar hairs exist on a specific domain of the two-dimensional
+parameter space of the problem : the black hole horizon and the angular velocity of the solution on the
+horizon. Interestingly, and contrasting with respect to
+their 4-dimensional analogs, these hairy black holes do not approach the
+pure vacuum Myers-Perry solutions in any limit. The two families are disjoined, separated by a mass gap.
+This property provides an
+example of difference of the gravitational interaction which can occur for different dimensions. Such
+differences can be accounted on the non-linear character of the Einstein equations.
+The black holes obtained in {{cite:43acc68c-29b5-4049-9012-3b6e7f59634e}} and in this paper are asymptotically flat
+and characterized by the fact that
+they possess a single Killing field. This notion was introduced in {{cite:413188fe-661e-42a9-bb38-e61e62c9d15b}}
+where families of asymptotically AdS, spinning, hairy black holes and bosons stars were also constructed in
+five dimensions. In this case, pure AdS space-time is approached uniformly while the scalar field tends to zero.
+The generalization of these solutions to higher dimensions is emphasized in {{cite:b797cff8-2f36-4646-b3d9-77e2ca0b8458}}, {{cite:0706c044-de01-44ce-abff-e60d5aebe04c}}.
+The solutions of {{cite:638f4121-5e8e-45d0-9f28-c7f36398439e}}, {{cite:43acc68c-29b5-4049-9012-3b6e7f59634e}} are constructed for a minimal potential
+of the scalar field: a mass term. Along the lines of {{cite:4a332459-5bf4-4a31-b8df-73559428e694}}, we study in this paper the
+influence of the non quadratic interaction on the solutions. The choice of the potential is explained
+in the paper.
+Another feature of gravity in higher dimensions is the fact that the standard Einstein-Hilbert action
+can be supplemented by a hierarchy of terms involving higher powers of the Riemann tensor. For FORMULA  there
+exist one such a term, the Gauss-Bonnet term and the general lagrangian for gravity is know as
+Einstein-Gauss-Bonnet (EGB) gravity.
+The corresponding equations are in general more involved that the Einstein equation and the enhanced non linearity
+has generically an influence of the solutions.
+Five-dimensional spinning boson stars in EGB gravity were constructed in
+{{cite:85e82d7f-ef1b-4b87-a6bf-9a45b796e020}} with a negative cosmological constant and in {{cite:f7e5504e-3421-414f-98a4-7f270d014ac5}}, {{cite:cfdd4b5d-df09-4af7-9fcb-81fce44da57a}} with FORMULA .
+In both cases, it was found that the solutions exist for a limited range of the Gauss-Bonnet coupling constant.
+Up to our knowledge, the existence of hairy black holes in higher dimensional EGB gravity was not emphasized yet.
+In this paper, we study these equations and we present strong
+numerical evidence that the hairy black holes occurring in Einstein gravity can be extended to EGB gravity
+up to a maximal value (depending of the angular velocity) of Gauss-Bonnet coupling constant.
+The paper is organized as follows.
+In Section 2 we present the model, the ansatz and discuss some physical quantities which are relevant
+for the understanding of the pattern of the solutions.
+In Section 3 we describe the influence of an a self-interacting potential on the Q-balls, the boson star
+and the black holes. Section 4 is devoted to the construction of
+hairy black holes in Einstein-Gauss-Bonnet gravity.
+Finally in section 5 we finish our discussion giving some further remarks.
+
+The Model
+We want to study spinning boson stars and black holes
+in 5-dimensional Einstein-Gauss-Bonnet (EGB) gravity.
+The model is described by the following Lagrangian density
+FORMULA 
+Here FORMULA  represents the Ricci scalar, FORMULA  is the cosmological constant,
+and FORMULA  is the Gauss-Bonnet term. It is constructed out of the Riemann tensor in the standard way :
+FORMULA 
+with FORMULA  and FORMULA  denotes the Gauss-Bonnet coupling constant.
+The matter sector of the model consists of a doublet of complex scalar fields with the same mass FORMULA 
+and denoted by FORMULA  in (REF ) where we supplemented a self-interaction FORMULA .
+The full model presents an FORMULA  global symmetry.
+The Noether current associated to the FORMULA  subgroup,
+i.e. FORMULA , and the corresponding
+conserved charge FORMULA  will play an important role in the discussion of the solutions.
+The variation of the action (REF ) with respect to the metric and the scalar field leads to the
+Einstein-Gauss-Bonnet-Klein-Gordon equations. They are written in many places
+(namely in {{cite:43acc68c-29b5-4049-9012-3b6e7f59634e}} with the same notations) and we do not repeat them here.
+The Lagrangian (REF ) constitutes one of the simplest way to couple matter minimally to gravity.
+Assuming FORMULA , the coupled system admits regular, localized, stationary solutions: the boson stars
+(see e.g. {{cite:a7a07491-86b8-41f1-ac6f-8ca12cf7a4e6}} for a review).
+Boson stars in FORMULA  dimensional space-times were investigated namely in {{cite:d166c5a4-ea23-4adf-bf57-142d70f355bc}}, {{cite:dace16d2-d7f1-4354-9c92-1d65bd743513}}, {{cite:0723df9d-b50e-40bc-884e-4c9e8936a1d2}}.
+The ansatz
+In principle, spinning solutions in 5-dimensional space-time
+can possess two independent angular momenta associated to the two orthogonal planes of rotation present in 4-dimensional
+space. One can however restrict oneself to the case of equal angular momenta.
+Boson stars possessing two equal angular momentum can be constructed in the above theory,
+by using an appropriate anzatz for the metric and the scalar field {{cite:33066ee8-5d64-41db-a661-b844f6e8bc3a}}.
+Interestingly, this ansatz leads to a system of differential equations.
+Spinning boson stars in EGB gravity have been studied in details in {{cite:85e82d7f-ef1b-4b87-a6bf-9a45b796e020}}
+in the case FORMULA  and FORMULA .
+Asymptotically flat, spinning boson stars and black holes (with FORMULA ) were constructed in
+{{cite:43acc68c-29b5-4049-9012-3b6e7f59634e}} for Einstein gravity.
+The goal of this paper is to study the influence of a self-interaction
+and/or of the Gauss-Bonnet term on these solutions.
+From now on, we will deal with asymptotically flat solutions only.
+Metric ansatz for the boson stars : 
+The relevant Ansatz for the metric reads
+FORMULA 
+where FORMULA  runs from 0 to FORMULA , while FORMULA  and FORMULA  are
+in the range FORMULA .
+The corresponding space-time possess two rotation planes at FORMULA  and FORMULA 
+and the natural FORMULA  symmetry group is enhanced to FORMULA .
+The metric above still leaves the diffeomorphisms related to the definitions of the radial variable FORMULA  unfixed.
+For the numerical construction of the solutions it is convenient to fix this freedom by setting FORMULA .
+The key point of the construction is to choose the scalar doublet of the form
+FORMULA 
+where FORMULA  is a doublet of unit length that depends on the angular coordinates.
+The standard non spinning solutions are recovered by means of the particular form
+FORMULA 
+while for
+rotating solutions the parametrization is {{cite:33066ee8-5d64-41db-a661-b844f6e8bc3a}}
+FORMULA 
+This parametrization transforms the Einstein-Gauss-Bonnet-Klein-Gordon equations into a consistent set of differential equations.
+While the metric (REF )
+has three commuting Killing vector fields FORMULA , FORMULA , FORMULA ,
+the scalar doublet of the rotating solution with (REF ) is invariant only
+under one possible combination of these vectors {{cite:413188fe-661e-42a9-bb38-e61e62c9d15b}}, namely
+FORMULA 
+The boson stars therefore have a single Killing vector.
+Metric ansatz for the black holes : 
+In order to construct the black holes, we used a slightly different ansatz which was first proposed in
+{{cite:43acc68c-29b5-4049-9012-3b6e7f59634e}}
+FORMULA 
+where FORMULA  are functions of FORMULA  only and FORMULA  denotes the position of the horizon. Note that
+the radial variable FORMULA  has different meaning in (REF ) and (REF ).
+The above statement about the Killing symmetry still holds and
+the spinning hairy black holes that we obtained possess a single Killing vector field.
+The goal of this paper is to study the response of pattern of the 'minimal' boson stars and hairy black
+holes (i.e. in Einstein gravity and with a mass potential) to a self-interaction of the scalar field
+and to the Gauss-Bonnet interaction.
+
+Physical quantities
+The solutions can be characterized by several physical parameters, some of them are associated with the globally
+conserved quantities. The charge FORMULA  associated to the U(1) symmetry has some relevance;
+in terms of the ansatzs (REF ),(REF ), the charge FORMULA  takes respectively the forms
+FORMULA 
+Interestingly, it was shown {{cite:33066ee8-5d64-41db-a661-b844f6e8bc3a}} that the charge FORMULA  is related to the sum of the two (equal) angular
+momentum of the solution : FORMULA . The mass of the solution FORMULA 
+and the angular momentum FORMULA  can be obtained from the asymptotic decay of some
+components of the metric :
+FORMULA 
+On the other hand, the black holes have an entropy and a temperature :
+FORMULA 
+The speed of rotation of the black hole at the horizon is given by FORMULA .
+
+Asymptotic and boundary conditions
+Boson stars
+The ansatz above transforms the field equations into a set of five differential equations in the five radial fields.
+For boson stars, the equation for FORMULA  is of the first order while the equations for FORMULA  are of the second
+order.
+The Taylor expansion of the fields about the origin takes the form
+FORMULA 
+FORMULA 
+where FORMULA  are constants.
+The constants FORMULA , FORMULA , FORMULA  are determined in a straightforward way leading to
+FORMULA 
+and a lengthy expression for FORMULA . The constants FORMULA  are related by the condition
+FORMULA 
+which is linear if FORMULA  and quadratic for EGB gravity FORMULA .
+In principle, all the orders of the Taylor expansion are determined in terms of FORMULA  and FORMULA  (or alternatively of FORMULA  obeying (REF )). For FORMULA , the constraint imposes some limit
+in FORMULA  for spinning boson stars of definite angular momentum {{cite:cfdd4b5d-df09-4af7-9fcb-81fce44da57a}}.
+In the asymptotic region, the metric has to approach the Minkowski space-time and the scalar field vanishes.
+Finally, the single parameter FORMULA  is sufficient to characterize a solution.
+
+Black holes
+The ansatz adopted for black holes leads to five second order equations. The regularity at the horizon
+imposes the derivatives of the fields FORMULA  (FORMULA ) to vanish at the horizon and FORMULA .
+So, the angular velocity on the horizon of the black holes should coincide with the harmonic frequency FORMULA 
+of the scalar field set in (REF ).
+As for boson stars, all fields should vanish in the limit FORMULA .
+The parameters FORMULA  and FORMULA  are, in principle, sufficient to characterize
+a black hole. We will see that the domain of existence is quite limited
+and that -on this domain- more than one solution can correspond to a choice FORMULA .
+
+Self-Interacting solutions in Einstein gravity
+Here we want to construct the bosons star and Q-ball associated to a polynomial potentials of the form
+FORMULA 
+Because of the numerous parameters, we will put the emphasis on two particular cases
+which can be considered as extremal:
+
+The case FORMULA , FORMULA . This case then corresponds
+to a mass term only and the corresponding solutions have been studied in details in
+{{cite:43acc68c-29b5-4049-9012-3b6e7f59634e}}, in the case of Einstein gravity.
+This mass potential will be denoted FORMULA  in the following.
+As demonstrated in {{cite:f4b55fcc-41f7-4ea5-aac2-d6c675e1e068}} the boson stars do not admit Q-balls counterpart in this case.
+The gravitating parameter FORMULA  can be rescaled in the scalar field.
+The solutions corresponding to EGB gravity will be presented for this potential only.
+
+The case FORMULA , FORMULA .
+This choice corresponds to a positive
+definite potential presenting two degenerate local minima at FORMULA  and FORMULA .
+It was proposed {{cite:79a34f4e-f128-4ca3-b29d-8f53254ac79a}} and allow for solutions to exist in the absence of gravity.
+In lower dimensions, this potential was used for the study of kink collisions, see e.g. {{cite:15d4597f-2123-4e10-960f-e9f0958a2d0f}}.
+Four-dimensional charged boson stars have been constructed in {{cite:5e15f196-25e9-475c-908e-c6d24cc77e70}} with such a potential.
+In the following the corresponding potential will be denoted FORMULA .
+For this potential, the gravity constant and the value FORMULA  can be combined into a dimensionless quantity
+noted FORMULA .
+
+The field equations are coupled, non-linear differential equations with boundary conditions.
+To our knowledge, they do not admit closed form solutions
+and approximation techniques have to be used.
+For instance, the relevant solutions can be obtained numerically
+by a fine tuning of the parameters FORMULA  and FORMULA 
+in such a way that the boundary conditions are obeyed.
+For our numerical construction we used the numerical
+solver COLSYS {{cite:aeac2ad7-0b5b-469d-bba4-38e558e6ca42}} based on the Newton-Rafson algorithm.
+Q-balls
+We first present the solutions obtained in the absence of gravity (i.e. with FORMULA ).
+The only parameter to vary is the value FORMULA  (or equivalently the frequency FORMULA ).
+Along with boson stars in four dimensions, families of solutions exist
+with different numbers of nodes of the scalar function FORMULA .
+For simplicity, we addressed only the solutions for which the scalar function has no nodes. The solutions with nodes
+are usually considered as excited modes of these 'fundamental' one.
+FIGURE 
+The Q-balls can be constructed numerically by increasing progressively the control parameter FORMULA ,
+forming a branch to which we refer as the main branch.
+In the limit FORMULA , the vacuum configuration FORMULA  is uniformly approached while FORMULA .
+The convergence is slow and quantities like the mass (and also the charge)
+converge to a finite value, forming a mass gap. As demonstrated by Fig. REF , the
+solutions exist up to a maximal value of parameter FORMULA ; we find FORMULA 
+corresponding to a frequency FORMULA . Solving the equations for lower values of the frequency reveals
+the existence of another branch of Q-balls, let us call it the second branch.
+We found strong indications that these solutions exist for FORMULA  and
+FORMULA  (with FORMULA ).
+The numerical construction of the solutions of the second branch
+is difficult for the small values of FORMULA  (the star 'FORMULA ' on Fig. REF 
+represents the limit where our numerical solutions became unreliable). In this region,
+the profile of the function FORMULA  presents a pronounced abrupt wall for FORMULA 
+(we define the parameter FORMULA  as the value of FORMULA 
+where the function FORMULA  attains its local minimum).
+This wall separates two plateaus; the first one has FORMULA  (for FORMULA ) and
+the second at FORMULA  (for FORMULA ).
+As an illustration of this result the profiles of the two solitons corresponding to FORMULA  (one for each branch)
+are shown on Fig. REF .
+The numerical results show that, in the limit FORMULA ,
+the mass, the charge and the radius FORMULA  of the solution tends to infinity:
+this can be related to the fact that no attractive force (like gravity)
+is operating, as a consequence the star can spread arbitrarily large in space.
+FIGURE 
+The solutions on the main branch correspond to high frequencies
+FORMULA  and have FORMULA ;
+interestingly the solutions of second branch correspond to low frequencies
+(FORMULA ) and have
+FORMULA . Following standard arguments about the classical stability of Q-balls, only
+the solutions of the second branch are classically stable.
+
+Boson stars
+Boson stars correspond to deformations of the Q-balls (see previous section) for FORMULA .
+Once coupled to gravity the pattern of the solutions change qualitatively.
+The major difference between boson stars
+and Q-balls is that -contrary to Q-balls- boson stars exist for large values of FORMULA .
+Several features of Q-balls and bosons stars are illustrated on Fig. REF  for three values of FORMULA .
+For fixed FORMULA  and FORMULA  increasing, the value FORMULA  approaches zero while
+the value of the Ricci scalar at the origin (say FORMULA )
+increases roughly quadratically.
+This suggests that a singular configuration is approached
+in the limit FORMULA . Outside the central region (we find typically for FORMULA )
+the metric and the the scalar field are rather intensive to the increase of FORMULA . In particular, FORMULA 
+approaches constants for FORMULA  (these constants depend, off course, on FORMULA ).
+Note that no counterpart of the second branch of Q-ball is found. This phenomenon can be explained by the fact that
+the attracting gravitational interaction keeps the matter field relatively compact
+and does not allow for an extension in an arbitrarily large volume.
+Since Q-balls (FORMULA ) do not exist for FORMULA , it is natural
+to examine the behavior of boson stars (FORMULA ) for fixed values of FORMULA , greater than FORMULA , and decreasing the parameter FORMULA .
+It turns out that the parameters FORMULA  (and similarly FORMULA ) increases, likely tending to infinity
+in the limit FORMULA .
+We find in particular FORMULA : as it could be expected,
+the decreases gravity, through the effective coupling parameter FORMULA , allows for compact object with
+larger and larger size
+to form.
+FIGURE 
+To illustrate this statement, the profiles of the different fields corresponding
+to FORMULA  and FORMULA  are presented on Fig. REF .
+We further notice that the Ricci scalar FORMULA  approaches uniformly the null function although the metric
+potentials keep non trivial profiles.
+FIGURE 
+Comparison of the FORMULA  and FORMULA  potentials : 
+As pointed out already, boson stars exist with the mass potential FORMULA . On Fig. REF  the charge and the
+mass of the minimal and self-interacting boson stars are superposed. The non linear interaction clearly allows for
+solutions with a lower frequency, then also corresponding to a slower speed of rotation on the horizon.
+The minimal boson stars have FORMULA  on their whole domain
+of FORMULA . Accordingly, they have no positive binging energy and are classically unstable.
+The interaction makes the solutions classically stable for the low values of the frequency.
+
+Black holes
+The construction of black holes in Einstein gravity and for the mass potential constitutes the object of {{cite:43acc68c-29b5-4049-9012-3b6e7f59634e}}.
+It was found that black holes exist in a very specific domain of the parameters FORMULA 
+(see in particular Fig. 1 of {{cite:43acc68c-29b5-4049-9012-3b6e7f59634e}}).
+Here we will present the influence of the self-interaction FORMULA  on the families of black holes obtained in that paper.
+The pattern of solutions is quite involved. It turns out that,
+corresponding to a fixed value of FORMULA , two (and sometimes even four) branches of black holes exist
+on specific intervals of the horizon parameter FORMULA .
+In order to describe the pattern,
+let us choose one particular boson star characterized by a frequency FORMULA .
+Integrating the black holes equations for this value of FORMULA  we find that one branch of black holes exist
+for FORMULA . In the limit FORMULA  the limiting solution on this branch approaches the
+starting boson star; correspondingly, the temperature FORMULA  diverges while the horizon area FORMULA  tends to zero.
+In the following, we will refer to such a family of black holes as to the BS-branch.
+The data corresponding to FORMULA  (i.e. close to the limiting value FORMULA ) is reported on Fig. REF .
+FIGURE 
+A careful study of the equations for the same value of FORMULA  reveal that another branch of solutions exists,
+also labeled by the horizon parameter FORMULA .
+In the limit FORMULA  the solutions of this second branch terminate either into an extremal black hole
+(in this case the temperature FORMULA  tends to zero) or into another boson star with the same FORMULA .
+Setting FORMULA  (see Fig. REF ) the second branch indeed terminates into an extremal black hole;
+we labeled it the FORMULA -branch. The FORMULA -branch and FORMULA -branch coincide for FORMULA .
+We found that the value FORMULA  decreases slowly with FORMULA ; for example FORMULA 
+for FORMULA  and FORMULA  for FORMULA .
+FIGURE 
+FIGURE 
+Repeating this operation with different values of FORMULA  to determine the domain of existence
+of the solutions is quite demanding; we therefore employed a slightly different strategy.
+We constructed the families of black holes corresponding to fixed values of FORMULA  and varying FORMULA .
+Several features of the pattern are illustrated
+on Figs. REF , where some parameters (mainly the mass)
+are reported in function of FORMULA .
+These figures, where for definiteness we set FORMULA , appeals several comments :
+
+On Fig.REF  (left part) the mass of
+boson star and of the extremal solution are given in the region FORMULA .
+
+The values of the scalar field on the horizon for the black holes with FORMULA  and FORMULA 
+are superposed on right side of Fig. REF . The FORMULA  relation for these black holes
+is supplemented in the insert in the left side of the figure.
+
+For FORMULA  and FORMULA  we have FORMULA .
+For intermediate values of FORMULA  we have instead FORMULA .
+This contrasts with the case of the mass term (see {{cite:43acc68c-29b5-4049-9012-3b6e7f59634e}}).
+
+Figs. REF  show the mass-frequency dependence in the region
+of the small frequencies. The left side shows a comparison between the mass of boson star
+(dashed red line) and the mass of the black hole corresponding to FORMULA  (black line).
+The curve corresponding to the black holes of the FORMULA -branch is all long
+very close to the curve corrsponding to the boson star.
+These curves can hardly be distinguished on the graphic but
+separate only when the boson star mass starts spiraling.
+For each FORMULA  such that FORMULA  four black holes with different masses exist.
+The FORMULA -branch and FORMULA -branch join at the point marked FORMULA  corresponding to FORMULA  and FORMULA .
+This value is very close to the mass of the corresponding boson star.
+
+Increasing the horizon value, the pattern get simpler. In particular the points marked FORMULA 
+on the figure disappear and only two solutions persist
+for all accessible values of FORMULA . The masses corresponding to FORMULA  and FORMULA 
+are compared on Fig. REF  (right part).
+
+As Figs.  and  reveal, the pattern of the black holes solutions is quite involved
+and uneasy to describe solely with the control parameters FORMULA  and FORMULA . On Fig. REF 
+we illustrate another feature of the solutions by using a mass-temperature plot
+for the solutions corresponding to FORMULA  and FORMULA .
+In each case, the points where the curves stop correspond to the limit FORMULA .
+The use of FORMULA  as parameter allows one to disentangled the BS and Ex-branches.
+The range of accessible
+temperature for a definite FORMULA  decreases while FORMULA  increases and collapse for FORMULA .
+The three points labeled FORMULA  on this graphic correspond to the critical values marked also in Fig. REF .
+FIGURE 
+To conclude this section let us stress a few differences between the families of black holes associated
+with the FORMULA  and FORMULA  potentials :
+(i)
+The black holes can exist
+for smaller values of FORMULA  (i.e. angular velocity at the horizon) than for the mass potential.
+(ii)
+Our results suggest that considering smaller values of FORMULA 
+would result into the occurrence of black holes with arbitrarily small values of FORMULA .
+The numerical construction becomes however difficult.
+(iii)
+The black holes with the low values for FORMULA  have much
+higher masses (and charge FORMULA ) than the ones close to the limit FORMULA .
+
+
+Solutions in EGB gravity
+As said already, the influence of the Gauss-Bonnet term on spinning boson stars existing in 5-dimensional gravity
+was studied by several authors. A general feature seems to be that any solution of this type
+can be deformed continuously by progressively increasing the Gauss-Bonnet parameter FORMULA  and
+ceases to exist at a critical value, say FORMULA .
+FIGURE 
+The reasons of this limitation can be found analytically {{cite:85e82d7f-ef1b-4b87-a6bf-9a45b796e020}}, {{cite:cfdd4b5d-df09-4af7-9fcb-81fce44da57a}}
+by performing a Taylor expansion of the solutions around the origin.
+It turns out that Gauss-Bonnet interaction implies some
+quadratic constraints like (REF ) between the Taylor coefficients; as a consequence
+some coefficients might become complex for large values of FORMULA  and the solution stops to be real.
+Since the black holes are only considered outside their event horizon, the question of their existence
+for FORMULA  raises naturally.
+TABLE 
+We have examined the deformations of the black holes for FORMULA . For simplicity, we have considered
+the case of a mass-potential. As pointed out above there exist two black holes corresponding to a choice
+of FORMULA  and FORMULA . We distinguish these solution as belonging to the FORMULA -branch (connected to extremal black holes)
+and FORMULA -branch (connected to boson star).
+It turns out that the deformation of a couple of such solutions for FORMULA  leads to two branches of solutions which
+terminate into a single solution at some maximal value FORMULA .
+On Fig. REF , we show the dependence of the mass FORMULA 
+and of the charge FORMULA  on FORMULA  for FORMULA  and for two values of FORMULA  (for instance FORMULA  and FORMULA ).
+We have constructed the solutions for several values of FORMULA  and obtaining the same pattern. Values of FORMULA 
+corresponding to a few choices of FORMULA  and FORMULA  are given in Table 1.
+For a fixed FORMULA , the value FORMULA  decreases monotonically with increasing FORMULA . We noticed a strong
+decrease with FORMULA  of the temperature of the solution corresponding to the FORMULA -branch while increasing FORMULA .
+
+Conclusions
+Very recently there was a strong interest for astrophysical objects presenting scalar hairs,
+see for example {{cite:2943de65-9579-47a4-9bce-f8e5bb82f01b}},
+{{cite:25eb4a8b-f163-4bc0-9a3f-45540e51cd95}}, {{cite:b16f8d87-3c8b-486b-a988-10532fb5832e}}, {{cite:b72be837-0134-49e2-aca4-039ec9ecee74}}.
+This type of research motivate the study of the possible hair structure occurring around compact gravitating objects.
+In many cases, bosons star and/or hairy black holes are continuously connected to vacuum solutions, i.e. they
+loose their hair in some limit of the parameter space. In this respect, the hairy black holes constructed in
+{{cite:43acc68c-29b5-4049-9012-3b6e7f59634e}} are different since their scalar cloud cannot be dissolved by taking
+a special limit; in other words they are disjoined
+from the well know Myers-Perry vacuum solutions. This property is, likely, due to a peculiar
+non-linear effect in the equations. The question of the persistence of this feature in more general models then
+raises naturally.
+In this paper, we have extended the results of {{cite:43acc68c-29b5-4049-9012-3b6e7f59634e}} in two directions:
+(i)
+We included a self-interaction for the scalar field by mean of a potential possessing a non trivial vacuum manifold.
+We guess that all intermediated potentials between FORMULA  and FORMULA  would lead to similar properties.
+(ii)
+Extending the gravity sector
+by a Gauss-Bonnet term which is believed to encode corrections to Einstein gravity
+coming from string theory.
+
+The results is that the clouds of the solutions keep their distinguished property in both cases.
+As new features let us
+stress that the self-interaction allows for spinning black hole with (in principle) arbitrarily small-but non vanishing-
+angular velocity on the horizon, say FORMULA .
+Only when this parameter become sufficiently small do the boson stars constitute classically stable configurations.
+In the case of EGB gravity, we have shown that, for all values of FORMULA  allowing
+for hairy black holes, there exist a couple of corresponding solutions. These two solutions exist up to
+a maximal value of the Gauss-Bonnet coupling constant, say FORMULA , and converge to a single solution in the limit
+FORMULA .
+Note added: While finishing this paper we were aware of {{cite:3ddb5f9e-3a5e-482b-9dfe-92da7e0a8c2a}}
+where hairy black holes in four dimensional Einstein-Gauss-Bonnet-dilaton gravity
+are constructed.

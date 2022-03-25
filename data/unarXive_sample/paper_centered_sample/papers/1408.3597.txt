@@ -1,0 +1,484 @@
+
+left=1.5cm, right=1.5cm, top=1.5cm, bottom=1.5cm
+Properties of the Faddeev-Popov operator in the Landau gauge, matter confinement and soft BRST breakingM. A. L. Capricaprimarcio@gmail.com  ,
+M. S. Guimaraesmsguimaraes@uerj.br  ,
+I. F. Justo igorfjusto@gmail.com  ,L. F. Palharesleticiapalhares@gmail.com  ,
+S. P. Sorellasilvio.sorella@gmail.com   ,
+ Departamento de Física Teórica, Instituto de Física, UERJ - Universidade do Estado do Rio de Janeiro,
+ Rua São Francisco Xavier 524, 20550-013 Maracanã, Rio de Janeiro, BrasilIn light of the development of the Gribov issue for pure Euclidean gauge theories and of the recent lattice measurement of soft breaking of the BRST invariance in Yang-Mills theories in the Landau gauge,
+we consider non-perturbative features in the gauge-interacting matter sector and their relation with general properties of the Faddeev-Popov operator.
+A signature for BRST breaking in the matter sector is proposed and a local and renormalizable framework is constructed, accommodating this signature
+and predicting non-perturbative matter propagators that are consistent with available lattice data for adjoint scalars and quarks.
+Introduction
+Nowadays, the issue of the Gribov copies {{cite:492e2ae3-aaab-49be-8b2e-5ac0cbff5564}} is an important tool in order to investigate the behavior of nonabelian gauge theories in the non-perturbative infrared region, exhibiting a deep connection with gluon confinementSee refs.{{cite:a7645a28-388b-4922-b583-ab01c9b1cc6e}}, {{cite:cca66c22-93d7-401a-96e7-56cd3c350b98}} for a pedagogical introduction to the Gribov problem.. As is widely known, the existence of the Gribov copies is a general feature of the gauge fixing procedure {{cite:4885b5af-979e-491a-9d10-d73c1f06bd07}}, reflecting the impossibility of selecting a unique gauge field configuration for each gauge orbit through a local, covariant and renormalizable gauge condition.
+Although a full resolution of the Gribov problem is still lacking, the interplay between analytic methods and numerical lattice simulations which has taken place during the last decade has provided strong evidence for the relevance of the issue of Gribov copies in the non-perturbative study of the correlation functions of Euclidean Yang-Mills theories. A nice example of this fruitful interplay between analytic and numerical methods is provided by the Landau gauge. If, on one side, several properties of the Gribov region FORMULA  of the Landau gauge have been rigorously established from a mathematical point of view {{cite:02b22b9a-c8fc-44a8-9414-5ca8f4132a41}}, {{cite:ab1e601c-f667-4ce3-b2bb-aa135b6c79fd}}, {{cite:32b473b3-f396-4ce0-a433-084f6f471ee0}}, on the other side, this gauge possesses a lattice formulation {{cite:a568f3e6-054b-4e72-b621-6c500faafb5c}}, {{cite:1b03003f-cd63-42c0-88d9-0c4d2a55f142}}, {{cite:72dfb66d-9573-48e7-a7b5-76782400967a}}, {{cite:ecc77e23-5c09-4b96-b5bf-53290dff5d90}}, {{cite:009e942d-bcff-40dc-a6e1-74344df16649}}, {{cite:10ea7cfd-6359-4bbc-b552-0ab7552c9773}}, {{cite:ff053145-e5c3-4b63-b0b7-de3b9f1a3588}}, {{cite:a3240d1d-f528-4ed5-8a35-24ded7f71521}}, {{cite:859633a4-c03f-4915-9a0d-dadd55fa6b7d}}, which has allowed for a direct comparison between analytic and numerical results.
+These great advances in pure-gauge theories have not provided up to now an equivalent development in the understanding of the non-perturbative behavior of gauge-interacting matter. The aim of this paper is to make a series of observations concerning non-perturbative infrared properties of confining theories that also extend to the matter sector. We shall show that a consistent description of confined matter propagators may be achieved through a systematic soft BRST breaking construction, in analogy with what was found for the gauge fields.
+In order to be more precise on the statement of our goals and for the benefit of the reader, let us give here a short update of the Gribov issue in the Landau gauge. Let us start with the definition of the Gribov region FORMULA , which is at the basis of the Gribov-Zwanziger framework {{cite:492e2ae3-aaab-49be-8b2e-5ac0cbff5564}}, {{cite:3e53444f-ca45-4d1d-8f04-424f45f09a1a}}, {{cite:451b1452-4a29-4bdc-8929-70b9c8c2e506}}, {{cite:0392f26e-6e56-4ac1-8749-63eec57a7dd6}}. The Gribov region FORMULA  is defined as the set of all gauge
+field configurations fulfilling the Landau gauge condition, FORMULA , and for which the Faddeev-Popov operator, FORMULA , is strictly positive, namely
+FORMULA 
+
+The region FORMULA  enjoys the following properties {{cite:02b22b9a-c8fc-44a8-9414-5ca8f4132a41}}, {{cite:ab1e601c-f667-4ce3-b2bb-aa135b6c79fd}}:
+
+FORMULA  is convex and bounded in all direction in field space. Its boundary, FORMULA , is the Gribov horizon, where the first vanishing eigenvalue of the Faddeev-Popov operator shows up.
+
+every gauge orbit crosses at least once the region FORMULA .
+
+In particular, the result  ii) provides a well defined support to original Gribov's proposal {{cite:492e2ae3-aaab-49be-8b2e-5ac0cbff5564}} of restricting the domain of integration in the functional integral to the region FORMULA . Therefore, for the partition function of Yang-Mills theories one writes
+FORMULA 
+where FORMULA  is the Faddeev-Popov action in the Landau gauge
+FORMULA 
+where FORMULA  and FORMULA  denote, respectively, the Yang-Mills and the gauge-fixing term:
+FORMULA 
+and
+FORMULA 
+where FORMULA  are the Faddeev-Popov ghosts, FORMULA  is the Lagrange multiplier implementing the Landau gauge, FORMULA  is the covariant derivative in the adjoint representation of the gauge group FORMULA , and FORMULA  denotes the field strength
+FORMULA 
+Following {{cite:492e2ae3-aaab-49be-8b2e-5ac0cbff5564}}, {{cite:3e53444f-ca45-4d1d-8f04-424f45f09a1a}}, {{cite:451b1452-4a29-4bdc-8929-70b9c8c2e506}}, {{cite:0392f26e-6e56-4ac1-8749-63eec57a7dd6}}, the restriction of the domain of integration in the path integral is achieved by adding to the Faddeev-Popov action FORMULA  an additional term FORMULA , called the horizon term, given by the following non-local expression
+FORMULA 
+
+where FORMULA  stands for the inverse of the Faddeev-Popov operator. For the partition function one gets {{cite:492e2ae3-aaab-49be-8b2e-5ac0cbff5564}}, {{cite:3e53444f-ca45-4d1d-8f04-424f45f09a1a}}, {{cite:451b1452-4a29-4bdc-8929-70b9c8c2e506}}, {{cite:0392f26e-6e56-4ac1-8749-63eec57a7dd6}}
+FORMULA 
+where FORMULA  is the Euclidean space-time volume. The parameter FORMULA  has the dimension of a mass and is known as the Gribov parameter. It is not a free parameter of the theory. It is a dynamical quantity, being determined in a self-consistent way through a gap equation called the horizon condition {{cite:492e2ae3-aaab-49be-8b2e-5ac0cbff5564}}, {{cite:3e53444f-ca45-4d1d-8f04-424f45f09a1a}}, {{cite:451b1452-4a29-4bdc-8929-70b9c8c2e506}}, {{cite:0392f26e-6e56-4ac1-8749-63eec57a7dd6}}, given by
+FORMULA 
+where the vacuum expectation value FORMULA  has to be evaluated with the measure defined by eq.(REF ).
+Although the horizon term FORMULA , eq.(REF ), is non-local, it can be cast in local form by means of the introduction of a set of auxiliary fields FORMULA , where FORMULA  are a pair of bosonic fields, while FORMULA  are anti-commuting. It turns out that the partition function FORMULA  in eq.(REF ) can be rewritten as {{cite:3e53444f-ca45-4d1d-8f04-424f45f09a1a}}, {{cite:451b1452-4a29-4bdc-8929-70b9c8c2e506}}, {{cite:0392f26e-6e56-4ac1-8749-63eec57a7dd6}}
+FORMULA 
+where FORMULA  is given by the local expression
+FORMULA 
+with
+FORMULA 
+and
+FORMULA 
+In the local formulation of the Gribov-Zwanziger action, the horizon condition (REF ) takes the simpler form
+FORMULA 
+where FORMULA  is the vacuum energy defined by:
+FORMULA 
+The local action FORMULA  in eq.(REF ) is known as the Gribov-Zwanziger action. It has been shown to be renormalizable to all orders {{cite:3e53444f-ca45-4d1d-8f04-424f45f09a1a}}, {{cite:451b1452-4a29-4bdc-8929-70b9c8c2e506}}, {{cite:0392f26e-6e56-4ac1-8749-63eec57a7dd6}}.
+Recently, a refinement of the Gribov-Zwanziger action has been worked out by the authors {{cite:5fa1d9d2-b0fd-4cab-9bdf-716566cbb434}}, {{cite:6e371264-c0c3-478c-a220-389f58748da6}}, {{cite:69d0b3f6-df92-4155-b832-e561f0850ca8}}, by taking into account the existence of certain dimension two condensatesSee {{cite:bd7730a5-bdf0-4349-afea-3a25aa01439b}}, {{cite:61ba99f2-7faa-4f15-83df-64f16bdcfd94}} for a recent detailed investigation on the structure of these condensates in color space.. The Refined Gribov-Zwanziger (RGZ) action reads {{cite:5fa1d9d2-b0fd-4cab-9bdf-716566cbb434}}, {{cite:6e371264-c0c3-478c-a220-389f58748da6}}, {{cite:69d0b3f6-df92-4155-b832-e561f0850ca8}}
+FORMULA 
+where FORMULA  stands for the Gribov-Zwanziger action, eq.(REF ). As much as the Gribov parameter FORMULA , the massive parameters FORMULA  have a dynamical origin, being related to the existence of the dimension two condensates FORMULA  and FORMULA , {{cite:5fa1d9d2-b0fd-4cab-9bdf-716566cbb434}}, {{cite:6e371264-c0c3-478c-a220-389f58748da6}}, {{cite:69d0b3f6-df92-4155-b832-e561f0850ca8}}.
+The gluon propagator obtained from the RGZ action turns out to be suppressed in the infrared region, attaining a non-vanishing value at zero momentum, FORMULA , i.e.
+FORMULA 
+Also, unlike the case of the GZ action, the ghost propagator stemming from the Refined theory is not enhanced in the deep infrared:
+FORMULA 
+The infrared behaviour of the gluon and ghost propagators obtained from the RGZ action turns out to be in very good agreement with the most recent numerical lattice simulations on large lattices {{cite:1b03003f-cd63-42c0-88d9-0c4d2a55f142}}, {{cite:72dfb66d-9573-48e7-a7b5-76782400967a}}, {{cite:ecc77e23-5c09-4b96-b5bf-53290dff5d90}}. Moreover, the numerical estimates {{cite:ecc77e23-5c09-4b96-b5bf-53290dff5d90}} of the parameters FORMULA  show that the RGZ gluon propagator (REF ) exhibits complex poles and violates reflection positivity. This kind of two-point function lacks the Källén-Lehmann spectral representation and cannot be associated with the propagation of physical particles. Rather, it indicates that, in the non-perturbative infrared region, gluons are not physical excitations of the spectrum of the theory, i.e. they are confined. It is worth mentioning here that the RGZ gluon propagator has been employed in analytic calculation of the first glueball states {{cite:82264db1-537e-4d02-8fa2-27e9aec4d2b5}}, {{cite:c40a0d77-5f4a-4517-b829-2fda3dc5027b}}, yielding results which compare well with the available numerical simulations as well as with other approaches, see {{cite:938cd555-2680-42ad-b52e-7fc6154d17ec}} for an account on this topic. The RGZ gluon propagator has also been used in order to study the Casimir energy within the MIT bag model {{cite:8fb609b8-81b5-4571-b68f-58c598eaff4c}}. The resulting energy has the correct expected confining behaviour. Applications of the RGZ theory at finite temperature can be found in {{cite:3e5b65ba-6cf1-4215-aaf0-d314a866b9a7}}, {{cite:739208d8-40b5-4ff6-8366-8d13a7ca0436}}. In {{cite:f72b080b-b6ab-4960-ac3f-a5c34c7ddc28}}, {{cite:386dabd4-edab-4934-b149-a7c0726587b1}}, the issue of the Gribov copies has been addressed in the case in which Higgs fields are present, yielding analytic results on the hard problem of the understanding of the transition between the confining and Higgs phases for asymptotically free gauge theories. The output of this analysis turns out to be in qualitative agreement with the seminal work by Fradkin-Shenker {{cite:ae7f3580-b1c3-425b-9630-c1db3075a79e}}. Finally, in {{cite:10f00eec-4155-45b1-ba5a-7b6252667038}}, {{cite:9d38a38e-3865-490e-add7-784a67999213}}, the Gribov-Zwanziger construction has been generalised to supersymmetric Yang-Mills theories. All these results enable us to state that the issue of the Gribov copies captures nontrivial aspects of the non-perturbative dynamics of Yang-Mills theories.
+One important aspect of both GZ and RGZ theories is that they exhibit a soft breaking of the BRST symmetry. In fact, introducing the nilpotent BRST transformations
+FORMULA 
+it is immediately checked that the Gribov-Zwanziger action breaks the BRST symmetry, as summarized by the equationA similar equation holds in the case of the RGZ action {{cite:5fa1d9d2-b0fd-4cab-9bdf-716566cbb434}}, {{cite:6e371264-c0c3-478c-a220-389f58748da6}}, {{cite:69d0b3f6-df92-4155-b832-e561f0850ca8}}.
+FORMULA 
+where
+FORMULA 
+Notice that the breaking term FORMULA  is of dimension two in the fields. As such, it is a soft breaking. The properties of the soft breaking of the BRST symmetry of the Gribov-Zwanziger theory and its relation with confinement have been object of intensive investigation, see {{cite:d1c1385e-21e1-4ea6-b80c-3ad6e7ddda4c}}, {{cite:3422e459-9b7e-4d3d-aa76-dab35ba02e60}}, {{cite:27d2f6a4-982d-4ace-af32-978a4292e863}}, {{cite:8f83414b-9742-4e06-a905-7682ab6b3668}}, {{cite:8a2189dd-5e2e-43c2-afd3-7cd967f5a3b0}}, {{cite:e9eae70e-8fe4-4772-bce0-c5db292620d7}}, {{cite:524cbaa3-1838-416e-9f8b-0d89b3034abd}}. Let us mention here that the broken identity (REF ) is deeply connected with the restriction to the Gribov region FORMULA . Equation (REF ) can be translated into a set of softly broken Slavnov-Taylor identities which ensure the all order renormalizability of both GZ and RGZ actions. The presence of the soft breaking term FORMULA  turns out to be necessary in order to have a confining gluon propagator which attains a non-vanishing value at zero momentum, eqs.(REF ),(), in agreement with the lattice data {{cite:1b03003f-cd63-42c0-88d9-0c4d2a55f142}}, {{cite:72dfb66d-9573-48e7-a7b5-76782400967a}}, {{cite:ecc77e23-5c09-4b96-b5bf-53290dff5d90}}. It is worth underlining that this property is deeply related to the soft breaking of the BRST symmetry. In fact, the non-vanishing of the propagator at zero momentum relies on the parameter FORMULA , which reflects the existence of the BRST-exact dimension-two condensate {{cite:5fa1d9d2-b0fd-4cab-9bdf-716566cbb434}}, {{cite:6e371264-c0c3-478c-a220-389f58748da6}}, {{cite:69d0b3f6-df92-4155-b832-e561f0850ca8}}
+FORMULA 
+Moreover, despite the soft breaking, eq.(REF ), a set of BRST invariant composite operators whose correlation functions exhibit the Källén-Lehmann spectral representation with positive spectral densities can be consistently introduced {{cite:22397645-db24-4011-bc8f-4837e95780b7}}.
+Although a satisfactory understanding of the physical meaning of the soft breaking of the BRST symmetry in presence of the Gribov horizon and of its relationship with confinement is still lacking, it is worth underlining here that the first concrete numerical lattice evidence of the existence of such breaking has been provided by the authors of {{cite:2dba4049-706d-40d8-ad46-26c2e12bc470}}, who have shown that a BRST exact correlation function is non-vanishing, signaling thus the breaking of the BRST symmetry. More precisely, in {{cite:2dba4049-706d-40d8-ad46-26c2e12bc470}}, the infrared behaviour of the correlation function
+FORMULA 
+involving the inverse of the Faddeev-Popov operator FORMULA ,
+has been investigated through numerical lattice simulations. The relation of the correlation function (REF ) with the breaking of the BRST symmetry can be understood by observing that, within the local formulation of the Gribov-Zwanziger framework, expression (REF ) corresponds to the exact correlation function
+FORMULA 
+In fact, integrating out the auxiliary fields FORMULA  in expression
+FORMULA 
+gives
+FORMULA 
+This equation shows that the investigation of the correlation function (REF ) with a cutoff at the Gribov horizon is directly related to the existence of the BRST breaking. This is precisely what has been done in {{cite:2dba4049-706d-40d8-ad46-26c2e12bc470}}, where the correlator (REF ) has been shown to be non-vanishing, see Fig.1 of {{cite:2dba4049-706d-40d8-ad46-26c2e12bc470}}. Moreover, from {{cite:2dba4049-706d-40d8-ad46-26c2e12bc470}}, it turns out that in the deep infrared the Fourier transform of the correlation function (REF ) is deeply enhanced, see Fig.2 of {{cite:2dba4049-706d-40d8-ad46-26c2e12bc470}}, behaving as FORMULA , namely
+FORMULA 
+As observed in {{cite:2dba4049-706d-40d8-ad46-26c2e12bc470}}, this behaviour can be understood by making use of the analysis {{cite:637f04b7-08d9-4b24-b002-632122815046}}, i.e. of the cluster decomposition
+FORMULA 
+where FORMULA  and FORMULA  correspond to the gluon and ghost propagators, eqs.(),(REF ). A non-enhanced ghost propagator, i.e. FORMULA , and an infrared finite gluon propagator, i.e. FORMULA , nicely yield the behaviour of eq.(REF ).
+The aim of the present work is that of showing that the quantity FORMULA , eq.(), and the correlation function FORMULA , eq.(REF ), can be consistently generalised to the case of matter fields, i.e. when quark and scalar fields are included in the starting action.
+More precisely, let FORMULA  denote a generic matter field in a given representation of FORMULA , specified by the generators FORMULA , FORMULA , and let FORMULA  stand for the quantity
+FORMULA 
+which is a convolution of the inverse Faddeev-Popov operator with a given colored matter field, being clearly the matter counterpart of the operator FORMULA  in the pure gauge case.
+We shall be able to prove that, in analogy with the case of the gauge field FORMULA , a non-trivial correlation function
+FORMULA 
+can be obtained from a local and renormalizable action which is constructed by adding to the starting conventional matter action a non-local term which shares great similarity with the horizon function FORMULA , eq.(REF ), namely
+FORMULA 
+As it happens in the case of the Gribov-Zwanziger theory, the term (REF ) can be cast in local form by means of the introduction of suitable auxiliary fields. The resulting local action enjoys a large set of Ward identities which guarantee its renormalizabilty. The introduction of the term (REF ) deeply modifies the infrared behaviour of the correlation functions of the matter fields giving rise, in particular, to propagators which are of the confining type, while being in good agreement with the available lattice data, as in the case of the scalar matter fields {{cite:73632d07-b18a-45f9-9ab6-9cfe1da8f93d}}, {{cite:9697e906-58dc-4daf-b7d7-4d5ac2c415f3}} as well as in the case of quarks {{cite:2952c800-cc8d-4229-bd01-097717d3251a}}, {{cite:443a9af3-3f77-4717-9bfb-6ac10fa4521a}}.
+Moreover, relying on the numerical data for the two-point correlation functions of quark and scalar fields, expression (REF ) turns out to be non-vanishing and, interestingly enough, it seems to behave exactly as expression (REF ) in the deep infrared, i.e.
+FORMULA 
+Also, as in the case of the gauge sector, expression (REF ) signals the existence of the BRST breaking in the matter field sector of the theory.
+The present work is organized as follows. In Sect.2 we present a discussion of the correlation function (REF ) in the case of quark and scalar fields, relying on the available data for the quark and scalar propagators. In Sect.3 we shall show how the correlation function FORMULA  can be obtained from a local and renormalizable action exhibiting a soft breaking of the BRST invariance in the matter sector. This will be done by working out in detail the case of a scalar field in the adjoint representation, in Subsect.3.1. We shall also discuss how FORMULA  encodes information on the soft breaking of the BRST symmetry. In Subsect.3.2 we generalize the previous construction to the case of quark fields. Sect.4 contains our conclusion. The final Appendix collects the details of the algebraic proof of the renormalizability of the local action obtained by the addition of the term (REF ) in the case of a scalar matter field in the adjoint representation.
+
+Discussion on the correlation function FORMULA  from the available lattice data on the propagators of scalar and quark fields
+Let us now investigate the correlation function FORMULA , that signals soft BRST breaking in the matter sector, in light of available lattice data for gauge-interacting matter propagators in the Landau gauge.
+As in the pure gauge case, one may rely on the general cluster decomposition property in order to obtain the leading behavior in the deep infrared region. With this aim, one writes the FORMULA  function in terms of elementary fields, with the inverse Faddeev-Popov propagator represented via ghost fields as usual:
+FORMULA 
+where FORMULA  is the ghost propagator, while FORMULA  now stands for the propagator of the associated matter field. The one-particle-irreducible (1PI) contribution above becomes subleading in the IR limit, since in this case the points FORMULA  and FORMULA  are largely separated and the cluster decomposition applies. This can also be seen diagrammatically.
+Since the external legs are ghosts, these corrections will involve at least two ghost-gluon vertices, that carry a derivative coupling. In fact, as a consequence of the transversality
+of the gluon propagator, factorization of the external momentum takes place, implying the subleading character of the 1PI contributions.
+Therefore, in the limit FORMULA , the (full) ghost and matter propagators alone dictate the momentum-dependence of the correlation function FORMULA , i.e.
+FORMULA 
+Having in mind the non-enhanced ghost propagator, FORMULA  (as observed in high-precision pure gauge simulations in the Landau gauge {{cite:1b03003f-cd63-42c0-88d9-0c4d2a55f142}}, {{cite:72dfb66d-9573-48e7-a7b5-76782400967a}}, {{cite:ecc77e23-5c09-4b96-b5bf-53290dff5d90}}), it is straightforward to conclude that a finite zero-momentum value for the matter propagators is a sufficient condition for a FORMULA  behavior of the correlation function FORMULA  in the deep IR.
+As we shall see in the following subsections, both scalar and fermion propagators display, when coupled to non-Abelian gauge fields, a shape compatible with a finite zero-momentum value in the currently available lattice data. We expect thus a FORMULA  behavior of the correlation function FORMULA  in the matter sector, being in this sense a universal property associated with the Faddeev-Popov operator – when coupled to any colored field – in confining Yang-Mills theories that can be easily probed in the future via direct lattice measurements.
+Moreover, fits of the lattice data are presented for adjoint scalars in Subsect.REF  and for fermions in Subsect.REF . This analysis shows that the propagators for gauge-interacting scalars and fermions are compatible not only with a finite zero-momentum limit, but also with a complete analytical form that can be extracted from an implementation of soft BRST breaking in the matter sector to be presented below, in Sect.3.
+ The case of the scalar field in the adjoint representation
+In this subsection, we consider real scalar fields coupled to a confining Yang-Mills theory:
+FORMULA 
+where FORMULA  is the Landau gauge fixing term and FORMULA  is a real scalar field in the adjoint representation of FORMULA  and there is no Higgs mechanism, namely FORMULA .
+We are interested in analyzing the infrared non-perturbative regime, focussing especially on the adjoint scalar propagator. We resort to the lattice implementation of this system: currently available in the quenched approximation with the specific setup described in {{cite:9697e906-58dc-4daf-b7d7-4d5ac2c415f3}}. Preliminary and unpublished data points for larger lattice sizes (with lattice cutoff FORMULA  GeV and FORMULA  lattice sites) {{cite:e50e5184-347d-4e40-9e98-eb61a4e89840}} are displayed in Fig. 1 for different values of the bare scalar mass (FORMULA  GeV). It should be noticed that this data is unrenormalized in the lattice sense. The renormalization procedure that fixes the data to a known renormalization scheme and the resulting points will be discussed below.
+FIGURE 
+First of all, the data tends to show a finite zero-momentum value for the scalar propagator, irrespective of its bare mass. This indicates – together with the well-stablished non-enhanced ghost propagator – that the correlation function FORMULA  is indeed non-vanishing in the IR limit, presenting the power-law enhancement FORMULA  that we have anticipated above.
+The curves in Fig. 1 further show that the data is compatible with 4-parameter fits of the following form:
+FORMULA 
+where FORMULA  are the fit parameters, whose values are presented in Table 1. In this case we may extrapolate the fits in order to obtain the specific values at zero momentum: FORMULA  GeVFORMULA  for FORMULA  GeV, respectively, so that the non-trivial IR limit is clear. Moreover, the FORMULA  parameter – which will be directly related to the realization of a FORMULA  in the framework of the next Section – seems to be nonvanishing. It is also interesting to point out that the obtained fits correspond to a combination of two complex-conjugate poles for all values of bare scalar mass, indicating the absence of a Källén-Lehmann spectral representation for this two-point function and the presence of positivity violation. In this sense the adjoint scalar propagators consistently represent confined degrees of freedom, that do not exhibit a physical propagating pole.
+TABLE 
+An important issue to be addressed is the possibility of scheme dependence of those findings. To check for this, we have also analyzed the scalar propagators after renormalization in another scheme.
+As usual, renormalization is implemented through the inclusion of mass FORMULA  and wave-function renormalization FORMULA  counterterms:
+FORMULA 
+where the counterterms are obtained by imposing the following renormalization conditions (for FORMULA  GeV):
+
+FORMULA ;
+
+FORMULA .
+
+The fit functions were used to compute the counterterms and the renormalized points are obtained from the original lattice data by adding the same countertermsDirect renormalization of lattice data was avoided, since we did not have access to the measurement of FORMULA  and the number of data points available was not sufficient for a reliable numerical derivative to be computed.. Results are shown in Fig. 2 and Table 2.
+FIGURE 
+The renormalized propagator may be rewritten in the form (REF ), with redefined parameters FORMULA :
+FORMULA 
+TABLE 
+All the interesting qualitative properties observed in the unrenormalized data remain valid, namely: FORMULA  finite IR limit, FORMULA  compatibility with 4-parameter fits of the same form, with non-trivial FORMULA  values, FORMULA  the fit parameters yield complex-conjugate poles, so that the renormalized propagator is still compatible with positivity violation and confinement.
+We underline that the present analysis for the scalar fields is meant to be a preliminary study of the propagator. As such, the results are still at the qualitative level. A more quantitative analysis would require further simulations with improved statistics and even larger lattices.
+
+The case of the quark field
+In this subsection, we consider the case of gauge-interacting fermionic fields coupled to a confining Yang-Mills theory. Of course, the case of QCD is the emblematic example.
+We will verify that the same qualitative properties shown above for scalar fields can also be found in this case, indicating that the IR enhancement of the correlation function FORMULA  seems to be universally present in the confined matter sector.
+The fermionic propagator is decomposed as usual,
+FORMULA 
+and our interest resides solely on the mass function FORMULA , whose lattice data will be analyzed here.
+FIGURE 
+As already discussed and shown in {{cite:20cbdc72-dc7e-46bc-924b-5298db005358}}, the data of {{cite:443a9af3-3f77-4717-9bfb-6ac10fa4521a}} for the mass function of the propagator of degenerate up (FORMULA ) and down (FORMULA ) quarks with current mass FORMULA  can be fitted excellently with
+FORMULA 
+as can be seen in Fig. 3. A recent alternative semi-analytic description of the non-perturbative quark propagator in the Landau gauge based on an effective gluon mass was discussed in {{cite:c66521f1-5409-4717-bee1-f3416ff0dc4d}}.
+The quark propagator presents clearly a finite IR limit. This is, in fact, well-known in QCD as dynamical mass generation and is intimately related to chiral symmetry breaking. Interestingly enough, this is also a sufficient condition – supposing a non-enhanced ghost propagator – for the soft BRST breaking in the quark sector through the IR enhancement of the correlation function FORMULA . Again, we predict a FORMULA  IR scaling for this observable, now in the quark sector. This suggests a close relation between soft BRST breaking and chiral symmetry breaking, and may provide an interesting underlying connection between confinement and chiral symmetry breaking.
+
+Implementing the correlation function FORMULA  within a local quantum field theory framework
+Now that we have established that available lattice data for different propagators of gauge-interacting matter seems to be qualitatively compatible with the non-trivial FORMULA  behaviour, let us discuss how the correlation function (REF ) can be obtained through a local and renormalizable action. In this section, the example of a real scalar field FORMULA  in the adjoint representation of the gauge group will be worked out in detail.
+Scalar field in the adjoint representation 
+We start by considering the following non-local action
+FORMULA 
+where FORMULA  is a massive parameter which, to some extent, plays a role akin to that of the Gribov parameter FORMULA  of the Gribov-Zwanziger action. eq.(REF ).
+Following now the same procedure adopted in the case of the Gribov-Zwanziger action, it is not difficult to show that the non-local action (REF ) can be cast in local form. This is achieved by introducing a set of auxiliary fields FORMULA , FORMULA , where FORMULA  are commuting fields while FORMULA  are anti-commuting. For the local version of (REF ) one gets
+FORMULA 
+with
+FORMULA 
+and
+FORMULA 
+As in the case of the Gribov-Zwanziger action, the auxiliary fields FORMULA , FORMULA  appear quadratically, so that they can be easily integrated out, giving back precisely the non-local starting expression (REF ). Moreover, in full analogy with the Gribov-Zwanziger case, the local action FORMULA  exhibits a soft breaking of the BRST symmetry. In fact, making use of eqs.(REF ) and of
+FORMULA 
+it follows that
+FORMULA 
+where
+FORMULA 
+Again, being of dimension two in the fields, the breaking term FORMULA  is a soft breaking.
+We now add the local action (REF ) to the Gribov-Zwanziger action (REF ), obtaining
+FORMULA 
+As it happens in the case of the Gribov-Zwanziger action, the local action FORMULA  can be proven to be renormalizable to all orders. This important property follows from the existence of a large set of Ward identities which can be derived in the matter scalar sector and which restrict very much the possible allowed counterterms. For the sake of clarity, the whole Appendix A has been devoted to the detailed algebraic proof of the renormalizability of the action (REF ).
+As in the case of the Gribov-Zwanziger action, expression (REF ) is well suited to investigate the correlation function
+FORMULA 
+FORMULA 
+and its relation with the soft BRST breaking in the scalar field sector, eq.(REF ). In fact, repeating the same reasoning of eqs.(REF ), (REF ),(REF ), one is led to consider the exact BRST correlation function in the matter scalar field sector
+FORMULA 
+Integrating out the auxiliary fields FORMULA  in expression
+FORMULA 
+gives
+FORMULA 
+showing that, in analogy with the case of the gauge field, the correlation function (REF ) with a cutoff at the Gribov horizon is directly related to the existence of the BRST breaking in the matter sector.
+We can now have a look at the two-point correlation function of the scalar field. Nevertheless, before that, an additional effect has to be taken into account. In very strict analogy with the case of the Refined Gribov-Zwanziger action, eq.(REF ), the soft breaking of the BRST symmetry occurring in the scalar matter sector, eq.(REF ), implies the existence of a non-vanishing BRST exact dimension two condensate, namely
+FORMULA 
+In order to show that expression (REF ) in non-vanishing, we couple the operator FORMULA  to the local action FORMULA , eq.(REF ), by means of a constant external source FORMULA ,
+FORMULA 
+and we evaluate the vacuum energy FORMULA  in the presence of FORMULA , namely
+FORMULA 
+Thus, the condensate FORMULA  is obtained by differentiating FORMULA  with respect to FORMULA  and setting FORMULA  at the end, i.e.
+FORMULA 
+Employing dimensional regularisation, to the first order, we have
+FORMULA 
+where FORMULA  stands for the part of the vacuum energy which is independent from FORMULA . Differentiating eq.(REF ) with respect to FORMULA  and setting FORMULA , we get
+FORMULA 
+Notice that the integral in the right hand side of eq.(REF ) is ultraviolet convergent in FORMULA . Expression (REF ) shows that, as long as the parameter FORMULA  in non-vanishing, the condensate FORMULA  is dynamically generated.
+The effect of the condensate
+(REF ) can be taken into account by adding to the action FORMULA  the novel term
+FORMULA 
+giving rise to the Refined action
+FORMULA 
+Finally, for the propagator of the scalar field, we get
+FORMULA 
+which is precisely of the the same kind employed in the previous section in order to fit the lattice data.
+
+The quark field
+In this subsection we generalise the previous construction to the case of quark fields. The starting non-local action (REF ) is now given by
+FORMULA 
+where the massive parameter FORMULA  is the analogue of the parameter FORMULA  of the scalar field and
+FORMULA 
+is the covariant derivative in the fundamental representation, specified by the generators FORMULA . As in the previous case, the non-local action (REF ) can be cast in local form through the introduction of a suitable set of auxiliary fields: FORMULA  and FORMULA . The fields FORMULA  are Dirac spinors with two color indices FORMULA  belonging, respectively, to the adjoint and to the fundamental representation. Similarly, FORMULA  are a pair of spinor fields with ghost number FORMULA . The spinors FORMULA  are anti-commuting, while FORMULA  are commuting.
+For the local version of the action, we get
+FORMULA 
+where
+FORMULA 
+and
+FORMULA 
+The non-local action FORMULA  is easily recovered by integrating out the auxiliary fields FORMULA  and FORMULA . As in the case of the scalar field, the term FORMULA  induces a soft breaking of the BRST symmetry. In fact, from
+FORMULA 
+one easily checks that
+FORMULA 
+where
+FORMULA 
+Again, being of dimension FORMULA  in the fields, FORMULA  is a soft breaking. In the present case, for the quantity (REF ) we have
+FORMULA 
+where we have explicitated the Dirac indices FORMULA .
+As in the case of the scalar field, the action FORMULA  can be added to the Gribov-Zwanziger action. The resulting action, FORMULA , turns out to be renormalizable. Although we shall not give here the details of the proof of the renormalizability of the action FORMULA , it is worth mentioning that it can be given by following the framework already outlined in {{cite:36baaaeb-3ee5-4457-8c67-8d65c7a995fb}}, where a similar non-local spinor action has been considered.
+Proceeding now as in the case of the scalar field, one finds
+FORMULA 
+showing that the correlation function FORMULA  with a cutoff at the Gribov horizon is related to the existence of the BRST breaking, eq.(REF ).
+Let us end this section by discussing the two-point correlation function of the quark field. As before, an additional effect has to be taken into account. Also here, the soft breaking of the BRST symmetry, eq.(REF ), implies the existence of a non-vanishing BRST exact dimension two condensate, namely
+FORMULA 
+whose effect can be taken into account by adding to the action FORMULA  the term
+FORMULA 
+Therefore, including the dimension two condensates, we end up with the Refined action
+FORMULA 
+Finally, for the propagator of the quark field, we get
+FORMULA 
+where
+FORMULA 
+and
+FORMULA 
+Expression (REF ) is of the the same kind employed to fit the lattice data.
+
+Conclusion
+One of the striking features of the (R)GZ formulation of non-perturbative Euclidean continuum Yang-Mills theories is the appearance of the soft breaking of the BRST symmetry, which seems deeply related to gluon confinement. Recently, direct lattice investigations {{cite:2dba4049-706d-40d8-ad46-26c2e12bc470}} have confirmed the existence of this breaking through the analysis of the correlation function:
+FORMULA 
+As pointed in {{cite:2dba4049-706d-40d8-ad46-26c2e12bc470}}, this non-vanishing correlator signals the breaking of the BRST invariance.
+Interestingly enough, the behaviour (REF ) is in quite good agreement with the RGZ framework.
+The aim of the present work is that of providing evidence that a similar picture can be consistently achieved in the matter sector. The cases of both adjoint scalars and quarks indicate that it is possible to introduce an analogous operator FORMULA  for matter fields,
+FORMULA 
+so that the correlation function FORMULA  is non-vanishing and, from the available lattice data, seems to behave like expression (REF ), namely
+FORMULA 
+Again, the non-vanishing of FORMULA  indicates the soft breaking of the BRST symmetry in the matter sector.
+In this sense, the correlation function FORMULA  could be regarded as a direct signature for BRST breaking, being accessible both analytically as well as through numerical lattice simulations.
+Concerning the analytic side, we have been able to construct a local and renormalizable action including matter fields which accommodates the non-trivial correlation functions FORMULA . Our analysis further suggests that the inverse of the Faddeev-Popov operator FORMULA , whose existence is guaranteed by the restriction to the Gribov region FORMULA , couples in a universal way to any colored field FORMULA  (e.g. gluon and matter fields),
+FORMULA 
+giving rise to a non-vanishing correlation function
+FORMULA 
+Therefore, these correlation functions could signal that the soft breaking of the BRST invariance generated by the restriction to the Gribov region is transmitted to the colored objects through the coupling with the inverse Faddeev-Popov operator FORMULA , as described by equations (REF ) and (REF ).
+Although this construction has been presented in the case of the Landau gauge, it can be generalized to other gauges, like, e.g., the Maximal Abelian Gauge {{cite:41595492-9de3-4188-aa6b-1a92197aa4ad}}.
+
+Acknowledgments
+The authors would like to thank D. Dudal and O. Oliveira for useful discussions and help with Fig.3. We thank A. Maas for discussions and also for providing the preliminary lattice data on the adjoint scalars.
+The Conselho Nacional de Desenvolvimento Científico e
+Tecnológico (CNPq-Brazil), the Faperj, Fundação de
+Amparo à Pesquisa do Estado do Rio de Janeiro, the
+Coordenação de Aperfeiçoamento de Pessoal de
+Nível Superior (CAPES) are gratefully acknowledged. L.F.P. is supported by a BJT fellowship from the brazilian program “Ciência sem Fronteiras” (grant number 301111/2014-6).
+
+Algebraic Renormalization of the scalar action  FORMULA
+In order to prove the renormalizability of the action FORMULA , eq.(REF ), we proceed as in {{cite:3e53444f-ca45-4d1d-8f04-424f45f09a1a}}, {{cite:451b1452-4a29-4bdc-8929-70b9c8c2e506}}, {{cite:0392f26e-6e56-4ac1-8749-63eec57a7dd6}}, {{cite:5fa1d9d2-b0fd-4cab-9bdf-716566cbb434}}, {{cite:6e371264-c0c3-478c-a220-389f58748da6}}, {{cite:69d0b3f6-df92-4155-b832-e561f0850ca8}} and we embed the theory into an extended action FORMULA  enjoying exact BRST symmetry, given by
+FORMULA 
+where FORMULA  are external sources.
+The original local action FORMULA , (REF ), can be re-obtained from the extended action FORMULA  by letting the external fields to assume their physical values namely
+FORMULA 
+so that
+FORMULA 
+where the parameter FORMULA  has been introduced in order to take into account possible divergences in the vacuum energy associated to the term FORMULA . This term stems from the source term FORMULA , which is allowed by power counting. In the physical limit the vertex FORMULA  remains non-vanishing. Though, it is harmless, due to the absence of mixed propagators FORMULA  and FORMULA .
+It is easy to check that the extended action FORMULA  enjoys exact BRST invariance, i.e.
+FORMULA 
+where
+FORMULA 
+and
+FORMULA 
+As noticed in {{cite:3e53444f-ca45-4d1d-8f04-424f45f09a1a}}, {{cite:451b1452-4a29-4bdc-8929-70b9c8c2e506}}, {{cite:0392f26e-6e56-4ac1-8749-63eec57a7dd6}}, {{cite:5fa1d9d2-b0fd-4cab-9bdf-716566cbb434}}, {{cite:6e371264-c0c3-478c-a220-389f58748da6}}, {{cite:69d0b3f6-df92-4155-b832-e561f0850ca8}}, it is useful introducing a multi-index notation for the localizing auxiliary fields FORMULA  where the multi-index FORMULA  runs from 1 to FORMULA . The important reason in order to introduce the multi-index notation is related to the existence of a global symmetry FORMULA  in the index FORMULA , which plays an important role in the proof of the algebraic renormalization. Analogously, one can introduce a second index FORMULA  for the localizing fields of the matter scalar sector FORMULA , where FORMULA . Again, the introduction of the index FORMULA  is related to the existence of a second global symmetry FORMULA . In the multi-index notation, the action (REF ) reads
+FORMULA 
+We are now ready to write down the large set of Ward identities fulfilled by the action (REF ). These are given by:
+FORMULA  The Slavnov-Taylor identity:
+FORMULA 
+where
+FORMULA 
+For future convenience, let us also introduce the so-called linearized Slavnov-Taylor operator FORMULA , given by
+FORMULA 
+The operator FORMULA  enjoys the important property of being nilpotent
+FORMULA 
+FORMULA  The gauge-fixing and anti-ghost equations:
+FORMULA 
+FORMULA  The linearly broken Ward identities:
+FORMULA 
+FORMULA  The ghost equation:
+FORMULA 
+where
+FORMULA 
+and
+FORMULA 
+FORMULA  The global symmetry  FORMULA:
+FORMULA 
+FORMULA  The global symmetry  FORMULA:
+FORMULA 
+Let us also dispslay below the quantum numbers of all fields and sources
+FORMULA  Table of quantum numbers (“B" is for bosonic fields and “F" is for fermionic fields) :
+ TABLE
+ TABLE
+Algebraic characterisation of the invariant counter term and renormalizability
+In order to determine the most general invariant counterterm which can be freely added to each order of perturbation theory, we follow the Algebraic Renormalization framework {{cite:a7792c9a-292e-495d-b3c9-06b52efc1bf5}} and perturb the complete action FORMULA  by adding an integrated local polynomial in the fields and sources with dimension bounded by four and vanishing ghost number, FORMULA , and we require that the perturbed action, FORMULA , where FORMULA  is an infinitesimal expansion parameter, obeys the same Ward identities fulfilled by FORMULA  to the first order in the parameter FORMULA . Therefore, in the case of the Slavnov-Taylor identity (REF ), we have
+FORMULA 
+which leads to
+FORMULA 
+implying that FORMULA  belongs to the cohomology of the linearized Slavnov-Taylor operator in the sector of the local integrated polynomials of dimension bounded by four. From the general results on the cohomology of Yang-Mills theories, see {{cite:a7792c9a-292e-495d-b3c9-06b52efc1bf5}}, the counterterm FORMULA  can be parametrized as follows
+FORMULA 
+where FORMULA  are free arbitrary coefficients and FORMULA  is an integrated polynomial in the fields and sources with dimension bounded by 4 and with ghost number FORMULA . The most general expression for FORMULA  is given by
+FORMULA 
+where FORMULA  are arbitrary coefficients. After imposition of all other Ward identities it turns out that the non-vanishing parameters which remain at the end of a lengthy algebraic analysis are:
+FORMULA 
+as well as
+FORMULA 
+Therefore, for the final expression of the invariant counterterm one finds
+FORMULA 
+It remains now to check that the counter term FORMULA  can be reabsorbed into the initial action FORMULA , through a redefinition of the fields, sources and parameters, according to
+FORMULA 
+with
+FORMULA 
+where FORMULA  stands for all fields, FORMULA  for all sources and FORMULA  for all parameters, i.e. FORMULA .
+Therefore, by direct application of (REF ) we get
+FORMULA 
+and
+FORMULA 
+These equations show that the invariant counterterm FORMULA , eq.(REF ), can be reabsorbed into the initial action FORMULA  through a multiplecative redefinition of the fields, sources and parameters. This concludes the algebraic proof of the all order renormalizability of FORMULA .
+V. N. Gribov,
+Nucl. Phys. B ¦139¦, 1 (1978).
+R. F. Sobreiro and S. P. Sorella,
+hep-th/0504095.
+N. Vandersickel and D. Zwanziger,
+Phys. Rept. ¦520¦, 175 (2012)
+[arXiv:1202.1491 [hep-th]].
+I. M. Singer,
+Commun. Math. Phys. ¦60¦, 7 (1978).
+{{cite:02b22b9a-c8fc-44a8-9414-5ca8f4132a41}}, {{cite:ab1e601c-f667-4ce3-b2bb-aa135b6c79fd}}, {{cite:32b473b3-f396-4ce0-a433-084f6f471ee0}}
+G. Dell'Antonio and D. Zwanziger,
+Nucl. Phys. B ¦326¦, 333 (1989).
+G. Dell'Antonio and D. Zwanziger,
+Commun. Math. Phys. ¦138¦, 291 (1991).
+P. van Baal,
+Nucl. Phys. B ¦369¦, 259 (1992).
+A. Cucchieri and T. Mendes,
+PoS LAT ¦2007¦ (2007) 297
+[arXiv:0710.0412 [hep-lat]].
+A. Cucchieri and T. Mendes,
+Phys. Rev. Lett. ¦100¦, 241601 (2008)
+[arXiv:0712.3517 [hep-lat]].
+A. Cucchieri and T. Mendes,
+Phys. Rev. D ¦78¦, 094503 (2008)
+[arXiv:0804.2371 [hep-lat]].
+A. Cucchieri, D. Dudal, T. Mendes and N. Vandersickel,
+Phys. Rev. D ¦85¦, 094513 (2012)
+[arXiv:1111.2327 [hep-lat]].
+A. Cucchieri, D. Dudal and N. Vandersickel,
+Phys. Rev. D ¦85¦, 085025 (2012)
+[arXiv:1202.1912 [hep-th]].
+O. Oliveira and P. J. Silva,
+Phys. Rev. D ¦86¦, 114513 (2012)
+[arXiv:1207.3029 [hep-lat]].
+O. Oliveira and P. J. Silva,
+Phys. Rev. D ¦79¦, 031501 (2009)
+[arXiv:0809.0258 [hep-lat]].
+V. G. Bornyakov, V. K. Mitrjushkin and M. Muller-Preussker,
+Phys. Rev. D ¦81¦ (2010) 054503
+[arXiv:0912.4475 [hep-lat]].
+E. -M. Ilgenfritz, C. Menz, M. Muller-Preussker, A. Schiller and A. Sternbeck,
+Phys. Rev. D ¦83¦, 054506 (2011)
+[arXiv:1010.5120 [hep-lat]].
+D. Zwanziger,
+Nucl. Phys. B ¦321¦, 591 (1989).
+D. Zwanziger,
+Nucl. Phys. B ¦323¦, 513 (1989).
+D. Zwanziger,
+Nucl. Phys. B ¦399¦, 477 (1993).
+D. Dudal, S. P. Sorella, N. Vandersickel and H. Verschelde,
+Phys. Rev. D ¦77¦, 071501 (2008)
+[arXiv:0711.4496 [hep-th]].
+D. Dudal, J. A. Gracey, S. P. Sorella, N. Vandersickel and H. Verschelde,
+Phys. Rev. D ¦78¦, 065047 (2008)
+[arXiv:0806.4348 [hep-th]].
+D. Dudal, S. P. Sorella and N. Vandersickel,
+Phys. Rev. D ¦84¦, 065039 (2011)
+[arXiv:1105.3371 [hep-th]].
+J. A. Gracey,
+Phys. Rev. D ¦82¦, 085032 (2010)
+[arXiv:1009.3889 [hep-th]].
+D. J. Thelan and J. A. Gracey,
+Phys. Rev. D ¦89¦, 107701 (2014)
+[arXiv:1404.6364 [hep-th]].
+D. Dudal, M. S. Guimaraes and S. P. Sorella,
+Phys. Rev. Lett. ¦106¦, 062003 (2011)
+[arXiv:1010.3638 [hep-th]].
+D. Dudal, M. S. Guimaraes and S. P. Sorella,
+arXiv:1310.2016 [hep-ph].
+V. Mathieu, N. Kochelev and V. Vento,
+Int. J. Mod. Phys. E ¦18¦, 1 (2009)
+[arXiv:0810.4453 [hep-ph]].
+F. Canfora and L. Rosa,
+Phys. Rev. D ¦88¦, 045025 (2013)
+[arXiv:1308.1582 [hep-th]].
+K. Fukushima and N. Su,
+Phys. Rev. D ¦88¦, 076008 (2013)
+[arXiv:1304.8004 [hep-ph]].
+F. Canfora, P. Pais and P. Salgado-Rebolledo,
+arXiv:1311.7074 [hep-th].
+M. A. L. Capri, D. Dudal, A. J. Gomez, M. S. Guimaraes, I. F. Justo, S. P. Sorella and D. Vercauteren,
+Phys. Rev. D ¦88¦, 085022 (2013)
+[arXiv:1212.1003 [hep-th]].
+M. A. L. Capri, D. Dudal, M. S. Guimaraes, I. F. Justo, S. P. Sorella and D. Vercauteren,
+Annals Phys. C ¦343¦, 72 (2014)
+[arXiv:1309.1402 [hep-th]].
+E. H. Fradkin and S. H. Shenker,
+Phys. Rev. D ¦19¦, 3682 (1979).
+M. A. L. Capri, D. R. Granado, M. S. Guimaraes, I. F. Justo, L. F. Palhares, S. P. Sorella and D. Vercauteren,
+arXiv:1404.2573 [hep-th].
+M. A. L. Capri, M. S. Guimaraes, I. F. Justo, L. F. Palhares and S. P. Sorella,
+arXiv:1404.7163 [hep-th].
+L. Baulieu and S. P. Sorella,
+Phys. Lett. B ¦671¦, 481 (2009)
+[arXiv:0808.1356 [hep-th]].
+D. Dudal, S. P. Sorella, N. Vandersickel and H. Verschelde,
+Phys. Rev. D ¦79¦, 121701 (2009)
+[arXiv:0904.0641 [hep-th]].
+S. P. Sorella,
+Phys. Rev. D ¦80¦, 025013 (2009)
+[arXiv:0905.1010 [hep-th]].
+S. P. Sorella,
+J. Phys. A ¦44¦, 135403 (2011)
+[arXiv:1006.4500 [hep-th]].
+M. A. L. Capri, A. J. Gomez, M. S. Guimaraes, V. E. R. Lemes, S. P. Sorella and D. G. Tedesco,
+Phys. Rev. D ¦82¦, 105019 (2010)
+[arXiv:1009.4135 [hep-th]].
+D. Dudal and S. P. Sorella,
+Phys. Rev. D ¦86¦, 045005 (2012)
+[arXiv:1205.3934 [hep-th]].
+A. Reshetnyak,
+arXiv:1312.2092 [hep-th].
+L. Baulieu, D. Dudal, M. S. Guimaraes, M. Q. Huber, S. P. Sorella, N. Vandersickel and D. Zwanziger,
+Phys. Rev. D ¦82¦, 025021 (2010)
+[arXiv:0912.5153 [hep-th]].
+A. Cucchieri, D. Dudal, T. Mendes and N. Vandersickel,
+arXiv:1405.1547 [hep-lat].
+D. Zwanziger,
+Phys. Rev. D ¦81¦, 125027 (2010)
+[arXiv:1003.1080 [hep-ph]].
+A. Maas,
+PoS FACESQCD , 033 (2010)
+[arXiv:1102.0901 [hep-lat]].
+A. Maas,
+Eur. Phys. J. C ¦71¦, 1548 (2011)
+[arXiv:1007.0729 [hep-lat]].
+S. Furui and H. Nakajima,
+Phys. Rev. D ¦73¦, 074503 (2006).
+M. B. Parappilly, P. O. Bowman, U. M. Heller, D. B. Leinweber, A. G. Williams and J. BZhang,
+Phys. Rev. D ¦73¦, 054504 (2006)
+[hep-lat/0511007].
+A. Maas, ¦Private Communication¦.
+O. Oliveira, ¦Private Communication¦.
+D. Dudal, M. S. Guimaraes, L. F. Palhares and S. P. Sorella,
+arXiv:1303.7134 [hep-ph].
+M. Pel‡ez, M. Tissier and N. Wschebor,
+arXiv:1407.2005 [hep-th].
+M. A. L. Capri ¦et al¦, ¦Work in progress¦.
+L. Baulieu, M. A. L. Capri, A. J. Gomez, V. E. R. Lemes, R. F. Sobreiro and S. P. Sorella,
+Eur. Phys. J. C ¦66¦, 451 (2010)
+[arXiv:0901.3158 [hep-th]].
+O. Piguet and S. P. Sorella,
+Lect. Notes Phys. M ¦28¦, 1 (1995).

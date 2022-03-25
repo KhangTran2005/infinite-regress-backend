@@ -1,0 +1,812 @@
+
+[aps,manuscript,epsf]revtex
+
+Statistical Physics of Unzipping DNA
+David R. Nelson
+Lyman Laboratory of Physics, Harvard University,
+Cambridge, MA 02138.
+E-mail: nelson@cmt.harvard.edu
+2018/12/10 10:54:06
+
+The denaturation of double-stranded DNA as function of
+force and temperature is discussed. At room temperature,
+sequence heterogeneity dominates the physics of
+single molecule force-extension curves starting
+about 7 piconewtons of below a FORMULA 15 FORMULA  unzipping
+transition. The dynamics of the unzipping fork exhibits
+anomalous drift and diffusion in a similar range above this
+transition. Energy barriers
+near the transition scale as the square root
+of the genome size. Recent observations of
+jumps and plateaus in the unzipping of lambda phage DNA at
+constant force are
+consistent with these predictions.
+
+Single Molecule Biophysics Experiments
+The past decade has seen a revolution in biophysics,
+due to
+exquisitely sensitive experiments {{cite:60cc6b92-6e02-48e2-a02e-25b1ac993b66}}
+which probe ingredients of the “central dogma”
+of molecular biology {{cite:f7db5410-6033-4976-a76b-0ed864d019fa}} at the level of
+individual molecules. Although exceptions exist,
+the central dogma states that biological
+information first flows from
+DNA to messenger RNA via transcription mediated by a
+RNA polymerase. Information is then transferred from mRNA
+to proteins via a ribosome-mediated translation process.
+Among the efforts to probe the basic constituents further:
+(a) Proteins anchored to a microscope slide in their
+biologically relevant folded state have been teased apart
+with atomic force probes {{cite:7f3f36e9-77c4-4847-90ce-1c785cbe8dff}} attached using, e.g.,
+biotin-streptavidin linkages;
+(b) individual DNA's linked to magnetic beads have been
+stretched and twisted by small magnetic field
+gradients, allowing studies of both supercoiling
+and twist-induced denaturation {{cite:e9252afd-4576-4857-95a3-0c544b772839}}; and
+(c) the reversible unfolding of single RNA molecules (with
+beads attached to both ends) has been studied using laser
+tweezers with a feedback loop to generate a constant force
+FORMULA  {{cite:939725b5-704d-4080-9368-5b81a00ef373}}. In this later experiment, the fluctuating
+displacements of a FORMULA 25 base-pair RNA hairpin evolve from a
+predominantly closed state (with rare opening events)
+at small force to a predominantly open state (with rare closing events)
+at larger forces. At an intermediate
+force of FORMULA  piconewtons
+FORMULA , the hairpin spends approximately equal time in both
+configurations, suggestive of a first-order phase
+transition between the open and closed states in the
+“thermodynamic limit” of a very large hairpin.
+FIGURE 
+DNA force denaturation experiments related to the
+subject of this review have been carried by
+Bockelmann et al. {{cite:50c0b4ed-4e3e-49c3-988a-cb8e812543a5}}, {{cite:56e3ea62-92e3-45ae-8455-bbe8051d5e3d}}, {{cite:722ae369-06aa-4aa4-9497-a1de822f194e}}
+(see Fig. 1). In this pioneering work, the
+48,502 base pairs of the virus phage lambda with
+one strand attached to a microscope slide were
+unzipped by a microneedle attached to the other
+strand under conditions which produced a constant
+rate of unzipping at a fixed temperature. Reasonable
+agreement with these experiments was obtained by direct
+numerical evaluation of the equilibrium statistical
+sums associated with a given average degree of
+unzipping. If the rate of unzipping is slow, such
+experiments effectively probe the physics at constant
+extension. The average force under these conditions
+locks in at about 14–15 piconewtons. The
+time-dependent fluctuations of this force as the
+unzipping proceeds provide information about the
+particular sequence of G:C and A:T base
+pairs being torn apart {{cite:50c0b4ed-4e3e-49c3-988a-cb8e812543a5}}, {{cite:56e3ea62-92e3-45ae-8455-bbe8051d5e3d}}, {{cite:722ae369-06aa-4aa4-9497-a1de822f194e}}.
+The full phase diagram of DNA in the
+force-temperature plane is shown in Fig. 2 {{cite:7235c486-adb2-4eff-bb31-4123199e8ecf}}, {{cite:490dc4fe-1705-4f5e-b8e9-2fce7e703878}}, {{cite:d04cd403-8c71-4eaf-8824-9ed0cabe1ed0}}, {{cite:a7785571-cf1d-437b-afa1-13f0c698415f}}, {{cite:8e97390d-2a2c-4732-9cb4-cec220ad6273}}.
+The thermal DNA melting transition at zero force
+(see Sec. 2) is characterized by diverging
+length scales associated with denaturation
+bubbles. When FORMULA , the native duplex
+DNA denatures into an unzipped state via a
+first-order phase transition (see Sec. 3).
+Under conditions of a slow, constant rate of
+extension {{cite:50c0b4ed-4e3e-49c3-988a-cb8e812543a5}}, {{cite:56e3ea62-92e3-45ae-8455-bbe8051d5e3d}}, {{cite:722ae369-06aa-4aa4-9497-a1de822f194e}}, the average force
+adjusts so that the system sits on the
+heavy first-order transition line FORMULA . At
+any stage in the unzipping process, the unzipping
+fork separating the native and unzipped states
+is like the meniscus dividing, say, liquid and
+gas phases at constant volume at a bulk
+first-order phase transition.
+FIGURE 
+FIGURE 
+Although running unzipping experiments in a
+two-phase region associated with the line FORMULA  is
+well-suited for possible DNA sequencing
+applications {{cite:50c0b4ed-4e3e-49c3-988a-cb8e812543a5}}, {{cite:56e3ea62-92e3-45ae-8455-bbe8051d5e3d}}, {{cite:722ae369-06aa-4aa4-9497-a1de822f194e}}, the full force-temperature
+phase diagram of Fig. 2 is interesting for a number
+of reasons. First, understanding DNA denaturation
+under conditions of constant force
+(instead of constant extension) could
+provide insights into the complicated process
+by which DNA replicates during bacterial cell division
+{{cite:717340df-989c-4079-89b2-a683bea86ad1}}. Second, statistical mechanics in
+ensembles with intensive variables like the
+force held fixed is often more tractable than when
+the control parameter is a conjugate variable like
+the extension. Precise analytic predications are
+indeed possible in the vicinity of FORMULA , even when
+sequence disorder is present {{cite:7235c486-adb2-4eff-bb31-4123199e8ecf}}, {{cite:1129b6f2-5993-4266-898f-f56f31d7f1b2}}. Third,
+experiments which use force
+as a control parameter can probe interesting
+behavior of the unzipping fork for FORMULA 
+(analogous to “wetting” phenomena in bulk phase
+transitions {{cite:2218d81d-92fa-4a34-8058-305c3aa5c507}}) and anomalous fork
+dynamics for FORMULA . Because of significantly
+different bonding strengths of the nucleotide
+pairs A:T (two hydrogen bonds) and G:C
+(three hydrogen bonds), heterogeneity dominates
+unzipping over a large region of the phase diagram,
+for FORMULA ,
+inside the region bounded by the dashed lines in Fig. 2.
+
+Thermal Denaturation of DNA
+In this Section we discuss the thermal denaturation
+of DNA at zero force (vertical arrow in Fig. 2).
+This transition plays an important role in the
+polymerase chain reaction (PCR), where it is applied
+cyclically to amplify minute amounts of DNA.
+The basic physical ideas driving thermal denaturation
+(worked out in the 1960s)
+are described in Refs. {{cite:1323c664-c653-400c-b2ff-ea77045855c4}}, {{cite:86629b49-4172-4778-ba66-57f70eedadde}}, {{cite:2d3993c9-8ffc-44ec-8cb4-cf699cde1a87}}. The simplest
+models invoke the Ising-like description of DNA shown
+in Fig. 3a, where right-facing spins represent
+bonded nucleotides in a closed
+“helix” state and left-facing spins the open
+“coil” state. The magnetic field
+of the equivalent Ising model represents a
+(temperature-dependent)
+nucleotide bonding free energy and the Ising
+exchange energy determines an “initiation factor”
+at the boundaries between the
+helix and coil regions. The statistical
+mechanics of this one-dimensional Ising model
+can be described entirely in terms of
+kink excitations associated with transitions
+between domains of up and down spins,
+which here represent helix/coil boundaries.
+Rapid variations in DNA from a helix-dominated
+to a coil-dominated state are predicted
+by such models {{cite:2d3993c9-8ffc-44ec-8cb4-cf699cde1a87}}, corresponding to the
+magnetic field changing sign in the
+equivalent Ising system. However,
+it is well-known that the 1d Ising model
+does not have a real
+phase transition at finite temperature,
+basically because the finite energy
+cost of kinks at zero external
+field is overwhelmed by the
+entropy gained by creating them
+[20]. An improved theory
+results when the three-dimensional
+entropy of wandering loops
+in the coil sections (see Fig. 3b)
+is taken into account. This can
+be done by approximating the loops
+as ideal random walks {{cite:1323c664-c653-400c-b2ff-ea77045855c4}},
+or improving this estimate by taking
+self-avoidance of the loops
+into account {{cite:b89631a2-1572-4d5a-94b9-dbb36781e15e}}. The effect on the
+statistical mechanics is
+to produce a long range interaction
+which binds kinks together and
+leads to a continuous finite temperature
+phase transition {{cite:1323c664-c653-400c-b2ff-ea77045855c4}}, {{cite:86629b49-4172-4778-ba66-57f70eedadde}}, {{cite:2d3993c9-8ffc-44ec-8cb4-cf699cde1a87}}.
+Recent work by Kafri et al. incorporates
+additional self-avoidance
+between coil sections and the rest of the
+DNA chain (important for
+large molecules) and argues that
+the thermal denaturation transition then becomes first order
+{{cite:b82c2ba5-add6-4e07-aa1c-6da330ef4e8d}}.
+Heterogeneity of the bonding between
+base pairs (G:C bonds are stronger than
+A:T ones) is neglected in the treatments above.
+Simple helix-coil descriptions with
+heterogeneity are governed by the statistical
+mechanics of the 1d random field
+Ising model. A reasonable guess for
+more realistic models with heterogeneity is
+that while the transition may be less sharp
+(weakly bound regions melt before more tightly
+bound ones), a real finite temperature phase
+transition survives. Lyubchenko et al. {{cite:b7e8db44-4093-411b-b72c-a6de2c389ccb}}
+have calculated numerically the effect of
+sequence heterogeneity on the DNA differential
+melting curves for the 5375 nucleotides
+of the virus FORMULA . For a recent theory of
+thermal denaturation of heterogeneous DNA,
+see Ref. {{cite:29e4e1a8-97d1-4c70-8507-3d51f09c4a3e}}.
+In the remainder of this section, we discuss
+how thermal denaturation of “homogeneous”
+DNA with identical base pairs
+can also be understood
+by mapping the statistical mechanics
+onto the delocalization of a quantum
+mechanical particle in three dimensions.
+This is the approach we will
+generalize in Sec. 3 to study
+force-induced naturation.
+Referring to Fig. 3b, we parameterize the
+positions of the two (antiparallel)
+sugar-phosphate backbones of DNA in three dimensions
+by the functions FORMULA  and
+FORMULA , where FORMULA  is an integer
+indexing FORMULA  base pairs FORMULA . We
+model each strand separately as a Gaussian random
+coil {{cite:7fe0f6ef-100a-49fe-896e-81338d0e1cb8}} . For example, considering strand 1
+in isolation, the probability of a particular
+polymer conformation FORMULA 
+is proportional to FORMULA 
+(we use units such that FORMULA ), where
+FORMULA 
+Here we have used a convenient continuum notation
+as shorthand for a discrete sum over
+FORMULA  and replaced FORMULA  by the
+arclength FORMULA , where FORMULA  is
+the spacing between nucleotide monomers.
+To relate the spring constant
+FORMULA  to the single strand persistence
+length, use (1) to evaluate
+FORMULA , with the result
+FORMULA 
+From the definition of persistance length FORMULA , namely
+FORMULA , we have {{cite:a73eac62-a7d4-44e3-b289-89592c8fe795}}
+FORMULA 
+where FORMULA Å for single-stranded DNA at
+physiological temperatures. For a more microscopic
+“worm-like chain” model with bending rigidity FORMULA  (assuming
+a small Debye screening length), we
+have {{cite:fbbcb5b3-18be-47db-bbb1-33eb229c6f56}}, {{cite:982b9478-af87-42c6-ac20-9eefc96da96e}}
+FORMULA 
+Here, and in what follows, we use boldface vectors
+FORMULA  to denote entire polymer configurations, and conventional vectors such
+as FORMULA  to denote the position of a polymer endpoint.
+To describe a DNA duplex, we bring the two strands together,
+neglect torsional rigidity and the helical nature of the bonding
+{{cite:982b9478-af87-42c6-ac20-9eefc96da96e}},
+and write the total free energy as
+FORMULA 
+where
+FORMULA  is a potential which binds the nucleotides in different strands
+together. We assume that the complimentarity of the nucleotide sequences is
+sufficient to bring the strands into registry, but will otherwise neglect
+the effect of sequence disorder in the remainder of this section. If we now
+pass to sum and difference variables.
+FORMULA 
+FORMULA 
+the coarse-grained free energy decouples,
+FORMULA 
+where FORMULA .
+The partition function associated with (8) is a path integral
+of FORMULA  over the functions FORMULA  and FORMULA .
+The part associated with FORMULA  is simply the partition sum of
+an unconstrained Gaussian coil. The remaining functional integral
+over FORMULA  contains a denaturation transition. To pursue this
+point, we assume for simplicity that FORMULA  and
+FORMULA  (closed boundary conditions at one end,
+open at the other), and evaluate
+FORMULA 
+As in polymer adsorption problems, it is helpful to view Eq. (9) as a
+Feynman path integral for a quantum mechanical particle in imaginary
+time
+{{cite:fbbcb5b3-18be-47db-bbb1-33eb229c6f56}}.
+Indeed, this partition function can be rewritten as a
+quantum mechanical matrix element {{cite:edc29dfb-fba8-44b9-890c-6edae5f47d1c}},
+FORMULA 
+where the effective quantum Hamiltonian is
+FORMULA 
+and FORMULA  and FORMULA  are respectively FORMULA  and FORMULA 
+vectors localized at FORMULA  and FORMULA . Note that
+temperature plays the role of FORMULA  and FORMULA 
+represents the mass of a fictitious quantum mechanical particle in a
+potential FORMULA . In the language of statistical mechanics,
+we have reduced this one-dimensional problem to diagonalizing a
+transfer matrix given by FORMULA . We shall focus
+on the particularly simple binding potential illustrated in Fig. 4, namely
+FORMULA 
+with FORMULA , where FORMULA  is the average bonding energy per nucleotide. Upon
+inserting a complete set of energy eigenfunctions FORMULA  with eigenvalues FORMULA  into Eq. (10), we see that
+this conditional partition function may be rewritten as
+FORMULA 
+FIGURE 
+The ground state dominates in the limit FORMULA , and we have
+FORMULA 
+where the (nodeless) ground state eigenfunction can be chosen to be real.
+The quantum mechanics of simple square well potentials like
+Eq. (12) in three dimensions is well understood {{cite:73e6ba17-ed2f-414e-a385-6b43c38ff398}}.
+We focus for simplicity on the case FORMULA 
+(small hard core diameter) but the same qualitative
+discussion applies more generally. The
+key parameter controlling the eigenfunctions and eigenvalues is the
+dimensionless ratio
+FORMULA 
+of the well depth FORMULA  to the “zero point energy” FORMULA . This quantum zero point energy represents the lost
+entropy associated with a confined DNA duplex. From the
+perspective of quantum mechanics, the loop excitations shown in Fig. 3b represent
+transient excursions (in imaginary time) out of the well.
+When FORMULA  (low temperatures), the binding energy dominates the thermal
+fluctuations favoring denaturation and there are many bound (i.e., localized)
+eigenstates of  FORMULA beneath a continuum of extended eigenstates.
+As FORMULA  decreases, more and more states delocalize until only the single
+localized ground state shown in Fig. (4a) is present. Eventually,
+at temperatures high enough so that FORMULA , even the ground state
+delocalizes [31]. For the simple problem discussed here FORMULA 
+(i.e., FORMULA ) [30]. However, a similar
+FORMULA  of order unity is expected for a broad class of similar
+potentials. Near the transition temperature FORMULA , the ground
+state energy approaches the continuum quadratically with temperature [27, 30]
+FORMULA 
+where the melting temperature FORMULA  is defined by FORMULA . For large FORMULA , the ground state wave
+function decays exponentially, FORMULA ,
+where
+FORMULA 
+gives the spatial extent (in three dimensions) of the bubbles shown
+schematically in Fig. 3b. The number of base pairs FORMULA 
+in a bubble (see Fig. 3b) can be estimated by identifying FORMULA 
+with the value of FORMULA  needed to achieve ground
+state dominance in Eq. (12): We expect that boundary effects
+become unimportant when the number of base pairs exceeds
+the number in a typical bubble. The ground state will dominate once the
+number of nucleotides is larger than several bubble sizes. Since the
+energy of the first excited state for FORMULA  is zero, we have
+FORMULA 
+from which it follows that
+FORMULA 
+We should stress that the above results are obtained in an approximation which
+neglects self-avoidance effects important for large molecules close to FORMULA .
+We expect, however, qualitatively similar behavior even when self-avoidance is taken
+into account.
+We now use similar methods to treat force-induced denaturation in Section 3.
+
+Force-induced Denaturation
+A force FORMULA  applied across the two strand endpoints
+(see Fig. 1) adds an energy FORMULA , and Eq. (9) becomes
+FORMULA 
+We assume the attached strands of DNA can swivel freely
+to relax twist on an experimental time scale, so that we
+can neglect the helical nature of the duplex state when the
+force is applied.
+In addition to the force term (note that the lower limit does
+not contribute with our boundary conditions), we have added a subscript FORMULA  to the binding
+potential, FORMULA ,
+to emphasize that the depth and size of potentials like that in Fig. 4
+will depend on the particular base pair for heterogeneous DNA. After
+taking over results for a virtually identical problem {{cite:2e1a1e02-45d3-47b8-bdc0-f492f17b3877}} of flux line
+depinning by a columnar pin in a transverse magnetic field in high
+FORMULA  superconductors, we obtain {{cite:7235c486-adb2-4eff-bb31-4123199e8ecf}}, {{cite:490dc4fe-1705-4f5e-b8e9-2fce7e703878}}
+FORMULA 
+which can be integrated (subject to the boundary condition
+FORMULA ) to give a result with the form of Eq. (10),
+where
+FORMULA 
+Equation (20) with an FORMULA -dependent potential FORMULA  can
+be studied (via a mapping onto a Burgers equation) by the methods of
+Ref. {{cite:649fd661-e25e-47d4-afb5-059ce6feebb3}}, where it arose in a study of vortex
+depinning from fragmented columnar pins. In this
+section, we neglect the FORMULA -dependence (letting FORMULA ) and illustrate
+force-induced denaturation for the homopolymer duplex discussed in
+Sec. 2.
+Because FORMULA  appears as a constant imaginary “vector potential,” Eq. (21)
+represents a non-Hermitian generalization of Schroedinger's equation.
+To establish the existence of a first-order transition, we
+write the solutions of (20) using the right and left
+eigenfunctions FORMULA  and
+FORMULA  (with
+a set of common eigenvalues FORMULA ) of FORMULA ,
+FORMULA 
+We again
+invoke ground-state dominance and focus on the behavior of the lowest eigenvalue,
+which determines the duplex free energy per unit length FORMULA  via
+FORMULA 
+where FORMULA  is defined by integrating over FORMULA ,
+FORMULA 
+since we work at constant force instead of constant extension.
+For FORMULA  less than a critical value FORMULA  (determined below), we can obtain
+the (right) eigenfunctions FORMULA  for FORMULA 
+from localized eigenfunctions FORMULA  for the Hermitian case
+FORMULA  via a “gauge transformation” {{cite:2e1a1e02-45d3-47b8-bdc0-f492f17b3877}}.
+Indeed, it is easy to check that
+FORMULA 
+solves
+FORMULA 
+(provided FORMULA  satisfies FORMULA ) with the
+same eigenvalue, FORMULA . In
+particular, we obtain from Eq. (23) a negative FORMULA -independent
+free energy per unit length FORMULA  for small FORMULA .
+If, however, a localized ground-state eigenfunction
+for the Hermitian FORMULA  problem decays like
+FORMULA 
+for large FORMULA , the new eigenfunctions (25) are only
+normalizable provided FORMULA .
+Note that FORMULA , which gives
+the probability of finding an extension FORMULA , {{cite:2e1a1e02-45d3-47b8-bdc0-f492f17b3877}} is displaced in the direction
+of FORMULA , as indicated schematically in
+Fig. 4a. To determine what happens for
+FORMULA , we check for a nodeless extended
+ground-state wavefunction, as indicated in Fig. 4b.
+If FORMULA  for large FORMULA 
+(i.e., the DNA duplex falls apart), and FORMULA , evaluating Eq. (22) in this limit gives
+FORMULA , so that
+FORMULA . The two free energies
+FORMULA  for FORMULA  and FORMULA  are plotted in
+Fig. 5 {{cite:2e1a1e02-45d3-47b8-bdc0-f492f17b3877}}. At FORMULA  the two curves intersect at a nonzero
+angle, the classic signature of a first-order phase transition. The latent
+heat of this transition might be observable in a solution of many
+DNA duplexes pulled apart by, say, beads of opposite charge in an
+electric field.
+Since the first-order transition curve FORMULA  is given by
+FORMULA , where FORMULA  is the smallest
+eigenvalue of the transfer matrix for FORMULA , we find using
+Eq. (15) that
+FORMULA 
+near the melting transition for this model.
+FIGURE 
+Even though force-induced denaturation is a first-order
+transition, there are diverging precursors in the form of DNA
+unzipping (see Fig. 1). The probability of an endpoint
+separation FORMULA  in the limit FORMULA  is
+given integrating FORMULA  weighted by
+the ground state eigenfunction,
+FORMULA 
+It is then straightforward to show that FORMULA 
+diverges as FORMULA  {{cite:2e1a1e02-45d3-47b8-bdc0-f492f17b3877}}
+FORMULA 
+Upon examining corrections to
+ground state dominance as in the analysis of
+Eq. (19), we find that the average number FORMULA  of
+unzipped monomers diverges, as shown in Fig. 6a,
+FORMULA 
+FIGURE 
+The first-order force-induced DNA denaturation transition can be understood
+more generally, independent of the mapping onto quantum
+mechanics. If FORMULA  is the free energy per unit length
+of one of the single-stranded DNA “handles” shown in Fig. 7,
+and FORMULA  is the (force-independent) free energy per
+unit length of the double-stranded DNA which coexists
+in a macroscopically unzipped state, then the condition for
+two-phase coexistence across the “meniscus” or
+unzipping fork at the critical force FORMULA  is {{cite:1129b6f2-5993-4266-898f-f56f31d7f1b2}}
+FORMULA 
+The physics of the handle free energy FORMULA  is relatively simple,
+provided the force is large enough to neglect self-hybridization and self-avoidance of the
+single-stranded DNA. For example, we could take FORMULA  to be the free energy of
+a freely-jointed chain with persistance length FORMULA  {{cite:7fe0f6ef-100a-49fe-896e-81338d0e1cb8}}
+FORMULA 
+which is proportional to FORMULA  for small FORMULA . Alternatively one could use a more sophisticated
+“worm-line chain” approximation valid over a larger range
+of forces {{cite:bda40810-dc04-4921-9489-d7ff9f849a97}}. With an acceptable approximation to FORMULA 
+in hand (if necessary, this function could be obtained directly from
+integrating single strand force-extension curves {{cite:698f36ed-67c5-4ce6-b199-2dca1add6e08}}), one can
+use the experimentally determined phase boundary FORMULA  for
+unzipping in conjunction with Eq. (31) to explore the temperature
+dependence of the free energy FORMULA  of double-stranded DNA.
+FIGURE 
+
+Unzipping with Sequence Heterogeneity
+The effect of sequence heterogeneity on thermal denaturation of DNA
+at zero force is a subtle and still not completely resolved
+problem, {{cite:2d3993c9-8ffc-44ec-8cb4-cf699cde1a87}}, {{cite:b7e8db44-4093-411b-b72c-a6de2c389ccb}}, {{cite:29e4e1a8-97d1-4c70-8507-3d51f09c4a3e}}. Understanding inhomogeneous base pairing
+energies near the first-order force-induced unzipping transition
+appears to be more tractable. The integrated effect of
+sequence randomness on the energy landscape for long strands
+of DNA does not change the underlying first-order transition, because it
+only produces corrections of order FORMULA 
+to the free energies per unit length discussed above, where
+FORMULA  is the total number of base pairs. However, sequence randomness
+has drastic consequences for quantities like FORMULA 
+which characterize the unzipping process itself {{cite:7235c486-adb2-4eff-bb31-4123199e8ecf}}, {{cite:1129b6f2-5993-4266-898f-f56f31d7f1b2}}. Here, we simply
+sketch the overall picture. Detailed calculations and justifications for
+approximations (such as the neglect of bubbles in DNA) can be
+found in Ref. {{cite:1129b6f2-5993-4266-898f-f56f31d7f1b2}}.
+Consider the energy FORMULA  associated with the conditional
+partition sum of a DNA duplex which has been unzipped by FORMULA  base pairs.
+If the DNA is a homopolymer, consisting exclusively of A:T or G:C base
+pairs, the total energy can be read off from Fig. 7,
+FORMULA 
+where
+FORMULA 
+can be expanded to give FORMULA 
+near the unzipping transition. If we now add sequence randomness, a reasonable
+model for the energy of unzipping is
+FORMULA 
+where deviations from the average A:T or G:C content are
+represented by the function FORMULA  in a convenient
+continuum notation. To the extent that most DNA
+sequences which code for proteins have deviations from the
+average G:C/A:T content describable as a random walk {{cite:8967ec53-fa7e-42d7-b89a-1a149f111a42}}, we expect
+that the statistical properties of FORMULA  at large distances are those of a
+white-noise random variable,
+FORMULA 
+where the overbar represents a “disorder average” over all possible
+sequences of base pairs. Because G:C and A:T pairing energies
+differ by an amount of order FORMULA , FORMULA , where
+we have used the temperature FORMULA  293–310FORMULA K characteristic of most experiments to
+characterize this quantity. The partition function
+associated with this simple one-dimensional model involves
+integrating over all possible unzipping lengths FORMULA ,
+FORMULA 
+The unzipping energy in Eq. (35) is plotted for a particular
+base pair sequence (with FORMULA ) in Fig. 8, with FORMULA . The
+straight line is the energy of a homopolymer duplex with
+FORMULA  and
+FORMULA 
+In this case we find immediately from
+Eq. (37) that the thermally averaged degree of unzipping is
+FORMULA 
+in agreement with Eq. (30). There are large fluctuations about this average
+value, as one can check by evaluating
+FORMULA 
+FIGURE 
+The rugged landscape in Fig. 8 for FORMULA  is more
+interesting. Although the positive background slope determined by FORMULA 
+insures that the DNA remains macroscopically unzipped, the integrated
+effect of sequence randomness produces deviations from a straight line
+which scale like FORMULA . These fluctuations lead to deep minima at
+nonzero FORMULA  with large energy barriers in between.
+A downward fluctuation in this
+“integrated random walk” energy landscape at position FORMULA  corresponds
+to an energy of order
+FORMULA 
+Upon minimizing over FORMULA , we obtain the estimate
+FORMULA 
+a result confirmed by more elaborate calculations
+{{cite:7235c486-adb2-4eff-bb31-4123199e8ecf}}, {{cite:1129b6f2-5993-4266-898f-f56f31d7f1b2}}. Here, the overbar
+represents an average over a quenched random distribution of DNA sequences.
+It can also be shown that thermal fluctuations about this average are more
+constrained than for homopolymers, in the sense that
+FORMULA 
+Thus, in contrast to homopolymers, where
+FORMULA  we now have
+FORMULA 
+A typical energy barrier associated with disorder-dominated
+unzipping is FORMULA . Results such as (42) apply when this scale
+exceeds FORMULA , i.e., for FORMULA  less than a crossover force FORMULA ,
+FORMULA 
+Because FORMULA  is large for G:C and A:T base
+pairs, the range of forces where sequence heterogeneity dominates the
+physics is the large region bounded by the left-hand dashed line in
+Fig. 2. Note that disordered dominated prediction for FORMULA  in Eq. (42) diverges with a power which is twice
+as large as the result (39) appropriate for thermally equilibrated
+homopolymers.
+Results such as Eq. (42) apply only to a quenched average over an
+entire library of different DNA sequences unzipped in parallel. We can
+understand the behavior for FORMULA  for
+the more
+experimentally accessible case of a particular
+squence from Fig. 9, which shows the energy landscape for two
+identical sequences with the biases, FORMULA  and
+FORMULA . The degree of unzipping FORMULA  is
+dominated by the minimum indicated by an arrow in each case. Somewhere
+between FORMULA  and FORMULA , the average of FORMULA  jumps
+from one minimum to the next. More detailed calculations [14] reveal
+an entire sequence of jumps and plateaus, as illustrated in Fig. 6b.
+Although a best fit to a power law of this irregular curve should
+reveal the exponent of Eq. (42), the plateaus and jumps themselves
+represent a rough “fingerprint” of the individual sequence.
+See Ref. {{cite:1129b6f2-5993-4266-898f-f56f31d7f1b2}}, where the
+statistical distribution of plateaus and jumps are
+evaluated using the techniques of LeDoussal et al. {{cite:b37ddd59-6178-4535-80fe-6ae0ca6f6acf}}.
+FIGURE 
+
+Dynamics of Unzipping
+What happens for FORMULA ? In Figure 10 we show an energy
+landscape (for the same sequence as in Fig. 8) with
+FORMULA , together with the purely downhill landscape of the
+corresponding homopolymer. Because the average free energy per base pair
+of the DNA duplex exceeds the combined free energies per
+base of the two single-stranded DNA “handles” in Fig. 7, the
+system is unstable to complete unzipping. It is then appropriate to
+discuss the dynamical process by which unzipping proceeds on this
+downhill path.
+FIGURE 
+Subject to a number of simplifying conditions discussed in Ref. {{cite:1129b6f2-5993-4266-898f-f56f31d7f1b2}},
+the time dependence of the unzipping fork can be described by an
+overdamped Langevin equation,
+FORMULA 
+where FORMULA  is a damping constant FORMULA , where FORMULA 
+is a microscopic relaxation time) and the noise correlations are
+FORMULA 
+Upon substituting for the energy landscape FORMULA  from Eq. (35), we consider
+the case FORMULA  and obtain
+FORMULA 
+which is the equation of motion for a particle with coordinate FORMULA 
+executing one-dimensional biased diffusion in a random force field
+proportional to FORMULA .
+A great deal is known about this problem {{cite:f8bb5dd0-a770-4749-a55d-6ce91a851ba1}}, {{cite:bce51778-f939-4ce0-a5ab-6873efc67f91}}, {{cite:6f96dae2-521f-494d-9553-024522173812}}. In the absence of
+sequence heterogeneity (FORMULA  in Eq. (36)), FORMULA  exhibits diffusion
+with drift at long times, i.e.,
+FORMULA 
+FORMULA 
+with a well-defined drift velocity FORMULA  and diffusion constant FORMULA . This
+is the expected behavior for the straight line homopolymer energy landscape shown in Fig. 10.
+Sequence heterogeneity, however, has a dramatic effect on the dynamics unless FORMULA 
+is large. Indeed, the integrated random walk landscape in Fig. 10 has many deep
+minima, even though the average slope is negative. When FORMULA  is small, typical
+energy barriers to travel a distance FORMULA  scale like FORMULA , as is
+reflected in the small barrier connecting the minima labelled A and B
+and the much larger barrier between these minima and the more distant minimum C.
+A detailed analysis {{cite:f8bb5dd0-a770-4749-a55d-6ce91a851ba1}}, {{cite:bce51778-f939-4ce0-a5ab-6873efc67f91}}, {{cite:6f96dae2-521f-494d-9553-024522173812}} reveals three types of anomalous dynamics,
+depending on the dimensionless parameter
+FORMULA 
+FIGURE 
+Right at the unzipping transition, FORMULA  and
+the unzipping fork wanders sub-diffusively according to {{cite:bce51778-f939-4ce0-a5ab-6873efc67f91}}
+FORMULA 
+because of trapping effects arising from the large energy barriers.
+The conventional diffusion constant FORMULA , as defined by Eq. (50), vanishes. When
+FORMULA , the unzipping fork drifts downhill, but does so sublinearly with time,
+FORMULA 
+so the usual drift velocity FORMULA  defined by (49) vanishes, with an
+additional anomaly in the spread about this average drift {{cite:bce51778-f939-4ce0-a5ab-6873efc67f91}}, {{cite:6f96dae2-521f-494d-9553-024522173812}}. When this
+bias is large enough so that FORMULA , one recovers a
+well-defined drift velocity FORMULA , but with
+superdiffusive spreading,
+FORMULA 
+Conventional diffusion with drift is only recovered for forces large enough so that FORMULA ,
+i.e., for
+FORMULA 
+This critical force is the same order of magnitude as the crossover scale defined below the
+unzipping transition by Eq. (45) and leads to the right-hand dashed line in Fig. 2.
+The parameters of DNA are such that anomalous unzipping appears in a very large range
+(compared to typical disorder effects in conventional critical phenoman {{cite:8d4ef01e-d7ca-48a9-8e20-738f41739d5d}}),
+roughly FORMULA .
+FIGURE 
+
+Pauses, Jumps and Concluding Remarks
+Experiments which study the mechanical denaturation
+of lambda phage DNA at constant force have recently been carried out in the
+group of Mara Prentiss [42]. Digoxigenin linkers attach several dozen identical
+copies of this DNA along a long thin capillary tube. Each DNA
+to be unzipped is offset by an additional
+DNA spacer (see Fig. 11). Biotin links the other end of the DNA to magnetic
+beads. Unzipping at constant force
+is achieved by applying a uniform magnetic field gradient, causing
+the beads to stretch out at right angles to the capillary tube, like a
+series of flags on a flagpole.
+Figure 12a records some unzipping histories at FORMULA C for three
+different beads at different heights on this “flagpole” with
+FORMULA  FORMULA , corresponding approximately to the critical unzipping force
+for the front half of the sequence for phage lambda.
+(The back half of this DNA has a lower G:C content.) The beads are well separated, and are
+clearly subject to microscopically different thermal histories. Nevertheless,
+there are distinctive pauses (some lasting 15 minutes or more) and jumps
+common to the different beads. As the individual DNA's unzip, the beads
+occasionally jump back and forth, suggesting two nearly degenerate minima in the
+energy landscape about 1000 base pairs apart. This behavior is similar
+to that found for much shorter RNA hairpains in Ref. {{cite:939725b5-704d-4080-9368-5b81a00ef373}}. The long pauses
+before unzipping resumes are consistent with large energy barriers, of
+order 20–30 FORMULA . In contrast, unzipping at a slow constant
+velocity is an imperative in the work of Bockelmann et al. {{cite:50c0b4ed-4e3e-49c3-988a-cb8e812543a5}}, {{cite:56e3ea62-92e3-45ae-8455-bbe8051d5e3d}}, {{cite:722ae369-06aa-4aa4-9497-a1de822f194e}}.
+Because these experiments are effectively at constant extension, the force in
+this case fluctuates as needed about FORMULA  to insure that all
+energy barriers are overcome.
+Many of the pauses and local “two-level system” oscillations found by
+the Prentiss group coincide with those predicted for phage lambda DNA {{cite:dbb2a877-5234-4856-9414-a04703e53438}},
+using energy landscapes obtained from the base pairing and stacking
+energies of Santa Lucia et al. {{cite:f1223680-497a-44cc-89c1-4f6eddb3e12c}}. Overall, these experiments seem
+consistent with important aspects of the theory reviewed here, such
+as large energy barriers and sequence-specific pause points.
+We should stress that longer run times or higher temperatures are
+necessary to obtain true thermodynamic equilibrium. Figure 12b shows
+the unzipping history of four different beads at FORMULA  FORMULA . There
+are again jumps between common plateaus as well as oscillations
+suggesting nearly degenerate minima. Although 20 FORMULA  should be above the
+thermodynamic critical force FORMULA , the DNA nevertheless fails to
+unzip completely on experimental time scales, presumably due to the ruggedness of “downhill”
+landscapes such as that in Fig. 10. Predictions such as Eq. (42) are
+only be applicable to systems in true thermodynamic equilibrium.
+Experimental checks of phase diagrams such as that in Fig. 2 and the
+associated physical predictions would be of considerable interest. As
+mentioned in Sec. 3, the phase diagram itself can be used to directly
+measure the temperature-dependent free energy of the DNA duplex at zero
+force. Analysis of this free energy is simplified if a theory of
+the unzipped handles is available. Analytic theories require forces large enough to
+stretch out the handles and prevent hairpins created by self-hybridization.
+The self-hybridization of ssDNA (for FORMULA  FORMULA ) indicated in the
+experiments of Maier et al. {{cite:94bf5ecb-1c9c-429b-b2ef-edbf6fc744f3}} could be reduced by
+introducing single stranded binding proteins to smooth out the heterogeneity of the
+handles.
+The assumption (36) of short-range correlations in the sequence is an
+approximation valid only for simple “coding DNA” in bacteria or viruses.
+The introns or so-called
+“junk DNA” present in many eukaryotic organisms may be better
+described by {{cite:8967ec53-fa7e-42d7-b89a-1a149f111a42}}
+FORMULA 
+with FORMULA . Although we are unaware of detailed
+calculations, a straightforward generalization of the argument
+leading to Eq. (42) now gives {{cite:7235c486-adb2-4eff-bb31-4123199e8ecf}}
+FORMULA 
+For FORMULA , we expect that predictions for
+sequences with short-range correlations will apply. The
+exponent FORMULA  seems to describe the energy
+correlations of some intron-rich sequences [36].
+Ideas similar to those discussed here
+can also be applied to force-induced denaturation {{cite:c2d5e92a-9d84-481a-be44-451b094856bc}}, {{cite:1129b6f2-5993-4266-898f-f56f31d7f1b2}} of the
+multiple stem-loop structures which define the secondary structure of
+complicated RNA enzymes. Here, however, strings of RNA hairpins are
+unzipped simultaneously and the discrete jumps and
+plateaus in FORMULA  near the unzipping force are averaged out.
+
+Virtually all the theoretical work described here is contained in
+the Ph.D. thesis of my former student, David Lubensky. I am
+fortunate to have such students. I am grateful as well to
+Claudia Danilowicz, Mara Prentiss and other experimenters for
+their determination to test some of the predictions sketched
+here. Finally, I would like to thank D. Branton, R. Bundschuh, T. Hwa,
+and Y. Kafri for helpful conversations on this material.
+This work was supported by the National Science Foundation,
+through grant DMR 0231631 and in part through the
+Harvard Materials Research Laboratory, via Grant DMR 0213805.
+For a brief review, see C. Bustamante, Z. Bryant and S.B.
+Smith, ¦Nature¦ ¦421¦, 423 (2003).
+F. Crick,
+¦Nature¦ ¦227¦, 561 (1970).
+M. Rief, M. Gautel, F. Oesterhelt, J.M. Fernandez, and
+J. Gaub, ¦Science¦ ¦276¦, 1109 (1997).
+T.R. Strick, V. Croquette, and D. Bensimon,
+¦PNAS¦ ¦95¦, 10,579 (1998).
+J. Liphardt, B. Onoa, S.B. Smith, I. Tinoco, Jr., and C.
+Bustamante, ¦Science ¦¦292¦, 733 (2001).
+U. Bockelmann, Bessevaz, and F. Heslot, ¦Phys. Rev. Lett. ¦¦79¦,
+4489 (1997); ¦Phys. Rev. E¦¦58¦, 2386 (1998).
+B. Essevaz-Roulet, U. Bockelmann, and F. Heslot,
+¦Proc. Natl. Acad. Sci. USA ¦¦94¦, 11935 (1997).
+U. Bockelmann, P. Thomen, B. Essevaz-Roulet, V. Viasnoff, and F. Heslot,
+¦Biophys. J. ¦¦82¦, 1537 (2002).
+D.K. Lubensky and D.R. Nelson, ¦Phys. Rev. Lett.
+¦¦85¦, 1572 (2000).
+S.M. Bhattacharjee, ¦J. Phys. A¦¦48¦, L423 (2000).
+K.L. Sebastian, ¦Phys. Rev. E¦¦62¦, 1128 (2000).
+S. Cocco, R. Monasson, and J.F. Marko, ¦Proc. Natl. Acad. Sci. USA
+¦¦98¦, 8608 (2001); ¦Phys. Rev. E¦¦65¦, 0141907 (2002).
+D. Morenduzzo, S. Bhattacharjee, S. Maritan, E. Orlandini, and F. Seno,
+¦Phys. Rev. Lett. ¦¦88¦, 028102 (2002).
+D.K. Lubensky and D.R. Nelson, ¦Phys. Rev. E¦¦65¦, 031917 (2002).
+B. Alberts, D. Bray, J. Lewis, M. Ruff, K. Roberts, and J.D. Watson,
+¦Molecular Biology of the Cell¦ (Garland, New York, 1994).
+P.G. deGennes, ¦Rev. Mod. Phys. ¦¦57¦, 827 (1985).
+D. Poland and H.A. Scheraga, ¦Theory of Helix-Coil
+Transitions in Biopolymers¦ (Academic, New York, 1970).
+F.W. Wiegel, in ¦Phase Transitions and Critical Phenomena¦, Vol. 7, edited by
+C. Domb and J. L. Lebowitz (Academic, New York, 1983).
+A.Y. Grossberg and A.R. Khokhlov, ¦Statistical Physics of
+Maromolecules¦ (AIP Press, New York, 1994), Chapter 7.
+In contrast to the finite kink energy, the entropy of an isolated
+kink diverges logarithmically with system size. See L.D. Landau
+and E.M. Lifshitz, ¦Statistical Physics¦ (Pergamon Press, Oxford, 1988),
+Sec. 163.
+M.E. Fisher, ¦J. Chem. Phys. ¦¦45¦, 1469 (1966).
+Y. Kafri, D. Mukamel, and L. Peliti, ¦Phys. Rev. Lett. ¦¦85¦,
+4988 (2000); ¦Eur. Phys. J. B¦¦27¦, 132 (2002).
+Y.L. Lyubchenko, A.V. Volodskii, and M. Frank-Kamenetskii,
+¦Nature ¦¦271¦, 28 (1978); A.V. Volodskii, A.V. Amrykyan, Y.L.
+Lyubchenko, and M. Mamenetskii, ¦Biomol. Struct. Dyn. ¦¦2¦,
+131 (1984).
+L.-H. Tang and H. Chate, ¦Phys. Rev. Lett. ¦¦86¦, 830 (2001);
+see also D. Cule and T. Hwa, ¦Phys. Rev. Lett. ¦¦79¦,
+2375 (1997).
+M. Doi and S.F. Edwards, ¦The Theory of Polymer Dynamics¦
+(Oxford, New York, 1988).
+P. Nelson, ¦Biological Physics: Energy, Information Life¦ (W.H. Freeman,
+New York 2003).
+P.G. deGennes, ¦Rep. Prog. Phys. ¦¦32¦, 187 (1969).
+See, e.g., J. Marko and E.D. Siggia, ¦Science ¦¦265¦, 506
+(1994) for a discussion of these effects,
+which are related to the physics of supercoiling.
+For an analysis of the closely related problem of a vortex line in a Type II
+superconductor interacting with a columnar pin, see D.R. Nelson
+¦Defects and Geometry in Condensed Matter Physics¦ (Cambridge
+University Press, Cambridge, 2002), Chapters 7 and 8.
+See, e.g., F. Schwabl, ¦Quantum Mechanics¦ (Springer, Berlin, 1992), Chapter 6.
+For potentials like those in Fig. 4, the ground state always remains localized
+in one and two dimensions provided the well depth FORMULA .
+See L.D. Landau and E.M. Lifshitz, ¦Quantum Mechanics¦ (Pergamon Press, New
+York, 1969).
+N. Hatano and D.R. Nelson, ¦Phys. Rev. B¦¦56¦, 8651 (1997),
+and references therein.
+D. Ertas, ¦Phys. Rev. B¦¦59¦, 188 (1999).
+J.F. Marko and E.D. Siggia, ¦Macromolecules ¦¦28¦, 8759 (1995).
+S.B. Smith, Y. Cui, and C. Bustamante, ¦Science ¦¦271¦, 795 (1996).
+S.V. Buldyrev, A.L. Goldberger, S. Havlin, R.N. Mantegna, M.E. Matsa,
+C.-K. Peng, M.
+Simons, and H.E. Stanley, ¦Phys. Rev. E¦¦51¦, 5084 (1995).
+P. LeDoussal, C. Monthus, and D.S. Fisher, ¦Phys. Rev. E¦¦59¦,
+4795 (1999).
+Ya. G. Sinai, ¦Theor. Probab. Appl. ¦¦27¦, 247 (1982).
+B. Derrida, ¦J. Stat. Phys. ¦¦31¦, 433 (1983).
+J.P. Bouchaud, A. Comtet, A. Georges, and P. LeDoussal,
+¦Ann. Phys. (N.Y.) ¦¦201¦, 285 (1990).
+A.B. Harris, ¦J. Phys. C ¦¦7¦, 1671 (1974).
+C. Danilowicz, V.W. Coljee, C. Bouzignes, D.K. Lubensky, D.R. Nelson, and
+M. Prentiss. ¦Proc. Nat'l. Acad. Science ¦¦100¦, 1694 (2003).
+J. Santa Lucia, H.T. Alawi and P.A. Seneviratne, ¦Biochemistry ¦¦35¦,
+3555 (1996).
+B. Maier, D. Bensimon and V. Croquette, ¦PNAS ¦¦97¦, 12002 (2000).
+U. Gerland, R. Bundschuh and T. Hwa, ¦Biophys. J. ¦¦81¦, 1324 (2001).

@@ -1,0 +1,494 @@
+
+colorlinks, breaklinks,
+linkcolor=blue,urlcolor=blue,
+anchorcolor=blue, citecolor=blue
+
+Nonlinear FORMULA -Jordan-Type Derivations on von Neumann Algebras
+Wenhui Lin
+Nonlinear FORMULA -Jordan-Type Derivations on von Neumann Algebras
+Wenhui Lin
+Lin: College of Science, China Agricultural University, Beijing 100083, P. R. Chinawhlin@cau.edu.cnhaotianwei@hotmail.com
+February 18, 2019
+47B47, 46L10
+Nonlinear FORMULA -Jordan-type derivation, von Neumann algebra
+
+Let FORMULA  be a complex Hilbert space, FORMULA  be the algebra of all
+bounded linear operators on FORMULA  and FORMULA 
+be a von Neumann algebra without central summands of type FORMULA . For arbitrary elements
+FORMULA , one can define their FORMULA -Jordan product in the sense of
+FORMULA . Let FORMULA  be the polynomial
+defined by FORMULA  indeterminates FORMULA 
+and their FORMULA -Jordan products. In this article, it is shown that a mapping
+FORMULA  satisfies the condition
+FORMULA 
+for all FORMULA  if and only if FORMULA  is an additive FORMULA -derivation.
+
+Introduction
+Let FORMULA  be an associative FORMULA -algebra over the complex field FORMULA .
+For any FORMULA , one can denote a “new product" of FORMULA  and FORMULA  by
+FORMULA , and this new product FORMULA  is usually said to be FORMULA -Jordan product.
+Such kind of product based on Jordan bracket naturally
+appears in relation with the so-called Jordan FORMULA -derivations and plays an important
+role in the problem of representability of quadratic functionals by sesqui-linear
+functionals on left-modules over FORMULA -algebras (see {{cite:16244409-30d3-42bc-b40c-706dd3f73100}}, {{cite:f51efa6d-5f8e-4ab0-ade2-624d43b33504}}, {{cite:a2bbb9ab-53d3-4f4e-ad56-f458f96926a4}}).
+The product is workable for us to characterize ideals, see {{cite:918beb0a-3600-4877-9754-8746232ede6b}}, {{cite:c2762318-c603-4830-b297-1b259dc41ae0}}, {{cite:cd496294-b8e0-4e09-bd51-f127796ee4bc}}.
+Especial attention has been paid to understanding mappings which preserve the product
+FORMULA  between FORMULA -algebras, see {{cite:061dfbdc-ed84-44f0-9fa2-b3c45177508b}}, {{cite:fddf98de-096c-4d6b-bac3-d3feef2bdd13}}, {{cite:2ee956f0-d704-4db6-ac03-151f2bcf217f}}, {{cite:f2a61a77-0e75-43d5-949e-9640e2decc98}}, {{cite:e9f4993e-97fb-498b-9d20-abdbeb2bacb2}}.
+The question of to what extent the multiplicative structure of an algebra determines its
+additive structure has been considered by many researchers over the past decades.
+In particular, they have investigated under which conditions bijective mappings
+between algebras preserving the multiplicative structure necessarily preserve the
+additive structure as well. The most fundamental result in this direction is due
+to W. S. Martindale III {{cite:249c1580-e3a4-4c08-8e39-79ee226bf81b}} who proved that every bijective
+multiplicative mapping from a prime ring containing a nontrivial idempotent
+onto an arbitrary ring is necessarily additive. Later, a number of authors
+considered the Jordan-type product or Lie-type product and proved that,
+on certain associative algebras or rings, bijective mappings which preserve
+any of those products are automatically additive, see
+{{cite:2edc9f3b-af64-4657-abdc-4daac6aff886}}, {{cite:918beb0a-3600-4877-9754-8746232ede6b}}, {{cite:f298bcc5-e941-43bc-8293-ec83f1c593bf}}, {{cite:061dfbdc-ed84-44f0-9fa2-b3c45177508b}}, {{cite:fddf98de-096c-4d6b-bac3-d3feef2bdd13}}, {{cite:2ee956f0-d704-4db6-ac03-151f2bcf217f}}, {{cite:f2a61a77-0e75-43d5-949e-9640e2decc98}}, {{cite:24cb41b9-f3b2-4c9e-9afd-705541a84cb7}}, {{cite:5d70cd93-b9da-4491-a656-2f4d53f68c62}}, {{cite:e9f4993e-97fb-498b-9d20-abdbeb2bacb2}}.
+An additive mapping FORMULA  is called an
+additive derivation if FORMULA  for all FORMULA .
+Furthermore, FORMULA  is said to be an additive FORMULA -derivation provided that FORMULA 
+is an additive derivation and satisfies FORMULA  for all FORMULA .
+Let FORMULA  be a mapping
+(without the additivity assumption). We say that FORMULA  is a
+nonlinear FORMULA -Jordan derivation if
+FORMULA 
+holds true for all FORMULA . Similarly, a mapping FORMULA  is called a nonlinear FORMULA -Jordan triple derivation if it satisfies the condition
+FORMULA 
+for all FORMULA , where FORMULA  .
+We should be aware that FORMULA  is not necessarily associative.
+Given the consideration of FORMULA -Jordan derivations and FORMULA -Jordan triple derivations, we can
+further develop them in one natural way. Suppose that FORMULA  is a fixed positive
+integer. Let us see a sequence of polynomials with  FORMULA
+FORMULA 
+Accordingly, a nonlinear FORMULA -Jordan FORMULA -derivation is a mapping FORMULA  satisfying the condition
+FORMULA 
+for all FORMULA . This notion makes the best use of the definition of Lie-type derivations
+and that of FORMULA -Lie-type derivations, see {{cite:349e5cca-3d27-4bdf-970c-dfa5619607e8}}, {{cite:4e414da4-93e3-43b3-babf-61bb4ab1b196}}, {{cite:6d748fac-662a-4a51-b90a-5ee5acfee64a}}.
+By the definition, it is clear that every FORMULA -Jordan derivation is a
+FORMULA -Jordan 2-derivation and each FORMULA -Jordan triple derivation is a FORMULA -Jordan 3-derivation.
+One can easily check that each nonlinear FORMULA -Jordan derivation on FORMULA  is
+a nonlinear FORMULA -Jordan triple derivation. But, we don't know whether the converse statement is true.
+FORMULA -Jordan 2-derivations, FORMULA -Jordan 3-derivations and FORMULA -Jordan FORMULA -derivations
+are collectively referred to as FORMULA -Jordan-type derivations.
+FORMULA -Jordan-type derivations on operator algebras have been studied by
+several authors. Let FORMULA  be a complex Hilbert space and FORMULA  be the algebra of all
+bounded linear operators on FORMULA . Li et al in {{cite:4a24b1ee-292e-45f1-a962-b6de848eee85}} showed that if FORMULA  is a von Neumann
+algebra without central summands of type FORMULA , then FORMULA  is a
+nonlinear FORMULA -Jordan derivation if and only if FORMULA  is an additive FORMULA -derivation.
+More recently, this result is extended to the case of nonlinear FORMULA -Jordan triple derivations by Zhao and Li {{cite:4e54635b-6071-41d2-815a-b9a43bbd1afd}}.
+Taghavi et al {{cite:0776f7a6-e3df-470e-a7a5-022b11e6c225}} and Zhang {{cite:fab2821c-035c-4af4-8370-57154a4fa43d}} independently investigate
+FORMULA -Jordan derivations on factor von Neumann algebras, respectively. It turns out that
+each nonlinear FORMULA -Jordan derivation on a factor von Neumann algebra is an additive FORMULA -derivation.
+Inspired by the afore-mentioned works, we will concentrate on giving a description of nonlinear
+FORMULA -Jordan-type derivations on von Neumann algebras. The organization of this paper is as follows.
+We recall and collect some indispensable facts with respect to von Neumann algebras in the
+second section . The third Section  is devoted to our main result
+Theorem REF  and its proof. The main theorem states that every nonlinear
+FORMULA -Jordan-type derivation on a von Neumann algebra without central summands of type FORMULA 
+is an additive FORMULA -derivation. Similar statements are also given for factor von Neumann algebras
+and standard operator algebras without proofs. Some potential topics for the future research are presented in the last Section .
+
+Preliminaries
+Throughout this paper, FORMULA  denotes a complex Hilbert space and FORMULA 
+is the algebra of all bounded linear operators on FORMULA . A von Neumann algebra
+FORMULA  is weakly closed, self-adjoint algebra of operators on FORMULA  containing
+the identity operator FORMULA . The set FORMULA 
+is called the centre of FORMULA .
+A projection FORMULA  is called a central abelian projection if FORMULA 
+and FORMULA  is abelian. Recall that the central carrier of FORMULA , denoted by FORMULA , is
+the smallest central projection FORMULA  satisfying the condition FORMULA . It is straightforward to
+check that the central carrier of FORMULA  is the projection onto the closed subspace spanned by
+FORMULA . If FORMULA  is self-adjoint, then the core
+of FORMULA , denoted by FORMULA , is FORMULA . If FORMULA 
+is a projection, it is clear that FORMULA  is the largest central projection FORMULA  with FORMULA .
+A projection FORMULA  is said to be core-free if FORMULA . It is not difficult to see
+that FORMULA  if and only if FORMULA .
+To round off the proof of our main theorem, we need to give some necessary lemmas.
+Lemma 2.1 {{cite:3de6d95a-3a6b-4b7b-b685-072c5646551d}}
+Let FORMULA  be a von Neumann without central summands of type FORMULA .
+Then each nonzero central projection in FORMULA  is the central carrier of
+a core-free projection in FORMULA .
+
+Lemma 2.2 {{cite:4a24b1ee-292e-45f1-a962-b6de848eee85}}
+Let FORMULA  be a von Neumann algebra on a Hilbert space FORMULA .
+Let FORMULA  and FORMULA  is a projection with
+FORMULA . If FORMULA  for all FORMULA , then FORMULA .
+
+Lemma 2.3 
+Let FORMULA  be a von Neumann algebra without central summands of type FORMULA .
+For any FORMULA  and for any positive integer FORMULA , we have
+FORMULA 
+and
+FORMULA 
+
+By a recursive calculation, we know that
+FORMULA 
+Similarly, we also have
+FORMULA 
+Let FORMULA  be a von Neumann algebra without central summands of type FORMULA .
+By Lemma REF , we know that there exists a nonzero central projection
+FORMULA  such that FORMULA  and FORMULA . For the convenience of discussion,
+let us set FORMULA , FORMULA . We write FORMULA .
+Thus one gets FORMULA . We denote the imaginary
+unit by FORMULA .
+Lemma 2.4 
+Let FORMULA  be a von Neumann algebra without central summands of type FORMULA .
+For any FORMULA  with FORMULA  and FORMULA , we have
+
+FORMULA  implies that FORMULA .
+
+FORMULA  implies that FORMULA .
+
+FORMULA  implies that FORMULA .
+
+
+Let us first prove the assertion (a).
+We have
+FORMULA 
+which leads to FORMULA .
+The other two assertions can be achieved by an analogous manner.
+
+Main Theorem and Its Proof
+We are in a position to give the main theorem of this article which can be stated
+as follows.
+Theorem 3.1 
+Let FORMULA  be a von Neumann algebra without central summands of
+type FORMULA . Then a mapping FORMULA  satisfies the rule
+FORMULA 
+for all FORMULA  if and only if FORMULA  is an additive FORMULA -derivation.
+
+The proof of this theorem can be realized via a series of claims.
+
+Claim 1. FORMULA .
+FORMULA 
+Claim 2. For any FORMULA , we have FORMULA .
+
+Note that the fact FORMULA . By Lemma REF  it follows that
+FORMULA 
+This gives
+FORMULA 
+That is,
+FORMULA 
+Using the relation (3.1), we get
+FORMULA 
+for all FORMULA . Thus we obtain
+FORMULA 
+That is,
+FORMULA 
+Claim 3. For any FORMULA , we have
+FORMULA 
+We only need to prove the case of FORMULA , and the proofs of the other cases are rather similar
+and are omitted here. Let us write
+FORMULA 
+It is sufficient for us to show that FORMULA . Since
+FORMULA 
+and
+FORMULA 
+we by Claim 2 have
+FORMULA 
+We therefore get
+FORMULA 
+In light of Lemma REF , we obtain
+FORMULA 
+It follows from Lemma REF  that
+FORMULA 
+Notice that
+FORMULA 
+and
+FORMULA 
+By Claim 2, we observe that
+FORMULA 
+Thus we arrive at
+FORMULA 
+Taking into account Lemma REF , we get
+FORMULA 
+Applying Lemma REF  yields that
+FORMULA 
+We therefore have FORMULA . That is,
+FORMULA 
+The other cases can be verified by an analogous manner.
+
+Claim 4. For any FORMULA , we have
+FORMULA 
+We only need to show that
+FORMULA 
+Since
+FORMULA 
+and
+FORMULA 
+we obtain
+FORMULA 
+Hence, we have
+FORMULA 
+Applying Lemma REF  gives
+FORMULA 
+By Lemma REF , we know that
+FORMULA 
+Note that the facts
+FORMULA 
+and
+FORMULA 
+Using similar computations as the above, we get
+FORMULA 
+In view of Lemma REF  and the fact FORMULA , one can see that
+FORMULA 
+On the other hand, we should remark that
+FORMULA 
+and
+FORMULA 
+Using similar arguments as the above, one can get FORMULA .
+
+Claim 5. For all FORMULA , we have
+FORMULA 
+It is sufficient to prove that
+FORMULA 
+Since
+FORMULA 
+and
+FORMULA 
+we konw that
+FORMULA 
+Thus we obtain
+FORMULA 
+By invoking of Lemma REF , we arrive at
+FORMULA 
+It follows from Lemma REF  that
+FORMULA 
+We should remark that
+FORMULA 
+and that
+FORMULA 
+Using similar discussions as the above, one can get
+FORMULA 
+Hence we conclude that FORMULA . That is,
+FORMULA 
+Claim 6. For any FORMULA  and FORMULA , we have
+
+FORMULA ,
+
+FORMULA .
+
+Let us first prove the result (a). For convenience, let us set
+FORMULA 
+We shall prove that FORMULA . In view of the facts
+FORMULA 
+and
+FORMULA 
+we by Claim 4 get
+FORMULA 
+By Lemma REF  we know that
+FORMULA 
+It follows from Lemma REF  that
+FORMULA 
+In order to show FORMULA , we should note that
+FORMULA 
+and that
+FORMULA 
+Using Claim 3, we see that
+FORMULA 
+This implies that
+FORMULA 
+According to Lemma REF , we know that FORMULA . Thus we arrive at
+FORMULA 
+Considering the relations
+FORMULA 
+and
+FORMULA 
+together with the previous calculations, we assert that
+FORMULA 
+Claim 7. For any FORMULA  and FORMULA , we have
+FORMULA 
+We only need to prove that
+FORMULA 
+Note the facts that
+FORMULA 
+and
+FORMULA 
+Applying Claim 6 (a) yields that
+FORMULA 
+Thus we obtain
+FORMULA 
+So FORMULA  by Lemma REF .
+
+Similarly, using the relations
+FORMULA 
+and
+FORMULA 
+one can get FORMULA . The proof of this claim is completed.
+
+Claim 8. For any FORMULA , we have
+FORMULA 
+Case 1: FORMULA .
+Note that
+FORMULA 
+In light of Claim 6, we know that
+FORMULA 
+On the other hand, we by Claim 3 and Claim 4 have
+FORMULA 
+Compare (3.2) with (3.3) gives
+FORMULA 
+Case 2: FORMULA .
+
+Let us set FORMULA . Let us take FORMULA , but FORMULA . Since
+FORMULA 
+and
+FORMULA 
+we know that
+FORMULA 
+Then we have
+FORMULA 
+By invoking of Lemma REF , we arrive at FORMULA .
+
+The last step is to show that FORMULA . Since
+FORMULA 
+and by Case 1 of this claim and Claim 4, we have
+FORMULA 
+Thus we obtain
+FORMULA 
+It follows that FORMULA . That is, FORMULA  for
+all FORMULA . Note that FORMULA . In light of Lemma REF ,
+we conclude that FORMULA .
+
+As an immediate consequence of the previous Claims, we have
+
+Claim 9. FORMULA  is an additive mapping.
+
+Let us next show that FORMULA  is a FORMULA -derivation.
+
+Claim 10. For any FORMULA , we have FORMULA .
+
+In view of Lemma REF , we konw that
+FORMULA 
+It follows that
+FORMULA 
+Thus we get FORMULA .
+
+We next prove that FORMULA  is actually a derivation.
+
+Claim 11. For any FORMULA , we have  FORMULA
+Since
+FORMULA 
+we obtain
+FORMULA 
+It follows that
+FORMULA 
+Replacing FORMULA  (resp. FORMULA ) by FORMULA  (resp. FORMULA ) in (3.4) and using Claim 9, we arrive at
+FORMULA 
+Combining (3.4) with (3.5) gives
+FORMULA 
+By an analogous manner, we can prove
+Theorem 3.2 
+Let FORMULA  be the algebra of all bounded linear operators on a complex Hilbert space
+FORMULA  and FORMULA  be a factor von Neumann algebra.
+Then a mapping FORMULA  satisfies the rule
+FORMULA 
+for all FORMULA  if and only if FORMULA  is an additive FORMULA -derivation.
+
+FORMULA  denotes the algebra of all bounded linear
+operators on a complex Hilbert space FORMULA . Let us denote the subalgebra of
+all bounded finite rank operators by FORMULA .
+We call a subalgebra FORMULA  of FORMULA  a standard operator algebra
+if it contains FORMULA . It should be remarked that a standard operator
+algebra is not necessarily closed in the sense of weak operator topology. This is quite
+different from von Neumann algebras which are always weakly closed.
+From ring theoretic prespective, standard operator algebras and factor von Neumann
+algebras are both prime, whereas von Neumann algebras are usually semiprime.
+Recall that an algebra FORMULA  is prime if FORMULA  impliess
+either FORMULA  or FORMULA . An algebra is semiprime if FORMULA  impliess FORMULA .
+Every standard operator algebra has the center FORMULA , which is also the center of arbitrary
+factor von Neumann algebra. An operator FORMULA  is said to be
+a projection provided FORMULA  and FORMULA . Any operator FORMULA 
+can be expressed as FORMULA , where i is the
+imaginary unit, FORMULA  and FORMULA .
+Note that both
+FORMULA  and FORMULA  are self-adjoint.
+Combining our current methods with the techniques of {{cite:4e414da4-93e3-43b3-babf-61bb4ab1b196}}, one can get
+Theorem 3.3 
+Let FORMULA  be an infinite dimensional complex Hilbert space and FORMULA  be a
+standard operator algebra on FORMULA  containing the identity operator FORMULA .
+Suppose that FORMULA  is closed under the adjoint operation.
+Then a mapping FORMULA  satisfies the rule
+FORMULA 
+for all FORMULA  if and only if FORMULA  is an additive FORMULA -derivation.
+
+We must point out that the technical routes and proving methods of Theorems REF  and REF 
+are fairly similar to those of Theorem REF , and hence its proofs are omitted here for saving space.
+
+Related Topics for Future Research
+The main purpose of this article is to concentrate on studying nonlinear FORMULA -Jordan-type derivations
+on operator algebras. The involved operator algebras are based on the algebra FORMULA 
+of all bounded linear operators on a complex Hilbert space FORMULA , such as standard operator algebras,
+factor von Neumann algebras, von Neumann algebras without central summands of type FORMULA .
+Note that, unlike von Neumann algebras which are always weakly closed,
+a standard operator algebra is not necessarily closed. The current
+work together with {{cite:408863de-b533-450c-bb11-5f220f55a4d6}}, {{cite:4a24b1ee-292e-45f1-a962-b6de848eee85}}, {{cite:113920d1-f048-4556-b971-5b6dd08ca2a5}}, {{cite:4e414da4-93e3-43b3-babf-61bb4ab1b196}}, {{cite:6d748fac-662a-4a51-b90a-5ee5acfee64a}}, {{cite:0776f7a6-e3df-470e-a7a5-022b11e6c225}}, {{cite:fab2821c-035c-4af4-8370-57154a4fa43d}}, {{cite:8ca8add1-a51d-4fc8-b46c-be1bbc4b37a8}}, {{cite:4e54635b-6071-41d2-815a-b9a43bbd1afd}}
+indicates that it is feasible to investigate FORMULA -Jordan-type derivations and FORMULA -Lie-type
+derivations on operator algebras under a unified framework—FORMULA -FORMULA -Jordan-type derivations.
+We have good reasons to believe that characterizing FORMULA -FORMULA -Jordan-type
+derivations on operator algebras is also of great interest. In the light of the motivation
+and contents of this article, we would like to end this article by proposing several open questions.
+Let FORMULA  be an associative FORMULA -algebra over the complex field FORMULA 
+and FORMULA  be a non-zero scalar. For any FORMULA , we can denote a “new product" of FORMULA  and FORMULA  by
+FORMULA . This new product FORMULA  is
+usually said to be FORMULA -FORMULA -Jordan product. Clearly, 1-FORMULA -Jordan product FORMULA  is the
+so-called FORMULA -Jordan product, and FORMULA -FORMULA -Jordan product FORMULA  is the so-called FORMULA -Lie product. Therefore,
+it is reasonable to say that FORMULA -FORMULA -Jordan products organically unify
+FORMULA -Jordan products with FORMULA -Lie products. There are considerable works which are
+devoted to the study of mappings preserving the FORMULA -FORMULA -Jordan product
+between FORMULA -algebras, see {{cite:f298bcc5-e941-43bc-8293-ec83f1c593bf}}, {{cite:061dfbdc-ed84-44f0-9fa2-b3c45177508b}}, {{cite:fddf98de-096c-4d6b-bac3-d3feef2bdd13}}, {{cite:2ee956f0-d704-4db6-ac03-151f2bcf217f}}, {{cite:f2a61a77-0e75-43d5-949e-9640e2decc98}}, {{cite:24cb41b9-f3b2-4c9e-9afd-705541a84cb7}}, {{cite:5d70cd93-b9da-4491-a656-2f4d53f68c62}}, {{cite:e9f4993e-97fb-498b-9d20-abdbeb2bacb2}}
+and the references therein.
+Let FORMULA  be a mapping
+(without the additivity assumption). We say that FORMULA  is a
+nonlinear FORMULA -FORMULA -Jordan derivation if
+FORMULA 
+holds true for all FORMULA . Similarly, a mapping FORMULA  is called a nonlinear FORMULA -FORMULA -Jordan triple derivation if it satisfies the condition
+FORMULA 
+for all FORMULA , where FORMULA  .
+We should note that FORMULA  is not necessarily associative.
+Taking into account the definitions of FORMULA -FORMULA -Jordan derivations and FORMULA -FORMULA -Jordan
+triple derivations, one can propose one much more common notion. Suppose that FORMULA  is a fixed positive
+integer. Let us see a sequence of polynomials with scalar FORMULA  and  FORMULA
+FORMULA 
+Accordingly, a nonlinear FORMULA -FORMULA -Jordan FORMULA -derivation is a mapping FORMULA  satisfying the condition
+FORMULA 
+for all FORMULA . This notion is motivated by the definition of FORMULA -Jordan-type derivations
+and that of FORMULA -Lie-type derivations. Then each FORMULA -Jordan derivation is a
+1-FORMULA -Jordan 2-derivation and every FORMULA -Jordan triple derivation is a 1-FORMULA -Jordan 3-derivation.
+Likewise, each FORMULA -Lie derivation is a
+FORMULA -FORMULA -Jordan 2-derivation and every FORMULA -Lie triple derivation is a FORMULA -FORMULA -Jordan 3-derivation.
+FORMULA -FORMULA -Jordan 2-derivations, FORMULA -FORMULA -Jordan 3-derivations and FORMULA -FORMULA -Jordan FORMULA -derivations
+are collectively referred to as FORMULA -FORMULA -Jordan-type derivations.
+FORMULA -FORMULA -Jordan-type derivations on operator algebras are intensively studied by
+several authors, {{cite:408863de-b533-450c-bb11-5f220f55a4d6}}, {{cite:4a24b1ee-292e-45f1-a962-b6de848eee85}}, {{cite:113920d1-f048-4556-b971-5b6dd08ca2a5}}, {{cite:4e414da4-93e3-43b3-babf-61bb4ab1b196}}, {{cite:6d748fac-662a-4a51-b90a-5ee5acfee64a}}, {{cite:0776f7a6-e3df-470e-a7a5-022b11e6c225}}, {{cite:fab2821c-035c-4af4-8370-57154a4fa43d}}, {{cite:8ca8add1-a51d-4fc8-b46c-be1bbc4b37a8}}, {{cite:4e54635b-6071-41d2-815a-b9a43bbd1afd}} .
+A basic question in this line is to investigate whether each nonlinear FORMULA -FORMULA -Jordan-type derivation
+on an operator algebra FORMULA  with FORMULA  is an additive FORMULA -derivation.
+In view of the current work and existing results in this direction, we propose several open questions.
+Question 4.1 
+Let FORMULA  be an infinite dimensional complex Hilbert space and FORMULA  be a
+standard operator algebra on FORMULA  containing the identity operator FORMULA .
+Let FORMULA  be a non-zero scalar.
+Suppose that FORMULA  is closed under the adjoint operation.
+A mapping FORMULA  satisfies the following condition:
+FORMULA 
+for all FORMULA . Is FORMULA  an additive FORMULA -derivation ? Does
+the relation FORMULA  hold for any FORMULA  ?
+
+Question 4.2 
+Let FORMULA  be the algebra of all bounded linear operators on a complex Hilbert space
+FORMULA  and FORMULA  be a factor von Neumann algebra. Suppose that FORMULA  is a non-zero scaler.
+Let FORMULA  be a mapping such that
+FORMULA 
+for all FORMULA . Is FORMULA  an additive FORMULA -derivation ? Do we have
+the relation FORMULA  for any FORMULA  ?
+
+Question 4.3 
+Let FORMULA  be the algebra of all bounded linear operators on a complex Hilbert space
+FORMULA  and FORMULA  be a von Neumann algebra without central
+summands of type FORMULA . Let FORMULA  be a non-zereo scalar. A mapping FORMULA 
+satisfies the following conditions:
+FORMULA 
+for all FORMULA . Is FORMULA  an additive FORMULA -derivation ? Can we get
+the relation FORMULA  for any FORMULA  ?
+

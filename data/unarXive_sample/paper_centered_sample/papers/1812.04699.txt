@@ -1,0 +1,94 @@
+
+Physics Letters A
+Stability boundaries of a Mathieu equation having FORMULA  symmetry
+P. A. Brandão
+Instituto de Física, Universidade Federal de Alagoas, Maceió - AL
+paulo.brandao@fis.ufal.br
+I've applied multiple-scale perturbation theory to a generalized complex FORMULA -symmetric Mathieu equation in order to find the stability boundaries between bounded and unbounded solutions. The analysis suggests that the non-Hermitian parameter present in the equation can be used to control the shape and curvature of these boundaries. Although this was suggested earlier by several authors, analytic formulas for the boundary curves were not given. This paper is a first attempt to fill this gap in the theory
+Parity-Time Mathieu equation Multiple-Scale analysis
+Introduction
+Non-Hermitian Hamiltonians having FORMULA -symmetry were introduced in 1998 by Bender and Boettcher in a first attempt to generalize the standard postulates of Hermitian quantum mechanics to include operators invariant under parity (FORMULA ) and time reversal (FORMULA ) symmetries {{cite:6fbfe8b4-8640-418d-b378-4bfa1a9fd0c0}}. The authors showed that if a Hamiltonian commutes with the FORMULA  operator, the energy eigenvalues could consist of entirely real, discrete and positive numbers. However, this is only a necessary but not a sufficient condition for the reality of the spectrum. If a FORMULA -symmetric Hamiltonian is found to possess complex eigenvalues, we say that it has a broken symmetric phase {{cite:2dd306f8-c895-464b-bf4f-af851700e30b}}, {{cite:57be7048-d78b-4a7d-8e23-d73281521d04}}, {{cite:77f0a43e-2a01-4f39-9bb8-d53e9ed081e9}}. If a FORMULA -symmetric Hamiltonian is found to possess real spectra, then it is possible to introduce a new symmetry, described by an operator FORMULA , such that the evolution of the entire system is unitary, consistent with physical requirements of probability conservation {{cite:57be7048-d78b-4a7d-8e23-d73281521d04}}. The condition imposed on the potential function FORMULA  of the Schrödinger equation to guarantee FORMULA  symmetry is that FORMULA , as can be easily verified. This, in turn, implies that the real (imaginary) part of the potential must be even (odd) under FORMULA . Reviews on the subject of FORMULA  symmetry in quantum and classical mechanics are already available {{cite:62a2694c-fd9e-4715-a381-eab040aceac7}}, {{cite:89812318-075f-4834-bd29-43f087eb1a16}}.
+The Schrödinger equation with a periodic potential FORMULA  (FORMULA  being the period) having parity and time-reversal symmetry was considered by Bender and coauthors in 1999 {{cite:274db52d-78f0-4e9e-b716-541d5fc99589}}. The authors found that real energy bands can be created even though the potential is a complex function of position. Moreover, the bands could be controlled by tuning the non-Hermitian parameter present in the Hamiltonian. From a purely mathematical context, the Mathieu equation is one of the most studied second order linear differential equation in applied mathematics {{cite:f64f3057-01f4-4d98-93ee-42420b27cd1d}}, {{cite:7817bd49-f5e3-491a-92d5-99a4fff13a3f}}. Its solutions, known as Mathieu functions, play a key role in physics with special interest in the propagation of electrons in crystal lattices, where the potential function of the Schrödinger equation reduces to a Mathieu type. The Mathieu equation is a special case of a more general second order linear differential equation known as a Hill's equation {{cite:fb1d42e9-f825-4b7b-a819-46ab320aa833}}. Given a differential equation of a Mathieu type,
+FORMULA 
+where FORMULA  and FORMULA  are real and positive constants, it is well known that, depending on the numerical values of FORMULA , the solutions can be bounded or unbounded with respect to FORMULA . One of the main objectives is to find the boundary lines in the FORMULA -plane which separates bounded from unbounded solutions. The problem of finding the stability boundaries of a Mathieu equation is well documented {{cite:7cbe3e0b-1269-469d-ad7b-c689c3c32ad5}}. The fact that one can control the band diagram by tuning the non-Hermitian character of the lattice is also not a new result and it was suggested earlier by several authors {{cite:274db52d-78f0-4e9e-b716-541d5fc99589}}, {{cite:e8333544-c99b-4f14-9cff-bcd8a206f7b1}}, {{cite:5e54bb2a-f89e-441a-ac8d-803150300ab5}}, {{cite:5cb9cdb5-c456-4b2a-90d6-7afb44c5ad70}}, {{cite:aa93c87e-200b-4af6-bc72-cd0ecf631b4a}}. However, to my knowledge, a detailed analysis aimed to obtain analytic expressions for the stability boundaries in the FORMULA  plane for a FORMULA  symmetric lattice has not been considered. Therefore, the objective of this paper is to close this gap by deriving the first set of approximate expressions that can be used to understand in a clear way the shape and curvature of the stability boundaries of a generalized Mathieu equation with FORMULA  symmetry.
+
+Multiple-Scale Analysis: Setting up the problem
+Our primary goal is to find the boundaries between stable and unstable solutions in the FORMULA -plane of the generalized FORMULA -symmetric Mathieu equation and to understand their behavior as we vary the non-Hermitian parameter FORMULA . To this end, let us consider the FORMULA -symmetric Mathieu equation
+FORMULA 
+where the periodic potential FORMULA  has FORMULA  symmetry since it satisfies FORMULA  as discussed previously. If FORMULA , we recover the usual Mathieu equation whose solutions converges for FORMULA  (FORMULA ), as can be easily verified by using regular perturbation expansions around small values of FORMULA  {{cite:7cbe3e0b-1269-469d-ad7b-c689c3c32ad5}}. Multiple-scale perturbation analysis starts by assuming that the solution can be expanded in a perturbation series of the form
+FORMULA 
+where FORMULA  is a long spatial scale (treated as an independent variable) since FORMULA  is not negligible when FORMULA  is of order FORMULA  or larger. By taking the total second order derivative of (REF ) with respect to FORMULA , we obtain the expansion
+FORMULA 
+
+We also expand the parameter FORMULA  in a perturbation series in powers of FORMULA :
+FORMULA 
+where FORMULA  are real numbers. After substituting (REF ), (REF ) and (REF ) into (REF ), and collecting powers of FORMULA , we obtain the following system of coupled linear partial differential equations:
+FORMULA 
+
+Equations (REF ), () and () provide the starting point for our analysis. In what follows we will consider the expansion around two particular values of FORMULA : {0, FORMULA } in order to find the stability boundaries between stable and unstable solutions in the vicinity of these specific values. The analysis presented here can be easily extended to any value of FORMULA .
+
+Perturbative analysis for  FORMULA
+The structure of the set of coupled equations (REF )-() is such that if FORMULA  is found from (REF ), FORMULA  can be calculated from () and all the successive orders can be found from () where the right hand side depends on previous calculated values. Therefore, we first set FORMULA  in (REF ) such that the function FORMULA  satisfies
+FORMULA 
+and the bounded solution is FORMULA  with FORMULA  an arbitrary bounded function of FORMULA . To find FORMULA  we substitute the above FORMULA  into () to obtain
+FORMULA 
+If we impose the condition that FORMULA  be a bounded function, we must take FORMULA . Therefore, we have the FORMULA  expansion up to second order in FORMULA : FORMULA . To find FORMULA  we need the solution of the differential equation (REF ) with FORMULA . This is easily done and the result is given by
+FORMULA 
+where FORMULA  is an arbitrary bounded function of FORMULA . The differential equation () satisfied by FORMULA  can be written as
+FORMULA 
+
+If we impose the condition that FORMULA  remain bounded, we must have
+FORMULA 
+so that
+FORMULA 
+
+and we can take
+FORMULA 
+as the boundary stability line with FORMULA  a constant value. This gives us the second order contribution to FORMULA :
+FORMULA 
+so that the curvature FORMULA  of the boundary is
+FORMULA 
+and the function FORMULA  (which is FORMULA -symmetric if we take FORMULA  as a real function of FORMULA ) is given by
+FORMULA 
+where FORMULA  is an arbitrary bounded function of FORMULA . This process can be repeated if one wishes to find the third order correction FORMULA  and so on It can be shown that FORMULA  is, in fact, zero.. It is seen from (REF ) and (REF ) that the non-Hermitian parameter FORMULA  quadratically controls the curvature of the stability boundary for FORMULA  near zero. In particular, if FORMULA  assumes the unit value, which is the critical number in which the symmetry of the lattice is spontaneously broken, the curvature vanishes. Figure 1 shows a plot of the stability line for three values of FORMULA  in the plane FORMULA . When FORMULA  we recover the usual approximation found in textbooks that FORMULA , shown as a continuous line in the figure. As soon as FORMULA  the stability line deforms in such a way that it approximates to a straight line when FORMULA  is close to 1. The introduction of the non-Hermitian parameter therefore has a very important consequence on the position in the FORMULA -plane of stable and unstable solutions.
+FIGURE 
+
+Perturbative analysis for  FORMULA
+Let us now consider a slightly more complicated situation. If we choose FORMULA  then, according to (REF ), the function FORMULA  satisfies
+FORMULA 
+The general solution of this linear partial differential equation is
+FORMULA 
+with FORMULA  and FORMULA  arbitrary bounded functions of the parameter FORMULA . According to (), the function FORMULA  satisfies the differential equation
+FORMULA 
+In order to obtain bounded solutions, the secular terms must vanish. This implies the following coupled second order differential equations for FORMULA  and FORMULA :
+FORMULA 
+
+Both, FORMULA  and FORMULA , satisfy the same differential equation, namely
+FORMULA 
+and it is easy to see that we have two conditions on the boundness of FORMULA :
+FORMULA 
+
+so that the stability boundary line in the FORMULA  plane (up to first order in FORMULA ) is given by
+FORMULA 
+To find the second order correction, FORMULA , we notice that FORMULA  is given by
+FORMULA 
+where FORMULA  are arbitrary bounded functions of the parameter FORMULA . After substituting (REF ) into () we get
+FORMULA 
+
+and imposing the condition that the secular terms vanish we have
+FORMULA 
+and
+FORMULA 
+which implies that FORMULA  with FORMULA  both satisfy the same differential equation
+FORMULA 
+For a bounded solution to exist, we must impose that
+FORMULA 
+with FORMULA  a constant independent of FORMULA . Equation (REF ) is consistent with the literature when FORMULA  {{cite:7cbe3e0b-1269-469d-ad7b-c689c3c32ad5}}. Therefore, we can write the boundary line up to second order in FORMULA  as
+FORMULA 
+The curvature FORMULA  of this stability line is now given by
+FORMULA 
+which is always less than the curvature of the stability line around FORMULA . Figure 2 shows the stability lines as given by (REF ). One can clearly see from the figure that the boundaries can be tuned depending on FORMULA . Once this non-Hermitian parameter acquires physical interpretation (for example, it can be considered as the physical parameter which controls loss and gain in waveguide arrays in optical systems), the above approximated equations for the stability boundaries can be used to engineer a specific function on the Bloch waves. It should be noted that these lines are a global property of the system, implying that Figures 1 and 2 are composing the same system for the same values of FORMULA .
+FIGURE 
+
+Conclusions
+The introduction of a non-Hermitian parameter into the Mathieu equation (generating a generalized complex Mathieu equation) enables one to tune the band structure of the bounded and unbounded solutions. Analytic approximate expressions were given for the stability boundaries for two specific values of FORMULA  (the zeroth order parameter). The analysis can be easily extended to include other values of FORMULA .

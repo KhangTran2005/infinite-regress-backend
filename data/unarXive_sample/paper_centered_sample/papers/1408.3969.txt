@@ -1,0 +1,165 @@
+
+APS/123-QED
+Efficient Exploration of Multi-Modal Posterior Distributions
+Yi-Ming Hu
+y.hu.1@research.gla.ac.uk
+Martin HendryIk Siong Heng
+ School of Physics and Astronomy, University of Glasgow, Glasgow, G12 8QQ, UK
+
+2018/12/10 04:23:18
+
+The Markov Chain Monte Carlo (MCMC) algorithm is a widely recognised as an efficient method for sampling a specified posterior distribution.
+However, when the posterior is multi-modal, conventional MCMC algorithms either tend to become stuck in one local mode, become non-Markovian or require an excessively long time to explore the global properties of the distribution.
+We propose a novel variant of MCMC, mixed MCMC, which exploits a specially designed proposal density to allow the generation candidate points from any of a number of different modes.
+This new method is efficient by design, and is strictly Markovian.
+We present our method and apply it to a toy model inference problem to demonstrate its validity.
+Introduction
+Bayesian inference methods have been applied to an increasingly wide range of data analysis problems in the physical sciences – particularly problems requiring parameter estimation and model selection (see, for example, {{cite:42513170-6ba2-4fc5-9469-b0af39549187}}{{cite:d286ee4c-2a68-457c-81bb-9a910d84a7ca}}{{cite:d73e63a7-c92f-40de-98f4-1f53bc2c4f78}}{{cite:2fde754c-029b-4117-be6d-63a7e515095b}}). This growing popularity of the Bayesian approach has been driven by the ready availability of increasingly powerful computational facilities, allied with significant advances in the data analysis methodology and algorithms that have been developed. These twin drivers have permitted the application of Bayesian methods to data sets of a size, complexity and dimensionality that until recently would have rendered them intractable.
+One of the main targets of Bayesian inference is to estimate the posterior distribution of desired parameters. To estimate posterior distributions, one naive solution is to use an exhaustive algorithm to calculate the posterior over a dense grid of points in the parameter space. Such brute-force methods will have little or no practical value when dealing with medium-to-high dimensional problems since the computational burden will be prohibitively high. For such problems the ability to concentrate sampling in regions where the posterior probability is high is very important if we are to implement Bayesian inference methods efficiently.
+Methods such as Markov Chain Monte Carlo (MCMC) and Nested Sampling are well tailored to explore the posterior distribution over high dimensional parameter spaces. While the computational cost of brute-force methods increases exponentially with the dimension, MCMC usually only grows linearly with dimension {{cite:474f82fe-c808-4fbb-b912-675cbbb225dd}}{{cite:39fe3a03-47d5-4f98-941d-eb9a7c28ddf3}}.
+Generally, the method of MCMC works well so long as the posterior surface is sufficiently smooth. However, when the posterior distribution has a complicated structure, MCMC will become inefficient. For example, MCMC samplers are known to get “caught" in a local mode of the posterior, and unable to jump out and explore any other isolated modes in the parameter space {{cite:da59b498-f1f9-45fe-b4c0-f993dc188cd1}}{{cite:d57f17ca-c862-4288-9641-5ec2a46933ce}}.
+So a lot of methods have been proposed to make the MCMC sampling more efficient (e.g. {{cite:816f42aa-3735-4d6e-82f4-780961dc4544}}{{cite:3176a63b-e8d4-4c05-9753-438091ef9fd9}}{{cite:971048bd-965b-4c34-b851-ef7ac08a88b5}})
+In this work, we propose a novel method called mixed MCMC to deal with such issues. The conventional MCMC algorithm is robust for exploring the detailed structure of the posterior surface, and we want to retain that property while enabling some global “communication" between different regions of the parameter space so that the sampler can make jumps between those regions without requiring a very long exploration time.
+This paper is structured as follows.
+In section , we introduced the general realisation of MCMC and discussed how the MCMC can be used as a Bayesian tool.
+In section , we discuss the main difference of mixed MCMC and conventional MCMC and give the pseudo code for its realisation.
+We apply the method to a toy model as illustrated in section .
+Finally in section , we summarise the motivation and properties of mixed MCMC, and discussed possible extension to it.
+
+Method
+The basic principles of an MCMC algorithm are simply stated. The algorithm sets out to sample a chain of points in the parameter space and at the FORMULA  iteration (i.e. after FORMULA  points have already been sampled) a candidate point FORMULA  is randomly sampled from some specified proposal distribution, based solely on the position of the previous point in the chain FORMULA . The corresponding posterior for this candidate point is calculated, and compared with the posterior at FORMULA . If the value of the posterior at the candidate point is larger than that of the previous point, the candidate point is accepted as the next point in the chain. Otherwise, the candidate is accepted only with a certain acceptance probability (see next section). One finds therefore that the sampling will generally proceed “uphill" – i.e. to regions of the parameter space where the value of the posterior is larger – while sometimes it can also go “downhill" to regions where the posterior takes on lower values. The precise form of the acceptance probability achieves what is termed detailed balance, which ensures that the chain of sampled points is indeed a random sample drawn from the desired posterior distribution. This method can thus be used to efficiently explore the posterior distribution, avoiding the need for a global optimization via an exhaustive grid search.{{cite:42513170-6ba2-4fc5-9469-b0af39549187}}{{cite:d286ee4c-2a68-457c-81bb-9a910d84a7ca}}{{cite:d73e63a7-c92f-40de-98f4-1f53bc2c4f78}}{{cite:2fde754c-029b-4117-be6d-63a7e515095b}}
+Markov Chain Monte Carlo
+Interested reader is refered to {{cite:42513170-6ba2-4fc5-9469-b0af39549187}} and {{cite:d286ee4c-2a68-457c-81bb-9a910d84a7ca}} for detailed discussion of Bayesian Inference.
+Hereafter, we define the posterior FORMULA , the prior FORMULA  and likelihood FORMULA , where FORMULA  is the parameter set, FORMULA  is the data and FORMULA  is the information.
+The simplest form of Markov Chain Monte Carlo (MCMC) is known as the Metropolis algorithm, which can be achieved by the following steps {{cite:42513170-6ba2-4fc5-9469-b0af39549187}}{{cite:d286ee4c-2a68-457c-81bb-9a910d84a7ca}}{{cite:d73e63a7-c92f-40de-98f4-1f53bc2c4f78}}{{cite:64bb7650-ab95-4e50-a97a-8716f81e42a3}}.
+
+Arbitrarily choose a starting point FORMULA  that satisfies FORMULA , and a symmetric proposal distribution FORMULA . Set step index i=0.
+
+Increment i by 1.
+
+Randomly propose a new parameter set FORMULA  by sampling from FORMULA .
+
+Calculate the Metropolis ratio given by
+FORMULA 
+
+Accept the proposed parameter set FORMULA  with acceptance probability
+FORMULA 
+If FORMULA , then the candidate is accepted, so the new point is FORMULA .
+If FORMULA , draw a random number FORMULA  from a uniform distribution FORMULA , and if FORMULA , then set
+FORMULA ; otherwise set
+FORMULA .
+
+Step 2-5 are repeated until a large enough number of points have been sampled. This termination could be controlled by a preset number, or by monitoring the samples' distribution and check if it's sufficiently stable.{{cite:9d9eb314-beb2-4cd2-8e74-6df8f9ee3528}} The beginning peorid, which is generaly called as “burn-in" stage, is discarded to prevent the influence of the arbitrary choice of starting point FORMULA .
+The Metropolis-Hastings (M-H) algorithm is a more general form of the Metropolis algorithm.
+In the Metropolis algorithm, the proposal distribution is symmetric, that is FORMULA , but this condition is not necessary.
+In the M-H algorithm we relax this symmetric condition, so that equation (REF ) should be modified as follows
+FORMULA 
+It is clear that when the proposal distribution is symmetric, equation (REF ) is identical to equation (REF ).
+It can be shown that the number density of the sampled points will represent a sample from the posterior distribution {{cite:42513170-6ba2-4fc5-9469-b0af39549187}}. Thus estimation of the parameter(s) that characterise the posterior distribution becomes possible with a sufficiently large number of sampling points.
+
+Convergence of MCMC
+We can estimate the posterior distribution from a histogram of the values sampled by our MCMC chain, and the mean of the parameters can be estimated trivially as
+FORMULA 
+Any realization of MCMC is guaranteed to be converged if it satisfies the requirement of detailed balance.{{cite:42513170-6ba2-4fc5-9469-b0af39549187}}
+FORMULA 
+The concept of detailed balance in thermodynamics can help us to understand this requirement for the convergence of the MCMC chain. In thermodynamics, we can define the probability of a particle to be in state FORMULA  as FORMULA , and the probability of the particle to jump to state FORMULA  as FORMULA . Detailed balance requires that, after a sufficiently long timescale, the probability for a particle to jump from state FORMULA  to state FORMULA  should be exactly the same as the probability to jump from state FORMULA  to state FORMULA .
+We need to notice that detailed balance is a stronger requirement than convergence, in the sense that a Markovian Chain that is not in detailed balanced may still converge to the target distribution.{{cite:0d939325-817e-4f8d-8448-621b289e68eb}}
+
+mixed MCMC
+If the starting point and/or the proposal density is not properly chosen, the MCMC sampler might become stuck in a local mode, and will not be able to appropriately explore the whole parameter space. This might introduce a statistical bias in the parameter estimation carried out by MCMC, particularly when the target distribution is multi-modal. Thus motivates the realisation of mixed MCMC as a really Markovain realisation of MCMC that can sample posterior efficiently.{{cite:d57f17ca-c862-4288-9641-5ec2a46933ce}}{{cite:9d9eb314-beb2-4cd2-8e74-6df8f9ee3528}}{{cite:0d939325-817e-4f8d-8448-621b289e68eb}}
+Here we propose a novel method which we term mixed MCMC to perform Bayesian inference on multi-modal posterior distributions. This method can allow the sampler to communicate between different local maxima, so that the sampler will be able to represent local peaks, as well as to explore the global structure. As noted previously, our method requires some limited information about the location of the multiple modes before sampling. In many cases, however, we will have at least some rough prior knowledge about the posterior, and we can use this information to guide the sampler. Even in the absence of such prior knowledge, other existing global sampling methods can be tailored for this purpose speed up this process.{{cite:d57f17ca-c862-4288-9641-5ec2a46933ce}}{{cite:8800bbdb-9d7d-4233-af50-4058089dca51}}{{cite:fe9a213e-d482-4377-a31d-ce536604de82}}
+Algorithm
+The main difference between the algorithm for mixed MCMC and the conventional MCMC algorithms simply roots in the use of a novel form of proposal density. The sampler should be able to generate candidates from different sub-regions, while proper choice of Metropolis ratio will ensure that the sampling between those different sub-regions satisfies detailed balance.
+Suppose, as a result of existing prior knowledge, or with the help of some other global sampling method, we have some information about the posterior distribution that is sufficient to identify the existence and the rough location of the several modes in posterior distribution, where the location of the FORMULA  mode is labeled as FORMULA . We can then divide the parameter space into several distinct sub-regions each of which we assume contains a single mode of the posterior {{cite:42513170-6ba2-4fc5-9469-b0af39549187}}{{cite:05e2d0f7-e739-451f-8ab5-08094b3ab4a8}}.
+We should bare in mind that this method is designed for multi-modal posterior, thus the proposal density should be designed in a way that it can propose new candidates in all posterior modes. Thus we assign to the FORMULA  sub-region what we term a picking up probability, FORMULA , which determines the probability to get a new candidate in the FORMULA  sub-region. Ideally, this probability should be the same as the marginal likelihood (also known as the evidence) within the sub-region – i.e. the probability that the candidate point lies within that sub-region. Note also that the picking up probability should satisfy the normalisation requirement
+  FORMULA. At the same time it will maximise the efficiency of our approach if FORMULA , where FORMULA  is the volume of the FORMULA  sub-region of the parameter space.
+Suppose we decide to generate a candidate point in the FORMULA  sub-region, while the current (i.e. most recently updated) point FORMULA  is located in the FORMULA  sub-region. Then a normalised multivariate distribution (most conveniently taken to be a Gaussian) centering around the point FORMULA  is used as proposal density, and a candidate is drawn from this distribution. After calculating the value of the posterior at this candidate point, and then computing the Metropolis ratio, FORMULA , in the usual way, we can decide to accept the candidate point with the acceptance probability FORMULA  as before.
+In more detail our mixed MCMC algorithm can be illustrated with the following pseudo-code.
+
+Obtain some rough approximation to the posterior distribution using other methods.
+Identify m modes in the parameter space, and estimate their central locations given by FORMULA .
+
+Set FORMULA  to be the picking up probability, defined as proportional to the volume of the FORMULA  sub-region, with FORMULA . Set step label  FORMULA
+
+Randomly pick a starting point, FORMULA .
+
+while(not converged)
+
+Set i=i+1
+
+Randomly pick a sub-region number FORMULA  with probability FORMULA  and assign FORMULA  to be the current sub-region index. FORMULA  where m is the number of all sub-regions.
+
+Generate the candidate point FORMULA  drawn from the proposal density  FORMULA
+
+Calculate the Metropolis ratio FORMULA  based on the candidate and the previous point, FORMULA .
+
+Generate a random number FORMULA .
+
+Accept the proposed parameter set FORMULA  with acceptance probability FORMULA  as follows:
+if(FORMULA ),    
+update,  FORMULA
+else                   FORMULA
+
+
+The mixed MCMC algorithm set out above is strictly Markovian, and detailed balance is achieved by construction. Thus the number of points sampled in given sub-region should provide an estimate of the local evidence. As noted above, in order to maximise the efficiency of the algorithm the picking up probability FORMULA  should better be proportional to the local evidence.
+Also, we can notice that when the proposed point and the previous point are located in the same sub-region, then the algorithm reduces to the conventional M-H algorithm, which further verifies its validity.
+
+Toy Model
+We demonstrate our mixed MCMC algorithm using a simple toy model. On a two dimensional FORMULA  parameter space, we considered a posterior distribution is the sum of a pair of well-separated bivariate normal distributions.
+Where the parameters are FORMULA  and FORMULA , and the two artificial posterior modes locate in FORMULA  and FORMULA , each mode can be described by a bivariate normal distribution with a diagonal covariance matrix, where standard deviation in each direction is FORMULA  for the first mode and FORMULA  for the second mode.
+The form of this posterior is, therefore:
+FORMULA 
+The coefficients FORMULA  and FORMULA  allow the two modes to differ in height, and when integrated over the entire parameter space the normalization condition implies that
+FORMULA 
+For simplicity, we chose FORMULA , FORMULA , FORMULA , FORMULA  and the ratio of two coefficients FORMULA  is kept as FORMULA .
+In this toy model test, we only concentrate on the validity of the mixed MCMC method, and do not consider in detail other factors such as its efficiency or generality. Thus, we assume prior knowledge of the separated structure of the posterior distribution. Given this assumption, it is possible to analytically calculate the FORMULA  value that corresponds to the contour within which a certain fraction of the entire volume of the posterior is located, thus providing us with an exact theoretical reference result with which to compare.
+For a one-dimensional Gaussian distribution, the FORMULA , FORMULA  and FORMULA  credible regions correspond to FORMULA  and FORMULA  of the cumulative probability function (CDF) respectively. Thus, it is convenient to consider for our toy model posterior the FORMULA  values that correspond to the FORMULA  and FORMULA  of the CDF, and compare it with the sample estimates obtained from application of our mixed MCMC algorithm.
+Under the Gaussian assumption, FORMULA , so in the general case we will compare the value of FORMULA  with its theoretical evaluation. Details of this theoretical calculation can be found in the Appendix. The posterior of the toy model can be taken as two independent bivariant Gaussians, each with a diagonal covariance matrix.
+We generated a chain with FORMULA  points. The proposal density was set to be a bivariate Gaussian
+distribution in addition to the probabilistic shift between sub-regions, with covariance matrix equal to the identity matrix multiplied by FORMULA .
+For this particular toy model, theoretically the corresponding FORMULA  and FORMULA  credible regions should have values of FORMULA  equal to FORMULA  and FORMULA .
+A typical realisation gives result as FORMULA  and FORMULA , and the numbers of points sampled in the two sub-regions are 2559 and 7441, which is consistent with the FORMULA  ratio assumed for the coefficients FORMULA  and FORMULA .
+In figure REF  an example of the sampling results is shown, with blue, green and red colour points representing the highest (i.e. largest value of the posterior) FORMULA  fraction of the samples, after sorting the posterior values in descending order.
+FIGURE 
+
+Discussion
+A novel method, which we call mixed MCMC, has been proposed.
+In the situations when the multi-modal characteristics of the posterior distribution are already roughly known, the parameter space can be split into several sub-regions, each of which hosts a single mode, and our mixed MCMC method can be applied. The proposal density can generate candidates in different sub-regions by adding a shift from the current sub-region to the proposed new sub-region. In this way, a comparison between different sub-regions can be done globally, which improves efficiency. This algorithm is strictly Markovian, so the detailed balance requirement is fulfilled.
+The concept of mixed MCMC is realised by enabling proposed candidate points to be generated from different modes of the posterior.
+Admittedly, the mixed MCMC approach must rely on other methods to first identify the multiple modes of the posterior distribution.
+However, since that identification will generally require only rough information, we can expect this initial stage to be rapid. Moreover, other existing methods already provide some solutions to the problem of identifying multiple modes{{cite:af22606c-7aa7-42ed-8d22-39dd4e50aaf0}}{{cite:8800bbdb-9d7d-4233-af50-4058089dca51}}.
+From another perspective, if we view separate parameter subspaces as different models, this mixed MCMC algorithm can be viewed as an special form of reversible jump MCMC{{cite:e3c64aca-f2a9-42b8-850a-373bc2a7149f}}{{cite:382804ec-6ee5-4b0c-b988-f19456eba77b}}, which can sample from different models even when they have different dimensionality, and thus provides the Bayesian odds ratio of two models.
+This method is a novel realisation of MCMC which can achieve high efficiency in analysing multi-modal posterior distributions by virtue of its unique form of proposal density. It relies not only on local information, but also on the global structure through swapping between different sub-chains. In particular the candidate point is accepted with an acceptance probability FORMULA , where r is the Metropolis ratio, which takes into account the global information about the multiple modes of the posterior.
+So far, we have not discussed in detail how to obtain rough information about the posterior modes.
+We note that methods such as MultiNest{{cite:af22606c-7aa7-42ed-8d22-39dd4e50aaf0}}{{cite:8800bbdb-9d7d-4233-af50-4058089dca51}} aim to solve similar problems, so their approach could be directly applied here. Some other methods like parallel tempering MCMC{{cite:d57f17ca-c862-4288-9641-5ec2a46933ce}} or k-means {{cite:1593724c-b7ed-42d9-b5bf-a6189cd1ccbc}} can also be modified and applied here.
+We leave the detailed comparison with other methods, like parallel tempering MCMC to future work. However, by not throwing away points in parallel chains, and the design of the proposal density to have a relatively short autocorrelation length we expect the mixed MCMC algorithm to be quite efficient {{cite:6ab7b3a3-d15b-4b9b-892e-61a25f7ce3f9}}.
+In this work, we also applied our method to a simple toy model, with two distinct well-separated modes, to demonstrate its efficacy.
+With FORMULA  samples, our mixed MCMC was able to both find the picking up probability, which represents the bulk distribution of the posterior (i.e. the probability of belonging to each mode) and also the Bayesian credible regions for the posterior as a whole – each of which show excellent agreement with the exact, theoretically computed values for our toy model.
+This toy model investigation shows that the idea of mixed MCMC is theoretically sound and practically useful.
+Further investigation can be done in future work by investigating ways of optimising the local proposal densities individually so that the efficiency of the method can be further improved.
+
+Analytical Evaluation of  FORMULA
+In this section we present the calculation of FORMULA , which is defined as
+FORMULA 
+for our toy model posterior.
+In the toy model, there are two well separated modes, and we can simply assume they are fully independent. The two modes have an evidence ratio of FORMULA , where FORMULA  is the normalisation requirement.
+We define the two independent parts of the posterior as
+FORMULA 
+FORMULA 
+and the posterior can be written as
+FORMULA 
+The peak values of the posterior for its two modes are FORMULA  and FORMULA  respectively.
+For simplicity, we replace FORMULA  and FORMULA  and rewrite the posterior as
+FORMULA 
+Without losing generality, we assume FORMULA , and so the highest posterior value FORMULA , and highest posterior value for the secondary peak is FORMULA .
+We define FORMULA  as FORMULA , equivalently, FORMULA .
+Our aim is to find the expression for FORMULA , so that given FORMULA , we have
+FORMULA 
+When FORMULA ,
+FORMULA 
+This expression is valid so long as FORMULA , FORMULA ; if, however, FORMULA  is bigger, than we have to include the contribution from the secondary mode.
+FORMULA 
+In the third line we used the relation that FORMULA .
+Furthermore, we have
+FORMULA 
+We determined FORMULA  and FORMULA , while keeping FORMULA  and FORMULA , and choosing the C value as FORMULA . This yields the corresponding FORMULA  values as 3.11, 6.99 and 12.64.

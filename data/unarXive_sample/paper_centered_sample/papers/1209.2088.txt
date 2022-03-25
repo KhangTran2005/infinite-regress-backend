@@ -1,0 +1,221 @@
+
+Spreading Processes and Large Components in Ordered, Directed
+Random Graphs
+Paul HornDepartment of Mathematics, Harvard University, phorn@math.harvard.edu Malik Magdon-Ismail
+Department of Computer Science, Rensselaer Polytechnic Institute,
+magdon@cs.rpi.edu2018/12/10 05:17:45Order the vertices of a directed
+random graph FORMULA ;
+edge FORMULA  for FORMULA  exists independently
+with probability FORMULA .
+This random graph model is related to certain spreading processes on
+networks. We consider the component reachable from
+FORMULA  and prove existence of a sharp threshold
+FORMULA  at which this reachable component transitions from
+FORMULA  to FORMULA .
+Introduction
+In this note we study a random graph model that captures the
+dynamics of a particular type of spreading process.
+Consider a set of FORMULA  ordered vertices FORMULA  with vertex FORMULA 
+initially `infiltrated' (at time step 1). At time steps
+FORMULA , vertex
+FORMULA  attempts to independently
+infiltrate, with
+probability FORMULA , each of FORMULA  in turn (one per step).
+Either FORMULA  gets infiltrated or immunized.
+If FORMULA  is infected, it attempts to infect FORMULA , also each with probability FORMULA ; FORMULA  does not
+attempt to infect FORMULA , however, as prior vertices
+are already
+either infiltrated or immunized.
+At time step FORMULA , all infiltrated
+vertices FORMULA  with FORMULA  are attempting to
+infiltrate FORMULA , and FORMULA  gets infiltrated if any
+one of these attempts
+succeeds.
+Intuitively, FORMULA  is more likely to get infiltrated if
+more vertices are already infiltrated at the time that
+FORMULA  becomes 'succeptible'. One example of such a contagion process
+is given in {{cite:c4caf7f6-8ebe-403b-868e-1df842c154f0}}.
+This spreading
+process is equivalent to the following random model of an ordered,
+directed graph FORMULA : order the vertices FORMULA , and for
+FORMULA , the directed
+edge FORMULA  exists in FORMULA 
+with probability
+FORMULA  (independently). Vertex FORMULA  is infected if there is a (directed) path from
+FORMULA  to FORMULA .
+The question we address
+is, “What is the size of the set of vertices reachable from FORMULA ?”
+(the size of
+the infection).
+We prove the following sharp result.
+Theorem 1 
+Let FORMULA  be the set of vertices reachable from FORMULA , and suppose FORMULA , where
+FORMULA  and FORMULA  is fixed. Then:
+
+If FORMULA , then FORMULA , a.a.s.
+
+If FORMULA , then FORMULA , a.a.s.
+
+If FORMULA , then FORMULA , a.a.s.
+
+
+Recall that
+an event holds a.a.s.(asymptotically almost surely), if it holds with probability FORMULA ; that is it holds with probability
+tending to one as FORMULA  tends to infinity. Note that we do not explicitly care whether FORMULA  is positive or negative in the results above.
+Similar phase transitions are well known for various graph properties in other random graph models. As shown by Erdős and Rényi in {{cite:c4db5f40-5df0-4e04-a4b4-c07a66f5f6d0}}, in the FORMULA  model of
+random graphs, where a graph is chosen independently from all graphs with FORMULA  edges, there is a similar emergence of a component of size FORMULA  around FORMULA  edges.
+Likewise, a threshold for connectivity was shown for FORMULA  edges. For the more familiar FORMULA  model, where edges are present
+independenty with probability FORMULA , this translates into a threshold
+at FORMULA  for a giant component, and at FORMULA  for
+connectivity. A much more comprehensive account of results on properties of random graphs can be found in {{cite:38db6d31-1910-443c-8562-fab344a7f20c}}. Łuczak in {{cite:27f7f88c-fed3-468d-9919-22d885565275}} and more recently
+Łuczak and Seierstad in {{cite:032a56bd-d0a7-44cd-b9ba-638a89dfbe8d}}, studied the emergence of the giant component in a random directed graphs, in both the directed model where FORMULA  random edges are present and in the model where edges are present with
+probability FORMULA . Thresholds for strong connectivity were established for random directed graphs by Palásti {{cite:b0417ec2-00e2-464f-86b7-4394f30199fe}} (for random directed graphs with FORMULA  edges) and Graham and Pike {{cite:94e0917c-af14-4d2d-9a80-2ca97f9f5c08}} (for random directed graphs with edge probability FORMULA ).
+We are not aware of any results for ordered directed random graphs where
+edges connect vertices of lower index to higher index.
+
+A Proof of Theorem  REF
+[Upper bounds:]
+For FORMULA ,
+let FORMULA  denote the event that FORMULA  is reachable,
+and let FORMULA  denote the number of paths to vertex FORMULA  in FORMULA .
+If FORMULA  denotes the set of all potential
+paths from FORMULA  to FORMULA ,
+then FORMULA  where FORMULA  is a FORMULA 
+indicator random variable indicating whether the path FORMULA 
+exists in FORMULA ;
+FORMULA  if and only if all edges in the path FORMULA  are present
+in FORMULA .
+Then,
+FORMULA 
+
+Let FORMULA  denote the number of reachable vertices (other than
+FORMULA ).
+FORMULA 
+For FORMULA  with FORMULA ,
+FORMULA 
+Now consider FORMULA . Let
+FORMULA 
+
+Note that by our choice of FORMULA , and the fact that FORMULA , that FORMULA .
+Then,
+FORMULA 
+Since FORMULA  is increasing in FORMULA ,
+the expected number of reachable vertices
+FORMULA  with FORMULA  is at most FORMULA .
+Applying Markov's inequality,
+FORMULA  a.a.s.
+Thus,
+FORMULA 
+For FORMULA  with FORMULA , we will write
+FORMULA ,
+where FORMULA .
+Let FORMULA 
+Then,
+FORMULA 
+To prove the lower bounds, we require a simple lemma similar to
+Dirichlet's theorem.
+Let FORMULA  denote the number of divisors of FORMULA  and
+let FORMULA  denote the number of
+divisors of FORMULA  that are at most FORMULA .
+Dirichlet's Theorem states that
+FORMULA 
+where FORMULA  is Euler's constant. For our purposes,
+we need a refinement of this result, summing
+FORMULA .
+Lemma 1 
+ FORMULA
+
+For FORMULA  the result follows from Dirichlet's theorem
+as we may replace FORMULA  with FORMULA  in the summation.
+For FORMULA ,
+FORMULA 
+where FORMULA  is the FORMULA -th harmonic number.
+
+[Lower bounds:]
+For exposition, assume that we construct our graph on
+countably many vertices and that we then restrict our attention
+to the first FORMULA  vertices.
+Let FORMULA  denote the index of the FORMULA -th reachable vertex (that is
+not FORMULA ).
+If FORMULA  then FORMULA . Set
+FORMULA , and for FORMULA ,
+FORMULA  is geometrically
+distributed with parameter FORMULA .
+Fix FORMULA , and consider FORMULA :
+FORMULA 
+Each term is an infinite geometric series, and so
+FORMULA 
+As this series is absolutely summable (as FORMULA  is clearly finite),
+Fubini's theorem allows us to rearrange terms in the summation to get
+FORMULA 
+because the term FORMULA  appears in the original
+summation (where FORMULA ) once for every divisor FORMULA  has that is
+at most FORMULA .
+We now use summation by parts to manipulate the second term:
+FORMULA 
+
+Since FORMULA , we have that
+FORMULA 
+Furthermore, since FORMULA  and FORMULA  are
+independent,
+FORMULA 
+
+Here, the first
+inequality follows from an application of Cauchy-Schwarz, and the second
+from
+ FORMULA
+Now, suppose that FORMULA  for FORMULA ,
+and set FORMULA . Then, from (REF ),
+FORMULA 
+
+For FORMULA  sufficiently large, FORMULA .
+Meanwhile, from FORMULA ,
+FORMULA 
+because FORMULA  and FORMULA .
+Chebyshev's inequality asserts that
+FORMULA 
+Thus, FORMULA .
+Using (REF ),
+FORMULA 
+i.e., FORMULA  a.a.s. Since FORMULA  implies
+FORMULA , we have that
+FORMULA  a.a.s.
+For FORMULA , take FORMULA . Then,
+using (REF ),
+FORMULA 
+Again, by FORMULA  and because FORMULA ,
+FORMULA .
+Chebyschev's inequality asserts that
+FORMULA 
+Hence,
+FORMULA 
+
+So, FORMULA  a.a.s.
+We now consider the vertices indexed higher than FORMULA  and show
+that essentially all of them are reachable.
+Let FORMULA  be the vertices with index higher than FORMULA 
+which are not adjacent to one of the first FORMULA  reachable
+vertices in FORMULA .
+Then
+FORMULA 
+
+Applying Markov's inequality, FORMULA  with probability FORMULA .
+Since the set of vertices indexed above FORMULA  that is not reachable is
+a subset of
+FORMULA ,
+FORMULA . Since
+FORMULA  are FORMULA  and FORMULA , we have
+that FORMULA  with probability FORMULA ,
+as desired.
+Acknowledgement.
+Magdon-Ismail acknowledges that
+this research was sponsored by the Army Research Laboratory
+and was accomplished under Cooperative Agreement
+Number W911NF-09-2-0053. The views and conclusions
+contained in this document are those of the authors and
+should not be interpreted as representing the official policies,
+either expressed or implied, of the Army Research Laboratory
+or the U.S. Government. The U.S. Government is
+authorized to reproduce and distribute reprints for Government
+purposes notwithstanding any copyright notation here
+on.

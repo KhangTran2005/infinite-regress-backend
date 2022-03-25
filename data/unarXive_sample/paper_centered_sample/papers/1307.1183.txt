@@ -1,0 +1,759 @@
+
+Quantum computational algorithm for hidden symmetry subgroup problems
+on semi-direct product of cyclic groups
+Jeong San Kimfreddie1@suwon.ac.kr
+
+Department of Mathematics, University of Suwon, Kyungki-do 445-743, Korea
+
+Eunok Baeeobae@khu.ac.kr
+
+Department of Mathematics and Research Institute for Basic Sciences,
+Kyung Hee University, Seoul 130-701, Korea
+
+Soojoon Leelevel@khu.ac.kr
+
+Department of Mathematics and Research Institute for Basic Sciences,
+Kyung Hee University, Seoul 130-701, Korea
+
+2018/12/11 06:24:40
+We characterize the algebraic structure of semi-direct product of cyclic groups,
+FORMULA ,
+where FORMULA  is an odd prime number
+which does not divide FORMULA  for any prime factor FORMULA  of FORMULA ,
+and provide a polynomial-time quantum computational algorithm
+solving hidden symmetry subgroup problem of the groups.
+
+
+03.67.Lx, 02.20.Bb
+Introduction
+Most of exponential speed-up of quantum computational algorithms
+can be regarded as solving group-theoretical problems
+that can be formulated within the framework of hidden subgroup problem (HSP).
+Mathematically, HSP can be cast in the following terms;
+given a finite group FORMULA  and
+an oracle function (or black-box function) FORMULA  from FORMULA  to some finite set,
+we say that FORMULA  hides a subgroup FORMULA  of FORMULA 
+provided that FORMULA  if and only if FORMULA  for all FORMULA  and FORMULA  in FORMULA 
+(that is, FORMULA  and FORMULA  belong to the same right coset of FORMULA ),
+and the task is to determine the subgroup FORMULA .
+Whereas no classical algorithm is known to solve HSP
+with polynomial query complexity
+as well as with polynomial running time in the size of the group,
+for every abelian group
+there exists a quantum algorithm
+which can efficiently solve the problem {{cite:b91b69d2-a5cf-420c-8899-483fecfa9759}}, {{cite:ac5cdb5e-7916-436d-968f-014159249ade}}, {{cite:a027df60-3cb2-4a8d-9af2-b9936b1d67e0}},
+and furthermore for an arbitrary group
+there exists a quantum algorithm
+which can solve the problem
+with polynomial quantum query complexity {{cite:bd739d39-ca39-4aa0-9355-6836c3c8edc1}}.
+In other words, HSP on an abelian group FORMULA  can be solved
+by a quantum algorithm of running time polynomial in FORMULA ,
+and HSP on non-abelian groups can be solved
+by quantum algorithms with polynomial query complexity,
+although the algorithms cannot efficiently solve the problem in general.
+HSP includes several algorithmically important problems;
+graph isomorphism problem can be reduced to the HSP on the symmetric group
+and certain lattice problems can be reduced to the HSP on the dihedral group {{cite:c7c56195-21b0-4c0c-80df-d6511166737f}}, {{cite:b5acafbb-cfc5-4904-b7ee-328109c593b8}}.
+For these reasons, a lot of attempts have been made
+to generalize the quantum solution of the abelian HSP
+to non-abelian cases {{cite:4a948567-638f-4fb5-888e-d27f9ec18891}}, {{cite:317282ac-edfa-48b7-b788-c2482e14f15e}}, {{cite:152b1bee-481d-4187-8175-6e0ec47c82a1}}, {{cite:03f4ee6b-5249-4387-8239-15b16079268e}}, {{cite:a5058ba2-e77f-49a4-a7b5-62ae3d647c13}}, {{cite:a7e058c5-55c8-4dfb-aaaa-e51ca443e4d8}}, {{cite:53518be6-701e-49f3-ab66-552b7aa5855f}}, {{cite:d8c270e0-b541-469e-b0d2-3df110fff14a}}, {{cite:669c6042-9f16-466a-bee8-61623c7a4e11}}, {{cite:998496f4-577b-4f10-a1bf-f410c529f429}}.
+However, the HSP for the dihedral and symmetric groups still remains unsolved.
+Furthermore, the methods for solving HSP of abelian cases are known to fail for
+several non-abelian groups {{cite:11a59291-7342-463a-9f83-f947d5139434}}, {{cite:6cead157-acad-4493-be68-0e89f59b068d}}. Thus a direct generalization of quantum solutions
+for abelian HSP to non-abelian cases seems rather exclusive.
+Another approach toward the study of HSP is to generalize the problem itself, that is, to consider problems
+dealing with more general properties of algebraic sets hidden by the oracle functions.
+One of these problems is the hidden symmetry subgroup problem (HSSP) {{cite:a4c7bdcf-65f4-4098-8eb0-425e59da7cc3}},
+which can be formulated as follows;
+for a group FORMULA  acting on some finite set FORMULA 
+and an oracle function whose level sets define a partition of FORMULA  by the group action,
+the object we would like to recover is the group of symmetries of this partition inside FORMULA ,
+that is, the subgroup whose orbits under the action coincide with the classes of the partition,
+as we will see the details in Section .
+HSP can be regarded as a special case of the HSSP
+when the group acts on itself and the action corresponds to the group operation.
+However, certain cases of the HSSP have exponential quantum query complexity,
+in contrast to the fact that the quantum query complexity of HSP for any group is polynomial.
+Thus we can say that HSSP is generally harder than HSP for some actions.
+Recently, Decker, Ivanyos, Santha and Wocjan presented
+an efficient quantum algorithm for HSSP on the Frobenius group,
+which includes a large variety of affine groups as a special case, by showing that
+HSSP is indeed efficiently reducible to HSP
+when the action has an efficiently computable generalized base,
+and that such bases for a large class of Frobenius groups
+can be efficiently constructed {{cite:a4c7bdcf-65f4-4098-8eb0-425e59da7cc3}}.
+In this paper,
+we first investigate algebraic properties of semi-direct product of cyclic groups,
+and then construct an efficient reduction scheme of HSSP on FORMULA  to its related HSP
+for the case when any prime factor FORMULA  of FORMULA 
+satisfies the condition that FORMULA  is not divisible by FORMULA .
+Finally, we propose an efficient quantum algorithm
+for HSSP on the group
+by applying this reduction scheme to
+an efficient quantum computational algorithm for the related HSP {{cite:04ff3459-660c-4605-9748-180ff6c04122}}.
+This paper is organized as follows.
+In Section 
+we briefly review some algebraic properties and the definition of HSSP,
+and in Section 
+we recall a sufficient condition of group actions proposed in {{cite:a4c7bdcf-65f4-4098-8eb0-425e59da7cc3}},
+under which a HSSP can be reduced in polynomial time to a HSP.
+In Section 
+we provide some homomorphic properties of semi-direct product of cyclic groups,
+and characterize its stabilizer subgroups,
+and in Section 
+we show that there exist an efficient quantum algorithm
+which can solve HSSP on FORMULA ,
+where FORMULA  is an odd prime number
+which does not divide FORMULA  for any of the prime factors FORMULA  of FORMULA .
+Finally, we summarize our result in Section .
+
+Preliminaries
+A group action of a group FORMULA  on a set FORMULA  is
+a binary function FORMULA  (with the notation FORMULA  = FORMULA ),
+which satisfies FORMULA 
+and FORMULA  for any FORMULA , FORMULA  and the identity element FORMULA  of FORMULA .
+We denote FORMULA  for a subset FORMULA .
+For each FORMULA , its stabilizer subgroup FORMULA  is defined as FORMULA ,
+which consists of the elements in FORMULA  fixing FORMULA  under the group action.
+The group action FORMULA  of FORMULA  on FORMULA  is faithful
+if FORMULA , that is,
+FORMULA  is the only element of FORMULA  that fixes every element of FORMULA .
+For any subgroup FORMULA  of FORMULA ,
+FORMULA  also acts naturally on FORMULA .
+The FORMULA -orbit of FORMULA 
+is the subset of FORMULA  defined as FORMULA .
+The FORMULA -orbits form a partition FORMULA  of FORMULA .
+For a partition FORMULA  of the set FORMULA ,
+the group of symmetries of FORMULA 
+is the subgroup FORMULA ,
+which consists of the elements stabilizing every class of the
+partition FORMULA  under the group action.
+The subgroup FORMULA  of FORMULA  is the closure of FORMULA  {{cite:498142a3-f8b1-4432-9382-538b4cf4addc}},
+which consists of the elements in FORMULA  stabilizing every FORMULA -orbit.
+The closure of a partition FORMULA  is FORMULA ,
+which consists of the orbits of its group of symmetries.
+We note that FORMULA  is always a subgroup of FORMULA 
+and FORMULA  is said to be closed if FORMULA , that is,
+there exists a partition FORMULA  such that FORMULA .
+Similarly, FORMULA  is said to be closed if FORMULA .
+We denote by FORMULA  the family of all closed subgroups in FORMULA .
+Now let us recall the formal definition of the HSSP {{cite:a4c7bdcf-65f4-4098-8eb0-425e59da7cc3}};
+for a finite group FORMULA , a finite set FORMULA ,
+an action FORMULA  and a family FORMULA  of closed subgroups of FORMULA ,
+let us assume that an oracle function FORMULA  is given,
+which is defined on FORMULA  to some finite set FORMULA  such that
+FORMULA  if and only if FORMULA  for some subgroup FORMULA .
+The HSSP is to determine the subgroup FORMULA .
+The subsets of FORMULA  whose elements have the same
+function value of FORMULA  form a partition of FORMULA , denoted by FORMULA .
+Each party of this partition is called a level set of FORMULA .
+Although there can be several subgroups of FORMULA  whose orbits coincide with
+the level sets of FORMULA , the closures of these subgroups are the
+same. The unique closed subgroup that satisfies the promise is
+FORMULA , and this is the output of the HSSP.
+(FORMULA  is said to hide FORMULA  by symmetries.)
+For a prime power FORMULA , the general affine group FORMULA  is
+the group of invertible affine transformations over the FORMULA ,
+which can be represented as the semi-direct product of groups;
+for finite groups FORMULA , FORMULA 
+and a homomorphism FORMULA  from FORMULA  to the group of automorphisms of FORMULA ,
+the semi-direct product of FORMULA  and FORMULA , denoted by FORMULA ,
+is the cartesian product of FORMULA  and FORMULA  with the group operation defined as
+FORMULA .
+(We use the notation FORMULA  for FORMULA 
+whenever FORMULA  is clear from the context.)
+Using the notion of semi-direct product,
+FORMULA  can be represented as FORMULA ,
+where FORMULA  denotes the multiplicative group of FORMULA .
+The natural group action of FORMULA  on FORMULA  is defined as FORMULA .
+For each FORMULA , the stabilizer of FORMULA  is the subgroup FORMULA .
+FORMULA  is a closed subgroup,
+and it has two orbits FORMULA  and FORMULA .
+By letting FORMULA ,
+Grover's search over FORMULA  to find FORMULA  can be regarded as
+a HSSP to find a closed subgroup FORMULA  in FORMULA ;
+for any input FORMULA  and the oracle function FORMULA  such that
+FORMULA , where FORMULA  is the Kronecker delta,
+FORMULA  hides FORMULA  as a symmetry subgroup.
+Since we can recover FORMULA  from any generator FORMULA  of FORMULA 
+simply by computing FORMULA ,
+the query complexity of the HSSP is at least that of Grover's search.
+Because Grover's search has query complexity FORMULA  {{cite:caa6706c-348b-4c8f-9b5d-23ee4de32c66}},
+it can be shown that
+the query complexity of HSSP on the affine group FORMULA  over
+FORMULA  is FORMULA .
+
+A reduction scheme of HSSP to HSP
+In this section, we recall a general condition of the group action,
+under which a HSSP can be reduced in polynomial time to a HSP {{cite:a4c7bdcf-65f4-4098-8eb0-425e59da7cc3}}.
+For a given oracle function FORMULA  over FORMULA ,
+which hides some subgroup FORMULA  of FORMULA  by symmetries,
+we construct a suitable function FORMULA  over FORMULA , which hides FORMULA .
+Definition 1 
+For a finite group FORMULA  and a group action FORMULA  of FORMULA  on the finite set FORMULA ,
+let FORMULA  be a subgroup of FORMULA , and FORMULA  be a family of subgroups of FORMULA  including FORMULA .
+A set FORMULA  is said to be an FORMULA -strong base if
+FORMULA 
+for every FORMULA  and the stabilizer subgroup FORMULA  of FORMULA .
+FORMULA  is said to be an FORMULA -strong base
+when it is FORMULA -strong for every subgroup FORMULA .
+
+We note that FORMULA .
+Thus FORMULA  itself is always a FORMULA -strong base.
+Furthermore, if FORMULA  is an FORMULA -strong base,
+then FORMULA  is also an FORMULA -strong base for every FORMULA .
+Therefore, we can show that
+if FORMULA  consists of conjugated subgroups
+then FORMULA  becomes an FORMULA -strong base
+when it is an FORMULA -strong base for some FORMULA ,
+and that if FORMULA  is closed under conjugation by elements of FORMULA  then
+FORMULA  is an FORMULA -strong base if and only if
+FORMULA  for every FORMULA .
+Based on the concept of FORMULA -strong bases,
+the authors in Ref. {{cite:a4c7bdcf-65f4-4098-8eb0-425e59da7cc3}} proposed a reduction scheme from a HSSP to a HSP.
+Proposition 1 
+Let FORMULA  be a finite group, and let FORMULA  be an action of FORMULA  on FORMULA .
+Suppose that the function FORMULA  hides some FORMULA  by symmetries.
+Let FORMULA  be an FORMULA -strong base.
+Then FORMULA  is hidden by the function FORMULA .
+
+Proposition REF  implies that
+if we can choose a proper subset FORMULA  of FORMULA ,
+which is an FORMULA -strong base,
+the HSSP can always be reduced to the HSP.
+Furthermore, it naturally leads us to the following proposition,
+which provides a sufficient condition
+for a polynomial-time reducibility of HSSP to its related HSP.
+Proposition 2 
+Let FORMULA  be a finite group, FORMULA  a finite set, FORMULA  a polynomial time computable
+action of FORMULA  on FORMULA , and FORMULA  a family of subgroups of FORMULA .
+If there exists an efficiently computable FORMULA -strong base
+in FORMULA , then HSSP on the group FORMULA  is polynomial time reducible to HSP of FORMULA .
+
+When the group FORMULA  is a semi-direct product group,
+an efficient characterization of FORMULA -strong base {{cite:a4c7bdcf-65f4-4098-8eb0-425e59da7cc3}} has been proposed as follows.
+Let us assume that FORMULA  is isomorphic to the semi-direct product of its subgroups FORMULA  and FORMULA ,
+that is, FORMULA .
+The group action defined here is
+FORMULA 
+where FORMULA  and FORMULA  for some FORMULA  and FORMULA .
+If we consider the set FORMULA  consisting of the all conjugate groups of FORMULA ,
+that is, FORMULA ,
+then being an FORMULA -strong base is equivalent to being an FORMULA -strong base.
+For an efficient characterization of FORMULA -strong base,
+we recall the concept of separation among elements of FORMULA 
+with respect to the group action and its orbits;
+for FORMULA  with FORMULA , we say that an element FORMULA  separates FORMULA  and FORMULA  if
+FORMULA 
+Then the following proposition provides us with
+a necessary and sufficient condition to characterize FORMULA -strong base {{cite:a4c7bdcf-65f4-4098-8eb0-425e59da7cc3}}.
+Proposition 3 
+Let FORMULA . Then FORMULA  is an FORMULA -strong base
+if and only if for all FORMULA  in FORMULA 
+there exists FORMULA  which separates FORMULA  and FORMULA .
+
+
+Semi-direct product of cyclic groups
+Semi-direct product of cyclic groups and group action
+For any positive integer FORMULA  and FORMULA 
+and any group homomorphism FORMULA 
+from FORMULA  into FORMULA ,
+the semi-direct product group FORMULA  is
+the set FORMULA 
+with the group operation FORMULA .
+For any odd prime FORMULA  and positive integer FORMULA  with FORMULA ,
+let FORMULA  be the semi-direct product
+with respect to a homomorphism FORMULA  from FORMULA  to the
+automorphism group FORMULA  of
+FORMULA . Because FORMULA  is a homomorphism,
+we have
+FORMULA 
+for any FORMULA  and FORMULA .
+We also note that FORMULA  is relatively prime to FORMULA ,
+and thus the semi-direct product group FORMULA  is
+completely determined by the image of FORMULA  in FORMULA .
+For example, if FORMULA , then FORMULA  is the direct product FORMULA .
+If FORMULA  then FORMULA  is the smallest positive integer
+satisfying
+FORMULA 
+that is,
+FORMULA  is one of elements of FORMULA  with order FORMULA .
+Hence, it is straightforward to verify that
+FORMULA  is of the form
+FORMULA 
+for some FORMULA  {{cite:53518be6-701e-49f3-ab66-552b7aa5855f}}.
+Thus we assume that FORMULA  to avoid the trivial case of the direct product FORMULA ,
+and equivalently use the notions of FORMULA  and FORMULA 
+for some FORMULA  throughout this paper.
+Let us define two subgroups FORMULA  and FORMULA  of FORMULA  as
+FORMULA 
+and consider a group action FORMULA  by
+FORMULA 
+for any FORMULA  and FORMULA 
+(or equivalently, for any FORMULA  and FORMULA .)
+It is clear that
+the identity element FORMULA  in FORMULA  is fixed by any element of FORMULA  under the action FORMULA .
+Furthermore, the following theorem completely characterizes the elements of FORMULA  that are fixed by FORMULA .
+Theorem 1 
+For any FORMULA  and FORMULA  satisfying FORMULA ,
+FORMULA  is fixed by FORMULA  under the group action FORMULA 
+if and only if FORMULA  is not relatively prime to FORMULA .
+
+From the definition of group action in Eq. (REF ), we have
+FORMULA 
+If FORMULA  is not relatively prime to FORMULA ,
+then we can assume FORMULA  for some FORMULA  and FORMULA .
+Together with Eq. (REF ), we have
+FORMULA 
+and thus FORMULA  for any FORMULA  if FORMULA 
+is not relatively prime to FORMULA .
+Conversely, let us suppose that FORMULA  fixes FORMULA 
+with FORMULA  being relatively prime to FORMULA .
+From Eq. (REF ), we have
+FORMULA 
+or equivalently, FORMULA  is divided by FORMULA .
+Because FORMULA  is relatively prime to FORMULA ,
+Eq. (REF ) is true if and only if
+FORMULA 
+In other words, FORMULA  fixes FORMULA  with respect to the action FORMULA 
+if and only if Eq. (REF ) holds.
+However, this contradicts to the fact that FORMULA  is the smallest positive integer satisfying Eq. (REF )
+since FORMULA .
+Thus for any FORMULA  and FORMULA  such that FORMULA  is relatively prime to FORMULA ,
+FORMULA  does not fix FORMULA .
+Let us define the subset FORMULA  of FORMULA 
+where FORMULA  consists of the elements in FORMULA ,
+which are not relatively prime to FORMULA .
+Then Theorem REF  implies that FORMULA  is the stabilizer subgroup of FORMULA 
+that fixes every element in FORMULA .
+For this reason, we also denote FORMULA .
+Theorem REF  also implies that
+the semi-direct product of cyclic groups FORMULA 
+for general FORMULA  and FORMULA  under the action in Eq. (REF ) is not a Frobenius group
+because, not only the identity element FORMULA ,
+every element in FORMULA  has more than one fixed element.
+The following theorem shows that the action of FORMULA  on any element of FORMULA  that is not in FORMULA 
+is faithful, that is,
+for any FORMULA  such that FORMULA  is relatively prime to FORMULA ,
+two different elements of FORMULA  lead FORMULA  to different elements in FORMULA  under the action FORMULA .
+Theorem 2 For FORMULA  such that FORMULA  is relatively prime to FORMULA ,
+FORMULA 
+for any FORMULA  such that FORMULA .
+
+Suppose FORMULA .
+Because FORMULA  is relatively prime to FORMULA , let FORMULA  for some FORMULA , then
+FORMULA 
+By the assumption,
+we have FORMULA ,
+which is equivalent to
+FORMULA 
+Since FORMULA  is not a zero divisor in FORMULA , we have
+FORMULA 
+However Eq. (REF ) implies FORMULA ,
+which contradicts to the fact in Eq. (REF )
+stating that FORMULA  is the smallest integer
+satisfying FORMULA 
+because FORMULA  (without loss of generality, we may assume FORMULA ).
+Thus FORMULA .
+From Theorem REF  together with Theorem REF ,
+we note that the orbits of FORMULA  are singleton subsets FORMULA  of FORMULA 
+and some subsets of FORMULA , each consisting of FORMULA  number of elements.
+The theorems also implies that FORMULA  is a closed subgroup and its orbits form a closed partition of FORMULA .
+In the following subsection,
+we will consider the general form of closed subgroups of FORMULA 
+and their orbits in accordance of FORMULA .
+
+Stabilizer Subgroups
+In this section,
+we consider stabilizer subgroups of each element in FORMULA 
+with respect to the group action in Eq. (REF ).
+Let us first consider a partition of FORMULA ; for each FORMULA ,
+we define FORMULA  to be the set of elements in FORMULA 
+whose remainder is FORMULA  when divided by FORMULA ,
+that is, FORMULA .
+It is clear that FORMULA  can be partitioned into subsets FORMULA .
+Theorem 3 For any FORMULA  with FORMULA ,
+FORMULA 
+where FORMULA 
+is the conjugate subgroup of FORMULA  in FORMULA .
+
+Because FORMULA , FORMULA  for some FORMULA ,
+FORMULA 
+where the last equality is due to
+FORMULA 
+Now for any FORMULA , we have
+FORMULA 
+which completes the proof.
+Now we have the following theorem,
+which completely characterizes the stabilizer subgroups of each element in FORMULA .
+Theorem 4 For any FORMULA  such that FORMULA ,
+FORMULA  is fixed by FORMULA  under the group action
+FORMULA  if and only if FORMULA  .
+
+Because FORMULA , let FORMULA  for some FORMULA ,
+then for any FORMULA  we have,
+FORMULA 
+with
+FORMULA 
+where the last equality is
+due to the binomial expansion of FORMULA  under modulo FORMULA .
+Now we have
+FORMULA 
+which implies that any element in FORMULA  fixes FORMULA .
+Conversely, suppose that there exists FORMULA 
+which fixes FORMULA  under the action FORMULA , that is
+FORMULA 
+where
+FORMULA 
+From Eq. (REF ), we have
+FORMULA 
+where FORMULA .
+Thus FORMULA , or equivalently
+FORMULA 
+which completes the proof.
+From Theorem REF  and Theorem REF ,
+we note that, for each FORMULA ,
+the conjugate group FORMULA  of FORMULA 
+is the stabilizer group of each elements in FORMULA 
+with respect to the group action FORMULA .
+Similarly with Theorem REF ,
+it is also straightforward to verify
+that FORMULA  acts faithfully on any element of FORMULA  that is not in FORMULA .
+They are closed subgroups of FORMULA  and their orbits form closed partitions.
+We will denote FORMULA  the set of all conjugate subgroups of FORMULA  in FORMULA ;
+FORMULA 
+
+Quantum Algorithm for HSSP on  FORMULA
+In this section,
+we present an efficient quantum algorithm for HSSP defined on FORMULA 
+with respect to the group action in Eq. (REF )
+and the set of closed subgroups FORMULA  in Eq. (REF ).
+By considering an efficient reduction scheme of HSSP defined on FORMULA  onto its related HSP,
+we show that there exists a quantum algorithm solving HSSP on FORMULA 
+in a polynomial time with respect to the size of the group.
+From Propositions REF  and REF ,
+we note that for a given set FORMULA  with a set of closed subsets FORMULA ,
+there exists a polynomial-time reduction scheme from HSSP to HSP
+if we can efficiently construct an FORMULA -strong base of small size.
+For the case when FORMULA  is a semi-direct product group,
+Proposition REF  provides us
+with an efficient way to convince the existence of an FORMULA -strong base.
+Furthermore, if the group is a semi-direct product of cyclic groups, FORMULA ,
+the following theorem gives a lower bound of the probability
+that element in FORMULA  separates given two distinct elements of FORMULA 
+with respect to the action in Eq. (REF ).
+Theorem 5 For given FORMULA  and FORMULA  in FORMULA  with FORMULA 
+and a randomly chosen element FORMULA  from FORMULA ,
+the probability that FORMULA  separates FORMULA  and FORMULA 
+is no less than FORMULA .
+
+Let us suppose that FORMULA  does not separate FORMULA  and FORMULA .
+From the definition of separation in (REF ),
+we have FORMULA .
+In other words, there exists an element FORMULA  in FORMULA  such that
+FORMULA 
+which is equivalent to FORMULA 
+by the definition of group action in Eq. (REF ).
+Thus FORMULA  does not separate FORMULA  and FORMULA  if and only if
+there exists FORMULA  (or equivalently there exists FORMULA ) such that
+FORMULA 
+Because FORMULA  is a homomorphism, Eq. (REF ) is also equivalent to
+FORMULA 
+Now we note that the right-hand side of Eq. (REF ) becomes
+FORMULA 
+where the last equality is by the binomial expansion of FORMULA .
+Similarly, the left-hand side of Eq. (REF ) can also be expressed as
+FORMULA 
+From Eq. (REF ) together with Eq. (REF ) and Eq. (REF ),
+we note that
+FORMULA  does not separate FORMULA  and FORMULA  if and only if
+there exists FORMULA  such that
+FORMULA 
+Case 1: Let us first consider the cases when FORMULA  is not divisible by FORMULA , that is
+FORMULA 
+for some FORMULA  and FORMULA .
+For this case, it is readily seen that
+Eq. (REF ) never holds because
+FORMULA 
+for any FORMULA ,
+and thus every FORMULA  in FORMULA  separates FORMULA  and FORMULA .
+Case 2: Now let us consider the cases when FORMULA  is divisible by FORMULA , that is,
+FORMULA 
+for some FORMULA  (because FORMULA , FORMULA ).
+For this case, Eq. (REF ) becomes
+FORMULA 
+which is equivalent to
+FORMULA 
+for some FORMULA .
+Here we note that FORMULA  because FORMULA ,
+and also FORMULA  because FORMULA .
+In other words, neither FORMULA  nor FORMULA  is a zero divisor in FORMULA ,
+and thus their inverse elements also exist in FORMULA .
+Furthermore, Eq. (REF ) holds if and only if FORMULA ,
+that is,
+FORMULA 
+for some FORMULA .
+Eq. (REF ) implies that
+given FORMULA  and FORMULA  satisfying Eq. (REF ),
+there are FORMULA  possible choices of FORMULA 
+for each FORMULA  such that Eq. (REF ) holds.
+In other words, if FORMULA  and FORMULA  satisfy Eq. (REF )
+then there are FORMULA  choices of FORMULA  in FORMULA ,
+for which FORMULA  does not separate FORMULA  and FORMULA .
+For this case, the number of FORMULA  in FORMULA  separating FORMULA  and FORMULA 
+is FORMULA ,
+which is the number of FORMULA  in FORMULA  that does not satisfy Eq. (REF ).
+Now let us consider the probability of randomly chosen FORMULA  in FORMULA 
+that separates FORMULA  and FORMULA .
+From Case 1 and 2,
+we note that every FORMULA  in FORMULA  separates FORMULA  and FORMULA 
+if FORMULA  is not divisible by FORMULA .
+If FORMULA  is divisible by FORMULA 
+then there are FORMULA  number of FORMULA  separating FORMULA  and FORMULA .
+Thus the probability of randomly chosen FORMULA  in FORMULA  that separates FORMULA  and FORMULA 
+is
+FORMULA 
+If FORMULA , Eq. (REF ) implies that for every FORMULA  in FORMULA ,
+there are FORMULA  number of possible FORMULA  satisfying FORMULA .
+Thus the total number of the unordered pairs FORMULA  satisfying FORMULA  is FORMULA 
+(the factor FORMULA  is to avoid doubly counting the unordered pair FORMULA ).
+Because there are FORMULA  ways to choose FORMULA  from FORMULA ,
+we have
+FORMULA 
+and together with Eq. (REF ),
+we have
+FORMULA 
+Theorem REF  implies that
+a randomly chosen element FORMULA  from FORMULA  separates given FORMULA  and FORMULA  with large probability.
+In other words,
+the probability that a randomly chosen element FORMULA  from FORMULA  does not separate given FORMULA  and FORMULA 
+is exponentially small with respect to the logarithm of the size of the group,
+when the group is a semi-direct product of cyclic groups.
+This idea leads us to the following theorem,
+which assures the existence of an FORMULA -strong base of small size with high probability
+for this semi-direct product of cyclic groups.
+Theorem 6 
+Let FORMULA  be the semi-direct product of cyclic groups
+with an odd prime FORMULA  and a positive integer FORMULA  such that FORMULA .
+FORMULA  and FORMULA  are two subgroups of FORMULA 
+where FORMULA  acts on FORMULA  with respect to the group action in Eq. (REF ),
+and FORMULA  is the set of all conjugate groups of FORMULA  in FORMULA .
+If FORMULA  is a uniformly random set of size FORMULA ,
+with FORMULA ,
+then FORMULA  is an FORMULA -strong base with probability of at least FORMULA .
+
+Let FORMULA  be a uniformly random subset of FORMULA  of size FORMULA .
+By Proposition REF ,
+it is sufficient to prove that for every FORMULA ,
+there exists an element in FORMULA  which separates FORMULA  and FORMULA 
+with probability of at least FORMULA .
+In this proof, we will consider an upper bound of the probability of the opposite event.
+From Theorem REF ,
+the probability that a random FORMULA  from FORMULA  does not separate
+FORMULA  and FORMULA  for a fixed pair FORMULA 
+is at most FORMULA .
+Therefore, the probability that none of the elements in FORMULA  separates FORMULA  and FORMULA  is
+not more than FORMULA .
+Thus, the probability that for some pair FORMULA 
+none of the elements in FORMULA  separates FORMULA  and FORMULA  is
+less than or equal to FORMULA ,
+which is at most FORMULA  by the choice of FORMULA .
+For FORMULA ,
+Theorem REF  implies that
+we can efficiently compute an FORMULA -strong base of small size for the set of closed subgroups FORMULA .
+Therefore, by Proposition REF ,
+HSSP on FORMULA  is efficiently reduced to a HSP on FORMULA .
+Finally, we would like to remark that
+there exists a polynomial-time quantum algorithm solving HSP on FORMULA 
+for any odd prime FORMULA  and positive integer FORMULA  {{cite:53518be6-701e-49f3-ab66-552b7aa5855f}}, {{cite:04ff3459-660c-4605-9748-180ff6c04122}}.
+Thus we can have an efficient quantum algorithm for HSSP on FORMULA .
+Corollary 1 
+Let FORMULA  be the semi-direct product of cyclic groups with an odd
+prime FORMULA  and a positive integer FORMULA  such that FORMULA . FORMULA ,
+FORMULA  are two subgroups of FORMULA  where FORMULA  acts on FORMULA  with respect to the group action
+in Eq. (REF ) and FORMULA  is the set of all conjugate groups of FORMULA  in FORMULA .
+Then there exists a polynomial-time quantum algorithm solving HSSP on FORMULA .
+
+Now, we consider a possible reduction scheme of HSSP defined on FORMULA 
+to a HSSP on FORMULA  for some case of FORMULA ,
+by using the same arguments as in Ref. {{cite:04ff3459-660c-4605-9748-180ff6c04122}}.
+We first consider the case when FORMULA  for some prime FORMULA  such that
+FORMULA  and FORMULA  does not divide FORMULA ,
+and we further consider more general case of FORMULA .
+If FORMULA ,
+the fundamental theorem of finitely generated abelian groups implies
+that FORMULA  is isomorphic to FORMULA ,
+and thus we will assume FORMULA .
+Similar to the case of HSSP on FORMULA ,
+let us consider the subgroups of FORMULA ,
+FORMULA  and FORMULA ,
+and the group action FORMULA  defined by
+FORMULA 
+for any FORMULA  and FORMULA .
+(or equivalently, for any FORMULA , FORMULA  and FORMULA .)
+The set of closed subgroup FORMULA 
+is given by the set of all conjugate groups of FORMULA ,
+and the oracle function FORMULA  is defined on FORMULA  to some finite set FORMULA 
+such that
+FORMULA 
+for some subgroup FORMULA .
+The task of HSSP on FORMULA  is to determine the subgroup FORMULA .
+We now take into account the following proposition {{cite:04ff3459-660c-4605-9748-180ff6c04122}}
+Proposition 4 
+Let FORMULA  and FORMULA  be distinct primes satisfying  FORMULA,
+then
+FORMULA 
+for some homomorphism FORMULA  from FORMULA  to FORMULA .
+
+Since FORMULA  is the identity map FORMULA  on FORMULA ,
+we have
+FORMULA 
+where FORMULA  and FORMULA .
+Since the order of FORMULA  is FORMULA  and FORMULA ,
+we obtain that FORMULA  must be 1, that is, FORMULA  trivially acts on FORMULA .
+Thus, for each FORMULA ,
+FORMULA ,
+where FORMULA  is the identity map on FORMULA  and
+FORMULA  is a homomorphism from FORMULA  to FORMULA .
+Therefore, the operation of the semi-direct product group is as follows:
+FORMULA 
+which implies Eq. (REF ).
+Proposition REF  implies that for
+any FORMULA , and FORMULA , we have
+FORMULA 
+Thus, the set of closed subgroups FORMULA  consists of all conjugate groups of FORMULA 
+whose element has 0 in the first coordinate;
+FORMULA 
+From Theorem REF  in Section REF ,
+we have the following corollary.
+Corollary 2 For any FORMULA  such that FORMULA ,
+FORMULA 
+
+In other words, if we recall Eq. (REF ), which is the set FORMULA  of the closed subgroups defined for the HSSP on FORMULA ,
+we note that there exists a natural one-to-one correspondence between FORMULA  and
+FORMULA .
+Now we characterize the group action in Eq. (REF ) and the stabilizer subgroups of each element in FORMULA  under this action.
+For any FORMULA  and FORMULA , suppose FORMULA  is fixed by FORMULA  under the action, then we have
+FORMULA 
+Thus for any FORMULA , if FORMULA  fixes any element FORMULA  in FORMULA  then FORMULA ,
+which implies FORMULA .
+In other words, FORMULA  belongs to a conjugate group of FORMULA  in FORMULA .
+We also note that Eq. (REF ) implies that FORMULA .
+Thus we have the following corollary.
+Corollary 3 For any FORMULA  such that FORMULA ,
+FORMULA  is fixed by FORMULA  under the group action FORMULA 
+if and only if FORMULA .
+
+This is a direct consequence from Theorem REF  in Section REF .
+From the definition of the oracle function in Eq. (REF ),
+we note that for any FORMULA  and FORMULA  in FORMULA ,
+we have FORMULA  if and only if
+FORMULA 
+for some FORMULA .
+By Corollary REF , we also note that
+FORMULA  for some FORMULA .
+Thus Eq. (REF ) is equivalent to the existence of some FORMULA  and FORMULA  in FORMULA  such that
+FORMULA 
+where
+FORMULA 
+and
+FORMULA 
+From Eq. (REF ) together with Eqs. (REF ) and (REF ), we note that FORMULA  if and only if
+FORMULA 
+for some FORMULA , FORMULA  and FORMULA  in FORMULA .
+Now for any HSSP defined on FORMULA 
+with the set of closed subsets FORMULA 
+and the oracle function
+FORMULA 
+we can always consider
+the corresponding HSSP defined on FORMULA  with the set of closed subgroups
+FORMULA  and the reduced oracle function
+FORMULA  defined on FORMULA  such that
+FORMULA 
+for some FORMULA .
+Furthermore, to find FORMULA  in FORMULA  satisfying Eq. (REF )
+for any FORMULA  and FORMULA  in FORMULA ,
+it is enough to find FORMULA  in FORMULA  satisfying Eq. (REF )
+for any FORMULA  and FORMULA  in FORMULA  due to the one-to-one correspondence between FORMULA  and FORMULA 
+with respect to the oracle functions FORMULA  and FORMULA  respectively.
+Thus we have the following theorem,
+which states a natural reduction of HSSP on FORMULA 
+to HSSP on FORMULA .
+Theorem 7 Any HSSP defined on FORMULA 
+with respect to the group action in Eq. (REF )
+can be naturally reduced to the HSSP on FORMULA 
+with respect to the group action in Eq. (REF ).
+
+Now let us consider a possible reduction of HSSP on FORMULA 
+to HSSP on FORMULA  for more general case of FORMULA .
+By the fundamental theorem of arithmetics, FORMULA  can be factorized into powers of distinct primes
+FORMULA ,
+and the fundamental theorem of finitely generated abelian groups implies that
+FORMULA  is isomorphic to the direct product of cyclic groups
+FORMULA .
+Here we consider the case when FORMULA  does not divide each FORMULA  for all FORMULA ,
+and we also assume that FORMULA  for some FORMULA 
+to avoid the trivial case of abelian group FORMULA .
+For convenience, let FORMULA  and FORMULA , then we have
+FORMULA 
+By an analogous proof of Proposition REF ,
+we also note that, for each FORMULA ,
+the automorphism FORMULA  on FORMULA 
+acts trivially on each component of FORMULA  such that FORMULA  differs from FORMULA .
+In other words, there exists a homomorphism FORMULA  from FORMULA  to FORMULA 
+such that FORMULA  for each FORMULA 
+where FORMULA  is the identity map on FORMULA , and
+FORMULA 
+Furthermore, FORMULA  is
+a cyclic group of order FORMULA , thus we have
+FORMULA 
+Eq. (REF ) implies that
+solving HSSP on FORMULA  is essentially equivalent to
+solving HSSP on FORMULA 
+because two groups are isomorphic.
+Now let us consider the subgroups FORMULA ,
+FORMULA  of FORMULA 
+and the group action FORMULA  defined by
+FORMULA 
+for any FORMULA  and FORMULA 
+(or equivalently, for any FORMULA , FORMULA  and FORMULA ).
+By using an analogous argument of Corollaries REF  and REF ,
+it is straightforward to verify the one-to-one correspondence
+between the set of closed subgroups of FORMULA 
+under the group action in Eq. (REF )
+and the set of closed subgroups of FORMULA .
+Thus we have the following theorem about a natural reduction of HSSP on FORMULA 
+to HSSP on FORMULA  for some case of FORMULA .
+Theorem 8 Let FORMULA  be a positive integer with a prime factorization FORMULA 
+and FORMULA  be an odd prime such that FORMULA  does not divide each FORMULA  for all FORMULA .
+Then any HSSP defined on FORMULA  with respect to the group action in Eq. (REF )
+can be naturally reduced to the HSSP on FORMULA  with respect to the group action in Eq. (REF ).
+
+Now, together with Corollary REF , we have the following corollary,
+which states the existence of a polynomial-time quantum algorithm
+solving HSSP on FORMULA  for some case of FORMULA .
+Corollary 4 
+Let FORMULA  be the semi-direct product of cyclic groups
+with an odd prime FORMULA  and a positive integer FORMULA  with a prime factorization FORMULA 
+such that FORMULA  does not divide each FORMULA  for all FORMULA .
+FORMULA  and FORMULA  are two subgroups of FORMULA 
+where FORMULA  acts on FORMULA  with respect to the group action in Eq. (REF )
+and FORMULA  is the set of all conjugate groups of FORMULA  in FORMULA .
+Then there exists a polynomial-time quantum algorithms solving HSSP on FORMULA .
+
+
+Summary
+We have first investigated algebraic properties of semi-direct product of cyclic groups,
+and then have presented an efficient reduction scheme of HSSP on FORMULA  to its related HSP
+for the case when any prime factor FORMULA  of FORMULA 
+satisfies the condition that FORMULA  is not divisible by FORMULA .
+Finally, we have proposed an efficient quantum algorithm for HSSP on the group
+by applying this reduction scheme to
+an efficient quantum computational algorithm for the related HSP.
+
+Acknowledgments
+This work was supported by Emerging Technology R&D Center of SK Telecom.
+JSK was supported by
+Basic Science Research Program through the National Research Foundation of Korea (NRF)
+funded by the Ministry of Education, Science and Technology (2012R1A1A1012246),
+and SL was supported by Kyung Hee University Research Fund in 2012.

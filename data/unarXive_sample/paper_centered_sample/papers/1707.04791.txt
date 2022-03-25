@@ -1,0 +1,966 @@
+
+
+Non-Asymptotic Analysis of Robust Control from Coarse-Grained Identification
+Stephen Tu, Ross Boczar, Andrew Packard, Benjamin Recht
+2018/12/10 22:25:17This work explores the trade-off between the number of samples required to accurately
+build models of dynamical systems and the degradation of performance in various
+control objectives due to a coarse approximation. In particular, we show that
+simple models can be easily fit from input/output data and are sufficient for
+achieving various control objectives.
+We derive bounds on the number of noisy input/output samples from a stable linear time-invariant system that are sufficient to guarantee that the corresponding finite impulse response approximation is close to the true system in the FORMULA -norm. We demonstrate that these demands are lower than those derived in prior art which aimed to accurately identify dynamical models. We also explore how different physical input constraints, such as power constraints, affect the sample complexity.
+Finally, we show how our analysis cleanly fits within the established framework
+of robust control, demonstrating how a controller designed for an
+approximate system provably meets performance objectives on the true
+system.
+Introduction
+Most control design relies on establishing a model of the system to be
+controlled. For simple physical systems, a model with reasonable fidelity can
+typically be constructed from knowledge of the physics at hand. However, for
+complex, uncertain systems, building models from first principles becomes
+quickly intractable and one usually resorts to fitting models from empirical
+input/output data. This approach naturally raises an important question: How well
+must we know a system in order to control it?
+In this work, we attempt to answer this question by striking a balance
+between system identification and robust control. We aim to identify coarse
+estimates of the true underlying model while coupling our estimation with precise
+probabilistic bounds on the inaccuracy of our estimates. With such a coarse
+model in hand, we can use standard robust synthesis tools that take into
+account the derived bounds on the model uncertainty.
+More precisely, given an unknown stable discrete-time plant FORMULA , we bound the
+error accrued by fitting a finite impulse response (FIR) approximation to FORMULA 
+from noisy output measurements. These bounds balance the sample complexity of
+estimating an unknown FIR filter against the capability of such a filter to
+approximate the behavior of FORMULA . Indeed, we show that notably short FIR
+filters provide a sufficient approximation to stable systems in order to ensure
+robust performance for a variety of control design tasks. In particular, we
+demonstrate considerable savings in experimental measurements as compared to
+other non-asymptotic schemes that aim to precisely identify FORMULA .
+In the process of fitting a FIR filter, a natural question arises as to
+what inputs should we use to excite the unknown system. Of course,
+due to actuator limitations and other physical constraints, we are not free to choose
+any arbitrary input.
+Hence, we model the choice of inputs as an experiment design question,
+where the practitioner specifies a bounded input set and asks for the best
+FORMULA  inputs to use to minimize FIR identification error.
+We propose a new optimal experiment design procedure for solving this problem,
+and relate it to the well studied FORMULA -optimal experiment design objective from
+the statistics literature {{cite:2cb3c789-7c9b-4170-8a88-d10418749af2}}.
+This connection is used to study practical cases of input constraints.
+Specifically, we prove that when the inputs are FORMULA -power constrained,
+then impulse responses are the optimal choice of inputs. However, we show that
+is not the case when the inputs are FORMULA -constrained. For
+FORMULA  constraints, we construct a deterministic set of inputs which is
+within a factor of 2 to the optimal solution. Combining these designs with our
+probabilistic bounds, we show that for estimating a length FORMULA  FIR filter
+FORMULA , as long as FORMULA , the residual FORMULA  error FORMULA  on the estimate FORMULA  satisfies
+FORMULA  with high probability. This is a
+substantial improvement over the FORMULA  scaling
+which we show occurs in the FORMULA -constrained case.
+Experimentally, we show that FORMULA  loop-shaping controller design on the
+estimated FIR model, using probabilistic bounds, can be used to synthesize
+controllers with both stability and performance guarantees on the closed loop
+with the true plant. We also demonstrate that our probabilistic bounds can be
+estimated directly from data using Monte–Carlo techniques.
+A sample complexity bound for FIR identification
+We now state our main result: a sample complexity
+bound for FIR system identification. Let FORMULA  be a stable, discrete-time SISO
+LTI system. Suppose we are given query access to FORMULA  via independent, noisy
+measurements of the form
+
+Yu,r := (g u)k=0r-1 + ,  N(0, 2 Ir) .
+
+Above, FORMULA  denotes the impulse response of FORMULA  and
+FORMULA  is a free parameter to be chosen later. We assume that we are allowed to
+choose any input FORMULA  contained within a bounded set FORMULA , which is
+specified beforehand. From these measurements, we can approximate FORMULA  by a length FORMULA  FIR filter
+FORMULA  as
+
+Gr(z) := k=0r-1 gk z-k ,
+
+where the coefficients FORMULA  are estimated from ordinary least-squares
+(c.f. Section ).
+The main quantity of interest in this setting is the number of timesteps needed
+in order to ensure that the FORMULA -norm of the error FORMULA  satisfies the bound FORMULA  with probability at least FORMULA  over the randomness of the
+noise. Here, the total number of timesteps is the product of the number of
+queries of the form (REF ) times length of the queries. That
+is, the number of timesteps is FORMULA , where FORMULA  is number of
+measurements taken and FORMULA  denotes the length of each measurement.
+This quantity obviously depends on the set FORMULA . For concreteness, we
+restrict to the case where FORMULA  is either an FORMULA -ball or an
+FORMULA -ball. These two sets comprise the most common input constraints
+found in the controls literature.
+In both cases, the first consideration is how long must the FIR
+filter (REF ) be to ensure reasonable approximation in
+FORMULA ? We must guarantee that we are able to accurately capture
+the large components of the impulse response of FORMULA . Therefore, we will need
+some measure of how quickly the impulse response coefficients tend to zero. It
+turns out that the sum of the Hankel singular values of FORMULA  will provide a
+convenient proxy for the decay of the impulse response. In what follows we
+denote the Hankel nuclear norm, equal to the sum of the Hankel singular
+values, by FORMULA . Throughout, we will use the following sufficient
+bound on the truncation length:
+[Sufficient Length Condition]
+Let FORMULA  be stable with stability radius FORMULA . We say an integer
+FORMULA  satisfies the sufficient length condition with constant FORMULA  for FORMULA  if
+
+r C < < 1  11- ( G(z)*(1-) ) . 
+
+
+Equation (REF ) characterizes the approximation error of an FIR
+filter to FORMULA  as a balance between the growth of FORMULA  versus the
+decay of the logarithm of FORMULA , as FORMULA  varies between
+FORMULA . The fact that such an FORMULA  suffices to bound the length of a
+high-fidelity FIR approximation to FORMULA  is of independent interest and is
+described in Section .
+We first study the FORMULA -ball case. In this case, we will set all FORMULA 
+inputs to an impulse; that is, FORMULA , where FORMULA  is the first
+standard basis vector.
+
+
+(Main result, FORMULA -constrained case).
+Fix an FORMULA  and FORMULA , and suppose that FORMULA . Let FORMULA  be stable with stability
+radius FORMULA , and set FORMULA  to satisfy the sufficient length condition (REF )
+with constant FORMULA .
+Choose FORMULA  measurements FORMULA , with FORMULA  for
+FORMULA , where FORMULA  satisfies
+
+p C2 2 r2 (r + (1) ) .
+
+Then, with probability at least FORMULA ,
+we have FORMULA .
+Above, FORMULA  are absolute positive constants.
+
+Theorem REF  states that the number of timesteps to
+achieve identification error FORMULA  with FORMULA -constrained inputs
+scales as FORMULA . It also turns out that this input
+ensemble is optimal for the FORMULA  case, which we will discuss in
+Section REF .
+We next turn to the FORMULA -ball case. In this case, we take FORMULA  to be an
+even number, and construct the measurement ensemble
+
+u(c)i,t = (2i tn)     and     
+u(s)i,t = (2i tn)     for  i=1,..., n .
+
+With this measurement ensemble, we prove the following result
+for FORMULA -constraints.
+
+
+(Main result, FORMULA -constrained case).
+Fix an FORMULA  and FORMULA , and
+suppose that FORMULA .
+Let FORMULA  be stable with stability radius FORMULA ,
+and let FORMULA  satisfy the sufficient length condition (REF )
+with constant FORMULA .
+Choose FORMULA  measurements as described in
+(REF ), where FORMULA  satisfies
+
+p C2 2 r2 (r + (1) ) .
+
+Then, with probability at least FORMULA ,
+we have FORMULA .
+Above, FORMULA  are absolute positive constants.
+
+Theorem REF  states that the number of timesteps to to
+achieve identification error FORMULA  with FORMULA -constrained
+inputs scales as FORMULA . For large noise variance FORMULA 
+or small error FORMULA , this is substantially
+more efficient than the complexity FORMULA  which
+arises in the FORMULA -constrained case.
+We conclude by noting that, this particular input ensemble is also nearly
+optimal for the FORMULA  case, which we also discuss in
+Section REF .
+
+Related Work
+Sample complexity guarantees in the system identification literature often
+require strong assumptions which are difficult to verify.
+Most analyses are asymptotic and are based on the idea of “persistence of
+excitation” or “mixing”
+{{cite:2ae30451-75b9-4a54-95a5-bdbfc6afe45b}}, {{cite:33d493b9-fd08-4369-961e-fcf18c535bfa}}. There has been some
+progress in estimating the sample complexity of dynamical system identification
+using machine learning tools {{cite:2ae30451-75b9-4a54-95a5-bdbfc6afe45b}}, {{cite:d85291d7-46ab-46eb-b19e-dabecf3474a4}}, but
+such results typically yield pessimistic sample complexity bounds that are
+exponential in the degree of the linear system or other relevant quantities.
+Two recent results provide polynomial sample complexity for identifying linear
+dynamical systems. Shah et al. {{cite:757cf4c9-9fb5-44ea-b7e6-e2f1a6e502b5}} show that if certain frequency
+domain measurements are obtained from a linear dynamical system, then the
+system can be approximately identified by solving a second-order cone
+programming problem. The degree of the estimated IIR system scales as
+FORMULA  where FORMULA  denotes the stability radius. Similarly,
+Hardt et al. {{cite:fe143f73-1b13-4d3a-858a-807c494aa88d}} show that one can estimate an IIR system
+from time domain observations with a number of measurements polynomial in
+FORMULA , under the assumption that the impulse response
+coefficients FORMULA  satisfy the decay law FORMULA ,
+where FORMULA  is considered a constant independent of the degree of the system.
+In this work, we show that under the same decay assumption, a considerably
+smaller FIR approximation with degree FORMULA 
+suffices to complete many control design tasks. Furthermore, we analyze the
+decay law assumption and relate it to a quantity involving
+the Hankel nuclear norm of the system.
+Robust Control
+Classical robust control literature focuses much of its effort on designing a
+controller while taking into account fixed bounds on the uncertainty in the model.
+There are numerous algorithms for controller synthesis under various
+uncertainty specifications, such as coprime factor
+uncertainty {{cite:3f49474e-06e0-4cc6-a26c-059b57021d5b}} or state-space uncertainty {{cite:24f77a21-65e2-4860-86cd-4b56d23a36a4}}.
+However, there are only a few branches of the robust control literature that
+couple identification to control design, and the identification procedure best
+suited for a particular control synthesis scheme is usually not specified.
+
+FORMULA  identification and gain estimation
+Most related to our work is the literature on FORMULA 
+identification. In this literature, noisy input/output data from an unknown
+stable linear time-invariant (LTI) plant is collected in either the frequency
+or time domain; the goal is often to estimate a model with low
+FORMULA  error. For frequency domain algorithms, see
+e.g. {{cite:801be944-79a1-46d1-aba3-495fbc8f7a92}}, {{cite:067f694e-e89d-40cc-85dd-e49518a9a5e0}}, and for time domain algorithms, see e.g. {{cite:51841be5-233a-4003-88ea-6de455c74854}}.
+A comprehensive review of this line of work is given by Chen and
+Gu {{cite:8b36c4da-f212-4555-8c80-85e08fb3bf7f}}.
+The main difference between the FORMULA  identification literature and our
+work is that we assume a probabilistic noise model instead of worst-case
+(adversarial), and we assume that our identification algorithm is allowed to
+pick its inputs to the plant FORMULA . As we will see, these simplifying
+assumptions lead to simple algorithms, straightforward analysis, and
+finite-time sample complexity guarantees.
+Another related line of work is the use of the power
+method {{cite:cefe1ef6-0c40-446e-9b2a-f1d0e0229abd}}, {{cite:f02d6bfc-e7ff-47b4-a9dc-d939fe863ad0}} for estimating the
+FORMULA -norm of an unknown SISO plant. The key insight in this line of work
+is that in the SISO case, a time-reversal trick can be applied to effectively
+query the system FORMULA . This approach is appealing, since the power
+method is known to converge exponentially quickly to the leading eigenvector.
+However, the leading factor in the convergence rate is the ratio of
+FORMULA , and hence providing a finite-time guarantee of this
+method would require a non-asymptotic analysis of the rate of convergence of
+the second singular value of finite sections of a Toeplitz operator.
+
+Norms of random polynomials
+A significant portion of our analysis relies on bounding the norms of random
+trigonometric polynomials of the form FORMULA . The
+study of the supremum norm of random finite degree polynomials was first
+initiated by Salem and Zygmund {{cite:7a8e5819-8832-420b-92a7-9725491fec34}}, who studied the setting where the
+coefficients are drawn from a symmetric Bernoulli distribution supported on
+FORMULA . Later, Kahane {{cite:aea7d838-dc73-4e48-978d-e6b68a4b1657}} proved that when the coefficients
+are distributed as an isotropic Gaussian, then with probability at least FORMULA , FORMULA . More recently,
+Meckes {{cite:dca13968-917a-4eee-a607-18c229b6eec8}} extended this result to hold for independent
+sub-Gaussian random variables by employing standard tools from probability in
+Banach spaces.
+In Section , we extend these results to the case when the
+coefficients follow a non-isotropic Gaussian distribution. This is important
+because it allows us to reduce the overall error of our estimate by using
+non-isotropic covariance matrices from experiment design.
+
+System Identification of Finite Impulse Responses
+Recall from Section REF  that we are given query access to
+FORMULA  via the form
+
+Yu,r = (g u)k=0r-1 + ,  N(0, 2 Ir) .
+
+Also recall the assumption that FORMULA  for some compact set FORMULA . Therefore, the ratio of some
+measure of the size of FORMULA  to FORMULA  serves as the signal-to-noise
+(SNR) ratio for our setting.
+Fix a set of FORMULA  non-zero inputs FORMULA .
+Given a realization of FORMULA ,
+we can estimate the first FORMULA  coefficients FORMULA 
+of FORMULA  via ordinary least-squares (OLS).
+Calling the vector FORMULA ,
+it is straightforward to show that the least squares estimator FORMULA  is given
+by
+
+g0:r-1 := 
+g0
+g1
+ FORMULA
+gr-1
+
+= (ZZ̰)-1 ZY̰ , 
+Z :=  (u1)
+ FORMULA
+(up)  rp r .
+
+Above, the operator FORMULA  takes a vector FORMULA  as input and outputs
+an FORMULA  lower-triangular Toeplitz matrix with the first column equal to
+FORMULA . From FORMULA , we form the estimated finite impulse response
+FORMULA  as FORMULA . The Gaussian output noise assumption means that the error vector
+FORMULA  is distributed FORMULA , and hence FORMULA  is equal in
+distribution to the random polynomial FORMULA . Here, FORMULA  is the length-FORMULA  FIR
+truncation of FORMULA .
+In this section, we first provide a characterization
+of the behavior of the random quantity FORMULA  as a function of the
+covariance FORMULA  and the polynomial degree FORMULA .
+Next, we study the problem of experiment design to choose the best inputs FORMULA  to minimize the error FORMULA .
+Finally, we combine these results and prove
+Theorem REF  and
+Theorem REF .
+A concentration result for the error polynomial
+We first address the behavior of the error FORMULA . Our main tool is
+a discretization result from Bhaskar et al. {{cite:47046e5b-bfc7-412c-9570-954df409e6b6}}:
+[Bhaskar et al.]
+
+Let FORMULA , where FORMULA N 4r FORMULA
+Lemma REF  immediately reduces
+controlling the FORMULA -norm of a finite-degree polynomial to
+controlling the maxima of a finite set of points on the torus.
+Hence, controlling the expected value of FORMULA  and showing
+concentration is straightforward.
+Before we state the result, we define some useful notation
+which we will use throughout this section.
+For a FORMULA (z)FORMULA rFORMULA 1-FORMULA 
+Note that when FORMULA , FORMULA  which recovers the known results
+from {{cite:aea7d838-dc73-4e48-978d-e6b68a4b1657}} up to constants.
+Furthermore, when FORMULA  is diagonal, FORMULA .
+We will exploit this result in the sequel.
+
+Experiment Design
+We now consider the problem of choosing a set of inputs FORMULA 
+in order to minimize the expected error of the residual polynomial.
+Fixing the number of inputs FORMULA  and input constraint set FORMULA ,
+the optimal experiment design problem is
+
+
+*minimizeu1, ..., up U  N(0, -1) Q s.t.  = i=1p Toep(ui)Toep(ui) .
+
+In (REF ) and the sequel, if the covariance matrix FORMULA  is not invertible then we assign the function value FORMULA .
+Problem (REF ) is difficult to solve as written because the expected value does not have
+a form which is easy to work with computationally.
+The following approximate design problem provides a good approximation of (REF ).
+Let FORMULA  denote a grid of points on FORMULA . Consider the problem
+
+
+*minimizeu1, ..., up U  1 k m
+=1,2 (zk)-1 (zk)  s.t.  = i=1p Toep(ui)Toep(ui) .
+
+The objective (REF ) minimizes the maximum pointwise variance of FORMULA  over all points on the
+grid FORMULA .
+If the grid is uniformly spaced and FORMULA , then by Lemma REF 
+we can interpret (REF ) as minimizing an upper bound
+to the objective function in (REF ), since
+
+N(0, -1) Q(1 + 4r /m ) 1 k m (zk)
+(1 + 4r /m ) 2(2m) =12 1 k m (zk)-1 (zk)  .
+
+However, (REF ) is non-convex in the FORMULA .
+A convex version of the problem can be written by choosing FORMULA  inputs
+FORMULA  and solving the semidefinite program (SDP)
+
+
+*minimizep0  1 k m
+=1,2 (zk)-1 (zk)  s.t.  = i=1p0 i Toep(ui)Toep(ui) ,  = 1 ,  0 .
+
+(REF ) is a convex program and can be solved with any off-the-shelf solver
+such as MOSEK or cvxopt.
+We now study two special cases of FORMULA  to show how
+input constraints can affect design.
+We first observe that when FORMULA  is diagonal, continuing the estimates
+from (REF ), we have the following
+upper bound which holds since FORMULA ,
+
+N(0, -1) Q(1 + 4r /m ) 22(2m)(-1) . 
+
+Even though (REF ) only holds when FORMULA  is diagonal, it motivates us to
+consider the standard FORMULA -optimal design problem
+
+
+*minimizeu1, ..., up U  (-1) s.t. = i=1p Toep(ui)Toep(ui) .
+
+An advantage of (REF ) versus (REF )
+is that the reduced complexity of the objective function
+allows us to make statements about optimality for special cases of FORMULA .
+The analogous SDP relaxation of (REF ), similar to
+(REF ), is also more efficient to implement in practice.
+Let FORMULA  denote the optimal value of (REF ) with
+FORMULA  for FORMULA .
+It is not hard to show that FORMULA  is finite and the value is attained (and hence FORMULA  at the optimum is invertible).
+We will now study the cases FORMULA  and FORMULA .
+For FORMULA , we will show that setting all inputs to the impulse response FORMULA  is the optimal solution.
+On the other hand, for FORMULA , we
+will show that impulse responses are quite sub-optimal.
+FORMULA -optimal design for FORMULA -ball
+We have that FORMULA  and the value is attained by setting
+FORMULA .
+
+
+Using Schur complements, we rewrite (REF ) as
+
+u1, ..., up r : ui2 = 1
+t1, ..., tr i=1r ti :
+Mi :=  ti  ei
+ei  k=1p (uk)(uk)  0 ,  i=1, ..., r .
+
+Let FORMULA  be an optimal solution to this problem.
+Since FORMULA  is invertible,
+all of its diagonal entries must be positive, and hence FORMULA  for all FORMULA .
+Next, since FORMULA ,
+all of its principle sub-minors are positive semi-definite as well.
+Examining FORMULA , we have that
+
+0 
+t1  1
+1  11
+ =  t1  1
+1  k=1p uk22
+ =
+ t1  1
+1  p
+ t1 p-1 .
+
+We now repeat this argument for FORMULA .
+We know that
+
+0 
+t2  0  1
+0  11  12
+1  12  22
+  11  12
+12  22
+ -  0  0
+0  t2-1  0
+22 t2-1 .
+
+But we know that FORMULA , and hence we conclude that FORMULA .
+It is clear that this argument can be repeated for FORMULA .
+In the general case, we have that
+
+1:k, 1:k -  0k-1 k-1  0k-1 1
+01 k-1  tk-1  0 kk tk-1 .
+
+However, FORMULA , so FORMULA .
+This proves a lower bound on the objective value as FORMULA .
+This lower bound is achieved by setting FORMULA .
+
+FORMULA -optimal design for FORMULA -ball
+We first prove a lower bound on the optimal objective value FORMULA .
+To do this, we use the following linear algebra fact.
+
+
+Let FORMULA  be an FORMULA  positive definite matrix. We have that
+
+(A-1) i=1n Aii-1 .
+
+
+
+This proof is due to Mateusz Wasilewski {{cite:a1fa12ab-2f66-4b44-8771-df69ad717179}}.
+By the Schur-Horn theorem, we know that the eigenvalues of FORMULA  majorize the diagonal of FORMULA , i.e.
+
+i=1k Aii i=1k i(A) ,  k=1, ..., n ,  i=1n Aii = i=1n i(A) .
+
+The function FORMULA  is convex for FORMULA .
+This allows us to apply Karamata's inequality, from which the claim immediately follows.
+
+Lemma REF  immediately yields the following
+lower bound on FORMULA .
+
+
+Let FORMULA  denote the FORMULA -th Harmonic number. We have that
+
+F*Hrp .
+
+
+
+Let FORMULA  be such that (REF )
+takes on a finite value.
+By Proposition REF ,
+
+(-1) i=1r ii-1 = i=1r [k=1p =1r-i+1 (uk)2]-1 1p i=1r 1r-i+1 = Hrp .
+
+
+Comparing Lemma REF  with
+Lemma REF  suggests that a system with
+FORMULA -power constraints can require substantially more measurements to
+identify than a system with FORMULA  constraints. Specifically,
+Lemma  states that to satisfy
+FORMULA , the former requires
+FORMULA  measurements whereas the latter requires only
+FORMULA  measurements. This is reflected in the
+difference between Theorem REF  and
+Theorem REF .
+We now study two input sequences which either achieve or come within a constant
+factor of achieving the lower bound FORMULA . Both our constructions are
+deterministic. We believe, however, that random FORMULA  inputs should achieve
+a similar type of guarantee, and we leave this to future work.
+Hadamard construction.
+Our first construction is deterministic.
+Let FORMULA . We will show that the optimal input vectors for FORMULA -design are FORMULA  orthogonal vectors in FORMULA .
+We give a construction for these vectors in the following proposition;
+this construction is the standard one for constructing a Hadamard matrix.
+
+
+For FORMULA , there exists
+FORMULA  vectors in FORMULA 
+that are orthogonal with respect to the standard FORMULA  inner product on FORMULA .
+
+
+We will induct on FORMULA , for which the base case FORMULA  holds with FORMULA . Assume we have FORMULA  orthogonal vectors, in FORMULA , denoted FORMULA . Then, the FORMULA  vectors
+
+{uk}:=k=02n-1{uk
+uk,uk
+-uk},
+
+which reside in FORMULA , are also orthogonal.
+
+
+
+The constructed orthogonal vectors FORMULA  specified in Proposition REF  satisfy
+
+M:=k=02n-1(uk)(uk) = 2n (2n, 2n-1, 2n-2, ..., 1).
+
+
+
+This follows from straightforward manipulations shown in Appendix .
+
+Combining Lemma REF  and
+Lemma REF  implies that the construction from Proposition REF 
+is optimal for (REF ).
+
+Sinusoidal construction.
+In the general case, when FORMULA  and FORMULA  are not equal to the same power of 2, solving for
+the optimal design is not straightforward.
+However, recall the construction given in (REF ) from Section REF .
+We now prove that these inputs remain optimal up to a constant factor of 2,
+while relaxing the power of two assumption.
+
+
+Consider the FORMULA  inputs FORMULA  defined in (REF ).
+If FORMULA , then
+
+M := k=1p(uk)(uk) = p2 (r, r-1, r-2, ..., 1) .
+
+
+
+Before we begin the proof, we write the input ensemble
+using the FORMULA  notation, which is easier to work with.
+Recalling the definition of FORMULA  from (),
+it is not hard to see that the inputs (REF )
+can be equivalently written as
+
+{(z0)}, {(z0)},
+{(z1)}, {(z1)}, ...,
+{(zn-1)}, {(zn-1)} ,
+
+where FORMULA  for FORMULA  and FORMULA .
+Next, we observe that for any complex matrix FORMULA ,
+
+{X* X} = {X}{X} + {X}{X} .
+
+Furthermore, FORMULA 
+and similarly FORMULA .
+Hence,
+
+{((zi))* ((zi))}
+      = ({(zi)})({(zi)})
++ ({(zi)})({(zi)}) .
+
+Therefore, we have the identity
+
+M = { i=0n-1 ((zi))* ((zi)) } := { i=0n-1 Mzi } .
+Let us now compute the entries of FORMULA  for FORMULA .
+Since FORMULA  is Hermitian, we have FORMULA .
+Hence we only need to consider the case when FORMULA .
+A quick calculation shows that
+
+(Mz)k, = (r-) e-j (- k) .
+
+Hence, FORMULA  for FORMULA .
+On the other hand, when FORMULA ,
+
+i=0n-1 (Mzi)k, = (r - ) i=0n-1 e-j i (- k) =  (r-) i=0n-1 e- 2j in (-k)
+=  (r-) 1 - e-2j(-k)1 - e- 2jn(-k) = 0 .
+
+Above, the last equality holds since we have assumed that FORMULA , and hence FORMULA .
+Therefore, we have shown that
+
+M = n (r, r-1, r-2, ..., 1) = p2 (r, r-1, r-2, ..., 1) .
+
+Proof of main result
+We now prove Theorem REF 
+and Theorem REF .
+Recall that FORMULA  is the estimated length-FORMULA  FIR approximation to FORMULA ,
+and FORMULA  is the true length-FORMULA  FIR truncation of FORMULA .
+By the triangle inequality, we have the following error decomposition
+into an approximation error and an estimation error
+
+G - GrG - GrApprox. error. + Gr - GrEstimation error. .
+
+Hence, in order for FORMULA  to
+hold, it suffices to have both the approximation error FORMULA  and the estimation error FORMULA .
+The approximation error is a non-deterministic quantity, and its behavior
+is governed by the tail decay of the impulse response coefficients FORMULA .
+In Section , we prove in Lemma  that
+as long as FORMULA  satisfies
+
+r < < 1  11- ( 16G(z)*(1-) ) ,
+
+then we have FORMULA .
+We now turn our attention to the estimation error, which we analyze using
+the results of this section. We first look at the FORMULA  case,
+where we propose to use the impulses FORMULA .
+It is easy to see in this case that the gram matrix
+FORMULA , and hence recalling that
+the output noise has variance FORMULA , we can bound the variance term FORMULA 
+from () by
+
+2 = z T  (z)2 M) (z) = 2p z T  (z)22 2 rp .
+
+Lemma  tells us with probability at least FORMULA ,
+the estimation error satisfies
+
+Gr - Gr422 rp ((8r) + (2/)) .
+
+Setting the RHS less than FORMULA  and solving for FORMULA , combining with the inequality FORMULA , we conclude
+that a sufficient condition on FORMULA  is
+
+p {256 2 r2 ((8r) + (2) ) ,  1 } .
+
+This concludes the proof of Theorem REF .
+The proof of Theorem REF  is nearly identical.
+The only difference is in the gram matrix calculation.
+In this setting,
+Lemma REF  states that the gram matrix FORMULA 
+satisfies FORMULA .
+Therefore, we estimate the variance FORMULA  as
+
+2 = z T  (z)22 p-1 (1/r, 1/(r-1), ..., 1)) (z)
+22 p-1 k=1r k-1
+22 p-1(1 + (r+1))
+42 p-1(4r) .
+
+Using Lemma  again, we conclude that the approximation error
+is less than FORMULA  with probability at least FORMULA 
+whenever
+
+p { 10242 (4r)2 ((8r) + (2) ) ,  2r } .
+
+This concludes the proof of Theorem REF .
+
+Finite Truncation Error Analysis for Stable Systems
+In Section , we presented both probabilistic guarantees and
+experiment design for identification of FIR systems of length FORMULA , which were
+independent of any system specific properties of FORMULA . In this section, we
+analyze how system behavior affects the necessary truncation length needed to
+reach a desired approximation error tolerance.
+In order to provide guarantees, we require that the underlying system FORMULA  is
+stable with stability radius FORMULA . A standard fact states that
+stability is equivalent to the existence of a constant FORMULA  such that the
+tail decay on the coefficients of the Laurent expansion FORMULA  satisfies the following condition
+
+gk C k ,  k 1 . 
+
+Under this assumption, a simple calculation reveals that as long as
+
+r 11- ( C(1-) ) ,
+
+then we have that the approximation error FORMULA  satisfies
+FORMULA .
+Unfortunately, without more knowledge of the system at hand, a bound on FORMULA  in
+() is hard to characterize. However, by slightly
+relaxing the decay condition (), we are able to
+derive a tail bound using system-theoretic ideas.
+Intuitively, if a system has long transient behavior, then we expect the
+constant FORMULA  in () to be large, since in order to
+obtain a small approximation error one needs to capture the transient behavior.
+Our next lemma shows that the Hankel nuclear norm provides a sufficient
+characterization of this transient behavior.
+
+
+Let FORMULA  be a stable SISO LTI system
+with stability radius FORMULA .
+Fix any FORMULA  satisfying FORMULA .
+Then for all FORMULA ,
+
+gk 8 G(z)* k 8 d G(z)k ,
+
+where FORMULA  denotes the McMillan degree of FORMULA  and
+FORMULA  is the Hankel nuclear norm of the system FORMULA .
+
+
+We first prove the second inequality. Letting FORMULA  denote the Hankel singular values of FORMULA  in non-increasing order, we immediately have
+FORMULA , where FORMULA  denotes the McMillan degree of FORMULA . To
+see that FORMULA , note that if FORMULA  is a minimum
+realization of FORMULA , then FORMULA  is a
+realization of FORMULA .
+Next, recall that the inequality FORMULA  holds.
+This is a consequence of the definition of the Hankel operator FORMULA  as
+FORMULA ,
+where FORMULA  on the RHS is understood as an FORMULA 
+operator and where FORMULA  (resp. FORMULA ) orthogonally projects FORMULA 
+onto FORMULA  (resp. FORMULA ).
+Since projection operators have operator norm bounded by one, we conclude that
+FORMULA ,
+which yields the second inequality.
+Now we prove the first inequality. Let FORMULA ,
+and let FORMULA .
+By construction, the system FORMULA  has all poles contained in FORMULA .
+Hence, by a result in Hankel operator theory (see e.g. {{cite:a540afe7-0db3-4b1f-a83b-7fadbddb8788}} and {{cite:757cf4c9-9fb5-44ea-b7e6-e2f1a6e502b5}}),
+FORMULA  has a Coifman-Rochberg expansion
+
+Gh(z) = i=1 i 1 - i2z - i , 
+
+with FORMULA , FORMULA ,
+and FORMULA .
+We express FORMULA  in this expansion by writing
+
+Gh(z) = i=1 i 1 - i2-1 z - i . 
+
+Using the expansion (),
+
+Gh(z) = i=1 i z-1 1 - i21 - i z-1 = i=1 i (1 - i2) z-1 k=0 kik z-k
+= i=1 k=0 i (1-i2) k+1ik z-(k+1)
+= k=0 i=1 i (1-i2) k+1ik z-(k+1)
+= k=1 i=1 i (1-i2) k ik-1 z-k .
+
+Above, the penultimate equality follows since the
+double summation is absolutely integrable, and hence we can switch the order of summation by Fubini's theorem.
+Hence, for each FORMULA ,
+
+gk = i=1 i (1-i2) k ik-1 k i=1 i 8 k Gh(z)* .
+Some remarks are in order regarding the proof of Lemma .
+The reader might be wondering why the Coifman-Rochberg expansion of FORMULA  is
+not considered directly, and why one needs to introduce the proxy system
+FORMULA . The reason for this is because the Coifman-Rochberg expansion
+of FORMULA  only has the weaker property that the coefficients FORMULA , and does not have the stronger property that the
+FORMULA 's satisfy FORMULA . Hence, for a bound of the form in
+Lemma , the expansion of FORMULA  is insufficient. Therefore,
+the proxy system FORMULA  is used to force the expansion to encode a
+useful quantitative bound. We note that a similar technique is used in
+{{cite:dab19f9c-9c12-4592-a046-f09f3f199a23}}.
+
+Robust Controller Design
+In Section , we described how to obtain a
+FIR system FORMULA  with a probabilistic guarantee
+that FORMULA ,
+where FORMULA  is an LTI system satisfying FORMULA .
+This description of FORMULA  naturally lends itself to many robust control
+synthesis methods. In this section, we detail the application of
+one particular method based on FORMULA  loop-shaping to a particular unknown plant.
+Suppose that FORMULA  is itself an FIR described with FORMULA -transform
+
+G(z) = w0 + k=1149 wk k-1 z-k ,  =0.95 , 
+
+where FORMULA  are independent Gaussians.
+In this section, we will detail the design of a reference tracking controller
+for FORMULA  using probabilistic guarantees.
+Computing bounds
+While the non-asymptotic bounds of Section  and
+Section  give us upper bounds on the error of noisy FIR
+approximation, the constant factors in the bounds are not optimal. Hence,
+strictly relying on the bounds will cause oversampling by a constant factor of
+(say) 10 or more. For real systems, this is extremely undesirable–
+using the sharpest bound possible is of great practical interest.
+Fortunately, we can do this via simple Monte–Carlo simulations, which we detail in
+Section  the appendix. For now, we describe the results of these simulations.
+Our first Monte–Carlo simulation establishes
+that FORMULA  satisfies the tail decay specified in
+()
+with FORMULA  and FORMULA .
+If we truncate FORMULA  with FORMULA , we see that our worst-case bound
+on FORMULA  is
+FORMULA . In general, assuming we have no other
+information about FORMULA  other than the bounds on FORMULA  and FORMULA , this is the
+sharpest approximation error bound possible, since for any system with
+real-valued, all non-negative Fourier coefficients, the
+FORMULA -norm is simply the sum of the coefficients.
+However, if we further assume we know the structure of FORMULA  as in this case
+where we know the form of (), but not the values of FORMULA , we
+can further sharper our approximation bound.
+Specifically, we know that FORMULA , and hence we can
+perform another Monte–Carlo simulation to estimate the tail probability
+of this random variable.
+The result of our simulation is that FORMULA . This is a substantial improvement over the previous bound of
+FORMULA  which only uses the information contained in
+the tail decay.
+Furthermore, we can use the same trick to sharpest the estimates from
+Lemma . We perform our final Monte–Carlo
+simulation, this time on the random variable FORMULA , with
+FORMULA  and FORMULA . Note that this corresponds to choosing
+the inputs to the system as impulse responses, which we recall from
+Section REF  is optimal under FORMULA -power constraints.
+Doing this simulation, we obtain that FORMULA .
+
+Controller design
+FIGURE 
+Our goal is to design a controller FORMULA  in the setup described
+in Figure REF , under the assumption that
+FORMULA .
+This assumption comes from the calculations in Section REF .
+We note that FORMULA  fluctuates between
+10-20%, so FORMULA  is a relatively coarse description of FORMULA .
+We use standard loop-shaping performance goals (see e.g.
+{{cite:7a41c57c-ca6f-4913-b8c2-647b38d31619}}).
+Let FORMULA  and FORMULA  denote the
+transfer functions from FORMULA  and FORMULA , respectively.
+At low frequencies, we would like
+FORMULA  to have small gain, and at high frequencies we would like
+FORMULA .
+Similarly, we would like FORMULA  at low frequencies
+and FORMULA  small at high frequencies.
+Of course, we would like these goals to be achieved, in addition to
+closed loop stability, for all FORMULA .
+We proceed in two steps. We first design a controller with the nominal FORMULA 
+using FORMULA  loop-shaping synthesis (mixsyn in MATLAB).
+We choose weights to encourage our performance goals on FORMULA 
+and FORMULA  to be met.
+Next, we check that our performance goal is met, in addition to robust
+stability. To make the computation easier, we check the performance goals
+separately. First, it is well known (see e.g. {{cite:7a41c57c-ca6f-4913-b8c2-647b38d31619}}) that the goal on
+FORMULA  is met (in addition to robust stability) if the following
+holds
+
+ W1 S + KS < 1 , 
+
+where FORMULA  and FORMULA .
+Specifically, under (REF ),
+the closed loop with FORMULA  in feedback with FORMULA  is stable and achieves the performance
+guarantee FORMULA  for every frequency FORMULA .
+On the other hand, to the best of our knowledge no
+simple expression for the performance goal on FORMULA  exists, so we resort
+to a standard structured singular value (SSV) calculation {{cite:24f77a21-65e2-4860-86cd-4b56d23a36a4}}.
+We generate our controller FORMULA  via the following MATLAB commands
+w_c = 0.07;                            W1 = makeweight(5000, w_c, .5, 1);     W2 = 1.5*fir_error_bound;              W3 = makeweight(.5, 3 * w_c, 5000, 1); P = augw(G_fir, W1, W2, W3);
+K = hinfsyn(P);
+FIGURE 
+In Figure REF , we plot the open loop gain FORMULA ,
+sensitivity function FORMULA , and complementary sensitivity function FORMULA .
+Here, we see that the cross-over frequency FORMULA .
+Next, in Figure REF , we plot the FORMULA  values for both the
+reference tracking objective FORMULA  and the noise insensitivity
+objective FORMULA , and check that both curves lies below 1 for all
+frequencies. Recall that this means that FORMULA  in feedback with FORMULA  is not only
+exponentially stable, but also satisfies both performance guarantees.
+Finally, in Figure REF , we plot the output FORMULA  as a function of a
+noisy square wave input FORMULA , to show the desired reference tracking behavior,
+on both the closed loop simulation (with FORMULA ), and the actual
+closed loop behavior (with FORMULA ). This shows that, while the model FORMULA 
+was a coarse grained description of FORMULA  with up to 20% relative error,
+it was faithful enough to allow for a robust controller design.
+FIGURE 
+
+Varying truncation length
+We next study the effect of truncation length FORMULA  on controller design.
+In Figure REF , we assume the same setup and
+performance goals as the previous section,
+but vary the truncation length FORMULA .
+We also include the result of a controller design which has full
+knowledge of the true system FORMULA , which we label as FORMULA .
+We see that for FORMULA , the resulting controller unsurprisingly
+has undesirable overshoot behavior. However, as FORMULA  increases
+the resulting controller mimics the behavior of FORMULA  quite closely.
+This plot shows that, at least for reference tracking behavior,
+a fairly low-fidelity model suffices.
+For instance, across different trials, the relative error of FORMULA 
+for FORMULA  fluctuated between 15% to 30%, but in many cases FORMULA  was able
+to provide reasonable reference tracking behavior.
+
+Conclusions
+This paper explored the use of a coarse-grained FIR model estimated from noisy
+output data for control design.
+We showed that sharp bounds on the FORMULA  error between the true unknown
+plant and the estimated FIR filter can be derived using tools from
+concentration of measure, and the constant factors on these bounds can be
+further refined via Monte–Carlo simulation techniques.
+There are many possible future extensions of our work. We highlight a few ideas below.
+MIMO Systems.
+While our approach can be generalized to the MIMO case by estimating filters
+for each input/output pair separately, we believe that when the MIMO transfer
+matrix has special structure (e.g. low rank), it should be possible to couple
+the estimation procedure to reduce the FORMULA  factor increase in sample complexity.
+This is motivated by the vast literature on compressed sensing, where
+sparse models embedded in a much larger ambient dimension can be uniquely recovered
+with at most a logarithmic factor more samples than the degree of the
+intrinsic sparsity.
+
+Experiment Design.
+On the experiment design side, characterizing the optimal input for all
+FORMULA  balls, in order to understand how the geometry of the input set
+affects the error, is an interesting future direction. Our analysis for
+FORMULA  and FORMULA  revealed drastically different optimal input
+designs, and it would be of theoretical interest to investigate
+if the intermediate FORMULA  balls
+interpolate between the two extreme designs.
+On the more practical side, understanding the role of randomness in input design
+would be beneficial to practitioners of system identification.
+
+Nonlinear Systems.
+Finally, an extension of these techniques to nonlinear systems is another
+exciting direction. One possible idea is to treat a nonlinear system's
+Jacobian linearization as the target unknown system, and fit a FIR using our
+techniques by exciting the nonlinear system locally. One would expect that the
+controller designed on the FIR would be valid in a neighborhood, and upon
+exiting the neighborhood, the process would repeat itself.
+The challenge here remains to estimate online the regime for which a controller
+is valid.
+
+Acknowledgements
+We thank Kevin Jamieson for insightful discussions regarding Monte–Carlo simulation,
+Anders Rantzer for pointing out references related to this work,
+and Vikas Sindhwani for providing ideas around linear control techniques for
+nonlinear systems.
+RB is supported by the Department of Defense NDSEG Scholarship.
+AP gratefully acknowledges generous support from the FANUC Corporation as well
+as the National Science Foundation under grant ECCS-1405413.
+BR is generously supported by NSF award CCF-1359814, ONR awards
+N00014-14-1-0024 and N00014-17-1-2191, the DARPA Fundamental Limits of Learning
+(Fun LoL) Program, a Sloan Research Fellowship, and a Google Faculty Award.
+
+
+
+Proof of Lemma  REF
+We will induct on FORMULA , for which the base cases FORMULA  holds. Denote the FORMULA -right shift operator applied to FORMULA  by FORMULA . Now, assume the property holds for FORMULA . This implies that
+
+Mij =  k=02n-1 uk[i] uk[j] = 0
+Mii =  k=02n-1 uk[i] uk[i] = 2n(2n-i).
+
+Now, construct FORMULA  as before, and note that for FORMULA ,
+FORMULA 
+Thus, for FORMULA , when FORMULA ,
+
+Mij =  k=02n+1-1 uk[i] uk[j]
+= l=02n-1 u2l[i] u2l[j]+u2l+1[i] u2l+1[j]
+= l=02n-1 ul ul+ ul[i] ul[j] -
+ul ul+ ul[i] ul[j] = 0.
+
+Furthermore,
+
+Mii = k=02n+1-1 uk[i] uk[i]
+=  l=02n-1 u2l-1[i] u2l-1[i]+u2l[i] u2l[i]
+=  l=02n-1 ul ul+ ul[i] ul[i] +
+ul ul+ ul[i] ul[i]
+=  2(2n(2n-i)) + 2(2n(2n))
+=  2n+1(2n+1-i).
+
+A similar calculation holds for FORMULA . Thus, by induction, the property holds for all FORMULA .
+
+Details for Monte–Carlo simulations
+In all of our simulations we are faced with the following problem which we describe
+in some generality.
+Let FORMULA  be a random variable distributed according to the law FORMULA .
+We assume we have access to iid samples from FORMULA . Our goal is to estimate an upper bound on
+FORMULA  for a fixed FORMULA .
+If the law FORMULA  admits a density FORMULA  with respect to the Lebesgue measure, a
+possible solution could be to solve this problem exactly by numerically integrating
+
+X() t X() f()  d.
+
+However, numerical integration does not scale favorably with dimension.
+For our experiments, FORMULA  is 75-dimensional, which is
+prohibitive for numerical integration.
+An alternative approach to numerical integration is to rely on concentration of
+measure. Let FORMULA  be iid copies of FORMULA , and let FORMULA  denote the
+product measure FORMULA .
+Using a Chernoff bound and defining FORMULA , we have
+
+N( 1N k=1N {Xk t} Ft - ) e-N D(Ft - , Ft) , 
+
+where FORMULA  is the KL-divergence between two Bernoulli distributions.
+Given a FORMULA ,
+define the random variable FORMULA  as the solution to the implicit equation
+
+N D(1N k=1N {Xk t}, Q) = (1/) . 
+
+Note that, from a realization of FORMULA , the realization of FORMULA 
+from () can be solved for by numerical root finding.
+Plugging the definition of FORMULA  back into the Chernoff inequality (), we conclude that
+there exists an event FORMULA  (in the product FORMULA -algebra) such that on FORMULA  the inequality FORMULA  holds,
+and furthermore FORMULA .
+This is the methodology which we use to generate all our bounds, with FORMULA .
+Hence, the statements of the form “FORMULA ” in Section REF  should
+be understood as operating under the assumption that our implementation of the
+simulation chose a particular realization which is contained in the
+simulator event FORMULA  described previously.

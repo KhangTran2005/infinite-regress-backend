@@ -1,0 +1,201 @@
+
+BNL-HET-06/19
+Signature of heavy Majorana neutrinos at a linear collider:
+Enhanced charged Higgs pair production
+David AtwoodFORMULA atwood@iastate.edu
+Shaouly Bar-ShalomFORMULA 
+shaouly@physics.technion.ac.il
+Amarjit SoniFORMULA soni@bnl.gov
+FORMULA Department of Physics and Astronomy, Iowa State University,
+Ames, IA 50011, USA
+FORMULA Physics Department, Technion-Institute of Technology, Haifa 32000, Israel
+FORMULA Theory Group, Brookhaven National Laboratory, Upton, NY 11973, USA
+2018/12/11 11:52:37
+A charged Higgs pair can be produced at an FORMULA  collider through a
+t-channel exchange of a heavy neutrino (FORMULA ) via FORMULA  and, if N is a Majorana particle, also via the lepton number
+violating (LNV) like-sign reaction FORMULA .
+Assuming no a-priori relation between the effective FORMULA  coupling
+(FORMULA ) and light neutrino masses, we show that this interaction
+vertex can give a striking enhancement to these charged Higgs pair
+production processes. In particular, the LNV FORMULA  signal can
+probe FORMULA  at the ILC in the mass range FORMULA <FORMULA mN
+FORMULA 104  TeV FORMULAFORMULA 10-4 FORMULA 2 FORMULA 10-8FORMULA 0FORMULA e+ e- H+ H-FORMULA O(10)FORMULA 2 FORMULA 0.001 FORMULA
+14.60.St,13.15.+g,13.66.Hk,12.15.Ji
+The discovery of neutrino oscillations, which indicates mixing
+between massive neutrinos, stands as the first direct
+evidence for physics beyond the Standard Model (SM). Thus, the SM, or for that matter also the Minimal Supersymmetric Standard Model (MSSM) and any other multi-Higgs doublet model, has to be
+expanded to include massive neutrinos that
+mix. Since there is still no understanding of the nature of these
+massive neutrinos, i.e., Majorana or Dirac-like, the extensions to these
+models can go either way. However, from the theoretical point of view,
+the more natural and therefore more appealing
+way is to generate sub-eV Majorana neutrinos
+by adding heavy right-handed neutrino singlet fields (FORMULA  with a mass
+FORMULA ) and relying on the seesaw mechanism
+which yields FORMULA , where FORMULA  is the solar and atmospheric neutrino masses and FORMULA  are the Dirac mass terms.
+Thus, the classic seesaw mechanism links light neutrino masses
+(FORMULA  eV) with new physics (FORMULA ) at the GUT scale (if FORMULA ) or at the multi-TeV scale (if FORMULA ) - both are well motivated theoretically. In either case, this minimal seesaw setup yields a vanishingly small heavy-to-light neutrino mixing: FORMULA , in which case heavy neutrinos effectively decouple.
+In this work we will assume no a-priori relation between the
+couplings and light neutrino masses. Indeed, interesting models have
+been proposed, which assume that the underlying
+physics for sub-eV neutrino masses goes beyond the standard, minimal,
+seesaw framework (see e.g., {{cite:5749ce0d-58b4-4c00-a044-e3e1c14067d9}}, {{cite:c2e914a4-a3b6-4c29-8944-fac7429b3e3b}}, {{cite:5d6b814c-dd39-4ee0-b2ae-2080fd9440b1}}, {{cite:979e75ab-b7ec-4d3f-a702-3d76364653e5}}), thus allowing the mixing angle
+FORMULA  to depart from its classical seesaw value (i.e., FORMULA ).
+Our primary purpose in this paper is to propose collider
+experiments that can sensitively probe the relevant masses and mixing
+angles.
+The fact that a Majorana mass term violates lepton number by two
+units, i.e. FORMULA , has striking phenomenological
+implications, some of which have been extensively studied in the past few decades -
+the most noticeable one being neutrinoless double beta decay FORMULA  {{cite:291e841f-7f86-4e59-ac72-cc08a89e382f}}. With the upcoming CERN Large Hadron Collider (LHC) and the planned high-energy FORMULA  machines, the study of LNV
+collider signals in processes involving heavy Majorana neutrinos is
+particularly well motivated. Indeed, such high-energy LNV signals have been extensively studied
+in the past two decades: at FORMULA  and FORMULA  collisions
+{{cite:b29ece03-014e-41df-b3c0-c1d6a44f6ee3}}, {{cite:037d7278-6347-4c62-bb1d-e4a87e03ff5d}}, {{cite:9a7824c0-11ff-489b-bedb-f92522a0d98f}}, {{cite:00be7e16-6a1a-4e78-9d10-1e1f2beeade9}}, {{cite:77ebf946-1cb6-4321-a6f9-ed2099054590}}, at an FORMULA  {{cite:b29ece03-014e-41df-b3c0-c1d6a44f6ee3}}, {{cite:ca0fb4bb-a44e-4df4-9e4b-bb76268c7b12}},
+FORMULA  {{cite:51956f4a-e245-42f9-aecf-639a26b6b749}} and FORMULA  collisions
+{{cite:a978299f-c082-4947-8cdc-f9973601b7df}}, {{cite:b29ece03-014e-41df-b3c0-c1d6a44f6ee3}} and at an FORMULA  machine
+{{cite:b29ece03-014e-41df-b3c0-c1d6a44f6ee3}}, {{cite:f0a95035-39af-4462-988c-82bb8e69f9a4}}, {{cite:ca0fb4bb-a44e-4df4-9e4b-bb76268c7b12}}. In addition, LNV mediated by exchanges of a heavy Majorana N can be manifest in top-quark and W-boson decays {{cite:53f8f22f-f0c2-407d-8845-af15737d318e}} and in rare charged meson decays {{cite:9a7824c0-11ff-489b-bedb-f92522a0d98f}}.
+In this letter we propose that charged Higgs pair production at an FORMULA  machine like the ILC (International Linear Collider) can serve as a very sensitive probe of heavy neutrinos (N) with masses up to FORMULA  TeV. The two processes we will explore are:
+FORMULA 
+These processes are generated at the tree level via a t-channel (and u-channel in the case of the like-sign FORMULA  signal) exchange of a heavy FORMULA , which can have a sizable coupling to FORMULA  when FORMULA  (see below). Note also
+that, while the FORMULA  signal is not sensitive to the nature of N, i.e., be it Majorana or Dirac particle, the like-sign FORMULA  signal is generated only if N is a Majorana neutrino.
+FIGURE 
+In any model with more than one Higgs doublet, a right handed neutrino (be it Majorana or Dirac-like) can couple to a charged Higgs via its Yukawa interactions with the scalar doublets FORMULA . The FORMULA  Yukawa-like coupling can, therefore, be written as:
+FORMULA 
+where FORMULA  and FORMULA  are the neutrinos and charged leptons Dirac mass terms, respectively, and the FORMULA 's are some functions of the Higgs doublets VEV's. For example, FORMULA  within an extended supersymmetric or a non-supersymmetric type II two Higgs doublet model with heavy right handed neutrinos.
+Since we will be interested in the effects of a heavy Majorana-type neutrino, we assume FORMULA  to have a Majorana mass term of the form FORMULA . Thus, we rewrite the FORMULA  interaction Lagrangian (REF ) in a generic form, in terms of the physical mass of FORMULA , FORMULA , and assuming FORMULA :
+FORMULA 
+where the dimensionless parameter FORMULA  defines an effective FORMULA  coupling strength that will be the key factor which controls the size of the cross-section for reactions (REF ) and (). In particular, we absorb in FORMULA  any relation between FORMULA  and FORMULA  which will depend on the mechanism responsible for the generation of neutrino masses. Depending on the size of FORMULA , the interaction term in (REF ) can have striking implications for FORMULA  phenomenology at an high-energy FORMULA  collider, in particular, for the charged Higgs pair production mechanisms in (REF ) and ().
+As mentioned earlier, we will assume no a-priori relation between FORMULA  and light neutrino masses and mixing, thus, adopting a model independent approach towards the effective FORMULA  coupling FORMULA , and treating it as a free parameter (assuming for simplicity that it is real). As such, FORMULA  should be subject only to existing experimental constraints and perturbative unitarity if applicable (see below).
+However, since there is no direct experimental constraint on FORMULA  that we know of,
+we will use the seesaw-like framework as a guide for estimating the experimentally allowed size of FORMULA . In particular, within a seesaw-like mechanism for generating
+light neutrino masses, the Dirac mass FORMULA  is related to the physical heavy Majorana mass by FORMULA , where FORMULA  being the heavy-to-light neutrino mixing angle (see e.g., Pilaftsis in {{cite:979e75ab-b7ec-4d3f-a702-3d76364653e5}}).
+Thus, in this case we obtain (see Eqs. REF  and REF ):
+FORMULA 
+It should be emphasized again that, although the minimal seesaw framework restricts the mixing FORMULA  to be vanishingly small,
+one cannot rule out FORMULA  even for FORMULA  GeV, based on seesaw-like scenarios which go beyond the minimal framework, such as radiative seesaw, double seesaw and fine-tuned relations or symmetries between the mass matrices FORMULA  and FORMULA , as was noted for example in {{cite:5749ce0d-58b4-4c00-a044-e3e1c14067d9}}, {{cite:c2e914a4-a3b6-4c29-8944-fac7429b3e3b}}, {{cite:5d6b814c-dd39-4ee0-b2ae-2080fd9440b1}}, {{cite:979e75ab-b7ec-4d3f-a702-3d76364653e5}}.
+Using the seesaw-like motivated relation in (REF ), the existing experimental constraints on FORMULA  can be applied as an estimate for the allowed size of FORMULA .
+In particular, FORMULA  is constrained from precision electroweak data (e.g., from invisible Z-decays) {{cite:0dd7e303-def9-4926-872e-9dd5eead82ed}}:
+FORMULA  at FORMULA  CL if FORMULA . This does not rule out
+FORMULA , since FORMULA  which depends on the details of the scalar
+sector of the underlying theory, can be of order 10.
+A stronger constraint on FORMULA  comes from neutrinoless double-FORMULA  decay (FORMULA ) {{cite:c96cb6e6-de2b-4bb6-9074-3b670003d53c}}:
+FORMULA . We note though, that the
+FORMULA  bound, although tighter, is subject to cancelations if there are more than one heavy N's that couple to an electron, in particular if they have different masses and mixings (see e.g., discussion by G. Belanger et al. in {{cite:51956f4a-e245-42f9-aecf-639a26b6b749}}).
+As noted above, another constraint can be applied on the FORMULA  plane from perturbative unitarity by demanding that FORMULA . In particular, in our simplified framework
+FORMULA  can decay via:
+FORMULA ,
+where the decay rates into the gauge-bosons is FORMULA , see e.g., {{cite:a978299f-c082-4947-8cdc-f9973601b7df}}. Taking FORMULA , the total decay width of FORMULA  (i.e., summing over the above decay channels) is:
+FORMULA 
+Thus, taking FORMULA  (i.e., assuming that the total N width is dominated by its decays to the Higgs-bosons), perturbative unitarity imposes the following bound:FORMULA [1]We note that partial wave unitarity of FORMULA  also sets a bound on FORMULA  which is, however, weaker than FORMULA  coming from
+FORMULA . We have also checked that the measured FORMULA  of the electron does not further constrain FORMULA .
+
+FORMULA 
+U 4g 2 3 mWmN 0.715 TeVmN  .
+This gives e.g., FORMULA <FORMULA 1FORMULA mN FORMULA 700 FORMULAFORMULA 0.1FORMULA mN FORMULA 7 FORMULAFORMULA The cross-section for the LNV FORMULA  mode is given by:
+FORMULA 
+where FORMULA , FORMULA , FORMULA , FORMULA  and
+FORMULA . Thus, in the limit FORMULA , we obtain
+FORMULA , i.e., the cross-section grows with FORMULA  for a constant effective mixing FORMULA . This growth behavior is, however,
+“cured” when we impose the perturbative unitarity bound in (REF ):
+FORMULA 
+In Fig. REF  we plot the LNV cross-section FORMULA  in units of
+FORMULA , as a function of FORMULA 
+for both a 500 and 1000 GeV FORMULA  machines. For illustration, we take
+FORMULA  and 300 GeV, for the
+FORMULA  and 1000 GeV colliders, respectively.
+We consider the cases
+FORMULA  and FORMULA , imposing the unitarity bound such that
+FORMULA  and FORMULA , respectively
+(recall that the unitarity bound implies FORMULA 
+already for FORMULA  TeV). As expected, there is a sharp decrease in FORMULA  which occurs once FORMULA  enters
+the unitarity bound regime (FORMULA ), for which
+the cross-section drops as FORMULA  as seen in (REF ).
+In the mass range FORMULA <FORMULA mN FORMULA few 103  TeVFORMULA = min (0.1,U)FORMULA – 10-3 QEDFORMULA eeFORMULA QEDFORMULA e- e- H- H-FORMULA mN 103-104FORMULA e-e- H-H-FORMULA mN - 2FORMULA s=500FORMULA mH = 150, 300FORMULA L=100 (s/TeV)2FORMULA -1FORMULA L QED 10000FORMULA mN 104FORMULA 2 10-8FORMULA 0FORMULA mN 104 FORMULA
+FIGURE 
+Let us now turn to the lepton number conserving (LNC) process FORMULA .
+There are 3 diagrams contributing to this process: the two “standard” (i.e.,
+within multi-Higgs models) s-channel FORMULA  and FORMULA  exchanges and a 3rd t-channel N exchange one.
+The cross-section FORMULA  can be decomposed accordingly as FORMULA , where the subscripts FORMULA  and FORMULA  denote the standard s-channel FORMULA  contribution, the t-channel FORMULA  contribution and the interference between the standard and the FORMULA -exchange diagrams. While FORMULA  can be found in the literature {{cite:302be655-0ead-45be-a4aa-ae12ac4453f6}}, the new FORMULA  exchange contributions to the total cross-section are:
+FORMULA 
+where FORMULA  and
+FORMULA 
+For a constant FORMULA  and in the limit FORMULA , both FORMULA  and FORMULA  approach a constant with respect to FORMULA .
+As FORMULA  enters the
+perturbative unitarity bound regime, i.e., FORMULA ,
+the interference term dominates since
+FORMULA , but
+still drops with FORMULA  as FORMULA .
+Thus, in this large FORMULA  mass range the total FORMULA  cross-section converges to the standard value: FORMULA . This behavior can be seen in Fig. REF , where we have plotted
+FORMULA  in units of
+the point cross-section FORMULA , as a function of FORMULA 
+for both a 500 and 1000 GeV FORMULA  machines, for which we take
+FORMULA  and 300 GeV, respectively.
+As in the LNV FORMULA  case, we consider
+FORMULA  and FORMULA , imposing the unitarity bound such that
+FORMULA  and FORMULA .
+Note that around FORMULA  the t-channel N exchange
+in FORMULA  production can become sizable. We, thus, define
+the number of standard deviations (FORMULA ) with which the t-channel FORMULA  exchange in FORMULA  can be detected at an ILC:
+FORMULA 
+In Fig. REF  we plot the FORMULA  (FORMULA )
+discovery contours of the FORMULA -exchange contribution to
+FORMULA  in the FORMULA  plane. As in the FORMULA  case, we take an ILC with FORMULA  GeV, 1 TeV and 3 TeV (setting FORMULA  and 600 GeV, respectively), and an integrated luminosity of FORMULA  fbFORMULA .
+Although not as promising as the LNV FORMULA  signal,
+we see that the FORMULA -mediated FORMULA  LNC signal can be detected at FORMULA  in an ILC with e.g., FORMULA  TeV, for a very heavy FORMULA 
+with a mass in the range FORMULA <FORMULA mN FORMULA 30(100) TeVFORMULA 2 6 10-4(6 10-5)FORMULA 0FORMULA Admittedly, our criteria for a FORMULA  discovery (or 10 events in the FORMULA  case), as plotted in Fig. REF ,
+is rather naive since we do not take into account the possible charged Higgs decays, their branching ratios and the corresponding detection efficiencies.
+Nonetheless, this simplified discovery criteria allows
+one to get an idea of the rather striking prospects of these charged Higgs pair production signals (especially the LNV FORMULA  one), as potential probes of heavy Majorana neutrinos.
+In particular, to further appreciate the
+significance of both the LNV and LNC
+Higgs pair production signals,
+we plot in Fig. REF  the ratios
+FORMULA  and
+FORMULA  at a 500 GeV
+ILC,FORMULA 
+as a function of FORMULA 
+and for FORMULA , i.e., assuming FORMULA .
+Take for example the FORMULA  signal for which we get
+FORMULA  already for FORMULA >FORMULA sFORMULA (e-e- W-W-) UeN4FORMULA 0FORMULA NFORMULA e- e- H-H-FORMULA H-H-FORMULA mN FORMULA 500FORMULA mH > mt +mbFORMULA H-H-FORMULA e-e- H-H- bb t t FORMULA H-H-/W-W-FORMULA (2 2)/(24)FORMULA H-H+FORMULA -+/(e-e+ W-W+) FORMULA 0.1FORMULA 100  GeV FORMULA mN FORMULA 1000  GeVFORMULA mH > mt +mbFORMULA H-H+FORMULA mN O(1)FORMULA 2 < 10-2 FORMULA
+FIGURE 
+To summarize, we have examined the potential role of the charged Higgs pair production
+processes FORMULA  and FORMULA  at an ILC, as possible
+probes of new dynamics mediated by heavy neutrinos, N. We have shown that the FORMULA 
+enhancement factor in the FORMULA  interaction vertex (i.e., compared to the FORMULA  vertex) makes these processes extremely sensitive to the t-channel FORMULA -exchange that drives them. In particular, we find that the LNV FORMULA  signal
+is sensitive to a heavy neutrino with a mass up to FORMULA  TeV and an effective Yukawa-like coupling to an electron as small as FORMULA .
+For example, in a supersymmetric non-minimal seesaw-like framework with heavy Majorana neutrinos, for which FORMULA  and FORMULA , one expects
+FORMULA , where FORMULA  is the FORMULA  mixing angle. Thus, taking
+FORMULA  or FORMULA , the LNV
+FORMULA  signal can probe a very heavy FORMULA  with FORMULA  TeV for
+the very small values of the neutrino mixing angles FORMULA  or
+FORMULA , respectively.
+This striking result is compatible with both the FORMULA  and the perturbative unitarity
+bounds on the FORMULA  plane and, to the best of our knowledge,
+stands out as an exceptional signal of
+heavy Majorana neutrinos at large colliders.
+In the case of the LNC signal FORMULA , we find that
+an ILC with a center of mass energy of 1 TeV, can potentially probe a heavy Majorana
+with a mass FORMULA  TeV, if FORMULA  - also within the
+FORMULA  and the perturbative unitarity
+bounds on the FORMULA  plane.
+Finally, in passing, we note that recently an interesting model
+that can be tested at the ILC through our charged
+Higgs pair production mechanisms was suggested by Ma in {{cite:5d6b814c-dd39-4ee0-b2ae-2080fd9440b1}}.
+In Ma's model a second scalar doublet FORMULA  is introduced and the light neutrinos acquire sub-eV masses through a loop involving both FORMULA  and FORMULA  - a radiative seesaw mechanism. As a consequance, the
+coupling FORMULA  is much less constrained (than in the minimal seesaw scenario)
+and should, therefore, be studied at the ILC via the reaction FORMULA , where each of the FORMULA 's in the final state can further decay via FORMULA , FORMULA  being the SU(2) partner of FORMULA .
+It is also worth noting that, in this model, FORMULA  can be the lightest stable particle due to an exact FORMULA  symmetry of the model, making it a good candidate for dark matter {{cite:5d6b814c-dd39-4ee0-b2ae-2080fd9440b1}}. In such a case, the reaction FORMULA  will lead to a unique signal of two same-charge FORMULA -bosons and a missing energy carried by the two FORMULA 's.
+We thank Gad Eilam, Tao Han, Ernest Ma and Jose Wudka for very useful discussions.
+S.B.S thanks the hospitality of the
+theory group in Brookhaven National Laboratory where part of
+this study was performed.
+This work was supported in part by US DOE Contract Nos.
+DE-FG02-94ER40817 (ISU) and DE-AC02-98CH10886 (BNL).
+[2]We have included the contribution from the t-channel
+N-exchange diagram in FORMULA .
+[3]Following suggestions by
+Tao Han, we have also considered the constraints on FORMULA  from
+the LEP2 measurements of FORMULA  {{cite:85962dfa-8e84-4558-8037-00300dffa53e}}.
+We found that FORMULA  is not sensitive at LEP2 to the
+N-exchange diagram if FORMULA <FORMULA 0.1 FORMULA

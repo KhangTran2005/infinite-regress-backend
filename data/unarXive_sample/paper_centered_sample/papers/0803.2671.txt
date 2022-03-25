@@ -1,0 +1,525 @@
+
+[Non-isolated dynamic black and white holes]Non-isolated dynamic black
+holes and white holes
+M. L. McClure
+mcclure@astro.utoronto.ca
+Kaem Anderson
+Kirk Bardahl
+Mathematics & Applied Mathematics, University of Cape Town,
+Rondebosch 7701, South Africa
+2018/12/12 05:58:11
+Modifying the Kerr-Schild transformation used to generate black and white
+hole spacetimes, new dynamic black and white holes are obtained
+using a time-dependent Kerr-Schild scalar field.
+Physical solutions are found for black holes that shrink with time and for
+white holes that expand with time.
+The black hole spacetimes are physical only in the vicinity of the black
+hole, with the physical region increasing in radius with time.
+The white hole spacetimes are physical throughout.
+Unlike the standard Schwarzschild solution the singularities are
+non-isolated, since the time-dependence introduces a mass-energy
+distribution.
+The surfaces in the metrics where FORMULA  are dynamic, moving
+inward with time for the black holes and outward for the white holes,
+which leads to a question of whether these spacetimes truly have event
+horizons—a problem shared with Vaidya's cosmological black hole
+spacetimes.
+By finding a surface that shrinks or expands at the same rate as the null
+geodesics move, and within which null geodesics move inward or outward
+faster than the surfaces shrink or expand respectively, it is verified
+that these do in fact behave like black and white holes.
+04.20.Jb, 04.40.Nr, 04.70.Bw, 97.60.Lf
+Introduction
+Non-isolated dynamic black holes are of interest since they are more
+realistic than black holes that exist by themselves in a vacuum and
+that never evolve in time.
+White hole solutions are also of interest: white hole exteriors are
+better representations of stars than black hole exteriors since white
+holes can act as sources of radiation while black holes can only act as
+sinks.
+Many dynamic black hole solutions are cosmological black holes, but it
+would be ideal to have solutions for black holes that are dynamic without
+relying on a cosmological background to achieve this.
+In this paper new non-isolated dynamic black and white holes will be
+obtained via Kerr-Schild transformations {{cite:4dbc9bfe-8428-4c88-b122-66dc6f22a549}} (see also
+{{cite:a97bdb41-2820-4f1b-8ba4-26a8166dcaf4}}).
+A Kerr-Schild transformation
+FORMULA 
+can be used to generate a new metric FORMULA  by taking a known
+metric FORMULA  and adding a component based on a scalar field FORMULA  and
+null geodesic vector field FORMULA .
+For example, the Eddington-Finkelstein form of the Schwarzschild metric
+can be derived by performing a Kerr-Schild transformation on Minkowski
+space, with FORMULA  and FORMULA  or FORMULA  for a
+black hole or white hole respectively.
+Previously Dawood and Ghosh {{cite:07096c18-c9f0-4777-a140-0f626a01341d}} found a family of dynamic black
+and white holes by combining the time-dependence of Vaidya's radiating
+star {{cite:35016dc8-6340-49c1-b72b-3bab1c1ae5a7}} with Salgado's {{cite:dcfef789-0593-41e9-880f-499cb1a870f1}} family of static black holes.
+Cosmological black holes—such as those of McVittie {{cite:d0e00bf6-0d70-4176-9df5-6024ef27ede9}},
+Vaidya {{cite:32881757-eb7c-400d-902b-081fbc72ce5a}}, Thakurta {{cite:768a9850-f3ba-4f5b-a829-7e421e710844}}, Sultana and Dyer {{cite:218de8e0-40d9-41d6-8482-cf91f270af0a}},
+and McClure and Dyer {{cite:0aadfb00-f3f7-4d49-b12f-af629a19eb3d}}—also provide examples of dynamic
+black holes since the black holes are surrounded by an expanding
+cosmological background and evolve with the universe.
+Swiss cheese black holes {{cite:12960eae-05b3-4bcb-aec9-881f8048fb4b}} can also be surrounded by a
+cosmological background; however, they possess a vacuum region between the
+black hole and the surrounding FLRW universe, and the black holes
+themselves are not dynamic.
+Cosmological black hole spacetimes are generally obtained either by
+performing the same conformal transformation on the Schwarzschild
+spacetime as is used to transform Minkowski space to FLRW, or by
+performing the same Kerr-Schild transformation on FLRW as is used to
+transform Minkowski space to Schwarzschild.
+The essential difference between the two methods is whether the Kerr-Schild
+scalar field contains the cosmological scale factor FORMULA .
+This suggests another possible scenario—one in which the seed metric is
+Minkowski but the Kerr-Schild scalar field contains a scale factor
+FORMULA , which is the scenario that will be explored in this paper.
+This type of spacetime could lead to solutions of dynamic black and white
+holes in an asymptotically-Minkowski background, rather than in a
+cosmological background.
+New solutions of Einstein's field equations will be found with this
+spacetime in Section II.
+The Einstein tensors will be calculated using the computer algebra
+program REDUCE 3.8 with the Redten 4.3 package {{cite:dc577faf-9144-415e-8436-205febd28c02}}.
+Ashtekar and Krishnan {{cite:3cbd5ae9-4333-440c-a6e9-b3d6e7839d75}} give a detailed review of the
+various definitions used to describe the horizons of dynamic black holes.
+Commonly black holes and white holes are specified by future and past
+event horizons respectively, but for dynamic spacetimes these horizons
+will generally not correspond with the apparent horizons that track the
+surfaces that locally behave like the black and white hole boundaries at
+a moment in time.
+Event horizons are defined using boundaries of the
+causal past of future null infinity and causal future of past null
+infinity respectively, but it is more practical to look at trapped
+surfaces.
+On a trapped surface the outward-directed null geodesics converge such
+that the volume they occupy is decreasing in time, and on a
+marginally trapped surface their volume expansion is zero.
+The boundary of the total trapped region is used to specify an apparent
+horizon or marginally trapped surface that locally acts like the
+boundary of a black hole at a moment in time.
+Hayward {{cite:e953e800-2d15-4cb8-a713-3be91e5bad9f}} defines a trapping horizon in terms of marginally
+trapped surfaces such that it is essentially the time evolution of an
+apparent horizon.
+In general, the expansion of the event horizon may be positive, since the
+area may be increasing, in which case it is not necessary that the event
+horizon coincides with the apparent horizon, or that any trapped surfaces
+even exist within the event horizon at a given moment of time
+(see Wald and Iyer {{cite:fb24222f-da6a-44d7-b788-398b0009a57f}}).
+During black hole collapses, it is expected that as mass is accreted the
+apparent horizon forms and moves outwards, eventually approaching the
+event horizon.
+For instance, Schnetter and Krishnan {{cite:27e44af3-3eed-414c-ba83-0c35b3f07b1f}} show that the black
+hole version of Vaidya's radiating star (a radiation sink) has an event
+horizon outside the FORMULA  apparent horizon, such that the apparent
+horizon asymptotically approaches the event horizon as FORMULA  increases.
+It is generally assumed that an apparent horizon cannot exist outside of
+an event horizon.
+However, a region that is trapped or marginally trapped could subsequently
+cease to be, since these definitions only specify what a surface is doing
+at a specific moment in time.
+In special circumstances, an apparent horizon could move inward and an
+event horizon could only exist if there is an inner region that remains
+trapped for all time.
+For instance, if a conformal transformation is performed to shrink
+the Schwarzschild spacetime, this could lead to photons becoming trapped
+outside the event horizon (which remains at FORMULA  under conformal
+transformation) since the contraction of the space influences the volume
+expansion of photons within it.
+Assuming the rate at which the space shrinks is decreasing, then regions
+that are trapped due to this negative volume expansion would subsequently
+cease to be, such that the apparent horizon moves inward and ultimately
+coincides with the event horizon.
+Thus, with a non-isolated black hole where the gravitational contraction of
+matter is creating a negative volume expansion, it is possible for an event
+horizon to exist within an apparent horizon.
+If an apparent horizon is shrinking, ultimately it is not a very satisfying
+demonstration of the existence of a black hole: unless there is an inner
+region that remains trapped for all time, then the trapped region
+will shrink to nothing and allow all outgoing null geodesics to
+eventually escape.
+In the case of the new dynamic solutions in this paper, FORMULA  at
+FORMULA , so that the null geodesics remain at fixed areal radius FORMULA  while
+this surface is itself shrinking or expanding in FORMULA  with time according to
+the scale factor FORMULA .
+Thus, for shrinking black holes photons may escape the FORMULA  surface,
+and for expanding white holes photons may become enveloped within the surface,
+meaning the FORMULA  surface cannot act as an event horizon.
+If these are indeed black holes and white holes, there should be a surface
+contained within the FORMULA  surface where photons are held fixed
+relative to the surface as it shrinks or expands, and within which
+photons move inward or outward faster than surfaces shrink or expand for
+the black holes and white holes respectively.
+These surfaces will be found in Section III.
+Vaidya's cosmological black holes {{cite:32881757-eb7c-400d-902b-081fbc72ce5a}} can be expressed as
+FORMULA 
+for black holes in asymptotically-flat universes.
+Vaidya's cosmological black holes also have the problem that the
+FORMULA  surface shrinks while null geodesics are held at fixed FORMULA 
+at that surface, allowing photons to escape this surface.
+Vaidya claimed this surface is an event horizon by first
+performing the calculation for the case of a black hole in a static
+Einstein universe and then extending it to the case of an expanding
+universe, but this surface can no longer serve as an event
+horizon once it becomes dynamic.
+(Also, since Vaidya considered the cases of closed universes, it is not strictly
+possible to satisfy the definition of an event horizon in such universes.)
+In Section III it will be shown that the new dynamic black hole spacetimes
+are conformal to Vaidya's cosmological black holes in asymptotically-flat
+universes, so if event horizons exist for the new dynamic black holes
+then they must exist for these cosmological black holes as well.
+Finally, in Section IV the mass of the new black and white holes will be
+allowed to vary across null surfaces analogous to Vaidya's radiating star
+{{cite:35016dc8-6340-49c1-b72b-3bab1c1ae5a7}}.
+Interpretations will be given for non-isolated dynamic black holes and
+white holes with a perfect fluid component and an additional null-fluid
+component.
+
+New dynamic black hole and white hole solutions
+Performing a Kerr-Schild transformation of Minkowski space with a
+scale factor FORMULA  modifying the usual scalar field used to obtain the
+Schwarzschild metric, the new line element
+FORMULA 
+is obtained (with the plus or minus signs corresponding to the black
+or white hole cases respectively).
+Looking at the Einstein tensor (with FORMULA ), the only
+non-zero components are
+FORMULA 
+Assuming there is a perfect fluid component in the energy-momentum tensor,
+then the energy density FORMULA  and pressure FORMULA  are related by
+FORMULA 
+since FORMULA  for any additional null fluid or heat conduction
+component that might be present in the energy-momentum tensor.
+From spherical symmetry FORMULA , so
+FORMULA 
+and
+FORMULA 
+For the new spacetimes to yield a valid physical solution of Einstein's
+field equations, the energy conditions (e.g. see {{cite:c2d7e471-ad84-40a7-9c6f-32e50b2f7576}}) must be
+satisfied.
+With a perfect fluid this essentially requires that FORMULA  and FORMULA  (weak
+energy condition), FORMULA  and FORMULA  (strong energy
+condition), and FORMULA  (dominant energy condition).
+In the black hole case, in order for the energy density to be non-negative
+everywhere, both FORMULA  and FORMULA  must be non-positive;
+however, this is not possible for any FORMULA .
+Looking for a solution in a region of spacetime (with one term of the
+energy density positive and dominating the negative term) requires the
+pressure to be negative; otherwise, the positive term of the energy
+density would be the same as the pressure term, and the negative term in
+the energy density would cause the pressure to be of greater magnitude
+than the energy density, violating the dominant energy condition.
+Thus, FORMULA  must be negative, which requires FORMULA  with FORMULA , such that the black holes shrink with time.
+The positive term of the energy density goes as FORMULA  relative to the
+negative term, so the energy density is positive and all the energy
+conditions are satisfied for sufficiently small values of FORMULA , and with
+the radius of the physical region increasing with FORMULA .
+This is beneficial since the solution is valid in the vicinity of the
+black hole singularity, so the unphysical region of the spacetime can
+simply be ignored or potentially replaced using a spacetime matching.
+In the white hole case, the energy density is non-negative
+everywhere if
+FORMULA  is non-negative and FORMULA  is non-positive, which
+requires FORMULA  with FORMULA , such that the white holes
+expand with time.
+With these conditions, FORMULA  and FORMULA , so all the energy
+conditions are obeyed throughout the spacetime.
+The pressure is zero when FORMULA , so this is the
+case of pressureless dust.
+The FORMULA  and FORMULA  terms are heat conduction terms, which can arise
+from a null fluid or from energy conduction, either due to the transfer of
+heat through the matter or a non-comoving velocity field that leads
+to a flux of matter relative to the co-ordinates.
+The null vector field is FORMULA , so a null fluid energy-momentum component
+FORMULA  would lead to terms of equivalent magnitude (different
+signs) in FORMULA , FORMULA , FORMULA , and FORMULA ; however, FORMULA .
+Since FORMULA  and
+FORMULA 
+while
+FORMULA 
+then there must be a radial velocity field component.
+Thus, the heat conduction terms should be interpreted as the flux
+of matter relative to the co-ordinates with FORMULA .
+
+Finding the horizons
+The new solutions of Section II are non-stationary.
+In the case of Schwarzschild, FORMULA  at FORMULA ;
+however, the FORMULA  surface for the new solutions is at
+FORMULA , so as FORMULA  shrinks or grows with time, that surface moves
+to smaller or larger FORMULA .
+With the Schwarzschild metric, the surface FORMULA  is
+a null surface where null geodesics obey FORMULA , so
+photons at FORMULA  are held fixed there such that outgoing photons cannot
+move outside the surface in the case of a black hole and ingoing photons
+cannot move inside the surface in the case of a white hole.
+With the new dynamic black and white holes it is also true that
+null geodesics obey FORMULA  at the surface
+FORMULA .
+However, the surface cannot be the event horizon of the dynamic black
+and white holes,
+since photons at that surface are held at fixed FORMULA  while the surface
+FORMULA  shrinks or expands, allowing outgoing photons to escape in
+the black hole case or ingoing photons to become enveloped in the white
+hole case.
+If the Kerr-Schild transformation is performed using the geodesic null
+vector field FORMULA  instead of FORMULA ,
+the spacetime is identical, and FORMULA  can be used to represent the ingoing
+null geodesics of the black holes or outgoing null geodesics of the white
+holes.
+Since this geodesic null vector field is preserved under Kerr-Schild
+transformation, the expansion of these geodesics is the same as in Minkowski
+space and the divergence is given by
+FORMULA 
+such that the ingoing null geodesics of the black holes are always converging
+and outgoing null geodesics of the white holes are always diverging as expected.
+The null vector field representing the opposite-directed null geodesics is
+FORMULA  (normalized such that FORMULA ), and it is
+not preserved under the Kerr-Schild transformation since
+FORMULA 
+The outgoing null geodesics of the black holes and ingoing null geodesics of
+the white holes can be represented as
+FORMULA 
+such that the outgoing null geodesics of the black holes and ingoing null
+geodesics of the white holes have divergence
+FORMULA 
+Thus, unlike the static FORMULA  case, the marginal surfaces are not simply at
+FORMULA .
+Since FORMULA  is negative for the black holes and positive for the white holes,
+then at FORMULA  the expansion is negative for the black holes and positive for the
+white holes such that the apparent horizon exists outside FORMULA  at
+FORMULA 
+The expansion of the outgoing null geodesics of the black holes switches
+from negative inside this surface to positive outside, and the expansion
+of the ingoing null geodesics of the white holes switches from negative
+outside this surface to positive inside.
+Since FORMULA  varies inversely with FORMULA  compared with FORMULA , then regions
+that are trapped in the black hole case (or anti-trapped in the white hole case)
+cease to be and the apparent horizon moves inward, asymptotically approaching
+FORMULA  with time.
+It may seem counterintuitive that the apparent horizon is not simply
+the FORMULA  surface where the outgoing null geodesics of the
+black holes and ingoing geodesics of the white holes are instantaneously held
+at fixed areal radius FORMULA .
+However, using the volume element, the co-ordinate volume expansion for a
+spherical shell of infinitesimal thickness is
+FORMULA 
+so even when the null geodesics are held at fixed areal radius for an instant,
+they are generally converging in the black hole case and diverging in the
+white hole case due to the volume expansion of the space.
+Unlike typical cases of black hole collapses where the trapped region grows
+and is contained within an event horizon, since the trapped region is decreasing
+an event horizon can only exist inside the apparent horizon.
+Since photons can escape the FORMULA  surface as it moves inward in the black
+hole case, or photons can enter the surface is it expands and envelops them in the
+white hole case, this surface cannot generally be the event horizon, and
+the event horizon can only asymptote towards it from within.
+The black hole area law also requires that the event horizon
+not move to smaller areal radius FORMULA : since the FORMULA  surface shrinks
+to smaller FORMULA  for the dynamic black holes, the only way the event horizon can
+asymptote to it at infinite time is by expanding outward to reach it as a
+fraction of FORMULA .
+Thus, the aim is to find a surface specified by FORMULA 
+(where FORMULA  can vary with time) that shrinks or expands at the same rate as
+the null geodesics at that surface,
+and such that within it the null geodesics can only move inward or outward
+relative to the shrinking or expanding surfaces in the black hole and white
+hole cases respectively.
+It is possible that satisfying this local requirement may somehow differ from
+studying the causal structure of the complete spacetime, but
+it is the most reasonable local description that should be equivalent to the
+existence of an event horizon by the usual definition.
+The goal is to verify that the spacetimes behave like black and white holes
+are qualitatively expected to, rather than strictly showing that they satisfy
+the usual definition of an event horizon, since the time dependence of the
+Kerr-Schild scalar field makes it difficult to produce conformal diagrams of
+the spacetimes.
+Ignoring the angular components of the line element and looking at where
+it is null yields
+FORMULA 
+The rate at which a surface specified by FORMULA  moves radially is
+given by
+FORMULA 
+so equating the rates for the motion of the surface and the motion of
+null geodesics yields
+FORMULA 
+Since FORMULA  is negative for the black hole case and positive for the
+white hole case, then in both cases
+FORMULA 
+Since FORMULA  is non-positive for the black and white hole
+solutions, time increases as a function of FORMULA .
+In figure REF , a plot of FORMULA  appears.
+It is apparent that FORMULA  at FORMULA , which corresponds to FORMULA .
+As FORMULA  approaches infinity, FORMULA  approaches 1, which corresponds to
+FORMULA .
+Thus, the surface that shrinks or
+expands at the same rate as the null geodesics move
+is actually moving outward as a fraction of FORMULA  with time, while the
+surface FORMULA  shrinks or expands with time.
+FIGURE 
+To determine whether this surface behaves like an event horizon,
+rather than merely temporarily following the null geodesics,
+it is necessary to study what happens to null geodesics within it.
+Looking at how the FORMULA  rates are affected going to
+smaller FORMULA  (larger FORMULA ) at a given moment in time,
+FORMULA 
+for the null geodesics and
+FORMULA 
+for the surfaces.
+The null geodesics move inward or outward faster at smaller FORMULA  for
+the black holes and white holes respectively, while
+since FORMULA  is negative for the black holes and positive for the
+white holes, the surfaces move inward or outward slower at smaller FORMULA .
+Thus, within the surface that is shrinking or expanding at the same rate
+as the null geodesics move, photons must move inward or outward faster
+than the interior surfaces move, forcing photons to move toward the black
+hole singularity or toward the white hole surface.
+Since the null geodesics within the surface move inward and
+are trapped for all time in the black hole case, the surface appears
+to act as a future event horizon.
+Since the null geodesics within the surface move outward toward the
+surface in the white hole case, no
+ingoing photons are able to cross the surface and then move inward,
+so the surface appears to act as a past event horizon.
+In the case of Vaidya's cosmological black holes {{cite:32881757-eb7c-400d-902b-081fbc72ce5a}},
+repeating the above analysis to try to locate the event horizon
+yields an identical result.
+The reason can be seen most directly by the fact that Vaidya's
+cosmological black hole spacetime is conformally related to the new
+dynamic black holes.
+Performing a conformal transformation of Vaidya's cosmological black
+holes to cancel out the scale factor in the seed part of the
+metric yields
+FORMULA 
+which looks exactly like the metric for the dynamic black holes, except
+that the scale factor is in the denominator of the Kerr-Schild term
+instead of the numerator.
+However, the scale factor for Vaidya's cosmological black holes
+grows with time so that FORMULA  with FORMULA ,
+whereas the dynamic black holes have FORMULA  with FORMULA , so
+in fact the metrics are the same.
+Thus, the metrics are conformally related, and since conformal
+transformations preserve causal structure, Vaidya's cosmological
+black holes must share any event horizon that the dynamic black
+holes possess.
+It should be noted that expansion is not generally conserved under a
+conformal transformation, so the expansion of the outgoing null geodesics
+will differ from that of the new dynamic black holes and be given by
+FORMULA 
+Thus, for expanding universes, the expansion will be positive at the
+FORMULA  surface, so the marginal surfaces representing the apparent
+horizon will actually be inside the FORMULA  surface,
+unlike for the new solutions presented in this paper.
+
+Two-Fluid Solutions
+Performing a Kerr-Schild transformation of Minkowski space with a
+scale factor FORMULA  modifying the usual scalar field used to obtain the
+Schwarzschild metric and with FORMULA  (where FORMULA ) as with Vaidya's
+radiating stellar exterior, the new line element
+FORMULA 
+is obtained (with the plus or minus signs corresponding to the black
+or white hole cases respectively).
+Looking at the Einstein tensor, the only
+non-zero components are
+FORMULA 
+where FORMULA .
+Comparing with the case of Section II where FORMULA ,
+it is apparent there are now FORMULA  terms in FORMULA , FORMULA ,
+FORMULA , and FORMULA  that can be interpreted as a null fluid component
+since the FORMULA  and FORMULA  terms sum to zero, and the FORMULA  and FORMULA 
+terms represent heat conduction from the transport of energy as the null
+fluid radially transfers energy.
+Thus, this interpretation results in a two-fluid solution consisting of the
+perfect fluid found in Section II combined with a null fluid
+analogous to that of Vaidya's radiating stellar exterior.
+In the case of the black hole the null fluid must be ingoing such that the
+singularity accretes mass, and in the case of the white hole the null
+fluid must be outgoing such that the singularity radiates away mass.
+Since the additional fluid component is a null fluid, it must satisfy the
+energy conditions, so in combination with the perfect
+fluid component, the solutions should be physical under the same
+conditions as they are in Section II.
+
+Discussion and summary
+Solutions for new non-isolated dynamic black and white holes have been
+found.
+The solutions consist of a perfect fluid that is contracting in the black
+hole case and expanding in the white hole case, and if the mass of the
+singularity is allowed to vary across null surfaces there is an
+additional null fluid component that is accreted by the black hole or
+radiated by the white hole.
+These exact solutions could serve as simple models of black holes, white
+holes, and stellar exteriors with surrounding matter distributions of
+non-cosmological nature.
+While the black hole solutions are only physical within the neighbourhood
+of the singularity, it is possible to match spacetimes together using
+junction conditions, so it is possible these solutions could
+be matched onto another spacetime to make the solution physical throughout.
+It is interesting that while having FORMULA  times a function of time in the
+metric looks analogous to Vaidya's radiating star {{cite:35016dc8-6340-49c1-b72b-3bab1c1ae5a7}} or Dawood
+and Ghosh's dynamic black holes {{cite:07096c18-c9f0-4777-a140-0f626a01341d}} since they both have the mass
+varying as a function of time, the new dynamic solutions do not merely
+yield a null fluid like the radiating star.
+This can be explained by the fact that the previous spacetimes have FORMULA  as a
+function of FORMULA  , so that FORMULA  is
+varying between null surfaces, whereas the new dynamic black holes
+have FORMULA  being scaled by the scale factor between different spacelike
+surfaces. The previous spacetimes are consistent with mass being radiated
+away from a white hole or onto a black hole, whereas the
+new dynamic black holes require a different form of mass-energy.
+Incorporating a scale factor in the Kerr-Schild
+term of the Schwarzschild metric has a similar effect to performing a
+conformal transformation of Minkowski space in that it introduces
+mass-energy.
+A conformal transformation of Minkowski space introduces mass-energy
+since the gravitational influence causes a decelerating expansion of
+space (or equivalently an accelerating shrinking of space as the matter
+falls together backwards in time).
+Thus, it makes sense that introducing a scale factor in the Kerr-Schild term
+of the Schwarzschild metric also leads to the introduction of mass-energy,
+and it makes sense that this would be inhomogeneous due to the FORMULA 
+dependence of the scalar field.
+Presumably the reason the white holes are limited from expanding faster than
+FORMULA  is that faster expansions would lead to an acceleration, rather
+than a deceleration, in the expansion, which would not be consistent with
+gravitational attraction of mass-energy.
+Since the black holes are shrinking, presumably there should be no problem
+with the mass-energy distribution accelerating together, which would explain
+why they can shrink at any rate, with increasing energy density corresponding
+to a faster decrease in FORMULA .
+While the new solutions are spherically symmetric, the presence of
+pressure means they are not examples of Lemaître-Tolman-Bondi
+solutions {{cite:bffec842-409e-4ad5-a19d-04acc46700ef}}, {{cite:281faf9b-2415-4131-9b40-960a6f07231b}}, {{cite:84201fda-60c5-4123-9a89-cd5033d26f46}}.
+The pressure gradients will exert a force to accelerate the matter.
+The pressure goes as FORMULA , so the pressure gradient is exerting an
+inward force in the black hole case and an outward force in the white
+hole case, meaning the matter will be accelerated toward the black hole and
+away from the white hole.
+Since the matter is being accelerated away from the white hole,
+it suggests pressure gradients may be one way to prevent white holes from
+being unstable to recollapsing to form black holes as Eardley has
+suggested they would {{cite:e505585a-9977-4729-96b2-8881b3b91134}}.
+It is interesting that neither the apparent horizon nor the event horizon
+seems to coincide with the FORMULA  surface of the dynamic black and
+white holes, yet both asymptote towards it at infinite time.
+Due to the decreasing magnitude of the volume expansion of the space, regions
+that are trapped or anti-trapped cease to be, so the apparent horizon
+asymptotically moves inward toward the FORMULA  surface.
+Contrary to usual situations where black holes accrete mass and the apparent
+horizon grows to reach an event horizon from within, the apparent horizon
+cannot be contained within an event horizon.
+Based on the behaviour of the null geodesics, it appears that there is an
+event horizon that prevents null geodesics from escaping the black hole or
+entering the white hole, and this horizon asymptotes to the FORMULA  surface
+from within it.
+While it was claimed the FORMULA  surface of Vaidya's
+cosmological black holes {{cite:32881757-eb7c-400d-902b-081fbc72ce5a}} is an event horizon, this cannot
+generally be so.
+It has been demonstrated that Vaidya's cosmological black holes have the
+same causal structure as the new dynamic black holes found in this paper,
+and likewise there is a surface within the FORMULA  surface
+that traps photons for all time, verifying that these cosmological black
+holes do in fact behave as black holes.
+Thanks go to Charles Dyer, Charles Hellaby, and
+Amanda Peet (the string theorist, not the actress) for useful
+discussions and comments.
+This research was funded by the NRF of South Africa.

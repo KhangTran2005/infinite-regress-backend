@@ -1,0 +1,387 @@
+
+[section]chapter
+0.5pt
+Non-adiabatic transitions in a massless scalar fieldJohannes von Keler and Stefan Teufel
+Mathematisches Institut, Universität Tübingen, Germany2018/12/11 00:39:57We consider the dynamics of a massless scalar field with time-dependent sources in the adiabatic limit.
+This is an example of an adiabatic problem without spectral gap.
+The main goal of our paper is to illustrate the difference between the error of the adiabatic approximation
+and the concept of non-adiabatic transitions for gapless systems. In our example the non-adiabatic transitions
+correspond to emission of free bosons, while the error of the adiabatic approximation is dominated by a velocity-dependent deformation of the ground state of the field.
+In order to capture these concepts precisely, we show how to construct super-adiabatic approximations for a gapless system.
+Introduction
+The adiabatic theorem of quantum mechanics is usually stated and proved for systems with a finite spectral gap. Mathematically it is known since at least 1998 {{cite:5aaa8016-f162-44a0-aca2-f5cb0de259fe}}, {{cite:d39a1863-5a78-4452-97b4-35f3a4d7be2f}} that in a weaker sense the theorem remains valid even for systems without spectral gap as long as the spectral projections of the time-dependent Hamiltonian are sufficiently regular functions of time, see also {{cite:ad8f2e28-5aa5-4ec4-9421-9bfd7a6d2b53}}. Its validity has been shown even for resonances {{cite:7f634d2a-956d-4eb4-9c5b-90d010a9c0f0}} and for open systems {{cite:c2b0e2af-1eb1-4ea4-b7bd-ac60da2938dc}}. In recent years the problem of adiabaticity for gapless systems attracted also interest in physics. For example, in {{cite:b0712a0d-1926-4665-93c5-9ed87035c43e}} the authors consider adiabatic changes in the coupling of a scalar field. In a finite volume the ground state of the field is separated by a gap from the excited states. However, in the thermodynamic limit the gap closes and the spectrum of the field becomes absolutely continuous. The authors find that in the thermodynamic limit the error in the adiabatic approximation depends on the spatial dimension and other parameters controlling the spectral density of the field. They distinguish three regimes: one where the adiabatic theorem holds with the same error estimate as in the gapped case, one where it holds with a different power law and one where it fails completely. In all cases, however, they identify the error of the adiabatic approximation with the size of the non-adiabatic transitions. One main goal of our paper is to explain why this is, in general, not a valid identification and why the concept of super-adiabatic approximations is useful also in the gapless case.
+To this end we consider a specific gapless model in the adiabatic limit, namely a massless scalar field with time dependent sources. The goal is to exhibit a number of subtleties in adiabatic theory that are known in the gapped case – but often not expressed sufficiently clearly – also for the case of gapless systems. In particular we emphasize the difference between the error in the adiabatic approximation and what physically should be considered non-adiabatic transitions. To be more specific, let
+us briefly recall the situation in the presence of a spectral gap. Let FORMULA  be a time-dependent Hamiltonian and FORMULA  an eigenvalue with spectral projection FORMULA . Under appropriate regularity conditions on FORMULA  and the assumption that FORMULA  is separated by a gap from the rest of the spectrum of FORMULA , the adiabatic theorem states that the solution of the Schrödinger equation
+FORMULA 
+We consider a scalar massless field in three spatial dimensions. The momentum space for a single boson is FORMULA  and the state space of the field is the symmetric Fock space
+FORMULA 
+So FORMULA  is a sequence FORMULA  with FORMULA  a square integrable symmetric function of FORMULA  variables in FORMULA . For FORMULA  the inner product is
+FORMULA 
+The Hamiltonian of the free field is FORMULA  and acts as
+FORMULA 
+As a multiplication operator FORMULA  is self-adjoint on
+its dense maximal domain FORMULA . Moreover, FORMULA  has a unique ground state given by the Fock vacuum FORMULA . Now we add moving charges as sources to
+the field. For notational simplicity we assume that all sources have the same normalized form factor FORMULA  with
+FORMULA 
+Later on we will make additional assumptions on the “charge distribution” FORMULA . The sources are located at positions FORMULA  with total charge FORMULA  and form factor FORMULA . The linear coupling to the field is given by the operator
+FORMULA 
+where we abbreviate FORMULA .
+Here FORMULA  denotes the Fourier transform of FORMULA  and FORMULA  is the field operator
+FORMULA 
+where FORMULA  and FORMULA  are the standard bosonic annihilation and creation operators on FORMULA , see Section REF  for more details.
+Under appropriate conditions on FORMULA  the total Hamiltonian
+FORMULA 
+is self-adjoint on FORMULA  and bounded from below. If the total charge of the sources FORMULA  is zero, FORMULA  has a unique ground state FORMULA . The ground state FORMULA  contains so-called “virtual bosons” that provide a “dressing” of the sources.
+In contrast to “free bosons”, the virtual bosons do not propagate. These heuristic notions
+will be made more precise later on.
+If the total charge is different from zero there is still a good notion of approximate ground state, at least for our purposes.
+We will be interested in the dynamics of the scalar field when the sources change their locations with time.
+Let FORMULA , FORMULA  be smooth, then
+FORMULA 
+describes the evolution of the scalar field in the presence of sources moving along the prescribed trajectories FORMULA . We consider the solutions of the Schrödinger equation
+FORMULA 
+Summarizing the above, we have that
+as long as there is a gap and as long as the prescribed trajectories FORMULA  are FORMULA , non-adiabatic transitions corresponding to the emission of free bosons are at most of order FORMULA .
+Nonetheless, the error of the adiabatic approximation is of order FORMULA  for all times where FORMULA  because of the deformation of the cloud of virtual bosons, see also Figure REF . This exemplifies in a simple physical example why it is important to distinguish carefully between the error of the adiabatic approximation and the non-adiabatic transitions. It also is an example where superadiabatic subspaces have a clear physical meaning as velocity-dependent dressing of the sources. This is of course all well known and
+the content of this paper is to show that this picture survives also in the case without spectral gap, i.e. in the thermodynamic limit where the box is replaced by FORMULA .
+In the remainder of the introduction we provide informal statements of our main results, where for simplicity we restrict to the case of a neutral system.
+Then there is a unitary transformation FORMULA  such that FORMULA  and thus FORMULA  has a unique ground state
+FORMULA  with eigenvalue FORMULA . The general and rigorous statements are explained in Section 2. Our first result is an adiabatic theorem without spectral gap, cf. Theorem REF .
+Adiabatic Theorem: The solution of
+FORMULA 
+Thus, although the spectrum of FORMULA  is the whole half line FORMULA  and the eigenvalue FORMULA  is not separated by a gap from the continuous spectrum, the usual adiabatic approximation for the evolution of eigenstates holds with almost the same error estimate as in the gapped case.
+We have even more: if one adds free bosons then their dynamics is adiabatic too in the following sense. To each configuration FORMULA  of the sources the annihilation and creation operators of free bosons are FORMULA  and FORMULA  and thus
+FORMULA 
+where FORMULA  is just the free time evolution of a boson and FORMULA  stands either for FORMULA  or FORMULA .
+Now we define the adiabatic approximation as
+FORMULA 
+We will show that it
+approximates
+the solution of (REF ) with initial datum
+FORMULA 
+in the same sense as in (),
+FORMULA 
+If we denote by FORMULA  the projection on the sector of Fock space containing exactly FORMULA  free bosons, where FORMULA  is the projection on the FORMULA -particle sector of Fock space,
+the above result implies that for  FORMULA
+FORMULA 
+i.e. that the probability for emitting a free boson is at most of order FORMULA .
+Note that this means that not only the spectral subspace FORMULA  is adiabatically invariant, but also the subspaces FORMULA , which are not spectral subspaces of the instantaneous Hamiltonian FORMULA .
+In order to understand what part of FORMULA  really corresponds to emission of free bosons and what part is merely a velocity-dependent deformation of the dressing, we need to introduce the superadiabatic
+picture. Now not only the dressing of the sources depends on their velocities, but also the annihilation and creation operators of free bosons and the associated FORMULA -particle sectors of Fock space.
+In Lemma REF  we construct a velocity-dependent dressing operator FORMULA  such that the corresponding objects FORMULA , FORMULA  and FORMULA 
+allow for an improved adiabatic approximation. Let
+FORMULA 
+be the superadiabatic approximation to the solution FORMULA  of (REF ) with initial datum
+FORMULA 
+then (REF ) can be improved in the following sense: the part of the solution FORMULA  that stays in the FORMULA -particle sector is given by FORMULA  with a much smaller error,
+FORMULA 
+However, more importantly, the superadiabatic representation can be used to compute the non-adiabatic transitions corresponding to the emission of free bosons by first order perturbation theory. In Theorem REF  we show that the “non-adiabatic” wave function
+FORMULA 
+satisfies
+FORMULA 
+Here FORMULA  and FORMULA  is a coupling function depending on the acceleration of the sources.
+In summary
+FORMULA 
+and thus FORMULA  yields a good approximation of the true solution FORMULA  with a clear separation of a “superadiabatic” piece FORMULA  that improves the adiabatic approximation and a “non-adiabatic” piece FORMULA  that contains real non-adiabatic transitions. Note that a posteriori one can compute the leading order of FORMULA  replacing all superadiabatic objects by their leading order adiabatic counterparts,
+FORMULA 
+Finally one can ask for the probability of emitting a free boson, i.e. for computing FORMULA . However, due to the infrared problem it turns out that this has no nice asymptotics for FORMULA  and
+we can only show
+FORMULA . But a physically more interesting question is the energy radiated through the emission of free bosons. In Theorem REF  we show that when starting in the dressed vacuum, i.e. FORMULA , then
+FORMULA 
+where
+FORMULA 
+is the second derivative of the dipole moment of the sources and FORMULA  is the field energy of the free photons. Taking a derivative gives the Larmor formula for the radiated power of slowly moving charges,
+FORMULA 
+(t) := (t) -ad(t) FORMULA FORMULAFORMULA := k/|k|FORMULA 2FORMULA 3FORMULA Finally let us mention that a closely related problem was considered in {{cite:bbd3d1a9-db1e-4f7a-b20f-f63e335d56d2}}, see also {{cite:d67cad0c-5300-4e7f-8b64-31d2ea34f155}}.
+There semiclassical limit of non-relativistic Schrödinger particles coupled to a massless scalar field was considered. In a sense the system considered in the present paper can be considered a toy model version of the one in {{cite:bbd3d1a9-db1e-4f7a-b20f-f63e335d56d2}}. However, as a consequence of the simplicity of the model the results obtained here are much stronger and at the same time the proofs are more transparent. For
+Acknowledgements. We thank Rainer Nagel for pointing out to us reference {{cite:27d1aa65-5b22-4970-8025-c653013c12f4}}.
+
+Main results
+We always assume the following properties for the parameters of the model:
+Assumptions The charge distribution FORMULA  is a spherically symmetric Schwartz-function with FORMULA  and FORMULA  for FORMULA .
+
+As explained in the introduction, the central object that we construct is the transformation to the superadiabatic representation, a
+unitary dressing transformation
+FORMULA 
+In the superadiabatic representation the
+Schrödinger equation reads
+FORMULA 
+Theorem 1 (Adiabatic approximation)
+The dressed Hamiltonian FORMULA  generates a unitary propagator FORMULA . For any FORMULA  there are constants FORMULA  and FORMULA  such that for all FORMULA , FORMULA  and  FORMULA
+FORMULA 
+in the norm of FORMULA  and in the norm of FORMULA .
+Here
+FORMULA 
+with
+FORMULA 
+
+
+Thus at leading order the time evolution is just the free evolution of the bosons and a time-dependent dynamical phase. In particular, the FORMULA -boson sectors FORMULA  are adiabatic invariants of the dynamics. An initial state in FORMULA  of the form
+FORMULA 
+evolves into
+FORMULA 
+Applying FORMULA  and using
+FORMULA 
+in the case of a neutral system yields (REF ).
+Theorem 2 (Superadiabatic approximation)
+For any FORMULA  there are constants FORMULA  and FORMULA  such that for all FORMULA , FORMULA  and  FORMULA
+FORMULA 
+
+in FORMULA  and FORMULA  with
+FORMULA 
+and
+FORMULA 
+
+
+Note the infrared regularization by the characteristic function FORMULA  cutting off boson momenta smaller than FORMULA  in this definition, which can be omitted for neutral systems.
+With the help of this theorem we can define a decomposition of the wave function into a superadiabatic part FORMULA  and the non-adiabatic part FORMULA  with different photon number.
+For a wavefunction FORMULA  we define
+FORMULA 
+and
+FORMULA 
+Our final result concerns the amount of energy lost by the system due to radiation. For the stationary problem
+with Hamiltonian FORMULA  independent of time, the natural definition for the energy carried by free photons in the state FORMULA  is
+FORMULA 
+where FORMULA  is the ground state energy. For time-dependent Hamiltonians
+the definition of energy is somewhat subtle, more so, because we look at the energy of a subsystem, the free photons.
+However, in the superadiabatic
+representation there is again a natural definition for the energy given by the free photons, namely
+FORMULA 
+
+We will show that at any time FORMULA  when FORMULA , it holds that
+FORMULA 
+Thus in a situation where the sources move only during a finite time interval, before and after the change the definition of energy agrees with the static one. Note that the error of order FORMULA  comes from the infrared regularization in the transformation FORMULA  and is identically zero for neutral systems. The equality (REF ) is also determining the exponent 8 in the infrared regularization. A smaller exponent there would lead to a larger error in (REF ).
+If we assume that the initial state is the dressed vacuum, then the energy emitted as a result of the motion of the sources is just the energy of the free photons and thus
+FORMULA ,
+which is computed explicitly in the following theorem.
+Theorem 3 (Radiation) 
+Let FORMULA , then uniformly on bounded intervals in time it holds that
+FORMULA 
+
+where
+FORMULA 
+is the second derivative of the dipole moment.
+
+
+Mathematical details
+Operators on Fock space
+In this section we recall the definitions of the operators on Fock space and some of their important properties.
+Proofs of all claims can be found in {{cite:0a251e8d-f3be-4f00-856a-8db52172c986}}, Section X.7.
+We call FORMULA  the subspace of the Fock space for which FORMULA  for all but finitely many FORMULA .
+The second quantization of a self-adjoint multiplication operator FORMULA  with domain FORMULA  is defined for FORMULA  with components FORMULA  as
+FORMULA 
+and is essentially self-adjoint. In particular, the free field Hamiltonian FORMULA  is self-adjoint on its maximal domain.
+The annihilation operator and the creation operator on FORMULA  are defined by
+FORMULA 
+
+Here FORMULA  means that FORMULA  is omitted. They fulfill the canonical commutation relations
+FORMULA 
+The creation and annihilation operator define the Segal field operator
+FORMULA 
+It is essentially self-adjoint on FORMULA .
+The canonical commutation relations imply
+FORMULA 
+
+
+The Hamiltonian
+As described in the introduction we consider the Hamiltonian
+FORMULA 
+with FORMULA  defined in (REF ).
+As to be stated more precisely in Lemma REF  and after, this Hamiltonian has a ground state only for a neutral system, i.e. if FORMULA , otherwise the bottom of the spectrum is not an eigenvalue.
+To deal with this fact we introduce an infrared cutoff FORMULA  in the interaction and
+put FORMULA  and
+FORMULA .
+The resulting truncated Hamiltonian FORMULA  is a good
+approximation to the original Hamiltonian as will be proven in Proposition REF . We emphasize that FORMULA  is used only as a tool in the proofs and the final results of Section 2 hold for the Hamiltonian FORMULA  without infrared cutoff.
+Lemma 4 The operators FORMULA  are self-adjoint on FORMULA  for all FORMULA  and FORMULA .
+The graph norms of FORMULA  are all equivalent to the one defined by FORMULA  uniformly in FORMULA .
+
+There exists a standard estimate for FORMULA  (cf. e.g. {{cite:d9e8ad29-ff32-4e80-9430-c1f17a2450c4}} Proposition 1.3.8). Let FORMULA  FORMULA  and FORMULA , then
+FORMULA 
+Thus FORMULA  is infinitesimally bounded with respect to FORMULA 
+if
+FORMULA 
+
+Equation (REF ) holds uniformly for FORMULA  and FORMULA . Hence FORMULA  is self-adjoint on FORMULA  by the Kato-Rellich Theorem (cf. {{cite:0a251e8d-f3be-4f00-856a-8db52172c986}}, Theorem X.12) for all FORMULA  and the graph norms are all equivalent.
+Proposition 5 
+Let FORMULA , FORMULA , and equip FORMULA  with the graph norm.
+Let FORMULA , then
+
+ FORMULA
+
+FORMULA  generates a strongly continuous unitary evolution family denoted by FORMULA . Moreover,
+FORMULA  is a bounded operator on FORMULA  with
+FORMULA 
+for any FORMULA  and uniformly in FORMULA .
+
+
+According to (REF ) we need to show that
+FORMULA 
+which obviously holds under our assumptions.
+That FORMULA  and FORMULA  generate unitary evolution families follows from the first statement and
+the general result about contraction semigroups (e.g. {{cite:0a251e8d-f3be-4f00-856a-8db52172c986}}, Theorem X.70).
+The norm bound FORMULA  in FORMULA  is less known and was proved in Theorem 5.1.(e) of {{cite:27d1aa65-5b22-4970-8025-c653013c12f4}}.
+Lemma 6 
+Let FORMULA  with FORMULA  such that
+FORMULA 
+Then the spectrum of FORMULA  is given by FORMULA  and the infimum of the spectrum FORMULA  is an eigenvalue if and only if
+FORMULA 
+In this case the unitary operator
+FORMULA  is well-defined and
+FORMULA .
+
+The first part is Proposition 3.10 of {{cite:5b5c0a4a-2f62-4a17-a514-fbfc0a07489d}} and the second part is Proposition 3.13 of the same paper.
+Corollary 7 The spectrum of FORMULA  is
+FORMULA  with FORMULA  as in (REF ).
+
+Corollary 8 
+For FORMULA , the infrared regularized Hamiltonian FORMULA  can be written as
+FORMULA 
+where
+FORMULA 
+Its only eigenvalue with eigenvector FORMULA  is
+FORMULA 
+
+
+The last statement is an immediate consequence of Lemma REF  and the fact that
+FORMULA 
+
+
+Superadiabatic perturbation and the dressing operator
+In this section we introduce the perturbed projections and the transformation which “diagonalizes“ the infrared regularized Hamiltonian up to FORMULA .
+As explained in the introduction the idea is to modify the adiabatic projections
+FORMULA  on the FORMULA -free-photons subspaces in such a way, that the modified superadiabatic projections
+FORMULA  are higher order adiabatic invariants, i.e. that
+FORMULA 
+
+Lemma 9 
+The dressed Hamiltonian has the form
+FORMULA 
+with
+FORMULA 
+
+
+For FORMULA  we find
+FORMULA 
+and with ()
+FORMULA 
+Proposition 10  For any FORMULA  and FORMULA  we have
+FORMULA 
+uniformly on bounded intervals in time in FORMULA  and FORMULA .
+
+By definition we have
+FORMULA 
+Let
+FORMULA 
+Then bosons with momenta smaller than FORMULA  evolve freely under the regularized evolution, i.e.
+FORMULA 
+holds for all FORMULA . To see this note that the equality holds for FORMULA  and the derivative of the left hand side vanishes since
+FORMULA 
+
+Lemma 11 
+There is a constant FORMULA  such that for any FORMULA  and  FORMULA
+FORMULA 
+and
+FORMULA 
+
+According to {{cite:0a251e8d-f3be-4f00-856a-8db52172c986}}, Theorem X.41, we have for FORMULA  that
+FORMULA 
+The second claim follows from the observation that
+FORMULA 
+together with the first estimate.
+
+Effective dynamics
+In this section we first show that the statements of Theorems REF  and REF  hold for
+the infrared regularized evolution FORMULA  with an error depending only logarithmically on FORMULA .
+Then we use Proposition REF  and an appropriate choice for FORMULA  to show the statements also for the full evolution FORMULA . Clearly the statement of Theorem REF  is a consequence of Theorem REF , but since the proof necessarily proceeds in the same two steps, we separated the statements.
+Lemma 12 For any FORMULA  and FORMULA  it holds that
+FORMULA 
+with
+FORMULA 
+uniformly on bounded time intervals in FORMULA  and FORMULA .
+
+Since
+FORMULA 
+the claims follow from Lemma REF .
+Proposition 13 
+For FORMULA  and FORMULA  we have that
+FORMULA 
+uniformly on bounded time intervals in FORMULA  and FORMULA .
+
+Note that (REF ) together with Lemma REF 
+implies FORMULA  uniformly for FORMULA .
+With the shorthand FORMULA  and the previous lemma, we thus find
+FORMULA 
+
+For the next proposition we abbreviate
+FORMULA 
+with
+FORMULA 
+
+Proposition 14 
+For FORMULA  and FORMULA  we have that
+FORMULA 
+
+uniformly on bounded time intervals in FORMULA  and FORMULA .
+
+Using again the Duhamel argument together with Proposition REF  we find
+FORMULA 
+
+in the norm of FORMULA .
+Inspecting (REF ) shows that
+FORMULA 
+Hence (REF ) follows, once we show that the second term does not contribute to the leading order transitions.
+This follows from an integration by parts,
+FORMULA 
+It is now evident how to define the part of the wave function that corresponds to emitted photons. As an immediate consequence of Theorem REF  we obtain the following corollary.
+Corollary 15 
+Let FORMULA  and FORMULA  then
+FORMULA 
+have the expansions
+FORMULA 
+and
+FORMULA 
+with FORMULA  and FORMULA .
+
+The probability for emitting a photon until time FORMULA  is thus given by FORMULA . But this has no simple asymptotics for FORMULA  because of the infrared problem. However, for the radiated energy there is a simple asymptotic expression.
+Recall the definition of the energy of free photons in (REF ). Note first that
+at any time FORMULA  when FORMULA , it holds that FORMULA  and FORMULA  and thus with Corollary  REF
+FORMULA 
+
+In the third equality we used equation (REF ) to bound FORMULA  by FORMULA  and (REF ). This shows that whenever the energy of free photons is unambiguously defined, our definition using the superadiabatic approximation agrees with it.
+We will now prove Theorem REF  by plugging the superadiabatic approximation into the definition (REF ).
+Note that this computation of the energy is the reason that we insisted on all our estimates being valid also in FORMULA .
+[Proof of Theorem REF ]
+For (REF ) observe that with the splitting given in Corollary REF  we have that
+FORMULA 
+
+where FORMULA  just stands for the explicit expression claimed in (REF ). For the last term
+FORMULA  follows from FORMULA  and for the mixed term
+FORMULA 
+from integrating FORMULA  by parts as in the proof of Proposition REF .
+In order to get also (),
+we first transform the integral (REF ) with FORMULA , FORMULA  and define FORMULA . The resulting integral is
+FORMULA 
+where we abbreviated FORMULA , FORMULA  and
+FORMULA .
+Note that FORMULA  and FORMULA  are uniformly bounded on the domain of integration.
+Thus we can replace FORMULA  by FORMULA  with an error of order FORMULA , which is negligible.
+Observing that after summation the integrand is symmetric with respect to change of sign in FORMULA  and FORMULA , i.e. for FORMULA 
+it holds that FORMULA , we can extend the FORMULA -integration to all of FORMULA 
+at a cost of a factor FORMULA .
+Modulo higher order terms this leads to
+FORMULA 
+
+where FORMULA  denotes the Fourier transformation.
+Since with FORMULA  also FORMULA  is a Schwartz function and since FORMULA  and FORMULA  are uniformly bounded on the domain of integration, we can shrink FORMULA  to FORMULA 
+with an error that is asymptotically smaller then any inverse power of FORMULA  in the region where FORMULA .
+The same replacement in the region where FORMULA  leads to an error of order FORMULA . Taking e.g. FORMULA  leads to negligible errors.
+Now we can Taylor expand the integrand as
+FORMULA 
+
+and the remaining leading order contribution is
+FORMULA 
+
+with FORMULA . With the same argument as above we can replace FORMULA  by FORMULA  while making an negligible error and end up with
+FORMULA 
+

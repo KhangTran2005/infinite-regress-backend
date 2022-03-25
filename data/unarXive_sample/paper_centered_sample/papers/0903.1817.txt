@@ -1,0 +1,583 @@
+
+Reconstructing Curves from Points and TangentsL. Greengard and C. Stucchio2018/12/11 00:11:50Reconstructing a finite set of curves from an unordered set of sample points
+is a well studied topic. There has been less
+effort that considers how much better the reconstruction can be if
+tangential information is given as well.
+We show that if curves are separated from each other by a
+distance FORMULA , then the sampling rate need only be FORMULA 
+for error-free reconstruction.
+For the case of point data alone, FORMULA  sampling is required.
+Introduction
+In this paper, we consider the problem of reconstructing a
+FORMULA  figure – that is, a family of curves FORMULA  from a finite
+set of data. More precisely, we assume we are given
+an unorganized set of points FORMULA , as well as unit tangents to the points FORMULA . Note that the tangents have no particular orientation; making the change FORMULA  destroys no information.
+Definition 1.1 
+A polygonalization of a figure FORMULA  is a planar graph
+FORMULA  with the property that each vertex FORMULA  is a point on some FORMULA , and each edge connects points which are adjacent samples of some curve FORMULA .
+
+Our goal here is to construct an algorithm which reconstructs the
+polygonalization of a figure from the data defined above.
+An example of a polygonalization is given in Figure REF .
+FIGURE 
+The topic of reconstructing figures solely from point data FORMULA  has been the subject of considerable attention {{cite:2d5a6c4a-994c-4617-9db4-064a412dbb4d}}, {{cite:4140c2ae-2af2-4773-961b-e8395c72a99a}}, {{cite:c0ccdefb-cfbd-4fcd-aac4-b12ecc6bb4c5}}, {{cite:3416ff8f-3fdf-4774-8961-9d879bc679c8}}, {{cite:78a38bbf-604f-41d1-9667-0700af2d2c75}}, {{cite:6cc78d3f-2d5f-4c38-8bd8-4bb26f9ba72c}}, {{cite:cae4b17d-7fda-4877-8b87-4d90f6295eec}}. This is actually a more difficult problem, and only weaker results are possible. The main difficulty is the following; if the distance between two separate curves FORMULA  and FORMULA  is smaller than the sample spacing, then it is difficult to determine which points are associated to which curve. Thus, sample spacing must be FORMULA , with FORMULA  the distance between different curves.
+Tangential information makes this task easier; in essence, if two points are nearby (say FORMULA  and FORMULA ), but FORMULA  does not point (roughly) in the direction FORMULA , then FORMULA  and FORMULA  should not be connected. This fact allows us to reduce the sample spacing to FORMULA , rather than FORMULA . This is to be expected by analogy to interpolation; knowledge of a function and its derivatives yields quadratic accuracy.
+We should mention at this point related work on Surfels (short for Surface Elements). A surfel is a point, together with information characterizing the tangent plane to a surface at that point (and perhaps other information such as texture). They have become somewhat popular in computer graphics recently, mainly for rendering objects characterized by point clouds
+{{cite:69827d91-9559-4731-ab3c-8d9ac310823a}}, {{cite:3d06806b-b727-4409-ba19-71055f93382c}}, {{cite:b4d16ccb-92ed-4415-8e39-cd5be3e32a9d}}, {{cite:2a05220a-5340-4b9c-ad0a-96c97d2c3e14}}, {{cite:8cb378ed-7b93-4b1e-b1fe-78b7198cb8fc}}, {{cite:078da9cb-f051-4ce1-9cd4-262caadd0524}}.
+In this work, we present an algorithm which allows us to reconstruct a curve from FORMULA . We make two assumptions, under which the algorithm is provably correct.
+Assumption 1 
+We assume each curve FORMULA  has bounded curvature:
+FORMULA 
+
+This assumption is necessary to prevent the curves from oscillating too much between samples.
+Assumption 2 
+We assume the curves FORMULA  and FORMULA  are uniformly separated from each other, i.e.:
+FORMULA 
+We also assume that different areas of the same curve are separated
+from each other:
+FORMULA 
+
+(assuming the curve FORMULA  proceeds with unit speed).
+
+These assumptions ensure that two distinct curves do not come too close
+together (REF ) and that separate regions of
+the same curve do not come
+arbitrarily close (REF ).
+This is illustrated in Figure REF .
+FIGURE 
+
+The Reconstruction Algorithm
+Before we begin, we require some notation.
+Definition 2.1 
+For a vector FORMULA , let FORMULA  denote the vector FORMULA 
+rotated clockwise by an angle FORMULA .
+
+Definition 2.2 
+Let FORMULA  denote the usual Euclidean metric, FORMULA . Let FORMULA  denote the distance in the FORMULA  direction between FORMULA  and FORMULA , i.e. FORMULA .
+
+Definition 2.3 For a point FORMULA  and a curve FORMULA , we say that FORMULA  if FORMULA  such that FORMULA .
+
+The Forbidden Zone
+Before explaining the algorithm which constructs the polygonalization of
+a figure (the set of curves FORMULA ) from discrete data FORMULA , we
+prove a basic lemma which forms the foundation of our method.
+We assume for the remainder of this section that the figure
+satisfies Assumption 1.
+Definition 2.4 For a point FORMULA , we refer to the set
+FORMULA 
+as its forbidden zone,
+illustrated in Fig. REF .
+Here, FORMULA  is the usual ball of radius FORMULA  about FORMULA .
+
+FIGURE 
+Lemma 2.5 
+For every FORMULA , if FORMULA  is in the forbidden zone of FORMULA ,
+then FORMULA  is not an edge in FORMULA  assuming that the
+sample spacing is less than FORMULA .
+
+Proof. 
+Suppose for simplicity that FORMULA  and FORMULA . Now, consider a line FORMULA  of maximal curvature. The curve of maximal curvature, with FORMULA  and proceeding at speed FORMULA  is FORMULA , while the curve with FORMULA  is FORMULA .
+By assumption 1, the curve FORMULA  containing FORMULA 
+must lie between these curves (the near boundaries of the forbidden zone
+in Fig REF ). Thus, it is confined to the blue (lighter)
+region while its arc length is less than FORMULA .
+If FORMULA  is in the forbidden zone and
+FORMULA  connects FORMULA  to FORMULA , then it must do so after travelling a distance greater than FORMULA .
+
+ FORMULA
+
+In short, the extra information provided by the tangents
+allows us to exclude edges from the polygonalization if they point too far away
+from the tangent, resulting in higher fidelity (c.f. Fig. REF ).
+FIGURE 
+Definition 2.6 
+For a point FORMULA , we define the allowed zone or
+allowed region FORMULA  by
+FORMULA 
+That is, FORMULA  is the ball of radius FORMULA  about FORMULA  excluding the forbidden zone.
+
+Clearly, any edge in the polygonalization starting at FORMULA , with length shorter than FORMULA , must connect to another point FORMULA . We are now ready to describe the polygonalization algorithm.
+
+Algorithm 1
+(Noise-Free Polygonalization)
+
+
+ Input: 
+[ We assume we are given
+the dataset FORMULA ,
+the maximal curvature FORMULA , and
+a parameter FORMULA  satisfying both
+FORMULA  and FORMULA .
+We assume that adjacent points on a given curve
+are less than a distance FORMULA  apart, i.e. the curve is
+FORMULA -sampled. ]
+
+
+Compute the graph FORMULA  with edge set:
+FORMULA 
+
+For each vertex FORMULA :
+
+Compute the set of vertices
+FORMULA 
+
+Find the nearest tangential neighbors, i.e.
+FORMULA 
+
+
+Output the graph FORMULA  with
+FORMULA 
+This graph is the polygonalization of FORMULA .
+
+
+Remark 2.7 
+As presented, the complexity of Algorithm REF  is FORMULA , due to both step 1 and step 2. (Step 2 can be slow if FORMULA  points are within the allowed region of some particular point). The complexity can be reduced to FORMULA  using quadtrees if we assume a minimal sampling rate (see Appendix ).
+
+
+The following theorem guarantees the correctness of
+Algorithm REF . Its proof is presented
+in the next section.
+Theorem 2.8 
+Suppose that:
+FORMULA 
+where FORMULA  is as in Assumption REF  and also
+FORMULA 
+
+Suppose also that the distance between adjacent samples in the polygonalization is bounded by FORMULA , i.e. the curve is FORMULA -sampled. Then graph FORMULA  returned by Algorithm REF  is the polygonalization of FORMULA .
+
+
+Proof of Theorem  REF
+Lemma 2.9 
+Suppose FORMULA  and that Assumption REF  holds.
+Then for all FORMULA , if (REF ) holds, then
+FORMULA 
+Similarly, if FORMULA  and FORMULA , then (REF ) holds.
+
+Proof. 
+Fix FORMULA , and define FORMULA  and FORMULA . Define FORMULA  to be the line segment FORMULA . The boundaries of FORMULA  are given by
+FORMULA 
+Now, for any FORMULA  and FORMULA , the distance between FORMULA  and FORMULA  is the normal distance to FORMULA . This distance is bounded by:
+FORMULA 
+The intermediate value theorem implies FORMULA  for some FORMULA ; since FORMULA  (by (REF )), we find that:
+FORMULA 
+Substituting this into (REF ) yields:
+FORMULA 
+Thus, the normal distance between any point in FORMULA  and FORMULA  is FORMULA .
+If FORMULA ,
+then clearly FORMULA 
+so we assume FORMULA . In this case,
+FORMULA 
+for some FORMULA 
+and FORMULA .
+Thus, FORMULA ,
+the normal distance to FORMULA . By construction, there is a unique
+value FORMULA  such that
+FORMULA .
+FORMULA  then equals FORMULA .
+By the second triangle inequality,
+FORMULA 
+But this implies that FORMULA , and thus FORMULA .
+The proof when FORMULA  is identical.
+
+ FORMULA
+
+This result shows that the graph FORMULA , computed in Step 1 of Algorithm REF , separates different FORMULA  and FORMULA  from each other, as well as different parts of the same curve. Thus, after Step 1, we are left with a graph FORMULA  having edges only between points FORMULA  and FORMULA  which are on the same curve FORMULA , and which are separated along FORMULA  by an arc length no more than FORMULA .
+We now show that FORMULA  is a superset of the polygonalization FORMULA .
+Proposition 2.10 
+Suppose the point data FORMULA  is FORMULA -sampled, i.e. if two points FORMULA  and FORMULA  are adjacent on the curve FORMULA , then the arc length between FORMULA  and FORMULA  is bounded by FORMULA . Then FORMULA  contains the polygonalization of FORMULA .
+
+Proof. 
+If the distance between adjacent points FORMULA  and FORMULA  is at most FORMULA , then FORMULA . Since the segment of FORMULA  between FORMULA  and FORMULA  has arc length less than FORMULA , FORMULA  is not in the forbidden zone of FORMULA  (by the same argument as in Lemma REF . Thus, FORMULA  (and vice versa), and FORMULA  is an edge in FORMULA .
+
+ FORMULA
+
+We have now shown that FORMULA  separates distinct curves, and that FORMULA  contains the polygonalization FORMULA  of FORMULA . It remains to show that FORMULA .
+Lemma 2.11 
+A curve FORMULA  satisfying (REF ) admits the local parameterization
+FORMULA 
+where FORMULA . The parameterization is valid for FORMULA . In particular, FORMULA  where FORMULA .
+
+Proof. 
+Taylor's theorem shows the parameterization to be valid on an arbitrarily small ball. All we need to do is show that this parameterization is valid on a region of size FORMULA .
+The parameterization breaks down when FORMULA  blows up, so we need to show that this does not happen before FORMULA . Plugging this parameterization into the curvature bound (REF ) yields:
+FORMULA 
+Assuming FORMULA  is positive, this is a first order nonlinear differential inequality for FORMULA . We can integrate both sides (using the hyperbolic trigonometric substitution FORMULA  for the left side) to obtain:
+FORMULA 
+With FORMULA  defined as in the statement, then FORMULA  is singular only at FORMULA , and is regular before that. Solving (REF ) for FORMULA  shows that:
+FORMULA 
+implying that FORMULA  is finite for FORMULA , or FORMULA .
+
+ FORMULA
+
+Lemma 2.12 
+Fix a point FORMULA . Choose a tangent vector FORMULA  and fix an orientation, say FORMULA . Consider the set of points FORMULA  such that FORMULA  is an edge in FORMULA  and FORMULA . Suppose also that FORMULA  satisfies (REF ).
+Then, the only edge in the polygonalization of FORMULA  is the edge for which FORMULA  is minimal.
+
+Proof. 
+By Lemma REF , the curve FORMULA  can be locally parameterized as a graph near FORMULA , i.e. (REF ). This is valid up to a distance FORMULA ; by (REF ), it is valid for all points in the graph FORMULA  connected to FORMULA .
+The adjacent points on the graph are the ones for which FORMULA  is minimal. Note that FORMULA  (simply plug in (REF )); thus, minimizing FORMULA  selects the adjacent point on the graph.
+
+ FORMULA
+
+The minimal edge is the edge FORMULA  as computed in Step (2b) of Algorithm REF .
+Thus, we have shown that the computed graph FORMULA  is the polygonalization
+FORMULA  of FORMULA .
+FIGURE 
+
+Reconstruction in the Presence of Noise
+In practice one rarely has perfect data, so it is important to understand the performance of the approach in the presence of errors.
+To that end, we consider the polygonalization problem, but with the point data perturbed by noise smaller than FORMULA  and the tangent data perturbed by noise smaller than FORMULA .
+By this we mean the following; to each point FORMULA , there exists a point FORMULA  such that FORMULA . Similarly, the unit tangent vector FORMULA  differs from the true tangent FORMULA  by an angle at most FORMULA . By a polygonalization of the noisy data, we mean that FORMULA  is an edge in the noisy polygonalization if FORMULA  is an edge in the noise-free polygonalization. In what follows, FORMULA  refers to a given (noisy) point, while FORMULA  refers to the corresponding true point (and similarly for tangents).
+Noise, of course, introduces a lower limit on the features we can resolve. At the very least, the curves must be separated by a distance greater than or equal to FORMULA , to prevent noise from actually moving a sample from one curve to another. In addition, noise in the tangent data introduces uncertainty which forces us to increase the sampling rate; in particular, we require FORMULA .
+The main idea in extending Algorithm REF  to the noisy case is to expand the allowed regions to encompass all possible points and tangents. Of course, this imposes new constraints on the separation between curves.
+We also require a maximal sampling rate in order to ensure that the order of points on the curve is not affected by noise.
+For work in the context of reconstruction using point samples only, see {{cite:71437549-1cb7-4493-a994-277f3835154b}}, {{cite:ae45b52c-aab4-4c72-9afd-2bff5ccd55cc}}.
+Assumption 3 
+We assume that adjacent points FORMULA  and FORMULA  on the curve FORMULA  are separated by a distance greater
+than FORMULA .
+
+To compensate for noise, we expand the allowed region to account
+for uncertainty concerning the actual point locations.
+Definition 3.1 
+The noisy allowed region FORMULA 
+is the union of the allowed regions of all points/tangents
+near FORMULA :
+FORMULA 
+
+
+Algorithm 2
+(Noisy Polygonalization)
+
+
+ Input: 
+[ We assume we are given the dataset FORMULA , the maximal curvature
+FORMULA , the noise amplitudes FORMULA , and a
+parameter FORMULA  satisfying both FORMULA  and
+FORMULA . We assume that adjacent points on a given curve
+are less than a distance FORMULA  apart, i.e. the curve is
+FORMULA -sampled. ]
+
+
+Compute the graph FORMULA  with edge set:
+FORMULA 
+
+For each vertex FORMULA :
+
+Compute the set of vertices
+FORMULA 
+
+Find the nearest tangential neighbors, i.e.
+FORMULA 
+
+
+Output the graph FORMULA  with
+FORMULA 
+This graph is the polygonalization of FORMULA .
+
+
+The following theorem
+guarantees that Algorithm REF  works.
+The proof follows that of Theorem REF 
+and is given in Appendix .
+An application is shown in Fig. REF .
+Theorem 3.2 
+Suppose that Assumptions REF , REF  and REF  hold. Suppose also that
+FORMULA 
+FORMULA 
+
+Then, Algorithm REF  correctly reconstructs
+the figure.
+
+FIGURE 
+Remark 3.3 
+Consider a point FORMULA , which is a noisy sample from some curve in the figure.
+All we can say a priori is that FORMULA  is close to the true
+sample FORMULA , i.e. FORMULA .
+However, given the knowledge that the polygonalization contains
+the edges FORMULA  and FORMULA , we can obtain further information
+on FORMULA . Not only does FORMULA  lie in FORMULA ,
+but FORMULA  and
+FORMULA . In short,
+FORMULA 
+We can therefore improve our approximation to FORMULA  by minimizing
+either the worst case error,
+FORMULA 
+or the mean error,
+FORMULA 
+
+or some application-dependent functional.
+Noise in the tangential data can be similarly reduced.
+This is a postprocessing matter after polygonalization,
+and we will not expanded further on this idea in the present paper.
+
+
+
+Examples
+Extracting Topology from MRI images
+In its simplest version, Magnetic Resonance Imaging (MRI) is
+used to obtain the
+two-dimensional Fourier transform of the proton density in a
+planar cross-section through the patient's body.
+That is, if FORMULA  is
+is the proton density distribution in the plane FORMULA , then the MRI device
+is able to return the data FORMULA  at a selection of
+points FORMULA  in the Fourier transform domain (FORMULA -space).
+The number of sample points available, however, is finite and covers
+only the low-frequency range in FORMULA -space well.
+Thus, it is desirable to be able to make use of the limited
+information in an optimal fashion.
+We are currently exploring methods for MRI based on
+exploiting the assumption that
+FORMULA  is piecewise smooth (since different tissues have different
+densities, and the tissues boundaries tend to be sharp).
+Our goal is to carry out reconstruction in three steps.
+First, we find the tissue boundaries (the discontinu-
+ities). Second, we subtract the influence of the discontonuities from
+the measured FORMULA -space data and third, we reconstruct the remainder which
+is now smooth (or smoother). Standard filtered Discrete Fourier Transforms
+are easily able to reconstruct the remainder, so the basic
+problem is that of reconstructing the edges.
+Using directional edge detectors on the FORMULA -space data, we can extract
+a set of point samples from the edges, together with non-oriented normal
+directions. By means of
+Algorithm REF , we can
+reconstruct the topology of the edge set and carry out the
+procedure sketched out above.
+The details of the algorithm are beyond the scope of this article,
+and will be reported at a later date,
+but Figure REF 
+illustrates the idea behind the method. Our work on curve reconstruction was,
+in fact, motivated by this application.
+FIGURE 
+
+Figure detection
+A natural problem in various computer vision applications is that of
+recognizing sampled objects that are partially obscured by a
+complex foreground.
+As a model of this problem, we constructed an (oval)
+figure, and obscured it by covering it with a sequence of curves.
+Algorithm REF  succesfully reconstructs the
+figure, as well as properly connecting points on the
+horizontally and vertically oriented covering curves.
+The result is shown in
+Figure REF . Note that the branches are not
+connected to the oval (or each other).
+FIGURE 
+
+Filtering spurious points
+The method provided here is relatively robust with regard to the
+addition of spurious random data points. This is because spurious data
+points are highly unlikely to be connected to any other points in the
+polygonalization graph. To see this, note
+first that for an incorrect data point to be connected to part of the
+polygonalization at all, it would need to be located in
+FORMULA  for some FORMULA .
+This is a region of length FORMULA  and width FORMULA .
+There are approximately FORMULA 
+such points, for a total volume of FORMULA . Thus, the probability
+that a spurious point is in some allowed region is roughly
+FORMULA .
+The second reason is that even if a spurious point is in some allowed region,
+it is unlikely to point in the correct direction.
+If an erroneous point FORMULA  is inside FORMULA , it is
+still not likely that FORMULA , since
+the tangent at FORMULA  must point in the direction of FORMULA 
+(with error proportional to FORMULA , the angular width of
+FORMULA ). Thus, the probability that the tangent at
+FORMULA  points towards FORMULA  is FORMULA .
+Combining these arguments, the probability that any randomly chosen
+spurious point FORMULA  is connected to any other point in the
+polygonalization is FORMULA .
+FIGURE 
+Filtering the data
+The aforementioned criteria suggest that our reconstruction algorithm
+has excellent potential for noise removal. It suggests that if we
+remove points which do not have edges pointing towards other edges,
+then with high probability we are removing spurious edges.
+This notion is well supported in practice.
+By running Algorithm REF  on a figure consisting of
+96 true points, and 100 randomly placed incorrect points, a nearly
+correct polygonalization is calculated (Fig. REF ).
+The original curve is reconstructed with an error at only one point
+(the top left corner of the right-hand curve).
+Of course, if enough incorrect points are present, some points will
+eventually be connected by Algorithm REF .
+This can be seen in Figure REF :
+the line segment near FORMULA  is an edge between two incorrect points.
+One hint that an edge is incorrect is that it points to a leaf.
+That is, consider a set of vertices FORMULA 
+as well as FORMULA . Suppose, after approximately computing the
+polygonalization, one finds that the graph contains edges
+FORMULA  and FORMULA . The vertex FORMULA  is
+a leaf, that is it is reachable by only one edge. A polygonalization
+of a set of closed curves should not have leaves, suggesting that the
+edge FORMULA  is spurious.
+Thus filtering leaves is a very reasonable heuristic for noise filtering.
+One final problem with noisy data worth mentioning is that sometimes,
+an incorrect point will be present that lies within the allowed
+region of a legitimate point, and closer to the legitimate point
+than the adjacent points along the curve. This will prevent the
+correct edge from being added. This can be remedied by adding not
+only FORMULA  at Step 3 of the algorithm, but also points for
+which FORMULA  whose distance to FORMULA  is not
+much longer than the distance between FORMULA  and FORMULA .
+With some luck, this procedure combined with filtering out leaves
+will approximately reconstruct the correct figure.
+
+Algorithm 3
+(Polygonalization with Noise Removal)
+
+
+ Input: 
+[ We assume we are given the dataset FORMULA  (which includes spurious data),
+the maximal curvature
+FORMULA , the noise amplitudes FORMULA , and a
+parameter FORMULA  satisfying both FORMULA  and
+FORMULA .
+We assume that adjacent points on a given curve
+are less than a distance FORMULA  apart, i.e. the curve is
+FORMULA -sampled. We also assume we are given the number of
+leaf removal sweeps FORMULA  and a
+threshold FORMULA . ]
+
+
+Compute the graph FORMULA  with edge set:
+FORMULA 
+
+For each vertex FORMULA :
+
+Compute the set of vertices
+FORMULA 
+
+Find the nearest tangential neighbors, i.e.
+FORMULA 
+
+Find the set of almost-nearest tangential neighbors:
+FORMULA 
+
+
+Compute the graph FORMULA  with
+FORMULA 
+
+Search through FORMULA  for leaves, and remove edges pointing to the leaves. Repeat this FORMULA  times.
+
+Output FORMULA .
+
+
+In practice, we have found that FORMULA  and
+FORMULA  work reasonably well.
+Figure REF  illustrates the result of Algorithm
+REF , both with and without filtering.
+FIGURE 
+
+Conclusions
+Standard methods for reconstructing a finite set of
+curves from sample data are quite general.
+By and large, they assume that only point samples are given.
+In some applications, however, additional information is available.
+In this paper, we have shown that if both sample location and
+tangent information are given, significant improvements can be made
+in accuracy. We were motivated by a problem in medical imaging,
+but believe that
+the methods developed here will be of use in a variety of other applications,
+including MR tractography and contour line reconstruction in topographic
+maps {{cite:25734778-b78e-400d-9aa3-6aa6f11bd345}}, {{cite:41b38c1a-61d6-4d7f-8cd0-922e686d2c0f}}.
+
+Proof of Theorem  REF
+The proof of Theorem REF  follows that of
+Theorem REF  closely, with minor modifications
+made to account for the noise.
+To begin, we need to show that the noisy allowed region is large enough
+to separate distinct curves. It is here that we use
+(REF ).
+Proposition A.1 Suppose FORMULA  and assume that
+(REF ) holds.
+Then FORMULA  unless FORMULA  and FORMULA 
+are samples from the same curve, and are separated by an arc length no
+larger than FORMULA .
+
+Proof. 
+For simplicity, suppose that FORMULA  (since otherwise, FORMULA , but FORMULA  is not sampled from the same curve as FORMULA . Let FORMULA  denote the curve from which FORMULA  is sampled. Let FORMULA  and FORMULA  to simplify notation.
+Select points FORMULA  to minimize FORMULA , where FORMULA , with the constraint that FORMULA  and the angle between FORMULA  and FORMULA  is smaller than FORMULA . Let FORMULA  be the point for which FORMULA .
+It is shown in the proof of Lemma REF  that if FORMULA , then FORMULA  (recall (REF ), (REF )). Thus, if FORMULA  for any FORMULA , then FORMULA  for each FORMULA  and hence FORMULA . We will show this to be the case.
+By the second triangle inequality, we have the bound:
+FORMULA 
+where FORMULA  is the point on FORMULA  closest to FORMULA . Once we show this is greater than FORMULA , the proof is complete.
+Let FORMULA  (with FORMULA  and FORMULA  being true samples of FORMULA , approximated by FORMULA  and FORMULA ). Then we have the bound:
+FORMULA 
+The bound on FORMULA  follows since FORMULA  is a sample from FORMULA  (recalling (REF ), (REF )).
+Since FORMULA  (for some FORMULA ), we can perform the bound:
+FORMULA 
+In (REF ), we assume FORMULA  and FORMULA  are oriented the same way. It is easy enough to see that the sup is achieved at the endpoints; we then use the triangle inequality FORMULA , and similarly for the tangents.
+Thus, we find that:
+FORMULA 
+Plugging this into (REF ) shows that:
+FORMULA 
+where the last inequality follows from (REF ).
+
+ FORMULA
+
+This shows that the graph FORMULA  computed in Step 1 separates distinct curves.
+The next result parallels Proposition REF , and shows that the noisy allowed region contains nearby points on the polygonalization.
+Proposition A.2 Suppose the figure is sampled at a rate satisfying (REF ). Then FORMULA  contains the polygonalization of the figure.
+
+Proof. 
+The point FORMULA  and tangent FORMULA  are close to some point FORMULA  on the figure FORMULA ; in particular, FORMULA  and FORMULA  . Similarly, there is a point FORMULA  on the figure a distance no more than FORMULA  away from FORMULA . By Proposition REF , FORMULA . Since FORMULA  and FORMULA , we find that FORMULA . Repeating this argument with FORMULA  and FORMULA  interchanged shows that (REF ) holds, and FORMULA  is an edge of FORMULA .
+
+ FORMULA
+
+Proposition A.3 
+Fix a point FORMULA , and suppose that Assumption REF  holds. Choose a tangent vector FORMULA  and fix an orientation. Consider the set of points FORMULA  such that FORMULA  is an edge in FORMULA  (as per Step 1 of Algorithm REF ) and FORMULA . Suppose also that FORMULA  satisfies (REF ).
+Then the nearest tangential neighbor of FORMULA  (i.e. the edge for which FORMULA  is minimal) is the edge in the polygonalization of FORMULA .
+
+Proof. 
+The idea of the proof follows that of Lemma REF  closely, but we must adjust for our uncertainty as to the point and tangent.
+The curve itself has the parameterization FORMULA , by Lemma REF , and this is valid for FORMULA . However, we do not know FORMULA  and FORMULA , only FORMULA  and FORMULA . We wish to find the point FORMULA  for which FORMULA  is minimal, and we approximate this by finding the point for which FORMULA  is minimal.
+Using the fact that FORMULA , we find that
+FORMULA 
+The second and third terms on the right side of (REF ) are the error terms. We have the bound:
+FORMULA 
+We wish to find the FORMULA  for which (REF ) is negative for every FORMULA . If we can show that FORMULA , we are done.
+If we observe that FORMULA  (using the notation of Lemma REF ), and similarly FORMULA , we find then that FORMULA .
+It is here we use the fact that FORMULA . With FORMULA  as in Lemma REF , we find that:
+FORMULA 
+for some FORMULA . If FORMULA  (i.e. (REF ) is satisfied), then FORMULA  and FORMULA . Thus:
+FORMULA 
+(the last inequality follows from Assumption REF ) implying that FORMULA .
+
+ FORMULA
+
+
+Speeding it up: an FORMULA  algorithm
+As remarked earlier, Algorithm REF  and REF  run in FORMULA  time as written. The slow step is Step 1 which involves comparing every point/tangent pair to every other such pair. This scaling issue can be remedied by using a spatially adaptive data structure
+{{cite:ca0c8450-ad83-4529-85e9-9727ebd76353}}
+A caveat: there are two different ways of increasing FORMULA . The first (increasing outward) is by taking larger figures, with the sampling rate held fixed. The second (increasing inward) is by holding the figure size fixed, but increasing the sampling rate. We are interested primarily in the first case, and we will treat this case only. Therefore, we make the following additional assumption:
+Assumption 4 
+We assume that the density of points in the input data is bounded above, i.e.:
+FORMULA 
+
+Note that this always holds in the case of noisy data. In this case, Assumption REF  combined with (REF ) implies that
+FORMULA 
+In computing Step 1 of Algorithm REF  or REF , we must determine whether two points are in each other's allowed region (or a ball of radius FORMULA  about the noisy allowed region). Note that FORMULA , so if FORMULA , then clearly the edge FORMULA . Similarly, for the noisy case, if FORMULA , then FORMULA . We exploit this fact by using quadtrees, which allow us to avoid comparing points more than a distance FORMULA  apart.
+
+Algorithm 4
+(Fast Computation of the Graph G)
+
+
+ Input: 
+[ We assume we are given the dataset FORMULA , the maximal point density FORMULA  and the sampling FORMULA . We also take the parameter FORMULA  (noise free case) or FORMULA  (noisy case). ]
+
+
+Compute a quadtree FORMULA  storing FORMULA  pairs. The splitting criteria for a node is when the node contains more than FORMULA  points.
+
+Initialize the graph FORMULA  with empty edge set.
+
+For each point FORMULA , iterate over the points FORMULA  contained in the node containing FORMULA  and all of its nearest neighbors. If
+FORMULA 
+then add the edge FORMULA  to the graph FORMULA .
+
+Return FORMULA .
+
+
+Initializing the quadtree in step 1 is an FORMULA  operation. Assumption REF  implies that the width of a node will be no smaller than FORMULA ; thus, a node containing a point FORMULA  together with it's nearest neighbors contains the allowed region. The comparison at step 3 involves at most FORMULA  points, regardless of FORMULA . Thus, the complexity of this algorithm is
+FORMULA 

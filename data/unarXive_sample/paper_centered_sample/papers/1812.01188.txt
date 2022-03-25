@@ -1,0 +1,765 @@
+
+plotmarks
+arrows,snakes,backgrounds
+calc
+matrix
+fit, positioning, arrows
+Reducing Seed Bias in Respondent-Driven Sampling
+by Estimating Block Transition Probabilities
+Post-Stratified RDS
+Yilin Zhangt1[label=e1]yilin.zhang@wisc.edu,
+Karl Rohet1[label=e2]karlrohe@stat.wisc.edu,
+Sebastien Rocht2[label=e3]roch@math.wisc.edu
+t1These authors gratefully acknowledge support from NSF grant DMS-1612456 and ARO grant W911NF-15-1-0423.
+t2This author gratefully acknowledges support from NSF grants DMS-1149312 (CAREER), DMS-1614242 and CCF-1740707 (TRIPODS), and a Simons Fellowship.
+Zhang et al.
+University of Wisconsin-Madison,
+Department of Statistics and Department of Mathematics
+Yilin Zhang, Karl Rohe
+Department of Statistics
+University of Wisconsin Madison
+1300 University Ave
+Madison, WI 53706
+USA
+e1
+E-mail: *e2
+Sebastien Roch
+Department of Mathematics
+University of Wisconsin-Madison
+480 Lincoln Drive
+Madison, WI 53706
+USA
+e3
+ 
+Respondent-driven sampling (RDS) is a popular approach to study marginalized or hard-to-reach populations. It collects samples from a networked population by incentivizing participants to refer their friends
+into the study. One major challenge in analyzing RDS samples is seed bias. Seed bias refers to the fact that when the social network is divided into multiple communities (or blocks), the RDS sample might not provide a balanced representation of the different communities in the population, and such unbalance is correlated with the initial participant (or the seed). In this case, the distributions of estimators are typically non-trivial mixtures, which are determined (1) by the seed and (2) by how the referrals transition from one block to another. This paper shows that
+(1) block-transition probabilities are easy to estimate with high accuracy, and
+(2) we can use these estimated block-transition probabilities to estimate the stationary distribution over blocks and thus, an estimate of the block proportions. This stationary distribution on blocks has previously been used in the RDS literature to evaluate whether the sampling process has appeared to “mix”.
+We use these estimated block proportions in a simple post-stratified (PS) estimator that greatly diminishes seed bias.
+By aggregating over the blocks/strata in this way, we prove that the PS estimator is FORMULA -consistent under a Markov model, even when other estimators are not. Simulations show that the PS estimator has smaller Root Mean Square Error (RMSE) compared to the state-of-the-art estimators.
+respondent-driven sampling
+post-stratification
+social network
+Stochastic Blockmodel
+Markov process
+Introduction
+Respondent-driven sampling (RDS) is one of the most popular network-based approaches to sample marginalized and hard-to-reach populations, such as drug users, sex workers, and the homeless {{cite:a7a15255-4c05-44d5-8926-cd04a66c272c}}. RDS has been widely used, for instance, to quantify HIV prevalence in at-risk populations {{cite:6096abb8-df1a-47c4-b264-d2eaeeef6890}}, {{cite:be9a5e88-7c3c-4b9f-8f39-58f4f2f7155d}}. According to a recent literature review {{cite:9e4d1118-9e70-4b66-9d10-8e8e4466faab}}, RDS has been used in over 460 studies from 69 countries.
+FIGURE 
+This Figure from {{cite:33eca607-42ac-4cd6-ac7a-04e84de1e01b}} illustrates the RDS sampling process.
+
+RDS collects samples through peer referral on a social network. It starts from some initial participant as the seed, which forms wave zero. In the process, we incentivize each participant to pass some (usually three to five) referral coupons to their friends. Those who return to the study site with a referral coupon form the next wave of samples. We repeat this process until we get enough samples or the participants stop referring. Figure REF  from {{cite:33eca607-42ac-4cd6-ac7a-04e84de1e01b}} gives an illustration for the RDS sampling process. There are three components in RDS sampling: (1) the social network, (2) the sampling tree, and (3) the variable of interest (denoted by color in Figure REF ). The underlying social network is the target population to study, which is unobserved. For each sampled node, we observe their HIV status (black or grey in Figure REF ), and which node refers them to the sample. We aim to estimate the proportion of people with certain trait, such as HIV positive (nodes that are grey in Figure REF ), in the population.
+The link-tracing sampling procedure of RDS enables us to reach the hard-to-reach populations. However,
+RDS samples are dependent. This dependence is particularly bad when there are multiple communities in the target population and the people form most of their friendships within their own communities (i.e. blocks). For example, people from the east side of the town might only know a few people from the west side of the town, and thus they are much more likely to refer people from the west side of the town.
+This is referred to as a “bottleneck” and it leads to a sample that is unbalanced between the different communities.
+If the HIV prevalence is higher on one side of the town, then this bottleneck creates dependence between observations in an RDS sample.
+If the initial participant is from the east side, then the sample may underrepresent people from the west side. This creates “seed bias.”
+In statistical models which presume that the seed node is randomized, this “seed bias” appears as additional variance in the final estimator. When some participants refer too many contacts, the variance of the traditional RDS estimator, Volz-Heckathorn (VH) estimator {{cite:a7a15255-4c05-44d5-8926-cd04a66c272c}}, decays at a rate slower than FORMULA  {{cite:33eca607-42ac-4cd6-ac7a-04e84de1e01b}}. We provide an example in Appendix REF . To address this issue, recent work {{cite:84111405-91fe-4348-9cdd-e315ce389ebf}} has derived an idealized generalized least squares (GLS) estimator for which the standard error decays at rate FORMULA  with growing sample size FORMULA  under a fixed social network. The practical implementation of the estimator, called the feasible GLS (fGLS) estimator, requires solving an FORMULA  system of equations and comes with no theoretical guarantees.
+FIGURE 
+Heckathorn (1997) first proposed RDS and illustrated the RDS technique with a sample of drug users. This is Table 1c from that paper. It summarizes the sample by computing the empirical transition matrix between two strata of drug users; those who prefer heroin and those who prefer some other drug. Other empirical transition matrices in that paper stratify based upon ethnicity, gender, and location of recruitment.
+
+This paper provides an estimator that is easy to compute and has root mean squared error that decays at rate FORMULA  up to log factors, by implicitly adjusting for bottlenecks between different communities. While this estimator is new, its essential components are well known and reported in the RDS literature.
+This new estimator assumes that we have collected the “bottlenecked” community memberships of the sampled individuals.
+With this data, a key summary is the empirical transition matrix between communities, in which element FORMULA  is the proportion of referrals from participants in community FORMULA  to participants in community FORMULA .
+In the RDS literature, this matrix is a common way to summarize the sampling procedure and understand the underlying social network.
+For example, the original RDS paper {{cite:a7a15255-4c05-44d5-8926-cd04a66c272c}} reports on a sample of drug users. Table 1c from that paper (reprinted as Figure REF  herein) gives the empirical transition matrix between communities defined by drug preference.
+This empirical transition matrix is also a key piece of the feasible GLS estimator {{cite:84111405-91fe-4348-9cdd-e315ce389ebf}}.
+Interestingly, an estimate of the proportion of nodes in each community can be derived from the empirical transition matrix.
+Notice in Figure REF  that {{cite:a7a15255-4c05-44d5-8926-cd04a66c272c}} reports the equilibrium distribution on the different strata/communities. This takes the empirical transition matrix as a Markov transition matrix on the different communities and computes the stationary (i.e. equilibrium) distribution of this Markov process (i.e. the leading left eigenvector of the transition matrix). In Figure REF , the equilibrium distribution is close to the total distribution of recruits. When there is a bottleneck, this paper shows that the equilibrium distribution is a better estimator than the total distribution of recruits. The basic reason is that even when there is a bottleneck, each row of the empirical transition matrix is composed of FORMULA  nearly independent multinomial samples. There is one caveat; our estimator does not use the actual equilibrium distribution of the empirical transition matrix (i.e. the quantity reported in Figure REF ). Instead, we have a simple approximation of the equilibrium which is easier to compute and thus simplifies the proof.
+The final estimator is a post-stratified estimator where the strata are the community memberships and the estimated proportion of nodes in each strata is derived from the estimated equilibrium distribution. We call this the PS estimator.
+The PS estimator has three major advantages: (1) computational efficiency, (2) smaller variation (bias square, variance and RMSE), and (3) block-wise byproducts. We show in Theorem REF  that our PS estimator has both its bias and standard deviation decay at rate FORMULA  up to log factors, which does not hold for the popular Volz-Heckathorn (VH) esimtator {{cite:a7a15255-4c05-44d5-8926-cd04a66c272c}} and does not show the GLS estimator {{cite:84111405-91fe-4348-9cdd-e315ce389ebf}}. The simulation studies also show our PS estimator has smaller variation (bias square, variance and RMSE) compared to the VH estimator and fGLS estimator. The improvement is significant especially when there exists bottleneck in social networks.
+The paper is organized as follows. Section  defines the Markov model, the quantity to estimate, and the traditional RDS estimators. Section  introduces the PS estimator. Section  shows PS estimator is FORMULA -consistent under the Degree Corrected Stochastic Blockmodel (DC-SBM). In Section , we show by simulations that PS estimator has smaller variation than the state-of-the-art estimators, especially when there exists bottleneck in social networks. We summarize with a discussion in Section .
+
+Preliminaries
+We model referrals using a Markov process similar to the ones
+previously considered in the RDS literature {{cite:c92ae82c-a38e-4b1f-a230-592d7baadb0b}}, {{cite:a7a15255-4c05-44d5-8926-cd04a66c272c}}, {{cite:533fbfc0-42c9-4dd4-a051-c4340b29ccd9}}, {{cite:3a0d36dc-3fab-455c-a0a1-5813528a4fa5}}, {{cite:33eca607-42ac-4cd6-ac7a-04e84de1e01b}}, {{cite:84111405-91fe-4348-9cdd-e315ce389ebf}}.
+Markov process on a social network
+A social network FORMULA  consists of a node set
+FORMULA  of individuals
+and an undirected edge set
+FORMULA 
+We use FORMULA  and FORMULA  interchangeably. We assume that FORMULA  is connected.
+Let FORMULA  be the weight of edge FORMULA , which models recruitment preference (more details in Section ). For any FORMULA , we let FORMULA  by convention.
+If the graph is unweighted, then FORMULA  for all FORMULA .
+For each node FORMULA , we denote its neighbor in the network FORMULA  by
+FORMULA 
+We denote the degree of node FORMULA  as FORMULA  and the mean degree of graph FORMULA  as FORMULA .
+We model the collection of samples in RDS with a Markov process on the social network FORMULA  indexed by a tree. It starts with an initial participant as seed, which we index as vertex 0, and develops into a rooted tree, FORMULA  (a connected graph with FORMULA  nodes, no cycles, and a vertex 0). We use FORMULA  to denote that node FORMULA  belongs to the samples indexed by FORMULA .
+For each node FORMULA , we denote the parent of FORMULA  as FORMULA  (the node that refers FORMULA  to the sample).
+Formally, an RDS sample is an indexed collection of random nodes FORMULA , where each referral FORMULA  has probability
+FORMULA 
+where the transition matrix FORMULA  has elements
+FORMULA 
+Since the graph FORMULA  is undirected and connected, FORMULA  is a reversible Markov transition matrix with unique stationary distribution FORMULA  with
+FORMULA 
+While the referrals are random, we think of FORMULA  itself as deterministic.
+Following {{cite:261e8c78-6224-470e-bb39-4927a8be7396}}, we refer to this Markov process as a FORMULA -walk on FORMULA . Note that FORMULA  and FORMULA  are two distinct graphs: the node set in FORMULA  indexes the population, which is a social network, and the node set in FORMULA  indexes the samples, which is a sampling tree. We say that the FORMULA -walk is stationary if the seed
+is chosen according to the stationary distribution.
+
+Quantity to estimate and the Volz-Heckathorn estimator
+For each node FORMULA , we denote the variable of interest (e.g., the indicator of HIV status) as FORMULA . We wish to estimate the population mean of the variable of interest
+FORMULA 
+For each sample FORMULA , we observe
+FORMULA 
+The sample average
+FORMULA 
+is generally biased, since nodes with larger degrees are more likely to be sampled in the Markov process.
+Specifically, under the stationary FORMULA -walk on FORMULA , it has expectation
+FORMULA 
+In general, FORMULA .
+To obtain an unbiased estimator of FORMULA , the sample average must be adjusted. Using FORMULA , the inverse probability weighted estimator (IPW),
+FORMULA 
+is an unbiased estimator of FORMULA  {{cite:c81d26b4-dff2-42ea-a617-eea5fd8c862f}}. Additionally estimating
+FORMULA  with the harmonic mean of the observed node degrees,
+FORMULA 
+leads to the popular Volz-Heckathorn (VH) estimator {{cite:3a0d36dc-3fab-455c-a0a1-5813528a4fa5}},
+FORMULA 
+The VH estimator has been extensively used in the study of marginalized populations {{cite:6096abb8-df1a-47c4-b264-d2eaeeef6890}}, {{cite:be9a5e88-7c3c-4b9f-8f39-58f4f2f7155d}}, {{cite:9e4d1118-9e70-4b66-9d10-8e8e4466faab}}, but it is highly variable. The variance of the VH estimator in general may decay at a rate slower than FORMULA  {{cite:33eca607-42ac-4cd6-ac7a-04e84de1e01b}}, implying that many more samples are required to reduce the standard error. See Section REF . We address this issue by introducing a post-stratification approach to RDS in the following section.
+
+A new estimator
+A post-stratification approach to RDS
+Stratification
+Stratification has been extensively used in traditional random sampling to reduce variance. The key idea of stratified sampling is as follows. Assume that the overall population can be divided into (ideally homogeneous) sub-groups (which we refer to as blocks) based on some variable, such as gender, race, etc. Then the sample mean and sample variance of the total population can be calculated using block-wise sample means and variances.
+Specifically, suppose there are FORMULA  blocks in a population with FORMULA  individuals. For each block FORMULA , we denote the block size as FORMULA , the block-wise population mean as FORMULA , the sample size as FORMULA 
+and the block-wise sample average as FORMULA . The sample average FORMULA  and sample variance FORMULA  for the total population can be derived from the block-wise quantities by
+FORMULA 
+Stratified sampling by proportionate allocation randomly selects individuals proportionally to the sizes of the different blocks, with the
+goal of improving accuracy by reducing sampling error. Post-stratified sampling, on the other hand, performs stratification after sampling and calculates FORMULA  and FORMULA  as above. Post-stratification is useful when the samples constitute an unbalanced representation of the full population.
+
+Block proportions are unobserved in marginalized populations
+We seek to apply this last approach
+to RDS in order to deal with seed bias. An important issue arises
+however. Per (REF ),
+traditional post-stratification requires the knowledge of the block proportions FORMULA . These are typically unknown in marginalized populations. Hence, we need to estimate the block proportions from the samples. In the next section, we describe how we do this and
+we formally define a novel post-stratified estimator for RDS.
+
+Block-wise quantities
+For a set FORMULA , denote its cardinality by FORMULA .
+Suppose there are FORMULA  blocks in the social network FORMULA . For each node FORMULA , denote its block membership as FORMULA , i.e., FORMULA  if FORMULA  belongs to block FORMULA . To simplify notation, we write FORMULA  to mean FORMULA . For each block FORMULA , we denote the block size as FORMULA  and the block-wise mean as FORMULA .
+For each sample FORMULA , we let its block membership be FORMULA  and we write FORMULA  to mean FORMULA . We define for each block FORMULA  the sample size as FORMULA , the block-wise harmonic average degree as
+FORMULA 
+and the block-wise sample average weighted by degree, i.e., the VH estimator for FORMULA , as
+FORMULA 
+Suppose that we observe the block membership of each sample, i.e., we observe FORMULA  for all FORMULA . We define the matrix FORMULA  such that, for any two blocks FORMULA ,
+FORMULA 
+
+and the row-normalized matrix FORMULA  whose FORMULA -entry is
+FORMULA 
+Here, for a matrix FORMULA , we let FORMULA 
+and FORMULA  is the indicator of event FORMULA .
+Finally we define the vector FORMULA  with entries
+FORMULA 
+
+The post-stratified estimator
+We define our new estimator next.
+Definition 3.1 (The post-stratified estimator)  For an RDS sample on a graph FORMULA  with FORMULA  blocks, the post-stratified (PS) estimator is
+FORMULA 
+with
+FORMULA 
+where FORMULA , FORMULA , and FORMULA  are defined in (REF ), (REF ) and (REF )
+respectively.
+
+Comparing (REF ) with (REF ), the estimator FORMULA  can indeed be seen as a post-stratified estimator.
+In Section REF , we argue that FORMULA  is an estimator of the block proportion of block FORMULA .
+Note that we also use the VH estimator FORMULA  on each block FORMULA , instead of the block-wise sample average, to adjust for the bias induced by node degrees.
+
+Motivation for the PS estimator
+To motivate our new estimator, we analyze its behavior under
+a standard model of random social network with community structure, the degree-corrected stochastic blockmodel (DC-SBM) {{cite:8878f7dc-ca23-49a3-a13e-1a62be974f19}}.
+Definition 3.2 (Degree-corrected stochastic blockmodel) 
+Let FORMULA  be a positive, symmetric matrix and let FORMULA  be a positive vector. Under the DC-SBM, a social network FORMULA  with FORMULA  is drawn randomly as follows. Assume that we have a partition FORMULA  of FORMULA  into FORMULA  blocks labeled FORMULA . Let FORMULA  be the respective sizes of the blocks. For a node FORMULA , let FORMULA  be its block.
+Each possible edge FORMULA  is present independently from all other edges with probability
+FORMULA 
+By convention, we assume FORMULA 
+for all block FORMULA .
+
+Remark 3.3 (Self-loops) 
+To simplify the notation throughout, we allow self-loops
+FORMULA  in the DC-SBM, each of which will contribute 1 to degree counts (instead of the standard convention of 2).
+Note that, in a dense
+graph, such self-loops will play a negligible role.
+
+To justify our PS estimator under the DC-SBM,
+we make three observations:
+
+Define the matrices FORMULA , where FORMULA ,
+and FORMULA , where
+FORMULA 
+for any two blocks FORMULA .
+Since FORMULA  is positive and row-normalized version of the symmetric matrix FORMULA , it has a unique stationary distribution FORMULA , where
+FORMULA 
+Indeed
+FORMULA 
+
+The expected degree of node FORMULA  in block FORMULA 
+is
+FORMULA 
+Hence the block-wise mean expected degree over block FORMULA 
+is
+FORMULA 
+
+Combining the two observations above, we get
+FORMULA 
+Because the denominator is constant, we have finally
+FORMULA 
+
+Therefore, by (REF ),
+the population mean FORMULA  can be re-written as
+FORMULA 
+From this it follows that, to estimate FORMULA , it suffices to estimate the block-wise mean FORMULA , the block-wise expected mean degree FORMULA , and the stationary distribution FORMULA  of FORMULA , for each block FORMULA . We estimate them with FORMULA , FORMULA , and FORMULA , respectively—leading to the PS estimator in (REF ). In the proof of Theorem REF  below, we analyze the accuracy of these estimators (see Claims REF , REF  and REF ).
+
+Main theoretical result
+In this section, we show that the PS estimator defined
+in (REF ) has error FORMULA  with high probability
+when the social network is distributed
+under a dense DC-SBM.
+Theorem 4.1 (Main result) 
+
+Suppose the social network FORMULA  of size FORMULA  is distributed
+according to the DC-SBM with FORMULA  blocks of respective sizes
+FORMULA  and parameters FORMULA 
+and FORMULA . Suppose FORMULA  is a sampling tree of
+size FORMULA . Let FORMULA  be the variable of interest.
+Assume that there are universal constants FORMULA  and
+FORMULA  independent of FORMULA  and FORMULA  such that
+the following assumptions hold:
+
+ [Linear-sized blocks] FORMULA  for all k;
+
+ [Dense graph] FORMULA  for all blocks FORMULA ;
+
+ [Degree homogeneity] FORMULA  for all nodes FORMULA ;
+
+ [Bounded variables] FORMULA  for all nodes FORMULA ;
+
+ [Limited referrals] The maximum degree of FORMULA  is less than or equal to FORMULA .
+
+Then, for any FORMULA , there exists a constant FORMULA  (not depending on FORMULA ) such that, with probability FORMULA  over the choice of FORMULA , the following holds. For any FORMULA -walk on FORMULA  the PS estimator defined in (REF ) satisfies
+FORMULA 
+with probability FORMULA .
+
+A direct consequence of Theorem REF  is that the bias and standard deviation decay at rate FORMULA  up to log factors. This does not hold for the traditional VH estimator {{cite:a7a15255-4c05-44d5-8926-cd04a66c272c}}, since its standard deviation decays at a rate slower than FORMULA  {{cite:33eca607-42ac-4cd6-ac7a-04e84de1e01b}}, which we also show by example in Appendix REF . For the recent GLS-based estimators proposed in {{cite:84111405-91fe-4348-9cdd-e315ce389ebf}}, it is shown that their standard deviation decays at rate FORMULA  as FORMULA  goes to infinity for a fixed network size, but no finite size
+guarantees are provided.
+Assumptions REF  and REF  require the graph to be dense. In the following section, we show through simulations that the PS estimator also works well on sparse graphs.
+
+Simulations
+This section compares the PS estimator to the VH and fGLS estimators on simulated networks (in Section REF ) as well as social networks collected by the National Longitudinal Study of Adolescent Health (Add Health Networks) (in Section REF ), both with simulated RDS samples. In both cases, the PS estimator has smaller variation than the VH and fGLS estimators.
+Simulated Networks
+We simulated 100 random social networks by DC-SBM with FORMULA  nodes, expected average degree 100, and FORMULA  blocks with the same sizes. The stochastic matrix FORMULA  was chosen proportional to
+FORMULA 
+We simulated the binary outcomes to be perfectly aligned with one of the block labels.
+On each social network, we generated RDS samples by link tracing without replacement. We randomly sampled the seed proportionally to the node degree. Then, for each participant FORMULA  in the sample, we recruited FORMULA  number of friends, where FORMULA . The recruiting process stopped when there were 1000 participants in the RDS sample. If it terminated before recruiting 1000 participants, then we re-started the recruiting process. We generated 200 different RDS samples on each network. For each RDS sample, we computed the VH, fGLS, and PS estimators. On each network, we computed the absolute bias, standard deviation, and RMSE of the 200 estimators of each type. In the simulations, we computed the fGLS estimator as in {{cite:84111405-91fe-4348-9cdd-e315ce389ebf}}, which re-weights the outcome FORMULA  to adjust for the sampling bias.
+Figure REF  shows that the PS estimator has smaller variation than the VH and fGLS estimators in terms of absolute bias, standard deviation, and RMSE.
+FIGURE 
+Comparisons on the Simulated Networks. The figures present the variations for the VH, fGLS and PS estimators on each of the 100 simulated networks. Each panel corresponds to a different variation, including absolute bias, standard deviation, and RMSE. Each data points represents for a variation value for a type of estimator on a network. In each panel, for each type of estimator, we use a corresponding box plot to show the distribution of the variation values of the 100 simulated networks.
+
+Note that there are some factors that may affect the performance of the estimators, such as (1) bottlenecks in the social network (2) the alignment of the block labels FORMULA  with the variable of interest FORMULA , and (3) the network density, etc. We explored these factors and how they affected the performance of the estimators. More explorations on other factors including network sizes and sample sizes are in Section  in the appendix. The following simulations in Figure REF , REF  and REF  have the same setting as in Figure REF , except that the values of the corresponding factor are made to vary.
+Bottleneck
+Bottlenecks exist when there are much fewer connections across different blocks than within blocks. Recall that, in the DC-SBM, the stochastic block matrix FORMULA  shows the average number of links between any two blocks. We simulated the stochastic block matrix such that,
+FORMULA 
+with FORMULA  for identification. We refer to the difference FORMULA  as the bottleneck strength. With a larger bottleneck strength, there are more connections within blocks and fewer connections across blocks. When there is no bottleneck (strength is zero), there is only one block in the network. Figure REF  shows that the PS estimator has smaller variation than the fGLS and VH estimators, especially when there exists a bottleneck. In particular, the PS estimator appears to reduce the seed bias and standard deviation caused by bottlenecks much better than the fGLS and VH estimators.
+FIGURE 
+Comparisons on the simulated networks with different bottleneck strengths
+
+
+Alignment
+We capture the alignment of the block labels and the variable of interest by the difference of the block-wise means of the variable of interest, i.e. FORMULA  with FORMULA  blocks.
+Figure REF  shows that the fGLS and PS estimators exhibit the largest improvement over the VH estimator when the block label perfectly aligns with the variable of interest (i.e., the alignment is 1). The three estimators perform equally well when the block-wise means of the variable of interest are equal (i.e., the alignment is 0). When the block label partially aligns with the variable of interest (i.e., the alignment is strictly between 0 and 1), the fGLS and VH estimators exhibit similar variation, but the PS estimator has smaller variation when the block-wise difference is over 0.4.
+FIGURE 
+Comparisons on the simulated networks with different alignments of the block labels
+
+
+Network density
+We use the expected average degree of the network to quantify the network density. Though Theorem REF  requires the networks to be dense enough, Figure REF  shows that the estimators perform similarly on sparse networks.
+FIGURE 
+Comparisons on the simulated networks with different density
+
+
+Add Heath Networks
+In this section, we consider RDS simulations obtained by tracing contacts in social networks collected in the National Longitudinal Study of Adolescent Health (Add Health Networks). This study collected a nationally represented sample of adolescents from grade 7 to 12 in the United States in the 1994-1995 school year. The sample covers 84 pairs of middle and high schools in which students nominated of up to five male and five female friends in their middle or high school network ({{cite:4bcadbfb-9707-4b9c-b9e2-b6bdeb1d86e5}}). In this analysis, we symmetrized all contacts to create a social network, and we restricted each network to its largest connected component. These networks
+were previously studied in {{cite:85dda111-7666-4a9a-ba02-a4da6518f693}}, {{cite:f67dccf2-f568-44b6-b1f8-08d78263132b}}, and {{cite:84111405-91fe-4348-9cdd-e315ce389ebf}}.
+We restricted our analysis to the 25 Add Heath networks with over 1000 nodes. On each network, we simulated 200 different RDS samples, each with 500 participants. On each RDS sample, we computed the VH, fGLS, and PS estimators. In the simulation, we randomly sampled seed nodes proportional to node degrees. We computed the absolute bias, RMSE, and standard deviation of the estimators on each network. In the analysis we used the school label (middle school or high school) as the outcome and the grade label (7-12) as the block labels.
+The recruitment process was similar to that in Section REF , but without replacement. In this case, each person could be recruited no more than once. For each participant FORMULA , if they had fewer number of unrecruited friends than FORMULA , then we recruited all of their unrecruited friends.
+Figure REF  shows the variation of the estimators. Overall, the PS estimator has substantially smaller variation than the fGLS and VH estimators.
+FIGURE 
+Comparisons on the Add Health Networks. The figures present the variations for the VH/fGLS and PS estimators on each of the 25 Add Health Networks. Each panel corresponds to a different variation, including absolute bias, RMSE, and standard deviation. In each panel, the horizontal axis corresponds to the variation value and the vertical axis corresponds to different networks, ordered by variation value of the baseline (VH/fGLS) estimator. The baseline estimator is the one between VH and fGLS estimators with the smaller variation value, i.e. the better between VH and fGLS estimators. Each line connects the variation value for the baseline estimator to the variation value of the PS estimator. If the line is red, then the PS estimator has a smaller variation.
+
+
+Discussion
+RDS has been widely used in studying marginalized populations. But the estimators derived from RDS samples have suffered from high variance. This is due to two related issues (1) the complicated network dependence of the RDS samples, and (2) seed bias caused by bottlenecks. In this paper, we introduced post-stratification to RDS and provided a novel estimator. Our easy-to-compute PS estimator reduces seed bias. We derived some theoretical results for the PS estimator, showing its bias and standard deviation decay at FORMULA  (up to log factors) under the degree-corrected stochastic block model. This is the first estimator with such guarantees. Though we require the networks to be dense in theory, we showed through simulations that the estimator performs similarly on sparse networks.
+One future direction is how to select the block labels in practice. In {{cite:84111405-91fe-4348-9cdd-e315ce389ebf}}, an approach for selecting block labels using eigenvalues of the block-wise transition matrix FORMULA  is proposed. Further discussions on this issue would be helpful to apply the PS (and fGLS) estimators.
+
+More Simulations
+In this section, we explore how network sizes and sample sizes affect the performances of RDS estimators. The simulation settings are the same as in Section REF . Figure REF  shows the estimators perform similarly with different sizes of networks. Figure REF  shows the RDS estimators have smaller variation with larger sample sizes.
+FIGURE 
+Comparisons on the simulated networks with different sample sizes. In the simulations, we control the densities for the networks to be similar. For each network with size FORMULA , we set the expected average degree as FORMULA , where FORMULA  denotes the integer part of FORMULA  for any constant FORMULA .
+
+FIGURE 
+Comparisons on the simulated networks with different sample sizes.
+
+
+Proof of the main theorem
+Notation
+For each node FORMULA , we denote its neighborhood in the social network FORMULA  as
+FORMULA 
+and its neighborhood within block
+FORMULA  as
+FORMULA 
+We denote by FORMULA  the size of the latter. The degree of node FORMULA  is denoted FORMULA  and we have FORMULA .
+While the RDS sampling procedure is a random walk on the social network FORMULA , under a dense DC-SBM our analysis relies on establishing an approximation of the process by a “population-level” random walk on blocks. We define the block transition probability at node FORMULA  by
+FORMULA 
+for any blocks FORMULA  and any sample FORMULA . Recall that, for any sample FORMULA , we denote its parent as FORMULA .
+Under our assumptions,
+FORMULA  is the expected number of edges between blocks FORMULA ; indeed
+FORMULA 
+Recalling the matrix FORMULA , where FORMULA  is the matrix in the definition of the DC-SBM model (REF ) and FORMULA , the population block transition probability is given by
+FORMULA 
+for any two blocks FORMULA .
+We refer to
+FORMULA 
+as the population transition matrix on blocks.
+Recall that its unique stationary distribution is FORMULA .
+For each block FORMULA , FORMULA . We also define the number of referrals from block FORMULA  to be
+FORMULA 
+For any two blocks FORMULA , we define the number of referrals between block FORMULA  and block FORMULA  as
+FORMULA 
+Note that FORMULA  and FORMULA  The elements of the estimated block transition matrix FORMULA  in (REF ) can be rewritten as FORMULA . We use FORMULA  to denote these quantities, i.e.,
+FORMULA 
+To summarize, for any blocks FORMULA , the quantities FORMULA , FORMULA  and FORMULA  represent respectively the block transition probability at node FORMULA , the population block transition probability, and the estimated block transition probability.
+
+Proof
+The proof of Theorem REF  follows from a series
+of claims. We begin with a sketch of the proof in this section.
+
+Under the dense DC-SBM, random walk is mixing fast within each block (Claims REF  and REF ). This plays a key role in estimating block-wise means, for which we use the VH estimator (Claims REF , REF , and REF ).
+
+To estimate block proportions, we use the stationary distribution of block-wise transition matrix, which is the main, non-trivial contribution of this work. Indeed, the standard empirical frequency gives an estimate with much larger variance (see Section REF ). Instead we estimate the transition matrix between blocks, which is a “more local” quantity in the sense that it is not affected strongly by the seed, and compute its stationary distribution. As a result, block-wise transition probabilities are highly concentrated around their true value under the Markov chain on the blocks; their stationary distributions are also close to each other (Claim REF , Claim REF ).
+
+Note that there are two sources of randomness, the social network FORMULA  and the FORMULA -indexed random walk. Claims REF -REF  are concerned with the randomness of FORMULA , while Claims REF -REF  deal with the random walk.
+[
+every matrix/.style=ampersand replacement=&,column sep=3cm,row sep=0.2cm,
+c/.style=draw,thick,rounded corners,fill=yellow!20,inner sep=.2cm,
+to/.style=->,>=stealth',shorten >=1pt,thick,
+every node/.style=align=center]
+ c] (mu1)  FORMULA 
+;
+& c] (mu2)  FORMULA 
+;
+ c] (pi1)  FORMULA 
+;
+& c] (pi2)  FORMULA 
+;
+c] (d1)  FORMULA 
+;
+& c] (d3)  FORMULA 
+;
+ c] (u1)  FORMULA 
+;
+& c] (u2)  FORMULA 
+;
+;
+[to] (mu1) –
+node[midway,above] Claim REF  (mu2);
+[to] (pi1) – node[midway,above] Claim REF 
+ (pi2);
+[to] (d1) – node[midway,above] Claim REF 
+ (d3);
+[to] (u1) – node[midway,above] Combine above
+ (u2);
+Throughout, FORMULA  is as in the statement of the theorem.
+High-probability properties of the social network
+We first use standard concentration inequalities to control the degrees
+of FORMULA .
+Recall that under the DC-SBM the expectation of FORMULA  is FORMULA .
+Claim 8.1 (Degrees are concentrated) 
+
+Under the DC-SBM, there exists FORMULA  (depending on FORMULA  but not on FORMULA ) such
+that,
+with probability FORMULA  over the choice of FORMULA , the following event holds:
+simultaneously for
+all pairs of blocks FORMULA  and all nodes FORMULA ,
+FORMULA 
+
+We let FORMULA  be the event in the claim.
+[Proof of Claim REF ]
+Fix blocks FORMULA  and FORMULA . Under the DC-SBM, each node FORMULA  in block FORMULA  connects with node FORMULA  independently with probability FORMULA . Hence we can write
+FORMULA  as a sum of FORMULA  independent indicators, whose overall expectation is FORMULA ,
+where we used that FORMULA .
+By Hoeffding's inequality {{cite:729e6c6a-74e4-4f29-856c-59b34278de8a}}, for any constant FORMULA , by choosing FORMULA  large enough
+FORMULA 
+where we used that FORMULA 
+in the second inequality.
+Taking a union bound over FORMULA , FORMULA  and FORMULA  gives
+FORMULA 
+simultaneously for
+all FORMULA  and all FORMULA  with probability
+at least FORMULA .
+Dividing by FORMULA  and using FORMULA  for any node FORMULA  and FORMULA  for any blocks FORMULA , gives the result for appropriately
+chosen FORMULA .
+The following claim will be useful to control the mixing rate within a block.
+For any blocks FORMULA  and two distinct nodes FORMULA , FORMULA , we consider the number of two-edge paths from FORMULA  to FORMULA  in FORMULA  whose middle vertex is in block FORMULA , weighted by a quantity related to the
+expected degree of the middle vertex under the DC-SBM:
+FORMULA 
+Claim 8.2 (Two-edge paths) 
+
+There exists FORMULA  such
+that,
+with probability FORMULA  over the choice of FORMULA , the following holds:
+simultaneously
+for
+all blocks FORMULA ,
+and all FORMULA , FORMULA 
+with FORMULA ,
+FORMULA 
+
+We let FORMULA  be the event in the claim.
+[Proof of Claim REF ]
+Fix blocks FORMULA , and nodes FORMULA . By Claim REF , we can choose FORMULA  large enough such that
+FORMULA 
+for some FORMULA .
+We treat the case where all blocks are distinct. The other cases are similar. Let FORMULA  be the event that FORMULA  and note that FORMULA .
+Conditioned on FORMULA , each of the FORMULA  edges incident to FORMULA  and block FORMULA  has a corresponding endpoint FORMULA  which itself connects to FORMULA —independently of all other such endpoints—with probability FORMULA .
+Since FORMULA  weighs this last edge by FORMULA , its expected contribution is FORMULA . Moreover, the FORMULA  possibly non-zero terms in the sum defining FORMULA  are uniformly bounded by a constant by the assumption that FORMULA . Hence, we can apply
+Hoeffding's inequality again, and by choosing FORMULA  large enough we have
+FORMULA 
+for some FORMULA , where we used (REF ) in the second inequality
+and we used that FORMULA  and FORMULA  in the last inequality.
+Combining (REF ) and (REF ),
+and taking a union bound over FORMULA , FORMULA , FORMULA , FORMULA  and FORMULA  gives
+FORMULA 
+for a constant FORMULA  chosen large enough.
+Dividing by FORMULA  and using again that
+FORMULA  and FORMULA 
+gives the result,
+for an appropriately chosen constant FORMULA .
+
+Properties of the walk
+Before proving our main theorem,
+we will also need some results about the behavior of simple random walk
+on the network. We first show that, from any FORMULA , the
+probability of jumping to a vertex in block FORMULA  is close to the
+population-level probability FORMULA .
+Claim 8.3 (Transitions between blocks) 
+
+There exists FORMULA  such that, conditioned on FORMULA ,
+for any blocks FORMULA  and any  FORMULA
+FORMULA 
+
+Fix FORMULA  and FORMULA .
+Recall
+FORMULA 
+Under FORMULA ,
+FORMULA 
+for a constant FORMULA  large enough.
+A similar inequality holds in the opposite direction.
+
+The previous claim also implies that
+any step has a probability bounded away from 0
+of landing in any block.
+Claim 8.4 (Landing in a block) 
+
+There is FORMULA  such that,
+conditioned on FORMULA ,
+for any blocks FORMULA  and any FORMULA , we have
+FORMULA 
+provided FORMULA  is larger than a sufficiently large constant.
+
+Let
+FORMULA 
+The result then follows from Claim REF .
+
+We next show that two steps of the walk are enough to mix within a block.
+Claim 8.5 (Two steps suffice for within-block mixing) 
+
+For each sample FORMULA , we denote its grandchildren as FORMULA . For a FORMULA -walk on FORMULA ,
+there exists FORMULA  such that, on FORMULA  and FORMULA ,
+for all FORMULA  and  FORMULA
+FORMULA 
+for all blocks FORMULA , and nodes FORMULA , FORMULA 
+with FORMULA .
+
+To simplify
+notation, the conditioning on FORMULA  is implicit throughout the proof.
+Assume FORMULA  and FORMULA  hold.
+Fix blocks FORMULA  as well as nodes FORMULA  and FORMULA  with FORMULA .
+Let FORMULA  and let FORMULA  be the ancestor of FORMULA  on FORMULA , which is necessarily a child of FORMULA .
+Then, for some constants FORMULA , using
+FORMULA  and  FORMULA
+FORMULA 
+where recall that FORMULA .
+A similar inequality holds in the other direction. That implies the claim.
+
+Concentration of key estimates
+The PS estimator defined in (REF ) relies on three key estimates,
+whose concentration we establish now.
+We begin with
+the concentration of FORMULA  by showing that our estimates of block transition probabilities are concentrated, which boils down to proving that the FORMULA 's are concentrated.
+Recall that Claim REF  implies that the block
+transition probabilities are concentrated at each FORMULA , i.e., the FORMULA 's are concentrated. Proving that the estimate
+FORMULA  itself is concentrated requires
+an argument. Indeed, as shown in Section REF  below,
+both the numerator and denominator of this estimator in general may have variance asymptotically much greater than FORMULA .
+Instead, we use the Markovian structure of the model to control the deviation of FORMULA .
+Claim 8.6 (Concentration of block-wise steady-state probability estimates) 
+
+Conditioned on FORMULA  and FORMULA ,
+there exists FORMULA  such that, for any block FORMULA , with probability at least FORMULA ,
+FORMULA 
+
+Recall that FORMULA  was defined in (REF ).
+
+Throughout this proof, we implicitly condition on FORMULA  and assume that
+FORMULA  (from Claim REF ) holds. We let FORMULA  be a topological ordering of the vertices of FORMULA , i.e., an ordering such that: if FORMULA  is an ancestor of FORMULA , then FORMULA . For a fixed FORMULA ,
+we let FORMULA  be the corresponding filtration, i.e.,
+FORMULA 
+Recall that FORMULA  is the parent of FORMULA .
+The proof relies on three sub-claims:
+
+Deviation of FORMULA : For FORMULA  and FORMULA , let
+FORMULA 
+where recall that FORMULA  is the block of FORMULA .
+Note that
+FORMULA 
+We consider the process
+FORMULA 
+with FORMULA .
+We claim that FORMULA  is a martingale with bounded increments. Indeed, by the ordering of the samples, FORMULA  since FORMULA  for some FORMULA . Hence
+FORMULA  for all FORMULA . So FORMULA .
+Moreover, following a standard calculation,
+FORMULA 
+Finally, observe that by definition
+FORMULA 
+By the Azuma-Hoeffding inequality (see e.g. {{cite:2126c0ec-eb91-4e3b-9c64-1531162487c5}}), for a constant FORMULA  large enough
+FORMULA 
+
+Deviation of FORMULA : Next, we bound
+FORMULA 
+where we use the Markov property of the walk indexed by FORMULA .
+By Claim REF , for all FORMULA ,
+FORMULA 
+Combining (REF ) and (REF ),
+we get
+FORMULA 
+where we used that FORMULA  and that FORMULA  is non-decreasing for FORMULA .
+
+Lower bound on FORMULA : Let FORMULA  be the number
+of internal vertices in FORMULA . Because each leaf has a parent that is an internal vertex and FORMULA  has maximum degree FORMULA  for some constant FORMULA , it follows that FORMULA .
+Moreover, by Claim REF , the state of each internal vertex of FORMULA  (except the root) has probability
+at least FORMULA  of coming from block FORMULA , independently of all other FORMULA 's. As a result, FORMULA  stochastically dominates a binomial random
+variable with FORMULA  trials and probability of success FORMULA . By Hoeffding's
+inequality we therefore have for a constant FORMULA  large enough that
+FORMULA 
+Together with FORMULA , that implies that for some constant  FORMULA
+FORMULA 
+
+Combining (REF ), (REF ),
+and (REF ), with probability at least
+FORMULA  for any block FORMULA , there exists some constant FORMULA , such that
+FORMULA 
+Recall that the stationary distribution of FORMULA  is
+FORMULA 
+for any FORMULA  and that
+FORMULA 
+Then, there exists some constant FORMULA , such that
+FORMULA 
+Indeed,
+FORMULA 
+
+for large enough FORMULA , and similarly in the other direction. The second line is from (REF ) and (REF ) while fourth line is from (REF ).
+
+We then evaluate
+the deviation of
+FORMULA 
+Recall that, for any block FORMULA ,
+the population block-wise average is
+FORMULA 
+Before showing that our block-wise estimator FORMULA  is close to FORMULA , we first look at a related quantity, FORMULA  below, which serves as a “bridge.”
+We define the weighted block-wise average as
+FORMULA 
+Using an argument similar to that in Claim REF ,
+we show in Claim REF  that FORMULA  is concentrated for each block FORMULA . We then show in Claim REF  that FORMULA  is close to FORMULA .
+As a result, we will have established that FORMULA  is close to FORMULA .
+[
+every matrix/.style=ampersand replacement=&,column sep=3cm,row sep=0.2cm,
+c/.style=draw,thick,rounded corners,fill=yellow!20,inner sep=.2cm,
+to/.style=->,>=stealth',shorten >=1pt,thick,
+every node/.style=align=center]
+c] (c1)  FORMULA 
+;
+& c] (c2)  FORMULA 
+;
+& c] (c3)  FORMULA 
+;
+;
+[to] (c1) – node[midway,above] close to
+node[midway,below] Claim REF  (c2);
+[to] (c2) – node[midway,above] close to
+node[midway,below] Claim REF  (c3);
+Claim 8.7 (Concentration of block-wise sample averages weighted by degrees) 
+
+Conditioned on FORMULA , FORMULA  and FORMULA ,
+there exists FORMULA  such that, with probability at least FORMULA ,
+for any block  FORMULA
+FORMULA 
+
+Because the structure of the proof is similar to that of Claim REF , we only sketch it here.
+We also make use of Claim REF , which shows that simple random walk on FORMULA  mixes well within blocks in two steps. Because of the latter,
+we control separately the odd and even levels of FORMULA .
+Let FORMULA  be the vertices of FORMULA  whose graph distance
+to the root is even, including the root FORMULA , in a topological ordering. Let FORMULA  be the grand-children of FORMULA  in FORMULA . Let FORMULA  and for  FORMULA
+FORMULA 
+For each node FORMULA , define
+FORMULA 
+Fix block FORMULA  and let
+FORMULA 
+and
+FORMULA 
+where note that the last sum excludes the root.
+Following the proof of Claim REF ,
+we note that the partial sums
+FORMULA 
+form a martingale indexed by FORMULA  with increments satisfying
+FORMULA 
+where we used that FORMULA  has maximum degree FORMULA  and FORMULA  by assumption. Hence, arguing as
+in Step 1 of Claim REF , we get that
+with probability at least FORMULA  for all  FORMULA
+FORMULA 
+Moreover, let FORMULA  and notice that by construction
+FORMULA . Hence, by Claim REF ,
+FORMULA 
+where recall that we condition on FORMULA .
+Similarly in the opposite direction. So,
+arguing as in Step 2 of Claim REF , for some large enough FORMULA ,
+FORMULA 
+where we used FORMULA .
+In addition, we argue as in Step 3 of Claim REF . Because each node with odd distance to the root has a parent with even distance to the root, and FORMULA  has maximum degree FORMULA ,
+it follows that FORMULA .
+Moreover, by Claim REF , the state of each internal vertex of FORMULA  (except the root) has probability
+at least FORMULA  of coming from block FORMULA , independently of all other FORMULA 's. As a result, FORMULA  stochastically dominates a binomial random
+variable with FORMULA  trials and probability of success FORMULA . By Hoeffding's
+inequality we therefore have for a constant FORMULA  large enough that
+FORMULA 
+Together with FORMULA , that implies that with probability at least FORMULA  for all block FORMULA  for some constant  FORMULA
+FORMULA 
+Finally, following the proof of Claim REF  once again,
+we also get that with probability at least FORMULA  for all  FORMULA
+FORMULA 
+for some constant FORMULA .
+Combining (REF ), (REF ), and (REF ), with probability at least  FORMULA
+FORMULA 
+for some constant FORMULA .
+The same holds for the odd levels. Together with (REF ) and a similar inequality for odd levels (and the fact that the first two levels of FORMULA  have negligible effect asymptotically), we get the claim.
+By replacing FORMULA  by 1 in the proof of Claim REF , we can also derive the following.
+Claim 8.8 
+Conditioned on FORMULA , FORMULA  and FORMULA ,
+there exists FORMULA  such that, with probability at least FORMULA ,
+for any block  FORMULA
+FORMULA 
+
+Using Claims REF  and REF , we derive the deviation of the block-wise harmonic average degrees.
+Recall, for any block FORMULA , the block population mean degree is
+FORMULA 
+and the block-wise harmonic average degree as
+FORMULA 
+Claim 8.9 (Concentration of block-wise harmonic average of degrees) 
+
+Conditioned on FORMULA , FORMULA  and FORMULA ,
+there exists FORMULA  such that, with probability at least FORMULA ,
+for any block FORMULA ,
+FORMULA 
+
+Conditioned on FORMULA , FORMULA  and FORMULA , under the DC-SBM,
+FORMULA 
+
+for some large enough constant FORMULA . The first inequality is from Claim REF , which holds with probability FORMULA . The second inequality is from Claim REF . A similar inequality holds for the opposite direction.
+Thus,
+FORMULA 
+Thus,
+FORMULA 
+for some large enough constant FORMULA .
+By definition of FORMULA  we are done.
+Directly from Claim REF , we show that FORMULA  is close to FORMULA  for each block FORMULA  in the following claim.
+Claim 8.10 
+Conditioned on FORMULA , FORMULA  and FORMULA ,
+there exists FORMULA  such that, with probability at least FORMULA ,
+for any block FORMULA ,
+FORMULA 
+
+Conditioned on FORMULA , FORMULA  and FORMULA , under the DC-SBM, Claims REF  and REF 
+hold simultaneously with probability FORMULA . Then
+FORMULA 
+
+for some large enough constant FORMULA . The first inequality is from Claim REF , while
+the second inequality is from Claim REF . A similar bound holds for the opposite direction. Combining with Claim REF ,
+FORMULA 
+for some large enough constant FORMULA .
+
+Putting everything together
+Finally, we prove the main result.
+[Proof of Theorem REF ]
+By Claims REF  and REF ,
+events FORMULA  and FORMULA  hold with probability
+at least FORMULA . Under those events, by Claims REF  and  REF  with hold with probability FORMULA ,
+FORMULA 
+
+for some large enough FORMULA . Similar for the other direction.
+Then, using Claim  REF ,
+FORMULA 
+for some constant FORMULA . Similarly for the other direction. Thus, there exists constant FORMULA  such that
+FORMULA 
+
+A simple instance showing that the variance of the VH estimator converges slower than  FORMULA
+The following example shows that, in general,
+the Volz-Heckathorn estimator, i.e.,
+FORMULA 
+has a variance asymptotically
+worse than FORMULA  on a two-block stochastic block model. Recall that FORMULA  is the block of FORMULA .
+Theorem 8.11 (Negative example) 
+Let FORMULA  and denote the blocks by FORMULA . Let FORMULA , FORMULA  where FORMULA , FORMULA  for all FORMULA . Let FORMULA 
+be chosen uniformly at random. Let FORMULA  be a complete FORMULA -ary tree. Assume that FORMULA  for some FORMULA  and
+that
+FORMULA 
+Then, with probability at least FORMULA  over the network,
+FORMULA 
+for some FORMULA .
+
+By Claim REF ,
+the event FORMULA  occurs with probability at least
+FORMULA . Therefore, by the conditional variance formula,
+FORMULA 
+By symmetry, FORMULA . Hence, on FORMULA , we have further that
+FORMULA 
+by our assumption on FORMULA , where we used that FORMULA  for all FORMULA .
+To simplify notation, in the rest of the proof, we implicitly condition
+on FORMULA  and FORMULA .
+The population-level chain satisfies
+FORMULA 
+Let FORMULA  be a Markov chain on FORMULA  indexed by FORMULA  with
+transition probabilities FORMULA . By Claim REF , on FORMULA , we can couple FORMULA  and FORMULA 
+except with probability FORMULA , an event we denote by FORMULA . This is because, for each of the FORMULA  transitions, there can only be a difference in probability of FORMULA .Hence, by the conditional variance formula again,
+FORMULA 
+To simplify notation, in the rest of the proof, we implicitly condition
+on FORMULA .
+Define
+FORMULA 
+and notice that, by translation,
+FORMULA 
+and that FORMULA  is centered under FORMULA .
+Under FORMULA , the function FORMULA  is a right-eigenvector
+with eigenvalue
+FORMULA 
+Hence, for any FORMULA  at graph distance FORMULA ,
+it holds that
+FORMULA 
+and
+FORMULA 
+where we used that FORMULA .
+Let FORMULA  be the leaves of FORMULA . Because the
+samples FORMULA  are positively correlated
+by the above calculation
+and FORMULA , we have further that
+FORMULA 
+Finally, by symmetry and the conditional variance formula once more,
+recalling that FORMULA  is the root of FORMULA  we have
+FORMULA 
+with FORMULA  by (REF ).
+Combining the latter with (REF ), (REF ), (REF ), (REF ), and (REF ) gives the result.

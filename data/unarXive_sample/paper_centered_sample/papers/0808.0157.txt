@@ -1,0 +1,1852 @@
+
+0 0
+
+ Multi-Harnack smoothings of real plane branches
+P.D. González PérezJ.-J. Risler
+ Multi-Harnack smoothings of real plane branches
+P.D. González Pérez
+J.-J. Risler
+Departamento de Algebra. Facultad de Ciencias Matemáticas. Universidad Complutense de Madrid.
+Plaza de las Ciencias 3. 28040. Madrid. Spain.pgonzalez@mat.ucm.es
+Institut de Mathématiques de Jussieu. Équipe Analyse Algébrique. Case 247, 4 Place Jussieu, 75252 Paris Cedexrisler@math.jussieu.fr
+González Pérez is supported by Programa Ramón y Cajal and
+MTM2007-6798-C02-02 grants of Ministerio de Educación y
+Ciencia, Spain.Primary 14P25; Secondary 14H20 , 14M25
+smoothings of singularities, real plane curves, Harnack
+curves
+
+Introduction
+The 16th problem of Hilbert addresses the determination and the
+understanding of the possible topological types of smooth real
+algebraic curves of a given degree in the projective plane FORMULA . This paper is concerned with a local version of this
+problem: given a germ FORMULA  of real algebraic plane curve
+singularity, determine the possible topological types of the
+smoothings of FORMULA . A smoothing of FORMULA  is a real analytic
+family FORMULA , for FORMULA , such that FORMULA  and
+FORMULA  is non singular and transversal to the boundary of a Milnor
+ball FORMULA  of the singularity FORMULA  for FORMULA . In this
+case the real part FORMULA  of FORMULA  consists of finitely many
+ovals and non closed components in the Milnor ball.
+In the algebraic case it was shown by Harnack that a real
+projective curve of degree FORMULA  has at most FORMULA  connected components. A curve with this number of components
+is called a FORMULA -curve. In the local case there is a similar bound,
+depending on the number of real branches of the singularity (see
+Section REF ), which arises from the application of the
+classical topological theory of Smith. A smoothing which reaches
+this bound on the number of connected components is called a
+FORMULA -smoothing. It should be noticed that in the local case
+FORMULA -smoothings do not always exists (see {{cite:814c48f3-6711-48c5-ae4b-f59810f90b7e}}). One relevant
+open problem in the theory is to determine the actual maximal
+number of components of a smoothing of FORMULA , for FORMULA  running
+in a suitable form of equisingularity class refining the classical
+notion of Zariski of equisingularity class in the complex world
+(see {{cite:1b397a8b-f942-4907-a924-b8ca9d4c0267}}).
+Quite recently Mikhalkin has proved a beautiful topological
+rigidity property of those FORMULA -curves in FORMULA  which are
+embedded in maximal position with respect to the coordinate
+lines (see {{cite:8a5be0da-59a5-4c1a-a090-6c6e56448956}}). His result, which holds more
+generally, for those FORMULA -curves in projective toric surfaces which
+are cyclically in maximal position with respect to the toric
+coordinate lines, is proved by analyzing the topological
+properties of the associated amoebas. The amoeba of a curve
+FORMULA  is the image of the points FORMULA  in the curve
+by the map FORMULA , given by FORMULA . Conceptually, the amoebas are
+intermediate objects which lay in between classical algebraic
+curves and tropical curves. See {{cite:42b4ef0c-050d-4d04-8cdb-5c2ea72fbb92}}, {{cite:e2d43ef0-fe17-4f76-91b6-459441af98e2}},
+{{cite:8a5be0da-59a5-4c1a-a090-6c6e56448956}}, {{cite:057c4569-e074-4e93-ad8e-140196ef52ae}}, {{cite:e49af652-6000-4e75-ad0d-a371bfc00894}} and {{cite:2385e7a8-5ddd-453a-9916-6039a20f33ac}} for more on
+this notion and its applications.
+In this paper we study smoothings of a real plane branch
+singularity FORMULA , i.e., the germ FORMULA  is analytically
+irreducible in FORMULA  and admits a real Newton-Puiseux
+parametrization. Risler proved that any such germ FORMULA  admits a
+FORMULA -smoothing with the maximal number ovals, namely FORMULA , where FORMULA  denotes the Milnor number. The
+technique used, called nowadays the blow-up method, is a
+generalization of the classical Harnack construction of FORMULA -curves
+by small perturbations, using the components of the exceptional
+divisor as a basis of rank one (see {{cite:bd5bf0fa-cefa-4fd2-b7b5-2bbbc2f4c3c5}}, {{cite:f922bca1-7096-4c8c-b75e-8e1fd9620295}} and
+{{cite:1b397a8b-f942-4907-a924-b8ca9d4c0267}}). One of our motivations was to study to which extent
+Mikhalkin's result holds for smoothings of singular points of real
+plane curves, particularly for Harnack smoothings, those
+FORMULA -smoothings which are in maximal position with respect to two
+coordinates lines through the singular point.
+We develop a new construction of smoothings of a real plane branch
+FORMULA  by using Viro Patchworking method. Since real plane
+branches are Newton degenerated, we cannot apply Viro Patchworking
+method directly. Instead we apply the Patchworking method for
+certain Newton non degenerate curve singularities with
+several branches which are defined by semi-quasi-homogeneous
+polynomials. These singularities appear as a result of iterating
+deformations of the strict transforms FORMULA , at certain
+infinitely near points FORMULA  of the embedded resolution of
+singularities of FORMULA . Our method yields multi-parametric
+deformations, which we call multi-semi-quasi-homogeneous
+(msqh) and provides simultaneously msqh-smoothings of the strict
+transforms FORMULA . We exhibit suitable hypothesis which
+characterize FORMULA -smoothings and Harnack smoothings for this class
+of deformations (see Theorem REF ). Up to the author's
+knowledge, Theorem REF  is the first instance in the
+literature in which Viro Patchoworking method is used to define
+smoothings of Newton degenerated singularities, with controlled
+topology.
+We introduce the notion of multi-Harnack smoothings, those
+Harnack smoothings, such that the msqh-FORMULA -smoothings of the
+strict transforms FORMULA  appearing in the process are Harnack.
+We prove that any real plane branch FORMULA  admits a multi-Harnack
+smoothing. For this purpose we prove the existence of Harnack
+smoothings of singularities defined by certain
+semi-quasi-homogeneous polynomials (see Proposition
+REF ). One of our main results, Theorem
+REF , states that multi-Harnack smoothings of a real
+plane branch FORMULA  have a unique topological type, which depends
+only on the complex equisingular class of FORMULA . In particular,
+multi-Harnack smoothings do not have nested ovals. Theorem
+REF  can be understood as a local version of Mikhalkin's
+Theorem REF . The proof is based on Theorem REF 
+and an extension of Mikhalkin's result for Harnack smoothings of
+certain non-degenerated singular points (Theorem REF ).
+We also analyze certain multi-scaled regions containing the ovals.
+The phenomena is quite analog to the analysis of the asymptotic
+concentration of the curvature of the Milnor fibers in the complex
+case, due to García Barroso and Teissier {{cite:4aa400ba-bd25-4b82-be75-14eff294f963}}.
+It is a challenge for the future to extend, as possible, the
+techniques and results of this paper to the constructions of
+smoothings of other singular points of real plane curves.
+The paper is organized as follows. The five first sections are
+preliminary material: in Sections , 
+and  we introduce the Viro Patchworking method, also in
+the toric context; we recall Mikhalkin's result on Harnack curves
+in projective toric surfaces in Section ; the notion of
+smoothings of real plane curve singular points is presented in
+section . Section 
+contains the first new results, in particular, the determination
+of the topological type of Harnack smoothings of singularities
+defined by certain non degenerated semi-quasi-homogeneous
+polynomials (see Theorem REF ). In Section 
+we recall the construction of a toric resolution of a plane branch
+and we introduce the support of the msqh-smoothings, which are
+studied in the last section. The main results of the paper are
+collected in Section : the characterization of maximal,
+Harnack and multi-Harnack-msqh-smoothings in Theorem REF 
+and Corollary REF , and the characterization of the
+topological type of multi-Harnack smoothings in Theorem
+REF , the description of the scales of ovals in
+Section REF  and finally some examples explained in
+detail.
+
+Basic notations and definitions
+A real algebraic variety is a complex algebraic variety FORMULA 
+invariant by an anti-holomorphic involution, we denote by FORMULA 
+the real part. For instance, a real algebraic plane curve FORMULA  is a complex plane curve which is invariant under
+complex conjugation. The curve FORMULA  is defined by FORMULA  where FORMULA . We use the following
+notations and definitions:
+The Newton polygon of FORMULA  (resp. the local Newton
+polygon) is the convex hull in FORMULA  of the set FORMULA  (resp. of FORMULA ).
+If FORMULA  we
+denote by FORMULA  the symbolic restriction FORMULA .
+Suppose that FORMULA  is an isolated singular point
+of FORMULA  and that FORMULA  does not contain a coordinate axis. Then the
+Newton diagram of FORMULA  is the closed region FORMULA  bounded by the
+coordinate axis and the local Newton polygon of FORMULA .
+The polynomial FORMULA  is non degenerated (resp. real non
+degenerated) with respect to its Newton polygon if for any
+compact face FORMULA  of it we have that FORMULA  defines
+a non singular subset of FORMULA  (resp. of FORMULA ). In this
+case if FORMULA  is an edge of the Newton polygon of FORMULA , then
+the polynomial FORMULA  is of the form:
+FORMULA 
+where FORMULA , FORMULA , the integers FORMULA  are coprime and the numbers FORMULA , which
+are called peripheral roots of FORMULA  along the edge FORMULA 
+or simply peripheral roots of  FORMULA, are distinct (resp.
+the real peripheral roots of FORMULA  are distinct). Notice
+that the non degeneracy (resp. real non degeneracy) of FORMULA  implies
+that FORMULA  is non singular (resp. FORMULA ),
+for taking FORMULA  equal to the Newton polygon of FORMULA  in the
+definition.
+We say that FORMULA  is non degenerated (resp. real non
+degenerated) with respect to its local Newton polygon if for any
+edge FORMULA  of it we have that the equation FORMULA 
+defines a non singular subset of FORMULA  (resp. of FORMULA ).
+The notion of non degeneracy with respect to the Newton polyhedra
+extend for polynomials of more than two variables (see
+{{cite:8110abd3-0473-4174-802c-5e5ef8eb8d08}}).
+
+The real part of a projective toric variety
+We introduce basic notations and facts on the geometry of toric
+varieties. We refer the reader to {{cite:e2d43ef0-fe17-4f76-91b6-459441af98e2}}, {{cite:0565c4db-dc2f-49b8-b1d0-ca7eed40b9ec}} and
+{{cite:12ff4e82-7203-425d-87fc-57996f1b4e23}} for proofs and more general statements. For
+simplicity we state the notations only for surfaces.
+Let FORMULA  be a convex two dimensional polytope in FORMULA  with integral vertices, a polygon in what follows. We
+associate to the polygon FORMULA  a projective toric variety
+FORMULA . The algebraic torus FORMULA  is embedded as an open
+set of FORMULA , and acts on FORMULA , in a way which
+coincides with the group operation on the torus. There is a one to
+one correspondence between the faces of FORMULA  and the orbits of
+the torus action, which preserves the dimensions and the
+inclusions of the closures. If FORMULA  is a one dimensional face
+of FORMULA , we have an embedding FORMULA .
+The variety FORMULA  is a projective line FORMULA  embedded in
+FORMULA . These lines are called the coordinate lines of
+FORMULA . The intersection of two coordinate lines
+FORMULA  and FORMULA  reduces to a point (resp. is
+empty) if and only if the edges FORMULA  and FORMULA 
+intersect in a vertex of FORMULA  (resp. otherwise). The surface
+FORMULA  may have singular points only at the zero-dimensional
+orbits. The algebraic real torus FORMULA  is an open subset of
+the real part FORMULA  of FORMULA  and acts on it. The
+orbits of this action are just the real parts of the orbits for
+the complex algebraic torus action. For instance if FORMULA  the
+simplex with vertices FORMULA , FORMULA  and FORMULA  then the
+surface FORMULA  with its coordinate lines
+is the complex projective plane with the classical three
+coordinate axis.
+The image of the moment map FORMULA ,
+FORMULA 
+is FORMULA , where FORMULA  denotes
+relative interior. The restriction FORMULA  is a diffeomorphism of FORMULA  onto the interior
+of FORMULA .
+Denote by FORMULA  the group consisting
+of the orthogonal symmetries of FORMULA  with respect to the
+coordinate lines, namely the elements of FORMULA  are
+FORMULA , where FORMULA  for FORMULA .
+If FORMULA  we denote by FORMULA  the union FORMULA .
+The map FORMULA  extends to a diffeomorphism: FORMULA  by FORMULA , for FORMULA  and FORMULA .
+If FORMULA  is an edge of FORMULA  and if FORMULA  is a
+primitive integral vector orthogonal to FORMULA  we denote by
+FORMULA  or by FORMULA  the element of FORMULA  defined by FORMULA .
+We consider the equivalence relation FORMULA  in the set
+FORMULA , which for each edge FORMULA  of FORMULA ,
+identifies a point in FORMULA  with its symmetric image by
+FORMULA . Set FORMULA  the image of
+FORMULA  in FORMULA . For each edge
+FORMULA  of FORMULA  we have diffeomorphisms FORMULA  and
+FORMULA , corresponding to the moment map in the one
+dimensional case. Notice that FORMULA  has two connected components and the real part
+FORMULA  corresponds to FORMULA .
+We summarize this constructions in the following result (see
+{{cite:0565c4db-dc2f-49b8-b1d0-ca7eed40b9ec}} Proposition 1.8 and {{cite:e2d43ef0-fe17-4f76-91b6-459441af98e2}}, Chapter 11, Theorem 5.4
+for more details and precise statements).
+Proposition 2.1 
+The morphisms defined from the moment map glue up ia a stratified
+homeomorphism
+FORMULA 
+which for any edge FORMULA  of FORMULA  applies
+FORMULA  to the correspondent coordinate line FORMULA . The composite
+FORMULA 
+is the inclusion of the real part of the torus in FORMULA .
+
+A polynomial FORMULA  with Newton polygon equal to FORMULA  defines a
+real algebraic curve FORMULA  in the real toric surface FORMULA 
+which does not pass through any 0-dimensional orbit. If FORMULA  is
+smooth its genus coincides with the number of integral points in
+the interior of FORMULA , see {{cite:9275440a-a03f-4f31-a8c6-fd4cc7d1ebbe}}. The curve FORMULA  is a
+FORMULA -curve if FORMULA  has the maximal number FORMULA  of connected components. If FORMULA  is
+an edge of FORMULA  the intersection of FORMULA  with the coordinate
+line FORMULA  is defined by FORMULA . The number of
+zeroes of FORMULA  in the projective line FORMULA ,
+counted with multiplicity, is equal to the integral length
+of the segment FORMULA , i.e., one plus the number of integral
+points in the interior of FORMULA . This holds since these zeroes
+are the image of the peripheral roots FORMULA  of FORMULA  (see
+(REF )) by the embedding map FORMULA .
+For
+this reason we abuse sometimes of terminology and call peripheral
+roots the zeroes of FORMULA  in the projective line
+FORMULA .
+
+Patchworking real algebraic curves
+Patchworking is a method introduced by Viro for constructing real
+algebraic hypersurfaces (see {{cite:41954463-7ad2-4ac3-938d-bf02bd1786e7}}, {{cite:b6d82989-4cf9-4590-9748-b32b4d96d51f}} {{cite:95bc6004-f90f-48e6-bd09-0061871a570c}},
+{{cite:623e458e-b347-4c18-892c-8f998833b03d}} and {{cite:92314168-136b-4bdc-9796-a30acb148f45}}, see also {{cite:e2d43ef0-fe17-4f76-91b6-459441af98e2}} and {{cite:eb5bf8bf-71f8-423e-be99-77b014a178aa}}
+for an exposition and {{cite:a4df6c9f-1176-4bdf-a436-1a5e3b65786a}} and {{cite:49d23840-f068-49b4-ad76-3fb4570a4e25}} for some
+generalizations). We use the Notations introduced in Section
+.
+Let FORMULA  be an integral polygon. The
+following definition is fundamental.
+Definition 3.1 
+Let FORMULA  define a real algebraic curve FORMULA  then the
+FORMULA -chart FORMULA  of FORMULA  is the closure of
+FORMULA  in FORMULA .
+
+If FORMULA  is the Newton polygon of FORMULA  we often denote
+FORMULA  by FORMULA  or by FORMULA 
+if the coordinates used are clear from the context. If FORMULA  is real
+non degenerated with respect its Newton polygon, then for any face
+FORMULA  of
+FORMULA  we have that FORMULA  and the
+intersection FORMULA  is
+transversal (as stratified sets).
+Notation 3.2 
+We consider a polynomial FORMULA , as a family of polynomials in FORMULA .
+
+We denote by FORMULA  the Newton polygon of
+FORMULA , when FORMULA .
+
+We denote by FORMULA  the Newton polytope of FORMULA , when it is viewed
+as a polynomial in FORMULA .
+
+We denote by FORMULA  the lower part of FORMULA , i.e.,
+the union of compact faces of the Minkowski sum FORMULA .
+
+The restriction of the second projection FORMULA  to FORMULA  induces a finite
+strictly convex polyhedral subdivision FORMULA  of FORMULA . The
+inverse function FORMULA  is a
+piece-wise affine strictly convex function. Any cell
+FORMULA  of the subdivision FORMULA  corresponds by this
+function to a face FORMULA  of FORMULA  contained in
+FORMULA , of the same dimension, and the converse also
+holds. The Newton polygon of FORMULA  is a face of FORMULA  by
+construction.
+
+If FORMULA  is a cell of FORMULA  we denote
+by FORMULA , or by FORMULA  the
+polynomial in FORMULA  obtained by substituting FORMULA  in
+FORMULA .
+
+
+Theorem 3.1  With the above notations,
+if for each face FORMULA  of FORMULA  contained in
+FORMULA  the polynomial FORMULA  is
+real non degenerated with respect to FORMULA , then the pair FORMULA  is stratified
+homeomorphic to FORMULA , where FORMULA 
+is the curve obtained by gluing together in FORMULA  the
+charts FORMULA  for
+FORMULA  running through the cells of the subdivision FORMULA ,
+for FORMULA .
+
+Remark 3.3 
+The statement of Theorem REF  above is a slight
+generalization of the original result of Viro in which the
+deformation is of the form FORMULA ,
+for some real coefficients FORMULA . The same proof generalize
+without relevant changes to the case presented here, when we may
+add terms FORMULA  with FORMULA  and
+exponents FORMULA  contained in FORMULA .
+
+Remark 3.4 
+Theorem REF  extends naturally to provide constructions of
+real algebraic curves with prescribed topology in the real toric
+surface FORMULA . The chart FORMULA  of the curve FORMULA  in FORMULA  is defined as the closure
+of FORMULA  in FORMULA  (where
+FORMULA  is the equivalence relation defined in Section
+). Then the statement of Theorem REF  holds for
+the curve FORMULA  defined by FORMULA  in FORMULA  by identifying
+FORMULA  and FORMULA  by the map FORMULA 
+(see (REF )).
+
+Definition 3.5 The gluing of charts of Theorem REF  is called combinatorial patchworking if the subdivision FORMULA  is a primitive triangulation of FORMULA , i.e., it contains all
+integral points of FORMULA  as vertices.
+
+Notice that FORMULA  is a primitive triangulation if the two
+dimensional cells FORMULA  are primitive triangles, i.e., of area
+FORMULA  with respect to the standard volume form induced by a basis
+of the lattice FORMULA . The description of the charts of a
+combinatorial patchworking is determined by the subdivision
+FORMULA  and the signs of the terms appearing in FORMULA  as a polynomial in FORMULA  and FORMULA . The distribution of signs FORMULA , induced by taking the signs of the terms appearing in
+FORMULA , extends to
+FORMULA 
+The chart associated to the polynomial FORMULA  in a triangle is
+empty if all the signs are equal and otherwise is isotopic to
+segment dividing the triangle in two parts, each one containing
+only vertices of the same sign. See {{cite:e2d43ef0-fe17-4f76-91b6-459441af98e2}}, {{cite:92314168-136b-4bdc-9796-a30acb148f45}},
+{{cite:1dd2fb12-3ab9-4bf2-8eea-e78726cafe4d}}.
+
+Maximal and Harnack curves in projective toric
+surfaces
+If FORMULA  is a smooth real projective curve of degree FORMULA  then the
+classical Harnack inequality states that the number of connected
+components of its real part FORMULA  is bounded by
+FORMULA . The curve FORMULA  is called maximal or
+FORMULA -curve if the number of components is equal to the bound.
+Maximal curves always exists and geometric constructions of such
+curves were found in particular by Harnack, Hilbert and Brusotti.
+Determining the possible topological types of the pairs FORMULA  in terms of the degree FORMULA  is usually called the first part
+of the Hilbert's 16th problem.
+Definition 4.1 
+A real projective curve FORMULA  of degree d is in
+
+maximal position with respect to a real line FORMULA 
+if the intersection FORMULA  is transversal, FORMULA  and FORMULA  is contained in one connected component of
+FORMULA .
+
+maximal position with respect to real lines
+FORMULA  in FORMULA  if FORMULA  is in maximal position with
+respect to FORMULA , and there exist FORMULA  disjoint arcs
+FORMULA  contained in one connected
+component of FORMULA  such that FORMULA , for FORMULA .
+
+
+Mikhalkin studied the topological types of the triples
+FORMULA  for those
+FORMULA -curves FORMULA  in maximal position with respect to lines FORMULA . He proved that for FORMULA  there is a unique
+topological type, while for FORMULA  there is none. For FORMULA  the
+classification reduces to the topological classification of
+maximal curves in the real affine plane (which is open for FORMULA ), while for FORMULA  there are several constructions of FORMULA -curves
+of degree FORMULA , which were found by Brusotti, with FORMULA . See
+{{cite:e6163aa7-d27d-498b-bf9d-b4789e8a15ff}} and {{cite:8a5be0da-59a5-4c1a-a090-6c6e56448956}}.
+Mikhalkin's results were stated and proved more generally for
+real algebraic curves in projective toric surfaces. We denote by
+FORMULA  the sequence of cyclically incident coordinate
+lines in the toric surface FORMULA  associated to the polygon
+FORMULA . The notion of maximal position of a real algebraic
+curve FORMULA  with respect one line is the same as
+in the projective case.
+Definition 4.2 A real algebraic curve FORMULA  in the toric surface FORMULA  is in
+maximal position with respect to lines
+FORMULA , for FORMULA , if there exist FORMULA  disjoint arcs FORMULA  contained in one connected component of FORMULA 
+such that the
+intersection FORMULA  is transversal and contained in
+FORMULA , while FORMULA  if FORMULA , for FORMULA  and FORMULA . In addition, we say that:
+
+The curve FORMULA  is cyclically in maximal position
+if it is in maximal position with respect to the lines FORMULA  and the points of intersection of FORMULA  with the
+lines FORMULA  when viewed in the connected component of
+FORMULA  are partially ordered, following the adjacency of the lines
+FORMULA  .
+
+The curve
+FORMULA  has good oscillation with respect to the line FORMULA  if the
+points of intersection of FORMULA  with FORMULA  have the same order when
+viewed in the arc FORMULA  and in the line FORMULA .
+
+
+Remark 4.3 If FORMULA  is in maximal position with respect to
+the coordinate line FORMULA , for FORMULA  an edge of
+FORMULA , we say also that the chart FORMULA  is in maximal position with respect to FORMULA 
+(see Proposition REF ).
+
+We have the following result of Mikhalkin (see {{cite:8a5be0da-59a5-4c1a-a090-6c6e56448956}}).
+Theorem 4.1 
+With the above notations if a FORMULA -curve FORMULA  is cyclically in
+maximal position with respect to the coordinate lines FORMULA  of the real toric surface FORMULA  then the topological
+type of the triple FORMULA  depends only
+on FORMULA .
+
+Definition 4.4 A Harnack curve in the real toric surface FORMULA  is a real
+algebraic curve FORMULA  verifying the conclusion of Theorem
+REF .
+
+Remark 4.5
+
+The notion of Harnack curve in this case depends on the
+polygon FORMULA . Changing FORMULA  by FORMULA , for FORMULA 
+provides the same toric variety but the corresponding Harnack
+curves are different.
+
+By our convention and the definitions, the Newton polygon of
+a polynomial FORMULA , defining a Harnack curve FORMULA  is equal to FORMULA . Notice also that FORMULA  is non
+degenerated with respect to FORMULA  and for any edge FORMULA  of
+FORMULA  the peripheral roots of FORMULA  along the edge FORMULA  are
+real and of the same sign (see (REF )).
+
+
+If FORMULA 
+defines a Harnack curve in FORMULA  we denote by FORMULA  the
+unique connected component of FORMULA  which intersects the
+coordinate lines and by
+FORMULA  the set FORMULA , where FORMULA  runs through the connected components of the set
+FORMULA , whose boundary meets at most two
+coordinate lines. The set FORMULA  is an open region
+bounding FORMULA  and the coordinate lines of the toric surface.
+The following Proposition, which is a reformulation of the
+results of Mikhalkin {{cite:8a5be0da-59a5-4c1a-a090-6c6e56448956}}, describes completely the
+topological type of the real part of a Harnack curve in a toric
+surface. See Figure REF  below an example.
+Proposition 4.6 
+With the previous notations, if FORMULA  defines a Harnack curve in
+FORMULA  then FORMULA  is cyclically in maximal position with good
+oscillation with respect to the coordinate lines of the toric
+surface FORMULA . Moreover, the set of connected components of
+FORMULA  can be labelled as FORMULA  in such a way that:
+- there exists a unique FORMULA 
+such that for any FORMULA :
+FORMULA 
+- the set of components FORMULA  consists of non nested ovals in FORMULA .
+- if FORMULA  then the
+intersection of closures FORMULA  reduces to a point in FORMULA  if
+and only if FORMULA  and FORMULA  are consecutive integral points
+in FORMULA  for some edge FORMULA  of FORMULA , or it is empty
+otherwise.
+- we have that FORMULA .
+
+The following Proposition describes the construction of Harnack
+curve in the real toric surface FORMULA  by using combinatorial
+patchworking (see {{cite:1dd2fb12-3ab9-4bf2-8eea-e78726cafe4d}} Proposition 3.1 and
+{{cite:8a5be0da-59a5-4c1a-a090-6c6e56448956}} Corollary A4).
+Definition 4.7 
+Denote by FORMULA  the function
+FORMULA . A Harnack
+distribution of signs is any of the following distributions FORMULA , where FORMULA  (see (REF )).
+
+Proposition 4.8 
+Let FORMULA  be a Harnack distribution of signs and FORMULA  define a primitive triangulation of
+FORMULA , then the polynomial
+FORMULA 
+defines a Harnack curve in FORMULA , for FORMULA .
+
+Proof. Suppose without loss of generality that FORMULA . Since the triangulation is primitive any triangle FORMULA 
+containing a vertex with both even coordinates, which we call even
+vertex, has the other two vertices with at least one odd
+coordinate. It follows that the even vertex has a sign different
+than the two other vertices. If the even vertex is in the interior
+of FORMULA  then there is necessarily an oval around it, resulting
+of the combinatorial patchworking. The situations in the other
+quadrants is analogous by the symmetry of the Harnack distribution
+of signs since, for each triangle FORMULA , for any vertex FORMULA 
+there is a unique symmetry FORMULA  such that the sign of
+FORMULA  is different than the sign of the two other
+vertices of FORMULA . It follows that there are FORMULA  ovals which do not cut the
+coordinate lines and exactly one more component which has good
+oscillation with maximal position with respect to the coordinate
+lines of FORMULA .  FORMULA
+
+Smoothings of real plane singular points
+Let FORMULA  be a germ of real plane curve with an isolated
+singular point at the origin. Set FORMULA  for the
+ball
+of center 0 and of radius FORMULA . If FORMULA 
+each branch of FORMULA  intersects FORMULA 
+transversally along a smooth circle and the same property holds
+when the radius is decreased (analogous statements hold also for
+the real part). Then we denote the ball FORMULA  by
+FORMULA , and we called it a Milnor ball for FORMULA . See
+{{cite:c620b763-8fc0-4568-826e-10b3f41e811f}}).
+A smoothing FORMULA  is a real analytic
+family FORMULA , for FORMULA  such that FORMULA 
+and FORMULA  for FORMULA  is non singular and transversal to
+the boundary. By the connected components of the smoothing FORMULA 
+we mean the components of the real part FORMULA  of FORMULA  in the
+Milnor ball. These components consist of finitely many ovals and
+non closed connected components.
+Definition 5.1
+
+The topological type of a smoothing FORMULA  of a
+plane curve singularity FORMULA  with Milnor ball FORMULA  is
+the topological type of the pair FORMULA .
+
+The signed topological type of a smoothing
+FORMULA  of a plane curve singularity FORMULA  with Milnor ball FORMULA  with respect to fixed coordinates FORMULA  is the
+topological type of the pairs, FORMULA , for FORMULA , where FORMULA 
+denotes the open quadrant FORMULA .
+
+
+A branch of FORMULA  is real if it has a Newton Puiseux
+parametrization with real coefficients. Denote by FORMULA  the number
+of (complex analytic) branches of FORMULA . The number of non
+closed components is equal to FORMULA , the number of real
+branches of FORMULA . The number of ovals of a smoothing FORMULA  is
+FORMULA  if FORMULA  and FORMULA  if FORMULA ; where FORMULA 
+denotes the Milnor number of FORMULA  at the origin (see {{cite:a940d377-29ca-42c3-bde9-c90303e3f789}},
+{{cite:bd5bf0fa-cefa-4fd2-b7b5-2bbbc2f4c3c5}}, {{cite:814c48f3-6711-48c5-ae4b-f59810f90b7e}} and {{cite:f922bca1-7096-4c8c-b75e-8e1fd9620295}}). A smoothing is called a
+FORMULA -smoothing if the number of ovals is equal to the bound.
+The existence of FORMULA -smoothings is a quite subtle problem, for
+instance if FORMULA  is a real plane branch there exists always a
+FORMULA -smoothing (see {{cite:bd5bf0fa-cefa-4fd2-b7b5-2bbbc2f4c3c5}}) however there exists singularities
+which do not have a FORMULA -smoothing (see {{cite:814c48f3-6711-48c5-ae4b-f59810f90b7e}}). Some other
+types of real plane singularities which do have a FORMULA -smoothing
+are described in {{cite:f922bca1-7096-4c8c-b75e-8e1fd9620295}} and {{cite:1b397a8b-f942-4907-a924-b8ca9d4c0267}}.
+Patchworking smoothings of plane curve singularities
+With the notations as above we consider a family of polynomials
+FORMULA  such that FORMULA , FORMULA , FORMULA  and FORMULA  defining a smoothing FORMULA  of the germ of plane curve
+singularity FORMULA  of equation FORMULA . Then the germ
+FORMULA  does not contain any of the coordinate axis and FORMULA  for FORMULA . The Newton diagram FORMULA  of FORMULA  is contained
+in the Newton polygon FORMULA  of FORMULA , for FORMULA .
+The following result is a consequence of Theorem REF , see
+{{cite:623e458e-b347-4c18-892c-8f998833b03d}}, {{cite:b6d82989-4cf9-4590-9748-b32b4d96d51f}} and {{cite:1b397a8b-f942-4907-a924-b8ca9d4c0267}}.
+Theorem 5.1  With Notations REF ,
+the family FORMULA  defines a
+convex subdivision FORMULA  of FORMULA  in polygons. If
+FORMULA  are the cells of FORMULA  contained
+in FORMULA  and if
+FORMULA  is real non degenerated
+with respect to FORMULA  for FORMULA , then the family
+FORMULA  defines a smoothing FORMULA  of FORMULA  such that the pairs
+FORMULA  and FORMULA  are
+homeomorphic (in a stratified sense), for FORMULA .
+
+The hypothesis of Theorem REF  imply that FORMULA  is real
+non degenerated with respect to its local Newton polygon.
+
+Semi-quasi-homogeneous smoothings
+We say that a polynomial FORMULA , with FORMULA  is
+semi-quasi-homogeneous (sqh)
+if its local Newton polygon has only one compact edge.
+Notation 5.2 
+Consider a sqh-polynomial FORMULA  with Newton polygon
+with compact edge FORMULA  and Newton diagram
+FORMULA . We denote by FORMULA  the set FORMULA . The number FORMULA 
+is equal to the
+integral length of the segment FORMULA . We set FORMULA 
+and FORMULA . Notice that the polynomial FORMULA  is of the
+following form:
+FORMULA 
+where the exponents FORMULA  of the terms which are not
+written verify that FORMULA .
+Denote
+by FORMULA  the set FORMULA .
+
+Suppose that all the peripheral roots FORMULA  of FORMULA 
+are real and different. In this case, using Kouchnirenko's
+expression for the Milnor number of FORMULA  (see {{cite:8110abd3-0473-4174-802c-5e5ef8eb8d08}}), we
+deduce that the bound on the number of connected components (resp.
+ovals) of a smoothing of FORMULA  is equal to
+FORMULA 
+We consider a uniparametrical family of polynomials FORMULA 
+with real coefficients with FORMULA  and FORMULA  of
+the form (REF ).
+Consider the lower part FORMULA  of the Newton polyhedra
+of FORMULA  viewed as a polynomial in FORMULA . The projection
+of the faces of FORMULA  define a polygonal subdivision
+FORMULA  of the Newton polygon FORMULA  of FORMULA ,
+viewed as a polynomial in the variables FORMULA  and FORMULA . See
+Notations REF .
+Definition 5.3 
+We say that FORMULA  is a semi-quasi-homogeneous (sqh) deformation
+(resp. smoothing) of FORMULA  if FORMULA  is a face of the subdivision
+FORMULA  (resp. and in addition the polynomial
+FORMULA  is real non degenerated).
+
+Notice that if FORMULA  is a sqh-deformation the polynomial
+FORMULA  is quasi-homogeneous as a polynomial in FORMULA . This implies that any non zero monomial of
+FORMULA  is of the form FORMULA 
+where the ratio of FORMULA  by FORMULA  is some positive
+constant for all FORMULA .
+If FORMULA  is real non degenerated then the real
+peripheral roots of FORMULA  are all different. It follows
+that FORMULA  defines a smoothing of FORMULA  by Theorem
+REF .
+In {{cite:623e458e-b347-4c18-892c-8f998833b03d}} Viro introduces sqh-smoothing as follows: Suppose
+that FORMULA , is non degenerated with respect to its
+Newton polygon FORMULA . Let FORMULA  be the
+function:
+FORMULA 
+Then FORMULA  defines a sqh-smoothing of FORMULA . For
+technical reasons we consider in Definition REF  a slightly
+more general notion, by allowing terms which depend on FORMULA  and
+which have exponents above the lower part of the Newton polyhedron
+of FORMULA , viewed in FORMULA 
+(cf. Notations REF ).
+
+Size of ovals of sqh-smoothings
+In this Section we consider some remarks about the sizes of ovals
+of sqh-smoothing FORMULA  of FORMULA  We say that FORMULA 
+if there exists a non zero constant FORMULA  such that FORMULA  when FORMULA  tends to 0.
+Definition 5.4 
+An oval of FORMULA  is of size FORMULA  if it is contained in a
+minimal box of edges parallel to the coordinate axis such that
+each vertex of the box has coordinates of the form FORMULA .
+
+Proposition 5.5 
+Let FORMULA  is a sqh-smoothing of FORMULA . If the sqh-smoothing is
+described with Notations REF , then each oval of the
+smoothing is of size FORMULA .
+
+Proof. The critical points of the projection FORMULA , given by FORMULA , are those defined by
+FORMULA  and FORMULA . The critical
+values of this projection are defined by zeroes in FORMULA  of the
+discriminant FORMULA . Using the non degeneracy conditions on
+the edges of the local Newton polyhedron of FORMULA , viewed
+as a polynomial in FORMULA  and ThÃ©orÃ¨me 4 in {{cite:2fd89fa2-6d2f-4698-b5b9-1210eb23dd8a}} we
+deduce that the local Newton polygon of FORMULA , as a
+polynomial in FORMULA  has only two vertices: FORMULA  and FORMULA . It follows by the Newton-Puiseux Theorem that the
+roots of the discriminant FORMULA  as a polynomial in FORMULA ,
+express as fractional power series of the form:
+FORMULA 
+which correspond to the root FORMULA  of FORMULA  and
+FORMULA 
+which correspond to the non zero roots FORMULA  of
+FORMULA  (counted with multiplicity). The critical values of the
+smoothing are among those described by (REF ). The critical
+values (REF ) correspond to slight perturbations of critical
+values of FORMULA , outside the Milnor ball of
+FORMULA .
+We argue in a similar manner for the projection FORMULA , given by FORMULA .  FORMULA
+
+Harnack smoothings
+We generalize the notions of maximal position and good
+oscillation and Harnack, introduced in Section ,
+to the case of smoothings as follows:
+Definition 6.1
+
+A smoothing FORMULA  of FORMULA  is in maximal
+position (resp. has good oscillation) with respect to a line FORMULA 
+passing through the origin if there exists FORMULA  different
+points of intersection of FORMULA  with FORMULA , which tend to 0 as
+the parameter FORMULA  tends to 0, and which are all contained in
+an arc FORMULA  of the smoothing (resp. FORMULA 
+is in maximal position and the order of the points in FORMULA  is the same when the points are viewed in the line FORMULA  or
+in the arc FORMULA ), for all FORMULA .
+
+A smoothing FORMULA  of FORMULA  is in maximal
+position with respect to two lines FORMULA  passing through the
+origin if it is in maximal position with respect to the lines
+FORMULA  and FORMULA  and if the FORMULA  points of intersection of
+FORMULA  with FORMULA , which tend to 0 as the parameter FORMULA 
+tends to 0, are all contained in an arc FORMULA  of
+the smoothing FORMULA  , for FORMULA , such that
+FORMULA  and FORMULA  are disjoint and
+contained in the same component of the smoothing FORMULA , for all
+FORMULA .
+
+A Harnack smoothing is a FORMULA -smoothing which is in
+maximal position with good oscillation with respect to the lines
+FORMULA  and FORMULA .
+
+
+FIGURE 
+Remark 6.2 Every real
+plane branch admits a Harnack smoothing (this result is implicit
+in the blow up method of {{cite:bd5bf0fa-cefa-4fd2-b7b5-2bbbc2f4c3c5}}).
+
+The case of non degenerated sqh-polynomials with peripheral roots of the same sign
+We consider the case of a plane curve singularity FORMULA  defined
+by a semi-quasi-homogeneous polynomial FORMULA  such
+that the peripheral roots associated to the compact edge of its
+local Newton polygon are all real, different and of the same sign.
+We prove that there exists a Harnack smoothing FORMULA  of FORMULA 
+constructed by Patchworking. This result is quite similar to
+{{cite:1b397a8b-f942-4907-a924-b8ca9d4c0267}} Theorem 4.1 (1), where under the same hypothesis, they
+prove that a FORMULA -smoothing exists. We prove then that the
+embedded topological type of the Harnack smoothing of FORMULA  is
+unique.
+We keep Notations REF  in the description of the
+polynomial FORMULA .
+Existence of Harnack smoothings
+Lemma 6.3 
+There exists a piece-wise affine linear convex function FORMULA , which takes integral values on FORMULA , vanishes on FORMULA  and induces a triangulation
+of FORMULA  with the following properties:
+
+All the integral points in FORMULA  are vertices of the
+triangulation.
+
+There exists exactly one triangle FORMULA  in the
+triangulation which contains FORMULA  as an edge. The triangle FORMULA 
+is transformed by a translation and a FORMULA -transformation
+into the triangle FORMULA .
+
+If FORMULA  is in the triangulation then FORMULA  is
+primitive.
+
+
+Proof. With the above notations take FORMULA  the
+closest integral point to FORMULA . Let FORMULA  be the
+triangle with vertices FORMULA  (see Figure REF ).
+Then assertion (ii) follows. It is then easy to construct a convex
+triangulation of FORMULA  which contains FORMULA  and which is primitive on
+FORMULA  (see {{cite:1b397a8b-f942-4907-a924-b8ca9d4c0267}}).  FORMULA
+FIGURE 
+We say that a distribution of signs FORMULA  is compatible
+with a polynomial FORMULA  if
+FORMULA .
+Proposition 6.4  With the above notations,
+let FORMULA  be a semi-quasi-homogeneous polynomial
+defining a plane curve singularity FORMULA . If the peripheral
+roots of FORMULA  are all different and of the same sign,
+then there are two Harnack distribution of signs, FORMULA 
+and FORMULA , which are compatible with FORMULA . Let
+FORMULA  be as in Lemma REF . Then the polynomial
+FORMULA 
+defines a Harnack smoothing of FORMULA , for FORMULA .
+
+Proof. We keep Notations REF . We suppose
+without loss of generality that the peripheral roots of FORMULA 
+are all positive. Then the signs of the coefficients
+corresponding to consecutive terms in the edge FORMULA  are always
+different. By a simple observation on the set of Harnack
+distribution of signs it follows that there exists precisely two
+different Harnack distribution of signs FORMULA 
+which are compatible with FORMULA  (see Definition
+REF ). Since FORMULA  by definition of FORMULA  (see Section
+) the distributions of signs FORMULA  and FORMULA 
+are related by FORMULA .
+We use notations REF . Let FORMULA  be a piece-wise affine convex function satisfying
+the statement of Lemma REF . By Lemma REF  the
+chart of FORMULA  is transformed by a translation and a
+FORMULA -transformation to the chart of a polynomial with
+Newton polygon with vertices FORMULA , FORMULA  and FORMULA , i.e.,
+to the chart of the graph of a polynomial of one variable with
+FORMULA  different positive real roots . The topology of this chart is
+determined by the sign of the term corresponding to FORMULA . Let
+FORMULA  be a convex piece-wise affine function
+determined by its integral values on FORMULA . We can assume
+that FORMULA  induces a primitive triangulation of FORMULA  and of FORMULA  the functions FORMULA  and FORMULA  define
+the same primitive triangulation (by translating FORMULA  we can
+assume that FORMULA , then define FORMULA  as FORMULA  on
+FORMULA  and FORMULA  be strictly convex piece
+wise-linear and positive).
+The topology of the chart of
+FORMULA  coincides with the topology of the chart of
+the polynomial FORMULA .
+Notice that the patchworking
+of FORMULA  is combinatorial for all triangles FORMULA  of the
+subdivision with the possible exception of FORMULA . It follows from
+Theorem REF  that the signed topological type of the
+smoothing FORMULA  coincides with that of the smoothing defined by
+FORMULA 
+which is constructed by combinatorial patchworking. It follows
+that the polynomial FORMULA  defines a Harnack curve
+in the toric surface FORMULA , by Proposition REF .
+Therefore FORMULA  defines then a Harnack smoothing of FORMULA  with
+FORMULA  ovals and FORMULA  non compact
+components.  FORMULA
+
+The topological type of a Harnack
+smoothing
+Theorem 6.1 
+Let FORMULA  be a plane curve singularity defined by a
+semi-quasi-homogeneous polynomial FORMULA  non
+degenerated with respect to its local Newton polygon. We denote by
+FORMULA  the compact edge of this polygon. We suppose that the
+peripheral roots of FORMULA  are all real. Let FORMULA  define
+a semi-quasi-homogeneous FORMULA -smoothing of FORMULA  such that FORMULA 
+is in maximal position with respect to the coordinate lines. If
+FORMULA  denotes a Milnor ball for FORMULA  then we have that:
+
+The peripheral roots of FORMULA  are of the same
+sign.
+
+The polynomial FORMULA  defines a Harnack
+curve in FORMULA .
+
+The smoothing FORMULA  is Harnack.
+
+There is a unique topological type of triples FORMULA .
+
+The topological type of the smoothing FORMULA  is
+determined by FORMULA .
+
+
+Proof. We follow Notations REF  to describe
+the polynomial FORMULA .
+Since the peripheral roots of the polynomial FORMULA  are
+all real it follows that the singularity FORMULA  has exactly FORMULA 
+analytic branches which are all real. It follows that the
+smoothing FORMULA  has FORMULA  non closed components. If FORMULA  is
+FORMULA -smoothing there are precisely FORMULA  ovals by (REF ). Since the smoothing FORMULA  is
+Harnack, i.e., it is in maximal position with respect to the
+coordinate axis, none of these ovals cuts the coordinate axis.
+We consider the curve FORMULA  defined by the polynomial
+FORMULA  in the real toric surface FORMULA . By
+Theorem REF  and Remark REF  there are exactly
+FORMULA  ovals in the chart
+FORMULA . These ovals, when viewed in the
+toric surface FORMULA  by Proposition REF , do not meet any
+of the coordinate lines of FORMULA . By the same argument we have
+that the curve FORMULA 
+is in maximal position with respect to
+the two coordinate lines FORMULA  and FORMULA  of FORMULA , corresponding
+respectively to the vertical and horizontal edges of FORMULA . It
+follows that the number of components of FORMULA  is FORMULA , which is equal to the
+maximal number of components, hence FORMULA  is a FORMULA -curve in
+FORMULA .
+We deduce that the non compact connected components of FORMULA  glue up in one connected
+component of FORMULA . This component contains all the
+intersection points with the coordinate lines of FORMULA , since
+FORMULA  is in maximal position with respect to the lines FORMULA 
+and FORMULA , and by assumption the peripheral roots of FORMULA 
+are all real.
+By definition of maximal position with respect to two lines, there
+is exactly one component of the smoothing FORMULA  containing all
+the points of intersection of FORMULA  with the coordinate axis. We
+deduce the following assertion by translating this information in
+terms of the chart of FORMULA , using Theorem REF  and
+Proposition REF : there are two disjoint arcs
+FORMULA  and FORMULA  in FORMULA  containing
+respectively the points of intersection of FORMULA  with the
+toric axis FORMULA  and FORMULA , which do not contain any point in FORMULA  (otherwise there would be more than one non compact
+component of the smoothing FORMULA  intersecting the coordinate axis,
+contrary to the assumption of maximal position). It follows from
+this that the curve FORMULA  is in maximal position with
+respect to the coordinate axis in FORMULA . Mikhalkin's Theorem
+REF  implies the second assertion. Then the other three
+assertions are deduced from this by Theorem REF  and
+Proposition REF .  FORMULA
+Remark 6.5  With the hypothesis and notations of Theorem REF ,
+we have that the connected components FORMULA , for FORMULA , of chart FORMULA ,
+are described by Proposition REF . If the peripheral
+roots of FORMULA  are positive, up to replacing FORMULA  by
+FORMULA , one can always have that FORMULA  and then:
+FORMULA 
+Otherwise, we have that:
+FORMULA 
+Compare in Figure REF  the position of FORMULA  in
+(A) and (B).
+
+Definition 6.6 
+If (REF ) holds then we say that the
+signed topological type of the smoothing FORMULA  (or of the chart of
+FORMULA ), is normalized (cf. Definition
+REF ).
+
+As an immediate corollary of Theorem REF  we deduce that:
+Proposition 6.7 
+There are two signed topological types of sqh-FORMULA -smoothings of
+FORMULA  in maximal position with respect to the coordinate axis.
+These types are related by the orthogonal symmetry FORMULA  and
+only one of them is normalized.
+
+FIGURE 
+One of the aims of this paper is to study to which extent Theorem
+REF  admits a valid formulation in the class of real plane
+branch singularities. In general the singularities of this class
+are degenerated with respect to their local Newton polygon, in
+particular we cannot apply Viro's method to those cases.
+Classically smoothing of this type of singularities is constructed
+using the blow up construction. We present in the following
+sections an alternative method which applies Viro method at a
+sequence of certain infinitely near points.
+
+A reminder on toric resolutions of real plane
+branches
+We recall the construction of an embedded resolution of
+singularities of a real plane branch by a sequence of local toric
+modifications. For details see {{cite:37ad63f9-3ee5-4baf-ac74-e32a4707d433}} and {{cite:6e83c113-4abc-491c-8f23-21498ffcb378}}. See
+{{cite:0565c4db-dc2f-49b8-b1d0-ca7eed40b9ec}}, {{cite:12ff4e82-7203-425d-87fc-57996f1b4e23}} for more on toric geometry and
+{{cite:93e1ccfe-9004-450d-9531-3c90a927e1ca}}, {{cite:561ccd08-b83b-4e9d-84ea-8c31866c759d}}, {{cite:b161afa6-4bbb-416e-8799-83d4ae6af69c}} and {{cite:65ce98ce-198e-4f5d-8524-51c6b129e0e7}} and for more
+on toric geometry and plane curve singularities.
+A germ FORMULA  of real plane curve, defined by FORMULA  for FORMULA , defines a real plane branch if it is analytically
+irreducible in FORMULA  and if it admits a real Newton Puiseux
+parametrization (normalization map):
+FORMULA 
+If the coordinate line FORMULA  is not tangent to FORMULA  then FORMULA  is the multiplicity of FORMULA . By
+(REF ) and a suitable change of coordinates, we
+have that FORMULA  has an equation FORMULA , with
+FORMULA 
+such that FORMULA , the integer FORMULA  is the intersection multiplicity with the line, FORMULA , and
+the terms which are not written have exponents FORMULA  such that
+FORMULA , i.e., they lie above the compact edge
+FORMULA 
+of the local Newton
+polygon of FORMULA .
+The vector FORMULA  is orthogonal to FORMULA 
+and defines a subdivision of the positive quadrant FORMULA , which is obtained by adding the ray FORMULA .
+The quadrant FORMULA  is subdivided in two cones, FORMULA , for FORMULA 
+and FORMULA  the canonical basis of FORMULA . We
+define the minimal regular subdivision FORMULA  of
+FORMULA  which contains the ray FORMULA  by
+adding the rays defined by those integral vectors in FORMULA ,
+which belong to the boundary of the convex hull of the sets FORMULA , for FORMULA . We denote by FORMULA 
+the unique
+cone of FORMULA  of the form, FORMULA  where FORMULA  satisfies
+that:
+FORMULA 
+See an example in Figure REF .
+FIGURE 
+By convenience we denote FORMULA  by FORMULA .
+We define in the sequel
+a sequence of proper birational maps FORMULA , for FORMULA  such that the composition FORMULA  is an embedded resolution of the germ
+FORMULA , i.e., the pull back of the germ FORMULA  by FORMULA  is a normal crossing divisor in the smooth surface
+FORMULA .
+In order to describe these maps we denote the coordinates FORMULA 
+by FORMULA  and the origin FORMULA  by FORMULA . We
+also denote FORMULA  by FORMULA  and FORMULA  by FORMULA . The
+subdivision FORMULA  defines a proper birational map FORMULA , which is obtained by gluing maps FORMULA , where FORMULA  runs through the set of two
+dimensional cones in FORMULA . For instance, the map FORMULA  is defined by
+FORMULA 
+where FORMULA  are canonical coordinates for the affine space
+FORMULA .
+It should be noticed that the map FORMULA  is a composition of
+point blow-ups, as many as rays added in FORMULA  to
+subdivide FORMULA . Each ray FORMULA  corresponds bijectively to a projective line FORMULA ,
+embedded as an irreducible component of the exceptional divisor
+FORMULA . We denote by FORMULA  the exceptional
+divisor defined by FORMULA  in the chart FORMULA , the other
+exceptional divisor in this chart being defined by FORMULA .
+Notice that the point at the infinity of the line FORMULA , for
+instance, is the origin of the chart FORMULA , where FORMULA  is the two dimensional cone adjacent to FORMULA  along
+the ray FORMULA .
+We have that FORMULA  defines a Cartier divisor
+on FORMULA . For instance, on FORMULA  it is defined by FORMULA . The term FORMULA  decomposes as:
+FORMULA 
+and
+FORMULA 
+The polynomial FORMULA  defines the strict
+transform FORMULA  of FORMULA , i.e., the closure of the
+pre-image by FORMULA  of the punctured curve FORMULA  on the chart FORMULA . The function FORMULA  defines the exceptional divisor of FORMULA  on this chart.
+We analyze the intersection of the strict transform with the
+exceptional divisor on the chart FORMULA : using
+(REF ) we find that FORMULA  and
+FORMULA 
+By a similar argument on the other charts it follows that FORMULA  is
+the only exceptional divisor of FORMULA  which intersects the
+strict transform FORMULA  of FORMULA , precisely at the point FORMULA  of
+the chart FORMULA  with coordinates FORMULA  and FORMULA ,
+with intersection multiplicity equal to FORMULA . If FORMULA  then
+the strict transform is smooth at FORMULA  and the intersection with
+the exceptional divisor FORMULA  is transversal, hence the divisor
+FORMULA  has smooth components which intersect
+transversally. In this case, the map FORMULA  is an embedded
+resolution of the germ FORMULA  by definition.
+We define a pair of real coordinates FORMULA  at the point
+FORMULA , where
+FORMULA 
+such that FORMULA  is defined by a polynomial, which we call the strict transform function, of the form:
+FORMULA 
+where FORMULA , FORMULA  and the
+terms which are not written have exponents FORMULA  such that FORMULA , i.e., they lie above the compact edge
+FORMULA  of the (local) Newton polygon of FORMULA .
+The result of substituting in FORMULA , the term
+FORMULA  by using (REF ), is equal to FORMULA .
+We can iterate this procedure defining for FORMULA  a sequence of
+toric maps FORMULA , which are
+described by replacing the index 1 by FORMULA  and the index 2 by
+FORMULA  above. In particular, when we refer to a Formula, like
+(REF ) at level FORMULA , we mean after making this replacement.
+We denote by FORMULA  the exceptional function defining the exceptional
+divisor of FORMULA  on the
+chart FORMULA . We have that
+FORMULA 
+Since by construction we have that FORMULA  (for FORMULA  denoting divides), at some step we reach a first
+integer FORMULA  such that FORMULA  and then the process stops. The
+composition of blow ups FORMULA  is an embedded resolution of the germ FORMULA . It is minimal, in
+the number of exceptional divisors required, if one of the
+coordinate axis FORMULA  or FORMULA  is not tangent to FORMULA , in
+particular if FORMULA  is the multiplicity of FORMULA  (see
+{{cite:37ad63f9-3ee5-4baf-ac74-e32a4707d433}}).
+If FORMULA  is not tangent to FORMULA  then the sequence of pairs
+FORMULA  classifies the embedded topological type
+of the pair FORMULA . This is because the
+FORMULA  determine and are determined by the
+classical characteristic pairs of a plane branch (see {{cite:37ad63f9-3ee5-4baf-ac74-e32a4707d433}}
+and {{cite:93e1ccfe-9004-450d-9531-3c90a927e1ca}}).
+Example 7.1 
+The embedded resolution of the real plane branch singularity FORMULA  defined by FORMULA  is as follows.
+
+The morphism FORMULA  of the toric resolution is defined by
+FORMULA 
+Let FORMULA , then we have FORMULA , where FORMULA 
+defines the strict transform function of FORMULA , and together with
+FORMULA  defines local coordinates at the point of intersection FORMULA 
+with the exceptional divisor FORMULA .
+For FORMULA  we find that:
+FORMULA 
+Hence FORMULA  is the exceptional function associated to FORMULA , and
+FORMULA 
+is the strict
+transform function.
+Notation 7.2 
+For FORMULA :
+
+Let FORMULA ,
+be the unique compact edge of the local Newton polygon of FORMULA  (see (REF ) at level FORMULA ).
+
+Let FORMULA  the Newton diagram of FORMULA .
+We denote by FORMULA  the set FORMULA .
+
+Let FORMULA  be the edge of
+FORMULA  which is the intersection of FORMULA  with the vertical axis.
+
+Let FORMULA  be defined by
+FORMULA 
+
+
+Notice that (REF ) is defined analogously as
+(REF ).
+FIGURE 
+Proposition 7.3 The following formula for the Milnor number of FORMULA  at the
+origin is deduced in {{cite:6e83c113-4abc-491c-8f23-21498ffcb378}}.
+FORMULA 
+
+A set of polynomials defined from the embedded resolution
+We associate in this section some polynomials to the elements in
+FORMULA . From these polynomials we define a class of
+deformations which we will study in the following sections.
+Lemma 7.4 
+If FORMULA  with FORMULA 
+there exist FORMULA  and integers FORMULA  such that:
+FORMULA 
+
+To avoid cumbersome notations we denote simply by FORMULA  the term
+FORMULA , whenever FORMULA 
+is clear form the context. For instance we have done this in
+Formula (REF ) above. In particular, by (REF ) at
+level FORMULA , the restriction of the function FORMULA  to FORMULA 
+is equal to:
+FORMULA 
+Remark 7.5 
+The integers FORMULA  depend on FORMULA  and on the
+singular type of the branch FORMULA . They can be determined
+algorithmically, and are unique up to certain conditions on the
+polynomials FORMULA . The polynomials FORMULA  are
+constructed as monomials in FORMULA  and some Weierstrass
+polynomials defining curvettes at certain irreducible
+exceptional divisors of the embedded resolution of FORMULA  (see
+{{cite:6e83c113-4abc-491c-8f23-21498ffcb378}}). For more details on the construction of these
+curves and their applications see {{cite:3a29ed22-4c19-4b65-8d99-bc95d139b4ae}}, {{cite:65ce98ce-198e-4f5d-8524-51c6b129e0e7}},
+{{cite:f6010e77-4cbd-4cb9-b3a9-7ff5d028554a}} and {{cite:1315ffc8-bfb3-468d-9576-ca0da78ab14c}}.
+
+Example 7.6 
+The following table indicates the terms FORMULA  for FORMULA  corresponding to Example REF . The symbol FORMULA  denotes
+the first approximate root FORMULA .
+
+ TABLE
+For instance, we have that FORMULA , since
+FORMULA , where FORMULA  by Example REF .
+
+Multi-semi-quasi-homogeneous smoothings of a real plane
+branch
+In this Section we introduce a class of deformations of a plane
+branch FORMULA , called multi-semi-quasi-homogeneous (msqh)
+deformations and we describe their basic properties.
+We suppose that FORMULA  is a plane branch defined by an equation,
+FORMULA , such that its embedded resolution consists of FORMULA 
+toric maps (see Section  and Notation
+REF ). Consider the following algebraic expressions
+in terms of the polynomials of Lemma REF  as a sequence of
+deformations of the polynomial FORMULA  defining FORMULA . We
+denote by FORMULA  the monomial FORMULA  and FORMULA  will
+denote FORMULA  for any FORMULA .
+FORMULA 
+The terms FORMULA  are some real constants while the FORMULA 
+are real parameters, for FORMULA . For technical reasons we
+will suppose that FORMULA  for FORMULA  (we
+need this assumption in Proposition REF  and
+REF ). The choice of the notation FORMULA  in the deformation FORMULA  is related to the fact
+that the terms FORMULA  appearing in the expansion of
+FORMULA  are expressed in terms of the monomial FORMULA 
+at the local coordinates of the level FORMULA  of the embedded
+resolution of FORMULA , for FORMULA .
+Notice that the polynomial FORMULA 
+determines any of the terms FORMULA  for FORMULA , by
+substituting
+FORMULA  in FORMULA . Occasionally, we abuse of notation by denoting
+FORMULA  by FORMULA .
+Definition 8.1 A multi-semi-quasi-homogeneous (msqh) deformation of the
+plane branch FORMULA  is a family FORMULA  defined by,
+FORMULA  where FORMULA  is of the form (REF ), in a
+Milnor ball of FORMULA . We say that FORMULA  is a
+msqh-smoothing of FORMULA  if the curve FORMULA  is smooth and
+transversal to the boundary of a Milnor ball for FORMULA .
+
+Notation 8.2 We denote by FORMULA , or by FORMULA , the deformation
+of FORMULA  defined by FORMULA  in a Milnor ball of FORMULA , for
+FORMULA  and FORMULA .
+We denote by FORMULA  the strict transform of
+FORMULA  by the composition of toric maps FORMULA  and by FORMULA  (resp. by
+FORMULA ) the polynomial defining
+FORMULA  in the coordinates FORMULA  (resp. FORMULA ), for FORMULA .
+
+These notations are analogous to those used for FORMULA  in Section
+, see (REF ). In particular, we have
+that the result of substituting in FORMULA ,
+the term FORMULA , by using Formula (REF ) at level FORMULA , is
+FORMULA .
+Proposition 8.3  ({{cite:6e83c113-4abc-491c-8f23-21498ffcb378}})
+
+If FORMULA  the curves FORMULA 
+and FORMULA  meet the exceptional divisor of FORMULA  only at the point FORMULA  and with the
+same intersection multiplicity FORMULA .
+
+If FORMULA  the curves FORMULA  meet
+the exceptional divisor of FORMULA 
+only at FORMULA  points of FORMULA , counted with multiplicity.
+
+
+Remark 8.4  ({{cite:6e83c113-4abc-491c-8f23-21498ffcb378}})
+
+If FORMULA  the local Newton polygon of
+FORMULA  and of FORMULA 
+coincide.
+
+If FORMULA  then FORMULA  is a face of the
+Newton polygons of FORMULA  and of
+FORMULA  corresponding to those terms which
+are not divisible by FORMULA  (see Notations REF ).
+
+
+Proposition 8.5  (see {{cite:6e83c113-4abc-491c-8f23-21498ffcb378}})
+If FORMULA  then we have that:
+
+The symbolic restriction of FORMULA  to the edge FORMULA  of its local Newton polygon is of
+the form:
+FORMULA 
+where FORMULA , for FORMULA .
+
+The points of intersection of FORMULA  with
+FORMULA  are those with coordinates FORMULA 
+and
+FORMULA 
+
+
+Remark 8.6 
+It follows from Proposition REF  that those
+peripheral roots of FORMULA , which
+are real,
+are also positive for FORMULA .
+
+When we say that FORMULA  defines a deformation with
+parameter  FORMULA, we mean for FORMULA  fixed.
+Proposition REF  motivates our choice of terminology in this
+section.
+Proposition 8.7  FORMULA  is a sqh-deformation with parameter FORMULA 
+of the singularity FORMULA  for FORMULA .
+
+Proof. By Proposition REF  the curves FORMULA  and FORMULA  intersect only the
+irreducible component FORMULA  of the exceptional divisor of
+FORMULA . By the construction of the
+toric resolution this intersection is contained in the chart
+FORMULA . By Lemma REF  and the
+definitions in Formula (REF ), if FORMULA  is
+defined on the chart FORMULA  by FORMULA  then FORMULA  is defined by:
+FORMULA 
+where for each FORMULA  the term FORMULA  denotes the term FORMULA  of (REF ). The elements FORMULA ,
+expanded in terms of FORMULA , have constant term equal to one
+by (REF ). It follows from this that the local Newton
+polygon of FORMULA , with respect to the
+variables FORMULA , FORMULA  and FORMULA , has only one compact face of
+dimension two, which is equal to the graph of FORMULA  on the Newton
+diagram FORMULA .
+ FORMULA
+Notice that the polynomial, FORMULA , defining the chart of the sqh-smoothing in Proposition
+REF  does not depend on FORMULA  (see Notation
+REF ).
+We have that:
+FORMULA 
+where FORMULA  is described by
+Proposition REF .
+Definition 8.8 
+The msqh-deformation FORMULA  is real non degenerated if
+the polynomials FORMULA  in
+(REF ) are real non degenerated with respect to the polygon
+FORMULA , for FORMULA  (see Notations REF ).
+
+Proposition 8.9  If the msqh-deformation FORMULA  is real non
+degenerated then FORMULA  is a msqh-smoothing of the
+singularity FORMULA . In particular, FORMULA  is a
+msqh-smoothing of FORMULA .
+
+Proof. We prove the Proposition by induction on FORMULA . If FORMULA  then the assertion is a consequence of Definition REF .
+Suppose FORMULA , then by the induction hypothesis FORMULA 
+is a msqh-smoothing of FORMULA . By Proposition
+REF  the polynomial FORMULA , defining
+the curve FORMULA , is non degenerated with respect to its
+local Newton polygon. By Definition REF  the deformation
+FORMULA  is a sqh-smoothing of FORMULA  with parameter
+FORMULA . It follows that FORMULA  defines then a msqh-smoothing
+of FORMULA  for FORMULA .  FORMULA
+Gluing the charts of msqh-smoothings
+In this Section we describe the patchwork of the charts of
+FORMULA  and of
+FORMULA  at the level FORMULA  of the toric resolution,
+under some geometrical assumptions. We begin by some Lemmas for
+sqh-smoothings.
+Lemma 8.10 
+Let us consider a semi-quasi-homogeneous smoothing FORMULA  defined
+by FORMULA  of FORMULA  (see Notations REF ).
+Set FORMULA  for the Newton polygon of FORMULA . Suppose that the
+following statements hold:
+
+The
+chart FORMULA  is in maximal
+position with respect to FORMULA .
+
+The chart FORMULA  is in maximal position with respect to
+FORMULA .
+
+The order of the peripheral roots of FORMULA 
+coincide when viewed in suitable arcs of the charts FORMULA  and FORMULA .
+
+We label the peripheral roots FORMULA  of FORMULA  with the order induced by
+the arcs the charts in (i) and (ii). We denote by
+FORMULA  the arc of the chart in (k), for
+FORMULA , which joins the peripheral roots FORMULA  and
+FORMULA , for FORMULA . Then exactly one of this two
+statements is verified:
+
+In the patchwork of the
+charts of FORMULA  and of FORMULA  the arcs
+FORMULA  and FORMULA  glue into an oval intersecting FORMULA , for FORMULA .
+
+In the gluing of the charts of FORMULA  and of FORMULA  the arcs FORMULA  and FORMULA 
+glue into an oval intersecting FORMULA , for FORMULA .
+
+
+Proof. If FORMULA  there is nothing to prove, hence we suppose
+that FORMULA . By forgetting the relation FORMULA , we obtain two
+symmetric copies of FORMULA  in FORMULA , by
+the action of the symmetry FORMULA  (see notations of Section
+). We denote by FORMULA  (resp. by
+FORMULA ) the arc of chart in (k), for FORMULA , which intersects FORMULA 
+at FORMULA  (resp. FORMULA  at FORMULA ).
+By Theorem REF  if the arcs FORMULA 
+and FORMULA  glue up in an oval intersecting
+FORMULA  in the gluing of the charts of
+FORMULA  and of FORMULA , then the
+assertion of the Lemma holds for FORMULA , otherwise the
+assertion of the Lemma holds for FORMULA .
+ FORMULA
+The dotted style curve in Figure REF  represents the two
+possibilities for the chart of FORMULA  with good
+oscillation. Cases (A) and (B) correspond to assertion (a) and (b)
+respectively, where in this case FORMULA  is the symmetry
+FORMULA .
+FIGURE 
+The following terminology is introduced,
+with a slightly different meaning, in {{cite:1b397a8b-f942-4907-a924-b8ca9d4c0267}}:
+Definition 8.11 
+We say that the charts of FORMULA  and of FORMULA ,
+associated with the sqh-smoothing FORMULA , have regular intersection
+along FORMULA  if the statement (a) of Lemma
+REF  hold.
+
+Lemma 8.12 
+Suppose that in the Lemma REF  statement
+(a) holds. If in addition there exists (resp. there does not
+exist) a connected component of the chart FORMULA  bounded by FORMULA  and FORMULA  then in
+the gluing of the charts of FORMULA  and of
+FORMULA  the arcs FORMULA ,
+FORMULA , FORMULA  and
+FORMULA  are contained (resp. are not
+contained) in an oval
+intersecting FORMULA .
+
+Proof. Notice that by construction the arcs
+FORMULA  glue with FORMULA 
+(resp. for FORMULA  and
+FORMULA ).
+The arcs FORMULA  and FORMULA 
+are in the same connected component of the chart FORMULA  since this chart is compact
+and hence each connected component is an oval in particular the
+one which is in maximal position with respect to
+FORMULA .
+The statement follows easily from these observations and the
+hypothesis.  FORMULA
+Figures REF  case (A) and REF 
+represent the two possibilities indicated in Lemma
+REF  when the chart FORMULA 
+has good oscillation with respect to FORMULA .
+FIGURE 
+Denote by FORMULA  the Newton polygon of FORMULA . Notice that FORMULA  contains the Newton
+polygon of FORMULA  and shares with it the common edge
+FORMULA  by Remark REF  (i). We denote by
+FORMULA  the Newton polygon of
+FORMULA .
+Proposition 8.13 
+Let FORMULA  be a real non degenerated msqh-smoothing of
+FORMULA . If the smoothing FORMULA  of FORMULA  is in maximal position (resp. has good oscillation) with
+respect to the line FORMULA  then in a neighborhood of
+FORMULA ,
+the chart FORMULA  is in maximal position (resp. has good
+oscillation) with respect to FORMULA .
+
+Proof. By (REF ) we have that:
+FORMULA 
+where FORMULA  is a monomial
+in FORMULA  and FORMULA . Notice that FORMULA  is a polynomial of degree FORMULA  with non zero
+constant term by Proposition REF  (ii). Denote by
+FORMULA  the composition of the FORMULA 
+transformation corresponding to (REF ) with the translation
+induced by the exponent of the monomial FORMULA . Then we have that FORMULA  is an
+isomorphism of triples
+FORMULA 
+In other terms FORMULA  induces an isomorphism of the toric
+surfaces associated to these Newton polygons which maps the one
+dimensional orbit associated to FORMULA  to the orbit
+associated to FORMULA . More precisely, a point of the orbit of
+FORMULA  is defined by the vanishing of FORMULA  for some FORMULA  and then by the
+computations of Section  it corresponds to the
+point of coordinates FORMULA  and FORMULA ,
+identified with the orbit associated to FORMULA . This implies
+that the following assertions are equivalent:
+
+In a neighborhood of the line FORMULA ,
+the chart FORMULA  is in maximal position
+(resp. has good oscillation) with respect to the line
+FORMULA .
+
+In a neighborhood of the line,
+FORMULA , the chart FORMULA  is in
+maximal position (resp. has good oscillation) with respect to
+FORMULA .
+
+If the smoothing FORMULA  is in maximal position (resp.
+has good oscillation) with respect to the line FORMULA  then there
+is an arc of the smoothing FORMULA  which
+contains the points FORMULA  and satisfies
+the geometrical hypothesis with respect to the line FORMULA . By
+Proposition REF  this arc does not intersect the
+coordinate line corresponding to FORMULA  in the chart. This
+implies that (a) holds and hence (b) holds.  FORMULA
+Lemma 8.14 
+Let FORMULA  be a real non degenerated msqh-smoothing of
+FORMULA . Suppose that the charts FORMULA  and FORMULA  have regular
+intersection along FORMULA  (see Definition REF ). If
+the connected component of FORMULA  which meets
+FORMULA  is an oval (resp. it is not an oval), then there are
+precisely FORMULA  ovals (resp. FORMULA  ovals and one non
+closed component) which intersect FORMULA  in the
+Patchwork of the charts FORMULA  and of FORMULA , which describes the smoothing
+FORMULA  of FORMULA . In addition, if the chart
+FORMULA  has good oscillation) with respect to
+FORMULA  and if FORMULA 
+defines a Harnack curve in FORMULA , then the signed
+topological type of the chart of FORMULA  is
+unique.
+
+Proof. Notice that by hypothesis and Proposition REF 
+the smoothing FORMULA  is in maximal position with
+respect to the line FORMULA . We have that the chart of FORMULA 
+is in maximal position with respect to the line FORMULA .
+We denote by FORMULA  the peripheral roots of
+FORMULA , labelled with respect to the order in
+the charts FORMULA  and
+FORMULA . Then
+there exist FORMULA  ovals meeting FORMULA  in the
+patchwork of these charts by Lemma REF .
+In addition, if the connected component of FORMULA 
+which meets FORMULA  is an oval (resp. is not an oval), then the
+hypothesis of Lemma REF  are satisfied
+and the conclusion follows. For the second statement by
+Proposition REF  we have that there are two
+possible signed topological types for FORMULA  with prescribed
+symbolic restriction to the face FORMULA . By Lemma
+REF  only one of these two types induces
+regular intersection along the edge FORMULA .  FORMULA
+We call the ovals described by Lemma REF  mixed ovals of
+depth 1. We call ovals of depth 1, those which appear
+in the chart of FORMULA  (see (REF ))
+but do not cut FORMULA . In Figure REF  we represent
+a mixed oval of depth one; the ball FORMULA  is a Milnor ball for
+FORMULA , the segment of the oval in small ball FORMULA 
+corresponds to an arc of the chart of FORMULA ,
+while the segment of the oval in FORMULA  corresponds to
+an arc of the chart FORMULA .
+FIGURE 
+Definition 8.15  Let FORMULA  be a msqh-smoothing of
+FORMULA . An oval FORMULA  of FORMULA  is of depth FORMULA  (resp. a
+mixed oval of depth FORMULA ) if there exists an oval FORMULA  of depth
+1 (resp. a mixed oval of depth 1) of the smoothing
+FORMULA  of FORMULA  such that FORMULA  and such that FORMULA  arises as a slight perturbation of
+the oval FORMULA  of
+FORMULA , for FORMULA .
+
+
+Maximal, Harnack and multi-Harnack smoothings
+We introduce the following notions for a real non degenerated
+msqh-smoothing FORMULA  of a real plane branch FORMULA . By
+Proposition REF  if FORMULA  is a non degenerated
+msqh-smoothing of FORMULA  then FORMULA  is also a non
+degenerated msqh-smoothing of FORMULA , for FORMULA .
+Definition 8.16
+
+FORMULA  is a FORMULA -smoothing if the number
+of ovals in a Milnor ball of FORMULA  is equal to FORMULA .
+
+A FORMULA -smoothing FORMULA  is Harnack if it
+has good oscillation with respect to the coordinate axis.
+
+A FORMULA -smoothing FORMULA  is multi-Harnack if
+FORMULA  is a Harnack FORMULA -msqh-smoothing of FORMULA , for FORMULA .
+
+
+In Definition REF  (iii) the Harnack condition is
+considered with respect to the coordinate lines defined by the
+coordinates FORMULA , see Section  for notations.
+The following result describes inductively FORMULA -msqh-smoothings and
+Harnack msqh-smoothings of FORMULA  when FORMULA .
+Theorem 8.1  Let FORMULA  be a non
+degenerated msqh-smoothing of the real plane branch FORMULA . We
+introduce the following conditions:
+
+FORMULA  is a FORMULA -msqh-smoothing of FORMULA  in maximal position with respect to the exceptional divisor
+FORMULA .
+
+FORMULA  defines a FORMULA -sqh-smoothing of the
+singularity FORMULA  with parameter FORMULA .
+
+The charts of FORMULA  and of
+FORMULA  have regular intersection along FORMULA .
+
+Then, the deformation FORMULA  is a FORMULA  (resp Harnack)
+msqh-smoothing of FORMULA  if and only if conditions (i),
+(ii) and (iii) hold (resp. and in addition FORMULA  has
+good oscillation with respect to the coordinate axis).
+
+Proof. We prove first that if conditions (i) and (ii) hold then FORMULA  is a FORMULA -msqh-smoothing of FORMULA .
+The number of ovals of the msqh-smoothing FORMULA  is
+equal to
+FORMULA 
+Since FORMULA  is in maximal position with respect to
+FORMULA  there is only one connected component FORMULA  of the smoothing
+FORMULA  which intersect FORMULA  in FORMULA  different real
+points. When we apply the toric morphism FORMULA  we get a
+deformation FORMULA  of FORMULA , defined by FORMULA . Notice that FORMULA  is singular at 0. By
+Proposition REF  the singularity FORMULA  is real non degenerated with respect its local Newton
+polygon. The image FORMULA  by FORMULA  of the component FORMULA  passes
+through the origin and is the only connected component of FORMULA  with this property. The deformation FORMULA  has
+the same number of ovals as FORMULA , which are of depth
+FORMULA .
+By hypothesis (ii) we
+have that FORMULA  is a FORMULA -sqh-smoothing of FORMULA  with
+parameter FORMULA  hence it yields FORMULA  ovals of depth 1. By Proposition REF  the chart
+of FORMULA  with respect to its Newton polygon
+FORMULA , is in maximal position with respect to
+FORMULA . By hypothesis (iii) we are in the situation
+described by Lemma REF : if FORMULA  is an oval (resp. is not) the
+image of FORMULA  in the chart of FORMULA  patchwork with the
+chart FORMULA 
+providing FORMULA  mixed ovals of depth 1 (resp. FORMULA  mixed
+ovals of depth 1). It follows that the msqh-smoothing
+FORMULA  has the maximal number of ovals (see
+(REF )).
+Conversely, suppose that FORMULA  is a msqh-smoothing. Since
+FORMULA  defines a sqh-smoothing of FORMULA  with
+parameter FORMULA , there are at most FORMULA  ovals of depth 1.
+If there are FORMULA  components of the smoothing FORMULA 
+which intersect FORMULA  then
+we prove that the maximal number of ovals of the smoothing FORMULA is bounded below by:
+FORMULA 
+If no component of the smoothing FORMULA  intersects
+FORMULA  then there is no mixed oval of depth 1 for the smoothing
+FORMULA  and therefore FORMULA  is not a
+FORMULA -msqh-smoothing by (REF ). Therefore there exist
+FORMULA  components of the smoothing FORMULA , each one
+cutting FORMULA  in FORMULA  real points. We argue as in Lemma
+REF : if such a component
+is not an oval
+then it leads to FORMULA  mixed ovals;
+if this component is an oval then it contributes with
+FORMULA  mixed ovals, but we also loose one oval of depth 2. It
+follows that if FORMULA  is a FORMULA -msqh-smoothing then FORMULA 
+and FORMULA , i.e., FORMULA  is in maximal position
+with respect to the line FORMULA  and assertion (iii) hold.  FORMULA
+Corollary 8.2 
+Let FORMULA  be a real non degenerated msqh-smoothing of the
+real plane branch FORMULA . We introduce the following conditions:
+
+FORMULA  is a multi-Harnack smoothing of
+FORMULA .
+
+FORMULA  defines FORMULA -sqh-smoothing of the
+singularity FORMULA  with parameter FORMULA , in maximal
+position with respect to the coordinate axis.
+
+The charts of FORMULA  and of
+FORMULA  have regular intersection along FORMULA .
+
+Then the deformation FORMULA  is a multi-Harnack smoothing of
+FORMULA  if and only if conditions (i), (ii) and (iii)
+hold.
+
+Proof. It follows by induction on FORMULA  from Theorem
+REF  and Theorem REF .  FORMULA
+
+Existence of multi-Harnack smoothings
+In this section we prove the existence of a multi-Harnack
+smoothing of a real plane branch FORMULA . We will use the
+following observation of Viro.
+Remark 8.17  (see {{cite:b6d82989-4cf9-4590-9748-b32b4d96d51f}} page 19) If FORMULA  is
+defined by a non degenerated semi-quasi-homogeneous polynomial
+then any smoothing of FORMULA  constructed by patchworking is topologically equivalent, in a stratified sense with respect to
+the boundary of a Milnor ball and the coordinate axis, to a
+sqh-smoothing.
+
+Theorem 8.3 Any real plane branch FORMULA  has a multi-Harnack smoothing.
+
+Proof. We construct a multi-Harnack smoothing FORMULA  of
+FORMULA  by induction on FORMULA . If FORMULA  by Proposition
+REF  there exists a Harnack smoothing of FORMULA  and
+by Remark REF  we construct from this a topologically
+equivalent sqh-smoothing, which is also Harnack. Suppose the
+result true for FORMULA . Then by induction hypothesis we have
+constructed a multi-Harnack smoothing FORMULA  of
+FORMULA . By Proposition REF  the deformation
+FORMULA  is defined by a sqh-polynomial FORMULA  with
+peripheral roots of the same sign by Remark REF . Then
+we can apply Proposition REF  and Remark REF  to
+construct Harnack sqh-smoothings FORMULA  of the singularity
+FORMULA  with parameter FORMULA , such that the charts of
+FORMULA  and of FORMULA  have regular
+intersection along FORMULA , by Lemma
+REF . The result follows by Corollary
+REF .  FORMULA
+
+The topological type of a multi-Harnack smoothing
+The definition of the topological type (resp. signed topological
+type) of a msqh-smoothing FORMULA  of a real plane branch is
+the same as in the 1-parametrical case (see Definition
+REF ).
+Theorem 8.4 
+Let FORMULA  be a real branch. The topological type of
+multi-Harnack smoothings of FORMULA  is unique. There is at most
+two signed topological types of multi-Harnack smoothings of FORMULA . These types depend only on the complex equisingularity class
+of FORMULA .
+
+Proof. We prove the result by induction on FORMULA . For FORMULA 
+there is a unique topological type of Harnack smoothing and two
+signed topological types by Theorem REF . Suppose FORMULA . We consider a multi-Harnack smoothing FORMULA  of FORMULA .
+It is easy to see by Corollary REF  and induction that
+FORMULA  defines a sqh-Harnack smoothing of FORMULA . By construction the singularity FORMULA  is
+non degenerated with respect to its Newton polygon in the
+coordinates FORMULA . Since the smoothing
+FORMULA  is Harnack then there is only one topological
+type and two signed topological types (see Proposition
+REF ). We prove that there are at most two
+signed topological types (resp. exactly one topological type) of
+multi-Harnack smoothings, each one determined by the
+equisingularity class of FORMULA  and an initial choice for the
+sign type of the Harnack smoothing FORMULA : to be
+normalized or not.
+By induction on FORMULA  we assume that the topological type (resp.
+the signed topological type) of the msqh-smoothing FORMULA  of FORMULA  depends only on the
+characteristic pairs of FORMULA  with respect to the
+coordinates FORMULA . Hence it is determined by the complex
+equisingularity class of FORMULA . Since FORMULA  is an isomorphism
+over FORMULA  we deduce that the topological type
+(resp. the signed topological type) of the msqh-deformation
+FORMULA  is determined inside a Milnor ball FORMULA  of FORMULA , for
+FORMULA . Notice that FORMULA  is a
+singular curve with FORMULA  branches at the origin. Let FORMULA  be a Milnor ball for the singularity FORMULA . The
+radius of FORMULA  depends on FORMULA  and FORMULA  is contained in the
+interior of FORMULA . By construction the msqh-smoothing FORMULA  is
+built by the patchwork of the charts of FORMULA 
+and of FORMULA  described in Section REF . By induction
+hypothesis the topological type (resp. the signed topological
+type) of FORMULA  is fixed in FORMULA . We can
+assume that the embedded topology of the chart
+FORMULA  is
+determined. By Corollary REF  it is enough to prove that
+there is a unique (resp. signed) topological way to patchwork the
+chart of FORMULA , in such a way that FORMULA 
+defines a multi-Harnack smoothing.
+Corollary REF  (ii) together with Theorem REF 
+implies that FORMULA  defines a Harnack curve in
+the toric surface FORMULA . By Proposition
+REF  there are two possible signed topological
+types for the chart of FORMULA  (which are
+related by the symmetry FORMULA ). By Corollary
+REF  the charts of FORMULA  and of
+FORMULA  have regular intersection along the edge
+FORMULA . By Lemma REF  this condition
+holds for only one of the two possible signed types of Harnack
+curves FORMULA .
+The signed topological type of
+the chart of FORMULA  is uniquely determined and
+it depends only on FORMULA . By the induction hypothesis the
+topological type of FORMULA  is fixed in FORMULA  hence there is a unique topological type and at most two
+signed topological of multi-Harnack smoothings of the real plane
+branch FORMULA . The topological type only depend on the sequence
+of triangles FORMULA , hence on the equisingularity class of the
+branch.  FORMULA
+
+Positions and scales of the ovals of multi-Harnack
+smoothings
+We deduce some consequences on the position in the quadrants of
+FORMULA  and on the scales of the ovals of a msqh-smoothing , in
+particular in the multi-Harnack case.
+Multi-scaled structure of msqh-smoothings
+Let FORMULA  be a msqh-smoothing of a real plane branch
+FORMULA . Recall that the notion of oval of depth FORMULA  of
+FORMULA  was introduced in Definition REF .
+Proposition 8.18 
+The size of an oval FORMULA  of depth FORMULA  in a msqh-smoothing
+FORMULA  is equal to FORMULA .
+
+Proof. By Proposition REF  the size of the oval
+FORMULA  in the coordinates FORMULA  is equal to FORMULA . The image of FORMULA  by FORMULA , described by
+(REF ), is an oval of FORMULA  of size FORMULA  since the function
+FORMULA  on the oval by (REF ). By definition the oval
+FORMULA  is not contained in the connected component of FORMULA  which passes by FORMULA . By Proposition
+REF  and Theorem REF  the smoothing
+FORMULA  of the singularity FORMULA  only performs small perturbations of the ovals of
+FORMULA  and hence the size of corresponding ovals with
+respect to the coordinates FORMULA  is the same.
+It follows that FORMULA  is slightly deformed into an oval
+FORMULA  of FORMULA  such that FORMULA . By induction we find that the oval FORMULA  is
+of size
+FORMULA 
+Proposition 8.19 
+If FORMULA  is a msqh-smoothing of the real plane branch
+FORMULA  then any pair of ovals of depth FORMULA  with FORMULA  is
+not nested.
+
+Proof. By the Definition REF  it is enough to prove
+it when FORMULA . Let FORMULA  denote a Milnor ball for the singularity
+FORMULA  and FORMULA  a Milnor ball for the non
+degenerated singularity FORMULA . The ball FORMULA  is
+contained in the interior of FORMULA  and the radius of FORMULA  depends on
+the parameters. Notice that by Theorem REF  the smoothing
+FORMULA  of the singularity FORMULA  is constructed
+by the patchwork of the charts of FORMULA  and of
+FORMULA . We have that topologically in a stratified sense with
+respect to the coordinate axis and the boundary of FORMULA , we
+replace the pair FORMULA  by
+FORMULA , by
+identifying FORMULA  with FORMULA , while in FORMULA  the curves FORMULA  and FORMULA  remain isotopic. This implies that
+in FORMULA  the curve FORMULA  contains arcs of
+the mixed ovals of depth 1 and ovals of depth FORMULA .  FORMULA
+Remark 8.20 A msqh-smoothing of the real plane branch may have nested ovals
+(see Example REF ).
+
+
+The multi-Harnack case
+Let FORMULA  be a multi-Harnack smoothing of the real plane
+branch FORMULA . By the proof of Theorem REF , the ovals
+of FORMULA  do not cut FORMULA  for FORMULA . It
+follows that each oval of FORMULA  is either an oval
+(resp. a mixed oval) of depth FORMULA  for some FORMULA . There are
+precisely FORMULA  mixed ovals of depth FORMULA  and FORMULA  ovals of depth FORMULA . The ovals of a multi-Harnack
+smoothing are not nested by Proposition REF , Theorem
+REF  and Proposition REF . We complement the
+information on the size of ovals of Section REF  by
+indicating the form of the boxes which contain the mixed ovals of
+depth FORMULA . The proof is analogous to that of Proposition
+REF  which indicates the size of ovals of depth FORMULA  (see
+Figure REF ).
+Proposition 8.21 
+A mixed oval of depth FORMULA  of the multi-Harnack smoothing
+FORMULA  of FORMULA  is contained in a box parallel to the
+coordinate axis and with two vertices of the form
+FORMULA  and FORMULA ,
+for FORMULA .
+
+FIGURE 
+Now we describe the positions of the ovals in the quadrants of
+FORMULA  of a multi-Harnack smoothing FORMULA  of a real plane
+branch FORMULA .
+Definition 8.22 We say that the signed topological type of a multi-Harnack
+smoothing FORMULA  of a real plane branch FORMULA  is normalized
+if the signed topological type of the chart of
+FORMULA  is normalized (see Definition
+REF ).
+
+Proposition 8.23 
+Let FORMULA  be a multi-Harnack smoothing of a real plane
+branch FORMULA . If the signed topological type of the chart of
+FORMULA  is normalized, then the same happens for the signed
+topological type of the chart FORMULA , for FORMULA .
+
+Proof. The proof is by induction on FORMULA , using Proposition
+REF  and that FORMULA .
+ FORMULA
+We assume that the signed type of the smoothing is normalized. By
+the proof of Theorem REF  and the definition an oval of
+depth FORMULA  of FORMULA  arises as a connected component
+FORMULA  of the chart FORMULA , for FORMULA  (see Remark REF ). An arc of a mixed oval
+of depth FORMULA  corresponds to a connected component
+FORMULA  of the chart FORMULA , for FORMULA .
+Since at each stage the smoothing FORMULA  of FORMULA 
+is multi-Harnack only the non compact component of the smoothing
+FORMULA  meets the coordinate axis. Then we have the
+following:
+Proposition 8.24 If FORMULA  is a normalized multi-Harnack smoothing of a real
+plane branch FORMULA  then we can label the ovals of depth FORMULA 
+(resp. the mixed ovals of depth FORMULA ) by FORMULA  for
+FORMULA  (resp. for FORMULA ). Then we have that FORMULA  where
+FORMULA 
+
+Proof. By hypothesis and Proposition REF 
+we have that the signed topological type of the chart of
+FORMULA  is normalized, for FORMULA . By
+Remark REF  we have that the component
+FORMULA  of the chart FORMULA  is contained in the quadrant
+FORMULA  with respect to the coordinates FORMULA . We abuse of notation and denote in the same way the
+component FORMULA  of the chart FORMULA  and the corresponding connected
+component of the smoothing FORMULA . By
+construction the oval FORMULA , which appears as a slight
+deformation of FORMULA  of FORMULA , is contained in the same quadrant FORMULA  as FORMULA .
+Notice that on the oval FORMULA  the function FORMULA , for FORMULA  by (REF ), for FORMULA .
+Then the assertion follows by the definition of the toric maps
+FORMULA  in (REF ).  FORMULA
+
+Examples
+Example 8.25 We consider first the constructions of a multi-Harnack smoothing
+of the real plane branch FORMULA  defined by the polynomial FORMULA  studied in the Example REF  and
+REF . The Milnor number is equal to 44.
+
+The strict transform FORMULA  of FORMULA  is a simple cusp. Then a
+smoothing FORMULA  of normalized type is of the form
+indicated in Figure REF . We indicate the form of the
+deformation FORMULA  inside a Milnor ball FORMULA  for FORMULA  in
+Figure REF ; the small circle denotes a Milnor ball
+FORMULA  for the singularity obtained. The smoothing FORMULA  is
+the result of perturbing this singularity inside its Milnor ball
+and appears in Figure REF . Notice that the ovals
+which appear in the smaller ball are infinitesimally smaller than
+the others. In this example there is only one oval of depth 2
+and two mixed ovals of depth 1.
+FIGURE 
+FIGURE 
+Example 8.26 We consider first the constructions of multi-Harnack smoothings of the real plane branch FORMULA 
+defined by the polynomial FORMULA . The Milnor number is equal to 86.
+
+By computing as in Section  we find that FORMULA ,
+FORMULA  and FORMULA . It follows
+that the strict transform FORMULA  of FORMULA  has local Newton
+polygon with vertices FORMULA  and FORMULA . Figure
+REF  shows the signed topological types of a Harnack
+smoothing FORMULA  of FORMULA . Then, the
+deformation FORMULA , obtained by Proposition REF  is
+shown in Figure REF  (A) and (B) (notice that all the
+branches of the singularity at the origin have the same tangent
+line, the horizontal axis, though this is not represented in the
+Figure).
+Then, if FORMULA  defines a multi-Harnack smoothing of FORMULA 
+we have that FORMULA  has the chart
+represented in Figure REF . The topology of the
+multi-Harnack smoothing is shown in Figure REF .
+Notice that, as stated in Theorem REF , the topological
+type of the resulting msqh-smoothing FORMULA  is the same in
+cases (A) and (B) (meanwhile the signed topological types are
+different). The ovals inside the fist ball are of depth 1, those
+intersecting the boundary are mixed ovals of depth 1 and the
+ovals in between both balls are of depth 2.
+Example 8.27 
+We show a Harnack smoothing of the real plane branch FORMULA 
+defined by the polynomial FORMULA  which is not
+multi-Harnack.
+
+By computing as in Section  we find that FORMULA , FORMULA  and FORMULA  and FORMULA . It
+follows that the strict transform FORMULA  of FORMULA  has
+local Newton polygon with vertices FORMULA  and FORMULA .
+We exhibit first a smoothing FORMULA , defined by a
+degree seven curve with Newton polygon equal to FORMULA . The
+construction begins
+by perturbing a degree four
+curve, composed of a smooth conic FORMULA  and two lines FORMULA  and
+FORMULA  in Figure REF  (a), with four lines, shown in grey,
+intersecting the conic in two real points (see {{cite:623e458e-b347-4c18-892c-8f998833b03d}} for a
+summary of construction of real curves by small perturbations).
+The result is a smooth quartic FORMULA , as in Figure REF 
+(b), where we have indicated in gray the reference lines FORMULA  and
+FORMULA  with the conic FORMULA . Then we perturb the union of FORMULA  and
+FORMULA , by taking six lines, as in Figure REF  (c). The
+result is a FORMULA -sextic in maximal position with respect to the
+line FORMULA . The union of both curves is a degree seven curve FORMULA ,
+as shown
+in Figure REF (d),
+where we indicate also the reference lines FORMULA  and FORMULA . Notice
+that
+in Figures REF  (c) and (d).
+the line at infinity changes. See also the construction of curves
+corresponding to Figure 13 and 14 of {{cite:623e458e-b347-4c18-892c-8f998833b03d}}. The result of a
+suitable perturbation of the singularities of FORMULA  is the
+FORMULA -degree seven curve shown in Figure REF  (e). Notice
+that this curve, which we call also FORMULA , is in maximal position
+with respect to the line FORMULA  and has maximal intersection
+multiplicity with the line FORMULA  at the point FORMULA . It
+follows that a polynomial defining FORMULA , with respect to affine
+coordinates FORMULA  such that FORMULA  defines the line FORMULA , FORMULA 
+defines FORMULA  and FORMULA  is the line at infinity, has generically
+Newton polygon with vertices FORMULA , FORMULA  and FORMULA , since
+FORMULA  passes by the point FORMULA . The chart of FORMULA , with
+respect to its Newton polygon, is shown in Figure REF 
+(f).
+We construct from the curve FORMULA  a sqh-smoothing FORMULA  of FORMULA . By Proposition REF  the
+topology of the deformation FORMULA  can be seen from the
+chart associated to FORMULA  (compare Figures REF  (f)
+and REF  (g), where we have indicated by the
+same number the corresponding peripheral roots)
+We define then a msqh-Harnack smoothing FORMULA  of FORMULA 
+by gluing together the chart of FORMULA  with the chart of a
+suitable Harnack smoothing of FORMULA  (see Theorem
+REF ) . The topology of the msqh-Harnack smoothing
+FORMULA  is shown in Figure REF  (h).
+FIGURE 
+FIGURE 
+FIGURE 
+FIGURE 
+FIGURE 
+FIGURE 
+Acknowledgement. The authors are grateful to Erwan
+Brugallé for suggesting example
+REF .

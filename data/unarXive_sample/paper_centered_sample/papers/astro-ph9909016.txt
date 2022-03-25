@@ -1,0 +1,540 @@
+
+Gas and Dust in Protogalaxies
+Francoise Combes
+F. Combes
+Gas and Dust in Protogalaxies
+DEMIRM, Observatoire de Paris,
+61 Av. de l'Observatoire, F-75 014, Paris, France
+September 1, 1999
+The study of high-redshift objects is rapidly developing,
+allowing to build the star formation history of the Universe.
+Since most of the flux from starbursts comes out in the FIR
+region, the submm and mm are privileged domains for
+the exploration at high z. I review the recent work on
+galaxies at high redshift in this wavelength region, for
+the continuum as well as for the line detection (dust and
+molecular gas). Perspectives are discussed to detect
+early objects (maybe protogalaxies) with the future
+large millimeter instruments.
+
+molecules, dust, galaxies, millimeter
+Introduction
+Considerable progress has been made in our knowledge of
+galaxy evolution from the faint galaxy studies made possible
+by HST deep imaging, ground-based spectroscopy, and
+wide faint galaxy surveys (e.g. Ellis, ellis98; Steidel
+et al. steidel96; Shade et al. shade96).
+This progress has been led by the optical domain,
+but crucial information came also from the far-infrared
+and millimeter domains: the cosmic IR and submm background
+radiation discovered by COBE (e.g. Puget et al. puget96;
+Hauser et al. hauser98) yields an insight on the global
+past star-formation of the Universe, and the sources discovered
+at high redshift in the millimeter continuum and lines
+yield information on the structure of the past starbursts
+(Smail et al. smail97; Guilloteau et al. guillot99).
+From all these data, a global view of star formation
+as a function of lookback time has been derived
+(e.g. Madau et al. madau96; Glazebrook et al.
+glaze99), which still is submitted
+to big uncertainties, especially at high redshift.
+In particular, it is possible that the optically derived
+star formation rate is under-estimated, due to dust
+obscuration, and that only infrared/submm surveys could give
+the correct information (Guiderdoni et al. guider97).
+This review focus on the dust and molecular content of galaxies,
+as a way to trace the evolution of star formation, and
+to detect the location of starbursts as a function
+of redshift. First the present state of knowledge is
+detailed, concerning CO emission lines as well as dust
+continuum, and their interpretation is discussed
+(respective role of starburst and AGN for instance).
+Then perspectives are drawn concerning the future surveys
+that will be conducted with the next generation of millimeter
+instruments.
+
+Detection of Molecular Gas at High Redshift
+Emission lines
+The detection of high-redhifted (FORMULA ) millimeter CO lines in the
+hyperluminous object IRAS 10214+4724
+(FORMULA , Brown & Vanden Bout 1992, Solomon et al. 1992), has opened
+a new way of research to tackle the star formation history of the Universe.
+Although the object turned out to be highly gravitationally amplified, it
+revealed however that galaxies at this epoch could have large
+amounts of molecular gas, excited by an important starburst,
+and sufficiently metal-enriched to emit detectable CO emission lines.
+The latter bring fundamental information about the cold gas component
+in high-z objects and therefore about the physical conditions of
+the formation of galaxies and the first generations of stars.
+At high enough redshifts, most of the galaxy mass could be molecular.
+The main problem to detect this molecular component could be its low
+metallicity, but theoretical calculations have shown that in a violent
+starburst, the metallicity could reach solar values very quickly
+(Elbaz et al. 1992).
+After the first discovery, many searches for other candidates took place,
+but they were harder than expected, and only a few,
+often gravitationally amplified,
+objects have been detected: the lensed Cloverleaf quasar
+H 1413+117 at FORMULA  (Barvainis et al. 1994),
+the lensed radiogalaxy MG0414+0534 at FORMULA  (Barvainis et al. 1998),
+the possibly magnified object
+BR1202-0725 at FORMULA  (Ohta et al. 1996, Omont et al. 1996a),
+the amplified submillimeter-selected hyperluminous galaxies SMM02399-0136
+at FORMULA  (Frayer et al. 1998), and SMM 14011+0252 at 2.565
+(Frayer et al. 1999), and the magnified BAL quasar APM08279+5255,
+at FORMULA , where the gas temperature derived from the CO lines is
+FORMULA  200K, maybe excited by the quasar (Downes et al. 1999a).
+Recently Scoville et al. (1997b) reported the detection of the first
+non-lensed object at FORMULA , the weak radio galaxy 53W002,
+and Guilloteau et al. (1997) the radio-quiet quasar BRI 1335-0417, at FORMULA ,
+which has no direct indication of lensing.
+If the non-amplification is confirmed, these objects
+would contain the largest molecular contents known
+(FORMULA  MFORMULA  with a standard CO/HFORMULA 
+conversion ratio, and even more
+if the metallicity is low).
+The derived molecular masses are so high that HFORMULA  would constitute
+between 30 to 80% of the total dynamical mass (according to the unknown
+inclination), if the standard CO/HFORMULA  conversion ratio was adopted.
+The application of this conversion ratio is however doubtful, and it is
+possible that the involved HFORMULA  masses are 3-4 times lower (Solomon
+et al. 1997).
+FIGURE 
+The CO line detections at high FORMULA  up to now are summarized in
+Table REF , and
+the molecular masses as a function of redshift are
+displayed in Fig. REF . It is clear from this figure that
+our present sensitivity prevents detection of CO lines
+above a redshift of 0.4, unless the objects are lensed;
+but this will rapidly change with
+the new millimeter instruments planned over the world
+(the Green-Bank-100m of NRAO, the LMT-50m of UMass-INAOE,
+the ALMA (Europe/USA) and the
+LMSA (Japan) interferometers). It is therefore interesting to
+predict with simple models the detection capabilities, as a function
+of redshift, metallicity or physical conditions in the high-z objects.
+In particular, it would be highly interesting to detect not only
+the few exceptional amplified monsters in the sky, but also the
+widely spread normal galaxy population of the young universe.
+A previous study of galaxies at very high redshift (up to FORMULA )
+by Silk & Spaans {{cite:87bae38a-8008-4a05-aa0d-60195f1f7d3e}} concluded
+that CO lines could be even more easy to detect than the continuum;
+The models presented in section 4 do not agree with this conclusion.
+Today galaxies are detected in the optical up
+to FORMULA  6, when the age of the universe is about
+5% of its age, or 10FORMULA  yr in a standard flat universe model.
+For larger redshifts, it is likely that the total amount of
+cumulated star formation is not a significant fraction of the total
+(e.g. Madau et al. 1996). However, it is of overwhelming interest
+to trace the first star-forming structures, as early as possible
+to constrain theories of galaxy formation.
+TABLE 
+
+
+Absorption lines
+Molecular absorption lines are also a powerful tool to study
+the interstellar medium of galaxies at high redshift
+(e.g. Combes & Wiklind com96).
+A sample of the molecular lines detected is shown in Fig. REF .
+These molecular absorption objects are the continuation
+at high column densities (10FORMULA –10FORMULA  cmFORMULA )
+of the whole spectrum of absorption systems, from the
+LyFORMULA  forest (10FORMULA –10FORMULA  cmFORMULA )
+to the damped LyFORMULA  and HI 21cm absorptions
+(10FORMULA –10FORMULA  cmFORMULA ). It is currently thought
+that the LyFORMULA  forest originates from gaseous filaments
+in the extra–galactic medium, that the damped and HI
+absorptions involve mainly the outer parts of spiral
+galaxies. The molecular absorptions concern the central
+parts of galaxies.
+The properties of molecular absorptions detected in the millimeter
+domain so far, are summarised in Table REF .
+FIGURE 
+TABLE 
+The utility of molecular absorption lines comes from the
+high sensitivity. Due to the small extent of the background continuum
+source, the signal is not diluted, there is no distance dependence.
+Molecular absorption lines are as easy to detect
+at zFORMULA 1 as at zFORMULA 5, provided the
+continuum sources exist. Then, direct opacity are measured,
+and it is almost as easy to detect many high dipole molecules,
+(HCOFORMULA  or HCN) as CO.
+About 15 different molecules have been detected
+in absorption at high redshifts, in a total of 30
+different transitions. This allows a detailed
+chemical study and comparison with local clouds.
+Within the large dispersion in column densities,
+and in molecular cloud properties, the
+high redshift systems do not appear to be different from local
+ones, suggesting that the conditions for star formation are
+the same up to zFORMULA 1 as at the present.
+A systematic survey for absorption lines has also been
+undertaken in front of about a hundred continuum sources
+candidates, selected from flat–spectrum continuum
+sources. The continuum needs to be at least 0.2 Jy to allow
+detection of intervening molecular gas.
+The redshift of the absorbing candidate is known, either
+from previously detected HI absorption,
+or from optical lines emission. When the continuum source is strong
+enough, at least 1 Jy, and no redshift is known, it is possible
+to search for absorption lines by scanning in frequency
+(cf. Wiklind & Combes wik96a).
+This last method is the most promising with the new
+generation millimeter instruments, that will gain
+an order of magnitude in sensitivity. Indeed, the best
+candidates are the most obscured ones, where no redshift
+is available.
+A lot more absorption systems could be found with the future
+instruments, at faint continuum flux, since the number counts of quasars
+are a non-linear function of flux and the local
+luminosity function is steep (see Peacock peacock85).
+However, the flat-spectrum radio-loud quasars distribution
+is decreasing sharply at FORMULA  (Shaver et al. shaver96),
+and this is not likely due to obscuration, since they are
+radio-selected quasars. If quasars are associated to galaxy
+formation and interactions, this tends to show that the decrease of
+star-formation rate beyond FORMULA  is real and not an extinction effect.
+The relative absence of strong continuum radio sources at high
+redshift will not help the tracing of protogalaxies
+through absorption techniques.
+
+Detection of Dust at High Redshift
+Submm continuum surveys
+The spectral energy distribution (SED) of galaxies over the radio,
+mm and FIR domains has a characteristic maximum around 60-100 FORMULA m
+due to dust heated by newly born stars, and the interstellar radiation
+field (see Fig. REF ).
+This maximum depends on the dust temperature, and the curve is that
+of a grey-body, where the optical thickness can be modelled by a power-law
+in frequency, FORMULA , where FORMULA ,
+according to the nature of dust. In the Rayleigh-Jeans domain
+(frequencies lower than the maximum), the flux increases almost as
+FORMULA , and this creates what is called a negative K-correction,
+i.e. it begins to be more easy to detect objects at high redshift than
+low redshift, at a given frequency, and sky surveys could be dominated
+by remote objects (see e.g. Blain & Longair blain93, blain96). The source counts
+could be inverted in favor of high-redshift objects, if they exist in equal
+numbers (not depopulated by strong evolution effects). The millimeter domain
+becomes then a privileged tool to tackle galaxy formation.
+FIGURE 
+In Fig. REF , we see that at low frequency (lower than 100 GHz, or
+3mm in wavelength), the radio spectrum is due to synchrotron processes.
+There is a marked flux minimum that can be used as a redshift indicator
+(e.g. Carilli & Yun car99; Blain blain99a).
+Indeed, there is a well-known tight correlation
+between the synchrotron radio power and the far-infrared emission in
+star-forming galaxies (Condon condon92). This correlation is thought to
+arise because both FIR and non-thermal radio emission are both
+directly proportionnal to recent star-formation (the FIR being a good
+measure of massive stars luminosity, and the radio of the rate of supernovae).
+However, the z-indicator is somewhat ambiguous, since there is a
+degeneracy between increasing the redshift or decreasing the dust
+temperature.
+The bulk of the high redshift galaxies presently known have
+been discovered in optical. But these surveys could have
+missed dust-enshrouded starbursts, since we now know
+that dust and high metallicity occur very early in the universe
+(cf. the previous sections). Submm and FIR deep surveys are then the best
+strategy to detect starbursting proto-galaxies, and many
+such works have been undertaken, either with sensitive
+array-bolometers on single dishes (IRAM-30m, SCUBA on JCMT, ...)
+mm-interferometers, or with ISOPHOT and ISOCAM
+on board of ISO satellite.
+The first deep search was made with the SCUBA bolometer
+(Holland et al. holland99) towards a cluster of galaxies, thought to serve as a
+gravitational lens for high-FORMULA  galaxies behind (Smail et al. 1997). The
+amplification is in average a factor 2. This has the combined advantage
+to increase the sensitivity, and to reduce the source confusion, since
+there should be little contamination from cluster galaxies (Blain blain97).
+A large number of sources were found,
+all at large redshifts (FORMULA ), extrapolated
+to 2000 sources per square degree (above 4mJy),
+revealing a large positive evolution with redshift, i.e. an increase of
+starbursting galaxies. Searches toward the Hubble Deep Field-North
+(Hughes et al. 1998), and towards the Lockman hole and SSA13 (Barger et al. barger98),
+have also found a few sources, allowing to derive a similar density of sources:
+800 per square degree, above 3 mJy at 850 FORMULA m. This already can account for
+50% of the cosmic infra-red background (CIRB), that has been estimated by
+Puget et al. (1996) and Hauser et al. (1998) from COBE data.
+The photometric redshifts of these sources range between 1 and 3.
+Their identification with optical objects might be uncertain (Richards rich99).
+However, Hughes et al. (1998) claim that the star formation rate derived from
+the far-infrared might be in some cases 10 times higher than derived
+from the optical, due to the high extinction.
+Eales et al. (1999) surveyed some of the CFRS fields at 850FORMULA m
+with SCUBA and found also that the sources can account for a significant
+fraction of the CIRB background (FORMULA  30%). Their interpretation in terms
+of the star formation history is however slightly different, in that they
+do not exclude that the submm luminosity density could evolve in the same
+way as the UV one.
+Deep galaxy surveys at 7 and 15FORMULA m with ISOCAM also see an evolution with
+redshift of star-forming galaxies: heavily extincted starbursts represent less
+than 1% of all galaxies, but 18% of the star formation rate out to FORMULA 
+(Flores et al. 1999).
+Now that a few dozens of submm sources have been catalogued
+(Barger et al. barger99a, Smail et al. 1999), the count rates are confirmed,
+i.e. FORMULA  1000 source per square degree, above 3 mJy, at 850 FORMULA m,
+and even 8000 above 1 mJy, from the gravitationally amplified
+cluster fields (Blain et al. blain99b). The cumulative count
+rate can be fitted by a power-law, above 2 mJy, with a slope
+of -2.2. The main difficulty appears to be the identification
+of the submm sources with optical or radio counterparts:
+the spatial resolution of the submm surveys are several arcsecs,
+with sometimes systematic uncertainties, and some of
+the previous claimed identifications have been reconsidered
+(e.g. Barger et al. barger99b, Downes et al. downes99b).
+Follow-up in the radio (CO lines) or near-infrared, or
+optical to find redshifts, are much slower than the
+surveys themselves. At least 20% of the sources reveal an
+AGN activity, and the bulk of the sources are at relatively
+low redshift FORMULA  (Barger et al. barger99a).
+
+Extremely red objects, EROs
+To search for primeval galaxies, already Elston et al. {{cite:61e78e1c-9f20-48a3-a53b-6eff6ab7712d}}
+had identified extremely red objects that are conspicuous only in the
+near-infrared, and have R - K colors larger than 5. The ERO class
+could include several categories of objects: essentially
+old stellar populations at high redshift, or high-FORMULA  dust-reddened
+starbursts (Hu & Ridgway hu94; Cowie et al. cowie96).
+Maybe 10% of the submm sources could be EROs
+(Smail et al. smail99). A proto-typical ERO at FORMULA =1.44
+(Dey et al. dey99) has been detected in submm continuum
+(Cimatti et al. cimatti98), and has been found to be
+an ultraluminous starburst shrouded by dust,
+with a star formation rate of 200-500 MFORMULA  per yr.
+The surface density of such EROs at K FORMULA  20 and
+color R - K FORMULA  6 is about 500 per square degree,
+and for R - K FORMULA  7, about 50 per square degree
+(which is comparable to the number of QSO with
+B FORMULA  21.5, Andreani et al. andreani99).
+At least for the few objects known, the AGN cannot
+be the source of the huge luminosity, given
+the FIR/radio ratio.
+
+AGN or Starbursts
+For a long time, the highest redshift objects known were
+quasars, although now, with higher sensitivities, the
+situation is reversed (e.g. Hu et al. hu98).
+Surveys have therefore been done in the millimeter
+continuum and lines for high-z quasars (McMahon et al. mcmahon94;
+Isaak et al. isaak94; Omont et al. omont96a, omont96b;
+Guilloteau et al. guillot99). Results have shown that
+the far-infrared luminosities of many of them are due
+to dust heated by a starburst, although the AGN activity
+is simultaneously present. But since the manifestations
+of the two nuclear activities (starburst or AGN) are in many
+cases similar, and are most of the time associated,
+it has become a controversial question to
+disentangle the two interpretations. Ultra-luminous
+starbursts take place over the few central 100pc (Solomon
+et al. sol97), and even pure AGN activities can be
+mimicked by radio supernovae (Boyle & Terlevich boyle98).
+Genzel et al. genzel98 from ISO mid-infrared diagrams
+concluded that the ultra-luminous galaxies are powered at
+30% from AGN and 70% from star formation; a similar
+conclusion is suggested by Cooray & Haiman {{cite:41982849-dc77-408a-9f23-8a8672b4ccdc}}
+for submm catalogued sources. McMahon et al. {{cite:20ea5120-b37c-4037-969b-0349239629d8}}
+however suggest that a much more significant fraction of
+submm sources, between 15 to 100%, could be AGN-powered.
+Note that distinction criteria
+are hard to find (cf. Stein stein95), and even symbiotic
+starburst-black hole models are likely (Williams et al. will99).
+Discriminating between the two possibilities
+can have important consequences on the star
+formation history of the Universe.
+
+ Star Formation Rate
+One of the breakthrough due to recent progress on faint
+galaxies has been the inventory of the amount of star
+formation at every epoch (e.g. Madau et al. madau96).
+The comoving star formation rate is increasing like
+FORMULA  from FORMULA  to FORMULA , and then decreases again
+to the same present value down to FORMULA . But this relies
+on the optical studies, i.e. on the UV-determined star
+forming rates in the rest-frame. If early starbursts are dusty,
+this decrease could be changed into a plateau
+(Guiderdoni et al. guider97, guider98; Blain et al. blain99c).
+Since the AGN-starbursts nature of the submm
+sources is still an open question,
+Trentham et al. {{cite:19524d40-4e32-4a07-a0a6-5b87e7165676}} consider two extreme
+possibilities: either the submm faint galaxies are all
+dusty starbursts, but even then, they do not dominate
+the star formation rate in the Madau plot at any redshift;
+or they are dusty AGN, and again they cannot represent
+more than a few percents of the present density of
+dark objects, as inferred by Magorrian et al. {{cite:21d542a6-5e30-4b85-8320-9f78d758eefc}}.
+
+Perspectives with Future mm Instruments
+If progenitors of quasars or protogalaxies form at
+high redshifts (larger than 10), then the millimeter domain
+is the best place to detect them (Loeb loeb93;
+Braine braine95). Both continuum and
+line emission could be detected, provided enough sensitivity,
+with about 10 times more collecting surface as present
+ones (either with a single dish, as the GBT-100m of NRAO,
+or with the ALMA interferometer).
+As was clear in the previous sections, the detection of
+the submm continuum emission from actively star-forming
+objects at high redshifts is much easier than the CO line detection.
+The line emission does not have such a negative
+K-correction, since in the low frequency domain, the
+flux of the successive lines increases roughly as FORMULA 
+(optically thick domain), instead of FORMULA  for the
+continuum.
+Nevertheless the line emission is essential to study
+the nature of the object (the AGN-starburst connection
+for instance), and deduce more physics (kinematics,
+abundances, excitation, etc..). Given the gas and dust
+temperatures, the maximum flux is always reached at
+much lower frequencies than in the continuum, since the lines
+always reflect the energy difference between two levels;
+this is an advantage, given the largest atmospheric
+opacity at high frequencies.
+Predicted Line and Continuum Fluxes
+The best tracer of molecular gas at large-scale is the CO
+molecule, the most abundant after HFORMULA . All other
+molecules will give weaker signals. The fine-structure CII line at
+158 FORMULA m, formed in PDR at the border of molecular clouds,
+is also thought to be a useful tool for proto-galaxies
+or proto-quasars (Loeb loeb93), but it has
+revealed disapointing in starbursts, or compact
+objects, due to optical thickness or inefficiency of
+gas heating (e.g. Malhotra et al.
+mal97): the LFORMULA /LFORMULA  ratio decreases
+as LFORMULA /LFORMULA  increases.
+To model high-redshift starburst objects, let us
+extrapolate the properties of more local ones:
+the active region is generally confined to a compact nuclear
+disk, sub-kpc in size (Scoville et al. sco97a,
+Solomon et al. sol90, sol97). The gas is much denser
+here than in average over a normal galaxy, of the order
+of 10FORMULA  cmFORMULA , with clumps at least of 10FORMULA  cmFORMULA 
+to explain the data on high density tracers (HCN, CS..);
+large gas masses can pile up in the center, due to
+torques exerted in galaxy interactions and mergers
+(e.g. Barnes & Hernquist barnes92, barnes96).
+To schematize, the ISM maybe modelled by two
+density and temperature components, at 30 and 90K
+(cf. Combes et al. com99). The total molecular mass
+considered will be FORMULA  MFORMULA  and the
+average column density N(HFORMULA ) of 10FORMULA  cmFORMULA ,
+typical of the Orion cloud center.
+Going towards high redshift (FORMULA ), the temperature of
+the cosmic background TFORMULA  becomes of the same order
+as the interstellar dust temperature, and the excitation of
+the gas by the background radiation competes with that
+of gas collisions. It might then appear easier to detect the lines
+(Silk & Spaans silk97), but this is not the case
+when every effect is taken into account. To have an idea
+of the increase of the dust temperature with FORMULA , the simplest
+assumption is to consider the same heating power due
+to the starburst. At a stationary state, the dust must then radiate
+the same energy in the far-infrared that it receives from
+the stars, and this is proportional to the quantity
+FORMULA , if the dust is optically thin, and
+its opacity varies in FORMULA , with FORMULA  = 2. Keeping this
+quantity constant means that the energy re-radiated by the dust,
+proportional to FORMULA , is always equal to the energy it
+received from the cosmic background,
+proportional to FORMULA , plus the constant energy flux
+coming from the stars. Since FORMULA  can also be equal to
+1 or 1.5, or the dust be optically thick, we have also
+considered the possibility of keeping FORMULA 
+constant; this does not change fundamentally
+the results.
+Computing the populations of the CO rotational levels
+with an LVG code, and in the case of the two component
+models described earlier, the predictions of the line
+and continuum intensities as a function of redshift and
+frequencies are plotted in Fig. REF .
+FIGURE 
+When comparing these predictions with the present
+instrumental sensitivities, it appears that the continuum is
+detectable at any redshift already, for an ultra-luminous source,
+while the line emission has to await the order of magnitude
+increase that will be provided by the next generation
+in the mm and sub-mm domains. The recent reported
+detections (cf. Table REF ) have been possible
+because of gravitational lens magnifications
+(or maybe for 1-2 cases, an exceptional object).
+
+Source Counts
+To predict the number of sources that will become available
+with the future sensitivity, let us adopt a simple model of
+starburst formation, in the frame of the hierarchical theory
+of galaxy formation. The cosmology adopted here is
+an Einstein-de Sitter model, FORMULA  = 1, with no
+cosmological constant, and FORMULA  = 75 km/s/Mpc,
+FORMULA  = 0.5.The number of mergers as a function
+of redshifts can be easily computed through the Press-Schechter
+formalism (Press & Schechter ps74), assuming
+self-similarity for the probability of dark halos merging
+(i.e. independent of mass, Blain & Longair blain93):
+the mass spectrum of bound objects is, at any redshift FORMULA :
+FORMULA 
+where FORMULA , and FORMULA  the power-law slope of the
+primordial fluctuations (FORMULA  = -1 here, so that
+FORMULA ). The turn-off mass FORMULA  is increasing
+with redshift as:
+FORMULA 
+Following Blain et al. {{cite:f5020b61-557e-4c13-a2a4-21a7e33625e5}}, we also write the merger
+rate as a function of FORMULA  and FORMULA  under the form:
+FORMULA 
+This shape (with FORMULA  = 1.7 and FORMULA  = 1.4) has been
+chosen so that the merger rate is the sum of the net evolution
+of the Press-Schechter distribution at any mass, plus a specific
+term, indicating that the merger probability is
+maximum at equal masses, and is exponentially vanishing at
+high mass ( cf. Blain & Longair blain93).
+This gives the number of mergers at each epoch, but the
+efficiency of mergers in terms of star-formation must
+also vary considerably with redshift, with a peak at FORMULA ,
+to agree with the observations (such as in Fig. REF ).
+Also, the integration over all redshifts of the flux of all sources
+should agree with the cosmic infrared background detected
+by COBE (Fig. REF ). These contribute to reduce the
+number of free parameters of the modelling. To fit the source
+counts, however, another parameter must be introduced
+which measures the rate of energy released in a merger
+(or the life-time of the event): this rate must increase
+strongly with redshift (cf. Blain et al. blain99d).
+Once the counts are made compatible with the submm
+observations, the model indicates what must be
+the contributions of the various redshift classes to the
+present counts (cf. Fig. REF ). It is interesting to
+note that the intermediate redshifts dominate the
+counts (FORMULA ), if we allow the star formation
+to begin before FORMULA . At higher dust temperature,
+the counts are dominated by the highest redshifts
+(FORMULA ). But these contributions depend strongly on the adopted
+shape of the star-forming efficiency versus FORMULA . Observations of
+these counts and their redshift distribution
+will therefore bring a lot of insight in the physiscs of early
+protogalaxies.
+FIGURE 
+It is possible to derive also the source counts for the CO line emission.
+The spectral energy distribution is now obtained
+with a comb-like function, representing the rotational ladder,
+convolved with a Planck distribution of
+temperature equal to the dust temperature, assuming the lines optically
+thick. The frequency filling factor is then proportional to the
+rotational number, and therefore to the redshift, for a given observed
+frequency. The width of the lines have been assumed to be 300km/s.
+The derived source numbers are shown in Fig. REF .
+Note how they are also dominated
+by the high redshift sources. It is however not useful to
+observe at FORMULA  below 1mm for high-FORMULA  protogalaxies, but
+instead to shift towards FORMULA  = 1cm.
+FIGURE 
+
+Conclusion
+If there were as many ultra-luminous starbursts at FORMULA  than at
+FORMULA , the present sub-mm continuum surveys should have detected
+them (there might still be identification problems, however).
+A good way to identify them is to search for molecular lines,
+but the present instruments are not yet sensitive enough,
+when they are not helped by gravitational lenses.
+With more than an order of magnitude sensitivity
+that will be available in the next decade, it will become
+possible to detect normal star-forming galaxies at
+high redshift, and even protogalaxies at FORMULA .

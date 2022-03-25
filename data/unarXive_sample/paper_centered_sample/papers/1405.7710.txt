@@ -1,0 +1,1998 @@
+
+Predicted Space Motions for Hypervelocity and Runaway Stars:
+Proper Motions and Radial Velocities for the GAIA Era
+Scott J. Kenyon
+Smithsonian Astrophysical Observatory,
+60 Garden St., Cambridge, MA 02138
+skenyon@cfa.harvard.edu
+Benjamin C. Bromley
+Department of Physics, University of Utah,
+115 S 1400 E, Rm 201, Salt Lake City, UT 84112
+bromley@physics.utah.edu
+Warren R. Brown
+Smithsonian Astrophysical Observatory,
+60 Garden St., Cambridge, MA 02138
+wbrown@cfa.harvard.edu
+Margaret J. Geller
+Smithsonian Astrophysical Observatory,
+60 Garden St., Cambridge, MA 02138
+mgeller@cfa.harvard.edu
+We predict the distinctive three dimensional space motions of
+hypervelocity stars (HVSs) and runaway stars moving in a realistic
+Galactic potential. For nearby stars with distances less than
+10 kpc, unbound stars are rare; proper motions alone rarely isolate
+bound HVSs and runaways from indigenous halo stars. At large
+distances of 20–100 kpc, unbound HVSs are much more common
+than runaways; radial velocities easily distinguish both from
+indigenous halo stars. Comparisons of the predictions with
+existing observations are encouraging. Although the models fail
+to match observations of solar-type HVS candidates from SEGUE,
+they agree well with data for B-type HVS and runaways from other
+surveys. Complete samples of FORMULA  20 stars with GAIA
+should provide clear tests of formation models for HVSs and
+runaways and will enable accurate probes of the shape of the
+Galactic potential.
+Galaxy: kinematics and dynamics —
+Galaxy: structure —
+Galaxy: halo —
+Galaxy: stellar content —
+stars: early-type
+INTRODUCTION
+From the Galactic Center (GC) to the Magellanic Clouds, three dimensional
+(3D) space motions yield interesting information on the mass distribution
+and stellar populations in the Local Group. At the GC, proper motion and
+radial velocity data for several dozen bright O-type and B-type stars orbiting
+Sgr AFORMULA  reveal the existence of a black hole with a mass of roughly
+FORMULA  FORMULA  {{cite:de2094bd-2863-49eb-b151-51760e5e25af}}, {{cite:c519b17f-c2c1-4492-92c5-042ad337d3f8}}.
+For the LMC, 3D motions of several thousand stars allow measures of the
+orientation of the stellar disk and the mass contained within FORMULA  9 kpc
+{{cite:ea5658e7-37f2-4cd7-b44b-ad1f032390d9}}. On distance scales intermediate between these two
+extremes, accurate space motions of large groups of stars bound to the
+Milky Way measure
+(i) the rotation of the Galactic bulge {{cite:ac4f65ba-7cad-4606-af00-00ab7027de4b}},
+(ii) the kinematics of nearby OB associations in the Galactic disk
+{{cite:75f95612-8a15-422a-a137-de9572e171e6}}, {{cite:33b617d3-265d-4a03-9587-72b7abf0d802}}, and
+(iii) the frequency of streams of stars in the Milky Way halo {{cite:2cbadcc6-8a9f-4c24-a2ff-32390b65a8ca}}.
+Unbound stars ejected from the Milky Way can also probe Galactic structure.
+HVSs are ejected from the GC when a close binary system passes within the
+tidal boundary of the central supermassive black holeHVS ejections
+also occur when a single or binary star passes too close to a binary black hole
+{{cite:0ba1e729-7b30-423c-a659-799c37a29194}}. Here, we focus on the original Hills (1988) mechanism
+for a single black hole at the GC.
+{{cite:cad76a08-1407-4469-a985-c8fd58909f76}}. During this passage, one component of the binary
+becomes bound to the SMBH; to conserve energy, the other is ejected at velocities
+ranging from a few hundred to a few thousand km sFORMULA . Robust identification of
+unbound HVSs in the halo enables more accurate measurements of the total mass
+of the Milky Way {{cite:cedad227-da0f-4023-b83b-8b53283eabf7}}, {{cite:c7a15263-da2e-4baf-9ad4-c05e21deb34d}}. Because HVSs leave
+the GC on nearly radial orbits, measuring the 3D trajectories of unbound HVSs
+in the halo constrain the anisotropy of the Galactic potential
+{{cite:24c8abb2-fbcf-4a94-8708-243d4453e63f}}, {{cite:e0aff0bf-14f1-4a54-b2a1-c549aa0eef48}}.
+Space motions of runaway stars may provide additional constraints on the
+Galactic potential {{cite:bd115575-e8b2-4867-bf85-f08a84fd4ac1}}. Produced when one component
+of a binary system explodes as a supernova {{cite:99cdd805-c723-4baa-bead-1cd7885b066f}}, {{cite:abe14473-a1bf-4a55-b41c-6b0415a8d9e6}} or
+when a star receives kinetic energy through dynamical interactions with several
+more massive stars {{cite:75f61575-d0dd-4ee8-b089-f87f3734912b}}, {{cite:7c5986e2-253f-4239-8d09-19b7cd99eee6}}, high velocity runaways
+have space motions and spatial distributions distinct from HVSs
+{{cite:bd115575-e8b2-4867-bf85-f08a84fd4ac1}}, {{cite:cecb8e47-6dd9-49a9-92d3-e0d862747e5d}}. Separating unbound HVSs from unbound runaways
+should enable more rigorous constraints on the mass of the Galaxy and any
+anisotropy in the Galactic potential.
+Realizing these possibilities requires robust predictions for the space motions
+of HVSs and runaways moving through a realistic Galactic potential. Here, we
+focus on calculations in an axisymmetric potential. Our results demonstrate
+that proper motions (radial velocities) isolate nearby (distant) HVSs and
+runaways from indigenous stars. Unique variations of proper motion and radial
+velocity with Galactic longitude and latitude enable new ways to identify high
+velocity stars. For observed high velocity stars, comparisons with the models
+indicate a mix of HVSs and runaways, with a strong preference for an HVS origin
+among the most distant stars.
+
+OVERVIEW
+To predict proper motions and radial velocities for HVSs and runaways, we
+consider both analytic models and numerical simulations. For stars with
+specific trajectories, analytic models allow us to derive the variations in
+proper motion and radial velocity as a function of position in the Galaxy.
+Numerical simulations yield predictions for the distributions of positions
+and space motions for specific models of HVSs and runaways.
+We begin in § with a formal discussion of the analytic
+model. After defining cartesian, cylindrical, and spherical coordinate
+systems (§REF ), we derive radial and tangential velocities
+for stars (i) orbiting the Galaxy (§REF ) and
+(ii) moving radially away from the GC (§REF ). Features in the
+behavior of the radial and tangential velocities with distance and Galactic
+coordinates provide a basis for differentiating the two types of motion.
+Readers more interested in results than techniques can use the figures in
+§ as a guide and concentrate on §3.3, where we summarize
+the relative value of radial velocities and proper motions for identifying
+HVSs and runaways among indigenous stars. For stars at distances FORMULA 
+20 kpc from the Sun, radial velocities separate orbital motion from radial
+motion. For nearby stars (FORMULA  20 kpc), tangential velocities may
+discriminate ejected stars from bulge and disk stars, but probably cannot
+isolate ejected stars from halo stars.
+In §, we describe numerical techniques for simulating
+HVSs and runaways moving through the Galaxy. Our procedures follow those
+discussed in {{cite:ac11fc52-b852-42bb-99c9-2a06cc232b3e}}, {{cite:d58e45ac-eaee-4855-b395-c1531072c52d}}, and {{cite:cecb8e47-6dd9-49a9-92d3-e0d862747e5d}}.
+Here, we focus on the input gravitational potential for the Galaxy
+(§REF ), the initial conditions (§REF ),
+and the integration technique (§REF ).
+We discuss results in four sections. We start by considering the fraction of
+ejected stars which reach the outer Galaxy with Galactocentric distances
+FORMULA  60 kpc and high Galactic latitude, FORMULA 
+30FORMULA  (§). With their large ejection velocities, 25% of
+HVSs reach the outer halo. Much smaller ejection velocities prevent a large fraction
+of runaways from leaving the inner disk. For supernova-induced (dynamically
+ejected) runaways, only 1% (0.25%) reach Galactocentric distances of 60 kpc.
+Roughly 0.1% of either type of runaway achieves Galactocentric distances of
+60 kpc and FORMULA  30FORMULA .
+In §, we examine distributions of the proper motion FORMULA  and
+radial velocity FORMULA  for complete samples of stars produced in simulations
+of HVSs and runaways. After exploring the density of stars in the FORMULA 
+(§REF ) and the FORMULA  (§REF ) planes, we
+examine the distributions of radial velocity and proper motion in specific
+distance bins and distributions of proper motion for all stars in each
+simulation (§REF ) and the density of stars as a function
+of Galactic coordinates (§REF ). §REF  briefly
+summarizes the highlights of these simulations.
+To establish predictions for surveys with GAIA and other facilities, we
+continue by constructing magnitude-limited samples of HVSs and runaways
+for 1 FORMULA  and 3 FORMULA  stars (§). In the FORMULA  plane,
+magnitude-limited samples of nearby, mostly bound HVSs and runaways with
+d FORMULA  10 kpc have nearly identical distributions, complicating attempts
+to isolate these stars from the indigenous halo population. Among 3 FORMULA  stars,
+high velocity HVSs easily distinguish themselves from high velocity runaways.
+Comparisons between the numerical results and observations of several sets
+of high velocity stars complete our analysis (§). HVS and
+runaway models yield a poor match to observations of solar-type HVS candidates
+from SEGUE {{cite:41e37042-4770-45ef-8052-beeba6dd5325}}. However, the models provide
+an excellent match to observations of B-type HVS candidates
+{{cite:f0a1d1a3-0ad5-4e8c-af09-665bf710a442}},
+nearby B-type runaways {{cite:c0fc5352-e9ce-44cc-adcf-e60cbc2085de}},
+and miscellaneous HVS and runaway star candidates from other surveys
+{{cite:edaad942-4547-4cc1-a40d-a37fc99a72d9}}, {{cite:b422dfca-b432-400a-8eb6-7ded2846ac95}}, {{cite:07c61e3a-c5b7-466e-b5e4-676f52787c8d}}, {{cite:98fd8023-0fee-4327-b4fe-e59eba772e87}}, {{cite:a83467b7-faa9-470a-95eb-82d2aeb44ff3}}.
+Although radial velocities easily separate unbound HVSs and runaways from
+indigenous halo stars, kinematic data alone are not sufficient to isolate
+bound HVSs or runaways from halo stars (§REF ). Combined
+with estimates of production rates (§REF ), these results
+suggest that ejections from the GC are the source of the highest velocity
+stars in the Galactic halo.
+Our exploration of the space motions of HVSs and runaways concludes with
+a brief discussion and summary (§).
+
+ANALYTIC MODEL
+Definitions
+To establish a framework for analyzing numerical simulations, we consider an
+analytic model for the proper motions of stars with simple trajectories in
+the Galaxy. In a cartesian coordinate system with an origin at the GC,
+stars have positions FORMULA  and velocities FORMULA . The
+distance from the GC to the star is FORMULA ; the space velocity of the star
+relative to the GC is FORMULA . The angle of the position vector of the star
+relative to the FORMULA  axis is FORMULA ; the angle relative to the FORMULA –FORMULA 
+plane is FORMULA . To distinguish these angles from standard galactic longitude
+and latitude, we call FORMULA  (FORMULA ) the GC longitude (GC latitude).
+In this convention, we specify coordinates in both the cartesian
+FORMULA  and spherical FORMULA  systems {{cite:46fd0709-364f-4507-b940-d32d8f89cf8e}}.
+These systems are appropriate for stars in the Galactic bulge or halo, where the
+potential is roughly spherically symmetric. To make a clear link
+with the cylindrical coordinate system more appropriate for the
+Galactic disk, we define the cylindrical radius FORMULA .
+In this system, we specify coordinates with FORMULA .
+To connect these coordinates to the heliocentric galactic system, we assign
+the Sun a position FORMULA  and a velocity FORMULA , where
+FORMULA  = 8 kpc is the distance of the Sun from the GC
+{{cite:25994db4-fd17-4bcf-a15e-7d31823e6469}}
+and FORMULA  is the space velocity of the Sun relative to the GC
+(Fig. REF ).
+Each star then has a distance FORMULA  from
+the Sun and a relative velocity
+FORMULA .
+In this system, the galactic longitude FORMULA  of the star is the angle –
+measured counter-clockwise in the FORMULA  plane – from a line connecting
+the Sun to the GC, FORMULA .
+The galactic latitude measures the height of the star above the galactic
+plane, FORMULA .
+For FORMULA , FORMULA  and FORMULA .
+Although these coordinate systems are clearly defined, angles in the
+heliocentric galactic system span a smaller range than in the pure GC
+system (Fig. REF ). For stars with positions FORMULA , the
+range of FORMULA  (FORMULA  to FORMULA ) is larger than the range of FORMULA 
+(FORMULA  to FORMULA ), where
+FORMULA 
+When FORMULA , FORMULA . For
+each FORMULA , there are two valuesAmong other examples,
+this classic degeneracy in FORMULA  plagues H I maps of the Galaxy. of FORMULA .
+We derive the radial velocity FORMULA , the tangential velocity FORMULA , and
+the proper motion FORMULA  in the heliocentric frame. For all stars,
+FORMULA . The radial velocity is
+FORMULA 
+We separate the tangential velocity into two components,
+FORMULA  and FORMULA , where FORMULA .
+The component along the direction of galactic longitude is:
+FORMULA 
+The latitude component is
+FORMULA 
+For stars with FORMULA  0 and no motion in the FORMULA -direction, FORMULA . Although
+each component of the tangential velocity has a clearly-defined sign convention, we
+plot the absolute magnitude when we combine the two components into the tangential
+velocity, FORMULA .
+The standard definition for the proper motion is
+FORMULA 
+where FORMULA  is measured in km sFORMULA  and FORMULA  is in pc. To set the proper motion in
+the heliocentric galactic frame, FORMULA  and FORMULA ,
+where the velocities are in km sFORMULA . Positive (negative) proper motions are in the
+direction of increasing (decreasing) FORMULA  or FORMULA .
+
+Simple Trajectories
+Within this framework, we consider several simple stellar motions to explore the
+variation of FORMULA  and FORMULA  with position in the Galaxy. Most motions are composed
+of both a circular component and a radial component. Starting with stars following
+circular orbits around the GC inside and outside the solar circle (§REF ),
+we derive the behavior of FORMULA  and FORMULA  with FORMULA , FORMULA , and FORMULA  for stars with
+total velocity FORMULA . In this simple
+example, we set FORMULA  = 0 and work in a coordinate system where FORMULA . The maximum
+tangential velocity is then fixed at FORMULA ; the maximum radial velocity
+falls with FORMULA  inside the solar circle and then grows with FORMULA  outside the solar
+circle. At large FORMULA , FORMULA . Continuing with stars on purely
+radial orbits (§REF ), we explore motions in the spherical coordinate
+system appropriate for the bulge and the halo. For stars inside the solar circle,
+the maximum radial and tangential velocities are FORMULA  and
+FORMULA . Extrema in FORMULA  lie at FORMULA  0; stars have
+maximum FORMULA  at FORMULA . Well outside the solar circle, the maximum
+radial velocity (FORMULA ) is much larger than the maximum
+tangential velocity (FORMULA ). At intermediate FORMULA  8–20 kpc,
+there is a smooth transition from small FORMULA  and large FORMULA  to large
+FORMULA  and small FORMULA .
+Circular Orbital Motion
+For stars following simple circular orbits around the GC, FORMULA ,
+FORMULA , and FORMULA  = 0 (Fig. REF ). Although stars
+in the thin and thick disks have finite vertical distances from the Galactic plane
+and non-zero motion out of the Galactic plane, we set FORMULA  and ignore any
+out-of-plane motion here. Thus, our radial coordinate FORMULA  is identical to the
+standard cylindrical coordinate FORMULA . With FORMULA , the heliocentric radial
+and tangential velocities are
+FORMULA 
+and
+FORMULA 
+In this system, FORMULA  = 0 and FORMULA . Using trigonmetric identities, we can
+simplify these to:
+FORMULA 
+and
+FORMULA 
+For convenience, we can eliminate FORMULA  in the expression for the radial velocity,
+FORMULA 
+Fig. REF  illustrates the variation of FORMULA  (dashed curves) and
+FORMULA  (solid curves) with GC longitude for stars with FORMULA  = 250 km sFORMULA  and FORMULA  = 5 kpc
+(cyan lines) and FORMULA  = 50 kpc (magenta lines). In this configuration, stars on the
+opposite side of the Galaxy from the Sun (FORMULA ) have no net
+radial velocity and a maximum tangential velocity of FORMULA . For
+FORMULA  = 250 km sFORMULA , FORMULA  = 500 km sFORMULA . Stars on the near side of the Galaxy
+(FORMULA ) have no net radial or tangential velocity. Thus, the
+minimum tangential velocity is FORMULA  = 0.
+The behavior of FORMULA  depends on FORMULA . For all FORMULA , FORMULA  at FORMULA  and
+FORMULA . When FORMULA , maximum positive FORMULA  is at FORMULA 
+(FORMULA ). Maximum negative FORMULA  is at FORMULA . With a maximum
+radial velocity, FORMULA , the amplitude of the
+radial velocity variation declines from roughly 250 km sFORMULA  at FORMULA  0 to
+roughly zero at FORMULA . Outside the solar circle, the extrema in
+FORMULA  lie at FORMULA  (FORMULA ). With
+FORMULA , the amplitude of the FORMULA  variation grows
+from zero at FORMULA  to FORMULA  at FORMULA . Thus,
+FORMULA 
+In the heliocentric galactic frame, the variation of FORMULA  and FORMULA  with FORMULA  is
+somewhat different (Fig. REF ). For stars inside the solar circle,
+FORMULA  follows an egg-shaped loop with minimum and maximum velocity at FORMULA .
+Here, FORMULA  sets the maximum extent of the loop in galactic longitude. Thus,
+the `egg' widens at larger FORMULA , reaching FORMULA  at
+FORMULA . Outside the solar circle, FORMULA  varies sinusoidally with FORMULA ,
+with maxima of FORMULA  + FORMULA  = 500 km sFORMULA  at FORMULA  and a minimum of zero at
+FORMULA .
+The radial velocity also follows simple trajectories. At small FORMULA , FORMULA  varies along
+a curved line with extrema of FORMULA  (eq. [REF ]) at FORMULA .
+As FORMULA  grows, the curves extend to larger FORMULA  but have smaller maxima. At large FORMULA ,
+FORMULA  follows a simple sinusoid, with extreme values set by FORMULA  at FORMULA 
+and zero-crossings at FORMULA  and FORMULA .
+
+Radial Motion
+Stars moving radially away from the GC have subtly different behavior. To infer
+conclusions appropriate for stars in the bulge or the halo, we consider stars
+with a broad range of GC latitude. In the GC frame, outflowing stars have constant
+FORMULA  for all FORMULA  (see Fig. REF ). In the heliocentric frame, nearby stars
+have larger FORMULA  than more distant stars. For stars with FORMULA , FORMULA . Thus,
+distant stars with large FORMULA  may lie inside the solar circle.
+With FORMULA ,
+FORMULA , and FORMULA ,
+the heliocentric radial and tangential velocities are
+FORMULA 
+FORMULA 
+and
+FORMULA 
+When stars move radially outward through the Galactic plane, FORMULA .
+With FORMULA , the equations for radial and tangential velocity are then very
+simple: FORMULA  and
+FORMULA . For stars inside
+the solar circle, the maximum galactic longitude is FORMULA .
+When FORMULA , the variations of FORMULA  and FORMULA  with FORMULA  and FORMULA  are more complex.
+Aside from having a non-zero FORMULA , the amplitude of both velocity components declines
+with cos FORMULA . For stars inside the solar circle, the maximum FORMULA  scales with FORMULA :
+FORMULA  sin FORMULA  = FORMULA . Thus, stars inside the solar circle at large
+FORMULA  have a smaller range in FORMULA  than stars with small FORMULA .
+Fig. REF  shows the variation of FORMULA  (dashed curves) and FORMULA  (solid
+curves) as a function of FORMULA  for stars with FORMULA  = 5 kpc, FORMULA  = 500 km sFORMULA , and FORMULA  =
+0FORMULA  (violet curves), 30FORMULA  (blue curves), 60FORMULA  (cyan curves), and 75FORMULA  (magenta
+curves). With FORMULA , curves at larger FORMULA  have a smaller extent in
+FORMULA . For stars at FORMULA  = 5 kpc, the maximum galactic latitude is FORMULA  30FORMULA –40FORMULA .
+Both sets of curves follow loops in the FORMULA  plane. For FORMULA  = 0, the FORMULA  curve
+folds back on itself.
+When stars lie inside the solar circle, the radial velocity varies symmetrically about
+an average velocity FORMULA . This average increases with FORMULA ,
+reaching FORMULA  at FORMULA  = 90FORMULA . With
+FORMULA  30FORMULA , FORMULA . The amplitude of the FORMULA  variation
+scales with FORMULA  and thus declines markedly from FORMULA 
+to FORMULA  0 among the sequence of four curves.
+The variation of FORMULA  with FORMULA  is not symmetric. At FORMULA  = 0FORMULA , the tangential
+velocity ranges from a minimum of 0 to a maximum close to FORMULA , roughly 700 km sFORMULA .
+At large FORMULA , FORMULA  approaches a constant value of roughly
+FORMULA  FORMULA  for FORMULA  and
+FORMULA  30FORMULA –40FORMULA .
+Well outside the solar circle (FORMULA  = 50 kpc), the motions are much simpler
+(Fig. REF ). At large FORMULA , FORMULA  varies roughly sinusoidally
+with FORMULA  about an average velocity of FORMULA . The amplitude
+of this variation decreases with FORMULA , reaching a constant FORMULA  when
+FORMULA  and FORMULA  90FORMULA . Stars reach a minimum (maximum) FORMULA 
+at FORMULA .
+The tangential velocity has a smaller amplitude and different phasing with FORMULA .
+At large FORMULA , the tangential velocity is roughly FORMULA , a result of reflex solar
+motion. For stars close to the plane FORMULA  and FORMULA  0, the
+tangential velocity consists of two sinusoids with amplitudes of FORMULA  and FORMULA 
+(FORMULA ;
+eq. [REF ]). Thus, the minimum FORMULA  is small and approaches FORMULA 
+at FORMULA  = 0. Because the Sun is offset from the GC, the phase of minimum FORMULA 
+is offset from FORMULA . The solar motion and position in the galaxy produce
+an offset of roughly FORMULA 20FORMULA  in longitude.
+For stars with 5 kpc FORMULA  50 kpc, there is a smooth transition
+between the behavior shown in Figs. REF –REF .
+Stars with in-plane distances less than FORMULA  (FORMULA ) follow the
+trajectories in Fig. REF . Stars outside this limit follow the
+trajectories in Fig. REF .
+For an ensemble of stars with FORMULA  16 kpc, as an example, stars with
+FORMULA  have FORMULA  and follow the trajectories
+in Fig. REF . Stars at larger FORMULA  have the closed loop
+trajectories in Fig. REF .
+To illustrate this transition in more detail, Fig. REF  shows
+the variation of the maximum and minimum radial velocity (lower panel) and
+tangential velocity (upper panel) as a function of FORMULA  and FORMULA  for stars
+on radial orbits with FORMULA  = +500 km sFORMULA  relative to the GC. At small FORMULA ,
+the minimum FORMULA  is close to zero for all FORMULA . This minimum increases with
+FORMULA  until FORMULA . The maximum FORMULA  is roughly constant at
+500–750 km sFORMULA  at small FORMULA  and then decreases smoothly to FORMULA  at large FORMULA .
+The extrema in FORMULA  have similar trends. Inside the solar circle, stars on
+the near side of the GC all move towards the Sun and have large negative FORMULA .
+On the far side of the GC, all stars move away from the Sun. Thus, the range
+in FORMULA  is largest for stars inside the solar circle. Because FORMULA  scales
+with cos FORMULA , stars at small (large) FORMULA  have the largest (smallest)
+range in FORMULA .
+Outside the solar circle, all stars in this example move away from the Sun.
+The minimum radial velocity is then always larger than zero, producing the large
+increase in minimum FORMULA  at FORMULA . Somewhat counterintuitively, the
+maximum FORMULA  also grows with FORMULA . Stars with FORMULA  have the
+largest velocity with respect to the Sun when they move radially outward
+roughly along the FORMULA -axis. As FORMULA  increases, the angle between the FORMULA -axis
+and the line-of-sight from the Sun to the star decreases. Thus, the radial
+component of the relative velocity grows with FORMULA , reaching FORMULA 
+when FORMULA .
+Fig. REF  repeats Fig. REF  for heliocentric
+distance FORMULA . Aside from a clear discontinuity in the minimum FORMULA  for
+FORMULA  = 0 at FORMULA , the behavior in FORMULA  is almost identical to
+Fig. REF . The
+minimum FORMULA  crosses from negative to positive FORMULA  at FORMULA . The
+maximum FORMULA  slowly increases to FORMULA  at large FORMULA . The variation
+in the minimum FORMULA  is also similar, a slowly decreasing function of
+increasing FORMULA .
+The maximum in the tangential velocity, however, exhibits a clear maximum
+for stars with FORMULA  30FORMULA  at FORMULA  = 8 kpc. Stars close to the
+GC produce this maximum. When GC stars move radially outward in the
+FORMULA –FORMULA  plane, their tangential velocity is at a maximum. For FORMULA ,
+this peak in FORMULA  is a sharp feature. Although still visible for
+FORMULA  5FORMULA  to 30FORMULA , the feature vanishes for larger FORMULA .
+
+Summary
+Despite the simple stellar motions in these examples, the behavior of
+FORMULA  and FORMULA  with FORMULA , FORMULA , and FORMULA  is amazingly rich. For stars
+inside the solar circle, circular orbital motion and radial outflow
+produce large maximum tangential velocities, FORMULA .
+These maxima occur at distinct galactic longitudes: FORMULA  0 for
+stars orbiting the GC and FORMULA  for stars moving radially
+away from the GC. Thus, proper motion measurements offer some promise
+for distinguishing high velocity stars ejected from the GC from stars
+on circular orbits around the GC.
+Outside the solar circle, circular orbital motion is also distinct from
+purely radial motion. For stars orbiting the GC, the maximum FORMULA  is
+independent of FORMULA . However, the maximum tangential velocity of radially
+outflowing stars gradually declines with FORMULA  until
+FORMULA . This maximum FORMULA  changes little with FORMULA .
+For distant stars, orbital motion yields a larger FORMULA  than
+radial motion.
+Trends of FORMULA  with FORMULA  and FORMULA  are opposite those of FORMULA . Inside the
+solar circle, stars on circular orbits have smaller and smaller FORMULA  at
+larger and larger FORMULA . For stars moving radially away from the GC, FORMULA 
+has clear minima and maxima of FORMULA  at FORMULA . Outside
+the solar circle, stars on circular orbits have maximum radial velocity
+FORMULA  at large FORMULA . Stars moving radially away from
+the GC have much larger maximum FORMULA , with FORMULA .
+Thus, radial velocity measurements excel at separating distant stars on
+roughly circular orbits from high velocity stars moving radially outwards
+from the GC.
+To conclude this section, we derive predicted proper motions for stars
+moving radially away from the GC (Fig. REF ). Close to the
+Sun, proper motions are large, roughly 100 milliarcsec yrFORMULA . The
+range in proper motions is small (large) for stars at high (small)
+galactic latitude. At large distances (FORMULA  kpc), the
+maximum proper motion of roughly 1 milliarcsec yrFORMULA  results from
+solar reflex motion.
+At intermediate distances, there is a small `peak' at FORMULA  8 kpc
+in the trend of FORMULA . Stars inside the solar circle with
+FORMULA  produce this peak. For FORMULA  0FORMULA –10FORMULA , the
+peak has the largest contrast with the general trend in proper motion
+(see Fig. REF ). At the largest galactic latitudes
+(FORMULA  60FORMULA ), the peak fades considerably.
+These results demonstrate that radial velocities can isolate high velocity
+stars from the space motions of typical stars in the Galaxy. Radial
+velocity measurements succeed at large FORMULA , where observations can easily
+separate HVSs or runaways with FORMULA  +300 km sFORMULA  from normal halo stars
+with FORMULA  100 km sFORMULA  {{cite:f0a1d1a3-0ad5-4e8c-af09-665bf710a442}}.
+Inside the solar circle, proper motion measurements provide a clear path
+for isolating high velocity stars from bulge and disk stars orbiting the
+GC. Among B-type stars with FORMULA  1 kpc, typical proper motions are
+10–40 milliarcsec yrFORMULA  {{cite:75f95612-8a15-422a-a137-de9572e171e6}}. This motion is a factor of
+3–10 times smaller than the predicted motion for nearby HVSs and runaways
+with space velocities of 500 km sFORMULA  (Fig. REF ). The observed
+velocity dispersion (FORMULA  100 km sFORMULA ) of stars in the Galactic
+bulge implies typical proper motions of 1–5 milliarcsec yrFORMULA  {{cite:14d7b6df-e238-486a-ba08-dc179d51f451}}, {{cite:ac4f65ba-7cad-4606-af00-00ab7027de4b}},
+smaller than the 10–20 milliarcsec yrFORMULA  predicted for high velocity HVSs and runaways
+escaping the inner Galaxy.
+For all distances, proper motions alone cannot easily separate ejected stars
+from indigenous halo stars. The maximum proper motions of typical halo stars
+with FORMULA  1–10 kpc, FORMULA  30–50 milliarcsec yrFORMULA  {{cite:0265e611-725f-4288-bb04-36991e1d2a03}}, {{cite:5af53939-7edc-4558-a71d-45d5c25c7685}}, {{cite:95f21129-446d-4bac-8b22-034e5d08d751}}, are comparable to the likely proper motions of typical ejected
+stars. We return to this issue in §REF  with a direct
+comparison between observations of halo stars and predictions from our
+numerical simulations.
+
+NUMERICAL SIMULATIONS
+To explore the space motions of high velocity stars in more detail, we now
+consider a set of numerical simulationsFor an analytical approach
+to some aspects of our discussion, see {{cite:6ab00def-ba3c-4758-adfc-6ed523f90925}}.. As in previous papers
+{{cite:ac11fc52-b852-42bb-99c9-2a06cc232b3e}}, {{cite:d58e45ac-eaee-4855-b395-c1531072c52d}}, {{cite:cecb8e47-6dd9-49a9-92d3-e0d862747e5d}}, we follow the dynamical evolution
+of HVSs and runaways throughout their main sequence lifetimes in a realistic
+Galactic potential. Snapshots of the ensemble yield predictions for the
+radial distributions of space density, proper motion, and radial velocity.
+In contrast with previous discussions, we concentrate on observables in the
+heliocentric frame instead of the Galactocentric frame.
+Building a realistic ensemble of HVSs or runaways requires two steps.
+For each star with main sequence lifetime FORMULA , we generate initial
+position FORMULA  and velocity FORMULA  vectors, an ejection time FORMULA , and
+an observation time FORMULA , with FORMULA .
+For a flight time FORMULA , we integrate the orbit of each
+star in the Galactic potential and record the final position FORMULA  and
+velocity FORMULA  vectors at FORMULA . Finally, we adopt a position and
+velocity for the Sun to derive a catalog of FORMULA , FORMULA , FORMULA , FORMULA , and
+FORMULA . Analyzing this catalog yields predictions for the observable parameters.
+Gravitational Potential of the Milky Way
+As in {{cite:d58e45ac-eaee-4855-b395-c1531072c52d}}, we adopt a three component model for the Galactic
+potential FORMULA  {{cite:24c8abb2-fbcf-4a94-8708-243d4453e63f}}, {{cite:f46ed1df-d263-4cfc-b062-a9ea856f498c}}, {{cite:e0aff0bf-14f1-4a54-b2a1-c549aa0eef48}}:
+FORMULA 
+where
+FORMULA 
+is the potential of the bulge,
+FORMULA 
+is the potential of the disk, and
+FORMULA 
+is the potential of the halo {{cite:94e06ef6-f2cd-4159-a1f4-bf634376e942}}, {{cite:24ba99e2-a6c5-4ab9-a9b2-7e04b7c0584e}}, {{cite:4f37741f-d4b1-4c48-8c59-79331bd904d3}}.
+For the bulge and halo, we set FORMULA ,
+FORMULA , FORMULA  = 0.1 kpc, and FORMULA  = 20 kpc.
+These parameters match measurements of the mass and velocity dispersion
+inside 1 kpc and outside 50 kpc {{cite:d58e45ac-eaee-4855-b395-c1531072c52d}}.
+To match a circular velocity of 235 km sFORMULA  at the position of the Sun
+{{cite:91f1a134-ca77-4984-b2ec-19d6d8fd08d4}}, {{cite:25994db4-fd17-4bcf-a15e-7d31823e6469}}, {{cite:33b617d3-265d-4a03-9587-72b7abf0d802}},
+we adopt parameters for the disk potential FORMULA ,
+FORMULA  = 2750 kpc, and FORMULA  = 0.3 kpc. The complete set of parameters for
+the bulge, disk, and halo yields a flat rotation curve from 3–50 kpc.
+
+Initial Conditions
+To select FORMULA  and FORMULA , we rely on published calculations for HVSs and runaways.
+For HVSs, we consider a model where a single supermassive black hole at the
+GC disrupts close binary systems with semimajor axes FORMULA  between FORMULA  and
+FORMULA  {{cite:cad76a08-1407-4469-a985-c8fd58909f76}}, {{cite:d58e45ac-eaee-4855-b395-c1531072c52d}}, {{cite:5bcc2024-f1e4-4778-8d8c-80544864d70d}}. Our choice of the minimum semimajor
+axis FORMULA  minimizes the probability of a collision between the two binary
+components during the encounter with the black hole {{cite:1e762740-e67e-4e64-9cc3-4b5088935a99}}, {{cite:d58e45ac-eaee-4855-b395-c1531072c52d}}.
+Setting the maximum semimajor axis FORMULA  4 AU limits the number of low
+velocity ejections which cannot travel more than 10–100 pc from the GC and use
+a substantial amount of computer time.
+Hypervelocity Stars
+Numerical simulations of binary encounters with a single black hole demonstrate
+that the probability of an ejection velocity FORMULA  is a gaussian,
+FORMULA 
+where the average ejection velocity is
+FORMULA 
+and FORMULA  0.2 FORMULA  {{cite:ac11fc52-b852-42bb-99c9-2a06cc232b3e}}. Here
+FORMULA  (FORMULA ) is the mass of the primary (secondary) star and FORMULA  is the mass
+of the central black hole. The normalization factor FORMULA  depends on
+FORMULA , the distance of closest approach to the black hole:
+FORMULA 
+where
+FORMULA 
+and
+FORMULA 
+This factor also sets the probability for an ejection, FORMULA :
+FORMULA 
+for FORMULA . For FORMULA , FORMULA ; the binary
+does not get close enough to the black hole for an ejection and
+FORMULA .
+To establish initial conditions, we select each HVS from a random
+distribution of FORMULA , FORMULA , and FORMULA . The binaries have semimajor axes
+uniformly distributed in log FORMULA  {{cite:7b6ef387-c694-4c38-b4ab-e2f8dcba1a4c}}, {{cite:9ab9730a-8aa0-4ffc-8838-fbe27a697da4}}, {{cite:96ce6f32-2e9d-4d96-aa0e-7e9c51784dc6}}.
+For binaries with FORMULA  = FORMULA , the maximum distance of closest approach is
+FORMULA . We adopt a minimum distance of closest
+approach FORMULA  = 1 AU. Within this range, the probability of any
+FORMULA  grows linearly with FORMULA . Choosing two random deviates thus yields
+FORMULA  and FORMULA ; FORMULA , FORMULA , and FORMULA  follow from
+eqs. (REF –REF ). Selecting a third random deviate
+from a gaussian distribution yields the ejection velocity. Two additional
+random deviates drawn from a uniform distribution spanning the main sequence
+lifetime of the star fix FORMULA  and FORMULA . To see whether this combination
+of parameters results in an ejection, we select a sixth random deviate, FORMULA ,
+and adopt a minimum ejection velocity FORMULA  = 600 km sFORMULA . Stars with
+smaller ejection velocities cannot escape the GC {{cite:d58e45ac-eaee-4855-b395-c1531072c52d}}. When
+FORMULA , FORMULA , and FORMULA , we place the
+star at a random location on a sphere with a radius of 1.4 pc centered on the
+GC and assign velocity components appropriate for a radial trajectory from
+the GC. Failure to satisfy the three inequalities results in a new selection
+of random numbers.
+
+Runaway Stars
+For runaway stars, we consider two analytic models for the ejection velocity.
+Following {{cite:cecb8e47-6dd9-49a9-92d3-e0d862747e5d}}, we assume runaway companions of a supernova
+have an exponential velocity distribution:
+FORMULA 
+where FORMULA  150 km sFORMULA . For a minimum (maximum) velocity of ejected
+stars of 20 km sFORMULA  (400 km sFORMULA ), this distribution roughly matches simulations
+of binary supernova ejections {{cite:690aca52-b962-4b1a-8826-03ec6db0cc88}}.
+Predicted velocity distributions for stars ejected dynamically are much steeper
+{{cite:86c2d5d7-d51d-45dd-af63-e146037528d7}}. To allow a reasonable number of high velocity ejections,
+we adopt
+FORMULA 
+where FORMULA = 150 km sFORMULA  {{cite:86c2d5d7-d51d-45dd-af63-e146037528d7}}. In our standard calculations, we
+set a minimum ejection velocity of 20 km sFORMULA  and a maximum ejection velocity of
+800 km sFORMULA . To improve the accuracy of the statistics for the highest velocity
+runaways, we perform a second set of simulations with a minimum velocity of
+50 km sFORMULA . Together, these simulations yield a robust picture for the frequency
+and observable parameters for runaways produced by the dynamical ejection
+mechanism.
+Both of these models yield small production rates for high velocity runaways.
+To enable more robust comparisons with simulations of HVSs, we consider a `toy'
+model where the ejection velocity is uniformly distributed between 400 km sFORMULA  and
+600 km sFORMULA . Thus, we use eqs. (REF –REF ) to derive rates
+for high velocity runaways and the toy model to understand the galactic
+distribution of the highest velocity runaways.
+Establishing the initial conditions for runaways also requires a set of random
+deviates. We assume the initial space density of runaways follows the space density
+of stars in the Galactic disk. Thus, the probability of ejecting a runaway from a
+cylindrical radius FORMULA  is
+FORMULA 
+where the scale length is FORMULA  = 2.4 kpc {{cite:218221aa-878b-4c14-b194-b4177b18c1d9}}, {{cite:8d74968a-7f3b-420f-acfd-9b500deaf96b}}.
+We adopt a range for the initial radius, FORMULA  = 3–30 kpc {{cite:3a896f76-4aba-4634-9c4e-d41ae821bff4}}.
+Setting the position of the runaway requires two random deviates, one for
+FORMULA  and another for the initial longitude in the GC frame. In this
+approach, the initial height above the Galactic plane is FORMULA .
+Once FORMULA  is known, we choose a random deviate for FORMULA  and two
+random deviates for the ejection angles (spherical FORMULA  and FORMULA ).
+Adding the velocity from Galactic rotation yields three velocity components.
+We then choose a final random deviate for FORMULA . In these simulations,
+ejections occur on time scales much shorter than the lifetime of the ejected
+star. Thus, FORMULA  = 0.
+
+Numerical Technique
+To integrate the motion of each ejected star through the Galactic potential,
+we use an adaptive fourth-order integrator with Richardson extrapolation
+{{cite:f44345fd-f120-4640-963f-8c4e7dea0f9f}}, {{cite:deac4b78-5657-42f3-b7b8-e4262c738a0e}}, {{cite:cecb8e47-6dd9-49a9-92d3-e0d862747e5d}}. Starting from an initial
+position FORMULA  with velocity FORMULA , the code integrates the full three-dimensional
+orbit through the Galaxy, allowing us to track position and velocity as a
+function of time. We integrate the orbit for a time FORMULA ,
+which is smaller than the main sequence lifetime of the ejected star. This
+procedure allows us to integrate millions of orbits fairly rapidly. Several
+tests demonstrate our approach yields typical errors of 0.01% in position
+and velocity after 1–10 Gyr of evolution time.
+
+REACHING THE HALO
+Before analyzing results from the simulations, it is useful to establish the
+initial conditions which enable ejected stars to reach the Milky Way halo.
+Stars orbiting the galaxy have a circular velocity FORMULA ,
+where FORMULA  is the mass inside radius FORMULA . For our adopted Milky Way potential,
+FORMULA  235 km sFORMULA  for disk stars with FORMULA  3–30 kpc. To reach the
+halo, ejected stars must have a total velocity comparable to the escape velocity,
+FORMULA . To set FORMULA , we calculate the velocity required for particles
+starting from radius FORMULA  to reach FORMULA  = 250 kpc with zero velocity. For HVSs
+ejected at FORMULA  = 1.4 pc, FORMULA  913 km sFORMULA . At FORMULA  3–30 kpc,
+FORMULA  537 FORMULA  km sFORMULA . {{cite:f0a1d1a3-0ad5-4e8c-af09-665bf710a442}}
+quote a more accurate, polynomial approximation to FORMULA  which is valid over
+a larger range of Galactocentric distances.
+With the definitions in §REF , many HVSs ejected from the GC
+reach the outer halo. In our simulations, roughly 18% of HVSs have initial
+velocities larger than FORMULA . Another 6% have ejection velocities,
+FORMULA  850–913 km sFORMULA , sufficient to reach FORMULA  60–100 kpc.
+For these speeds, typical travel times to reach the halo are 100–250 Myr
+{{cite:f0a1d1a3-0ad5-4e8c-af09-665bf710a442}}. If most HVS ejections occur roughly in the middle
+of the main sequence lifetime, stars with FORMULA  200–500 Myr escape
+the Galaxy as main sequence stars {{cite:ac11fc52-b852-42bb-99c9-2a06cc232b3e}}, {{cite:d58e45ac-eaee-4855-b395-c1531072c52d}}, {{cite:6ab00def-ba3c-4758-adfc-6ed523f90925}}.
+Among the bound population of HVSs, most lie close to the GC. Roughly 60% of
+ejected stars have FORMULA  = 600–750 km sFORMULA  and maximum distances of 1 kpc from
+the GC. With their low Galactic latitudes, FORMULA  7FORMULA , detecting this
+population requires infrared surveys. Another 5% have FORMULA  = 755–780 kms;
+these stars have maximum distances of 5–20 kpc from the GC. Compared to the 18%
+of unbound HVSs, the population of bound HVSs near the solar circle makes up a
+small fraction of all ejected stars.
+Despite starting far from the GC, it is hard for runaways to reach the outer
+halo. In the supernova ejection model, the maximum ejection velocity of
+400 km sFORMULA  is smaller than the escape velocity of 660 km sFORMULA  (430 km sFORMULA ) at
+FORMULA  = 3 kpc (30 kpc). Although the maximum velocity in the dynamical ejection
+model, 800 km sFORMULA , exceeds FORMULA  at all locations in the disk, few runaways
+achieve such large ejection velocities. Typical velocities are smaller than
+400 km sFORMULA . Thus, runaways need a boost from Galactic rotation to reach
+the halo {{cite:cecb8e47-6dd9-49a9-92d3-e0d862747e5d}}.
+To quantify the fraction of runaways which can escape the disk and reach the
+outer halo, we consider the initial velocity of an ejected star with rotational
+velocity FORMULA  and ejection velocity FORMULA . The angles between
+the two velocity vectors are FORMULA  (in the Galactic plane) and FORMULA  (out
+of the plane). The initial velocity of the star is then
+FORMULA 
+For any FORMULA , stars ejected along the direction of Galactic rotation
+(FORMULA ) have the maximum initial velocity, FORMULA .
+These stars have the best chance to reach the outer part of the Galaxy. Stars
+ejected in the opposite direction (FORMULA , FORMULA  = 0) have the
+smallest initial velocity, FORMULA , and the worst chance to reach
+the outer Galaxy. When stars are ejected perpendicular to the disk (FORMULA  =
+FORMULA /2), they have an intermediate velocity, FORMULA ,
+and a modest chance to reach the halo. At other angles, FORMULA  has a constant
+value when FORMULA  (sin FORMULA  = 0), which defines a
+circle in the FORMULA  plane.
+To calculate the fraction of runaways which can reach FORMULA  60 kpc, we derive
+the allowed range of FORMULA  and FORMULA  for runaways with ejection velocity
+FORMULA  starting from distance FORMULA  from the GC. Integrating over the appropriate
+probability distributions for FORMULA  (eqs. [REF –REF ]),
+the initial position (eq. [REF ]), and the ejection angles yields
+the total fraction FORMULA  of runaways with initial distance FORMULA  that reach
+FORMULA  60 kpc. To illustrate the difficulty of reaching the Galactic halo,
+we calculate FORMULA  for all runaways and those with maximum FORMULA  30FORMULA .
+This exercise demonstrates that few runaways reach the outer Galaxy
+(Fig. REF ). Roughly 1% of all supernova-induced runaways
+travel beyond 60 kpc (solid violet curve). Stars with initial positions
+FORMULA  10 kpc contribute nearly all of the ejected stars. Within this
+group, less than 10% (0.1% of all runaways) reach FORMULA  60 kpc with
+FORMULA  30FORMULA . Although dynamical ejections into the outer Galaxy are
+more rare (FORMULA  0.3% of the total population), dynamical ejections into
+the outer halo are as frequent as supernova-induced ejections, FORMULA  0.06%
+of all runaways.
+The larger maximum ejection velocity in the dynamical model accounts for these
+differences. Most runaways are ejected at 3–5 kpc, where the escape velocity
+is large. With a maximum FORMULA  of 400 km sFORMULA , supernova-induced runaways
+require the maximum boost from Galactic
+rotation to reach the outer Galaxy. Sacrificing some of this boost to eject
+stars into the halo keeps stars from reaching the outer Galaxy. Few of these
+high FORMULA  runaways reach the outer halo. Dynamically ejected stars with ejection
+velocities of 600–800 km sFORMULA  require little boost from Galactic rotation.
+These stars easily reach the outer halo. Compared to the supernova model,
+however, the dynamical model yields a smaller fraction of stars with high
+velocities. The lack of high velocity stars compensates for the relative
+ease of reaching the halo, resulting in comparable fractions of high velocity
+halo stars with FORMULA  60 kpc in both models.
+If the production rates for HVSs and both types of runaways are comparable, this
+analysis predicts that HVSs dominate the population of high velocity stars in the
+outer halo. For every high speed runaway generated by a supernova or a dynamical
+interaction among massive stars, there should be roughly 100 HVSs. We will
+re-consider this conclusion in §REF  when we examine
+predicted production rates for each mechanism.
+
+COMPLETE SAMPLES OF STARS
+All ejection models yield populations of bound and unbound stars
+{{cite:ac11fc52-b852-42bb-99c9-2a06cc232b3e}}, {{cite:d58e45ac-eaee-4855-b395-c1531072c52d}}, {{cite:cecb8e47-6dd9-49a9-92d3-e0d862747e5d}}. To explore the properties of
+both populations, we consider simulations of 1 FORMULA  and 3 FORMULA  stars.
+Calculations with long-lived solar-type stars provide a sample of bound
+stars in the solar neighborhood and a sample of unbound stars with a
+broad range of distances. While current facilities can probe the bound
+population, most unbound stars are too distant and too faint for detailed
+study. Although simulations with shorter-lived, more luminous 3 FORMULA  stars
+yield a smaller sample of bound stars, the population of unbound stars is
+well-matched to the sensitivity of GAIA and large ground-based optical
+telescopes. These two sets of simulations allow us to derive general
+predictions for the bound and unbound populations.
+The numerical simulations of the motions of HVSs and runaways through the Galaxy
+yield ensembles of FORMULA  stars with final positions FORMULA  and velocities
+FORMULA  relative to the GC. These data represent a snapshot of all ejected stars
+still on the main sequence. The HVSs fill a spherical volume from the GC out to
+roughly 1 Mpc (34 Mpc) for 3 FORMULA  (1 FORMULA ) stars. Although runaways are more
+concentrated towards the Galactic disk {{cite:cecb8e47-6dd9-49a9-92d3-e0d862747e5d}}, a few reach
+Galactocentric distances of FORMULA  300 kpc (3 FORMULA ) to 7 Mpc (1 FORMULA ). To put
+these results in perspective, the modern magnitude-limited surveys described in
+§7 can probe 1 FORMULA  (3 FORMULA ) stars to FORMULA  = 10 kpc (100 kpc).
+To derive heliocentric observables for each star in a snapshot, we set the Sun
+at a position FORMULA  with velocity FORMULA  relative to the GC.
+We adopt FORMULA  = 8 kpc and FORMULA  = 235 km sFORMULA  {{cite:25994db4-fd17-4bcf-a15e-7d31823e6469}} and
+divide each ensemble into
+five distance bins, FORMULA  10 kpc, 10 kpc FORMULA  20 kpc, 20 kpc FORMULA 
+40 kpc, 40 kpc FORMULA  80 kpc, and 80 kpc FORMULA  160 kpc. Tables 1–2 list
+the median FORMULA , first and third quartile FORMULA  and FORMULA , average
+FORMULA , and standard deviation for the radial (FORMULA ) and tangential
+(FORMULA ) velocities in each simulation. Table 3 summarizes statistics for
+the proper motion. For runaways produced by dynamical interactions, we quote
+results for simulations with a minimum ejection velocity of 50 km sFORMULA . Velocity
+distributions for calculations with a smaller ejection velocity of 20 km sFORMULA  are
+fairly similar to those for supernova-induced runaways.
+In the next subsections, we examine several broad trends in the variation
+of FORMULA  and FORMULA  with FORMULA , FORMULA , and FORMULA . After discussing predicted
+distributions of stars in the FORMULA  (§REF ) and FORMULA 
+(§REF ) planes, we describe predicted histograms for FORMULA 
+and FORMULA  in well-defined distances bins and for the complete ensemble of
+stars in each simulation (§REF ). To isolate how observables
+depend on Galactic coordinates, we then discuss the distribution of stars in
+the FORMULA  plane for specific ranges of Galactic latitude
+(§REF ). This section concludes with a brief summary of the
+major results (§REF ).
+Ejected Stars in the FORMULA  Plane
+To investigate the distribution of stars as a function of FORMULA  and FORMULA ,
+we construct a density diagram. For stars with FORMULA  30FORMULA , we
+(i) divide the log FORMULA –log FORMULA  plane into bins spaced by 0.01 in log FORMULA 
+and log FORMULA , (ii) count the number of stars in each bin, and (iii) plot the
+relative number in a contour diagram. In each diagram, bright red represents
+the largest density; dark blue the smallest density. The full range in
+relative density varies from a factor of 5–10 for 1 FORMULA  runaways to a
+factor of 50–500 for 1–3 FORMULA  HVSs.
+Fig. REF  shows predicted density distributions for 3 FORMULA  HVSs
+and runaways. Fig. REF  plots predictions for 1 FORMULA  stars.
+The HVS results assume stars ejected from equal mass binaries
+(1 FORMULA : FORMULA  = 0.032–4 AU,
+FORMULA  = 10 Gyr; 3 FORMULA : FORMULA  = 0.115–4 AU, FORMULA  = 350 Myr). For
+the runaway simulations, we adopt minimum ejection velocities of 20 km sFORMULA  (supernova
+ejections) or 50 km sFORMULA  (dynamical ejections). Eliminating the lower velocity
+dynamical ejections artificially enhances the density at large proper motions
+relative to small proper motions. This enhancement provides a clearer picture of
+the relative frequency of the highest velocity runaways.
+These results demonstrate that nearly all of the proper motions for 3 FORMULA  HVSs
+result from reflex solar motion (Fig. REF , upper panel). Most HVSs fall
+close to the line
+FORMULA 
+At fixed FORMULA , stars with smaller FORMULA  have smaller FORMULA  (see also
+Fig. REF ). Along the locus, the number of 3 FORMULA  HVSs peaks
+at FORMULA  50 kpc.
+Above the FORMULA  locus, there is a cloud of stars with FORMULA  10–20 kpc
+and FORMULA  100 milliarcsec yrFORMULA . This group of mostly bound HVSs lies at all FORMULA 
+in the direction of the GC. Stars ejected along the FORMULA -axis produce this clump
+of high proper motion stars (see Fig. REF ).
+Although runaways generally follow the FORMULA  relation expected for reflex solar
+motion, the distribution about this relation is much more diffuse than for HVSs
+(Fig. REF , middle and lower panels). Galactic rotation produces this
+fuzziness. In HVS ejections, the distribution of ejection velocities is gaussian;
+the position of a star along the FORMULA  relation is a simple function of this
+ejection velocity and the flight time. In runaway ejections, the ejection velocity
+consists of Galactic rotation plus a random velocity with a random angle relative
+to Galactic rotation. This randomness creates a much larger dispersion of space
+velocities and much larger dispersion about the simple FORMULA  relation.
+For FORMULA  20–100 kpc, galactic rotation also produces twin peaks in the
+density at fixed distance. Separated by roughly 0.3 in log FORMULA , these twin
+density maxima are very prominent in the ensemble of supernova-induced runaways
+(middle panel) and less prominent among the dynamically generated runaways
+(lower panel). For runaways in the
+Galactic anti-center, the rotational component of their motion is parallel to the
+Sun's motion. These stars lie in the low proper motion peak. Distant runaways in
+the direction of the GC are beyond the GC; the rotational component of their space
+motion is anti-parallel to the Sun's motion. These stars produce the high proper
+motion peak. Nearby indigenous disk stars in the direction of the GC have rotational
+motions parallel to the Sun, eliminating the double-peaked aspect of the proper
+motion distribution.
+The larger maximum velocities from dynamical ejections blur the double-peaked
+distributions of proper motions identified in runaways from supernovae
+(Fig. REF , lower panel). Despite the diffuse nature of the contour
+diagram, Galactic rotation is clearly visible at 20–50 kpc. As with HVSs and
+supernova-induced runaways, the width of the proper motion distribution narrows
+with increasing distance.
+Results for 1 FORMULA  HVSs and runaways are similar (Fig. REF ). The
+HVSs closely follow the linear FORMULA  relation out to FORMULA  = 30 Mpc
+(Fig. REF , upper panel). The density of 1 FORMULA  HVSs has two clear
+maxima at FORMULA  10 kpc and FORMULA  2–3 Mpc. Stars at high FORMULA  closely
+follow the line (red contour); stars at FORMULA  30FORMULA  occupy the blue contour
+below the line. At FORMULA  10 kpc, there is a group of stars with large FORMULA 
+above the red contour. High velocity ejections along the Galactic poles produce
+this collection of large proper motion stars (see also Fig. REF ).
+Despite their lower frequency, 1 FORMULA  runaways also clearly follow the linear
+FORMULA  relation expected for solar reflex motion. Aside from having a shape similar
+to the contours for the 3 FORMULA  runaways, the contours for 1 FORMULA  runaways extend
+to slightly larger distances due to their longer main sequence lifetimes.
+The number and location of density peaks for HVSs in Fig. REF –REF 
+depend solely on stellar lifetime {{cite:ac11fc52-b852-42bb-99c9-2a06cc232b3e}}, {{cite:d58e45ac-eaee-4855-b395-c1531072c52d}}. For
+ejected stars with infinite lifetimes, the space density FORMULA  is a simple power-law
+with distance from the GC, FORMULA . Thus, the total number of HVSs grows
+monotonically with distance. However, real HVSs have finite lifetimes. The total
+number falls at distances where the travel time exceeds the main sequence lfetime.
+For 1 FORMULA  (3 FORMULA ) HVSs with ejection velocities drawn from eq. (REF ),
+lifetimes of 10 Gyr (350 Myr) result in peaks at 2–3 Mpc (50 kpc). The second peak
+in the density of 1 FORMULA  stars results from bound stars with orbital periods smaller
+than the main sequence lifetime. Continuous ejection of relatively low velocity HVSs
+over 10 Gyr produces a large concentration of bound 1 FORMULA  HVSs with FORMULA  20 kpc.
+The short lifetimes of 3 FORMULA  HVSs preclude a significant concentration of nearby
+HVSs.
+The space density of stars in the disk sets the density of runaways in these diagrams.
+For stars with an exponential distribution of ejection velocities, unbound stars are
+very rare (§). Thus, most stars in the diagram are bound to the
+Galaxy. For bound stars at FORMULA  30FORMULA , the final in-plane distance from the GC,
+FORMULA , is similar to the initial distance, FORMULA . The space density of these
+stars follows the initial density, which is concentrated towards the GC. As a result,
+most stars have FORMULA  10–20 kpc.
+In both diagrams, the dynamical and supernova ejection scenarios produce an ensemble
+of stars at FORMULA  10 kpc with smaller proper motions than the locus of stars
+with solar reflex motion. Within this group, stars with the smallest FORMULA  are
+concentrated towards small FORMULA  at a variety of Galactic longitudes
+FORMULA 100FORMULA –280FORMULA  where the tangential velocity reaches a minimum.
+Some of these stars have large ejection velocities parallel to the Sun's trajectory
+(see Fig. REF ). Others have modest ejection velocities perpendicular
+the plane, which enable them to reach large FORMULA  but not escape the Galaxy
+(see Fig. REF ).
+
+Ejected Stars in the FORMULA -FORMULA  Plane
+To explore the variation of radial velocity with distance, we examine another
+density diagram. As in the previous section, we (i) select stars with FORMULA 
+30FORMULA , (ii) divide the log FORMULA –FORMULA  plane into bins spaced by 0.01 in log FORMULA 
+and 20 km sFORMULA  in FORMULA , and (iii) count the number of stars in each bin. In the
+diagrams, bright red represents the largest density; dark blue the smallest
+density. The range in density varies from a factor of 50 for 1 FORMULA  runaways
+to a factor of 300 for 3 FORMULA  HVSs and runaways.
+HVSs and runaways from supernovae show a remarkable diversity in the relative
+density of 1 FORMULA  stars as a function of FORMULA  and FORMULA  (Fig. REF ).
+Close to the Sun (FORMULA  1–3 kpc), the relatively few HVSs and runaways
+have fairly symmetric velocity distributions around a median FORMULA  0 km sFORMULA .
+At moderate distances (FORMULA  3–20 kpc), the spread in radial velocity grows
+smoothly with distance. Although HVSs have a much larger spread in radial velocity
+(see also Table 1), both groups have a clear peak in the relative number of stars
+at FORMULA  10 kpc and FORMULA  0–100 km sFORMULA .
+For stars at large distances (FORMULA  20 kpc), the velocity distributions
+of HVSs and supernova-induced runaways differ dramatically. With their modest
+maximum ejection velocities, few runaways reach the outer Galaxy (§;
+Fig. REF ). For FORMULA  20 kpc, the density of runaways drops
+significantly and falls very close to zero at FORMULA  100 kpc. Despite the steep
+fall in relative density, the median velocity and the spread in radial velocity are
+roughly constant with distance (Table 1).
+The properties of distant HVSs provide a clear contrast with distant runaways.
+For HVSs, the median radial velocity and the spread in the radial velocity grow
+with distance. The maximum radial velocity increases from roughly 1000 km sFORMULA  at
+FORMULA  10 kpc to 3000 km sFORMULA  at FORMULA  10–20 Mpc. Although the relative
+density of HVSs falls from 20 kpc to 300 kpc, the relative density displays a
+clear secondary peak at FORMULA  2 Mpc and FORMULA  400–500 km sFORMULA .
+Beyond 5 Mpc, the density slowly falls and reaches roughly zero at FORMULA 
+20 Mpc.
+The distributions of 3 FORMULA  runaways are similar to those of 1 FORMULA  runaways
+(Fig. REF ). In the middle panel, supernova-induced runaways show a
+clear increase in relative density from FORMULA  300 pc to FORMULA  10 kpc.
+Within this range of distances, the spread in the radial velocity grows smoothly
+with distance; the median FORMULA  is close to zero. Beyond this peak, the relative
+density drops to zero at FORMULA  100 kpc. Among the more distant stars, the
+maximum FORMULA  is roughly constant with distance; the minimum FORMULA  grows slowly
+with distance.
+Dynamically-generated runaways yield similar results. When we adopt a minimum
+FORMULA  = 20 km sFORMULA  for dynamically-generated runaways, the distribution is
+nearly indistinguishable from the middle panel of Fig. REF . Increasing
+the minimum FORMULA  to 50 km sFORMULA  removes the ensemble of low velocity stars from
+the diagram, reducing the density and increasing the spread in FORMULA  for nearby
+stars (Fig. REF , lower panel). Despite this difference, dynamically
+generated runaways still display a clear peak in relative density at FORMULA 
+10 kpc. Around this peak, stars have a median FORMULA  close to zero and a spread of
+FORMULA 500 km sFORMULA  (Table 1).
+Because the dynamical model yields a maximum FORMULA  800 km sFORMULA , a few
+runaways reach larger distances and have larger radial velocities than
+supernova-induced runaways. Despite this difference, very few runaways are
+unbound (§).
+Although 3 FORMULA  HVSs have a nearly identical distribution of ejection velocities
+as 1 FORMULA  HVSs, the density distributions in the FORMULA –FORMULA  plane show several clear
+differences. The primary peak in the density lies at somewhat smaller distances, at
+FORMULA  8 kpc instead of FORMULA  10 kpc. The secondary peak falls at much smaller
+distances, FORMULA  50 kpc instead of a few Mpc. The drop in density at large distances
+is much more rapid, falling to zero just inside 1 Mpc instead of reaching to 30 Mpc.
+These trends have simple physical explanations {{cite:ac11fc52-b852-42bb-99c9-2a06cc232b3e}}, {{cite:d58e45ac-eaee-4855-b395-c1531072c52d}}.
+For our adopted MW potential and HVS parameters, roughly 10% of ejected stars
+have velocities large enough to reach 10–20 kpc but too small to travel beyond
+60–100 kpc. Typical travel times of 100–400 Myr for these bound stars are a
+significant fraction of the main sequence lifetime of a 3 FORMULA  star, but are much
+smaller than the lifetime of a 1 FORMULA  star. Bound stars with long lifetimes
+have median velocities close to zero and modest velocity dispersions of
+100–200 km sFORMULA . However, many bound stars with short lifetimes reach FORMULA 
+30–60 kpc and evolve off the main sequence before returning to the solar circle.
+Thus, there is a large deficit of bound, massive stars with negative radial velocity.
+For 3 FORMULA  stars, this deficit leads to a median FORMULA  larger than zero and a
+larger velocity dispersion than 1 FORMULA  HVSs (see also Table 1).
+Among unbound stars, finite stellar lifetimes are also responsible for trends in
+FORMULA  with distance. Stars with larger ejection velocities reach larger distances;
+the median FORMULA  and dispersion in FORMULA  thus increase with FORMULA . Longer lifetimes
+also enable stars to reach larger FORMULA . With a factor of 30 longer lifetime, the
+1 FORMULA  stars reach 30 times larger distances than 3 FORMULA  stars (30 Mpc instead
+of 1 Mpc).
+The initial velocity distributions of HVSs and runaways produce the stark differences
+in Figs. REF –REF . Among runaways ejected from 3–30 kpc in
+the Galactic disk, nearly all have modest ejection velocities and remain
+bound to the Galaxy (§5). Bound stars with modest ejection velocities reach
+maximum distances of roughly 100 kpc before falling back into the Galaxy.
+The small fraction of runaways which reach the halo have typical FORMULA 
+10 kpc and FORMULA  100–150 km sFORMULA .
+
+Radial Velocity and Proper Motion Histograms
+The density plots in Figs. REF –REF  demonstrate the rich
+behavior in the predicted FORMULA  and FORMULA  as a function of initial
+conditions and stellar properties. To focus on predictions for large ensembles
+of HVSs and runaways, we now consider the frequency distributions of FORMULA  and
+FORMULA  for Galactic halo stars (FORMULA  30FORMULA ) in a discrete set of distance
+bins. In these diagrams, color encodes distance (violet: FORMULA  10 kpc, blue:
+10 kpc FORMULA  20 kpc, green: 20 kpc FORMULA  40 kpc, and orange: 40 kpc
+FORMULA  80 kpc). Tables 1–3 summarize statistics for FORMULA , FORMULA , and
+FORMULA  in each distance bin.
+Fig. REF  shows the distributions of FORMULA  (left panels) and
+FORMULA  (right panels) for 1 FORMULA  (upper panels) and 3 FORMULA  (lower panels)
+HVSs. The trends of radial velocity with stellar mass and distance follow the
+correlations in §REF  {{cite:ac11fc52-b852-42bb-99c9-2a06cc232b3e}}, {{cite:d58e45ac-eaee-4855-b395-c1531072c52d}}.
+For 3 FORMULA  stars, the median radial velocity grows with increasing distance.
+Among the more distant stars, there is a large tail of very high velocity stars
+with FORMULA  1000 km sFORMULA . As distance decreases, a smaller and smaller
+fraction of stars have high velocities. In the nearby sample with FORMULA  10 kpc,
+nearly all stars have FORMULA  500 km sFORMULA .
+For 1 FORMULA  stars, the trend of increasing median velocity with increasing
+distance is much weaker (Table 1). For all FORMULA , the velocity dispersion and
+inter-quartile range are smaller. Although the typical maximum velocity is
+similar, a much smaller fraction of stars has FORMULA  1000 km sFORMULA .
+The distributions of proper motion and tangential velocity reverse the trends
+of the radial velocity (Tables 2–3; Fig. REF , right panels).
+Distant HVSs moving radially away from the GC have small transverse components
+of their space motion, leading to small tangential velocities and small proper
+motions. As the distance decreases, the angle between the line-of-sight and the
+velocity vector for an HVS grows, leading to larger and larger tangential
+velocities. With FORMULA , nearby HVSs have much larger proper
+motions than more distant HVSs (see also Fig. REF ). Although
+geometry requires that the maximum FORMULA  exceed the maximum FORMULA , some nearby
+HVSs have FORMULA  400–600 km sFORMULA  and FORMULA  30 milliarcsec yrFORMULA .
+Trends in the radial velocity distributions for supernova-induced runaways
+follow those of the HVSs (Fig. REF ; Table 1). More distant
+runaways have a larger median radial velocity and a larger tail to very large
+radial velocity {{cite:cecb8e47-6dd9-49a9-92d3-e0d862747e5d}}. At fixed distance, however,
+the average and median velocities of runaways are much smaller than those of
+HVSs. Typically, runaways are 100–500 km sFORMULA  slower than HVSs, with velocity
+dispersions less than half the dispersions of HVSs.
+Differences between the radial velocity distributions for HVSs and runaways in
+the snapshots
+reflect the initial distribution of ejection velocities. As summarized in
+§, more than 20% of the HVSs ejected with initial velocities
+exceeding 600 km sFORMULA  reach the halo. Most HVSs that reach the halo are unbound.
+The fastest runaways receive a boost from Galactic rotation (eq. [REF ]);
+they all lie in the Galactic plane {{cite:cecb8e47-6dd9-49a9-92d3-e0d862747e5d}}. Many fewer
+runaways reach the halo; nearly all of these have much smaller space velocities
+than HVSs. As a result, runaways in the halo have smaller median radial velocities
+and a larger fraction of bound stars than HVSs.
+At similar distances, the proper motion distribution of both types of runaways is
+broader than that of HVSs (Fig. REF , right panels). As with HVSs,
+nearby runaways have larger tangential velocities than more distant runaways.
+However, galactic rotation produces a double-peaked distribution of proper motion
+for runaways at fixed distance (Fig. REF –REF ). In an
+ensemble of stars with a broad range of distances, the double-peaked character of
+the distribution smears out into a single broad peak. Among stars with a smaller
+range of distances, the double-peaked proper motion distribution is prominent.
+The distributions of FORMULA  and FORMULA  for runaways produced from dynamical ejections
+have the same features as supernova-induced runaways. The median radial velocity
+grows with distance (Fig. REF , left panels). Although dynamical
+ejections produce a smaller fraction of high velocity runaways, the largest ejection
+velocities exceed those produced from the supernova mechanism (Table 1). For
+calculations with a minimum ejection velocity of 20 km sFORMULA , dynamical ejections yield
+average and median velocities 5%–10% smaller than supernova-induced runaways. In
+simulations with a minimum ejection velocity of 50 km sFORMULA , the inter-quartile ranges
+and standard deviations for dynamical ejections lie between those of HVSs and runaways
+produced in supernovae.
+The larger maximum velocities from dynamical ejections shift the peaks of the proper
+motion distributions to larger values (Fig. REF , right panels; see
+also Table 3). These peaks are also somewhat broader than those for other ejected stars.
+As with HVSs and supernova-induced runaways, the width of the proper motion distribution
+narrows with increasing distance.
+For 3 FORMULA  HVSs and runaways, GAIA can detect the typical proper motion in the FORMULA  =
+40–80 kpc bins (dashed lines in Figs. REF –REF ).
+To establish this conclusion, we use the predicted rms errors of roughly 0.16 milliarcsec yrFORMULA  for
+stars with FORMULA  20 {{cite:7ad76de8-041f-4a2b-a418-b0b81a6d5fbd}}. Observed proper motions of 0.50 milliarcsec yrFORMULA  should
+then be detectable at the 3FORMULA  level. Although solar-type stars with FORMULA  20
+have FORMULA  10 kpc, 3 FORMULA  B-type stars with FORMULA  20 have FORMULA  100 kpc
+(see also §7). Thus, reliable distances and proper motions from GAIA can test these
+predicted proper motion distributions.
+As we described in §REF , proper motion distributions for HVSs and runaways
+are very sensitive to stellar lifetime. Long-lived unbound stars travel great distances
+from the Galaxy; shorter-lived stars evolve off the main sequence before leaving the
+Galaxy. Long-lived bound stars generate fairly symmetric distributions around the GC;
+shorter-lived stars have more asymmetric distributions.
+At high galactic latitude (FORMULA  30FORMULA ), HVSs provide the most extreme examples
+of this behavior (Fig. REF , top panels). With lifetimes of 10 Gyr,
+unbound 1 FORMULA  stars reach maximum distances of roughly 30 Mpc from the GC. These
+unbound stars produce the prominent peak at FORMULA  0.01–0.05 milliarcsec yrFORMULA  in the
+upper left panel of Fig. REF . Bound 1 FORMULA  stars have maximum distances
+of roughly 60 kpc; they orbit the GC with periods of 700 Myr or less. Smaller
+distances result in much larger proper motions. These stars comprise the smaller
+peak in the upper left histogram at FORMULA  1–10 milliarcsec yrFORMULA .
+Among all HVS ejections, bound stars outnumber unbound stars by roughly 4:1 (§5).
+Outside the Galactic plane (FORMULA  30FORMULA ), however, unbound stars dominate.
+Thus, the peak of unbound stars at small FORMULA  is larger than the peak of bound
+stars at large FORMULA .
+Despite having similar ejection velocities as low mass HVSs, massive unbound
+HVSs do not live long enough to reach large distances from the GC. With typical
+maximum distances of roughly 1 Mpc, the smallest proper motions of unbound
+3 FORMULA  HVSs are roughly a factor of 30 larger than those of unbound
+1 FORMULA  HVSs. Although there are a few massive HVSs with FORMULA 
+0.03–0.10 milliarcsec yrFORMULA , most have FORMULA  0.1 milliarcsec yrFORMULA . These stars lie within the
+peak at FORMULA  1 milliarcsec yrFORMULA  in the upper right panel of Fig. REF .
+At FORMULA  30FORMULA , bound 3 FORMULA  HVSs have a much larger range in proper
+motion. Marginally bound stars reach large distances from the GC, FORMULA 
+40–60 kpc. Before they turn around and return to the GC, these stars evolve off
+the main sequence. This group has fairly small proper motion FORMULA  1 milliarcsec yrFORMULA .
+Among the much larger group of bound stars that reach small distances,
+FORMULA  10–20 kpc, some have FORMULA  30FORMULA . These have large proper
+motions, FORMULA  10 milliarcsec yrFORMULA . In between, stars with FORMULA  20–40 kpc
+fill in the histogram at FORMULA  1–10 milliarcsec yrFORMULA .
+These general conclusions apply to both types of runaways. Among stars ejected by
+dynamical processes, a few have ejection velocities of 600–900 km sFORMULA  and can
+reach large distances from the Galaxy. Low mass stars in this group are still
+on the main sequence at FORMULA  1 Mpc; these stars produce a long tail in
+the proper motion distribution at FORMULA  0.01–0.5 milliarcsec yrFORMULA  (Fig. REF , lower left panel). More massive stars cannot reach
+these distances while on the main sequence; 3 FORMULA  unbound stars produce a small
+shoulder in the distribution at FORMULA  0.1–0.3 milliarcsec yrFORMULA  (Fig. REF ,
+upper right panel).
+For all masses, the dynamical ejection process yields a large population of bound,
+relatively nearby stars. Typical proper motions are FORMULA  1–20 milliarcsec yrFORMULA .
+Nearly all stars in the peaks of both histograms are bound stars.
+With much lower maximum ejection velocities, stars ejected during a supernova
+are almost always bound to Galaxy. Among 1–3 FORMULA  stars, most are nearby.
+Few have FORMULA  0.5 milliarcsec yrFORMULA . These stars simply produce a single peak
+in the histogram at FORMULA  3–4 milliarcsec yrFORMULA .
+At large FORMULA , the shapes of all of the histograms are fairly similar. For
+all of our snapshots, nearby stars with high velocity are rare. Most runaways
+with FORMULA  1 kpc have small velocities and modest proper motions. HVSs
+fill a much larger volume of the Galaxy and have much smaller space densities.
+Thus, the frequency of ejected stars with FORMULA  10 milliarcsec yrFORMULA  falls sharply
+and reaches zero at FORMULA  100 milliarcsec yrFORMULA .
+
+Proper Motion in Galactic Coordinates
+To conclude our analysis of complete snapshots of ejected stars, we focus on the
+variation of proper motion with FORMULA  and FORMULA . After separating stars into four
+galactic latitude bins equally spaced in FORMULA , we divide the FORMULA –FORMULA 
+plane into a set of bins spaced by 0.01 in log FORMULA  and 1FORMULA  in FORMULA . As with the
+FORMULA –FORMULA  and FORMULA –FORMULA  diagrams in §REF –REF ,
+we plot the relative density of stars in each bin as a contour diagram where bright
+red represents the largest density and dark blue represents the smallest density.
+The range in density varies from a factor of 5–10 for 1 FORMULA  runaways to a factor
+of 50–500 for 1–3 FORMULA  HVSs.
+Fig. REF  shows a set of four contour diagrams for 3 FORMULA  HVSs.
+At all FORMULA , HVSs have a broad range of proper motion between 0.1 milliarcsec yrFORMULA  and
+30 milliarcsec yrFORMULA . Outside the GC region, the typical proper motion is FORMULA 
+1 milliarcsec yrFORMULA . Towards the GC, there is a strong concentration of stars with large
+proper motion, FORMULA  10–100 milliarcsec yrFORMULA . This concentration is strongest
+at low Galactic latitude and weakens considerably at larger FORMULA .
+In the Galactic plane (Fig. REF , lowermost panel), the variation
+of FORMULA  with FORMULA  for HVSs shows a clear signature from the Sun's orbit around
+the GC (see eq. [REF ]; compare with Fig. REF ).
+The plot shows clear minima in FORMULA  at FORMULA  = FORMULA 100FORMULA  and at FORMULA  = FORMULA 80FORMULA .
+The Sun's (i) spatial offset
+from the GC and (ii) orbit around the GC produces the lack of mirror symmetry in
+the minima (see also Fig. REF ). At somewhat larger FORMULA  (middle
+two panels), the amplitude of the variation is visible but suppressed. Towards
+the Galactic poles (uppermost panel), the Sun's position and orbital velocity
+have no impact on the tangential velocity. Thus, the variation disappears.
+Contour diagrams for supernova-induced runaways display identical features
+(Fig. REF ). Runaways have somewhat larger proper motions
+than HVSs, with a typical FORMULA  3 milliarcsec yrFORMULA  and a typical range of
+0.3–30 milliarcsec yrFORMULA . Although HVSs have larger space velocities, their much
+larger distances result in smaller proper motions.
+As with HVSs, the contour diagrams change systematically with Galactic latitude.
+In the Galactic plane (Fig. REF , lowermost panel), runaways
+display a large concentration of high proper motion stars towards the GC.
+At larger FORMULA , this concentration weakens and spreads to a broader range of
+Galactic longitude. High velocity runaways outside the solar circle but close
+to the Galactic plane also show clear minima in FORMULA  at FORMULA  FORMULA 110FORMULA  and
+FORMULA 100FORMULA . As noted for high velocity HVS in Fig. REF , these
+minima are a clear signature of solar rotation around the GC and the solar
+offset from the GC (see Fig. REF ).
+This signal gradually diminishes with increasing FORMULA .
+A clear minimum in FORMULA  at FORMULA  0 and FORMULA  0.25
+(Fig. REF , lowermost panel) distinguishes supernova-induced runaways
+from HVSs. For stars inside the solar circle, this feature is the signature of stars
+rotating in the Galactic disk (see Fig. REF ). Inside the solar
+circle, the tangential velocities of stars orbiting the GC lie in an egg-shaped
+locus with FORMULA  2 FORMULA  and FORMULA  0. The lower edge
+of this egg produces the distinct minimum in FORMULA  at FORMULA  0.
+Dynamical runaways with a minimum velocity of 20 km sFORMULA  produce distributions of
+FORMULA  nearly identical to the distributions for supernova-induced runaways
+in Fig REF . Calculations with a minimum velocity of 50 km sFORMULA  yield
+dramatically different results (Fig. REF ). Although (i) the typical
+range in FORMULA , (ii) the heavy concentration of stars towards the GC, and (iii)
+the clear minima in FORMULA  at FORMULA  100FORMULA  observed for dynamical runaways
+are similar to results for supernova-induced runaways, there is
+(i) a clear lack of stars with very small FORMULA  at FORMULA  0FORMULA  and
+(ii) a broad minimum of stars with very small FORMULA  at FORMULA 150–180FORMULA .
+The higher minimum ejection velocity in these calculations produces both features.
+Stars on unperturbed orbits around the GC produce the distinct minimum in FORMULA 
+at FORMULA  0FORMULA . Setting a high minimum ejection velocity in our calculations
+produces ensembles of stars with modest tangential velocities and proper motions at
+FORMULA  0FORMULA , eliminating the pronounced minimum in FORMULA  at FORMULA  = 0FORMULA  in
+Fig. REF . This high minimum ejection velocity also tends to place
+stars onto orbits with modest eccentricity. Stars originating inside the solar
+circle – where the stellar density is large – then spend some time
+outside the solar circle – where the stellar density is small. This behavior increases
+the density of stars with small proper motion in the direction of the Galactic
+anti-center, where the tangential velocity is very small (see Fig. REF ).
+
+Summary
+Analyzing the complete sample of stars in simulations of HVSs and runaways leads to
+several clear results.
+
+Ejections produce a broad range in FORMULA  (0–1000 km sFORMULA ), FORMULA  (0–600 km sFORMULA ),
+and FORMULA  (0.01–100 milliarcsec yrFORMULA ). HVSs have the largest velocities and proper motions
+(Figs. REF –REF ).
+
+For distant stars, radial velocities separate unbound stars from bound stars
+(Figs. REF –REF  and Figs. REF –REF ).
+
+For nearby stars, proper motions distinguish between unbound stars and bound stars
+on radial or circular orbits. However, nearby unbound stars are relatively rare compared
+to nearby bound stars (Figs. REF –REF  and Fig. REF ).
+
+Unbound runaways retain memory of their original orbital velocity around the GC.
+At large distances and high Galactic latitudes, the double-peaked proper motion
+distribution of runaways distinguishes them from stars on radial orbits
+(Figs. REF –REF ).
+
+In the Galactic plane, HVSs and runaways have clear, distinctive minima in FORMULA 
+at FORMULA 100FORMULA  (Figs. REF –REF ).
+
+Concentrations of high proper motion stars towards the GC are a unique signature
+of HVSs ejected from the GC or runaways ejected from the inner galaxy
+(Figs. REF –REF ).
+
+GAIA can detect predicted proper motions of B-type HVSs and runaways with
+FORMULA  100 kpc (Figs. REF –REF ).
+
+These results clearly demonstrate the ability of radial velocity measurements to
+distinguish the highest velocity HVSs and runaways from indigenous halo stars
+{{cite:da966684-58e6-4be7-a265-cd5f0a5bf049}}, {{cite:16e8ab2b-c743-4651-9a1a-0adf4133588e}}, {{cite:ac11fc52-b852-42bb-99c9-2a06cc232b3e}}, {{cite:d58e45ac-eaee-4855-b395-c1531072c52d}}, {{cite:c0fc5352-e9ce-44cc-adcf-e60cbc2085de}}, {{cite:f0a1d1a3-0ad5-4e8c-af09-665bf710a442}}.
+For HVSs and runaways with FORMULA  50–100 kpc, the median radial velocity,
+500–600 km sFORMULA , and radial velocity dispersion, FORMULA  200–400 km sFORMULA , are
+very different from the population of halo stars with median FORMULA  close to zero
+and FORMULA  100–110 km sFORMULA . Thus, radial velocity surveys easily separate
+the highest velocity HVSs and runaways from indigenous halo stars.
+Among stars with intermediate distances, FORMULA  20–40 kpc, proper motions
+can distinguish runaways from indigenous halo stars. For runaway stars with a
+small range of distances, galactic rotation produces a clearly double-peaked
+distribution of proper motions. With little or no rotation about the GC
+{{cite:95f21129-446d-4bac-8b22-034e5d08d751}}, halo stars should have a broad, single-peaked distribution.
+Because HVSs are ejected on purely radial orbits, their distribution of
+proper motions should resemble the halo distribution.
+Among nearby halo stars with FORMULA  10 kpc and FORMULA  30FORMULA ,
+kinematic data do not offer a simple path for identifying ejected stars.
+The velocity dispersions, FORMULA  100–175 km sFORMULA , of nearby HVSs
+and runaways are comparable to the typical velocity dispersion of halo stars
+{{cite:f0a1d1a3-0ad5-4e8c-af09-665bf710a442}}. Thus, it is not possible
+to use FORMULA  to distinguish nearby HVSs and runaways from halo stars. Although
+the dispersions in FORMULA  for nearby HVSs and runaways are small, the median
+FORMULA  250 km sFORMULA  for HVSs and dynamically generated runaways is much
+larger than the roughly 150 km sFORMULA  dispersion in FORMULA  expected for indigenous
+halo stars. Because nearby HVSs and runaways are rare, their proper motions
+are fairly similar to the proper motions of nearby halo stars.
+As with radial velocities, obvious outliers in proper motion are promising
+candidates for ejected stars. Our simulations yield maximum proper motions
+of 100 milliarcsec yrFORMULA  for stars with FORMULA  1–2 kpc. Along any line-of-sight,
+however, such high proper motion stars comprise only 0.01–0.1% of the
+complete population of ejected stars. Thus, high proper motion outliers
+should be very rare.
+
+DISTANCE LIMITED SAMPLES OF STARS
+To construct a clear set of testable predictions from the simulations, we now focus on
+distance-limited (magnitude-limited) samples of 1 FORMULA  and 3 FORMULA  HVSs and runaways.
+Based on the expected sensitivity of GAIA, we establish a magnitude limit. For
+convenience, we base this limit on the SDSS FORMULA  magnitude {{cite:f0a1d1a3-0ad5-4e8c-af09-665bf710a442}}.
+Using stellar evolution models, we convert the magnitude limit into a distance limit
+FORMULA . Finally, we draw stars with FORMULA  from the complete simulations
+of HVSs and runaways. These catalogs allow us to predict distributions of FORMULA  and
+FORMULA  for comparison with observations.
+For 1–3 FORMULA  stars with FORMULA  20, GAIA observations should yield proper
+motions with rms errors of 0.16 milliarcsec yrFORMULA  {{cite:7ad76de8-041f-4a2b-a418-b0b81a6d5fbd}}, {{cite:afdfc8f7-4f8e-498d-b643-f4fb5a54e615}}. Brighter
+stars have much smaller errors, roughly 0.08 milliarcsec yrFORMULA  for FORMULA  19 and 0.05 milliarcsec yrFORMULA  for
+FORMULA  18. Because GAIA should detect proper motions of roughly 0.15–0.5 milliarcsec yrFORMULA  for
+stars with FORMULA  18–20, we set a magnitude limit of FORMULA  = 20.
+To convert this magnitude limit to a distance limit, we derive absolute magnitudes
+FORMULA  from the Padova stellar evolution models. For solar metallicity
+{{cite:17fbab9a-1044-419f-bdeb-9bf59dfb457a}}, FORMULA (1 FORMULA ) = 5.1 at FORMULA  = 5 Gyr and
+FORMULA (3 FORMULA ) = 0.17 at FORMULA  = 172.5 Myr. These ages are half of the adopted main-sequence
+lifetimes of 10 Gyr and 345 Myr for these stars {{cite:17fbab9a-1044-419f-bdeb-9bf59dfb457a}}. These
+magnitudes then yield distance limits of FORMULA  = 9.55 kpc (92.5 kpc) for an ensemble of
+middle-aged 1 FORMULA  (3 FORMULA ) stars. We round these limits to 10 kpc for
+1 FORMULA  stars and 100 kpc for 3 FORMULA  stars.
+In this first exploration of distance-limited samples of HVSs and runaways
+from our simulations, we ignore
+several aspects of stellar evolution and Galactic structure. We assume stars are
+unreddened, which is reasonable for halo stars at high galactic latitude
+{{cite:497fc68d-7e55-478c-87f3-63b8ee36315b}}. Although metallicity has a small impact (FORMULA  0.1 mag)
+on FORMULA  for 3 FORMULA  stars, these stars brighten by roughly 1 mag during their main
+sequence lifetime {{cite:17fbab9a-1044-419f-bdeb-9bf59dfb457a}}. For ensembles of 1 FORMULA  stars, metallicity and
+stellar evolution produce a 0.5–0.75 mag spread in FORMULA  {{cite:17fbab9a-1044-419f-bdeb-9bf59dfb457a}}. Thus,
+FORMULA  = 20 3 FORMULA  (1 FORMULA ) main sequence stars with a range of ages and metallicities
+have a 10% to 20% range in distances. This range is small compared to the obvious
+trends in FORMULA , FORMULA , and FORMULA  with FORMULA , FORMULA , and FORMULA  derived from our simulations.
+Thus, we can safely adopt uniform samples of identical stars with no range in age or
+metallicity.
+Fig. REF  compares predicted density distributions in the FORMULA –FORMULA 
+plane for distance-limited samples of HVSs (left panels) and runaways (right panels).
+Contours for 1 FORMULA  (3 FORMULA ) stars are in the upper (lower) panels. For
+simplicity, we show results for 1 FORMULA  supernova-induced runaways and for
+3 FORMULA  dynamically generated runaways. Density distributions for other runaway
+models have similar morphology to those shown in this diagram.
+The loci for 1 FORMULA  HVSs and runaways are fairly similar. Compared to the set
+of contours for 3 FORMULA  stars in the lower panels, both ensembles have a limited
+extent in radial velocity and proper motion, with FORMULA  FORMULA 250 km sFORMULA  to
+FORMULA 250 km sFORMULA  and FORMULA  1–30 milliarcsec yrFORMULA .
+The HVS contours have a broader extent in FORMULA  and a much narrower extent in FORMULA 
+than the contours for the runaways. The median proper motion of roughly 6 milliarcsec yrFORMULA  for
+1 FORMULA  HVSs is somewhat larger than the median proper motion of 5 milliarcsec yrFORMULA  for
+1 FORMULA  runaways.
+The ensemble of 3 FORMULA  ejected stars fills a much larger portion of FORMULA –FORMULA 
+space. HVSs and runaways have a large concentration of bound stars with median
+FORMULA  close to 0 km sFORMULA  and median proper motion of roughly 3–10 milliarcsec yrFORMULA . Both
+populations contain a group of unbound stars with larger FORMULA  and smaller FORMULA .
+Among the runaways, this group produces a modest `tail' in the distribution which
+comprises less than 0.1% of the entire population. For HVSs, however, the tail
+extends to FORMULA  1000–1500 km sFORMULA  and contains more than half of the
+ensemble. Nearly all of the unbound HVSs have small proper motion, FORMULA 
+1 milliarcsec yrFORMULA .
+To compare the distributions of proper motion and radial velocity in more detail,
+Fig. REF  shows histograms of radial velocity (left panels) and
+proper motion (right panels) for 1 FORMULA  (upper panels) and 3 FORMULA  (lower panels)
+ejected stars. The radial velocity histograms for 1 FORMULA  stars in the upper left
+panel are amazingly similar with clear peaks at roughly FORMULA 50 km sFORMULA  and modest
+velocity dispersions. In this group, supernova-induced runaways have the smallest
+velocity dispersion, FORMULA  103 km sFORMULA . HVSs have a somewhat smaller velocity
+dispersion, FORMULA  138 km sFORMULA , than the dynamically generated runaways, FORMULA 
+172 km sFORMULA  (Table 1).
+Proper motion distributions for different types of 1 FORMULA  ejected stars are also
+very similar (Fig. REF , upper right panel). The HVSs have a sharp peak
+at 5–10 milliarcsec yrFORMULA ; nearly all 1 FORMULA  HVSs have FORMULA  3–30 milliarcsec yrFORMULA . Runaways
+produced during a supernova have a broader distribution displaced to smaller FORMULA .
+The median FORMULA  is roughly 50% smaller; the dispersion is roughly 25% larger (Table 3).
+Dynamically generated runaways have median FORMULA  comparable to the HVSs and a 40%
+larger dispersion. Thus, the distribution of dynamically generated runaways extends
+to much larger FORMULA  than the HVSs.
+The FORMULA  distributions for 3 FORMULA  stars are much easier to distinguish
+(Fig. REF , lower left panel).
+Supernova-induced runaways have a very narrow radial velocity distribution with a
+median near zero velocity and a dispersion of roughly 100 km sFORMULA  (see also Table 1).
+Dynamically generated runaways also have a median velocity near zero and a larger
+dispersion of 170 km sFORMULA . In contrast, 3 FORMULA  HVSs have a much larger median,
+FORMULA  200 km sFORMULA , and dispersion, FORMULA  300–350 km sFORMULA . More than 1% of the HVSs have
+radial velocities exceeding 1000 km sFORMULA , compared to 0% for both types of runaways.
+The proper motion distributions of ejected 3 FORMULA  stars also show a clear
+separation (Fig. REF , lower right panel). Most high velocity HVSs
+lie at large distances and have small proper motions, producing a clear peak in
+the proper motion histogram at roughly 1 milliarcsec yrFORMULA . The distance limit establishes
+the sharp drop in the population at smaller FORMULA . A few nearby HVSs have maximum
+proper motions of 30–50 milliarcsec yrFORMULA .
+Most 3 FORMULA  runaways have much larger proper motions than 3 FORMULA  HVSs.
+Stars ejected during a supernova have a fairly symmetric distribution of FORMULA ,
+with a median at 3–5 milliarcsec yrFORMULA  and a dispersion of roughly 3–4 milliarcsec yrFORMULA . The
+dynamical ejections produce a broader peak with a larger median at roughly
+8–9 milliarcsec yrFORMULA . Compared to the supernova-induced runaways, there are fewer
+dynamically generated runaways with FORMULA  3–5 milliarcsec yrFORMULA  and more with
+FORMULA  1–2 milliarcsec yrFORMULA .
+
+OBSERVATIONAL TESTS
+The distance-limited samples suggest several clear tests of the models based
+on existing samples of ejected stars. Among 3 FORMULA  stars, HVS models predict
+a much larger group of stars with large FORMULA  compared to either model for
+runaways. Because these stars lie at larger distances than runaways, HVSs
+should also have much smaller proper motions.
+Among 1 FORMULA  stars, the models predict a large overlap in the observed
+FORMULA  and FORMULA . Despite this large overlap, it might be possible to isolate
+HVSs and dynamically generated runaways within a large sample of halo stars.
+The observed radial velocity dispersion of halo stars
+{{cite:24068215-02d5-431f-bc1d-0a2f44abfdfc}}, {{cite:cedad227-da0f-4023-b83b-8b53283eabf7}}, {{cite:c7a15263-da2e-4baf-9ad4-c05e21deb34d}}, {{cite:0a4f4cb5-4bec-4455-8d87-53da6bc4fa18}}, {{cite:f0a1d1a3-0ad5-4e8c-af09-665bf710a442}}
+is somewhat smaller than the predicted velocity dispersion – 140–170  km sFORMULA  – of
+HVSs and dynamically generated runaways. Large samples of stars might also provide
+a distinction between the narrow proper motion distribution predicted for HVSs
+from the broader distribution predicted for runaways.
+To begin to investigate these possibilities, we consider several sets of ejected
+stars derived from the SDSS. For 1 FORMULA  stars, we examine candidates drawn from
+the G–K dwarfs in SEGUE {{cite:51f9b2ff-2407-4d68-b93b-a706105f543b}}. The candidates have a broad range in
+brightness FORMULA  14–20. The large surface density of G–K dwarfs results in
+a sample of more than 28,000 stars with moderate resolution spectroscopy and high
+quality radial velocities and atmospheric parameters. From this ensemble,
+{{cite:41e37042-4770-45ef-8052-beeba6dd5325}} use SDSS proper motion data to select 20 stars with
+FORMULA  1–6 kpc, FORMULA  10–100 milliarcsec yrFORMULA , and FORMULA 
+FORMULA  km sFORMULA  to FORMULA  km sFORMULA . Most of these candidates are metal-poor, with
+FORMULA  FORMULA  to FORMULA  and modest enhancements of FORMULA 
+nuclei relative to Fe.
+To compare with models for 3 FORMULA  stars, we focus on the targeted search for HVSs
+from {{cite:f0a1d1a3-0ad5-4e8c-af09-665bf710a442}}. This set of FORMULA  20 HVS candidates derives from a nearly
+complete spectroscopic survey of 1126 candidate B-type main sequence stars with
+FORMULA  17–20.25 selected from the SDSS {{cite:557b1297-1cce-4277-a90c-d92ff3810f96}}. Moderate resolution
+MMT spectra yield high quality radial velocities (FORMULA  250–800 km sFORMULA ),
+atmospheric parameters (log FORMULA  3.75–4.6 and FORMULA  10000–14000 K),
+and distances (FORMULA  40–100 kpc). For a few candidates, high resolution spectra
+confirm their main sequence nature and yield stronger constraints on the atmospheric
+parameters {{cite:f605b0fd-5c29-4d66-8c50-dd227a7c1959}}, {{cite:67de0ba8-3f62-4512-99ae-32a3a67375aa}}, {{cite:d3322b96-457e-49ef-ba1d-0796faeb5b5b}}, {{cite:d09419dd-5f0f-434b-947e-7dd876d589ac}}.
+To compare simulations with a sample of likely runaway stars, we select 16 runaway
+main sequence stars with high Galactic latitude and masses of 2.5–4.0 FORMULA  {{cite:c0fc5352-e9ce-44cc-adcf-e60cbc2085de}}.
+Although derived from several surveys, this set of stars has reliable distances,
+radial velocities, proper motions, and atmospheric parameters.
+With FORMULA  250 km sFORMULA  and FORMULA  5 kpc, these runaways are closer
+and have much smaller space velocities than the HVS candidates. The accurate proper
+motions allow us to test whether the lack of proper motion information for the HVS
+candidates limits our ability to compare their radial velocity distributuon with
+our simulations.
+To test the simulations in more detail, we examine a handful of miscellaneous
+high velocity main sequence stars identified in other surveys. In order of
+increasing mass, these stars are:
+SDSS J013655.91+242546.0, a 2.5 FORMULA  A-type sequence star with FORMULA  11 kpc
+and FORMULA  325 km sFORMULA  {{cite:07c61e3a-c5b7-466e-b5e4-676f52787c8d}};
+HIP 60350, a 5 FORMULA  B-type main sequence star with FORMULA  3 kpc and
+FORMULA  260 km sFORMULA  {{cite:98fd8023-0fee-4327-b4fe-e59eba772e87}};
+HE0437-5439, a 9 FORMULA  B-type star close to the LMC with FORMULA  61 kpc
+and FORMULA  725 km sFORMULA  {{cite:edaad942-4547-4cc1-a40d-a37fc99a72d9}};
+HD 271791, an 11 FORMULA  B-type main sequence star with FORMULA  21 kpc and
+FORMULA  440 km sFORMULA  {{cite:b422dfca-b432-400a-8eb6-7ded2846ac95}}; and
+J091206.52+091621.8, another 11 FORMULA  B-type main sequence star with
+FORMULA  13 kpc and FORMULA  620 km sFORMULA  {{cite:a83467b7-faa9-470a-95eb-82d2aeb44ff3}}. Selected in
+a variety of ways, this group of stars has reliable distances, space motions,
+and atmospheric properties. As with the runaways, the additional proper motion
+information yields a good test of our calculations.
+Finally, we consider how well proper motion and radial velocity data isolate
+HVSs and runaways from samples of indigenous halo stars. For this study, we
+include data from recent surveys of halo stars towards the north Galactic
+pole {{cite:0265e611-725f-4288-bb04-36991e1d2a03}} and the Galactic anti-center {{cite:5af53939-7edc-4558-a71d-45d5c25c7685}}.
+Selected from several surveys, the RR Lyr stars have measured pulsation
+periods and metallicities; the blue horizontal branch (BHB) stars have no
+metallicity data. Both groups have proper motion and radial velocity
+measurements with typical uncertainties of a few milliarcsec yrFORMULA  and 10 km sFORMULA .
+With FORMULA  100–125 confirmed halo stars in each sample, these data enable
+a first comparison between observations of halo stars and our calculations.
+Surveys of solar-type stars
+Fig. REF  compares the HVS candidates from {{cite:41e37042-4770-45ef-8052-beeba6dd5325}}
+with predictions from the HVS and supernova-induced runaway models. Solid
+lines show contours of constant stellar density which contain 50% (inner)
+and 90% (outer) of the stars in the complete samples of simulated stars.
+Contours for dynamically generated runaways are nearly identical to those
+for the supernova-induced runaways. Filled circles indicate the measured
+(FORMULA ) for the HVS candidates.
+Based on this comparison, the HVS model and both runaway models are wildly
+inconsistent with the observations. Although the observed radial velocities fall
+within the bounds predicted for all three models, the observed proper motions
+lie well above model predictions. None of the survey stars fall within the
+50% contours of any model; only 3 fall within the 90% contours. Using the
+95% contours (not shown on the Fig.), the runaway models fare a little better
+than the HVS model, with 5 (instead of 3) stars lying within the contours.
+Despite this marginally better success, all models are excluded at better than
+3FORMULA  confidence.
+There are two possible origins of the mismatch between the models and the
+observations in Fig. REF . Reducing the proper motions by
+a factor of 5 would place the data within the 50% contours of all models.
+Although {{cite:41e37042-4770-45ef-8052-beeba6dd5325}} derive high reliabilities for their proper motion
+measurements, the ratio of the transverse to radial velocity for this sample
+is much larger than expected for a random selection of high velocity stars.
+Thus, there is a reasonable probability that at least some of the large
+proper motions are spurious {{cite:41e37042-4770-45ef-8052-beeba6dd5325}}. Testing this hypothesis with
+another epoch of imaging data from the ground or with GAIA is straightforward.
+The only alternative to explain the large proper motions of these stars is to
+develop another model which produces high velocity stars. Modifying the existing HVS
+or runaway models is unlikely to produce a better match: the geometry of ejections
+from the GC or the Galactic disk simply precludes a large population of nearby
+1 FORMULA  stars with modest radial velocity and very large proper motions. Supernova-induced
+runaways from binaries in the halo might allow a better match; however, supernova
+rates for halo binaries are probably much smaller than those in the disk. The
+{{cite:28e59962-f2df-4a19-9bce-22f541eab117}} proposal of ejections from disrupted dwarf galaxies requires a
+somewhat massive Milky Way, FORMULA  1.5–2 FORMULA  FORMULA , but seems
+otherwise plausible. Numerical simulations of the velocity distribution of stars
+from disrupted dwarfs are required to test this interesting idea in more detail but
+are beyond the scope of this paper.
+
+Surveys of B-type stars
+Fig. REF  compares the HVS candidates from {{cite:f0a1d1a3-0ad5-4e8c-af09-665bf710a442}}
+with predictions from the HVS and runaway models. As in Fig. REF ,
+solid lines show contours of stellar density which contain 50% (inner) and 90%
+(outer) of the stars in each simulation. Filled circles indicate the measured
+(FORMULA ) for the HVS candidates. Unlike the 1 FORMULA  targets, these candidates
+lie close to or within the 90% contours for all three models.
+This comparison strongly favors the HVS model for the origin of these high
+velocity stars. Only one (four) of the candidates lies within the 90% contour
+for the supernova-induced (dynamically generated) runaway model. Nearly all
+lie beyond the 95% contours (not shown on the Fig.). In contrast, more than
+half of the candidates lie within the 50% contour for the HVS model; all lie
+within the 90% contour. Taking the results at face value, this comparison
+rules out the runaway models at better than 3FORMULA  confidence.
+To test the models in another way, we attempt to match the observed FORMULA  and
+FORMULA  of the candidates from the complete ensemble of stars in the HVS and
+runaway models. For each HVS candidate with Galactic coordinates (FORMULA ),
+we select all model stars within a 20FORMULA  FORMULA  20FORMULA  window centered
+on the measured coordinates. Among this group, we count the number of model
+stars with distances and radial velocities within 10% of the measurements
+and tabulate the number of `matches' FORMULA  for each candidate.
+Fig. REF  summarizes the results of this matching exercise. For
+each survey star, the bars show FORMULA  for the HVS (violet) and dynamically
+generated runaway (cyan) models. With only one match among all HVS candidates,
+the supernova-induced runaway model fails the exercise. The HVS and dynamical
+runaway models fare much better, with FORMULA  30–100 for the HVS model
+and FORMULA  1–10 for the runaway model.
+Based on this approach, we conclude with strong confidence that the candidate
+HVSs from the {{cite:f0a1d1a3-0ad5-4e8c-af09-665bf710a442}} survey are much more likely to be HVSs ejected
+from the GC than runaway stars ejected from the Galactic disk. For every survey
+star, the HVS model yields a larger FORMULA  with FORMULA 
+10–100 FORMULA . Factor of two changes in the size of the windows
+for the distance, galactic coordinates, and radial velocity in the matching
+algorithm yield indistinguishable results. Among all HVS candidates, the
+supernova-induced runaway model yields 0–1 matches. Analyzing each candidate
+separately, an ensemble of HVSs ejected from the GC always produces a factor of
+10–100 more matches than an ensemble of runaways generated from dynamical
+interactions.
+Modest changes to the probability distribution for the ejection velocity of
+runaways cannot change this conclusion. Matching the observed radial velocities
+of the 3 FORMULA  HVS candidates requires much larger maximum ejection velocities
+(e.g., 800 km sFORMULA  instead of our adopted 400 km sFORMULA ) for supernova-induced ejections
+or a much shallower power-law distribution of ejection velocities (e.g.,
+FORMULA , with FORMULA  2 instead of our adopted 8/3)
+for dynamically generated runaways. Although doubling the maximum velocity from a
+supernova ejection is possible in rare circumstances {{cite:690aca52-b962-4b1a-8826-03ec6db0cc88}},
+observations suggest a maximum ejection velocity of 400–450 km sFORMULA , close to our
+adopted value {{cite:c0fc5352-e9ce-44cc-adcf-e60cbc2085de}}. Observations also appear to preclude
+placing a larger fraction of runaways at the highest velocities {{cite:c0fc5352-e9ce-44cc-adcf-e60cbc2085de}}.
+
+Runaway B-type Stars
+Fig. REF  compares the runaways from {{cite:c0fc5352-e9ce-44cc-adcf-e60cbc2085de}} with
+predictions from the HVS and runaway models. As in Fig. REF ,
+solid lines show contours of stellar density which contain 50% (inner) and 90%
+(outer) of the stars in each simulation. Filled circles indicate the measured
+(FORMULA ) for the runaway candidates; these stars lie close to or within the
+90% contours for all three models.
+This comparison strongly favors the runaway model. Only two candidates lie
+within the 90% contour for the HVSs model; none lie within the 50% contour.
+Many of the candidates are close to or within contours from dynamically generated
+runaways with a minimum ejection velocity of 50 km sFORMULA . More than half of the
+candidates fall within the 90% contours of the supernova-induced runaway model.
+Contours generated from a set of dynamically generated runaways with a minimum
+ejection velocity of 20 km sFORMULA  show a similarly good agreement with the observations.
+Our matching algorithm also favors the runaway model for these stars. Only one
+star – EC 09452-1403 with FORMULA  = 236 km sFORMULA  – yields any matches (three) to
+the HVS model. The supernova-induced runaway model typically yields 10–100
+matches for each target.
+To add a little more realism to the matching algorithm, we add the measured
+proper motions. Requiring the proper motion in FORMULA  and FORMULA  to match within
+FORMULA 10% eliminates all matches for the HVS model to data for EC 09452-1403.
+Although including proper motion data also reduces the number of matches for
+the supernova-induced runaway model, the typical number of matches is still
+3–20 per star.
+These tests demonstrate our ability to explain observations of bona-fide
+runaways from a set of numerical simulations and to discriminate between HVSs
+and runaways. The positions of these stars in the FORMULA  diagram and the number
+of matches in FORMULA  space clearly favor an identification as runaways
+rather than HVSs.
+
+Miscellaneous High Velocity Stars
+We now consider five miscellaneous high velocity stars identified as possible
+HVSs or `hyper-runaways.' Here, we focus on two basic predictions from ejected
+star models: (i) HVSs should have radial orbits from the GC and
+(ii) runaways should have a significant non-radial component of motion
+consistent with ejection from the disk.
+From the observed FORMULA , FORMULA , and FORMULA , we derive the radial velocity in the GC
+frame and the predicted proper motion for a purely radial orbit (e.g.,
+eq. [REF ] and eqs. [REF –REF ]). For nearby
+HVS candidates, the tangential component of the velocity dominates the space
+motion; for more distant HVSs, the radial component dominates. Among runaways,
+the tangential component of the motion is smaller than HVS for nearby stars and
+larger than HVS for more distant stars. If a nearby (distant) candidate is a
+runaway, we expect the analytic proper motion to exceed (fall below) the observed
+proper motion. In addition to yielding a reasonably simple way to distinguish
+between HVSs and runaways, this approach avoids cpu-intensive calculations
+for stars with masses of 2–11 FORMULA  which are not included in our suite of
+simulations.
+To test this approach, we derive predicted proper motions for HVS candidates
+from {{cite:f0a1d1a3-0ad5-4e8c-af09-665bf710a442}}. Our analysis yields predictions of 0.3–1.2 milliarcsec yrFORMULA .
+For each HVS candidate, we then compare this analytic proper motion with the
+average proper motion from the simulated stars selected with the matching
+algorithm outlined in §REF . The typical difference between the
+analytic and numerical results is small, FORMULA  0.1–0.2 milliarcsec yrFORMULA , with a
+dispersion of 0.5 milliarcsec yrFORMULA . Thus, the analytic approach works reasonably well.
+This analysis strongly favors runaway models for SDSS J013655.91+242546.0,
+HIP 60350, and HD 271791. For SDSS J013655.91+242546.0 and HD 271791, the
+observed magnitude of the proper motion is much larger than predicted from
+the simple HVS model. Coupled with the observed FORMULA , proper motions in
+FORMULA  and FORMULA  strongly favor ejection from the disk instead of the GC
+{{cite:b422dfca-b432-400a-8eb6-7ded2846ac95}}, {{cite:07c61e3a-c5b7-466e-b5e4-676f52787c8d}}. For HIP 60350, the HVS model
+predicts much larger proper motion than observed. Proper motions in FORMULA  and
+FORMULA  also favor a disk ejection {{cite:98fd8023-0fee-4327-b4fe-e59eba772e87}}.
+For HE0437-5439 and J091206.52+091621.8, the small proper motions favor
+HVS models. HE0437-5439 has a distance and radial velocity similar to
+HVS-1 {{cite:da966684-58e6-4be7-a265-cd5f0a5bf049}}, {{cite:edaad942-4547-4cc1-a40d-a37fc99a72d9}}. HST proper motion data suggest origin
+in the GC {{cite:41684234-05c4-4999-8e7b-abf86bd360cd}}; ejection from the LMC is also possible
+{{cite:edaad942-4547-4cc1-a40d-a37fc99a72d9}}, {{cite:41684234-05c4-4999-8e7b-abf86bd360cd}}. For J091206.52+091621.8, the observed proper
+motion is comparable to or less than the predicted proper motion of roughly
+3 milliarcsec yrFORMULA  {{cite:a83467b7-faa9-470a-95eb-82d2aeb44ff3}}. However, the relatively large errors in the
+proper motion prevent isolating the ejection solely from the GC {{cite:a83467b7-faa9-470a-95eb-82d2aeb44ff3}}.
+
+Surveys of Halo Stars
+To consider whether observations can distinguish HVSs and runaways from halo
+stars, we examine kinematic measurements from {{cite:0265e611-725f-4288-bb04-36991e1d2a03}}, {{cite:5af53939-7edc-4558-a71d-45d5c25c7685}}.
+Fig. REF  compares data for blue horizontal branch stars
+(`BHB'; cyan points) and RR Lyr stars (`RR'; orange points) with model
+contours for distance-limited samples of 3 FORMULA  HVSs (`HV3'; violet curves)
+and runaways (`RS3'; green curves). The contours enclose 50% (inner)
+and 95% (outer) of the stars in each simulation. To provide an approximate
+match to the Galactic coordinates for halo stars in the upper (lower) panel,
+we select HVSs and runaways with FORMULA  75FORMULA  (FORMULA  160FORMULA  to FORMULA  =
+200FORMULA  and FORMULA  = 25FORMULA  to 50FORMULA ).
+This comparison confirms our previous conclusion that radial velocity
+measurements directly discriminate between HVSs and indigenous halo stars
+{{cite:16e8ab2b-c743-4651-9a1a-0adf4133588e}}, {{cite:ac11fc52-b852-42bb-99c9-2a06cc232b3e}}, {{cite:5a836e1d-f556-4782-91ef-56719bc2610a}}, {{cite:d58e45ac-eaee-4855-b395-c1531072c52d}}, {{cite:d77bb2f4-5e3c-4f67-afa9-2251dab9bffb}}, {{cite:cecb8e47-6dd9-49a9-92d3-e0d862747e5d}}, {{cite:f0a1d1a3-0ad5-4e8c-af09-665bf710a442}}. For FORMULA  FORMULA 200 km sFORMULA  to FORMULA 300 km sFORMULA ,
+the distributions of halo stars and HVSs overlap. Beyond FORMULA 
+300 km sFORMULA , however, HVSs dominate. This separation has a simple origin:
+HVSs and halo stars with FORMULA  300 km sFORMULA  are bound to the
+galaxy. HVSs with larger FORMULA  are unbound.
+Although the radial velocity distributions for halo stars and runaways
+overlap in the direction of the north Galactic pole (NGP), the highest
+velocity runaways are easily distinguished from halo stars towards the
+Galactic anti-center. At the NGP, nearly all runaways are bound to the
+Galaxy. Thus, they have radial velocities similar to indigenous halo
+stars. Towards the anti-center, the velocity from Galactic rotation
+enables a significant population of unbound runaways on outbound
+trajectories. Bound halo stars never reach the large FORMULA  of these
+unbound runaways.
+Proper motion data alone do not easily discriminate HVSs and runaways
+from indigenous halo stars. The maximum proper motion of halo stars
+in {{cite:0265e611-725f-4288-bb04-36991e1d2a03}}, {{cite:5af53939-7edc-4558-a71d-45d5c25c7685}}, FORMULA  30–50 milliarcsec yrFORMULA , exceeds the
+proper motions of 99% (FORMULA  100%) of HVSs and runaways towards
+the NGP (anti-center). Towards the anti-center, the number of high
+proper motion outliers, FORMULA  100 milliarcsec yrFORMULA , is nearly zero.
+Towards the NGP, however, 0.1–1% of HVSs and runaways have proper
+motions larger than 100 milliarcsec yrFORMULA . Thus, occasional HVSs and runaways
+can be identified as proper motion outliers {{cite:b422dfca-b432-400a-8eb6-7ded2846ac95}}, {{cite:07c61e3a-c5b7-466e-b5e4-676f52787c8d}}, {{cite:98fd8023-0fee-4327-b4fe-e59eba772e87}}.
+For large samples of halo stars, accurate distances might provide a
+way to isolate runaways from indigenous stars (Fig. REF ).
+Because runaways share the rotation of stars in the disk, they should
+exhibit a double-peaked distribution of proper motion. With little or
+no rotation {{cite:95f21129-446d-4bac-8b22-034e5d08d751}}, indigenous halo stars should
+have a single-peaked distribution. Although synthesizing the expected
+distribution for indigenous halo stars is beyond our scope, isolating
+the runaways probably requires a significant population of ejected
+stars within the halo.
+
+Ejection Rates
+To complete our comparisons between the models and available data, we now estimate
+the relative production rates for HVSs and runaways. Accurate rate estimates
+allow us to predict the relative space density of ejected stars as a function
+of distance and Galactic latitude {{cite:d77bb2f4-5e3c-4f67-afa9-2251dab9bffb}}, {{cite:cecb8e47-6dd9-49a9-92d3-e0d862747e5d}}.
+Because the matching algorithm and the contour maps draw from equal numbers
+of simulated HVSs and runaways, production rates allow us to normalize the
+number of matches to the expected space density.
+Predictions for HVSs depend on the rate binaries encounter the black hole
+at the GC {{cite:0ba1e729-7b30-423c-a659-799c37a29194}}. The time variation of the population of
+binaries within the `loss cone' – the ensemble of orbits which pass within
+the black hole's tidal radius – is an important issue in these derivations.
+Binary encounters with the black hole empty the loss cone; encounters between
+binaries and molecular clouds or other field stars fill the loss cone
+{{cite:0ba1e729-7b30-423c-a659-799c37a29194}}, {{cite:30e284b9-eb50-4c3e-bbd7-94bb15117648}}, {{cite:0ac4b5d3-d731-4410-bd52-6a23438706d0}}, {{cite:771e8522-16e3-4492-b593-6acae8abc7d3}}, {{cite:d48cfaa8-402d-40c8-bd56-20af11b6b3b1}}. Rates with a
+`full' loss cone are larger than those with an `empty' loss cone; typical
+estimates are FORMULA  yrFORMULA  for binaries of all types
+{{cite:0ba1e729-7b30-423c-a659-799c37a29194}}, {{cite:3a152766-a5d5-4da5-b94e-4c761c955517}}, {{cite:0ac4b5d3-d731-4410-bd52-6a23438706d0}}. For reasonable initial mass
+functions, limiting the binary population to 2.5–3.5 FORMULA  B-type stars
+(0.8–1.2 FORMULA  G-type stars) implies rates 40 times (10 times) smaller,
+2.5–250 FORMULA  yrFORMULA  for B-type stars and
+1–100 FORMULA  yrFORMULA  for G-type stars.
+To infer empirical HVS rates, we focus on the S stars at the GC
+{{cite:75436a39-7047-4977-902e-320381f9d681}}, {{cite:1f307c7b-ebc4-452d-aacd-8b43202438b2}} and HVSs in the Galactic halo {{cite:f0a1d1a3-0ad5-4e8c-af09-665bf710a442}}.
+The S stars are luminous B-type stars orbiting the GC which are the
+plausible captured partners of HVSs ejected into the outer Galaxy
+{{cite:1bb5fc5f-37f6-4bb8-871f-20cc21e872da}}, {{cite:c1c95cac-5cd0-4098-b9ce-963bd975e9f8}}, {{cite:7fde16ad-509e-402b-9f7a-cc9fab664b97}}, {{cite:d48cfaa8-402d-40c8-bd56-20af11b6b3b1}}. The population of S stars
+implies a capture rate of roughly FORMULA  yrFORMULA  for stars
+with masses exceeding 5 FORMULA  {{cite:3a152766-a5d5-4da5-b94e-4c761c955517}}. Using their
+complete spectroscopic sample of B-type stars in the outer halo, {{cite:f0a1d1a3-0ad5-4e8c-af09-665bf710a442}}
+estimate a production rate of FORMULA  yrFORMULA  for unbound HVSs
+with masses of 2.5–4 FORMULA . For an ensemble of stars selected from a Salpeter
+IMF, these rates agree with theoretical predictions and with each other to
+within a factor of two.
+Predictions rates for runaways from supernovae depend on the local star formation
+rate, the mass range adopted for B-type stars, the fraction of stars in binaries,
+and the fraction of binaries with mass ratios and orbital periods capable of ejecting
+a star with a velocity exceeding 10–20 km sFORMULA  {{cite:d77bb2f4-5e3c-4f67-afa9-2251dab9bffb}}, {{cite:cecb8e47-6dd9-49a9-92d3-e0d862747e5d}}.
+For a star formation rate of 0.5 FORMULA  {{cite:075fe02c-dbb5-4487-9f33-7cf556df9223}} and for the observed
+properties of binaries composed of B-type stars with masses of
+2.5–4 FORMULA  {{cite:2c097366-16d8-4231-aac5-bc227c3017cc}}, supernovae produce runaways with minimum ejection
+velocities of 10 km sFORMULA  at a rate of roughly FORMULA  yrFORMULA 
+{{cite:d77bb2f4-5e3c-4f67-afa9-2251dab9bffb}}, {{cite:cecb8e47-6dd9-49a9-92d3-e0d862747e5d}}.
+Predicting ejection rates for the dynamical runaway mechanism is more challenging.
+From numerical simulations of dense clusters, {{cite:86c2d5d7-d51d-45dd-af63-e146037528d7}} estimate an ejection
+rate for hyper-runaway B-type stars with FORMULA  450 km sFORMULA  of
+FORMULA  yrFORMULA . For a power-law probability of the ejection velocity
+(eq. [REF ]), the total ejection rate for B-type runaway stars with
+FORMULA  10 km sFORMULA , is roughly FORMULA  yrFORMULA . This rate
+suggests that dynamically generated runaways are somewhat more common
+than supernova-induced runaways.
+Empirical rates for runaways generally agree with these estimates. To derive these rates,
+we estimate the formation rate of 2.5–3.5 FORMULA  stars from the observed star formation
+rates and a Salpeter initial mass function. For the {{cite:075fe02c-dbb5-4487-9f33-7cf556df9223}} star formation rate
+of 0.5 FORMULA , one star with a mass of 2.5–3.5 FORMULA  is born every 300–350 years.
+To infer the fraction of runaway stars in this group, we rely on the observed
+frequencies of less than 1% for A-type stars {{cite:4d1a6bc4-5419-4de2-a5a7-ab1eed265e32}}, {{cite:cecb8e47-6dd9-49a9-92d3-e0d862747e5d}}, 5% for
+B-type stars {{cite:a4502327-47ba-4549-8433-5fc7686848f7}}, and more than 20% for O-type stars {{cite:35ba3882-0ab6-4388-9b7c-69c7e21f2bd6}}.
+Adopting a 1–2% runaway frequency among 2.5–3.5 FORMULA  stars yields a production
+rate of FORMULA  yrFORMULA . This rate is nearly identical to our purely
+theoretical rate estimate.
+Altogether, these estimates suggest our matching algorithm selects stars from
+ensembles with similar formation rates. If we assume that bound HVSs have
+a comparable frequency to unbound HVSs in the {{cite:f0a1d1a3-0ad5-4e8c-af09-665bf710a442}} sample, the
+combined HVS production rate of FORMULA  yrFORMULA  is identical
+to the production rate of supernova-induced runaways. For the dynamically
+generated runaways, we correct the complete ensemble for the fraction of
+runaways with FORMULA  50 km sFORMULA . This correction yields an expected
+rate of FORMULA  yrFORMULA , very close to the rates for HVSs
+and supernova-induced runaways.
+Although these estimates yield roughly similar production rates for HVSs
+and both types of runaways, we expect unbound runaways to be much less
+frequent than unbound HVSs. More than 25% of HVSs ejected from the GC to
+distances FORMULA  10 kpc are unbound (§5). In contrast, FORMULA  1% of runaways
+have ejection velocities larger than the local escape velocity. Thus,
+unbound HVSs should greatly outnumber unbound runaways in the halo.
+Overall, observations confirm the expectation that the number of unbound
+runaways is smaller then the number of unbound HVSs
+{{cite:d77bb2f4-5e3c-4f67-afa9-2251dab9bffb}}, {{cite:cecb8e47-6dd9-49a9-92d3-e0d862747e5d}}, {{cite:86c2d5d7-d51d-45dd-af63-e146037528d7}}. For every unbound
+runaway, theory predicts 10–30 HVSs. Among known unbound stars, the vast
+majority are HVSs {{cite:d77bb2f4-5e3c-4f67-afa9-2251dab9bffb}}.
+
+Summary
+Observations of HVS candidates and known runaways yield good tests of the
+numerical simulations. The comparisons in the preceding subsections lead
+to several clear conclusions.
+
+Runaway models provide an excellent match to observations of known
+runaway stars with modest radial velocities,
+FORMULA  250 km sFORMULA  {{cite:c0fc5352-e9ce-44cc-adcf-e60cbc2085de}}.
+
+The HVS models match observations of HVS candidates from {{cite:f0a1d1a3-0ad5-4e8c-af09-665bf710a442}}.
+
+HVS and runaway star models fail to match observations of HVS candidates
+from SEGUE {{cite:41e37042-4770-45ef-8052-beeba6dd5325}}. If the proper motions are correct, some other
+model for ejected stars is required to match the observations.
+
+Among a few miscellaneous high velocity stars, at least three are
+runaways {{cite:b422dfca-b432-400a-8eb6-7ded2846ac95}}, {{cite:07c61e3a-c5b7-466e-b5e4-676f52787c8d}}, {{cite:98fd8023-0fee-4327-b4fe-e59eba772e87}}. Two others are more likely
+HVSs {{cite:edaad942-4547-4cc1-a40d-a37fc99a72d9}}, {{cite:41684234-05c4-4999-8e7b-abf86bd360cd}}, {{cite:a83467b7-faa9-470a-95eb-82d2aeb44ff3}}.
+
+Cleanly isolating unbound ejected stars from indigenous halo stars
+requires radial velocities. If the halo contains a large population of
+runaways ejected from the disk, these stars can be identified as high
+proper motion outliers or by their rotational motion about the GC.
+
+Observed and theoretical formation rates for HVSs and runaways suggest
+that most unbound stars in the halo are HVSs.
+
+
+DISCUSSION AND SUMMARY
+We have explored analytic treatments and have developed numerical calculations of
+HVSs and runaway stars moving through the Galaxy. The simulations use a realistic
+Galactic potential which matches observations in the GC, the bulge, the disk, and
+the halo. Algorithms for the velocities of ejected stars are based on detailed
+analytic and numerical calculations of
+(i) binaries interacting with the black hole in the GC,
+(ii) binaries where one component undergoes a supernova explosion, and
+(iii) single and multiple stars interacting in a massive star cluster.
+Realistic main sequence lifetimes allow snapshots of the positions and space motions
+for ejected stars as a function of time.
+The following theoretical results serve as a guide for interpreting data from
+large-scale surveys with GAIA and ground-based telescopes.
+
+Ejected stars have a broad range in
+radial velocity (FORMULA  0–1000 km sFORMULA ) and
+proper motion (FORMULA  0.01–100 milliarcsec yrFORMULA ).
+
+At all distances, HVSs have larger space velocities than runaways.
+For FORMULA  50–150 kpc, unbound HVSs dominate the population. Nearby
+(FORMULA  10 kpc), unbound stars are rare; bound HVSs and runaways
+are common.
+
+For nearby stars with FORMULA  10 kpc, proper motions cannot
+isolate high velocity ejected stars from horizontal branch stars in the halo.
+
+At larger distances, radial velocities excel at distinguishing
+ejected stars from indigenous halo stars.
+
+For runaway stars ejected into the halo at FORMULA  20–50 kpc,
+a double-peaked proper motion distribution results from orbital motion
+around the GC. This distribution cleanly separates runaways from either
+HVSs or halo stars on radial orbits.
+
+Concentrations of high proper motion stars near the GC are a
+unique signature of HVSs ejected from the GC or runaways ejected from
+the inner galaxy.
+
+These general conclusions are fairly independent of the modeling approach. The main
+trends for bound and unbound stars depend on the point of origin (GC for HVSs or disk
+for runaways) and the total mass of the Galaxy within roughly 10 kpc
+{{cite:d58e45ac-eaee-4855-b395-c1531072c52d}}. Thus, modest changes to the mass of the Galaxy, the
+mass in the bulge, disk, or halo, or to the velocity distributions of ejected stars
+cannot modify our main conclusions. Adopting a triaxial potential for the bulge
+or a more realistic disk-like potential for the GC can modify the median velocities,
+the velocity dispersions, and the relative densities of HVSs with Galactic latitude
+and longitude {{cite:24c8abb2-fbcf-4a94-8708-243d4453e63f}}, {{cite:e0aff0bf-14f1-4a54-b2a1-c549aa0eef48}}, {{cite:9cba7376-b7d3-48b6-8e9a-bf472365e5a5}}, {{cite:8ca2e605-2204-4676-bb65-3842847a5449}}, {{cite:6ab00def-ba3c-4758-adfc-6ed523f90925}}.
+However, tests with realistic anisotropic potentials show that the general trends
+do not depend on the form of the Galactic potential. Similarly, modest changes in
+the adopted velocity distributions of ejected stars yield modest differences in
+the shape of the predicted distributions of FORMULA  and FORMULA  with distance without
+changing the nature of systematic variations with distance and Galactic coordinates.
+Comparisons between these predictions and existing observations of ejected stars
+are encouraging. Several large surveys of HVSs and runaways demonstrate several
+unambiguous conclusions.
+
+Simulations of supernova-induced and dynamically generated runaways
+match observations of known runaway stars with modest radial velocities,
+FORMULA  250 km sFORMULA  {{cite:c0fc5352-e9ce-44cc-adcf-e60cbc2085de}}. HVS models fail to match these data.
+
+HVS models explain observations of HVS candidates from {{cite:f0a1d1a3-0ad5-4e8c-af09-665bf710a442}}.
+Runaway star models cannot explain the data.
+
+HVS and runaway star models fail to account for observations of HVS candidates
+from SEGUE {{cite:41e37042-4770-45ef-8052-beeba6dd5325}}. If the proper motions of the SEGUE candidates are
+correct, another model for ejected stars is required to match the observations.
+
+Among a few miscellaneous high velocity stars, at least three are
+runaways {{cite:b422dfca-b432-400a-8eb6-7ded2846ac95}}, {{cite:07c61e3a-c5b7-466e-b5e4-676f52787c8d}}, {{cite:98fd8023-0fee-4327-b4fe-e59eba772e87}}. Two others are more likely
+HVSs {{cite:41684234-05c4-4999-8e7b-abf86bd360cd}}, {{cite:a83467b7-faa9-470a-95eb-82d2aeb44ff3}}.
+
+Observed and theoretical formation rates for HVSs and runaways suggest
+that most unbound stars in the halo are HVSs.
+
+GAIA data will provide clear tests of the theoretical predictions and observational
+comparisons outlined above. For solar-type stars with FORMULA  20, GAIA data will
+yield robust samples of high velocity stars with FORMULA  0.5 milliarcsec yrFORMULA  and
+FORMULA  10 kpc. Within this group, quantifying the (probably very low) fraction
+of unbound stars can place useful limits on the velocity distributions of ejected stars.
+More likely, identifying outliers in the distributions of proper motion and radial
+velocity will yield a population of bound HVSs and runaways. Aside from the properties
+of ejected stars, comparisons with theoretical models can yield information on the
+potential of the bulge and inner disk.
+Accurate GAIA proper motions (FORMULA  0.16 milliarcsec yrFORMULA ) for stars with
+FORMULA  20 {{cite:7ad76de8-041f-4a2b-a418-b0b81a6d5fbd}}, {{cite:afdfc8f7-4f8e-498d-b643-f4fb5a54e615}}, high quality radial velocities from
+large ground-based telescopes {{cite:f0a1d1a3-0ad5-4e8c-af09-665bf710a442}}, and good spectroscopic
+parallaxes will probe the properties of unbound B-type stars
+out to FORMULA  100 kpc. These data will yield improved constraints on
+(i) the production rates for HVSs and runaways and
+(ii) the relative populations of bound and unbound stars.
+Although GAIA can identify stars with masses of roughly 10 FORMULA  to much larger
+distances, the shorter main sequence lifetimes of these stars preclude large
+populations beyond 20–30 kpc {{cite:ac11fc52-b852-42bb-99c9-2a06cc232b3e}}, {{cite:cecb8e47-6dd9-49a9-92d3-e0d862747e5d}}. If
+ejections of very massive HVSs or runaways are more frequent than those of
+3 FORMULA  stars, GAIA could discover a few massive, very high velocity ejected
+stars beyond 100 kpc.
+As dynamical models for ejected stars improve, GAIA observations of the complete
+sample of 1–10 FORMULA  HVSs and runaways will enable new measurements of
+anisotropies in the shape of the Galactic potential {{cite:24c8abb2-fbcf-4a94-8708-243d4453e63f}}, {{cite:e0aff0bf-14f1-4a54-b2a1-c549aa0eef48}}.
+HVSs and runaways near the GC constrain the shape of the bulge. More distant
+stars probe the shape of the halo. Together, HVSs and runaways in the bulge
+and halo may yield new insights into the distribution of dark matter throughout
+the Galaxy.
+We acknowledge generous allotments of computer time on the NASA `discover' cluster.
+Clear and respectful comments from an anonymous referee improved our
+presentation.
+lccccccc
+8
+Radial Velocity Statistics for Runaway and Hypervelocity Stars
+
+
+Model 
+  d (kpc)   
+    FORMULA  (%)     
+FORMULA  (km sFORMULA )  
+FORMULA  (km sFORMULA )  
+FORMULA  (km sFORMULA )  
+FORMULA  (km sFORMULA )  
+FORMULA  (km sFORMULA ) 
+
+HV1    0–10  2.96  FORMULA 0.3    FORMULA 89.3    89.7    0.9  138.3
+HV1   10–20  2.54    5.1   FORMULA 113.6   126.0    9.2  188.7
+HV1   20–40  1.73   15.9   FORMULA 128.5   158.7   25.2  233.9
+HV1   40–80  1.12   39.5   FORMULA 110.4   197.5   67.9  275.3
+HV1  80–160  0.86   90.8    FORMULA 71.5   292.8  152.7  337.3
+HV3    0–10  2.80   31.6  FORMULA 70.7   146.6   55.8  190.4
+HV3   10–20  3.10  167.3    2.8   362.5  208.5  297.0
+HV3   20–40  3.74  268.8   83.2   498.3  321.5  339.7
+HV3   40–80  3.77  395.1  209.1   635.9  457.3  355.6
+HV3  80–160  2.77  605.9  414.5   855.6  672.1  367.9
+RS1    0–10  2.28    1.9   FORMULA 60.7    65.1    2.0  102.9
+RS1   10–20  1.07    4.9   FORMULA 88.1    95.8    3.2  132.9
+RS1   20–40  0.48    2.4  FORMULA 107.3   113.8    3.8  158.6
+RS1   40–80  0.15    5.8  FORMULA 114.7   128.6    8.5  169.1
+RS1   80–160  0.03    1.1  FORMULA 113.7   125.3   10.6  170.4
+RS3    0–10  2.30   10.1  FORMULA 51.4    75.6   12.9  103.6
+RS3   10–20  1.11   27.7  FORMULA 64.4   121.2   29.1  135.4
+RS3   20–40  0.60   59.9  FORMULA 51.1   172.1   61.5  159.0
+RS3   40–80  0.28  106.7  FORMULA 10.5   219.9  107.1  154.3
+RS3  80–160  0.03  187.6   67.9   314.1  192.8  143.9
+RD1    0–10  0.27    9.7 FORMULA 120.0  130.8    6.1  171.7
+RD1   10–20  0.11  FORMULA 7.3 FORMULA 126.6  124.2  FORMULA 1.1  172.2
+RD1   20–40  0.05   15.3 FORMULA 115.9  141.4   12.7  185.5
+RD1   40–80  0.02   12.0 FORMULA 112.2  157.4   25.2  201.5
+RD1  80–160  0.01   30.9 FORMULA 118.5  151.8   25.9  194.5
+RD3    0–10  0.26    4.5  FORMULA 121.0   128.7    5.1  173.6
+RD3   10–20  0.12   35.8  FORMULA 90.1   162.3   41.5  181.7
+RD3   20–40  0.06   96.2  FORMULA 44.7   239.4  108.9  211.5
+RD3   40–80  0.04  188.5   54.9   331.7  202.4  205.0
+RD3  80–160  0.02  341.4  214.9   471.4  347.4  184.9
+RT1    0–10  2.43    5.2  FORMULA 170.7   176.6    3.6  216.7
+RT1    0–20  4.72    4.4  FORMULA 161.2   172.2    5.6  214.9
+RT1    0–40  6.06    7.3  FORMULA 141.4   157.1    8.2  206.9
+RT1    0–80  5.29    9.2  FORMULA 124.6   145.1   11.6  195.1
+RT1  80–160  3.54   20.5  FORMULA 105.0   150.7   25.5  186.4
+RT3    0–10  2.67   86.1  FORMULA 100.8   255.7   77.2  225.6
+RT3   10–20  5.19  129.4  FORMULA 49.1   286.3  118.7  220.6
+RT3   20–40  7.96  167.2    6.0   323.0  165.4  214.3
+RT3   40–80 10.46  204.9   80.3   338.2  213.4  184.6
+RT3  80–160  6.64  301.3  194.4   418.9  308.5  156.1
+
+FORMULA : fraction of stars;
+FORMULA : median velocity;
+FORMULA : inter-quartile range;
+FORMULA : average velocity;
+FORMULA : standard deviation in radial velocity;
+HV1, HV3: 1 FORMULA , 3 FORMULA  HVS models;
+RS1, RS3: 1 FORMULA , 3 FORMULA  supernova-induced runaway models;
+RD1, RD3: 1 FORMULA , 3 FORMULA  dynamically generated runaway models;
+RT1, RT3: 1 FORMULA , 3 FORMULA  toy runaway models
+lccccccc
+8
+Tangential Velocity Statistics for Runaway and Hypervelocity Stars
+
+
+Model 
+  d (kpc)   
+    FORMULA  (%)     
+FORMULA  (km sFORMULA )  
+FORMULA  (km sFORMULA )  
+FORMULA  (km sFORMULA )  
+FORMULA  (km sFORMULA )  
+FORMULA  (km sFORMULA ) 
+
+HV1    0–10  2.96  243.8  218.8  285.0  257.1   74.3
+HV1   10–20  2.54  232.8  205.7  248.4  230.3   50.3
+HV1   20–40 1.73  219.4  190.7  234.7  211.5   36.4
+HV1   40–80  1.12  214.2  185.1  231.4  205.8   31.5
+HV1  80–160  0.86  214.7  186.6  230.9  205.5   30.0
+HV3    0–10  2.80  251.6  221.5  325.1  299.6  156.7
+HV3   10–20  3.10  242.2  216.7  297.2  274.1  112.5
+HV3   20–40  3.74  232.6  206.4  252.4  235.9   56.9
+HV3   40–80  3.77  226.4  198.8  238.3  219.1   35.5
+HV3  80–160  2.77  222.6  195.5  235.5  212.9   30.0
+RS1    0–10  2.28  129.5   79.9  195.0  145.3   87.8
+RS1   10–20  1.07  199.3  134.0  293.6  217.8  107.9
+RS1   20–40  0.48  204.7  146.2  296.2  220.8   93.7
+RS1   40–80  0.15  181.7  146.4  263.9  201.7   70.1
+RS1  80–160  0.03  187.3  155.4  246.3  197.6   56.3
+RS3    0–10  2.30  129.2  80.1  193.6  145.2   87.3
+RS3   10–20  1.11  197.7  133.4  291.2  215.6  106.4
+RS3   20–40  0.60  189.9  140.5  289.2  213.8   93.7
+RS3   40–80  0.28  185.0  148.9  269.5  205.9   72.7
+RS3  80–160  0.03  186.3  150.3  265.5  204.3   64.0
+RD1    0–10  0.27  250.2  152.6  360.2  260.8  134.6
+RD1   10–20  0.11  229.3  142.7  324.3  236.1  115.2
+RD1   20–40  0.05  204.5  148.9  281.7  216.8   85.5
+RD1   40–80  0.02  211.7  169.4  253.5  212.4   58.9
+RD1  80–160  0.01  210.8  174.5  235.0  206.6   40.6
+RD3    0–10  0.26  255.2  153.3  365.7  262.1  134.0
+RD3   10–20  0.12  232.6  142.5  327.4  237.8  116.2
+RD3   20–40  0.06  209.9  148.5  286.8  218.7   90.6
+RD3   40–80  0.04  198.8  161.6  252.4  206.5   61.4
+RD3  80–160  0.02  203.2  171.8  239.9  204.8   45.4
+RT1    0–10  2.43  316.5  244.5  393.1  320.0  111.7
+RT1   10–20  4.72  243.7  180.8  312.6  252.8  104.1
+RT1   20–40  6.06  218.9  177.0  265.2  221.2   66.9
+RT1   40–80  5.29  211.8  180.8  245.7  211.6   47.4
+RT1  80–160  3.54  208.3  180.2  233.8  205.4   38.0
+RT3    0–10   2.67   86.1  FORMULA 100.8   255.7  77.2  225.6
+RT3   10–20   5.19  129.4   FORMULA 49.1   286.3  118.7  220.6
+RT3   20–40   7.96  167.2    6.0   323.0  165.4  214.3
+RT3   40–80  10.46  204.9   80.3   338.2  213.4  184.6
+RT3  80–160   6.64  301.3  194.4   418.9  308.5  156.1
+
+FORMULA : fraction of stars;
+FORMULA : median velocity;
+FORMULA : inter-quartile range;
+FORMULA : average velocity;
+FORMULA : standard deviation in tangential velocity;
+HV1, HV3: 1 FORMULA , 3 FORMULA  HVS models;
+RS1, RS3: 1 FORMULA , 3 FORMULA  supernova-induced runaway models;
+RD1, RD3: 1 FORMULA , 3 FORMULA  dynamically generated runaway models;
+RT1, RT3: 1 FORMULA , 3 FORMULA  toy runaway models
+lccccccc
+8
+Proper Motion Statistics for Runaway and Hypervelocity Stars
+
+
+Model 
+    d (kpc)     
+    FORMULA  (%)     
+   log FORMULA     
+   log FORMULA     
+   log FORMULA     
+   (FORMULA     
+   FORMULA    
+
+HV1    0–10  2.96    0.89    0.77    1.04    0.92  0.22
+HV1   10–20  2.54    0.54    0.44    0.63    0.54  0.14
+HV1   20–40  1.73    0.20    0.12    0.29    0.20  0.12
+HV1   40–80  1.12 FORMULA 0.11 FORMULA 0.19 FORMULA 0.02 FORMULA 0.11  0.11
+HV1  80–160  0.86 FORMULA 0.42 FORMULA 0.50 FORMULA 0.33 FORMULA 0.42  0.11
+HV3    0–10  2.80    0.94    0.80    1.11    0.98  0.25
+HV3   10–20  3.10    0.56    0.46    0.67    0.58  0.18
+HV3   20–40  3.74    0.23    0.14    0.32    0.23  0.14
+HV3   40–80  3.77 FORMULA 0.09 FORMULA 0.17    0.00 FORMULA 0.09  0.12
+HV3  80–160  2.77 FORMULA 0.39 FORMULA 0.47 FORMULA 0.31 FORMULA 0.39  0.11
+RS1    0–10  2.28    0.75    0.55    0.95    0.74  0.34
+RS1   10–20  1.07    0.49    0.30    0.65    0.46  0.26
+RS1   20–40  0.48    0.21    0.04    0.37    0.20  0.23
+RS1   40–80  0.15 FORMULA 0.12 FORMULA 0.25    0.01 FORMULA 0.12  0.17
+RS1  80–160  0.03 FORMULA 0.41 FORMULA 0.52 FORMULA 0.30 FORMULA 0.41  0.15
+RS3    0–10  2.30    0.75    0.55    0.95    0.74  0.34
+RS3   10–20  1.11    0.48    0.30    0.64    0.46  0.26
+RS3   20–40  0.60    0.17    0.01    0.34    0.17  0.23
+RS3   40–80  0.28 FORMULA 0.12 FORMULA 0.24    0.02 FORMULA 0.11  0.18
+RS3  80–160  0.03 FORMULA 0.36 FORMULA 0.46 FORMULA 0.22 FORMULA 0.35  0.15
+RD1    0–10  0.27    0.99    0.73    1.20    0.97  0.41
+RD1   10–20  0.11    0.55    0.33    0.71    0.50  0.29
+RD1   20–40  0.05    0.20    0.05    0.34    0.19  0.22
+RD1   40–80  0.02 FORMULA 0.10 FORMULA 0.21    0.02 FORMULA 0.10  0.16
+RD1  80–160  0.01 FORMULA 0.38 FORMULA 0.51 FORMULA 0.30 FORMULA 0.41  0.14
+RD3    0–10  1.04    0.98    0.74    1.19    0.96  0.39
+RD3   10–20  0.45    0.55    0.33    0.71    0.50  0.29
+RD3   20–40  0.24    0.19    0.03    0.34    0.18  0.23
+RD3   40–80  0.17 FORMULA 0.13 FORMULA 0.24 FORMULA 0.01 FORMULA 0.12  0.16
+RD3  80–160  0.09 FORMULA 0.40 FORMULA 0.49 FORMULA 0.31 FORMULA 0.40  0.13
+RT1    0–10  2.43    0.99    0.83    1.15    0.99  0.28
+RT1   10–20  4.72    0.53    0.39    0.67    0.52  0.23
+RT1   20–40  6.06    0.20    0.09    0.31    0.19  0.17
+RT1   40–80  5.29 FORMULA 0.10 FORMULA 0.20 FORMULA 0.01 FORMULA 0.11  0.14
+RT1  80–160  3.54 FORMULA 0.41 FORMULA 0.50 FORMULA 0.32 FORMULA 0.41  0.12
+RT3    0–10  2.67    0.99    0.83    1.16    0.99  0.29
+RT3   10–20  5.19    0.53    0.38    0.68    0.52  0.24
+RT3   20–40  7.96    0.20    0.07    0.32    0.19  0.19
+RT3   40–80 10.46 FORMULA 0.12 FORMULA 0.22 FORMULA 0.01 FORMULA 0.12  0.15
+RT3  80–160  6.64 FORMULA 0.39 FORMULA 0.48 FORMULA 0.30 FORMULA 0.40  0.13
+
+FORMULA : fraction of stars;
+FORMULA : median proper motion;
+FORMULA : inter-quartile range;
+FORMULA : average log proper motion;
+FORMULA : standard deviation in log proper motion;
+all proper motions in units of milliarcsec yrFORMULA ;
+HV1, HV3: 1 FORMULA , 3 FORMULA  HVS models;
+RS1, RS3: 1 FORMULA , 3 FORMULA  supernova-induced runaway models;
+RD1, RD3: 1 FORMULA , 3 FORMULA  dynamically generated runaway models;
+RT1, RT3: 1 FORMULA , 3 FORMULA  toy runaway models
+FIGURE 
+FIGURE 
+FIGURE 
+FIGURE 
+FIGURE 
+FIGURE 
+FIGURE 
+FIGURE 
+FIGURE 
+FIGURE 
+FIGURE 
+FIGURE 
+FIGURE 
+FIGURE 
+FIGURE 
+FIGURE 
+FIGURE 
+FIGURE 
+FIGURE 
+FIGURE 
+FIGURE 
+FIGURE 
+FIGURE 
+FIGURE 
+FIGURE 
+FIGURE 
+FIGURE 
+FIGURE 
+FIGURE 

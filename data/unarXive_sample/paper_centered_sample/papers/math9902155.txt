@@ -1,0 +1,1443 @@
+
+[twoside,12pt,tocsmall,bibtoc,psfig]article
+
+ On Fibers and Local Connectivity
+of Mandelbrot and Multibrot Sets
+Dierk Schleicher
+Technische Universität München
+
+
+Stony Brook IMS Preprint #1998/13aDecember 1998
+0.3em
+
+
+We give new proofs that the Mandelbrot set is locally connected at
+every Misiurewicz point and at every point on the boundary of a
+hyperbolic component. The idea is to show “shrinking of puzzle
+pieces” without using specific puzzles. Instead, we introduce fibers of the Mandelbrot set (see Definition REF ) and show
+that fibers of certain points are “trivial”, i.e., they consist of
+single points. This implies local connectivity at these points.
+Locally, triviality of fibers is strictly stronger than local
+connectivity. Local connectivity proofs in holomorphic dynamics often
+actually yield that fibers are trivial, and this extra knowledge is
+sometimes useful. We include the proof that local connectivity of the
+Mandelbrot set implies density of hyperbolicity in the space of
+quadratic polynomials (Corollary REF ).
+We write our proofs more generally for Multibrot sets, which are
+the loci of connected Julia sets for polynomials of the form FORMULA .
+Although this paper is a continuation of {{cite:103b371e-ed0b-4a79-a2da-91708f2e8b22}}, it has been
+written so as to be independent of the discussion of fibers of general
+compact connected and full sets in FORMULA  given there.
+
+Introduction
+A great deal of work in holomorphic dynamics has been done in recent
+years trying to prove local connectivity of Julia sets and of many
+points of the Mandelbrot set, notably by Yoccoz, Lyubich, Levin,
+van Strien, Petersen and others. One reason for this work is that the
+topology of Julia sets and the Mandelbrot set is completely described
+once local connectivity is known. Another reason is that local
+connectivity of the Mandelbrot set implies that hyperbolicity is
+dense in the space of quadratic polynomials.
+In {{cite:103b371e-ed0b-4a79-a2da-91708f2e8b22}}, we have introduced fibers for arbitrary
+compact connected and full subsets of the complex plane as a new
+point of view on questions of local connectivity, and we have applied
+fibers to filled-in Julia sets. In the present paper, we restrict to
+the case of the Mandelbrot set and its higher degree cousins. After a
+review of fundamental properties of the Multibrot sets, we define
+fibers of these sets and show that they are born with much nicer
+properties than fibers of general compact connected and full subsets
+of FORMULA . Our goal here is to prove that Misiurewicz points and
+boundary points of hyperbolic components have trivial fibers,
+i.e. that their fibers consist of only one point. A consequence is
+local connectivity at these points, but triviality of fibers is a
+somewhat stronger property. Unlike in {{cite:103b371e-ed0b-4a79-a2da-91708f2e8b22}}, where the
+discussion was for more general subsets of FORMULA , we try to be as
+specific as possible to Multibrot sets; we have repeated some key
+discussions about fibers in order to make the present paper as
+self-contained as possible.
+We discuss polynomials of the form FORMULA , for
+arbitrary complex constants FORMULA  and arbitrary degrees FORMULA .
+These are, up to normalization, exactly those polynomials which have
+a single critical point. Following a suggestion of Milnor, we call
+these polynomials unicritical (or unisingular). We will always
+assume unicritical polynomials to be normalized as above, and the
+variable FORMULA  will always denote the degree. We define the Multibrot set of degree FORMULA  as the connectedness locus of these
+families, that is
+FORMULA 
+In the special case FORMULA , we obtain quadratic polynomials, and
+FORMULA  is the familiar Mandelbrot set. All the Multibrot sets
+are connected, they are symmetric with respect to the real axis, and
+they also have FORMULA -fold rotation symmetries (see
+{{cite:b282d133-4335-4d63-ab9f-ee51ee655e30}} with pictures of several of these sets). The
+present paper can be read with the quadratic case in mind throughout.
+However, we have chosen to do the discussion for all the Multibrot
+sets because this requires only occasional slight modifications – and
+because recently interest in the higher degree case has increased; see
+e.g. Levin and van Strien {{cite:46ef8e16-e975-48c2-b3e1-4c1615694022}} or McMullen {{cite:41916f5f-7ea3-4415-847e-b3d23122c960}}.
+One problem in holomorphic dynamics is that many results are
+folklore, with few accessible proofs published. In particular, many
+of the fundamental results about the Mandelbrot set, due to Douady
+and Hubbard, have been described in their famous “Orsay notes”
+{{cite:2607d919-6cb1-4eee-8b97-9816b6ec0852}} which have never been published. They are no longer
+available, and it is not always easy to pinpoint a precise reference
+even within these notes. This paper provides proofs of certain key
+results about the Mandelbrot sets, and more generally for Multibrot
+sets. Most of these results are known for FORMULA , but several of our
+proofs are new and sometimes more direct that known proofs.
+In a sequel {{cite:33c59a0c-3c47-464f-b429-e297ed5760eb}}, we will give various applications of
+the concept of fibers which are related to the concepts of renormalization and tuning: triviality of fibers is preserved
+under tuning of Multibrot sets and under renormalization of Julia
+sets, and we will show that the Mandelbrot set comes quite close to
+being arcwise connected. These statements, in turn, have various
+further applications.
+We begin in Section  by a review of certain
+important properties of Mandelbrot and Multibrot sets. We then define
+fibers for these sets in Section  using the same
+definition as in {{cite:103b371e-ed0b-4a79-a2da-91708f2e8b22}}, except that the definition simplifies
+because fibers of Multibrot sets generally behave quite nicely.
+We also show that the fiber of an interior point is trivial if and
+only if it is in a hyperbolic component. We conclude the section by a
+proof that local connectivity is equivalent to triviality of all
+fibers, and both conditions imply density of hyperbolicity (using an
+argument of Douady and Hubbard; Corollary REF ).
+We then prove that every Multibrot set has trivial fibers and is thus
+locally connected at every boundary point of a hyperbolic component
+and at every Misiurewicz point. Boundaries of hyperbolic components
+are discussed in Section , except roots of primitive
+components: they require special treatment which can be found in
+Section . In Section 
+we prove that fibers of Misiurewicz points are trivial. This shows
+that fibers of Multibrot sets have particularly convenient properties.
+Finally, in Section , we compare fibers to
+combinatorial classes.
+Acknowledgements.
+As a continuation of {{cite:103b371e-ed0b-4a79-a2da-91708f2e8b22}}, this paper inherits the
+acknowledgements mentioned there. I would like to repeat the
+contribution and support of Misha Lyubich in particular, as well as
+the continuing encouragement of John Milnor and the support by the
+Institute for Mathematical Sciences in Stony Brook.
+
+Multibrot Sets
+In this section, we review some necessary background about Multibrot
+sets, and we define fibers of these sets. We include a result from
+{{cite:103b371e-ed0b-4a79-a2da-91708f2e8b22}}: whenever a fiber consists of a single point, then
+this implies local connectivity at this point.
+All the Multibrot sets are known to be compact, connected and full. It
+is conjectured but not yet known that they are locally connected.
+However, it is known that many of its fibers are trivial. We will show
+that for certain particularly important fibers in
+Sections ,  and .
+We recall the definition of external rays: For any compact connected
+and full subset FORMULA  consisting of more than a single point,
+there is a unique conformal isomorphism
+FORMULA  fixing FORMULA , normalized so as
+to have positive real derivative at FORMULA . Inverse images of radial
+lines in FORMULA  are called external rays, and an external ray
+at some angle FORMULA  is said to land if the limit
+FORMULA  exists. The impression of this external ray is the set of all limit points of
+FORMULA  for FORMULA  and FORMULA .
+As in {{cite:ba4ad639-79a4-4e71-9117-cdc4c3c5dc1f}} and {{cite:b9414885-c1f6-4052-ac79-5c663a8ce085}}, we will denote external
+rays of the Multibrot sets by parameter rays in order to
+distinguish them from dynamic rays of Julia sets. All the
+parameter rays at rational angles are known to land (see Douady and
+Hubbard {{cite:2607d919-6cb1-4eee-8b97-9816b6ec0852}}, Schleicher {{cite:ba4ad639-79a4-4e71-9117-cdc4c3c5dc1f}} or, in the periodic
+case, Milnor {{cite:b9414885-c1f6-4052-ac79-5c663a8ce085}}).
+A ray pair is a collection of two external rays (dynamic or
+parameter rays) which land at a common point. A dynamic ray pair is
+characteristic if it separates the critical value from the
+critical point and from all the other rays on the forward orbit of the
+ray pair. The landing point of a periodic or preperiodic dynamic ray
+pair is always on a repelling or parabolic orbit; if a preperiodic
+dynamic ray pair is characteristic, then its landing point is
+necessarily on a repelling orbit.
+The following theorem will be used throughout this paper. The first
+half is due to Lavaurs {{cite:dd18c6cb-0777-4f9c-93e4-bcf587e24857}}. Proofs of both parts can be found in
+{{cite:c681dd85-8b77-421c-8801-de4def484432}}.
+Theorem 2.1 (Correspondence of Ray Pairs) 
+ 
+For every degree FORMULA  and every unicritical polynomial FORMULA , there are bijections
+
+between the ray pairs in parameter space at periodic angles,
+separating 0 and FORMULA , and the characteristic periodic ray pairs in
+the dynamic plane of FORMULA  landing at repelling orbits; and
+
+between the ray pairs in parameter space at preperiodic angles,
+separating 0 and FORMULA , and the characteristic preperiodic ray pairs
+in the dynamic plane of FORMULA .
+
+These bijections of ray pairs preserve external angles.
+ FORMULA
+
+We assume that the separating ray pairs do not go through the point
+FORMULA  (the critical value or the parameter). For these boundary cases,
+we have the following. The critical value is never on a periodic ray
+pair because, depending on whether the corresponding Julia set is
+connected or not, it would either be periodic and thus superattracting
+and could not be the landing point of dynamic rays, or the periodic
+dynamic rays would bounce into a precritical point infinitely often
+and thus fail to land. Conversely, if the parameter FORMULA  is on a
+parameter ray pair at periodic angles, the corresponding Julia set
+either has a dynamic ray pair which is the characteristic ray pair of
+a parabolic periodic orbit, or at least one of the rays on this ray
+pair bounces into a precritical point infinitely often. In the
+preperiodic case, if the parameter FORMULA  is on a parameter ray pair at
+preperiodic angles, then in the corresponding dynamic plane, the
+dynamic rays at the corresponding angles form a dynamic ray pair
+landing at a preperiodic point in a repelling orbit. Moreover, this
+ray pair contains the critical value, and all its forward images are
+on the same side as the critical point. Conversely, if in some dynamic
+plane the critical value is on a characteristic preperiodic ray pair,
+then this ray pair lands on a repelling orbit and the parameter is on
+the parameter ray pair at corresponding angles. In the quadratic
+case, these results go back to Douady and Hubbard {{cite:2607d919-6cb1-4eee-8b97-9816b6ec0852}}; for
+proofs, see also {{cite:ba4ad639-79a4-4e71-9117-cdc4c3c5dc1f}} and, in the periodic case,
+{{cite:b9414885-c1f6-4052-ac79-5c663a8ce085}}. Proofs for higher degrees will be in {{cite:0913eb5d-326b-451a-b63a-9fef0567f57e}}.
+Not all rational parameter rays are organized in pairs. The number of
+parameter rays at preperiodic angles landing at a common point can be
+any positive integer. For parameter rays at periodic angles, this
+number is either 1 or 2; in the quadratic case, this number is
+always 2 (we count the parameter rays at angles 0 and 1
+separately).
+All parameter rays at periodic angles are known to land at parabolic
+parameters (where the critical orbit converges to a unique parabolic
+orbit). All parameter rays at preperiodic angles land at parameters
+where the critical value is strictly preperiodic: such parameters are
+(somewhat unfortunately) known as “Misiurewicz points”. Another name
+for such points would be “critically preperiodic parameters”.
+Any hyperbolic component has one root and FORMULA  co-roots on its boundary: these are parameters with parabolic orbits
+whose periods are at most that of the attracting orbits within the
+component. The root is the landing point of two periodic parameter
+rays, while every co-root is the landing point of a single parameter
+ray at a periodic angle. The period of a hyperbolic component is also
+the period of the FORMULA  parameter rays landing at root and co-roots of
+the component.
+The wake of a hyperbolic component will be the region in the
+complex plane separated from the origin by the two rational parameter
+rays landing at the root of the component. Subwakes of a component
+will be wakes of components bifurcating directly from the component. The
+intersection of any wake or subwake with the Multibrot set will be
+called a limb or sublimb. Wakes and subwakes are open and
+connected, while limbs and sublimbs are connected and closed, except
+that one boundary point is missing (the “root” of the (sub-)limb,
+where it is attached to the rest of the Multibrot set). Every hyperbolic
+component has a unique center: a parameter where the critical
+orbit is periodic. These centers and Misiurewicz points together form
+the countable set of postcritically finite parameters. When
+treating them simultaneously, it will sometimes simplify language to
+identify the component with its center and speak, e.g. of the “wake
+of the center”, meaning of course the wake of the component containing
+this center.
+All the rational rays landing at any Misiurewicz point cut the
+complex plane into as many open parts as there are rays. We will call
+these parts the subwakes of the Misiurewicz point. The subwake
+containing the origin will be called the zero wake (which is
+the entire complex plane minus the ray if there is only one ray),
+and the union of all the other wakes (together with any parameter
+rays between them) will be called the wake of the Misiurewicz
+point.
+Of fundamental importance for the investigation of the Multibrot sets
+is the following Branch Theorem, which was first proved by Douady and
+Hubbard for the Mandelbrot set: this theorem is one of the principal
+results of their theory of “nervures” (Exposés XX–XXII in
+{{cite:2607d919-6cb1-4eee-8b97-9816b6ec0852}}; the Branch theorem is their Proposition XXII.3). Another
+proof can be found in {{cite:226a8db2-4728-4466-8a2f-2b9f435dad6c}}.
+Theorem 2.2 (Branch Theorem) 
+ 
+For every two postcritically finite parameters FORMULA  and FORMULA ,
+either one of them is in the wake of the other, or there is a
+Misiurewicz point such that FORMULA  and FORMULA  are in two different of
+its subwakes, or there is a hyperbolic component such that FORMULA  and
+FORMULA  are in two different of its subwakes.
+
+FIGURE 
+Proof. We will work in the dynamical plane of FORMULA , which we tried to
+sketch in Figure REF . Let FORMULA  be one of the
+external angles of FORMULA  and let FORMULA  be the (pre-)periodic point at
+which the dynamic ray at angle FORMULA  lands.
+If the point FORMULA  is on the arc FORMULA , then two dynamic rays
+land at FORMULA  (if it is preperiodic) or at the dynamic root of the
+Fatou component containing FORMULA  (if it is periodic) and, by
+Theorem REF , the parameter rays at the same
+angles land at FORMULA  (resp. the root of the hyperbolic component
+containing FORMULA ) and separate the parameter ray at angle FORMULA 
+and the point FORMULA  from the origin, so FORMULA  is in the wake of FORMULA .
+Similarly, if FORMULA  is on the arc FORMULA , then FORMULA  is in the wake
+of FORMULA . If none of these cases occurs, then the intersection of the
+arcs FORMULA  and FORMULA  is the arc FORMULA  for some point FORMULA 
+which is a branch point in the Julia set. The union of forward images
+of the regular arcs FORMULA  and FORMULA  has the topological type
+of a finite tree; in particular, it has finitely many branch points.
+Since this tree is forward invariant, all these branch points are
+periodic or preperiodic (or critical, but then they have finite
+forward orbits by assumption); in particular, the forward orbit of
+FORMULA  is finite.
+FIGURE 
+Now consider the set FORMULA  of characteristic (pre-)periodic points on
+FORMULA  and let FORMULA  be the supremum of FORMULA  on the arc FORMULA 
+with respect to the induced order on this arc. It is slightly easier
+to consider the case that FORMULA  is a Misiurewicz point, so every
+periodic and preperiodic point is on a repelling orbit. If FORMULA  is
+a center of a hyperbolic component, the point FORMULA  cannot be on the
+superattracting periodic orbit because the Fatou component it is in
+separates the critical value from the origin, so FORMULA  cannot be a
+characteristic point. Therefore, FORMULA  is on a repelling orbit and thus
+the landing point of at least two dynamic rays. For a similar reason,
+if the point FORMULA  is characteristic, it cannot be on the
+superattracting orbit.
+The case that FORMULA  and FORMULA  are two different points:
+if the arc FORMULA  contains periodic points on its interior, let FORMULA 
+be one of lowest period; if there is no periodic point on the
+interior of this arc, let FORMULA . Then the point FORMULA  is periodic or
+preperiodic; assuming for the moment that it not characteristic,
+then there is a first number FORMULA  of iterations after which the point
+FORMULA  maps behind itself. If FORMULA  is periodic, then FORMULA  must be smaller
+than the period. Under FORMULA  iterations, the image of the arc FORMULA 
+contains the arc itself. By the intermediate value theorem, there is a
+point on FORMULA  which maps to itself after FORMULA  iterations. This
+point cannot be FORMULA  by construction, and neither can it be an interior
+point of the arc. It therefore follows that the point FORMULA  is periodic,
+and its period is FORMULA  or divides FORMULA . It is the landing point of at
+least two dynamic rays, and the two characteristic rays reappear as
+parameter rays landing at the root of a hyperbolic component by
+Theorem REF . Looking at external angles, it
+follows that the points FORMULA  and FORMULA  are contained in the wake of
+this component. If they are contained within the same subwake, the two
+parameter rays bounding this subwake would correspond to a periodic
+point in FORMULA  behind FORMULA , contradicting maximality of FORMULA .
+If, however, FORMULA  is characteristic, then FORMULA  and there is no
+periodic point on the arc FORMULA . The construction above goes
+through except if FORMULA  and FORMULA  are periodic and, after a finite number
+FORMULA  of iterations, the arc FORMULA  covers itself homeomorphically.
+But then FORMULA  and FORMULA  cannot be both repelling as they must be.
+The case that FORMULA  and FORMULA  are equal:
+in this case, at least three dynamic rays land at FORMULA , and
+these rays separate the points FORMULA  and FORMULA  from each other and
+from the origin. The point FORMULA  is characteristic: otherwise, it would
+map behind itself after finitely many steps; by continuity, it could
+not be the limit of characteristic points in FORMULA .
+The point FORMULA  is a limit of points in FORMULA . If FORMULA  is periodic, the
+dynamic rays landing at FORMULA  would be permuted transitively by the
+first return map of FORMULA , and points in FORMULA  sufficiently close to
+FORMULA  would be mapped behind FORMULA  and thus behind themselves. This is a
+contradiction. Therefore, FORMULA  is preperiodic, and
+Theorem REF  turns the three dynamic rays
+landing at FORMULA  into three parameter rays landing at a common
+Misiurewicz point such that FORMULA  and FORMULA  are in two different of
+its subwakes because these subwakes contain the parameter rays
+associated to FORMULA  and FORMULA .
+This finishes the proof of the theorem.
+ FORMULA
+Remark. In {{cite:33c59a0c-3c47-464f-b429-e297ed5760eb}}, we show that the Mandelbrot set is “almost”
+arcwise connected. The Branch Theorem implies then that arbitrary
+“regular” arcs in the Mandelbrot set connecting postcritically
+finite parameters can branch off from each other only at Misiurewicz
+points or within hyperbolic components.
+As a first corollary, we can describe how many rational parameter rays
+may land at the boundary of any interior component of a Multibrot set.
+All the known interior components of Multibrot sets are “hyperbolic”
+components in which the dynamics has an attracting periodic orbit. It
+is conjectured that non-hyperbolic (“queer”) components do not exist.
+Corollary 2.3 (Interior Components of the Multibrot Sets) 
+ 
+Every hyperbolic component of a Mandelbrot or Multibrot set has
+infinitely many boundary points which are landing points of rational
+parameter rays, and all of them are accessible from inside the
+component. However, every non-hyperbolic component has at most
+one boundary point which is the landing point of a parameter ray at a
+rational angle
+
+Remark. In Section , we will strengthen the second
+statement by showing that no rational parameter ray can ever land on
+the boundary of a non-hyperbolic component (provided such a thing
+exists at all).
+Proof. The statement about hyperbolic components is well known at least in
+the quadratic case; see Douady and Hubbard {{cite:2607d919-6cb1-4eee-8b97-9816b6ec0852}},
+Milnor {{cite:b9414885-c1f6-4052-ac79-5c663a8ce085}}, or
+Schleicher {{cite:ba4ad639-79a4-4e71-9117-cdc4c3c5dc1f}}. For the general case, see
+{{cite:0913eb5d-326b-451a-b63a-9fef0567f57e}}.
+Assume that two rational parameter rays land at different points on
+the boundary of a non-hyperbolic component. Denote their external
+angles by FORMULA  and FORMULA  and the landing points by FORMULA 
+and FORMULA . For readers familiar with kneading sequences and their
+geometric interpretation as internal addresses {{cite:226a8db2-4728-4466-8a2f-2b9f435dad6c}}, there
+is a brief argument: the external angles FORMULA  translate into
+kneading sequences and angled internal addresses. If the latter are
+different, then the landing points of the two parameter rays must be
+separated by a parameter ray pair at periodic angles (this argument,
+without using angles in the internal address, was used in Sections 3
+and 4 of {{cite:ba4ad639-79a4-4e71-9117-cdc4c3c5dc1f}} to establish the landing properties of
+parameter rays we are using here). However, if the two angled
+internal addresses coincide, then the two parameter rays land at a
+common point {{cite:226a8db2-4728-4466-8a2f-2b9f435dad6c}}.
+Here we give a different proof, not involving internal addresses.
+If one of the FORMULA  is periodic, then replace the corresponding
+parabolic point FORMULA  by the center of the component at the root or
+co-root of which the ray at angle FORMULA  lands. Since FORMULA  and
+FORMULA  are on the closure of the same non-hyperbolic component, there
+cannot be a Misiurewicz point or a hyperbolic component separating
+FORMULA  and FORMULA  from each other and from the origin. Therefore, by the
+Branch Theorem REF , one of these two points must be within
+the wake associated to the other point. Without loss of generality,
+assume that FORMULA  is within the wake of the Misiurewicz point FORMULA  or
+of the hyperbolic component with center FORMULA . Take a third preperiodic
+angle FORMULA  within the wake of FORMULA  but outside of the wake of
+FORMULA , and so that its landing point FORMULA  is a Misiurewicz point
+different from FORMULA  and FORMULA . If FORMULA  is within the wake of the
+Misiurewicz point FORMULA , then two rays landing at this Misiurewicz point
+separate FORMULA  and FORMULA , so these two points cannot be on the boundary
+of the same non-hyperbolic component. Otherwise the Branch Theorem
+supplies another Misiurewicz point or hyperbolic component separating
+FORMULA  and FORMULA  from each other and from the origin. If the angle
+FORMULA  is chosen sufficiently closely to FORMULA , this
+separation point cannot be FORMULA , so this new Misiurewicz point or
+hyperbolic component separates FORMULA  from FORMULA , and again these two
+points cannot be on the boundary of a common non-hyperbolic component.
+ FORMULA
+The most important application of the Branch Theorem is to relate
+local connectivity and density of hyperbolicity for Mandelbrot and
+Multibrot sets. We will do that in Corollary REF ,
+showing also that local connectivity and triviality of all fibers is
+equivalent.
+
+Fibers of Multibrot Sets
+We will now define fibers of Multibrot sets using parameter rays
+at rational angles; recall that all these rays are known to land. We
+first need to introduce separation lines.
+Definition 3.1 (Separation Line) 
+ 
+A separation line is either a pair of parameter rays at rational
+angles landing at a common point (a ray pair), or a pair of parameter
+rays at rational angles landing at the boundary of the same interior
+component of the Multibrot set, together with a simple curve within
+this interior component which connects the landing points of the two
+rays. Two points FORMULA  in a Multibrot can be separated if there
+is a separation line FORMULA  avoiding FORMULA  and FORMULA  such that FORMULA 
+and FORMULA  are in different connected components of FORMULA .
+
+Of course, the interior components used in this definition will always
+be hyperbolic components by Corollary REF .
+It will turn out that points on the closure of a hyperbolic component
+of a Multibrot set have trivial fibers. For all other points, it will
+be good enough to construct fibers using ray pairs at rational
+external angles (in fact, periodic external angles suffice). We will
+justify this in Proposition REF .
+Definition 3.2 (Fibers and Triviality) 
+ 
+The fiber of a point FORMULA  in a Multibrot set FORMULA  is the set of
+all points FORMULA  which cannot be separated from FORMULA . The fiber
+of FORMULA  is trivial if it consists of the point FORMULA  alone.
+
+A fundamental construction in holomorphic dynamics is called the puzzle, introduced by Branner, Hubbard and Yoccoz. A typical proof
+of local connectivity consists in establishing shrinking of
+puzzle pieces around certain points. This is exactly the model for
+fibers: the fiber of a point is the collection of all points which
+will always be in the same puzzle piece, no matter how the puzzle was
+constructed. Our arguments will thus never use specific puzzles.
+The definition here is somewhat simpler than in {{cite:103b371e-ed0b-4a79-a2da-91708f2e8b22}}. The
+reason is that the definition in {{cite:103b371e-ed0b-4a79-a2da-91708f2e8b22}} is for arbitrary
+compact connected and full subsets of FORMULA , while some conceivable
+difficulties cannot occur for Multibrot sets, due to the Branch
+Theorem REF  and its Corollary REF .
+(The equivalence of both definitions follows from this Corollary and
+{{cite:103b371e-ed0b-4a79-a2da-91708f2e8b22}}.)
+Proposition 3.3 (Fibers of Interior Components) 
+ 
+The fiber of a point within any hyperbolic component of a Multibrot
+set is always trivial. The fiber of a point within any non-hyperbolic
+component of a Multibrot set always contains the closure of its
+non-hyperbolic component.
+
+Proof. Let FORMULA  be any interior point in a hyperbolic component. It can easily
+be separated from any other point within the same hyperbolic component
+by a separation line consisting of two rational parameter rays landing
+on the boundary of this hyperbolic components, and a curve within this
+component; there are infinitely many such rays by
+Corollary REF .
+Any boundary point of the hyperbolic component, and any point in
+FORMULA  outside of this component, can also be separated from FORMULA  by
+such a separation line (here it is important to have more than two
+boundary points of the component which are landing points of rational
+parameter rays; if there were only two such boundary points, then
+these points could not be separated from any interior point).
+Since any non-hyperbolic component has at most one boundary point
+which is the landing point of rational rays, no separation line can
+run through such a component, and the fibers of all such interior
+points contain at least the closure of this non-hyperbolic component.
+ FORMULA
+Here are a few more useful properties of fibers. They are all taken
+from {{cite:103b371e-ed0b-4a79-a2da-91708f2e8b22}}, using
+Corollary REF  to exclude certain bad
+possibilities. For convenience, we repeat most proofs in our context.
+Lemma 3.4 (Properties of Fibers) 
+ 
+Fibers have the following properties:
+
+Fibers are always compact, connected and full.
+
+The relation “is in the fiber of” is symmetric: for two points
+FORMULA , either each of them is in the fiber of the other one,
+or both points can be separated.
+
+The boundary of any fiber is contained in the boundary of FORMULA ,
+unless the fiber is trivial.
+
+
+Proof. If FORMULA  is not in the fiber of FORMULA , then by definition these two
+points can be separated, and FORMULA  is not in the fiber of FORMULA . This
+proves the second claim.
+No interior point of FORMULA  can be in the boundary of any non-trivial
+fiber: a hyperbolic interior point is a fiber by itself, and closures
+of non-hyperbolic components are completely contained in fibers. This
+settles the third claim.
+Every fiber is compact because every separation line separates an open
+subset of FORMULA . In the construction of the fiber of any point
+FORMULA , ray pairs always leave connected and full neighborhoods of
+FORMULA , and nested intersections of compact connected and full subsets of
+FORMULA  are compact connected and full. The only further possible
+separation lines run through hyperbolic components, but hyperbolic
+interior points have trivial fibers, and we only have to consider
+boundary points of hyperbolic components. These points can be treated
+easily; details can be found in {{cite:103b371e-ed0b-4a79-a2da-91708f2e8b22}}.
+(Equivalently, we will prove in Sections  and
+ that boundary points of hyperbolic components have
+trivial fibers.)
+ FORMULA
+A key observation is that triviality of a
+fiber implies that FORMULA  is locally connected at this point. We
+repeat the argument from {{cite:103b371e-ed0b-4a79-a2da-91708f2e8b22}}.
+Proposition 3.5 (Trivial Fibers Yield Local Connectivity) 
+ 
+If the fiber of a point FORMULA  is trivial, then FORMULA  is openly
+locally connected at FORMULA . Moreover, if the parameter ray at some angle
+FORMULA  lands at a point FORMULA  with trivial fiber, then for any
+sequence of external angles converging to FORMULA , the corresponding
+impressions converge to FORMULA . In particular, if all the fibers of
+FORMULA  are trivial, then FORMULA  is locally connected, all external
+rays land, all impressions are points, and the landing points depend
+continuously on the angle.
+
+
+Proof. Consider a point FORMULA  with trivial fiber. If FORMULA  is in the
+interior of FORMULA , then FORMULA  is trivially openly locally connected at
+FORMULA . Otherwise, let FORMULA  be an open neighborhood of FORMULA . By
+assumption, any point FORMULA  in FORMULA  can be separated from FORMULA  such
+that the separation avoids FORMULA  and FORMULA . The region cut off from FORMULA 
+is open; what is left is a neighborhood of FORMULA  having connected
+intersection with FORMULA . By compactness of FORMULA , a finite number
+of such cuts suffices to remove every point outside FORMULA , leaving
+another neighborhood of FORMULA  intersecting FORMULA  in a connected set.
+Removing the finitely many cut boundaries, an open neighborhood
+remains, and FORMULA  is openly locally connected at FORMULA . Similarly, if
+FORMULA  is the landing point of the FORMULA -ray, then external rays with
+angles sufficiently close to FORMULA  will have their entire
+impressions in FORMULA  (although the rays need not land).
+Finally, it is easy to see that the impression of any ray is contained
+in a single fiber (compare {{cite:103b371e-ed0b-4a79-a2da-91708f2e8b22}}).
+ FORMULA
+Now, we show that the fiber of an interior point is trivial if and
+only if it is within a hyperbolic component, and that local
+connectivity of a Multibrot set is equivalent to all its fibers
+being trivial. Both properties will imply that every interior
+component is hyperbolic.
+We use the ideas of the original proof of Douady and
+Hubbard {{cite:2607d919-6cb1-4eee-8b97-9816b6ec0852}}.
+Corollary 3.6 (Local Connectivity, Trivial Fibers and Hyperbolicity) 
+ 
+For the Mandelbrot and Multibrot sets, local connectivity is
+equivalent to triviality of all fibers, and both imply density of
+hyperbolicity.
+
+Remark. Local connectivity is definitely stronger than density of
+hyperbolicity: the former amounts to fibers being points, while the
+latter means only that fibers have no interior. This argument is taken
+from Douady {{cite:c42bcc66-9440-49b9-85de-42cfd651182a}}, where it is part of a sketch of an
+independent proof. In our context, it is just a restatement of the
+original proof in {{cite:2607d919-6cb1-4eee-8b97-9816b6ec0852}}.
+Proof. We know from Proposition REF  that triviality of all
+fibers implies local connectivity. Moreover, any non-hyperbolic
+component would be contained in a single fiber, so triviality of all
+fibers implies that all interior components are hyperbolic. Since the
+exterior of FORMULA  is hyperbolic as well, triviality of all fibers
+of FORMULA  implies that hyperbolic dynamics is dense in the space of
+all unicritical polynomials of degree FORMULA .
+It remains to show that local connectivity of a Multibrot set implies
+that all fibers are trivial. For this, we assume that the Multibrot
+set FORMULA  is locally connected. If there is a fiber which is not a
+singleton, or which even contains a non-hyperbolic component, denote
+it FORMULA . The set FORMULA  is then uncountable and its boundary is contained
+in the boundary of FORMULA  by Lemma REF . Let FORMULA 
+be three boundary points which are not landing points of any of the
+countably many parameter rays at rational angles. By local
+connectivity and Carathéodory's Theorem, there are three parameter
+rays at angles FORMULA  landing at these points,
+and these three rays separate FORMULA  into three regions. Similarly,
+the three angles cut FORMULA  into three open intervals. Pick one
+periodic angle from each of the two intervals which do not contain
+0; the corresponding parameter rays land at roots or co-roots of two
+hyperbolic components FORMULA  and FORMULA . The three parameter rays at
+angles FORMULA , together with FORMULA , separate these two components
+from each other and from the parameter ray at angle 0 and thus from
+the origin. Applying the Branch Theorem REF  to these two
+components, there must either be a Misiurewicz point or a hyperbolic
+component separating these two components from each other or from the
+origin. If it is a Misiurewicz point, then three rational rays landing
+at it must separate the three points FORMULA  from each other,
+which is incompatible with FORMULA  being a single fiber or a
+non-hyperbolic component. Similarly, if the separation is given by a
+hyperbolic component, then this component, together with the parameter
+rays forming its wake and the subwakes containing FORMULA  and FORMULA ,
+again separate the three FORMULA , yielding the same contradiction.
+We conclude that, if a Multibrot set is locally connected, then
+its fibers are trivial, and every connected component of its interior
+is hyperbolic.
+ FORMULA
+FIGURE 
+Remark. In {{cite:103b371e-ed0b-4a79-a2da-91708f2e8b22}}, we have shown that
+local connectivity of any compact connected and full subset of FORMULA  is
+equivalent to triviality of all fibers, provided that fibers are
+constructed using an appropriate collection of external rays. We have
+given an extra proof here in order to make this paper self-contained,
+and in order to show that the external rays at rational angles
+suffice. We will show in Section  that even
+parameter rays at periodic external angles are sufficient.
+
+Boundaries of Hyperbolic Components
+In this section, we will study boundary points of hyperbolic
+components, except roots of primitive components which will require
+special treatment (see Section ). The following result
+was originally proved by Yoccoz using a bound on sizes of sublimbs
+(the “Yoccoz inequality”); see Hubbard {{cite:90091539-b8e5-45e8-b17a-c72e9ea4c4a6}}. That
+proof, as well as ours, uses in an essential way the fact that
+repelling periodic points in connected Julia sets are landing points
+of periodic dynamic rays. This fact is due to Douady or Yoccoz
+{{cite:90091539-b8e5-45e8-b17a-c72e9ea4c4a6}}.
+Theorem 4.1 (No Irrational Decorations)  
+
+Any point in FORMULA  within the wake of a hyperbolic component is
+either in the closure of the component or within one of its sublimbs
+at rational internal angles with denominator at least two.
+
+Remark. Sometimes, this theorem is phrased as saying that hyperbolic
+components have “no ghost limbs”: decorations are attached to
+hyperbolic components only at parabolic boundary points, but not at
+root, co-roots, or irrational boundary points.
+Proof. Let FORMULA  be a hyperbolic component, let FORMULA  be its period and let
+FORMULA  be a point within the limb of the component but not on the
+closure of FORMULA . There are finitely many hyperbolic components of
+periods up to FORMULA , some of which might possibly be within the wake of
+FORMULA . We lose nothing if we assume FORMULA  to be outside the closures
+of the wakes of such hyperbolic components, possibly after replacing
+FORMULA  with a different parameter: if there was a hyperbolic
+component of period up to FORMULA  in an “irrational sublimb” of FORMULA , then
+this same “irrational sublimb” is connected and thus contains points
+arbitrarily close to FORMULA . More precisely, we can argue as follows: the
+rational parameter rays landing on the boundary of FORMULA  split into two
+groups according to whether they pass FORMULA  to the “left” or
+“right”, and the region in the wake of FORMULA  sandwiched between these
+rays is connected. (Moreover, it is quite easy to show that every
+hyperbolic component in the wake of FORMULA  is contained in a subwake at
+rational internal angle; see {{cite:c681dd85-8b77-421c-8801-de4def484432}}).
+Denote the center of FORMULA  by FORMULA . There is a path FORMULA 
+connecting FORMULA  to FORMULA  within the wake of FORMULA  and avoiding
+the closures of the wakes of all hyperbolic components of periods up to
+FORMULA  within the wake of FORMULA , except FORMULA  itself. This path need not be
+contained within the Multibrot set. For the parameter FORMULA , the
+critical value is a periodic point. We want to continue this periodic
+point analytically along FORMULA , obtaining an analytic function
+FORMULA  such that the point FORMULA  is periodic for the parameter FORMULA 
+on FORMULA . This analytic continuation is uniquely possible because
+we never encounter multipliers FORMULA  for a period-FORMULA -orbit along
+FORMULA . Therefore, we obtain a unique periodic point FORMULA 
+which is repelling. Since FORMULA  is within the connectedness
+locus, the point FORMULA  is the landing point of finitely many
+dynamic rays at periodic angles.
+At the parameter FORMULA , all the periodic dynamic rays of periods up
+to FORMULA  land at repelling periodic points of periods up to FORMULA . These
+periodic points can all be continued analytically along FORMULA , they
+remain repelling and keep their dynamic rays because the curve avoided
+parameter rays of periods up to FORMULA  which make up wake boundaries.
+Therefore, at the parameter FORMULA , there is no dynamic ray of
+period FORMULA  available to land at FORMULA , so that the rays landing
+at this point must have periods FORMULA , for some FORMULA . Therefore,
+at least FORMULA  rays must land at FORMULA  (in fact, the number of
+rays must be exactly FORMULA ). Now let FORMULA  be the largest open
+neighborhood of FORMULA  in which this periodic orbit can be continued
+analytically as a repelling periodic point, retaining all its FORMULA 
+dynamic rays. This neighborhood is the wake of the orbit and is at
+the heart of Milnor's discussion in {{cite:b9414885-c1f6-4052-ac79-5c663a8ce085}}. This wake is
+bounded by two parameter rays at periodic angles, landing together at a
+parabolic parameter of ray period FORMULA  and orbit period at most FORMULA .
+Denote this landing point by FORMULA . Obviously, FORMULA  cannot
+contain the hyperbolic component FORMULA , so FORMULA  must be contained
+within the wake of FORMULA .
+The point FORMULA  is on the boundary of a hyperbolic component
+of period at most FORMULA  within the wake of FORMULA . The wake of this
+component contains FORMULA  and thus FORMULA , so this component can
+only be FORMULA  by the assumptions on FORMULA . It follows that FORMULA 
+is a sublimb of FORMULA  at a rational internal angle.
+ FORMULA
+Remark. This result goes a long way towards proving local connectivity of the
+Multibrot sets at boundary points of hyperbolic components, as was
+pointed out to us by G. Levin.
+Corollary 4.2 (Trivial Fibers at Hyperbolic Component Boundaries) 
+ 
+In every Multibrot set, the fiber of every boundary point of any
+hyperbolic component is trivial, except possibly at the root of a
+primitive component. The fiber of the root contains no point within
+the limb of the component.
+
+Proof. Any boundary point FORMULA  of a hyperbolic component can obviously be
+separated from any point within the closure of the component and from
+every sublimb which it is not a root of. This shows that fibers are
+trivial for boundary points at irrational internal angles and at
+co-roots (which exist only for FORMULA ), because neither have sublimbs
+attached. If FORMULA  is the root of a hyperbolic component FORMULA , then it can
+obviously be separated from any other point within the closure of FORMULA  or
+from any rational sublimb, so its fiber contains no point within the
+limb of the component. If FORMULA  is the point where the component FORMULA 
+bifurcates from FORMULA , then both arguments combine to show that the
+fiber of FORMULA  is trivial.
+ FORMULA
+The following corollary has been suggested by John Milnor.
+It will be strengthened in Corollary REF .
+Corollary 4.3 (Roots Do Not Disconnect Limbs) 
+ 
+The limb of any hyperbolic component is connected.
+ FORMULA
+
+Remark. Note that we define the wake of a hyperbolic component to be open, so
+that the limb of the component (the intersection of the wake with the
+Multibrot set) is a relatively open subset of FORMULA . Sometimes, wake
+and limb are defined so as to also contain the root. With that
+definition, the corollary says that the root does not disconnect the
+limb.
+Proof. Let FORMULA  be the hyperbolic component defining the wake. Assume that its
+limb consists of more than one connected component, and let FORMULA  be a
+connected component not containing FORMULA . Any point within FORMULA  must then,
+by Theorem REF , be contained within some rational
+sublimb of FORMULA , and then all of FORMULA  must be contained within the same
+sublimb. But since the entire set FORMULA  is connected and the limb is
+obtained from FORMULA  by cutting along a pair of parameter rays
+landing at the root of the limb, it follows that the limb is
+connected as well.
+ FORMULA
+Here is another corollary which has been found independently by
+Lavaurs {{cite:dd18c6cb-0777-4f9c-93e4-bcf587e24857}}, Hubbard (unpublished) and
+Levin {{cite:887c05f0-2d87-4fe6-a57d-2e5404094055}}; another proof is in Lau and
+Schleicher {{cite:226a8db2-4728-4466-8a2f-2b9f435dad6c}}.
+Corollary 4.4 (Analytic Continuation Over Entire Wake) 
+
+If FORMULA  is a parameter which has an attracting periodic point
+FORMULA , then this periodic point can be continued analytically as an
+analytic map FORMULA  over the entire wake of the hyperbolic component
+containing FORMULA , and it is repelling away from the closure of the
+component. Within any subwake at internal angle FORMULA , the point
+FORMULA  is the landing point of exactly FORMULA  dynamic rays with
+combinatorial rotation number FORMULA .
+
+Remark. For parameters within a hyperbolic component of period FORMULA , there are
+FORMULA  distinguished periodic points: the point on the attracting orbit
+in the Fatou component containing the critical value, and FORMULA  further
+boundary points of the same Fatou component with the same ray period
+(and possibly smaller orbit period). If FORMULA , then exactly one of these
+boundary points is the landing point of at least two dynamic rays (this
+point is the “dynamic root” of the Fatou component), it is repelling
+and can be continued analytically over the entire wake of the component,
+retaining its dynamic rays (this is almost built into the definition of
+the wake). The remaining FORMULA  distinguished boundary points of the
+Fatou component are landing points of one dynamic ray each (they are
+“dynamic co-roots”), and they also remain repelling and keep their
+rays throughout the wake. For the attracting orbit, this is not true:
+the rays landing at the orbit change, but the orbit nonetheless remains
+repelling away from the closure of the hyperbolic component.
+Proof. Denote the hyperbolic component by FORMULA , let FORMULA  be its root and let
+FORMULA  be the period. The orbit FORMULA  can be continued analytically
+over a neighborhood of FORMULA  within the wake of FORMULA , and it
+will be repelling there ({{cite:b9414885-c1f6-4052-ac79-5c663a8ce085}}, {{cite:ba4ad639-79a4-4e71-9117-cdc4c3c5dc1f}}). It will therefore remain repelling within any subwake of
+FORMULA  at rational internal angles because that subwake is the wake where
+our repelling orbit has certain dynamic rays at specific angles landing.
+Within the wake of FORMULA , away from the closure of the component and
+outside of its rational subwakes, every Julia set is disconnected by
+Theorem REF  and every orbit is repelling. Therefore,
+FORMULA  is repelling within the entire wake of FORMULA , except on the closure
+of the component, and can be continued analytically throughout the
+entire wake. The statement about the rays follows; compare for example
+{{cite:b9414885-c1f6-4052-ac79-5c663a8ce085}}.
+ FORMULA
+Remark. Traversing the wake of FORMULA  outside of FORMULA , the combinatorial
+rotation number of the orbit FORMULA  behaves (locally) monotonically
+with respect to external angles, rotating around FORMULA  FORMULA 
+times. See also the appendices in {{cite:b9414885-c1f6-4052-ac79-5c663a8ce085}} and {{cite:f7b1b329-c456-43a4-813f-8314122ffec9}}.
+
+Roots of Hyperbolic Components
+In this section, we will prove triviality of fibers also at roots of
+primitive components. These roots are not handled by the arguments
+from the previous section, or by the Yoccoz inequality. We start with
+a combinatorial preparation from {{cite:c681dd85-8b77-421c-8801-de4def484432}}.
+Lemma 5.1 (Approximation of Ray Pairs, Primitive Periodic Case) 
+ 
+Let FORMULA  be the two periodic external angles of the
+root of a primitive hyperbolic component. Then there exists a sequence
+of rational parameter ray pairs FORMULA  such that
+FORMULA  and FORMULA .
+
+Sketch of proof. There are various combinatorial or topological variants of this
+proof. For example, it can be derived easily from the Orbit Separation
+Lemma (see {{cite:ba4ad639-79a4-4e71-9117-cdc4c3c5dc1f}} in the quadratic case
+and {{cite:0913eb5d-326b-451a-b63a-9fef0567f57e}} in the general case). We will use Hubbard trees.
+They have been defined by Douady and Hubbard {{cite:2607d919-6cb1-4eee-8b97-9816b6ec0852}} for
+postcritically finite polynomials as the unique minimal trees within
+the filled-in Julia set connecting the critical orbit and traversing
+any bounded Fatou components only along internal rays.
+Consider the dynamics at the center of the primitive hyperbolic
+component. The critical value is an endpoint of the Hubbard tree.
+Since the component is primitive, there is a non-empty open subarc
+FORMULA  of the Hubbard tree avoiding periodic Fatou components which
+ends at the Fatou component containing the critical value. We can
+suppose this arc short enough so that it meets no branch point of the
+Hubbard tree. Since the dynamics is expanding, the arc FORMULA 
+contains a point FORMULA  which maps after some finite number FORMULA  of steps
+onto the critical value. Choose FORMULA  minimal and restrict FORMULA  to
+the arc between FORMULA  and the periodic Fatou component containing the
+critical value. Then the FORMULA -th iterate of the dynamics map FORMULA 
+homeomorphically so that one end of FORMULA  lands at the critical
+value and the other end is a point on the critical orbit other than
+the critical value. Therefore, FORMULA  maps over itself in an
+orientation reversing way and must contain some point FORMULA  which is
+fixed under the FORMULA -th iterate. This point must be a repelling
+periodic point, and it must be the landing point of two periodic
+dynamic rays at external angles FORMULA . This
+construction can be done with arbitrarily short initial arcs FORMULA ,
+producing periodic points arbitrarily close to the periodic Fatou
+component containing the critical value. Alternatively, one can use
+the fact that one endpoint of FORMULA  is periodic (it is the landing
+point of the dynamic rays at angles FORMULA  and FORMULA ), so that
+it is possible to pull FORMULA  back onto a subset of itself, creating
+a preperiodic inverse image of FORMULA  closer to the critical value Fatou
+component. Both ways, it is easy to see that the external angles of
+the created periodic or preperiodic points have external angles
+converging to FORMULA  and FORMULA  from below respectively from
+above.
+Finally, Theorem REF  transfers these dynamic
+ray pairs into parameter space.
+ FORMULA
+Lemma 5.2 (Fiber of Primitive Root) 
+ 
+Let FORMULA  be the root of any primitive hyperbolic component and let
+FORMULA  be some point in FORMULA  which is not in the limb
+of FORMULA . Then there is a parameter ray pair at rational angles
+separating FORMULA  from FORMULA  and from the origin. In
+particular, the fiber of the root of a primitive hyperbolic
+component contains no point outside of the wake of the component.
+
+Proof. The strategy of the proof is simple: if we denote the periodic
+parameter ray pair landing at FORMULA  by FORMULA , then
+Lemma REF  supplies a sequence of parameter ray
+pairs FORMULA  converging to FORMULA ,
+and in the dynamics of FORMULA  there are characteristic dynamic ray
+pairs at the same angles. If not all of these
+characteristic dynamic ray pairs exist for FORMULA , then FORMULA  is separated from FORMULA  by one of the parameter ray pairs
+FORMULA  (because these ray pairs bound the regions
+in parameter space for which the corresponding dynamic ray pairs
+exist). In this case, the two points FORMULA  and FORMULA  can be
+separated as claimed and are thus in different fibers.
+We may hence assume that all these dynamic ray pairs exist for the
+parameter FORMULA . We will then show that the limiting dynamic
+rays at angles FORMULA  and FORMULA  also form a ray pair: this
+forces FORMULA  to be in the closure of the wake of FORMULA ,
+contradicting our assumption.
+This finishes the proof of the lemma.
+The only thing we need to prove, then, is the following claim:
+assume that for the parameter FORMULA , the dynamic rays at
+angles FORMULA  and FORMULA  land together for every FORMULA . Then the
+dynamic rays at angles FORMULA  and FORMULA  also land together.
+To prove this claim, denote the period of FORMULA  and FORMULA  by
+FORMULA . Since hyperbolic components and Misiurewicz points outside of the
+wake of FORMULA  are landing points of rational parameter rays, they can
+easily be separated from FORMULA  by the approximating parameter ray pairs,
+and we may thus suppose that FORMULA  is neither a Misiurewicz point
+nor on the closure of a hyperbolic component.
+We modify the sequence FORMULA  as follows: let
+FORMULA  be close enough to FORMULA  so that,
+in the dynamics of FORMULA , these two ray pairs do not enclose a
+postcritical point. Further, let the ray pairs FORMULA  be
+the unique ray pairs in between satisfying FORMULA  and FORMULA . Denoting the regions bounded by
+FORMULA  and FORMULA  by FORMULA , then the
+pull-back for FORMULA  steps of any FORMULA  along the periodic backwards orbit
+of FORMULA  will map univalently onto FORMULA , so the same
+branch of the pull-back fixing FORMULA  will map
+FORMULA  onto FORMULA .
+All this works in the dynamics of FORMULA . For the parameter FORMULA , denote the landing points of the two dynamic rays at angles
+FORMULA  and FORMULA  by FORMULA  and FORMULA , respectively. Then the
+critical value cannot be separated from FORMULA  or FORMULA  by any rational
+ray pair FORMULA : there is no such ray pair for FORMULA , and
+the largest neighborhood of FORMULA  where such a ray pair exists
+will be bounded by parameter rays at rational angles. Such a
+neighborhood exists because FORMULA  is neither a Misiurewicz point
+nor on the closure of a hyperbolic component.
+Similarly, for any FORMULA , the FORMULA -th forward image of the critical value
+cannot be separated from the landing points of the dynamic rays at
+angles FORMULA  and FORMULA , or we could pull back such a
+separating ray pair, obtaining a separation between the critical value
+and the dynamic rays at angles FORMULA  and FORMULA . It follows that
+all the FORMULA  (for FORMULA ) are separated from the
+critical orbit by other such ray pairs with smaller or larger FORMULA .
+Now let FORMULA  be the complex plane minus the postcritical set for the
+parameter FORMULA ; then FORMULA  is the open set of all points in FORMULA 
+which have a neighborhood that is never visited by the critical orbit.
+Let FORMULA  and set FORMULA ; since the postcritical
+set is forward invariant, we have FORMULA , and FORMULA 
+is an unbranched covering, i.e., a local hyperbolic isometry.
+Let FORMULA  be two points on the dynamic rays at angles FORMULA  and
+FORMULA , respectively, and construct a simple piecewise analytic
+curve FORMULA  as follows: connect FORMULA  along an equipotential to the
+dynamic ray at angle FORMULA  (the “short way”, decreasing
+angles), then continue along this ray towards its landing point, then
+out along the dynamic ray at angle FORMULA  up to the potential of
+FORMULA , and connect finally along this equipotential to FORMULA 
+(increasing angles). This curve runs entirely within FORMULA , so it has
+finite hyperbolic length FORMULA , say.
+Now we pull this curve back along the periodic backwards orbit of
+FORMULA  and FORMULA , yielding a sequence of curves FORMULA  after FORMULA  steps. The branch of the
+pull-back fixing FORMULA  will also fix FORMULA : we had verified
+that in the dynamics of FORMULA , and this is no different for FORMULA  because the critical value is always on the same side of all the
+ray pairs.
+Denote the hyperbolic lengths of FORMULA  in FORMULA  by FORMULA .
+Since FORMULA , this sequence is strictly monotonically
+decreasing. The two endpoints of the curves in the sequence
+obviously converge to the two landing points FORMULA  and FORMULA  of the
+dynamic rays at angles FORMULA  and FORMULA . Now there are two
+possibilities: either the sequence FORMULA  has a subsequence
+which stays entirely within a compact subset of FORMULA , or it does
+not. If it does, then the hyperbolic length shrinks by a definite
+factor each time the curve is within the compact subset of FORMULA , so
+that we can connect points (Euclideanly) arbitrarily closely to FORMULA 
+and FORMULA  by (hyperbolically) arbitrarily short curves at bounded
+(Euclidean) distances from the postcritical set, and this implies
+FORMULA  as required. On the other hand, if these curves converge to
+the boundary, then their Euclidean lengths must shrink to zero, and
+we obtain the same conclusion. The proof of the lemma is complete.
+ FORMULA
+Corollary 5.3 (Triviality of Fibers at Hyperbolic Components) 
+ 
+The fiber of every point on the closure of any hyperbolic component
+of a Multibrot set FORMULA  is trivial.
+
+Proof. In Corollary REF , we have already
+done most of the work; the remaining statement is exactly the
+content of the previous lemma.
+ FORMULA
+The next corollary strengthens
+Corollary REF  and has also been suggested
+by Milnor.
+Corollary 5.4 (Roots Disconnect Multibrot Sets) 
+ 
+Every root of a hyperbolic component of period greater than 1
+disconnects its Multibrot set into exactly two connected components.
+
+Proof. Let FORMULA  be the root of a hyperbolic component of period greater
+than 1. It is the landing point of exactly two parameter rays at
+periodic angles. This parameter ray pair disconnects FORMULA  into
+exactly two connected components. The component not containing the
+origin is the wake of the component; its intersection with
+FORMULA  is the limb. The limb is connected by
+Corollary REF . Now let FORMULA 
+with FORMULA  be any parameter not in the limb of FORMULA .
+We first discuss the case that the component is primitive. By
+Lemma REF  above, there is a rational parameter
+ray pair FORMULA  separating FORMULA  from FORMULA  and from the origin.
+This ray pair FORMULA  disconnects FORMULA  into two connected components.
+Let FORMULA  be the closure of the connected component of the origin
+intersected with FORMULA . Then FORMULA  itself is connected and
+contains the origin and FORMULA . It follows that FORMULA  and
+0 are in the same connected component of FORMULA , so FORMULA 
+cuts FORMULA  into exactly two connected components.
+In the non-primitive case, the parameter FORMULA  is the root of one
+hyperbolic component and on the boundary of another one, say FORMULA .
+Then by Theorem REF , there are three cases: the
+point FORMULA  may be outside of the limb of FORMULA  so that the two
+parameter rays landing at the root of FORMULA  separate FORMULA  and
+FORMULA ; the point FORMULA  may be on the closure of FORMULA ; or it
+may be in a sublimb of FORMULA  at rational internal angles, but not
+in the sublimb with FORMULA  on its boundary (which is the wake of
+FORMULA ). In all three cases, it is easy to see that FORMULA  must
+be in the same connected component of FORMULA  as the origin.
+Therefore, FORMULA  disconnects FORMULA  into exactly two connected
+components in the primitive as well as in the non-primitive case.
+ FORMULA
+Corollary 5.5 (Rays at Boundary of Hyperbolic Components) 
+ 
+Every boundary point of a hyperbolic component at irrational internal
+angle is the landing point of exactly one parameter ray, and the
+external angle of this ray is irrational (and in fact transcendental).
+Every boundary point at rational internal angle is the landing point
+of exactly two parameter rays, except co-roots: these are the landing
+points of exactly one parameter ray. The external angles of all these
+rays are periodic and in particular rational.
+In no case is a boundary point of a hyperbolic component in the
+impression of any further parameter ray.
+
+Proof. Every boundary point of a hyperbolic component at irrational internal
+angle is in the boundary of FORMULA  and thus in the impression of some
+ray. Since the fiber of this boundary point is trivial, the ray must
+land there and its impression is a single point
+{{cite:103b371e-ed0b-4a79-a2da-91708f2e8b22}}. And since all the parameter
+rays at rational rays land elsewhere, the external angle of the ray
+must be irrational (and in fact transcendental; see {{cite:7a81a978-07a8-45c1-9dca-e9232bf9e059}} for a
+proof in the quadratic case). If this point is in the impression of a
+further ray, this ray must land there, too, and these two rays
+separate some open subset of FORMULA  from the component. Since not all
+rays between the two landing rays can land at the same point (the
+rational rays land elsewhere), there must be some part of FORMULA 
+between these two rays, and this contradicts
+Theorem REF .
+We know that boundary points at rational internal angles are
+parabolic points, and the statements about the landing properties of
+rational parameter rays are well known (compare
+Section ). If such a point is in the impression of
+an irrational parameter ray and thus its landing point, we get a
+similar contradiction as above, except if the parabolic point is the
+root of a primitive component and the extra parameter ray is outside
+of the wake of the component. But that case is handled conveniently by
+Lemma REF , supplying lots of parameter ray pairs
+which separate any parameter ray outside of the wake of the component
+from the component, its root, and all of its co-roots.
+ FORMULA
+
+Misiurewicz Points
+Now we turn to Misiurewicz points, proving triviality of fibers in a
+somewhat similar way. Again, we need some combinatorial preparations
+from {{cite:c681dd85-8b77-421c-8801-de4def484432}}. They are preperiodic analogs to
+Lemma REF .
+Lemma 6.1 (Preperiodic Critical Orbits Have Trivial Fibers) 
+ 
+Let FORMULA  be a Misiurewicz point and let FORMULA  be the any periodic point
+on the forward orbit of the critical value. Then there are finitely
+many rational ray pairs separating FORMULA  from the entire critical orbit
+except FORMULA . The separating ray pairs can be chosen so that their
+landing point is not on the grand orbit of the critical point.
+
+Sketch of proof. Like Lemma REF , this result has various proofs.
+For example, it is a consequence of
+{{cite:103b371e-ed0b-4a79-a2da-91708f2e8b22}}. Another variant uses the
+fact that the Julia set is locally connected, so its fibers are
+trivial when constructed using rational ray pairs
+{{cite:103b371e-ed0b-4a79-a2da-91708f2e8b22}}.
+Our proof uses similar ideas as in Lemma REF .
+Again, we consider the Hubbard tree of the Julia set (the unique
+minimal tree connecting the critical orbit within the Julia set).
+It suffices to prove the result for any point on the periodic orbit of
+FORMULA .
+Let FORMULA  be a short arc in the Hubbard tree starting at FORMULA 
+towards the critical value FORMULA . By expansion, there must be a point
+FORMULA  on FORMULA  which maps to FORMULA  after some finite number FORMULA  of
+iterations, and we may suppose FORMULA  minimal. Restrict FORMULA  to the
+arc between FORMULA  and FORMULA . The FORMULA -th iterate will then map FORMULA 
+forward homeomorphically such that a subarc of FORMULA  maps over
+FORMULA . If FORMULA  is not a multiple of the period of FORMULA , then the
+FORMULA -th iterate does not fix any end of FORMULA , and there must be an
+interior point FORMULA  of FORMULA  which is fixed under this iterate. If
+FORMULA  is a multiple of the period of FORMULA , the FORMULA -th iterate of FORMULA 
+connects FORMULA  to FORMULA  homeomorphically. We keep mapping this arc forward
+until is crosses the critical point for the first time. The next
+iterate will then provide a periodic point FORMULA  unless the point FORMULA  is
+back again. If this happens all the time, then the itineraries of FORMULA 
+and FORMULA  must coincide, but this is not the case: the first is
+periodic, the second preperiodic.
+Once we have periodic points close to FORMULA , we have them at all
+branches of FORMULA  because local branches at periodic points are permuted
+transitively, except possibly if there are exactly two branches which
+are fixed by the first return map of FORMULA  (compare
+{{cite:b9414885-c1f6-4052-ac79-5c663a8ce085}} or {{cite:ba4ad639-79a4-4e71-9117-cdc4c3c5dc1f}}).
+In that case, we have periodic points close to any point on the
+periodic orbit of FORMULA  at least from the side towards the critical
+point, and it is not hard to verify that the dynamics cannot always
+preserve these sides. Therefore, mapping forward along the periodic
+orbit, we get periodic points arbitrarily close to FORMULA  from all sides.
+If the approximating periodic points are chosen close enough to FORMULA ,
+they cannot be from the periodic orbit of FORMULA .
+ FORMULA
+Lemma 6.2 (Approximation of Ray Pairs, Preperiodic Case) 
+ 
+Consider a Misiurewicz point and let FORMULA  be the finite
+set of its preperiodic external angles (i.e., the external angles of
+the critical value in its dynamic plane). Then, for every
+FORMULA , there are finitely many rational parameter ray pairs
+separating the Misiurewicz point from every parameter ray whose
+external angle differs at least by FORMULA  from all of the FORMULA :
+one can take one such rational ray pair for every connected component
+of FORMULA . All these ray pairs can be chosen to be
+periodic.
+
+Sketch of proof. From the previous lemma, we can conclude that any periodic point FORMULA 
+on the critical orbit can be separated from the remaining critical
+orbit by periodic dynamic ray pairs. These ray pairs can be pulled
+back along the repelling periodic orbit of FORMULA , at least if they were
+close enough to FORMULA , and we get dynamic ray pairs arbitrarily close
+to the rays landing at the critical value. We need to transfer them
+into parameter space. This is easily done using
+Theorem REF  for the rays separating the
+critical value from the critical point. For the others, it requires a
+more precise description of the combinatorics of Multibrot sets;
+see {{cite:c681dd85-8b77-421c-8801-de4def484432}}. The idea is to use
+Theorem REF  not in the dynamic plane of the
+Misiurewicz point, but of hyperbolic components in the various wakes
+of the Misiurewicz point. A sketch of the quadratic case is in
+Douady {{cite:c42bcc66-9440-49b9-85de-42cfd651182a}}.
+ FORMULA
+Remark. The statement essentially says that every external ray which is not
+landing at a given Misiurewicz point can be separated from this point
+by a rational ray pair. The approximating ray pairs can be required
+at will to land at Misiurewicz points, or at roots of primitive
+hyperbolic components, or at roots of non-primitive hyperbolic
+components (in the latter case, such a non-primitive hyperbolic
+component will usually be a bifurcation by a factor two). See
+{{cite:c681dd85-8b77-421c-8801-de4def484432}}.
+The following obvious corollary is an analogue to
+Corollary REF .
+Corollary 6.3 (No Irrational Rays at Misiurewicz Points) 
+ 
+No Misiurewicz point is in the impression of a parameter ray at an
+irrational external angle.
+ FORMULA
+
+The following theorem is well known for the Mandelbrot set. As far as
+I know, it was first proved by Yoccoz using his puzzle techniques. A
+variant of this proof for most cases is indicated in Hubbard's
+paper {{cite:90091539-b8e5-45e8-b17a-c72e9ea4c4a6}}. Tan Lei has published another proof in
+{{cite:daff1b6c-c890-4a6e-a622-a6e8b4feb647}}.
+Theorem 6.4 (Misiurewicz Points Have Trivial Fibers) 
+ 
+The fiber of any Misiurewicz point in any Multibrot set is trivial.
+
+Proof. Let FORMULA  be a Misiurewicz point and denote its various subwakes by
+FORMULA , for some integer FORMULA , such that FORMULA 
+contains the origin. Let FORMULA  be the external
+angles of the Misiurewicz point. We have to show that, for every
+FORMULA , there is a rational ray pair separating
+FORMULA  from FORMULA .
+If FORMULA  is on the closure of a hyperbolic component, then one
+of the approximating ray pairs will separate the entire hyperbolic
+component from FORMULA , and we are done. Similarly, we are done if
+FORMULA  is a Misiurewicz point. If FORMULA  is in some
+non-hyperbolic component (if that ever occurs), then we may replace
+FORMULA  by some other point (different from FORMULA ) on the boundary
+of the same non-hyperbolic component and thus on the boundary of the
+Multibrot set: a ray pair separating a boundary point of a
+non-hyperbolic component from FORMULA  will separate the entire component
+from FORMULA . We may therefore suppose that FORMULA  is a boundary point
+of the Multibrot set, that all periodic orbits are repelling, and
+that the critical orbit is infinite.
+In the dynamic plane of FORMULA , let FORMULA  be the first periodic point
+on the orbit of the critical value. In a parameter neighborhood of
+FORMULA , this periodic point can be continued analytically as a
+periodic point FORMULA . We know from Lemma REF  that
+there are finitely many rational ray pairs separating FORMULA  from
+its entire forward orbit, such that the neighborhood of FORMULA  cut
+out by these rays together with any equipotential, when pulled back
+along the periodic backwards orbit of FORMULA , shrinks to the point
+FORMULA  alone. The same will then be true for the point FORMULA  for
+parameters FORMULA  from a sufficiently small neighborhood FORMULA  of FORMULA 
+because the finitely many bounding ray pairs will persist under
+perturbations, and the critical value will not be contained in the
+regions to be pulled back. The point FORMULA  can thus be separated from
+any other point in the Julia set by a rational ray pair (in other
+words, the fiber of FORMULA  is hence trivial when fibers of the Julia
+set are constructed using rational external rays. Another way to
+arrive at this same conclusion is to use
+{{cite:103b371e-ed0b-4a79-a2da-91708f2e8b22}}.)
+Let FORMULA  be the analytic continuation of the repelling preperiodic
+point which equals the critical value for the parameter FORMULA . This
+analytic continuation is possible sufficiently closely to FORMULA ;
+we may assume it to be possible throughout FORMULA , possibly by shrinking
+FORMULA . Since the fiber of FORMULA  is connected, we may suppose that FORMULA , subject to the same restrictions as above, so that FORMULA  and thus FORMULA  have trivial fibers.
+Since FORMULA  is different from the critical value FORMULA ,
+there is a rational ray pair FORMULA 
+separating the critical value from FORMULA  and from all the
+dynamic rays at angles FORMULA , which will land at FORMULA .
+The angles of this separating ray pair will differ by some FORMULA  from
+all the FORMULA .
+This separating dynamic ray pair will persist under sufficiently
+small perturbations of FORMULA . Since we had assumed FORMULA , such a perturbation is possible into the exterior of
+FORMULA . The external angle of the perturbed parameter must then
+differ by at least FORMULA  from all the FORMULA , no matter how
+small the perturbation. Now we use Lemma REF 
+to get finitely many rational parameter ray pairs separating FORMULA 
+from all the parameter rays the angles of which differ from all the
+FORMULA  by at least FORMULA . This separation must then also
+separate FORMULA  from FORMULA , so these two parameters are in different
+fibers. It follows that the fiber of FORMULA  is trivial.
+ FORMULA
+Corollary 6.5 (Misiurewicz Points Disconnect) 
+ 
+Every Misiurewicz point disconnects its Multibrot set in exactly as
+many connected components as there are rational parameter rays landing
+at it.
+
+Proof. All the parameter rays landing at a Misiurewicz point have preperiodic
+external angles by Corollary REF , and they
+obviously disconnect the Multibrot set in at least as many connected
+components as there are such rays.
+By Lemma REF , between any two adjacent
+external rays of a Misiurewicz point there is a collection of
+rational parameter ray pairs exhausting the interval of external
+angles in between, so any extra connected component at the
+Misiurewicz point cannot have any external angles. It must therefore
+be contained within the fiber of the Misiurewicz point, but this
+fiber is the Misiurewicz point alone.
+ FORMULA
+
+Fibers and Combinatorics
+Now that we have trivial fibers at all the landing points of rational
+rays, it follows that fibers of any two points of FORMULA  are either
+equal or disjoint. This is Lemma 2.7 in {{cite:103b371e-ed0b-4a79-a2da-91708f2e8b22}}; we
+repeat the proof in order to make this paper self-contained.
+Theorem 7.1 (Fibers of FORMULA  are Equivalence Classes) 
+ 
+The fibers of any two points in FORMULA  are either equal or disjoint.
+
+Proof. The relation “FORMULA  is in the fiber of FORMULA ” is always reflexive,
+and it is symmetric for FORMULA  by Lemma REF . In order to
+show transitivity, assume that two points FORMULA  and FORMULA  are both in
+the fiber of FORMULA . If they are not in the fibers of each other, then
+the two points can be separated by a separation line avoiding FORMULA  and
+FORMULA . If such a separation line can avoid FORMULA , then these two
+points cannot both be in the fiber of FORMULA . The only separation
+between FORMULA  and FORMULA  therefore runs through the point FORMULA , so
+FORMULA  cannot be in the interior of FORMULA  and rational rays land at
+FORMULA . Therefore, the fiber of FORMULA  consists of FORMULA  alone. Any
+two points with intersecting fibers thus have indeed equal fibers.
+ FORMULA
+The theorem allows to simply speak of fibers of FORMULA  as
+equivalence classes of points with coinciding fibers, as opposed to
+“fibers of FORMULA ” for FORMULA . Another consequence shown in
+Lemma 2.7 in {{cite:103b371e-ed0b-4a79-a2da-91708f2e8b22}} is that there is an obvious
+map from external angles to fibers of FORMULA  via impressions of external
+rays. This map is surjective onto the set of fibers meeting FORMULA .
+The following corollary is obvious and just stated for easier
+reference. In Corollary REF , we had only been able
+to show that at most one parameter ray at a rational angle can land at
+a non-hyperbolic component.
+Corollary 7.2 (Non-Hyperbolic Components Rationally Invisible) 
+ 
+No rational parameter ray lands on the boundary of a non-hyperbolic
+component.
+ FORMULA
+
+Combinatorial building blocks of the Multibrot sets which are often
+discussed are combinatorial classes. We will show that they are
+closely related to fibers.
+Definition 7.3 (Combinatorial Classes and Equivalence) 
+ 
+We say that two connected Julia sets are combinatorially
+equivalent if in both dynamic planes external rays at the same
+rational angles land at common points. Equivalence classes under this
+relation are called combinatorial classes.
+
+Remark. In the language of Thurston {{cite:f75ed04b-21e0-4c92-9c20-43e38e469444}}, combinatorially equivalent Julia
+sets are those having the same rational lamination. The definition is
+such that topologically conjugate (monic) Julia sets are also
+combinatorially equivalent (for an appropriate choice of one of the
+FORMULA  fixed rays to have external angle 0). In particular, all the
+Julia sets within any hyperbolic component, at its root and at its
+co-roots are combinatorially equivalent.
+With the given definition, the combinatorial class of a hyperbolic
+component also includes its boundary points at irrational angles,
+although the dynamics will be drastically different there. Therefore,
+one might want to refine the definition of combinatorial equivalence
+accordingly.
+Remark. There are homeomorphic Julia sets which are not topologically
+conjugate and which are thus not combinatorially equivalent: as an
+example, it is not hard to see that the Julia set of FORMULA  (known
+as the “Basilica”) is homeomorphic to any locally connected
+quadratic Julia set with a Siegel disk of period one. However, this
+homeomorphism is obviously not compatible with the dynamics, and the
+Basilica is in a different combinatorial class than any Siegel disk
+Julia set.
+Proposition 7.4 (Combinatorial Classes and Fibers) 
+ 
+Hyperbolic components together with their roots, co-roots and
+irrational boundary points form combinatorial classes. All other
+combinatorial classes are exactly fibers. In particular, if there is
+any non-hyperbolic component, then its closure is contained in a
+single combinatorial class and a single fiber.
+
+Proof. The landing pattern of dynamic rays changes upon entering the wake of
+a hyperbolic component, so any parameter ray pair at periodic angles
+separates combinatorial classes. Similarly, the landing pattern is
+different within all the subwakes of any Misiurewicz point: in a
+neighborhood of the Misiurewicz point, the rays landing at the critical
+value will have the same angles, but the FORMULA  preperiodic inverse images
+will carry different angles according to which subwake of the
+Misiurewicz point the parameter is in. Hence parameter ray pairs at
+preperiodic angles also separate combinatorial classes, and
+combinatorial classes are just what fibers would be if separations were
+allowed only by rational ray pairs, excluding separation lines
+containing curves through interior components. Since fibers have more
+separation lines, they are contained in combinatorial classes. The
+closure of any non-hyperbolic component is contained in a single fiber
+(Corollary REF ), so it is also contained within a
+single combinatorial class.
+We know that the rational landing pattern is constant throughout
+hyperbolic components and at its root and co-roots, as well as at its
+irrational boundary points. Hyperbolic components with these specified
+boundary points are therefore in single combinatorial classes; since
+every further point in the Multibrot set is either in a rational subwake
+of the component or outside the wake of the component, the
+combinatorial class of any hyperbolic component is exactly as
+described.
+Finally, we want to show that every non-hyperbolic combinatorial
+class is a single fiber. If this was not so, then two points within
+the combinatorial class could be separated by a separation line.
+Unless these points are both on the closure of the same hyperbolic
+component, such a separation line can always be chosen as a ray pair
+at rational angles, and we have seen above that such ray pairs bound
+combinatorial classes.
+ FORMULA
+The following corollary is closely related to the Branch
+Theorem REF .
+Corollary 7.5 (Three Rays at One Fiber) 
+ 
+If three parameter rays of a Multibrot set accumulate at the same
+fiber, then the three rays are preperiodic and land at a common
+Misiurewicz point. If three parameter rays accumulate at a common
+combinatorial class, then this combinatorial class is either a
+Misiurewicz point or a hyperbolic component, and the three rays
+land.
+
+Proof. We will argue similarly as in Corollary REF .
+Denote the three external angles by FORMULA  in
+increasing order and let FORMULA  be their common fiber. These angles
+separate FORMULA  into three open intervals. Two of these intervals
+do not contain the angle 0. Choose a preperiodic rational angle
+from both of them. The corresponding parameter rays land at two
+Misiurewicz points. Applying the Branch Theorem REF 
+to these two points, we find either that one of these two points
+separates the other from the origin, or there is a Misiurewicz point
+or hyperbolic component which separates both from each other and from
+the origin. In all cases, it is impossible to connect the three
+parameter rays at angles FORMULA  to a single fiber, unless
+these three rays land at the separating Misiurewicz point or
+hyperbolic component. In the Misiurewicz case, all three angles must
+be preperiodic by Corollary REF , and in the
+hyperbolic case the three parameter rays must still land at a common
+point because of fiber triviality on closures of hyperbolic components.
+This is impossible.
+If, however, the three rays are only required to land at a common
+combinatorial class, then this combinatorial class may either be a
+Misiurewicz point or a hyperbolic component, and both cases obviously
+occur.
+ FORMULA
+We have defined fibers of a Multibrot set FORMULA  using parameter rays
+at periodic and preperiodic angles (where the dynamics as usual
+multiplication by the degree FORMULA ). However, it turns out that only
+periodic angles are necessary.
+Proposition 7.6 (Fibers Using Periodic Parameter Rays) 
+ 
+Fibers for a Multibrot set FORMULA  remain unchanged when they are
+defined using only parameter rays at periodic angles, rather than at
+all rational angles.
+
+Proof. Preperiodic parameter rays never land on the boundary of an interior
+component of a Multibrot set, so separation lines using preperiodic
+rays are always ray pairs. We only have to show that if any two
+parameters can be separated by a preperiodic ray pair, then there is a
+periodic ray pair separating them as well.
+First we show that the fiber of any Misiurewicz point is trivial even
+when only periodic parameter rays are used. Indeed, let FORMULA  be a
+Misiurewicz point and let FORMULA  be a different parameter.
+By triviality of the fiber of FORMULA , there is a separation line between
+FORMULA  and FORMULA . If this separation line is a preperiodic ray pair, then
+there is a periodic ray pair separating FORMULA  from the preperiodic ray
+pair (see Lemma REF ) and thus also from FORMULA .
+Therefore, FORMULA  can be separated from any parameter in FORMULA 
+even if only parameter rays at periodic angles are allowed in the
+construction of fibers.
+Finally, let FORMULA  and FORMULA  be two parameters of FORMULA  in different
+fibers. If they are separated by a parameter ray pair at preperiodic
+angles, let FORMULA  be the Misiurewicz point at which this ray pair
+lands. Then there is a periodic ray pair separating FORMULA  and FORMULA .
+Since the rays landing at FORMULA  separate FORMULA  and FORMULA , this
+periodic ray pair must also separate FORMULA  and FORMULA  and we are done.
+ FORMULA
+It follows that combinatorial classes are exactly the pieces that we
+can split Multibrot sets into when using only periodic ray pairs as
+separation lines (except that we have to declare what we want
+combinatorial classes to be on the boundary of hyperbolic components).
+This is exactly the partition used to define internal addresses, which
+was introduced in {{cite:226a8db2-4728-4466-8a2f-2b9f435dad6c}} mostly for postcritically finite
+parameters. Now we see that combinatorial classes are the objects
+where internal addresses live naturally. The following is a
+restatement of {{cite:226a8db2-4728-4466-8a2f-2b9f435dad6c}} and the remark thereafter.
+Corollary 7.7 (Internal Addresses Label Combinatorial Classes) 
+ 
+Angled internal addresses label combinatorial classes completely:
+points within different combinatorial classes have different angled
+internal addresses, and points within the same combinatorial class
+have the same angled internal address.
+ FORMULA
+
+In order to label fibers, we only have to distinguish points within
+hyperbolic components. This is most naturally done by the multiplier
+of the unique non-repelling cycle. For degrees FORMULA , every
+hyperbolic component contains FORMULA  points with equal non-repelling
+cycles. They are distinguished by their “sectors” within the
+component, and these sectors are reflected in both the kneading
+sequences and the angled internal addresses with sectors
+{{cite:226a8db2-4728-4466-8a2f-2b9f435dad6c}}.
+Theorem 7.8 (The Pinched Disk Model of Multibrot Sets) 
+ 
+The quotient of any Multibrot set in which every fiber is collapsed to
+a point is a compact connected locally connected metric Hausdorff
+space. In particular, the quotient is pathwise connected.
+
+Proof. Every fiber of FORMULA  is closed. In fact, the entire equivalence
+relation is closed: suppose that FORMULA  and FORMULA  are two
+converging sequences in FORMULA  such that FORMULA  and FORMULA  are in a
+common fiber for every FORMULA . The limit points must then also be in a
+common fiber: if they are not, then they can be separated by either a
+ray pair at periodic angles or by a separation line through a
+hyperbolic component, and the separation runs in both cases only
+through points with trivial fibers. In order to converge to limit
+points on different sides of this separation line, all but finitely
+many points of the two sequences must be on the respective sides of
+the separation line, and FORMULA  and FORMULA  cannot be in the same fiber
+for large FORMULA .
+It follows that the quotient space is a Hausdorff space with respect
+to the quotient topology. It is obviously compact and connected, and
+local connectivity is easy: the same proof applies which shows that
+trivial fibers imply local connectivity (see
+Proposition REF ): it makes sense to speak of fibers
+of the quotient space, and they are all trivial.
+The quotient inherits a natural metric from FORMULA : the distance between
+any two points is the distance between the corresponding fibers. Since
+fibers are closed, different points always have positive distances.
+Symmetry and the triangle inequality are inherited from FORMULA .
+As a compact connected locally connected metric space, the quotient
+space is pathwise connected (see Milnor {{cite:8ae8fb4e-96c8-4597-91b7-33cd21b3f9f1}}).
+ FORMULA
+This quotient space is called the “pinched disk model” of the
+Multibrot set; compare Douady {{cite:c42bcc66-9440-49b9-85de-42cfd651182a}}. It comes with an
+obvious continuous projection map FORMULA  from the actual Multibrot set,
+and inverse images of points under FORMULA  are exactly fibers of FORMULA .
+The name “pinched disk model” comes from Thurston's lamination model
+{{cite:f75ed04b-21e0-4c92-9c20-43e38e469444}}: start with the closed unit disk FORMULA ; for any
+periodic ray pair at angles FORMULA  and FORMULA , connect the
+corresponding boundary points of FORMULA , for example by a
+geodesic with respect to the hyperbolic metric in FORMULA  (or simply
+by a Euclidean straight line). This connecting line is called a
+“leaf”. Whenever two boundary points FORMULA  are limits of
+two sequences FORMULA , FORMULA  such that
+FORMULA  is a leaf for every FORMULA , then the boundary
+points FORMULA  and FORMULA  in FORMULA  have to be connected as
+well to form a leaf. Now we take the quotient of FORMULA  in which
+each leaf is collapsed to a point: the disk FORMULA  is “pinched”
+along this leaf. The quotient space is homeomorphic to our space
+constructed above.
+Dierk Schleicher
+Fakultät für Mathematik
+Technische
+Universität
+Barer Straße 23
+D-80290 München, Germany
+dierkFORMULA mathematik.tu-muenchen.de

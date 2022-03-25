@@ -1,0 +1,462 @@
+
+arrows
+Joint Activity Detection and Channel Estimation for IoT Networks: Phase Transition and Computation-Estimation Tradeoff
+Tao Jiang, Student Member, IEEE, Yuanming Shi, Member, IEEE,
+Jun Zhang, Senior Member, IEEE,
+and Khaled B. Letaief, Fellow, IEEE
+T. Jiang and Y. Shi are with the School of Information Science and Technology, ShanghaiTech University, Shanghai 201210, China (e-mail: {jiangtao1, shiym}@shanghaitech.edu.cn).
+J. Zhang and K. B. Letaief are with the Department of Electronic and Computer Engineering, The Hong Kong University of Science and Technology, Hong Kong (e-mail:
+{eejzhang, eekhaled}@ust.hk).
+Massive device connectivity is a crucial communication challenge for Internet of Things (IoT) networks, which consist of a large number of devices with sporadic traffic. In each coherence block, the serving base station needs to identify the active devices and estimate their channel state information for effective communication. By exploiting the sparsity pattern of data transmission, we develop a structured group sparsity estimation method to simultaneously detect the active devices and estimate the corresponding channels. This method significantly reduces the signature sequence length while supporting massive IoT access. To determine the optimal signature sequence length, we study the phase transition behavior of the group sparsity estimation problem. Specifically, user activity can be successfully estimated with a high probability when the signature sequence length exceeds a threshold; otherwise, it fails with a high probability. The location and width of the phase transition region are characterized via the theory of conic integral geometry. We further develop a smoothing method to solve the high-dimensional structured estimation problem with a given limited time budget. This is achieved by sharply characterizing the convergence rate in terms of the smoothing parameter, signature sequence length and estimation accuracy, yielding a trade-off between the estimation accuracy and computational cost. Numerical results are provided to illustrate the accuracy of our theoretical results and the benefits of smoothing techniques.
+Massive IoT connectivity, group sparsity estimation, phase transitions, statistical
+dimension, conic integral geometry, and computation-estimation tradeoffs.
+Introduction
+The explosion of small and cheap computing devices endowed with sensing and communication capability is paving the way towards the era of Internet of Things (IoT), which is expected to improve people's daily life and bring socio-economic benefits. For example, connecting the automation systems of intelligent buildings to the Internet enables to control and manage different smart devices to save energy and improve the convenience for residents {{cite:4ad2fdce-1830-49ca-83d7-c9facdee67bb}}. Other applications include smart home, smart city and smart health care {{cite:4ad2fdce-1830-49ca-83d7-c9facdee67bb}}. To provide ubiquitous connectivity to enable such IoT based applications, massive machine-type communications and ultra-reliable and low latency communications become critical in the upcoming 5G networks {{cite:91e42433-2c01-4690-81bb-873e7159303e}}, {{cite:deacdc82-ed0f-421a-b258-c6112759efb3}}. In particular, in many scenarios, there are huge numbers of devices to be connected to the Internet via the base-station (BS). Thus supporting massive device connectivity is a crucial requirement for IoT networks {{cite:e651e20a-17ba-4487-997d-bde42491504f}}, {{cite:bc292272-f95d-410d-8c1b-868cd5ded5ca}}, {{cite:b3754d41-7677-45b1-8c43-2131773a347b}}.
+Existing cellular standards, including 4G LTE {{cite:46738756-b734-4516-9be3-1f654fdaf4dc}}, are unable to support massive IoT connectivity. Furthermore, the acquisition of the channel state information that is needed for the effective transmissions will bring huge overheads, and thus will make IoT communications even more challenging {{cite:bc292272-f95d-410d-8c1b-868cd5ded5ca}}. Fortunately, the IoT data traffic is typically sporadic, i.e., only a few devices are active at any given instant out of all the devices {{cite:3f5cb6c9-0d4c-4392-afb3-e55320782c45}}. For example, in sensor networks, a device is typically designed to stay in the sleep mode and is triggered only by external events in order to save energy. By exploiting the sparsity in the device activity pattern, it is possible to design efficient schemes to support simultaneous device activity detection and channel estimation. As it is not feasible to assign orthogonal signature sequences to all the devices, this paper studies the Joint Activity Detection and channel Estimation (JADE) problem considering non-orthogonal signature sequences {{cite:77b682ab-ebdb-46b9-b05c-431100d2d690}}, {{cite:6f85eb23-40cc-41af-a2a0-098ffad3c6ae}}.
+Related Work
+A growing body of literatures have recently proposed various methods to deal
+with massive device connectivity and the high-dimensional channel estimation
+problem. The compressed sensing (CS) based channel estimation techniques
+have been proposed by exploiting the sparsity of channel structures in time, frequency,
+angular and Doppler domains {{cite:cfafed13-626a-4aff-8b68-4711f59b3d9b}}, {{cite:60fc2f78-3bf9-4b04-a77f-39aefbce2a62}}, {{cite:53da887e-c0a1-4bee-82f9-b69beb207b74}}.
+The spatial and temporal prior information was further exploited
+to solve the high-dimensional channel estimation problem in dense wireless
+cooperative networks {{cite:aadb0432-6301-4064-a3de-02d4fcbfa0e7}}. However, in IoT networks
+with a limited channel coherence time, it is critical to further exploit the
+sparsity in the device activity pattern to enhance the channel estimation performance
+{{cite:deacdc82-ed0f-421a-b258-c6112759efb3}}, {{cite:6f85eb23-40cc-41af-a2a0-098ffad3c6ae}}, thereby reducing the training
+overhead. Due to the large-scale nature of IoT communications,
+it is also critical to develop efficient algorithms to address the computation
+issue.
+The sporadic device activity detection problem has recently been investigated. In the context of cellular networks, the random access scheme
+was investigated in {{cite:251e0acd-26e3-43e3-bdd7-f0ea879acad6}}, {{cite:812ed8c7-46cc-4331-862c-97ff500ff97c}} to deal with
+the significant overhead incurred by the massive number of devices. In
+the
+random access scheme, a connection between an active device and the BS shall
+be established if the orthogonal signature sequence randomly selected by
+the active device is not used by other devices. This scheme, however, normally
+causes collision among a huge number of devices. To support a massive number
+of devices, we thus focus on the non-orthogonal multiuser access (NOMA)
+scheme {{cite:77b682ab-ebdb-46b9-b05c-431100d2d690}}, which is able to simultaneously serve multiple
+devices via nonorthogonal
+resource allocation. The opportunities and challenges of NOMA for supporting
+massive connectivity are investigated in {{cite:77b682ab-ebdb-46b9-b05c-431100d2d690}}. Furthermore,
+network densification {{cite:dfd28df4-e9cf-4440-8d98-99cd28b374bf}} turns to be a promising way
+to improve network capacity, enable low-latency mobile applications and
+support massive device connectivity by deploying more radio access points
+in IoT
+networks {{cite:7fbc3ec3-325e-4973-89ad-c7c8b906dd52}} .
+The information theoretical capacity for massive connectivity was studied in {{cite:09b896b6-484f-461f-b8cf-45fd374f8ec4}}. The sparsity activity pattern yields a compressed sensing based formulation {{cite:6f85eb23-40cc-41af-a2a0-098ffad3c6ae}}, {{cite:9ab382eb-da93-41fc-8884-1b373cd69486}} to detect the active devices and estimate the channels. Recall that the channel
+state information (CSI) refers to the channel
+propagation coefficients that describe how a signal propagates between transmitters
+and receivers. In particular, in the related statements of “prior knowledge
+of CSI", CSI refers to the distribution information. Assuming perfect channel state information (CSI), a sparsity-exploiting maximum a posteriori probability (S-MAP) criterion for multi-user detection in CDMA systems was developed in {{cite:9ab382eb-da93-41fc-8884-1b373cd69486}}. The authors of {{cite:8eda3638-a6c6-4f58-b4fe-448ae19a17a2}}, {{cite:cf412d84-dc21-43b9-92c9-32a5f402281a}} considered the multi-user detection problem with the aid of channel prior-information. In {{cite:6f85eb23-40cc-41af-a2a0-098ffad3c6ae}}, {{cite:3698eade-a215-47e3-bbf0-56035bf4f14b}}, {{cite:94a4c902-4c7c-4c96-ae66-ee3c3f2f1134}},
+a joint design of channel estimation and user activity detection via the
+approximate
+message passing (AMP) algorithm was developed, which leverages the statistical
+channel information and large-scale fading coefficients to enhance the Bayesian
+AMP algorithm with rigorous performance analysis. However, our approach
+does not require prior information of the distribution of CSI to reduce the
+signaling overhead. When assuming no prior knowledge of the distribution of CSI, the joint user detection and channel estimation approach for cloud radio access network via the ADMM algorithm was proposed in {{cite:f888e485-43f2-40b7-9ef8-4328ed4eafc7}} without performance analysis.
+In this paper, to eliminate the overheads of acquiring large-scale fading coefficients and statistical channel information, we propose a structured group sparsity estimation approach to solve the JADE problem without prior knowledge of the distribution of CSI. To determine the optimal signature sequence length, we provide precise
+characterization for the phase transition behaviors in the structured group sparsity
+estimation problem.
+Although the bounds on the multi-user detection error in the non-orthogonal multiple access system have been presented in {{cite:cf412d84-dc21-43b9-92c9-32a5f402281a}} based on the restricted isometry property {{cite:a20b189e-4da1-4891-bcc6-4baf31f0ad88}}, the order-wise estimates are normally not accurate enough for practitioners. A convex geometry approach was thus introduced in {{cite:dfc8a9d3-634d-43f0-b512-dc3ba25a6274}} to provide sharp estimates of the number of required measurements for exact and robust recovery of structured signals. However, this approach can only provide the success conditions for signal recovery guarantees. Subsequently, the phase transition of a regularized linear inverse problem with random measurements was studied in {{cite:3c443a26-832a-4d1d-b131-40f541aed58c}}, {{cite:dd19eb29-00f4-4ba7-852a-521b7d7f6991}} based on the theory of conic integral geometry {{cite:fec8e841-ae72-4062-bfe9-0963e198a55d}}, which established both the success and failure conditions for signal recovery. In particular, the location and width of the transition are essentially controlled by the statistical dimension of a descent cone associated with the convex regularizers. However, these results are only applicable in the real domain. It is not yet clear how to apply the appealing methodology developed in {{cite:3c443a26-832a-4d1d-b131-40f541aed58c}} to provide sharp phase transition results for the high-dimensional estimation problem in the complex domain in IoT networks, which will be pursued in this paper.
+The large number of devices in IoT networks raises unique computational challenges when solving the JADE problem with a fixed time budget. Unfortunately, second-order methods like interior point method are inapplicable in large scale optimization problems due to its poor scalability. In contrast, first-order methods, e.g., gradient methods, proximal methods {{cite:40802e5c-ac9c-4415-849d-52a26eaabf75}}, alternating direction method of multipliers (ADMM) algorithm {{cite:31d822e8-5600-41ca-9b16-ba129d1806e4}}, {{cite:c1155c40-a454-42f1-bddc-21676a8a035d}}, fast ADMM algorithm {{cite:904c95a4-2117-49c2-94b4-7aeb79b5272d}} and Nesterov-type algorithms {{cite:28826599-a222-434e-b5a0-134e769362c9}} are particularly useful for solving large-scale problems. Therefore, we focus on the first-order method in this paper. Furthermore, one way to minimize the computational complexity is to reduce the cost of each iteration by sketching approaches {{cite:c38d240c-1ecf-4107-96a5-3495df13193d}}, {{cite:31f7f538-39d4-4b1e-b17e-3b4f6145f5c7}}. However, this method is often suitable for solving an over-determined system instead of the under-determined linear system in our case. A different approach is to accelerate the convergence rate without increasing the computational cost of each iteration. It was shown in {{cite:6884fcfb-1583-42a7-b0f4-20182a5ef865}} that with more data it is possible to increase the step-size in the projected gradient method, thereby achieving a faster convergence rate. The authors of {{cite:f472c588-d5ad-45eb-a683-916e861b7b7c}} showed that by modifying the original iterations, it is possible to achieve faster convergence rates to maintain the estimation accuracy without increasing the computational cost of
+each iteration considerably. More generally, smoothing techniques such as convex relaxation {{cite:dc2a5e8a-da25-4a52-92a5-c8de60e5e448}} or simply adding a nice smooth function to smooth the non-differentiable objective function {{cite:f164c1fa-845a-4c4e-93ac-858326194862}}, {{cite:28826599-a222-434e-b5a0-134e769362c9}}, {{cite:5e132be2-53dc-43a7-9534-32f70acc8c1f}} often achieves a faster convergence rate. However, the amount of smoothing should be chosen carefully to guarantee the performance of sporadic device activity detection in IoT networks. In this paper, the smoothing method will be exploited to solve the high-dimensional group sparsity estimation problem with a fixed time budget by accelerating the convergence rate. This yields a trade-off between the computational cost and estimation accuracy, as increasing the smoothing parameter will normally reduce the estimation accuracy. The trade-off framework further provides guidelines for choosing the signature sequence length to maintain the estimation accuracy.
+
+Applications in IoT Systems
+The proposed approach in this paper pervades a large number
+of
+applications in IoT systems. For instance, detecting active devices shall
+enhance data transmission efficiency in dynamic IoT networks {{cite:30704c40-b917-46fb-96c5-142cc33c1d1f}}
+and wireless sensor networks. The proposed computation-estimation
+trade-off techniques are particularly suitable for real-time wireless IoT
+networks, e.g., vehicular networks {{cite:26accfbe-354b-4376-bc54-b9ae10c6ca5e}}, as well as providing
+fault-tolerance communication and supporting high QoS and QoE requirements
+{{cite:c5b3e586-abaa-4b18-9680-ce69893e5e79}} with low estimation
+errors. While the lower computational complexity comes at the cost of relatively
+high estimation errors, it shall reduce energy consumption significantly,
+and thus is suitable for energy sensitive applications {{cite:754fea7f-1993-4298-9fa2-ec9fcbd17eea}}.
+In addition, the proposed approaches can be jointly designed with the
+secure access methods,
+which shall enable smart applications of IoT devices especially related to
+healthcare applications {{cite:d5cdb0e9-1a9b-427a-aae6-3660b7080ecf}}.
+
+
+Contributions
+The major contributions of the paper are summarized as follows:
+
+By exploiting sparsity in the device activity pattern, we propose a structured group sparsity estimation approach to solve the JADE problem for massive IoT connectivity. Our method is widely applicable and does not depend on the knowledge of channel statistical information and the large-scale fading coefficients.
+
+Based on the theory of conic integral geometry,
+we provide precise prediction for the location and the width of the phase
+transition region of the sparsity estimation problem via establishing both the failure and success conditions for signal recovery. This result provides theoretical guidelines for choosing the optimal signature sequence length to support massive IoT connectivity and channel estimation.
+We also provide evidence that massive multiple input multiple output (MIMO) system is particularly suitable for supporting massive IoT connectivity, as the width of the phase transition region can be narrowed to zero asymptotically as the number of BS antennas increases.
+
+We further contribute this work by computing the statistical dimension for the descent cone of the group sparsity inducing regularizer to determine the phase transition of the high-dimensional group sparsity estimation problem. The success of this work is based on the proposal of transforming the original complex estimation problem into the real domain, thereby leveraging the theory of conic integral geometry.
+
+To solve the high-dimensional group sparsity estimation problem with a fixed time budget, we adopt the smoothing method to smooth the non-differentiable group sparsity inducing regularizer to accelerate the convergence rates. We further characterize
+the sharp trade-offs between the computational cost and estimation accuracy. This helps guide the signature sequence design to maintain
+the estimation accuracy for the smoothed estimator. Numerical results shall be provided to show the benefits
+of smoothing techniques.
+
+Notations: Uppercase/lowercase boldface letters denote matrices/vectors. For an FORMULA  matrix FORMULA , we denote its FORMULA  row by FORMULA  , its FORMULA  column by FORMULA . Let FORMULA  denote the row submatrix of FORMULA  consisting of the rows indexed by FORMULA . The operator FORMULA  stand for transpose, Euclidian norm, Frobenius norm, real part, imaginary part.
+FORMULA  denotes that each element in FORMULA  follows i.i.d. normal distribution with mean FORMULA  and variance FORMULA .
+
+System model and problem formulation
+System Model and Problem Formulation
+We consider an IoT network with one BS serving FORMULA  single-antenna IoT devices, where the BS is equipped with FORMULA  antennas. The channel vector from device FORMULA  to the BS is denoted by FORMULA , FORMULA . With sporadic communications, only a few devices are active out of all devices {{cite:3f5cb6c9-0d4c-4392-afb3-e55320782c45}} as shown in Fig.REF . We consider the synchronized wireless system with block fading. That is, each device is active during a coherence block, and is inactive otherwise. In each block, we define the device activity indicator as follows: FORMULA  if device FORMULA  is active, otherwise FORMULA . Furthermore, we define the set of active devices within a coherence block as FORMULA  with FORMULA  denoting the number of active devices.
+ FIGURE
+
+A typical IoT network with massive sporadic traffic devices.
+
+For uplink transmission in a coherence block with length FORMULA , we consider the Joint Activity Detection and channel Estimation (JADE) problem. Specifically, the received signal at the BS is given by
+FORMULA 
+for all FORMULA . Here, FORMULA  is the length of the signature sequence, FORMULA  is the signature symbol transmitted from device FORMULA  at time slot FORMULA , FORMULA  is the received signal at the BS, and FORMULA  is the additive noise distributed as FORMULA .
+With massive devices and a limited channel coherence block, the length of the signature sequence is typically smaller than the total number of devices, i.e., FORMULA . It is thus impossible to assign mutually orthogonal sequences to all the devices. As suggested in {{cite:6f85eb23-40cc-41af-a2a0-098ffad3c6ae}}, we generate the signature sequences from i.i.d. complex Gaussian distribution with zero mean and variance one, i.e., each device FORMULA  is assigned a unique signature sequence FORMULA . Notice these sequences are non-orthogonal.
+Let FORMULA  denote the received signal across FORMULA  antennas, FORMULA  be the channel matrix from all the devices to the BS antennas, and FORMULA  be the known signature matrix with FORMULA . We rewrite (REF ) as
+FORMULA 
+where FORMULA  is the diagonal activity matrix and FORMULA  is the additive noise matrix.
+Our goal is to jointly estimate the channel matrix FORMULA  and detect the activity matrix FORMULA .
+Let FORMULA  with FORMULA  as the sparse diagonal activity matrix. Matrix FORMULA  thus has the structured group sparsity pattern in its rows {{cite:c6aa5cb3-dfa4-4237-bb9b-126245403477}}. The linear measurement model (REF ) can be further rewritten as
+FORMULA 
+To estimate the group row sparse matrix FORMULA , we introduce the following convex group sparse inducing norm (i.e., mixed FORMULA -norm) in the form of {{cite:c6aa5cb3-dfa4-4237-bb9b-126245403477}}
+FORMULA 
+where FORMULA  is the FORMULA -th row of matrix FORMULA . This norm will help to induce a group sparsity structure in the solution. The resulting group sparse matrix estimation problem, i.e., the JADE problem, can thus be formulated as the following convex optimization problem:
+FORMULA 
+where FORMULA  is an upper bound on FORMULA  and assumed to be known
+as a priori. Given the estimate matrix FORMULA , the activity matrix can be recovered as FORMULA , where FORMULA  if FORMULA  for a small enough threshold FORMULA ; otherwise, FORMULA . The estimated channel matrix for the active devices is thus given by FORMULA  with its FORMULA -th row as FORMULA  where FORMULA .
+
+Problem Analysis
+Phase Transitions
+Due to the limited radio resources, it is critical to precisely find the minimal number of signature symbols FORMULA  to support massive device access. This can be achieved by precisely revealing the locations of the phase transition of the high-dimensional group sparsity estimation problem via solving the convex optimization problem FORMULA . Although recent years have seen progresses on structured signal estimation {{cite:9860858c-da55-451c-83d9-fc6bbcc714c1}}, {{cite:1438f284-2c0c-4ada-b780-cb70bd57600c}}, {{cite:dfc8a9d3-634d-43f0-b512-dc3ba25a6274}}, they only provide a success condition for signal recovery without precise phase transition analysis. The recent work {{cite:3c443a26-832a-4d1d-b131-40f541aed58c}} provided a principled framework to predict phase transitions (including the location and width of the transition region) for random cone programs {{cite:2755d930-de5f-4b2d-ab7e-01e605e51bab}} via the theory of conic integral geometry. Unfortunately, the approach based on conic integral geometry is only applicable in the real field case, which thus cannot be directly applied for problem FORMULA  in the complex field. To address this issue, we propose to approximate the original complex estimation problem FORMULA  by a real estimation problem, followed by precise phase transition analysis via conic integral geometry {{cite:3c443a26-832a-4d1d-b131-40f541aed58c}}. Theoretical results and numerical experiments
+will provide evidences that the approximations are quite tight. We shall prove that the locations of phase transitions are determined by the intrinsic geometry invariants (i.e., the statistical dimension) associated with the high-dimensional estimation
+problem FORMULA . In particular,
+we will show that the width of the transition region can be reduced to zero asymptotically in the
+limit as the number of antennas at the BS goes to infinity.
+Therefore, massive MIMO is especially well-suited for supporting massive IoT
+connectivity by providing accurate phase transition location.
+
+Computation and Estimation Trade-offs
+To address the computational challenges in massive IoT networks with a limited time budget, we adopt the smoothing method to smooth the non-differentiable group sparsity inducing regularizer to accelerate the convergence rates. The computational speedups can be achieved by projecting onto simpler sets {{cite:dc2a5e8a-da25-4a52-92a5-c8de60e5e448}},
+varying the amount of smoothing {{cite:5e132be2-53dc-43a7-9534-32f70acc8c1f}}, or adjusting the step
+sizes {{cite:6884fcfb-1583-42a7-b0f4-20182a5ef865}} applied to the optimization algorithms. However, the computational speedups will normally reduce the estimation accuracy. Based
+on the phase transition results, we shall propose to control the
+amount of smoothing to achieve sharp computation and estimation tradeoffs
+for the smoothed optimization problem FORMULA  via the smoothing method. The smoothed formulation
+can be further efficiently solved via various efficient first-order methods with cheap iterations and low memory cost, e.g., gradient methods, proximal methods {{cite:40802e5c-ac9c-4415-849d-52a26eaabf75}}, alternating direction method of multipliers (ADMM) algorithm {{cite:31d822e8-5600-41ca-9b16-ba129d1806e4}}, fast ADMM algorithm {{cite:904c95a4-2117-49c2-94b4-7aeb79b5272d}} and Nesterov-type algorithms
+{{cite:28826599-a222-434e-b5a0-134e769362c9}}.
+
+Precise Phase transition analysis
+In this section, we study the phase transition phenomenon when solving the JADE problem.
+ FIGURE
+
+Empirical success probability for solving problem FORMULA  via CVX {{cite:a5d0a772-0d71-42b7-9422-4bc52b91a26b}} in the noiseless case.
+The base station is equipped with 2 antennas, the total number of devices is 100 and the number of active device is 10. The channel matrix and signature matrix are generated as FORMULA  and FORMULA , respectively. We declare successful recovery if FORMULA  and each point is averaged for 100 times.
+
+An example of such phenomenon is demonstrated in Fig. REF , from which we see that the empirical success probability changes from 0 to 1 sharply. In particular, this indicates that when the base station is equipped with 2 antennas, the signature sequence length around 30 is sufficient to achieve exact signal recovery for 100 devices where 10 of them are active. Thus if we can accurately find the location of the phase transition, we may choose a minimal signature sequence length accordingly to support massive IoT connectivity and channel estimation.
+In the following, we provide precise analysis of the location and width of the phase transition region via characterizing both success and failure conditions for signal recovery based on the conic geometry, followed by computing the probability for holding the conic optimality conditions.
+Optimality Condition and Convex Geometry
+We consider the real-valued counterpart of the statistical optimization problem FORMULA  as follows:
+FORMULA 
+where the linear observation in the real domain is given by
+FORMULA 
+
+and the regularizer is defined as
+FORMULA . Here
+FORMULA  is the row submatrix of FORMULA  consisting of the rows indexed by FORMULA .
+To facilitate phase transition analysis, problem FORMULA  can be further approximated as the following structured group sparse estimation problem with group size FORMULA :
+FORMULA 
+where FORMULA  is a Gaussian random matrix. The phase transition of the approximated problem FORMULA  is empirically demonstrated to coincide with the original problem FORMULA  {{cite:4f0bba03-c697-44cb-90f8-cc1004a4064d}}, {{cite:53da887e-c0a1-4bee-82f9-b69beb207b74}} with structured distribution in the measurement matrix FORMULA . This will be further verified in the numerical experiments in Section . Additionally, there are extensive empirical evidences {{cite:898014f8-0125-4e95-af93-c49a26a273d5}}, {{cite:1e0b471d-885a-49c5-a1d8-970106d0b9db}} showing that the distribution of the random measurement matrix has little effect on the locations of phase transitions. We thus focus on characterizing the phase transitions of the approximate problem FORMULA  in the real field.
+To make the presentation clear, we first characterize the phase transitions in the noiseless case and then extend the results to the noisy case. In the noiseless case, we rewrite problem FORMULA  as follows:
+FORMULA 
+Problem FORMULA  is said to succeed for exact recovery when it has a unique optimal points FORMULA , which equals the ground-truth FORMULA ; otherwise, it fails. Here, the phase transition refers to the phenomenon that problem FORMULA  changes from the failure state to the successful state as the sequence length FORMULA  increases.
+In order to establish the optimality condition for problem FORMULA , we present the following definition in convex analysis {{cite:3c443a26-832a-4d1d-b131-40f541aed58c}}.
+Definition 1 (Descent Cone):
+The descent cone FORMULA  of a proper convex function
+FORMULA  at point FORMULA  is the conic hull of the perturbations that do not increase
+FORMULA  near FORMULA , i.e.,
+FORMULA 
+
+Let FORMULA  denote the null space of the operator FORMULA .
+With the aid of the descent cone {{cite:07a413b3-14e5-4eac-a2de-5a9207200870}}, we shall establish the necessary and sufficient condition for the success of problem FORMULA  via convex analysis {{cite:dfc8a9d3-634d-43f0-b512-dc3ba25a6274}}, {{cite:3c443a26-832a-4d1d-b131-40f541aed58c}}.
+Fact 1 (Optimality Condition):
+Let FORMULA  be a proper convex function. Matrix FORMULA  is the unique optimal solution to problem FORMULA  if and only if FORMULA .
+
+ FIGURE
+(a) FORMULA  succeeds
+
+ FIGURE
+(b) FORMULA  fails
+
+Optimality condition for problem FORMULA .
+
+Fig. REF  illustrates the geometry of this optimality condition. Problem FORMULA  succeeds if and only if the null space of FORMULA  misses the cone of descent directions of FORMULA  at the ground-truth FORMULA ; otherwise it fails since the optimal solution is FORMULA  as illustrated in Fig. REF  (b). Intuitively, a smaller size of the decent cone will lead to a higher successful recovery probability of FORMULA . It is thus critical to characterize the size of the decent cone to depict the phase transition phenomena.
+Based on the optimality condition, the phase transition problem is transformed into a classic problem in conic integral geometry: what is the probability that a randomly rotated convex cone shares a ray with a fixed convex cone? The Kinematic formula {{cite:fec8e841-ae72-4062-bfe9-0963e198a55d}} provides an exact formula for computing this probability. However, this exact formula is hard to calculate. We thus present a practical formula that characterizes the phase transition in two intersection cones in terms of the statistical dimension {{cite:3c443a26-832a-4d1d-b131-40f541aed58c}}.
+Definition 2 (Statistical Dimension):
+The statistical dimension FORMULA  of a closed convex cone FORMULA  in FORMULA  is defined as:
+FORMULA 
+where FORMULA  is a standard normal vector, FORMULA  is the Euclidean norm, and FORMULA  denotes the Euclidian projection onto FORMULA .
+
+The statistical dimension allows us to measure the size of convex cones and is the generalization of the dimension of linear subspaces. We state the approximated conic kinematic formula based on the statistical dimensions of general convex cones {{cite:3c443a26-832a-4d1d-b131-40f541aed58c}}.
+Theorem 1 (Approximate Kinematic Formula):
+Fix a tolerance FORMULA . Let FORMULA  and FORMULA  be convex cones
+in FORMULA , but one of them is not a subspace. Draw a random orthogonal basis FORMULA . Then
+FORMULA 
+where FORMULA .
+
+This theorem indicates a phase transition on whether the two randomly
+rotated cones sharing a ray. That is, when the total statistical
+dimension of the two cones exceeds the ambient dimension FORMULA , the two randomly rotated cones share a ray with high probability; otherwise, they fail to share a ray.
+
+Phase Transition for Massive IoT Connectivity
+Based on general results in Theorem REF , we shall present the phase transition results for the exact recovery of the program FORMULA  in the noiseless case and robust recovery in the noisy case.
+Phase Transition in the Noiseless Case
+To predict phase transitions of program FORMULA  for signal recovery, we essentially need to compute the probability for holding the optimality condition in Fact REF . Specifically, for Gaussian random matrix FORMULA , its nullity is FORMULA  with probability one. Therefore, the statistical dimension of FORMULA  is FORMULA .
+By replacing convex cones FORMULA  and FORMULA  in Theorem REF  by the descent cone FORMULA  and the subspace FORMULA , we have the following recovery guarantees for signal recovery via program FORMULA .
+Theorem 2 (Phase Transition of Problem FORMULA ):
+Fix a tolerance FORMULA . Let FORMULA  be a fixed matrix. Suppose FORMULA  , and let FORMULA . Then
+FORMULA 
+where FORMULA .
+
+The above theorem indicates that FORMULA  indeed reveals a phase transition when the signature sequence lengths FORMULA . The transition from failure to success across a sharp range with width FORMULA . The phase transition location is
+thus quite accurate. We will show that the size of the decent cone of FORMULA  at a point depends solely on its sparsity level.
+There are mainly two implications of Theorem REF . First, in the absence of noise, one can see that the proposed formulation FORMULA  allows perfect signal FORMULA  recovery with exponentially high probability if and only if the number of signature sequence length FORMULA  exceeds the range of phase transition. Second, increasing the number of antennas FORMULA  in BS will narrow the range of phase transition. In particular, the width of the transition region can be reduced to zero asymptotically as the number of antennas at the BS goes to infinity.
+Therefore, massive MIMO is particularly suitable for supporting massive IoT connectivity by predicting accurate phase transition location.
+The sharp phase transition results are thus able to guide the selection of the signature sequence length. We will further contribute this work by computing the statistical dimension of the descent cone FORMULA  for the group sparse inducing norm in Section REF .
+
+Phase Transition in the Noisy Case
+Let FORMULA  be an estimate of the ground truth matrix FORMULA .
+To evaluate the accuracy of the estimator, we define the average squared prediction error as follows:
+FORMULA 
+We further define the estimation error of the estimator as FORMULA  for a given signature matrix FORMULA  and ground truth matrix FORMULA .
+We will see this quantity enjoys a phase transition as FORMULA  varies.
+To facilitate efficient analysis in the noisy case, we consider the following formulation:
+FORMULA 
+which is equivalent to problem FORMULA  for some choice of the parameter FORMULA . It turns out that this problem also undergoes a phase transition when the length of the signature sequence is picked as FORMULA , which is coincident with the noiseless case {{cite:dd19eb29-00f4-4ba7-852a-521b7d7f6991}}. We shall provide sharp phase transition results for robust group sparse estimation via program FORMULA  in the following theorem.
+Theorem 3 (Phase Transition of Problem FORMULA ):
+Assume matrix FORMULA  satisfies FORMULA . Let the noise matrix FORMULA  be independent of FORMULA  and FORMULA 
+with FORMULA . Let FORMULA  denote the optimal solution to problem FORMULA . The prediction error FORMULA  and empirical error FORMULA  is defined as FORMULA , FORMULA , respectively. Set FORMULA . Then there exist constants FORMULA  such that
+
+Whenever FORMULA ,
+FORMULA 
+
+with probability FORMULA .
+
+Whenever FORMULA ,
+FORMULA 
+
+with probability FORMULA .
+
+Here, the probabilities are calculated over the random measurement matrix FORMULA .
+
+Please refer to Appendix  for details.
+This theorem describes a phase transition at location FORMULA  in the noisy case, which extends the results in the noiseless case. When the signature sequence length FORMULA  is smaller than FORMULA , the worst-case estimation error FORMULA  is simply the noise power FORMULA , and increasing FORMULA  cannot decrease the estimation error. This means that the regularized linear regression problem is sensitive to noise. After crossing the phase transition, increasing the signature length can reduce the worst-case estimation error at the rate FORMULA . The worst-case estimation error is achieved when FORMULA  {{cite:dd19eb29-00f4-4ba7-852a-521b7d7f6991}}. It will be verified in section  that the obtained phase transition results accurately depict the phase transition behavior of the original problem FORMULA . One observation in Theorem REF  is that the behavior of empirical estimation error FORMULA  provides guidance for choosing parameter FORMULA  in problem FORMULA . Using the worst case empirical estimation error, we can set
+FORMULA 
+provided a reasonable estimate of noise power FORMULA .
+
+Computing the Statistical Dimension
+Theorem REF  and Theorem REF  allow us to sharply locate the phase transitions for FORMULA  and FORMULA , respectively, and computing the statistical dimension of the descent cone is the key to evaluate the theoretical results. But this presents its own challenges to provide a computationally feasible formula for the statistical dimension. We thus provide an accurate estimate and insightful expression for FORMULA  using the following recipe suggested in {{cite:3c443a26-832a-4d1d-b131-40f541aed58c}}.
+Lemma 1 (The Statistical Dimension of a Descent Cone):
+
+Let FORMULA  be a proper convex function and FORMULA . Assume that the sub-differential FORMULA  is non-empty, compact, and does not contain the origin. Then
+FORMULA 
+where FORMULA  is a standard normal vector.
+
+Although Lemma REF  suggested a general method to study the statistical dimension of a descent cone, it still needs additional technical effort to compute accurate estimate for the statistical dimension of a descent cone for the group sparsity inducing norm adopted in this paper.
+Proposition 1 (Statistical Dimension for FORMULA ):
+Let FORMULA  be with FORMULA  nonzero rows, and define the
+normalized sparsity FORMULA . The upper bound of statistical dimension
+of descent cone of FORMULA  at FORMULA 
+is given by
+FORMULA 
+The unique optimum FORMULA  which minimizes the right-hand side
+of (REF ) is the solution of
+FORMULA 
+
+Please refer to Appendix  for details.
+The bound provided in Proposition REF  can be numerically computed efficiently, and thus can be utilized in Theorem REF  and Theorem REF  to compute the locations of phase transitions. Note that the bound only depends on the sparsity level of matrix FORMULA  and turns out to be accurate via extensive experiments.
+
+Sharp Computation and Estimation Trade-offs via Smoothing Method
+In an IoT network with a massive number of devices, it becomes critical to solve the JADE problem under a fixed time budget. To address the computational challenges for solving the high-dimensional group sparsity estimation problem, we adopt the smoothing method to smooth the non-differentiable group sparsity inducing regularizer to accelerate the convergence rates. We further characterize the sharp trade-off between the computational cost and estimation accuracy. This provides guidelines on choosing the optimal signature sequences to maintain the estimation accuracy for the smoothed group sparsity estimator.
+Accelerating Convergence Rate via Smoothing
+Adding a smooth function to “smooth" the non-differentiable objective function is a well-known idea in the context of sparse optimization, which makes the regularized problem easy to solve {{cite:f164c1fa-845a-4c4e-93ac-858326194862}}, {{cite:5e132be2-53dc-43a7-9534-32f70acc8c1f}}. In particular, for problem FORMULA , we augment FORMULA  by adding a smoothing function FORMULA , where FORMULA  is a positive scalar and called as the smoothing parameter. Problem FORMULA  is thus smoothed as
+FORMULA 
+which can be rewritten in the real domain as follows,
+FORMULA 
+where FORMULA , FORMULA , and FORMULA  are given in problem FORMULA  (REF ).
+As problem FORMULA  is not differentiable, applying the subgradient method to solve it would yield a slow coverage rate. Fortunately, the dual formulation of problem FORMULA  leverages the benefits from smoothing techniques, as the smoothed dual problem can be reduced to an unconstrained problem with the composite objective function consisting of a convex, smooth function and a convex, nonsmooth function. This composite form can be solved by a rich set of first-order methods such as Auslender and Teboulle’s algorithm {{cite:367568a4-d4a9-4712-9cd2-0bebec3f43e6}}, Nesterov’s 2007 algorithm (N07) {{cite:97bc8ff3-2d83-43a1-a16c-5469851b4747}} and Lan, Lu, and Monteiro’s modification of N07 (LLM) algorithm {{cite:3163ae73-765d-430f-9644-e8fc22ee3edf}} etc., and these algorithms have the FORMULA  (FORMULA  is the numerical accuracy) convergence rate {{cite:bc31d9af-0f18-481f-8afe-ac1afa3a662d}}, {{cite:28826599-a222-434e-b5a0-134e769362c9}}.
+The dual problem of FORMULA  is given by
+FORMULA 
+where FORMULA  and FORMULA .
+Since FORMULA , eliminating the dual variable FORMULA , we obtain the unconstrained
+problem as follows
+FORMULA 
+The dual objective function can be further represented as the following composite function
+FORMULA 
+
+Function FORMULA  is differentiable and its gradient is
+FORMULA 
+where
+FORMULA 
+Furthermore, FORMULA  is a Lipschitz continuous with Lipschitz constant upper bounded by FORMULA . That is to say, the dual objective is a composition of the smooth function FORMULA  and the nonsmooth function FORMULA . This composite form (REF ) can be solved by a rich set of first-order methods {{cite:28826599-a222-434e-b5a0-134e769362c9}}, which are particularly sensitive to the smoothing parameter FORMULA , i.e., a larger value of the smoothing parameter FORMULA  leads to a faster convergence rate.
+In particular, we present the Lan, Lu, and Monteiro’'s algorithm {{cite:3163ae73-765d-430f-9644-e8fc22ee3edf}} in Algorithm REF  as a typical example to show the benefits of smoothing.
+[h]
+LeftleftThisthisUpup
+InputInputOutputoutput
+FORMULA , FORMULA ,  FORMULA
+FORMULA 
+ FORMULA
+FORMULA alg:line0
+FORMULA alg:line1
+FORMULA  alg:line2
+FORMULA 
+
+Lan, Lu, and Monteiro's Algorithm
+1em
+In Algorithm REF , lines  is the solution to (REF ), line  and  are the solutions to the following composite gradient mapping respectively,
+FORMULA 
+The operator FORMULA  is given by
+FORMULA 
+Let FORMULA . Each row of FORMULA  is given by
+FORMULA 
+Let FORMULA  be an optimal point for (REF ), then the convergence behavior of Algorithm REF  satisfies {{cite:28826599-a222-434e-b5a0-134e769362c9}},
+FORMULA 
+Therefore, the number of iterations required to reach FORMULA  accuracy is at most FORMULA , which implies that a larger FORMULA  will result in a faster convergence rate. For each iteration in Algorithm REF , the operators FORMULA  and FORMULA  are computationally cheap, and the dominate cost is the matrix-matrix products involving the signature matrix FORMULA , which is FORMULA .
+In practice, we terminate the algorithm when the relative primal feasibility gap satisfies FORMULA  for a small enough FORMULA .
+The bound of the feasibility gap of primal iterates FORMULA  at each iteration FORMULA  is given as follows {{cite:5e132be2-53dc-43a7-9534-32f70acc8c1f}},
+FORMULA 
+Therefore, the number of iterations sufficient for convergence is upper bounded as
+FORMULA 
+which shows the number of iterations required for convergence in terms of the smoothing parameter, signature sequence length and solution accuracy. We will show in Fig. REF  that the convergence rate of the smoothed estimator FORMULA  will be accelerated as the smoothing parameter increases.
+
+Computation and Estimation Trade-offs
+From the geometric perspective, the smoothing term in FORMULA  (with FORMULA ) enlarges the sublevel set of the regularizer FORMULA , which results in a problem that is computationally easier to solve with an accelerated convergence rate. However, this geometric deformation brings a loss in the estimation accuracy according to the phase transition results in Theorem REF . This results in a trade-off between the computational time and estimation accuracy.
+The trade-off is controllable given the statistical dimension of the decent cone of the smoothed regularizer FORMULA . In particular, the statistical dimension FORMULA  can be accurately estimated by the following result.
+Proposition 2 (Statistical Dimension Bound for FORMULA  )
+Let FORMULA  be with FORMULA  nonzero rows, and define the
+normalized sparsity as FORMULA . An upper bound of the statistical dimension
+of the descent cone of FORMULA  at FORMULA 
+is given by
+FORMULA 
+The unique optimum FORMULA  which minimizes the right-hand side of (REF ) is the solution of
+FORMULA 
+where FORMULA , FORMULA .
+
+Please refer to Appendix  for details.
+
+Note that FORMULA  and FORMULA  can be calculated given the distribution of the ground truth FORMULA . For instance, with FORMULA , we have FORMULA . Here,
+FORMULA  follows chi distribution
+with FORMULA  degrees of freedom and FORMULA  follows chi square
+distribution with FORMULA  degrees of freedom. Hence, we can set FORMULA , FORMULA .
+Although the convergence rate can be accelerated by increasing the smoothing
+parameter as shown in the previous subsection, Proposition REF  suggests that a larger smoothing parameter
+results in a larger statistical dimension FORMULA  as the bound in (REF ) grows with FORMULA .
+This will reduce the estimation accuracy for a given signature sequence length according to the result in Theorem
+REF . Fig. REF  will demonstrate that the estimation error indeed will increase as the smoothing parameter becomes large. Therefore, the smoothing method yields a trade-off between the computational cost and estimation accuracy, as increasing the smoothing parameter will improve the convergence rate while reduce the estimation accuracy. Such a tradeoff is particular important in scenarios
+with massive IoT devices and a limited time budget, but not very stringent requirement on estimation accuracy.
+
+Discussion
+For typical IoT applications, we are particularly interested in reducing the overall computational cost while maintaining the estimation accuracy, which can be achieved by interpreting the above trade-off from another perspective. For the smoothed estimator FORMULA , Proposition REF  together with Theorem REF  can help to provide guidelines for choosing a minimal signature sequence length to maintain the estimation accuracy for a given smoothing parameter FORMULA . Specifically, while smoothing may increase the estimation error, we can increase the signature sequence for the smoothed estimator FORMULA  compared with the original nonsmooth estimator FORMULA . Specifically, given a smoothing parameter FORMULA ,
+according to Theorem REF , we are able to maintain the
+estimation accuracy by choosing the signature sequence length FORMULA  as follows
+FORMULA 
+where FORMULA  is the expectation of the worst-case estimation accuracy normalized by noise power FORMULA .
+
+Simulation results
+In this section, we verify the phase transition phenomena in IoT networks characterized by Theorem REF  and Theorem REF  via simulations. We further simulate the developed dual-smoothed algorithm to illustrate the benefits of smoothing, as well as the trade-offs between the estimation accuracy and computational cost.
+ FIGURE
+(a) The noiseless case
+
+ FIGURE
+(b) The noisy case
+
+Phase transitions in massive device connectivity.
+
+Phase Transitions
+To verify the phase transition in the noiseless case, we consider the scenario
+in which the base station is equipped with 2 antennas, and the total number of devices is 100. For estimation problem FORMULA  in this noiseless setting, the channel matrix and signature matrix are generated as FORMULA  and FORMULA , respectively. We declare successful recovery if FORMULA , and we record the success probability from 50 trials. The experiments are performed using the CVX package {{cite:a5d0a772-0d71-42b7-9422-4bc52b91a26b}} in Matlab with default settings.
+In Fig. REF  (a), we show the probability of successful recovery as a function of the signature sequence length and the number of active devices. The brightness corresponds to the empirical recovery probability (white = 100%, black = 0% ). On top of this heap map, the empirical curves of FORMULA , FORMULA , FORMULA  are success probabilities that are calculated from data. It can be seen that the theoretical curve from Theorem REF  closely matches the empirical curve of the FORMULA  success probability.
+To verify the phase transition in the noisy case, we consider a scenario where the base station is equipped with 3 antennas, and the total number of devices is 300. We fix the number of active devices as FORMULA , hence the theoretical phase transition location is given as FORMULA .
+For estimation problem FORMULA , the channel matrix is generated as
+FORMULA , the signature matrix as FORMULA  and the additive noise matrix as FORMULA . The simulation results are averaged for 100 times.
+In Fig. REF  (b), we see that the normalized prediction error can be accurately predicted by Theorem REF . The dashed blue line computed by Eq.(REF ) and Eq. (REF ) in Theorem REF  is the theoretical prediction. The dashed black line is computed by Proposition REF , and the red markers are the experimental results. We observe that the theoretical results and experimental results are closely matched, and the phase transition location is accurately predicted by Proposition REF .
+
+Computation and Estimation Trade-offs
+We shall verify Proposition REF  under the same settings as Fig. REF  (a) via simulations. We fix the activity device number as FORMULA  to show the impact on the exact recovery using different smoothing parameters FORMULA . As shown in Fig. REF , the theoretical curve from Theorem REF  closely matches the empirical curve of the FORMULA  success probability. Furthermore, it can be seen from Fig. REF  that increasing the smoothing parameter will result in a larger statistical dimension of the descent cone of FORMULA , yielding longer signature sequences for signal recovery.
+ FIGURE
+Phase transitions in massive device connectivity via smoothing.
+
+To evaluate the effectiveness of the smoothing method proposed in section , we consider a scenario where the base station is equipped with 10 antennas, and the total number of devices is set to be 2000. We fix the number of active devices as FORMULA .
+For estimation problem FORMULA , the channel matrix follows FORMULA , the signature matrix follows FORMULA  and the additive noise matrix follows FORMULA .
+We compare the convergence behavior of Algorithm REF  with different amount of smoothing under a fixed signature sequence length FORMULA  in Fig. REF , which shows that increasing the amount of smoothing will accelerate the convergence rate significantly.
+ FIGURE
+Convergence behavior of Algorithm REF .
+
+Under a fixed signature sequence length FORMULA , we further solve problem FORMULA  using Algorithm REF  for different amount of smoothing FORMULA  and stop it when FORMULA , where FORMULA  is set according to (REF ). The simulation results are averaged over 300 times and are presented in Fig. REF . It can be seen that the average squared estimation error increases as the smoothing parameter FORMULA  becomes large. This is because a larger smoothing parameter results in a larger statistical dimension FORMULA  as presented in Proposition REF , and thus the estimation error increases as predicted by Theorem REF .
+ FIGURE
+Estimation error versus smoothing parameter FORMULA .
+
+
+Conclusions
+We developed a structured group sparsity estimation approach to solve the joint active device detection and channel estimation problem in IoT networks. Precise theoretical results were provided to characterize the location and width of the phase transition region for high-dimensional structured group sparsity estimation, which provides theoretical guidelines for choosing the optimal signature sequence length. In particular, we observed that the transition width can be narrowed to zero asymptotically in the massive MIMO setting, yielding highly accurate phase transition location prediction. Numerical results demonstrated the accuracy of our developed theoretical results. Furthermore, we adopted the smoothing techniques to reduce the computational cost by accelerating the convergence rates, which yields a trade-off between computational cost and estimation accuracy. This was achieved by precisely characterizing the convergence rate in terms of smoothing parameter, signature sequence length and estimation accuracy via conic integral geometry.
+
+Proof of theorem  REF
+It turns out that the average squared prediction error satisfies {{cite:dd19eb29-00f4-4ba7-852a-521b7d7f6991}},
+FORMULA 
+where FORMULA  with FORMULA  denoting the polar cone of FORMULA . Note that FORMULA  is the intersection of a cone with the uniformly random subspace, hence, Theorem REF  is applicable. We split the problem into two cases.
+Whenever FORMULA , i.e., FORMULA , using Theorem REF , we find with probability FORMULA , FORMULA . We thus obtain FORMULA , yielding (REF ) by substituting it into (REF ).
+Whenever FORMULA , i.e. FORMULA , using the modification of Theorem REF  which is given in {{cite:dd19eb29-00f4-4ba7-852a-521b7d7f6991}}, there exists constant FORMULA  such that with probability FORMULA , we have
+FORMULA 
+The rotational invariance property of statistical dimension gives
+FORMULA 
+Consequently, we have
+FORMULA 
+which gives (REF ) by combining with (REF ).
+Using the fact {{cite:dd19eb29-00f4-4ba7-852a-521b7d7f6991}} that
+FORMULA 
+gives () and ().
+
+Proof of Proposition  REF
+Since the regularizer FORMULA  is invariant under coordinate permutations of FORMULA . We assume without loss of generality that FORMULA , where FORMULA  are nonzero.
+Therefore, (REF ) becomes
+FORMULA 
+where FORMULA  has independent standard normal entries.
+The next step is to calculate FORMULA . Assume FORMULA , then from the definition of the subdifferential, for any FORMULA  we have
+FORMULA 
+Specifically, for some FORMULA  satisfying FORMULA  for FORMULA , we have
+FORMULA 
+which means FORMULA . Conversely, if (REF ) is satisfied for all FORMULA , then summing over all indices shows that FORMULA . Hence,
+FORMULA 
+Then we have
+FORMULA 
+Since the entries of FORMULA  are independent standard normal,
+it has FORMULA  degrees of freedom. Taking the expectation over the
+Gaussian matrix FORMULA  gives
+FORMULA 
+where the following equality is applied
+FORMULA 
+in which FORMULA  is replaced by a chi distribution variable FORMULA .
+Let FORMULA  and take the infimum over FORMULA  we complete the proof of
+(REF ). The way to show that FORMULA  is the unique minimizer of the righthand side of (REF ) is similar to that in {{cite:3c443a26-832a-4d1d-b131-40f541aed58c}}.
+
+Proof of Proposition  REF
+The proof is similar to Proposition REF .
+We assume without loss of generality that FORMULA , where FORMULA  are nonzero. Therefore, (REF ) becomes
+FORMULA 
+where FORMULA  has independent standard normal entries.
+Since FORMULA , we have
+FORMULA 
+Hence,
+FORMULA 
+Since the entries of FORMULA  are independent standard normal,
+FORMULA  follows the chi distribution
+with FORMULA  degrees of freedom. Taking the expectation over the
+Gaussian matrix FORMULA  gives
+FORMULA 
+where FORMULA , and
+FORMULA .
+Let FORMULA  and taking the infimum over FORMULA  completes the proof of (REF ).
+The way to show that FORMULA  is the unique minimizer of the righthand
+side of (REF ) is similar to that in {{cite:3c443a26-832a-4d1d-b131-40f541aed58c}}

@@ -1,0 +1,116 @@
+
+APS/MA-FR-JB
+THE "PLANCKONIONS"
+Mofazzal Azam
+mofazzal.azam@gmail.com
+Centre for Theoretical Physics, Jamia Millia Islamia, New Delhi-110025, India
+Farook Rahaman
+rahaman@associates.iucaa.in
+Department of Mathematics, Jadavpur University, Kolkata-700032, India
+M Sami 
+ samijamia@gmail.com
+Centre for Theoretical Physics, Jamia Millia Islamia, New Delhi-110025, India
+Jitesh R Bhatt 
+jiteshbhatt.prl@gmail.com
+Physical Research Laboratory, Theory Division, Ahmedabad 380 009, India
+2018/12/11 03:37:08
+We consider a spherically symmetric stellar configuration
+with a density profile FORMULA . We refer it as "Planckonion". Interesting thing about this configuration
+is that it has an onion like structure. The central sphere with radius of the Plank-length
+FORMULA  has one unit of the Planck-mass FORMULA .
+Subsequent spherical shells of radial width FORMULA  contain
+exactly one unit of FORMULA . We study this stellar configuration using Oppenheimer-Volkoff equation
+and show that the equation is satisfied if pressure FORMULA .
+On the geometrical side, the space component of the metric blows up at every point. The time component of the metric is zero inside the star but only in the sense of a distribution (generalized function).
+The Planckonions with such a maximally packed density profile mimic the black holes but avoid
+appearance of central singularity
+because of the violation of null energy conditions.
+04.20.Cv, 04.20.Jb, 95.30.Sf
+Black holes have been discussed extensively in scientific monographs{{cite:3d883cb3-6823-461d-b3f6-879d7d044912}}, {{cite:66c491f2-f6f1-47d3-9921-ef11062aee97}}, {{cite:14851b65-ef3a-4372-aedb-9662bf59afc9}} as well as popular science literature captivating the imagination of public at large {{cite:0ebb1f31-370c-4361-95df-7f17d855dd1a}}, {{cite:a7b0dc14-18ad-44e4-8f9d-6993ddfee41e}}. Most of the time these discussions touch upon the geometric aspect of the black hole - its matter/energy content gets very little attention. What is emphasized is that there exists a central singularity and because of "no hair" theorem, the rest can be left as such. On the other hand, the central premise of the General Relativity (GR) tells
+us that the space-time geometry "in" and "around" a material object is fixed by the distribution of matter itself. This suggests that we must understand a bit more about the state of matter/energy content to fully appreciate the black holes.
+In the early days the interest in black hole within the theoretical physics community was more of academic in nature- it was concerned primarily with the issue of logical completion of GR . It remained as such for a very long time. However, the scenario has undergone drastic change after the direct detection of gravitational radiation on 14th September, 2015 from the merger of a black hole with its binary black hole companion {{cite:3334ba62-e3b1-480c-886a-51225936e7cf}} .
+Black hole binary of masses FORMULA  and FORMULA  merged into a single black hole of mass FORMULA  and emitted gravitational radiation of energy FORMULA . Gravitational radiation is quadripolar in origin, and thus, in the binary merger process there is a transient state with quadripolar moment which is emitted as gravitational radiation, and finally, the merged stellar configuration settles down into a single spherically symmetric configuration. In this process there is reorganization of the space-time geometry, and it is expected that there is corresponding reorganization of matter/ energy content of the stellar configuration. Thus it is important to understand the state in which matter is organized in black
+hole as well as its precursor. The equation of state in thermodynamics provides the glimpse of the microscopic state of matter at the macrospopic scale.
+We attempt to find such an equation of state.
+In General Relativity the relationship among thermodynamic variables such as pressure, density and mass for spherically symmetric stellar configuration is given by Oppenheimer-Volkoff ( O-V ) equation {{cite:54ff9fbe-df97-4616-a3b9-57cf37a8cccb}}, {{cite:63239e61-ace6-4102-8552-0dac40b68f00}}, {{cite:bedb99da-1ea9-4761-aee6-907c97dd5012}} . In this letter, we investigate the O-V equation for a density profile which mimics a black hole . We have called such a stellar configuration a "Planckonion" for reason explained in the text below. A spherically symmetric stellar configuration with a density profile,
+FORMULA 
+satisfies the Schwarzschild black hole condition
+FORMULA 
+for every FORMULA . The interesting thing about this stellar configuration is that it has an onion like structure. The central sphere of radius FORMULA , where, FORMULA  is the the Planck Length contains exactly one unit of Planck Mass, FORMULA . Subsequently, each spherical shell of radial width equal to Planck length, FORMULA , contains exactly one unit of Planck mass, FORMULA . This is the stellar configuration we call a "Planckonion".
+The mass FORMULA  contained within a sphere of radius FORMULA  with the density profile,
+FORMULA 
+is given by
+FORMULA 
+Thus, the Schwarzschild black hole condition FORMULA  is satisfied for any FORMULA .
+Mass contained in the central spherical region of radius FORMULA ,
+FORMULA 
+Mass contained in a spherical shell of radial width FORMULA  between spheres of radius FORMULA  and FORMULA ,
+FORMULA 
+This clearly shows that the stellar configuration has an onion like structure with a Planck mass at the Planck length size centre, and subsequently, a Planck mass in each spherical shell of radial width equal to the Planck length. Note that the Planckonion can not be compressed further because it satisfies the Schwarzschild black hole condition for each FORMULA .
+We study this configuration using the O-V equation. To avoid the small denominator problem, we consider a slightly altered density profile,
+FORMULA 
+and then consider the FORMULA . From onwards, we take FORMULA .
+Before we write the O-V equation, we introduce the following notations,
+FORMULA 
+In terms of these variables the O-V equation is,
+FORMULA 
+To proceed further, we assume an equation of state of the form FORMULA , where the equation state parameter, FORMULA  is a constant independent of FORMULA . We will find FORMULA  by solving the O-V equation. It is easy to see that for FORMULA ,
+FORMULA 
+Thus, by substituting these values and using the equation of state we have
+FORMULA 
+Substituting these values in the O-V equation and after doing some algebraic manipulations, we find
+FORMULA 
+Introducing a new parameter FORMULA , we find
+FORMULA 
+Thus the limit, FORMULA  corresponds to FORMULA .
+The equation state parameter FORMULA  can be obtained from the quadratic equation.
+FORMULA 
+For FORMULA  (FORMULA ), we find,
+FORMULA 
+In this case the equation state is given by FORMULA  and thus, should correspond to a neutron star {{cite:54ff9fbe-df97-4616-a3b9-57cf37a8cccb}}, {{cite:bedb99da-1ea9-4761-aee6-907c97dd5012}} . To understand the geometric aspect, let us recall that in GR for a spherically symmetric stellar configuration the proper time is given by,
+FORMULA 
+The pressure and density appearing in O-V equation are related to time and space components of the metric
+by the equations {{cite:54ff9fbe-df97-4616-a3b9-57cf37a8cccb}}, {{cite:bedb99da-1ea9-4761-aee6-907c97dd5012}} ,
+FORMULA 
+and
+FORMULA 
+For neutron stars it is easy to find that
+FORMULA 
+This shows that time, as expected, considerably slows down
+in the central region where the density is high. However, near the boundary the density is lower and we must use the non-relativistic
+equation of state. Thus neutron stars will have pulsations. It is the pulsation instability that renders neutron star a critical mass.
+When FORMULA , the equation state parameter FORMULA  develops an imaginary part. Equation of state with such an FORMULA  for any stellar
+configuration should correspond to non-static nature of its thermodynamic state. However, we are interested in the FORMULA  and would like
+to investigate whether we can arrive at some sensible limit without bothering about the thermodynamics. Thus "non-static" for us will simply refer to contraction . From the O-V equation, it is easy find that in this limit density, pressure and its derivative do not have imaginary part, and equation of state
+is simply FORMULA . Before, we comment on this equation of state, we would like to discuss what happens to the components of metric tensor in
+this limit. It is clear that the space component of the metric, FORMULA . However, the calculation of the time component of the
+metric, FORMULA , is a bit more complicated. From Eq. (14), using the equation of state FORMULA , and equation Eq. (10) above,
+we obtain,
+FORMULA 
+Now using using Eq. (11), for FORMULA  very very small,
+we get,
+FORMULA 
+Considering only the positive sign within the bracket, we can write down the solution as,
+FORMULA 
+Here FORMULA  is any interior point of the star and FORMULA  is a point at the boundary. For the density profile in this letter,
+FORMULA 
+Thus FORMULA  is complex, and is a highly oscillatory function of
+FORMULA  in the limit of FORMULA .
+In fact, it is non-analytic in FORMULA  (at FORMULA ).
+Clearly, the strong limit for FORMULA  does not exist. But the weak limit (in the sense of distribution/generalized function) exists, and is equal
+to zero in the interior of the star (for FORMULA ). This can easily be seen as follows. First of all, note that {{cite:0f7d06a0-40b1-47ab-8890-c6bcff99a341}}
+FORMULA 
+Thus Eq. (18) in the limit of FORMULA  becomes,
+FORMULA 
+It follows that in the interior of the star (FORMULA ), time component of the metric FORMULA  can be taken to be zero in the sense of a distribution
+(generalized function).
+The boundary value, FORMULA , has to be found from the boundary conditions which is difficult
+to fix from the considerations of the problem set here.
+Our aim in this letter has been to try to understand the black holes without the appearance of central singularity. We found that, in some sense,
+the "Planckonions" with a density profile, FORMULA  serves the purpose. It leads to a equation of the form
+FORMULA , and thus, violates the null energy condition and prevents the appearance of central singularity {{cite:2ddc8b92-f848-4830-bee6-f663d9728bc4}}, {{cite:fbd80ff4-5049-4904-861a-e698a7dcb38a}} .
+As discussed in some publications, the negative pressure can possibly be understood as tension {{cite:0978e14c-21fc-4015-9757-565949cf38ca}} .
+The space components of the
+metric is infinite at every point including the boundary. The time component is zero within the star but only in the restricted sense of weak convergence
+as explained in the text. At the boundary, its value is uncertain. From the analysis in this letter, it is clear that we can not yet designate the black holes
+as "Planckonions" but some of the features found in this work look promising.

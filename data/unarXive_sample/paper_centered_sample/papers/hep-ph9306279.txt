@@ -1,0 +1,661 @@
+
+[12pt]article
+
+
+         University of Wisconsin - Madison
+MAD/PH/765
+June 1993 
+SUPERSYMMETRY PHENOMENOLOGYTalk presented by V. Barger at
+the HARC SUSY Workshop, Texas, April 1993
+V. BargerFORMULA  and R.J.N. Phillips FORMULA
+FORMULA Physics Department, University of Wisconsin, Madison, WI 53706, USA
+FORMULA Rutherford Appleton Laboratory, Chilton, Didcot, Oxon OX11 0QX, UK
+
+Abstract
+We review some recent results and future prospects in the phenomenology
+of Supersymmmetry. We discuss the searches for superpartner states,
+the searches for Higgs bosons in the minimal SUSY model, and additional
+parameter constraints arising in SUSY-GUT models.
+Introduction
+Supersymmetry (SUSY) is a vital element in present thinking about
+fundamental particle physics. At this Conference it certainly needs no
+formal introduction nor motivation; we simply emphasise here two
+important aspects — it has perturbatively calculable consequences and
+can be experimentally tested. This talk will be about the associated
+phenomenology.
+Experimental evidence for SUSY could come in various forms, such as
+
+discovery of one or more superpartners,
+
+discovery of a neutral Higgs boson with non-standard properties
+and/or a charged Higgs boson,
+
+discovery of FORMULA  decay,
+
+discovery that dark matter consists of heavy neutral particles.
+
+This talk will address areas (a) and (b) above. We shall discuss the
+present status and future prospects of searches for superpartner
+particles, searches for Higgs bosons in the minimal SUSY model (MSSM)
+and additional parameter constraints that come from SUSY-GUT studies.
+We leave other phenomenological topics like proton decay, dark matter,
+FORMULA -parity breaking, etc., to other speakers.
+
+Experimental SUSY Signatures
+The MSSM conserves a multiplicative FORMULA -parity: FORMULA ,
+where FORMULA  are spin, lepton number, baryon number. Standard
+Model (SM) particles have FORMULA ; their superpartners have FORMULA . Hence heavy
+sparticles must decay to lighter sparticles, while the lightest
+sparticle (LSP) is stable. If the LSP has no strong or electromagnetic
+interactions, as seems likely since it has defied detection for so long,
+it will carry away “missing" energy and momentum — a vital SUSY
+signature. The LSP will also be a candidate for cosmological dark matter;
+this focuses extra interest on the FORMULA -conserving case.
+Grand Unified Theories (GUTs) are essential for SUSY phenomenology to economize
+parameters. A minimal set of GUT parameters with soft SUSY breaking consists of
+the gauge and Yukawa couplings FORMULA  and FORMULA , the Higgs mixing mass
+FORMULA , the common gaugino mass at the GUT scale FORMULA , the common scalar
+mass at the GUT scale FORMULA , and two parameters FORMULA  that give trilinear and
+bilinear scalar couplings. At the weak scale, the gauge couplings are
+experimentally determined. The Higgs potential depends upon FORMULA  (at
+tree level) and FORMULA  (at one loop). After minimizing
+the Higgs potential and putting in the measured FORMULA  and fermion masses, there
+remain 5 independent parameters, e.g. FORMULA .
+Beside the SM gauge bosons and fermions, the MSSM spectrum contains Higgs
+bosons FORMULA , gluinos FORMULA , squarks FORMULA , sleptons
+FORMULA , charginos (FORMULA ; mixtures of winos and
+charged higgsinos), neutralinos (FORMULA ; mixtures of zinos,
+photinos and neutral higgsinos). An alternate notation is FORMULA 
+for FORMULA  and FORMULA  for FORMULA . Figure 1
+illustrates the evolution of the SUSY mass spectrum from the GUT
+scale {{cite:d6174f76-9eea-45a3-adcf-0f7e1aae9acc}}, {{cite:c19da845-3c4d-4ee4-abaf-d2af50954e30}}. The running masses are plotted versus
+FORMULA  and the physical value occurs approximately where the running mass
+FORMULA  intersects the curve FORMULA . For the Higgs scalar FORMULA , the
+mass-square becomes negative at low FORMULA  due to coupling to top; in this
+region we have actually plotted FORMULA . Negative mass-square parameter is
+essential for spontaneous symmetry-breaking; here it is achieved by radiative
+effects. The running masses for the gauginos FORMULA  are
+given by
+FORMULA 
+where FORMULA  labels the gauge symmetry; this applies before mixing with higgsinos
+to obtain the chargino and neutralino mass eigenstates. In Fig. 1 the squarks
+are heavier than the gluinos, but the opposite ordering FORMULA  is possible in other scenarios.
+Sleptons, neutralinos and charginos are lighter than squarks and gluinos in
+general.
+The usual soft SUSY-breaking mechanisms preserve the
+gauge coupling relations (unification) at FORMULA .
+In order that SUSY cancellations shall take effect at low mass
+scales as required, the SUSY mass parameters are expected to be
+bounded by
+FORMULA 
+
+Fig. 1. Typical RGE results for spartner masses {{cite:d6174f76-9eea-45a3-adcf-0f7e1aae9acc}}.
+The other parameter FORMULA  is effectively bounded by
+FORMULA 
+where the lower bound arises from consistency in GUT models and the
+upper bound is a perturbative limit (following Ref. 3). Proton decay gives FORMULA  {{cite:67482ce5-4253-409d-bab8-ccef4c45d57a}}, {{cite:6ac4a29e-fe72-4f77-bdbd-04ec3732f30e}}.
+At LEP I, sufficiently light SUSY particles would be produced
+through their gauge couplings to the FORMULA . Direct searches for
+SUSY particles at LEP give
+FORMULA 
+There are also indirect limits on FORMULA  decays to SUSY particles{{cite:7658ade9-40cb-4724-a21d-4f2f23ff16e8}},
+FORMULA 
+It is convenient to express the excluded regions in terms of
+the parameters that determine the gaugino masses, i.e. in the
+FORMULA  or FORMULA  plane: see Fig. 2.
+Hadron colliders can explore much higher energy ranges, producing squarks and
+gluinos strongly. At the Tevatron, with luminosity 25 pbFORMULA 
+expected in 1993, about 100 events would be expected
+for each of the channels FORMULA  and FORMULA  for
+FORMULA  GeV, reaching well beyond the
+LEP range{{cite:7658ade9-40cb-4724-a21d-4f2f23ff16e8}}, {{cite:dbc4054f-a6a2-4078-89f8-3bb88386f8e9}}, {{cite:a5d0742d-4426-44aa-9c8e-25b59e2c4534}}.
+SUSY particle signatures depend on their decays.
+The most distinctive is the missing
+energy and momentum of the undetected LSP (usually
+assumed to be the lightest neutralino FORMULA ) in
+all SUSY decay chains with FORMULA -parity conservation. At hadron colliders
+one can only do book-keeping on the missing transverse
+momentum denoted FORMULA /FORMULA / FORMULATFORMULA /pT FORMULA
+
+Fig. 2: MSSM parameter regions accessible to LEP,
+from Ref. 7. Solid curves surround
+regions excluded by LEP I data, dot-dashed curves show the potential
+reach of LEP II, and the dashed curve is the Tevatron CDF limit for
+FORMULA .If squarks and gluinos are rather light (FORMULA  GeV), their dominant decay mechanisms are strong decays to each other or
+decays to the LSP:
+FORMULA 
+In these cases the LSPs carry a substantial fraction of the available
+energy and FORMULA /FORMULA / FORMULATFORMULA pFORMULA pFORMULA s = 640FORMULA s = 1.8 FORMULA FORMULA FORMULA
+For heavier gluinos and squarks, many new decay channels are open,
+such as decays into the heavier gauginos:
+FORMULA 
+Some decays go via loops (e.g. FORMULA ; we have not
+attempted an exhaustive listing here.
+Figure 3 shows how gluino-to-heavy-gaugino branching fractions increase
+with FORMULA  in a particular example
+(with FORMULA ) {{cite:0c301df1-adc5-458a-ba9e-954ef7dc7dda}}.
+
+Fig. 3. Example of gluino decay branchings versus mass {{cite:0c301df1-adc5-458a-ba9e-954ef7dc7dda}}.
+The heavier gauginos then decay too:
+FORMULA 
+Here it is understood that final FORMULA  or FORMULA  may be off-shell and
+materialize as fermion-antifermion pairs; also FORMULA  may be replaced
+by FORMULA . In practice, chargino decays are usually dominated by
+FORMULA -exchange transitions; neutralino decays are often dominated
+by sfermion exchanges because the FORMULA 
+coupling is small. To combine the complicated production and cascade
+possibilities systematically, all these channels have been incorporated in
+the ISAJET 7.0 Monte Carlo package called ISASUSY {{cite:2fa5d926-2181-4081-8015-e3ac06e6117c}}.
+These multibranch cascade decays lead to higher-multiplicity final
+states in which the LSPs FORMULA  carry a much smaller share of the
+available energy, so FORMULA /FORMULA / FORMULATFORMULA /pTFORMULA WFORMULA Z FORMULAFORMULA bFORMULA cFORMULA /pTFORMULA /pTFORMULA (mg, mq) FORMULA
+
+Fig. 4. 1992 CDF limits in the FORMULA  plane, with or without cascade decays, for a typical choice of
+parameters {{cite:a5d0742d-4426-44aa-9c8e-25b59e2c4534}}, {{cite:dcac3567-db9f-4cfb-b737-be8352a0f08a}}. Cascade decays also present new opportunities for SUSY detection.
+Same-sign dileptons (SSD) are a very interesting signal {{cite:c45d422e-e2ea-4395-a18f-e843e750d53b}}, which
+arises naturally from FORMULA  and FORMULA  decays
+because of the Majorana character of gluinos, with very
+little background. Figure 5 gives an example.
+Eqs. (REF )–(REF ) show how a heavy gluino or squark
+can decay to a chargino
+FORMULA  and hence, via a real or virtual FORMULA , to an isolated charged
+lepton. If a gluino is
+present it can decay equally into either sign of chargino and lepton
+because it is a Majorana fermion. Hence FORMULA  or
+FORMULA  systems can decay to isolated SSD plus jets plus
+FORMULA /FORMULA / FORMULATFORMULA qqFORMULA ZiFORMULA Zi FORMULA
+
+Fig. 5. Example of same-sign dilepton in gluino-pair decay.
+Fig. 6. Same-sign dilepton signals at the Tevatron {{cite:e5985831-b815-44ec-8827-6935218fad0b}}.
+Genuinely isolated SSD backgrounds come from the production of FORMULA  or
+FORMULA  or FORMULA  (e.g. FORMULA  by gluon exchange), with cross
+sections of order FORMULA  or FORMULA  or
+FORMULA  compared to FORMULA  for gluino pair production,
+so we expect to control them with suitable cuts. Very large FORMULA 
+production gives SSD via semileptonic FORMULA -decays plus FORMULA -FORMULA  mixing, and
+also via combined FORMULA  and FORMULA  decays, but both leptons are produced in jets and can be suppressed by
+stringent isolation criteria. Also FORMULA  gives SSD via FORMULA  and FORMULA , but the latter lepton is
+non-isolated.
+So SSD provide a promising SUSY signature.
+The Tevatron can also search for trileptons{{cite:0c4decb1-361e-4efd-b6d2-3d518669a6d4}}, {{cite:a4a46943-5627-4764-ac76-0efa2492ea4a}}, arising
+for example from
+FORMULA .
+Figure 7 shows predicted trilepton rates at the Tevatron for both
+the minimal SU(5) and no-scale flipped SU(5) supergravity models;{{cite:a4a46943-5627-4764-ac76-0efa2492ea4a}}
+the flipped SU(5) model tends to give the bigger
+values.
+Gluino production rates at SSC/LHC are much higher than at the Tevatron. At
+FORMULA  TeV, the cross section is
+FORMULA 
+Many different SUSY signals have been evaluated, including
+FORMULA /FORMULA / FORMULAT + n FORMULA /pT +FORMULA /pT + n FORMULA /pT + FORMULA + ZFORMULA /pT + ZFORMULA /pT + Z + ZFORMULA g gFORMULA mg FORMULA
+Sufficiently heavy gluinos can also decay copiously to
+FORMULA -quarks {{cite:a5d0742d-4426-44aa-9c8e-25b59e2c4534}}, {{cite:6ffe177f-7d65-4193-a3b4-b39e2e433142}}:
+FORMULA 
+Then FORMULA  decay leads to multiple FORMULA  production. For a
+gluino of mass 1.5 TeV, the FORMULA  branching
+fractions are typically of order 30%, 30%,
+
+Fig. 7. Predicted Tevatron trilepton events per 100
+pbFORMULA  for minimal SU(5) and no-scale flipped SU(5) supergravity solutions
+(each represented by a point) {{cite:a4a46943-5627-4764-ac76-0efa2492ea4a}}.
+Fig. 8. SSC cross sections for various SUSY signals, after
+cuts {{cite:a5d0742d-4426-44aa-9c8e-25b59e2c4534}}.
+6%, 6%, respectively. Figure 9 illustrates SSC cross sections for multi-FORMULA 
+production via gluino pair
+decays (assuming FORMULA ). We see that
+for FORMULA  TeV the SUSY rate for FORMULA  production can greatly
+exceed the dominant SM FORMULA  mode, offering yet another signal for
+SUSY {{cite:6ffe177f-7d65-4193-a3b4-b39e2e433142}}.
+
+Fig. 9. Typical SSC rates for for FORMULA multi-FORMULA 
+states {{cite:6ffe177f-7d65-4193-a3b4-b39e2e433142}}.
+To summarize this section:
+
+Experimental SUSY particle searches have hitherto been based
+largely on FORMULA /FORMULA / FORMULATFORMULA mg, mq
+> 50FORMULA /pT FORMULA
+
+For even heavier squarks and gluinos, the cascade decays dominate
+completely and provide further exotic (multi-FORMULA  and multi-lepton)
+signatures, which will be pursued at the SSC and LHC.
+They would find spectacular events, containing several hard jets from the
+primary decay plus many hard isolated leptons (FORMULA –FORMULA 
+events per year with 3–4 such leptons), sometimes having
+multiple FORMULA  and FORMULA  hadrons in the chain, with little conventional
+background.
+
+Gluinos and squarks in the expected mass range
+will not escape detection.
+
+
+SUSY Higgs Phenomenology
+In minimal SUSY, two Higgs doublets FORMULA  and FORMULA  are needed to cancel
+anomalies and at the same time give masses to both up- and down-type
+quarks{{cite:0d109ede-6830-4b72-8b62-54443d4598e5}}. Their vevs are FORMULA  and FORMULA  where
+FORMULA  GeV is the SM vev and FORMULA  parameterizes their ratio
+(FORMULA ). There are therefore 5 physical scalar states: FORMULA 
+and FORMULA  (neutral CP-even with FORMULA ), FORMULA  (neutral CP-odd) and FORMULA . At
+tree level the scalar masses and couplings and an FORMULA -FORMULA  mixing angle FORMULA 
+are all determined by two parameters, conveniently chosen to be FORMULA  and
+FORMULA . At tree level the masses obey FORMULA .
+Radiative corrections can be big, however {{cite:ecf4c1fc-b4d4-40bb-bbc5-d01431eb8439}}. The most important new
+parameters entering here are the FORMULA  and FORMULA  masses; we neglect for
+simplicity some other parameters related to squark mixing. One-loop corrections
+give FORMULA  and FORMULA  mass shifts of order FORMULA , arising from incomplete cancellation of FORMULA  and FORMULA  loops. The
+FORMULA  and FORMULA  mass bounds get shifted up and for the typical case FORMULA  GeV,
+FORMULA  TeV (which we usually assume) we get
+FORMULA 
+There are also corrections to cubic FORMULA  couplings, to FORMULA -FORMULA 
+mixing, and smaller corrections to the FORMULA  mass. Figure 10 illustrates the
+dependence of FORMULA  and FORMULA  on FORMULA  and FORMULA .
+
+Fig. 10. FORMULA  and FORMULA  mass contours in the FORMULA  plane for (a) FORMULA  GeV and (b) FORMULA  GeV, with FORMULA  TeV.In the next-to-minimal SUSY model (NMSSM), one Higgs singlet is added{{cite:0d109ede-6830-4b72-8b62-54443d4598e5}}
+giving 7 bosons FORMULA , with
+6 parameters at tree level (because there are now more terms in the
+general scalar potential). This leads to a richer mass spectrum with
+looser limits. It is instructive to see what happens to the upper
+bound on the lightest scalar mass FORMULA , as constraints on the Higgs sector,
+the gauge sector and fermion sector are progressively relaxed while
+requiring perturbativity up to scale FORMULA  GeV and a SUSY
+scale of order FORMULA  TeV {{cite:60b1a6c0-dbe5-4802-b4fc-c615b769fb5a}}:
+FORMULA 
+What are the constraints on the principal parameters FORMULA  and FORMULA ?
+
+Perturbativity. This condition is a bit subjective. Requiring
+the FORMULA  couplings to be less than FORMULA 
+gives FORMULA  {{cite:7a8a9594-0175-427c-af2d-71e8fc7a57f8}}.
+Requiring instead (two-loop)/(one-loop)FORMULA  in the renormalization
+group equations (RGE) gives FORMULA  {{cite:58cade09-a97a-4fad-a803-2ddcc605b156}}.
+
+Proton decay. Some models require FORMULA –15 {{cite:67482ce5-4253-409d-bab8-ccef4c45d57a}},
+but a more conservative limit is FORMULA  {{cite:6ac4a29e-fe72-4f77-bdbd-04ec3732f30e}}.
+
+SUSY-GUT models {{cite:d6174f76-9eea-45a3-adcf-0f7e1aae9acc}}, {{cite:c19da845-3c4d-4ee4-abaf-d2af50954e30}}, {{cite:58cade09-a97a-4fad-a803-2ddcc605b156}}, {{cite:a4a46943-5627-4764-ac76-0efa2492ea4a}}, {{cite:62b1f29a-7715-4fbb-a16a-242c40a295a6}} find solutions
+in the range FORMULA  (with the upper bound
+from perturbativity).
+
+At LEP I, all four experiments {{cite:0713d65f-2abe-4bb9-b120-1080b90b5e90}} have searched for the processes
+FORMULA 
+with FORMULA  plus FORMULA  and FORMULA  decay
+modes. The absence of signals excludes regions of the FORMULA  plane
+FORMULA 
+Null searches for FORMULA  also exclude a region with
+FORMULA  {{cite:d1cb2d7d-7f12-43c4-8d1d-1413113d5767}}.
+
+Global electroweak analysis with MSSM{{cite:1eeeb2c9-f280-411f-b79a-2216f1e92f4d}} prefers FORMULA a few
+100 GeV, but without much statistical weight.
+
+To cancel divergences and to remain within the GUT scale,
+FORMULA –2 GeV. Combining (a)–(f), there is a general consensus that
+FORMULA 
+
+There is also indirect evidence from various quarters:
+
+The measured FORMULA  branching fraction{{cite:4b3410b0-6fb7-478c-a77c-8dad7d67e2f8}} is
+not far from the SM pred-iction and constrains possible virtual FORMULA 
+contributions, giving{{cite:6cfc806d-3e5e-4687-9203-2616e51a9c59}} FORMULA (1 GeV); this is weaker than
+Eqs. (REF )–() however.
+
+The experimental bound{{cite:cb1fb414-f6ec-44b4-ab45-676397d859bc}} FORMULA 
+is close to the SM prediction, based on FORMULA  loop calculations, setting
+stringent limits on non-SM contributions. If just FORMULA  loops are
+added, an important part of the FORMULA  plane is excluded{{cite:a246a23f-19f6-48bd-bf64-f9059a826443}}.
+However, if spartners are relatively light, additional
+FORMULA  loops may contribute significantly with either
+sign{{cite:3c77b7ab-a329-47e7-ab08-56b33406e9fd}}. We need more information about the SUSY spectrum
+to exploit this bound.
+
+Future direct searches for MSSM Higgs bosons rely on future colliders
+(apart from marginal improvements at LEP I as higher luminosity accumulates).
+Several groups{{cite:da444bc5-328d-4bcd-a776-96d41daeb5f8}}, {{cite:8b4e9076-432a-4cf2-a9be-fc89d80cb7bb}}, {{cite:d84562c1-2b2a-4edc-bdfe-3ad053b9325a}}, {{cite:2de17471-4e43-40a0-937e-362f3fa4dff6}} have studied the prospects
+for discovering the different bosons at LEP II and SSC/LHC; their results
+broadly agree.
+LEP II will have higher energy FORMULA  GeV, and should be
+able to discover FORMULA  through the range FORMULA  GeV, but will not be
+able to cover the full range of possible FORMULA . FORMULA  might be light enough
+to discover, but FORMULA  and FORMULA  are likely to be too heavy. The parameter
+sector where both FORMULA  GeV and FORMULA  will not be
+accessible — i.e. will give no LEP II Higgs signals for FORMULA  GeV.
+Searches for neutral scalars at SSC and LHC will primarily be analogous to SM
+Higgs searches (see Figs. 11–13):
+
+untagged FORMULA  signals from FORMULA  via
+top quark loops;
+
+lepton-tagged FORMULA  signals from FORMULA 
+plus associated FORMULA  or FORMULA , with leptons from FORMULA  or
+FORMULA  decays;
+
+“gold-plated” four-lepton signals from FORMULA  or
+FORMULA .
+
+Though qualitatively similar to SM signals, these will generally be smaller due
+to the different couplings that depend on FORMULA  and FORMULA .
+
+Fig. 11. Typical diagram for untagged HiggsFORMULA 
+signals.
+Fig. 12. Typical diagrams for lepton-tagged HiggsFORMULA 
+signals.
+Fig. 13. Typical diagrams for “gold-plated” four-lepton Higgs
+signals.
+For charged Higgs scalars, the only copious hadroproduction source is top
+production with FORMULA  decay (that requires FORMULA ). The
+subsequent FORMULA  decays are most readily detected in the
+FORMULA  channel (favored for FORMULA ), with FORMULA  decay
+(Fig. 14).
+
+Fig. 14. Typical diagram for FORMULA  signals from top decay via
+charged-Higgs modes.
+SM FORMULA -decays give equal probabilities for FORMULA  leptons via FORMULA , but the non-standard FORMULA  leads to
+characteristic excess of FORMULA . The strategy is to tag one top quark via
+standard FORMULA  decay and to study the FORMULA  ratio in the
+associated top quark decay (FORMULA  or FORMULA ).
+New non-SM complications must now be taken into account, however,
+especially for the neutral MSSM Higgs boson signals. New decay channels
+open in addition to the main SM modes FORMULA  and FORMULA  (and also FORMULA 
+via loops).
+
+Firstly there are decays to other Higgs scalars, FORMULA  or FORMULA  or FORMULA ; the regions where these channels are
+open are shown in Fig. 15, for FORMULA  GeV. In particular FORMULA  is
+allowed and generally dominates (suppressing all the usual SM signatures)
+everywhere except in the shaded region or near the line of coupling zeros
+labelled FORMULA . We already mentioned FORMULA  in passing; it changes the
+FORMULA  signals in a small region of the LEP I searches.
+
+Fig. 15. Allowed regions for decays to other Higgses{{cite:2de17471-4e43-40a0-937e-362f3fa4dff6}}.
+
+Secondly, there are decays to SUSY particles, especially the invisible
+mode FORMULA ; these have usually been ignored but
+could be significant{{cite:885812e4-dc25-4c84-a3d5-a3c1a994be9b}}. They could give new signals
+and they could suppress old signals. Figure 16 shows contours of FORMULA  versus FORMULA  and FORMULA ,
+the region excluded by LEP I SUSY searches being shaded (see Section 2);
+there are small regions where SUSY modes could rise to 70%–90%, severely
+suppressing standard FORMULA  signals, but they are within the reach of LEP II SUSY
+searches (dashed lines) so we shall know. Here we shall mostly ignore SUSY
+modes, arguing that they may dilute other Higgs signals but will probably not
+efface them.
+
+Fig. 16. Contours of FORMULA SUSY modes) versus FORMULA  and
+ FORMULA{{cite:885812e4-dc25-4c84-a3d5-a3c1a994be9b}}.
+
+Returning to MSSM Higgs searches at SSC/LHC{{cite:da444bc5-328d-4bcd-a776-96d41daeb5f8}}, {{cite:8b4e9076-432a-4cf2-a9be-fc89d80cb7bb}}, {{cite:d84562c1-2b2a-4edc-bdfe-3ad053b9325a}}, {{cite:2de17471-4e43-40a0-937e-362f3fa4dff6}},
+Figs. 17(a) and 17(b) show typical limits of detectability for untagged and
+lepton-tagged FORMULA  signals at SSC, assuming luminosities FORMULA  (two years of running) and FORMULA  GeV. Figure 17(c)
+shows a similar limit for the FORMULA  search (no FORMULA  signal is
+detectable). Figure 17(d) shows typical limits for detecting the FORMULA excess FORMULA  signal; here the value of FORMULA  is critical, since only
+the range FORMULA  can contribute at all. Putting all these discovery
+regions together with the LEP I and LEP II regions, we see that very
+considerable coverage of the FORMULA  plane can be expected — but
+there still remains a small inaccessible region; see Fig. 18.
+For FORMULA  GeV the inaccessible region is larger, for FORMULA  GeV it is
+smaller.
+
+Fig. 17. Typical detectability limits for (a) untagged
+FORMULA , (b) lepton-tagged FORMULA ,
+(c) FORMULA , (d) FORMULA  signals at the SSC{{cite:2de17471-4e43-40a0-937e-362f3fa4dff6}}.Fig. 18. Combined LEP and SSC discovery regions for
+FORMULA  GeV from Ref. 33; similar results are obtained by other groups {{cite:da444bc5-328d-4bcd-a776-96d41daeb5f8}}, {{cite:8b4e9076-432a-4cf2-a9be-fc89d80cb7bb}}, {{cite:d84562c1-2b2a-4edc-bdfe-3ad053b9325a}}.Emphasizing first the positive side, Fig. 19 shows how many of the MSSM scalars
+FORMULA  would be detectable, in various regions of the FORMULA 
+plane. In many regions two or more different scalars could be discovered, but
+for large FORMULA  only FORMULA  would be discoverable; in the latter region, the FORMULA 
+couplings all reduce to SM couplings, the other scalars become very heavy and
+approximately degenerate, and the MSSM essentially behaves like the SM.
+
+Fig. 19. How many MSSM Higgs bosons may be discovered (from Ref. 33).
+Turning now to the negative side of Fig. 18, the inaccessible region,
+Fig. 20 shows that different groups broadly agree on the boundary.
+This region corresponds to intermediate masses for all Higgses:
+FORMULA –115 GeV, FORMULA –160 GeV, FORMULA –160 GeV,
+FORMULA –160 GeV. Why are none detectable? What went wrong?
+It seems we are just unlucky here: the FORMULA  and FORMULA 
+couplings that control FORMULA  become weaker; the FORMULA 
+coupling that controls both FORMULA  production and two-photon decay gets
+weak; FORMULA  competition suppresses the FORMULA  signals; FORMULA  is too
+heavy and FORMULA  is suppressed. Next, is there any indirect way to
+exclude this inaccessible region? One possibility is to understand
+and exploit the FORMULA  bound better: see above. We note also
+that if FORMULA  GeV (instead of 150 GeV as in Fig. 18), the region is
+much smaller. Another possibility is to derive stronger parameter
+constraints from SUSY-GUT models, as we now discuss.
+
+Fig. 20. Different groups agree about inaccessible region.
+In minimal SUSY-GUT models with FORMULA  TeV, the RGE
+have a solution dominated by the infrared fixed point of the top
+Yukawa coupling  FORMULA{{cite:bfec3e97-d60a-40b6-9f43-3f19452970bd}}.
+For large FORMULA ,
+FORMULA  is plausibly large at the GUT scale FORMULA , in which case
+it evolves rapidly toward an infrared fixed point at low mass
+scales{{cite:58cade09-a97a-4fad-a803-2ddcc605b156}}, {{cite:62b1f29a-7715-4fbb-a16a-242c40a295a6}}, {{cite:bfec3e97-d60a-40b6-9f43-3f19452970bd}}, {{cite:49c123b8-a070-49e2-ab8d-346a558e16e7}}, {{cite:f3f66501-1ac4-44d7-8b87-cb82927bbc40}}, {{cite:1081648a-932c-4f0b-acdb-00253a82034c}}, according to
+the one-loop renormalization group equation
+FORMULA 
+with FORMULA , FORMULA , FORMULA . Thus FORMULA  evolves toward a fixed
+point close to
+where the quantity in square brackets in Eq. (REF ) vanishes.
+Then the known gauge couplings determine the running
+mass FORMULA  and hence the pole mass
+FORMULA ; two-loop
+evaluations{{cite:58cade09-a97a-4fad-a803-2ddcc605b156}} give
+FORMULA 
+If FORMULA  is below the fixed point, its convergence to the fixed
+point is more gradual and Eq. (REF ) does not necessarily apply.
+But in practice large FORMULA  is favored in many SUSY-GUT solutions;
+large FORMULA  facilitates FORMULA 
+Yukawa unification{{cite:bb587fe0-6ecc-4f6c-85b8-4476d672602f}} and allows intricate relationships between fermion
+masses and mixings. It is therefore interesting to pursue the phenomenological
+implication of Eq. (REF ) {{cite:73c87471-7a88-40e8-971f-068267dce47e}}.
+Figure 21 shows how FORMULA  and FORMULA  values
+relate to FORMULA  and
+FORMULA  in SUSY-GUT solutions with Yukawa unification; the lower (upper)
+shaded
+branches contains the FORMULA  fixed-point solutions. There is a small
+region at the upper right where both fixed point solutions are simultaneously
+satisfied. Figure 22 shows that
+the FORMULA  fixed-point behavior is insensitive to GUT threshold corrections
+FORMULA  in the FORMULA  ratio. The
+sensitivity of the fixed point to threshold corrections is decreased
+for larger values of FORMULA  where the solutions tend to have a
+stronger fixed point character, as indicated by Eq. (REF ). The
+perturbative limits of the Yukawa couplings near their Landau poles are
+shown in Fig. 22(a) as the dashed lines FORMULA  and
+FORMULA .
+
+Fig. 21: Contours of constant Yukawa couplings
+FORMULA 
+at the GUT scale in the (FORMULA ) plane,
+obtained from solutions to the RGE with
+FORMULA  unification imposed.
+The GUT scale Yukawa coupling contours are close together for
+large FORMULA . The
+fixed points describe the values of the Yukawa couplings at
+the electroweak scale for FORMULA  and
+FORMULA .
+Fig. 22: RGE results for
+FORMULA  with the boundary condition FORMULA 
+GeV.
+(a) GUT threshold corrections to Yukawa coupling unification.
+The solutions strongly exhibit
+a fixed point nature, for threshold
+corrections FORMULA .
+Taking a larger supersymmetric threshold FORMULA 
+or increasing FORMULA 
+moves the curves to the right, so that the fixed point condition becomes
+stronger.
+(b) Evolution of the top quark Yukawa coupling for
+FORMULA . The dashed line indicates
+FORMULA  which gives an
+approximation to the electroweak scale value of FORMULA  with accuracy of
+order 10%.There are immediate implications for phenomenology{{cite:73c87471-7a88-40e8-971f-068267dce47e}}. If
+FORMULA  GeV, Eq. (REF ) constrains
+FORMULA  to values near 1, where FORMULA  is relatively light (recall the
+tree-level relation FORMULA ) and the couplings of FORMULA  are close
+to those of a Standard Model Higgs boson.
+LEP Higgs searches{{cite:0713d65f-2abe-4bb9-b120-1080b90b5e90}}, {{cite:23138d88-e343-4e2d-815c-3f86d88023e7}} exclude a region of the
+FORMULA  plane shown in Fig. 23(a): this translates to forbidden
+regions in FORMULA  in Fig. 23(b). We see that the fixed-point
+condition
+predicts FORMULA  GeV, FORMULA  GeV, FORMULA  GeV; correspondingly
+FORMULA  GeV, FORMULA  GeV. If in fact FORMULA  GeV, then
+FORMULA  GeV as shown in Fig. 23, and FORMULA  will be discoverable at LEP II
+(but none of the
+other Higgs bosons will). The discovery limits at SSC/LHC (taken here from
+Ref. 33) are shown in Fig. 24; we see that each of the five Higgs bosons might be
+discoverable there, but not all at once, and possibly none of them at all.
+
+Fig. 23: FORMULA  fixed-point solution regions allowed by
+the LEP I data: (a) in the FORMULA  plane, (b) in the FORMULA  plane. The top quark masses are FORMULA , correlated to
+FORMULA  by Eq. (REF ).Fig. 24: SSC/LHC signal detectability regions,
+compared with the LEP I allowed region of FORMULA  fixed-point solutions from
+Fig. 3(a) and the
+probable reach of LEP II. The top quark masses are FORMULA .Finally we may ask what a future FORMULA  collider could do. We have seen that
+part of the MSSM parameter space is inaccessible to FORMULA  collisions at
+FORMULA  GeV, FORMULA , for FORMULA  GeV and FORMULA  TeV. But a possible future linear collider with higher energy and
+luminosity could in principle cover the full parameter space. In is interesting
+to know what are the minimum FORMULA  and FORMULA  requirements for complete coverage,
+for given FORMULA . This question was answered in Ref. 42, based on the conservative assumption that only the channels
+FORMULA  would be searched, with no special
+tagging. The results are shown in Fig. 25. We have estimated that including all
+FORMULA  and FORMULA  decay channels plus
+efficient FORMULA -tagging could increase the net signal FORMULA  by a factor 6 and the
+net background FORMULA  by a factor 4, approximately; this would increase the
+statistical significance FORMULA  by a factor 3 and hence reduce the
+luminosity requirement by a factor 9 or so. In this optimistic scenario, the
+luminosity scale in Fig. 25 would be reduced by an order of magnitude.
+
+Fig. 25. Minimal requirements for a “no-lose” MSSM
+Higgs search at a future FORMULA  collider based on FORMULA  signals
+alone. Curves of minimal FORMULA  pairings are shown for FORMULA , 150,
+200 GeV; the no-lose region for FORMULA  GeV is unshaded {{cite:fbd4d25f-bf1d-4afc-a92e-2124d7742b84}}.To summarize this Section:
+
+The MSSM Higgs spectrum is richer but in some ways more elusive than the
+SM case.
+
+At least one light scalar is expected.
+
+As FORMULA  this light scalar behaves like the SM scalar while the
+others become heavy and degenerate.
+
+LEP I, LEP II and SSC/LHC will give extensive but not quite complete
+coverage of the MSSM parameter space.
+
+For some parameter regions, several different scalars are detectable, but
+usually one or more remain undetectable.
+
+The FORMULA  bound has the potential to exclude large areas of
+parameter space (possibly including the inaccessible region) but is presently
+subject to some uncertainty.
+
+A higher-energy FORMULA  collider could cover the whole MSSM parameter
+space, discovering at least the lightest scalar FORMULA .
+
+FORMULA  fixed-point solutions in SUSY-GUT
+models are theoretically attractive and also
+strongly constrain the phenomenology; they
+predict FORMULA  GeV; if FORMULA 
+GeV, they exclude the inaccessible region and
+predict that FORMULA  will be discovered at LEP.
+
+Acknowledgments: This work was supported in part by the University of Wisconsin Research
+Committee with funds granted by
+the Wisconsin Alumni Research Foundation, in part by the U.S. Department of
+Energy under contract no. DE-AC02-76ER00881, and in part by the Texas National
+Laboratory Research Commission under grant no. RGFY93-221.
+References
+
+00.
+G.G. Ross and R.G. Roberts, Nucl. Phys. ¦B377¦, 571 (1992),
+and references therein.
+S. Kelley ¦et al.¦, Texas A&M preprint CTP-TAMU-16-92.
+V. Barger, M.S. Berger, and P. Ohmann, Phys. Rev. ¦D47¦,
+1093 (1993), and unpublished calculations.
+P. Nath and R. Arnowitt, NUB-TH-3056/92; J. Lopez ¦et
+al.¦, Phys. Lett. ¦B299¦, 262 (1993).
+J. Hisano, H. Murayama, and T. Yanagida, Tohoku preprint TU-400
+(1992).
+H. Baer and X. Tata, FSU-HEP-921222.
+H. Baer et al., Phys. Rev. ¦D46¦, 1067 (1992).
+H. Baer, X. Tata, and J. Woodside, Phys. Rev. ¦D41¦, 906
+(1990); ¦D42¦, 1568 (1991); ¦D45¦, 142 (1992); H. Baer ¦et al.¦,
+Phys. Rev. ¦D46¦, 303 (1992).
+UA1 collaboration, Phys. Lett. ¦B198¦, 261 (1987); UA2
+collaboration, ¦ibid.¦ ¦B235¦, 363 (1990); CDF collaboration, Phys. Rev. Lett. ¦69¦, 3439 (1992).
+H. Baer, V. Barger, D. Karatas, X. Tata, Phys. Rev. ¦D36¦,
+96 (1987).
+H. Baer, F. Paige, S. Protopopescu, and X. Tata, FSU-HEP-930329.
+V. Barger, W.-Y. Keung, R. J. N. Phillips, Phys. Rev. Lett. ¦55¦, 166 (1985); R. Barnett, J. Gunion, H. Haber, 1988 Snowmass Summer
+Study, ed. by S. Jensen, World Scientific (1989).
+H. Baer ¦et al.¦, FSU-HEP-901110, ¦Proc. 1990 DPF
+Summer Study at Snowmass¦, ed. by E. Berger, World Scientific (1992).
+P. Nath and R. Arnowitt, Mod. Phys. Lett. ¦A2¦, 33 (1987);
+H. Baer and X. Tata, Phys. Rev. ¦D47¦, 2739 (1993).
+J. L. Lopez et al., Texas A&M preprint CTP-TAMU-76/92.
+V. Barger, R.J.N. Phillips and A.L. Stange, Phys. Rev. ¦D45¦, 1484 (1992).
+J. F. Gunion, H. E. Haber, G. L. Kane and S. Dawson, ¦The
+Higgs Hunter's Guide¦, Addison-Wesley, Reading, MA (1990).
+S. P. Li and M. Sher, Phys. Lett. ¦B140¦, 339 (1984);
+J. F. Gunion and A. Turski, Phys. Rev. ¦D39¦, 2701,
+¦D40¦, 2325, 2333 (1989);
+M. S. Berger, Phys. Rev. ¦D41¦, 225 (1990);
+Y. Okada ¦et al.¦, Prog. Theor. Phys. ¦85¦, 1 (1991);
+Phys. Lett. ¦B262¦, 54 (1991);
+H. Haber and R. Hempfling, Phys. Rev. Lett. ¦66¦, 1815 (1991);
+J. Ellis ¦et al.¦, Phys. Lett. ¦B257¦, 83 (1991);
+R. Barbieri ¦et al.¦, Phys. Lett. ¦B258¦, 167 (1991);
+J. Lopez and D. V. Nanopoulos, Phys. Lett. ¦B266¦, 397 (1991);
+A. Yamada, Phys. Lett. ¦B263¦, 233 (1991);
+M. Drees and M. N. Nojiri, Phys. Rev. ¦D45¦, 2482 (1002);
+R. Hempfling, SCIPP-91/39;
+M. A. Diaz and H. E. Haber, Phys. Rev. ¦D45¦, 4246 (1992);
+D. M. Pierce, A. Papadopoulos and S. Johnson, Phys. Rev. Lett. ¦68¦, 3678
+(1992).
+T. Moroi and Y. Okada, Phys. Lett. ¦B295¦, 73 (1992);
+G. L. Kane, C. Kolda and J. D. Wells, Phys. Rev. Lett. ¦70¦,
+2686 (1993);
+W. T. A. ter Veldhuis, Purdue preprint PURD-TH-92-11;
+J. R. Espinosa and M. Quiros, Phys. Lett. ¦B302¦, 51 (1992);
+T. Elliott, S. F. King and P. L. White, ibid. ¦B305¦,71 (1993);
+U. Ellwanger, Phys. Lett ¦B303¦, 271 (1993).
+V. Barger, J. L. Hewett and R. J. N. Phillips, Phys. Rev. ¦D41¦, 3421 (1990).
+S. Dimopoulos, L. Hall and S. Raby, Phys. Rev. ¦D45¦ 4192; ¦D46¦ 4793 (1992).
+ALEPH Collaboration, D. Decamp ¦et al.¦, Phys. Lett. ¦B246¦, 306
+(1990); ¦B265¦,
+475 (1991);
+DELPHI Collaboration: P. Abreu ¦et al.¦, Phys. Lett. ¦B245¦, 276
+(1990); Nucl. Phys. ¦B373¦, 3 (1992);
+L3 Collaboration: B. Adeva ¦et al.¦, Phys. Lett. ¦B251¦, 311 (1990);
+¦B283¦, 454 (1992);
+OPAL Collaboration: M. Z. Akrawy ¦et al.¦, Z. Phys. ¦C49¦, 1 (1991).
+M. A. Diaz and H. E. Haber, Phys. Rev. ¦D45¦, 4246 (1992).
+J. Ellis, J. L. Fogli and E. Lisi, CERN-TH.6643/92.
+ALEPH collaboration, Phys. Lett. ¦B298¦ 479 (1993).
+G.J Isidori, Phys. Lett. ¦B298¦ 409 (1993);
+J. L. Hewett, ANL-HEP-CP-92-125.
+CLEO collaboration, report to Washington APS meeting
+April 1993.
+J. L. Hewett, Phys. Rev. Lett. ¦70¦ 1045 (1993); V. Barger,
+M. S. Berger and R. J. N. Phillips, ibid. ¦70¦ 1368 (1993).
+S. Bertolini et al., Nucl. Phys. ¦B353¦ 591 (1991);
+R. Barbieri and G. F. Giudice, CERN-TH.6830/1993.
+H. Baer et al., Phys. Rev. ¦D46¦, 1067 (1992).
+J. Gunion et al., Phys. Rev. ¦D46¦, 2040, 2052 (1992);
+¦D47¦, 1030 (1993).
+Z. Kunszt and F. Zwirner, Nucl. Phys. ¦B46¦, 4914
+(1992).
+V. Barger, K. Cheung, R. J. N. Phillips, and A. L. Stange, Phys. Rev. ¦D46¦, 4914 (1992).
+H. Baer et al., Phys. Rev. ¦D47¦ 1062 (1993).
+B. Pendleton and G. G. Ross, Phys. Lett. ¦98B¦, 291
+(1981); C. T. Hill, Phys. Rev. ¦D24¦, 691 (1981).
+H. Arason, et al., Phys. Rev. Lett. ¦67¦, 2933 (1991); Phys. Rev. ¦D47¦, 232 (1993).
+C. D. Froggatt, I. G. Knowles and R. G. Moorhouse,
+Phys. Lett. ¦B249¦, 273 (1990);
+Phys. Lett. ¦B298¦, 356 (1993).
+M. Carena, S. Pokorski, and C. E. M. Wagner, Munich
+preprint MPI-Ph/93-10.
+M. Chanowitz, J. Ellis and M. Gaillard, Nucl. Phys. ¦B128¦,
+506 (1977).
+V. Barger et al., University of
+Wisconsin-Madison preprint MAD/PH/755.
+T. Mori, report to Dallas Conference 1992; E. Gross
+and P. Yepes, Int. J. Mod. Phys. ¦A8¦, 407 (1993).
+V. Barger, K. Cheung, R. J. N. Phillips, and A. L. Stange,
+Phys. Rev. ¦D47¦ 3041 (1993).
+

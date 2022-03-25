@@ -1,0 +1,695 @@
+
+Ordering mechanisms in confined diblock copolymersYoav Tsori ESPCI, 10 Rue Vaquelin, Paris
+75231 Cedex 05, France  and David AndelmanSchool of
+Physics and Astronomy, Raymond and Beverly Sackler Faculty of
+Exact Sciences, Tel Aviv University, Ramat Aviv, Tel Aviv 69978
+Israel. E-mail: andelman@tau.ac.il16/7/2002We present several ordering mechanisms in diblock copolymers. For
+temperatures above the order-disorder temperature and in the weak
+segregation regime, a linear response theory is presented which
+gives the polymer density in the vicinity of confining flat
+surfaces. The surfaces are chemically patterned where different
+regions attract different parts of the copolymer chain. The
+surface pattern or template is decomposed into its Fourier modes,
+and the decay of these modes is analyzed. The persistence of the
+surface pattern into the disordered bulk is given for several
+types of patterns (e.g. uniform and striped surface). It further
+is shown that complex morphology can be induced in a thin film
+even though the bulk is disordered. We next consider lamellar
+diblock copolymers (low temperature regime) in the presence of a
+striped surface. It is shown that lamellae will appear tilted
+with
+respect to the surface, if the surface periodicity is larger than
+the bulk one. The lamellae close to the surface are strongly
+distorted from their perfect shape. When the surface and lamellar
+periodicities are equal lamellae form perpendicular to the
+surface. Lastly, the transition from parallel to perpendicular
+lamellae to the surfaces in a thin film is presented. The
+transition between the two states depends on the surface
+separation and strength of surface interactions. We further
+calculate the phase diagram in the presence of perpendicular
+electric field favoring perpendicular ordering. In the strong
+segregation limit we introduce a simple model to calculate the
+phase diagram of the fully parallel, fully perpendicular and
+mixed
+(parallel and perpendicular) states.
+keywords: block copolymers, lamellar ordering, electric
+fields.
+
+Introduction
+Block copolymers (BCP) are polymeric systems where each polymer
+chain is composed of several chemically distinct homopolymer
+blocks, connected together by a covalent bond. At high
+temperatures, BCP have a disordered phase, while at low
+temperatures, the macroscopic phase separation is hindered
+because
+the two (or more) immiscible sub-chains cannot be detached from
+each other as they try to phase separate. Hence, BCP phase
+separate into a variety of micro-ordered structures, with
+characteristic size which depends on the BCP chain length
+and other system parameters {{cite:911dc341-a4e8-4b66-9032-6555161b6cde}}. The morphology and
+structure of the
+prevailing phase depends on the lengths of constituent sub-chains
+(also called blocks), the chemical interactions between the
+blocks, the temperature and the chain architecture. The BCP
+micro-domain size ranges from about 10 to several hundreds
+nanometers. This fundamental periodicity should be distinguished
+from the macro-domain size of several micrometers where one
+ordered phase (e.g., a lamellar phase) breaks into many domains
+(or grains) each having of a different orientation and separated
+by grain boundaries.
+Block copolymers can be viewed as composite materials from
+the mechanical point of view {{cite:6321fd8c-f967-4222-a0de-10d81bfb7099}}. By connecting
+together a stiff (rod-like) block with a flexible (coil) block,
+one can obtain a material which is rigid, but not brittle
+{{cite:d37f8909-23c0-4e13-85fb-b11a39f2e7c9}}. Moreover, the interplay between flexibility and
+toughness can be controlled by temperature. Different chain
+architecture (ring or star-like) may lead to novel mechanical and
+flow properties {{cite:7589745c-f138-4c44-ae9f-8c7e6549c0ad}}. In addition, BCPs have many
+industrial uses because the length scales involved are smaller or
+comparable to the wavelength of light. These applications include
+waveguides, photonic band gap materials and other optoelectronic
+devices {{cite:f1ebbdac-9188-44fc-aea5-9b9b0319df4f}} and dielectric mirrors {{cite:b4c492bf-b3a8-45fa-814f-ad53e634fcdb}}.
+Recent studies have highlighted the role of an applied electric
+field in creating well aligned BCP structures. An electric field
+has been applied to a polymer film confined by one smooth and one
+topographically-patterned electrodes. The field creates an
+instability in the polymer film which replicates the pattern on the
+electrode {{cite:b7e84b1a-bed2-4d26-a9c8-1b35b1b397e4}}. In BCPs, electric field is effective in
+aligning micro-domains in a desired direction, as has been shown
+theoretically {{cite:54846bdd-e668-4e59-9f73-31a88b1f72db}}, {{cite:f65eba49-a78a-47f0-bc51-fadd6edc82f9}}, {{cite:dc53d506-7ff4-47b5-a7f8-26b930728656}} and experimentally
+{{cite:b4a6e0b1-d49b-48a8-8f51-3881837ff4a0}}, {{cite:595d6ccb-7012-46bc-88a5-e03e91deb6a9}}. In a thin film, for example, further removal of
+one polymer component can facilitate the creation of
+anti-reflection coatings for optical surfaces {{cite:779a3e49-02e6-404b-86ba-00b9534ffdb1}} or a
+surface with highly ordered features. Lastly, cylindrical domains
+of polystyrene (PS)/polymethylmethacrylate (PMMA) diblock
+copolymer have been used by Russell, Steiner, Thurn-Albrecht and
+co-workers as a basis to an array of long and aligned conducting
+domains (nano-wires) with typical size in the range of 100 nm
+{{cite:2e8d4ef6-8152-4b20-aab2-13030db60168}}.
+The present paper deals with several mechanisms that can be used
+to achieve a desired ordering in a BCP melt. We consider in Sec.
+2 thin films of A/B BCPs between two flat, parallel surfaces. In the
+disordered phase we give a description of the polymer density as
+a function of a pre-designed and fixed chemical pattern on the
+surface. The decay of surface FORMULA -modes into the bulk is analyzed
+on the level of a linear-response theory. The influence of
+confining surfaces on lamellar BCPs is studied in Sec. 3. We find
+that for a one dimensional striped surface pattern (composed of
+regions of alternating A and B preference) the lamellae are
+tilted
+with respect to the parallel surfaces. In this tilted state the
+lamellae adjust their periodicity to the surface one, leading to
+a better surface coverage. If the surface and lamellar
+periodicities are equal, the lamellae are formed perpendicular to
+the surfaces. Alignment of confined lamellae by external electric
+fields is studied in Sec. 4. It is shown that because different
+polymers have different values of the dielectric constant, the
+electrostatic energy favors an orientation of lamellae in a
+direction perpendicular to the confining electrodes. This
+electrostatic tendency can be used to overcome interfacial
+interactions with the bounding electrodes and align structures in
+a desired direction.
+
+Confined di-BCP in the disordered phase
+Let us consider first an A/B di-BCP melt in the high temperature
+and disordered state, above the Order-Disorder Temperature (ODT)
+defined below. The BCP is confined by one or two flat, chemically
+patterned surfaces. Although the bulk BCP is disordered above the
+ODT, there is an oscillatory decay of the A/B block correlations
+and resulting ordering induced by the surface is rather complex.
+In the vicinity of the ODT this ordering can become long range
+leading to a strong effect. With the definition of the order
+parameter FORMULA  as the local
+deviation of the A monomer concentration from its average, the
+bulk free energy can be written as:
+FORMULA 
+FORMULA  is the fundamental periodicity in the system, and
+is expressed by the polymer radius of gyration FORMULA  through
+FORMULA . The parameter FORMULA  measures the distance from the
+critical point (FORMULA ) in terms of the Flory parameter
+FORMULA . At the critical point (or equivalently the ODT)
+FORMULA . In addition, FORMULA  is the Kuhn statistical
+segment length, FORMULA  and FORMULA  is
+the chain density per unit volume. FORMULA  and FORMULA  are the
+three- and four-point vertex functions calculated by Leibler
+{{cite:84bc1cee-6d5f-4910-96f2-69f2c587f80e}}. Below we restrict ourselves to lamellar phases
+of symmetric BCPs (FORMULA , FORMULA ), and set for
+convenience FORMULA  throughout the paper.
+BCPs {{cite:632ee0b0-8642-49c8-abb4-ec9829ad0594}}, {{cite:7c1eef9c-0606-430c-885d-c69c07fc7e21}}, {{cite:5ae21d51-ce41-4090-bd0a-960245af12ac}} and other systems with spatially
+modulated phases {{cite:237c835c-6cd5-44ae-b230-bc7bcf75fb7c}}, {{cite:d06eb789-e9c3-4277-947c-53795506d138}} have been successfully
+described by Eq. (REF ) or similar forms of free energy
+functionals. The free energy, Eq. (REF ), describes a system
+in the disordered phase having a uniform FORMULA  for
+FORMULA  (positive FORMULA ), while for FORMULA 
+(negative FORMULA ), the system is in the lamellar phase for
+FORMULA , FORMULA , and can be described approximately by a
+single FORMULA -mode FORMULA . The
+amplitude of the sinusoidal modulations is given by
+FORMULA .
+The validity of Eq. (REF ) is limited to a region of the phase
+diagram close enough to the critical point where the expansion in
+powers of FORMULA  and its derivatives is valid, but not too close
+to it, because then critical fluctuations become important
+{{cite:b4a86eb9-9fff-44eb-a282-b07948c9248e}}, {{cite:0f1f12a7-ffbc-43e2-a172-8b34b6596920}}. This limit employed hereafter is called the
+weak segregation limit.
+The presence of chemically heterogeneous surfaces is modeled by
+adding short-range surface interactions to the free energy of the
+form,
+FORMULA 
+The integration is carried out over the position of the confining
+surfaces parameterized by the vector FORMULA . The surface
+field FORMULA  has an arbitrary but fixed spatial
+variation and is coupled linearly to the BCP surface
+concentration
+FORMULA . Preferential adsorption of the A block
+(FORMULA ) onto the entire surface is modeled by a
+constant
+FORMULA  surface field, resulting in parallel-oriented layers
+(a
+perpendicular orientation of the chains). One way of producing
+such a surface field in experiments is to coat the substrate with
+random copolymers {{cite:037963cd-40b0-43fc-879a-0dda524d532b}}, {{cite:fba08554-a89f-4fe8-930a-a38ea8913253}}. If the pattern is
+spatially modulated, FORMULA , then the A and B
+blocks are attracted to different regions of the surface. The
+coefficient of the FORMULA  term in Eq. (REF ) is taken to be
+a constant surface correction to the Flory parameter FORMULA 
+{{cite:7e1b17f4-65d7-47a8-9c52-9b515a223aba}}, {{cite:b0d6f3bc-000b-434b-a5aa-366aff2091fa}}. A positive FORMULA  coefficient corresponds
+to
+a suppression of surface segregation of the A and B monomers.
+For simplicity we consider first BCP confined by one
+surface located at FORMULA  as is depicted in Fig. 1 (a). A
+generalization to two parallel surfaces is straightforward
+and will be given later. The surface chemical pattern
+FORMULA  can be decomposed in terms
+of its FORMULA -modes
+FORMULA 
+where FORMULA , and
+FORMULA  is the mode amplitude. Similarly, FORMULA  can be
+written as a sum
+FORMULA 
+Close to the ODT the free energy is stable to second order
+in FORMULA , and higher order terms (i.e. the FORMULA  term)
+can be neglected. Then FORMULA  is inserted into Eq.
+(REF ) and an integration over the FORMULA  and FORMULA  coordinates
+is carried out.
+Minimization with respect to FORMULA  yields the
+Euler-Lagrange equation
+FORMULA 
+Note that the equation is linear and that the Fourier harmonics
+FORMULA  are not coupled. The boundary conditions are
+rather
+complicated because they couple the value of the amplitude and
+its
+derivatives at the surface. They result from minimization of the
+full free energy expression, Eqs. (REF ) and (REF )
+FORMULA 
+Since Eq. (REF ) is linear, its solution is a sum of
+exponentials,
+FORMULA 
+where the modulation constant FORMULA  and the amplitude
+FORMULA  are given by
+FORMULA 
+In the above FORMULA  ensuring that FORMULA  as FORMULA . This restricts the solution
+FORMULA  to be a sum of only two (out of four) exponential
+terms.
+The two lengths, FORMULA  and
+FORMULA , correspond to the exponential
+decay and oscillation lengths of the FORMULA -modes, respectively.
+For fixed FORMULA , FORMULA  decreases and FORMULA  increases
+with
+increasing FORMULA . Close to the ODT and for FORMULA  we find finite
+FORMULA  and FORMULA . However, all
+FORMULA -modes in the band FORMULA  are equally “active”, i.e.,
+these modes decay to zero very slowly in the vicinity of the ODT
+as FORMULA : FORMULA  and
+FORMULA  is finite. Therefore, the propagation of the surface
+imprint (pattern) of FORMULA -modes with FORMULA  into the bulk can
+persist to long distances, in contrast to surface patterns with
+FORMULA  which persist only close to the surface. The FORMULA  mode
+has both lengths FORMULA  diverging as
+FORMULA  for FORMULA .
+In Fig. 2 we give examples of the polymer morphologies in the
+case of three simple surface patterns. A uniform surface [in (a),
+FORMULA  is constant] causes exponentially decaying
+density modulations to propagate in the FORMULA -direction. A striped
+surface [in (b), FORMULA ] creates a disturbance
+that is periodic in the FORMULA -direction, while decays exponentially
+in the FORMULA -direction. The combined surface pattern [in
+(c), FORMULA ] induces density
+modulations which are the sum of the ones in (a) and (b).
+A more complex chemical pattern, shown in Fig. 3 (a), consists of
+V shaped stripes on the FORMULA  surface. The polymer density in
+parallel planes with increasing distance from the surface is
+shown in (b) and (c). Note how the frustration induced by the
+tips of surface chemical pattern [in (a)] is relieved as the
+distance from the surface increases. Surprisingly, similar
+morphology is observed when two grains of lamellar phase meets
+with a tilt angle, creating a tilt grain boundary in bulk
+systems.
+Our treatment of confined BCP can be easily generalized to the
+case of two flat parallel surfaces {{cite:1e5d5335-aa7f-48ee-8e9d-659403411800}}. The governing
+equation is still Eq. (REF ), but now there are four
+boundary conditions instead of the two in Eqs. (REF ) and
+(). Figure 4 shows how two simple surface patterns can
+be
+used to achieve a complex three-dimensional polymer morphology,
+even though the melt is in its bulk disordered phase. The stripes
+on the two surfaces are rotated by 90FORMULA  with respect to
+each other. A symmetric “checkerboard” morphology appears in
+the mid-plane.
+Up to this point, the BCP melt was assumed to be in its bulk
+disordered phase (above the bulk ODT point). When a melt in the
+lamellar phase (below ODT) is confined in a thin film, the
+morphology is dictated by a complex interplay between the natural
+periodicity and the imposed film thickness.
+
+Confined lamellar BCP
+In this section we describe the ordering of lamellar BCPs
+confined by one or two surfaces. The phase behavior of thin BCP
+films in the lamellar phase subject to uniform surface
+fields has been investigated numerically using self-consistent
+field (SCF) theory {{cite:3674bb9d-b6f6-4ada-912d-f236870202f0}}, {{cite:d57ffd0c-b269-4fba-a653-a3b388ebda0c}} and Monte-Carlo
+simulations {{cite:1c1e4f43-7750-429e-8501-9cc0d23a7019}}, {{cite:3c5a7391-bbdc-4924-b619-ce0c4a8483d0}}, and was found to consist of
+parallel, perpendicular and mixed lamellar phase denoted
+FORMULA , LFORMULA  and FORMULA , respectively. The latter
+FORMULA  phase has parallel lamellae extending from one surface,
+which are jointed in a T-junction defect with perpendicular
+lamellae extending from the opposite surface
+{{cite:de2008bb-19ae-4637-b9e4-f3e64d58c881}}, {{cite:21b420fb-0ee2-45fc-b077-9d9f4b7d6fcd}}. At a given inter-surface spacing,
+increasing the (uniform) surface interactions promotes a parallel
+orientation with either A-type or B-type monomers adsorbed onto
+the surface. However, if the spacing FORMULA  between the surfaces is
+incommensurate with the lamellar periodicity, or the
+incompatibility FORMULA  is increased, a perpendicular orientation
+is favored {{cite:e88577ff-1e9c-4916-afe6-0aaa8dac49bc}}.
+In the treatment given below, a new effect can be observed when
+the surfaces are taken to be non-uniform, “striped”, with
+regions of alternating preferences to the A and B blocks [see
+Fig. 1 (c)]. The stripe periodicity FORMULA  is assumed to be larger
+than the natural (bulk) periodicity, FORMULA , and the stripes
+are modeled by
+FORMULA 
+and are translational invariant in the FORMULA -direction. The surface
+FORMULA -mode is FORMULA .
+Contrary to the system above the ODT, a linear response theory
+assuming small order parameter as a response to the surface field
+is inadequate here, since the bulk phase has an inherent
+spatially
+varying structure. The surface effects are contained in the
+correction to the order parameter
+FORMULA 
+where FORMULA  is a “tilted” bulk lamellar phase given by
+FORMULA 
+The bulk ordering is depicted schematically as tilted lamellae in
+Fig. 1 (c). For the correction order parameter FORMULA  we
+choose
+FORMULA 
+This correction describes a lamellar ordering perpendicular to
+the surface, and commensurate with its periodicity
+FORMULA . The overall morphology of the lamellae is a
+superposition of the correction field FORMULA  with the
+tilted bulk phase, having a periodicity FORMULA . The region where
+the commensurate correction field FORMULA  is important is
+dictated by the amplitude function FORMULA . The total free energy
+FORMULA  is now expanded about its bulk value FORMULA  to
+second order in FORMULA . The variational principle with
+respect to FORMULA  yields a master equation:
+FORMULA 
+with parameters FORMULA , FORMULA  and FORMULA  given by:
+FORMULA 
+This linear equation for FORMULA  is similar in form to Eq.
+(REF ) describing the density modulation of a BCP melt in
+the disordered phase. The lamellar phase is non-uniform and this
+results in a FORMULA -dependency of the term in square brackets.
+The above equation is readily solved using the proper boundary
+conditions (for more details see refs. {{cite:b0d6f3bc-000b-434b-a5aa-366aff2091fa}}, {{cite:63e588de-c4f5-4d63-b0c2-7a37f995d0df}}).
+In Fig. 5 we present results for a BCP melt confined by one
+sinusoidally patterned surface,
+FORMULA , with no
+average preference to one of the blocks,
+FORMULA ,
+for several values of surface periodicity FORMULA  and for fixed
+value of the Flory parameter FORMULA . The main
+effect of increasing the surface periodicity FORMULA  with respect
+to FORMULA  is to stabilize tilted lamellae, with increasing
+tilt angle. Note that even for FORMULA  [Fig. 5a]
+yielding no tilt, the perpendicular lamellae have a
+different structure close to the surface as is induced by
+the surface pattern. Although the surface interactions are
+assumed to be strictly local, the connectivity of the
+chains causes surface-bound distortions to propagate into
+the bulk of the BCP melt. In particular, this is a strong effect
+in the
+weak-segregation regime we are considering.
+So far in this section we have considered the semi-infinite
+problem of a BCP melt confined by one patterned surface. It is of
+experimental and theoretical interest to study thin films of BCP
+when they are confined between a heterogeneous (patterned)
+surface
+and a second chemically homogeneous surface. This situation is
+encountered when a thin BCP is spread on a patterned surface. The
+second interface is the film/air interface and is homogeneous.
+Usually the free surface has a lower surface tension with one of
+the two blocks. This bias can be modeled by adding a constant
+FORMULA  term to the FORMULA  surface field. For simplicity,
+we assume that the surface at FORMULA  has purely
+sinusoidal
+stripes while at FORMULA  the surface is attractive to one
+of
+the A/B blocks with a constant preference:
+FORMULA 
+A neutral surface at FORMULA  is obtained as a special
+case with FORMULA .
+The expression (REF ) for the bulk
+tilted phase is modified (FORMULA ) in order
+to match the stripe surface pattern at FORMULA ,
+FORMULA 
+The homogeneous surface field at FORMULA  induces a
+lamellar layering parallel to the surface, since the two
+A/B blocks are covalently linked together. The simplest
+way to account for this layering effect is
+to include an FORMULA -independent term FORMULA  in
+our ansatz,
+Eq. (REF ), for the order parameter:
+FORMULA 
+The tilted lamellar phase confined by one homogeneous and one
+patterned surface is a generalization of the mixed (perpendicular
+and parallel) lamellar phase, usually referred to as FORMULA . The
+latter morphology occurs when the surface imposed periodicity
+FORMULA  is equal to the bulk periodicity FORMULA . This “T-junction”
+morphology, shown in Fig. 6, has perpendicular lamellae extending
+from the patterned surface. The homogeneous field at the opposite
+surface favors a parallel orientation of the lamellae. The
+crossover region between the two orientations is found in the
+middle of the film, and its morphology depends on temperature
+(the
+FORMULA  parameter). The effect of the homogeneous field is
+evident,
+as parallel ordering extends from the top surface. We see here
+that strong enough modulated surface fields stabilize the tilted
+lamellar phases and, in particular, the FORMULA  phase.
+In the discussion above we have considered ordering mechanisms
+where the interaction of the polymers with the confining surfaces
+is mediated to regions far from the surfaces because of chain
+connectivity. We now turn to discuss orientation of BCP films in
+presence of external electric fields. This is a bulk ordering
+mechanism that does not originate from surface interactions.
+
+Alignment by electric fields
+A well known mechanism to cause orientation or
+structural changes in polarized media is the “dielectric
+mechanism”. This effect is based on the fact that when a
+material with inhomogeneous dielectric constant is placed
+in an electric field FORMULA , there is an electrostatic free
+energy penalty for having dielectric interfaces
+perpendicular to the field {{cite:54846bdd-e668-4e59-9f73-31a88b1f72db}}, {{cite:b15dda4b-7447-4f96-b2ae-118552b3e3cf}}, {{cite:6a32d5e5-a5c0-4827-9dad-b7b4e52cd1fc}}.
+Thus, a state where FORMULA  is perpendicular to the field
+FORMULA  is favored. For layered materials such
+as lamellar BCP phases, the strength of this effect is
+proportional to FORMULA , where FORMULA  and
+FORMULA  are the dielectric constants of the two
+micro-domains, and is enhanced when the difference in
+polarizabilities
+is large.
+Let us first consider lamellae confined in a thin film with no
+electric field. We will then include an electric field and see its
+influence. For simplicity and brevity of presentation we assume
+that the Flory parameter FORMULA  does not change on the surface,
+FORMULA . We also concentrate on uniform surface fields with
+equal magnitudes, FORMULA ,
+FORMULA . If the surface affinity FORMULA 
+is sufficiently large, the lamellae will order in a parallel
+arrangement as was discussed in the previous sections. These
+lamellae stretch or compress, increasing the bulk free energy, in
+order to decrease their surface energy. We mention below an
+adaptation {{cite:e88577ff-1e9c-4916-afe6-0aaa8dac49bc}} to the strong stretching approximation
+of Turner {{cite:32f4390f-0858-40cc-a262-cce05d607219}} and Walton et al.
+{{cite:2462283c-824a-4f08-8597-b2c62455ba81}}. The lamellar period is FORMULA  and FORMULA 
+is the closest integer to FORMULA . Depending on the value of
+FORMULA , an integer (FORMULA ) or half integer (FORMULA )
+number of lamellae fill the gap between the two surfaces. In the
+former case the ordering is symmetric (the same type of monomers
+adsorbed onto both surfaces), while in the latter it is asymmetric
+(A monomers adsorbed on one surface, whereas B monomers adsorbed
+on the other surface). The parallel lamellae are described by an
+order parameter FORMULA  given by {{cite:e88577ff-1e9c-4916-afe6-0aaa8dac49bc}}
+FORMULA 
+The wavenumber is FORMULA , and the choice of
+FORMULA  signs in Eq. (REF ) is such that the surface
+interactions, Eq. (REF ), are minimized. The perpendicular
+lamellae have the unperturbed bulk periodicity
+FORMULA  and their order parameter is simply given by
+FORMULA 
+We consider now the case where an electric field is turned
+on, in a direction that is perpendicular to the surfaces.
+Under conditions of constant voltage difference across the
+electrodes situated at the two bounding surfaces, the
+minimum of the free energy is obtained by maximizing the
+capacitance. Since the A- and B-monomers have
+different dielectric constants, the effect of the electric
+field is to align the BCP layers parallel to the field,
+i.e. perpendicular to the surfaces. At a certain field
+strength this tendency starts to dominate over
+the preference induced by the surfaces to have
+parallel lamellae. Further
+increase of FORMULA  above the threshold value gives rise to a
+perpendicular lamellar ordering.
+In the weak segregation regime,
+the small value of density modulations FORMULA  has been used
+{{cite:54846bdd-e668-4e59-9f73-31a88b1f72db}}, {{cite:b4a6e0b1-d49b-48a8-8f51-3881837ff4a0}}, {{cite:d5177db1-0508-4a8b-9b2f-6934666c079f}}
+in order to
+write the electrostatic free energy as
+FORMULA 
+Here FORMULA  is the Fourier transform of FORMULA : FORMULA , and FORMULA 
+is a unit vector in the FORMULA -direction. Copolymer
+modulations with a non-vanishing component of the
+wavenumber FORMULA  along the electric field, have a
+positive contribution to the free energy. In other words,
+there is a free energy penalty for having dielectric
+interfaces in a direction perpendicular to the electric
+field. In Eq. (), FORMULA  and FORMULA  are
+the dielectric constants of the pure A and B-blocks,
+respectively {{cite:b4a6e0b1-d49b-48a8-8f51-3881837ff4a0}}, and
+FORMULA  is the average
+dielectric constant in the symmetric BCP film (FORMULA ). In
+the weak
+segregation regime, the spatial variations in FORMULA  are
+small and FORMULA  varies linearly with FORMULA ,
+FORMULA 
+The total free energies of the parallel and perpendicular
+lamellae
+per unit area of the film are then given by
+FORMULA 
+FORMULA  is the total surface
+interaction per unit area [Eq. (REF )] at the two walls, and
+is negative.
+The
+FORMULA  sign is determined from the FORMULA  sign of the order
+parameter in Eq. (REF ). When the two surfaces are
+chemically identical, two similar signs in FORMULA 
+mean symmetric ordering with an integer number of lamellae
+between the
+electrodes (FORMULA ). In an antisymmetric
+ordering with a half-integer
+number of confined lamellae, FORMULA  as the two wall
+preferences cancel each other.
+In Fig. 7 we compare the relative stability of parallel
+and perpendicular lamellae as a function of surface interaction
+strength FORMULA  (on the vertical axis) and surface separation
+FORMULA 
+(on the horizontal axis). In (a) the electric field is zero.
+Parallel
+lamellae are favored when surface separation FORMULA  is close
+to an integer value (recall that we take in this example two
+surfaces
+with the same polymer affinity FORMULA ). Perpendicular
+ordering is favored when lamellae frustration is largest,
+i.e. when FORMULA  is approximately a half-integer number.
+A degeneracy between the two states occurs for these
+values of FORMULA  when the surface interactions vanish,
+FORMULA . For more details and a generalization to
+surfaces with different affinity for the A and B blocks see
+ref. {{cite:e88577ff-1e9c-4916-afe6-0aaa8dac49bc}}. In (b) an electric field is applied
+in a direction perpendicular to the electrodes. As a
+consequence, perpendicular lamellae are favored and the boundary
+line between
+the
+light and dark regions in Fig. 7 is shifted upward to higher
+FORMULA  values.
+In the strong segregation regime (FORMULA ), thin BCP films
+subjected to external electric field can be analyzed as well.
+Since in this regime the correlation length is not larger than
+the system size (in contrast to the weak segregation limit
+mentioned above), another finite length scale enters into
+the problem. The result is that the system has three possible
+states: parallel state in which parallel lamellae span the whole
+film, a perpendicular state, and a mixed state with parallel
+lamellae near the surfaces and perpendicular lamellae in the
+middle of the film. These three states are separated by three
+critical fields FORMULA , FORMULA  and FORMULA .
+In Fig. 8 (a) we show the phase diagram in the FORMULA –FORMULA 
+plane,
+where FORMULA  is the dimensionless difference between then A and
+B-block surface energies and FORMULA  is the strength of applied
+electric
+field. Transition from parallel to mixed lamellae at FORMULA 
+occurs if FORMULA  is above some threshold value,
+FORMULA . It is then followed by a transition between the mixed and
+perpendicular states at FORMULA . If FORMULA  is small,
+FORMULA , there is a direct transition from parallel to
+perpendicular lamellae at FORMULA .
+A different cut through the phase diagram in the FORMULA –FORMULA 
+(while keeping FORMULA  constant)
+is shown
+in Fig. 8 (b). A transition between
+parallel and mixed states occurs at FORMULA , followed by
+a second transition at FORMULA  from the mixed to the
+perpendicular
+state, provided that surface
+separation is large enough, FORMULA . When FORMULA  a direct
+transition between parallel and perpendicular lamellae occurs at
+FORMULA .
+
+Summary
+Several ordering mechanisms in confined BCPs are considered in
+this paper. Above the order-disorder temperature the polymer
+density near a chemically patterned surface is given as a
+function of the surface pattern. It is shown that each surface
+FORMULA -mode of the chemical pattern arises its own density mode, and
+that these modes can be regarded as uncoupled (linear response
+theory). The decay of these density modes into the bulk (away
+from the surfaces) is analyzed. In the weak segregation regime
+employed here, surface correlations become long range and hence
+simple chemical patterns (as in Fig. 4) can yield complex
+copolymer morphology, even though the bulk is in its disordered
+phase.
+We describe lamellar BCP when they are confined by striped
+surface whose periodicity is larger than the lamellar
+periodicity. We find that in this case lamellae will tend
+to tilt with respect to the surface in order to
+optimize their surface interactions. The deviations from the
+perfect lamellar shape, induced by the surfaces, are
+obtained. These undulations of the lamellar interface are
+more prominent as the ODT is approached. Mixed lamellar
+phases appear when one surface has chemically patterns in the
+form of stripes while
+the
+other is uniform.
+We examine the effect of an external electric field on the phase
+behavior of parallel and perpendicular lamellae. In the absence of
+any external electric field, we recover the previously obtained
+phase diagram {{cite:3674bb9d-b6f6-4ada-912d-f236870202f0}}, {{cite:d57ffd0c-b269-4fba-a653-a3b388ebda0c}}, {{cite:1c1e4f43-7750-429e-8501-9cc0d23a7019}}. The influence of
+electric field [Fig. 7 (b)] is to favor the perpendicular
+lamellae: the region where parallel lamellae are stable is pushed
+up-wards in the phase diagram. We present as well the phase
+diagrams in the strong segregation regime. In this regime there
+are three possible system states (parallel, perpendicular and
+mixed) with three critical fields which separate them, as can be
+seen in Figure 8 (a) and (b).
+The analytical calculations presented here together with other
+experimental and numerical studies are useful tools towards
+obtaining well controlled structures in the nanoscale. Indeed, the
+technical details employed should not obscure some simple results
+which are rather universal: the use of two simple one-dimensional
+striped surface patterns in order to achieve a complex
+three-dimensional morphology [Fig. 4], and surface field
+periodicity that facilitates control of tilt angle [Fig. 5].
+Finally, tuning the strength of electric field and surface
+separation (or interaction) as an external perturbation to create
+parallel, mixed or perpendicular lamellae [Fig. 8]. These
+mechanisms call for further application-oriented studies as well
+as theoretical ones.
+Acknowledgments    Partial support from the U.S.-Israel
+Binational Foundation (B.S.F.) under grant No. 98-00429 and the
+Israel Science Foundation founded by the Israel Academy of
+Sciences and Humanities
+— centers of Excellence Program is gratefully
+acknowledged. One of us (Y.T.) acknowledges support from the
+Chateaubriand Fellowship Program.
+Figure Captions
+
+Figure 1. Schematic illustration of
+the coordinate system for BCP confined by one [part (a)] or two
+[part (b)] planar and parallel surfaces. (c) Lamellae are formed
+tilted with respect to the surface if the surface periodicity
+FORMULA  is larger than the natural one FORMULA .
+
+Figure 2. A BCP melt confined by one
+surface at FORMULA . B-monomer density is high in dark regions,
+while
+A monomers are in light regions. In (a) the surface is uniform,
+FORMULA  and in (b) it has stripes given by
+FORMULA . The “combined” effect is shown in
+part (c) where FORMULA  has a uniform
+and
+modulated part. The Flory parameter is FORMULA , FORMULA 
+and lengths in the FORMULA  and FORMULA  directions are scaled by the
+lamellar period FORMULA .
+
+Figure 3. Propagation of surface
+pattern into the bulk. The surface pattern in the FORMULA  plane is
+shown in (a), where white (black) show regions preferring A (B)
+monomers. Parts (b) and (c) are contour plots of the polymer
+density at FORMULA  and FORMULA , respectively. FORMULA  and
+FORMULA .
+
+Figure 4. BCP melt confined by two
+flat parallel striped surfaces, depicted in parts (a) and (c),
+and
+located at FORMULA  and FORMULA , respectively. The melt
+morphology
+in the mid-plane (FORMULA ) is shown in part (c). The Flory
+parameter
+is FORMULA  and FORMULA .
+
+Figure 5. Tilted lamellar phase
+between two parallel patterned surfaces close to a patterned
+bounding surface. (See also Fig. 1c). The surface patterning is
+modelled by the term FORMULA . The lamellae tilt
+angle FORMULA  increases as the periodicity of
+the surface FORMULA  increases: FORMULA  for FORMULA  in (a),
+FORMULA  for FORMULA  in (b) and
+FORMULA  for FORMULA  in (c). In the plots
+FORMULA . The Flory parameter FORMULA  and
+FORMULA .
+
+Figure 6. A BCP confined film
+showing a crossover from perpendicular lamellae at the
+FORMULA  surface to parallel lamellae at the other surface,
+FORMULA . The pattern on the bottom surface,
+FORMULA , has the bulk periodicity FORMULA ,
+and amplitude FORMULA , while the top surface
+(FORMULA ) is homogeneously attractive to the B polymer (in
+black), FORMULA . The Flory parameter is given by
+FORMULA  and FORMULA .
+
+Figure 7. The stability of
+FORMULA  (in light) vs. FORMULA  lamellae (dark), as a
+function of wall separation FORMULA  and interfacial interaction
+parameter FORMULA . The latter is taken as FORMULA  on both
+surfaces. In (a) the electric field
+strength is zero, while in (b) FORMULA . The
+FORMULA  phase is pushed upward in the stability diagram in
+(b), removing the degeneracy between FORMULA  and FORMULA 
+that occurs for neutral walls (FORMULA ) for FORMULA  being an
+integer number. The Flory parameter is FORMULA .
+
+Figure 8. (a) Phase diagram in the FORMULA -FORMULA  plane.
+FORMULA  is the difference between the A and B-block surface
+energies. When FORMULA , there is a direct transition
+between parallel and perpendicular lamellae at FORMULA . For
+FORMULA , a transition between parallel and mixed states
+occurs at FORMULA , followed by a second transition between mixed
+and perpendicular states when FORMULA . (b) Similar diagram,
+but in the FORMULA -FORMULA  plane, where FORMULA  is surface separation FORMULA 
+is
+the lamellar period and FORMULA .
+
+FIGURE 
+FIGURE 
+FIGURE 
+FIGURE 
+FIGURE 
+FIGURE 
+FIGURE 
+FIGURE 

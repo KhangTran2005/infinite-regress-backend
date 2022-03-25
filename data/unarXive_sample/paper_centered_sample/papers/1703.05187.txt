@@ -1,0 +1,781 @@
+
+listparindent=leftmargin=*
+pdftitle=Space- and time-correlations in the supernova driven interstellar medium,
+pdfauthor=
+J. F. Hollins (orcid.org/0000-0002-4435-4156),
+G. R. Sarson, A. Shukurov (orcid.org/0000-0001-6200-4304),
+A. Fletcher, F. A. Gent,
+Space- and time-correlations in the supernova driven interstellar medium
+J. F. Hollins, G. R. Sarson, A. Shukurov, A. Fletcher, F. A. Gent
+We apply correlation analysis to random velocity, density and magnetic fields in numerical simulations of the supernova-driven interstellar medium (ISM).
+We solve the thermo-magnetohydrodynamic (MHD) equations in a shearing, Cartesian box representing a local region of the ISM, subject to thermal and kinetic energy injection by supernova explosions, and parametrized optically-thin radiative cooling.
+We consider the cold, warm and hot phases of the ISM separately; the analysis mostly considers the warm gas, which occupies the bulk of the simulation volume. Various physical variables have different correlation lengths in the warm phase: FORMULA , FORMULA , and FORMULA  for magnetic field, density, and velocity, respectively, in the midplane.
+The correlation time of the random velocity field is comparable to the eddy turnover time, about FORMULA , although it may be shorter in regions with higher star formation rate.
+The random magnetic field is anisotropic, with the standard deviations of its components FORMULA  having the approximate ratios FORMULA  in the midplane.
+The anisotropy is attributed to the global velocity shear from galactic differential rotation, and locally inhomogeneous outflow to the galactic halo.
+The correlation length of Faraday depth along the FORMULA -axis, FORMULA , is greater than for electron density, FORMULA , and vertical magnetic field, FORMULA . Such comparisons may be sensitive to the orientation of the line of sight.
+Uncertainties of the structure functions of the synchrotron intensity rapidly increase with the scale. This feature is hidden in power spectrum analysis, which can undermine the usefulness of power spectra for detailed studies of interstellar turbulence.
+Space- and time-correlations in the supernova driven interstellar medium
+J. F. Hollins,1
+G. R. Sarson,1 A. Shukurov,1 A. Fletcher,1
+and F. A. Gent2
+FORMULA  School of Mathematics and Statistics, Newcastle University,
+Newcastle upon Tyne, NE1 7RU, UK.
+FORMULA  ReSoLVE Centre of Excellence, Department of Computer Science, Aalto University, PO Box 15400, FI-00076 Aalto, Finland
+j.hollins@newcastle.ac.uk (JFH),
+graeme.sarson@newcastle.ac.uk (GRS),
+anvar.shukurov@newcastle.ac.uk (AS),
+andrew.fletcher@newcastle.ac.uk (AF),
+frederick.gent@aalto.fi (FAG)
+galaxies: ISM – ISM: kinematics and dynamics – ISM: magnetic fields – turbulence
+Introduction
+The interstellar medium (ISM) of a
+spiral galaxy is a complex, multiphase, random system, driven by
+the input of thermal and kinetic energy from
+supernova (SN) explosions
+and stellar winds {{cite:ac9824eb-b33b-46fc-8295-5771b37497bb}}, {{cite:df85ae74-4c74-4323-a542-dd86508e881f}}, {{cite:2689fc62-61b4-42cc-b6a2-e93d8e647973}}, {{cite:7bd547c6-1807-4acb-9de3-c498745b8428}}, {{cite:8d705ff9-2a78-482d-8e04-0187529ec779}}, {{cite:521a3cb5-95e9-4d7a-8337-ff83120c6218}}, {{cite:4aebb356-a142-4268-9955-fd4eef0055c1}}.
+Its statistical analysis, including that of interstellar turbulence, is complicated by the multi-phase structure, where
+the diversity of physical processes predominant in different phases causes strong
+inhomogeneity. Furthermore, interstellar turbulence is transonic or supersonic {{cite:96fd6f00-21f7-46a7-aab5-6f18d0b75bd1}}, {{cite:9988136b-4e97-467c-9ecb-a17b38534b92}}. The
+compressibility and abundance of random shock waves lead to spatial and temporal
+intermittency of the random velocity and magnetic fields and of the density fluctuations.
+Dynamo action adds further complexity by producing intermittent random
+magnetic fields {{cite:925ed4e7-eafe-4fab-a752-45f7633826e2}}.
+Observational studies of such an inhomogeneous, complex random system are severely
+limited by the fact that observable quantities are integrals along the line-of-sight,
+so that many physically significant statistical features become hidden.
+When observed at a low resolution, the interstellar medium can be satisfactorily described in terms of Gaussian
+random fields, but recent observations have revealed a plethora of density structures in neutral hydrogen, mostly
+planar or filamentary {{cite:de017e47-9210-4811-bf34-838c7fc4786b}}, {{cite:c1f74266-e924-4712-a503-b7901b064d00}}, {{cite:4399d2a5-3ac4-49b5-875b-e5fd0d630060}}. Statistical analysis of such
+random fields cannot be restricted to the standard tools of the theory of Gaussian random functions (and
+related ones, such as log-normal and FORMULA  functions), where
+the probability distribution and second-order correlation functions provide a complete description. However,
+correlation analysis remains an important first step, where the form of the correlation
+function, the correlation length (or time) and the mean-square variations of a variable are the most
+important quantities explored.
+There are numerous and diverse
+estimates of the integral (correlation) scale of interstellar turbulence FORMULA  {{cite:4d74fdf1-6e56-4c07-ae1c-3084a3cccc41}}.
+The autocorrelation function of the line-of-sight H1 cloud velocities obtained
+in the Milky Way by {{cite:a918bdee-daad-47f2-909e-9c4ad62045da}} leads to FORMULA .
+{{cite:2770de94-1d5a-423a-a66b-dd19c04cc166}} found FORMULA  from the fluctuations in synchrotron intensity.
+{{cite:c36e6d6b-0e2f-498c-89e2-6250774882f4}} used
+differences in Faraday rotation between neighboring pulsars to obtain FORMULA . {{cite:d35fe3f0-c6dc-4da9-b0ac-8ec90e395373}} yielded FORMULA  from the structure functions of the variations in the Faraday rotation and emission measures across extended extragalactic radio sources.
+Structure functions of the Faraday rotation of extragalactic sources
+{{cite:d7f8bdf7-2c04-413a-bace-daaeaeed2f87}}, {{cite:0cc1da92-cf4f-46c7-bf59-1a70870a2132}}, {{cite:0f06369f-5c35-4a05-ab20-8fb49a66cc44}} and their degree of
+depolarization {{cite:0f06369f-5c35-4a05-ab20-8fb49a66cc44}} give FORMULA  in the Milky Way's spiral arms.
+FORMULA  was found
+by an analysis of low-frequency synchrotron intensity
+fluctuations from a large region of the Galactic disk by {{cite:2c2d156d-2797-469d-adb2-5b5932993630}}.
+In the Large Magellanic Cloud, the structure function of the Faraday rotation of more distant sources gave FORMULA  {{cite:e60ce09c-0956-4dd0-b48e-58483ae795c6}}.
+In the galaxy M51 {{cite:f8d833e5-68cd-4649-bac9-c7715740bfc8}} obtained FORMULA  from the
+depolarization of diffuse emission, whilst {{cite:4e54df88-3306-4b80-b72c-d233826e2fb6}} found FORMULA  from the dispersion of radio polarization angles.
+These estimates are strikingly different, perhaps not surprisingly. They have been obtained
+from diverse tracers, and it is not surprising that the correlation length of the gas velocities, Faraday rotation
+measure and synchrotron fluctuations
+differ (the latter being nonlinear functions of the fluctuating quantities).
+A relation between the correlation length of the product of random functions and those of the multipliers depends
+on their detailed statistical properties {{cite:59786fba-3a45-44d8-92de-0ee0550ecbcc}}. Our aim here is to clarify
+this relation. This would be difficult to do with observational data, at least at present.
+Interpretations of observations of polarized synchrotron emission and its Faraday rotation suggest
+that a significant fraction of the polarization may be due to anisotropy of the
+random magnetic field.
+The correlation between the mean Faraday rotation and its standard deviation
+along the Galactic disc, found by {{cite:9be1bb32-c9d4-47de-9964-2e770750b7a5}}, was the earliest
+indication of an anisotropic random field.
+Subsequent models of various components of Milky Way emission along the
+Galactic disk {{cite:f572df51-9886-409c-806e-6fd065ee11b4}}, {{cite:e6528f29-975e-4d2f-9904-c2624ba1209c}}, {{cite:680a8236-2935-4aab-95d8-4d40733ec862}} and across the entire
+sky {{cite:b804eb86-1472-43b1-a8e2-247299db9830}}, {{cite:bf16c3f2-c760-4ac2-ab15-c46d7079a24f}} required the inclusion of an
+anisotropic random magnetic field in order to fit the observations.
+In other galaxies, modeling of pre- and post-shock polarized emission in the
+barred galaxies NGC1097 and NGC1365 {{cite:10b72fa8-ca82-40ec-84e2-4a43a56f629b}} and the spiral galaxy
+M51 {{cite:f8d833e5-68cd-4649-bac9-c7715740bfc8}}, the dispersion of polarization angles in M51 {{cite:4e54df88-3306-4b80-b72c-d233826e2fb6}}, comparison of the observed polarized emission and Faraday rotation in M33 {{cite:59786fba-3a45-44d8-92de-0ee0550ecbcc}}, and modeling depolarization in M51 {{cite:86ee32fe-6918-4573-9dd7-6d6957c1a2bd}}, have all indicated the presence of anisotropic random fields.
+Extracting the degree of anisotropy from the observations, though, is
+difficult.
+In M51, {{cite:f8d833e5-68cd-4649-bac9-c7715740bfc8}} estimate that the ratio of the standard deviations of the random magnetic field components in orthogonal directions is FORMULA  and {{cite:4e54df88-3306-4b80-b72c-d233826e2fb6}} obtained a ratio of correlation lengths along and perpendicular to the local mean-field direction of FORMULA .
+As with observational estimates for FORMULA , it is appropriate to carefully examine the possible anisotropy of the random magnetic field.
+Simulations of the SN-regulated ISM have become sufficiently realistic to treat them as numerical experiments.
+It is then natural to use sufficiently realistic numerical models to address these questions before
+the more difficult observational exploration.
+We use such simulations,
+as detailed in {{cite:de5f258a-749e-45ab-94c6-d676478e4930}} and {{cite:940cb7b3-62b1-416b-b71e-03c1e602884c}}, {{cite:d6fbd5e6-b3f3-4401-8718-d2b9a9b2f812}},
+which have non-trivial magnetic fields generated by dynamo action, to clarify the
+correlation (and other statistical) properties of the multi-phase ISM. In particular,
+we compare the autocorrelation and cross-correlation functions of the random
+(i.e., small-scale; see §REF )
+velocity and magnetic fields and density fluctuations, as well as the Faraday depth and synchrotron intensity.
+However complex, the simulations of the ISM can hardly be considered as trustworthy
+representations of the ISM in its whole complexity. Therefore, the goal of our analysis is not
+to achieve quantitative agreement with observations in every detail (although the general agreement
+is quite remarkable) but rather to identify those physical processes that shape the simulated ISM
+and are likely to be important in reality.
+Turbulent flows are often represented in spectral space,
+in terms of the Fourier transforms of the physical variables.
+Such transforms are straightforward in infinite or periodic spaces.
+However, simulations of the
+ISM are performed in relatively small domains,
+only containing of order one thousand correlation cells, not simply-periodic
+because of the open (or similar) boundary conditions at the top and bottom of the domain, and statistically inhomogeneous because of the stratification {{cite:3382cfab-3281-401b-a385-e13375614c7a}}, {{cite:9706cd2a-c9ac-4d08-8510-a39de9404fd1}}, {{cite:940cb7b3-62b1-416b-b71e-03c1e602884c}}.
+Furthermore, it is difficult to estimate reliably the statistical uncertainty of the Fourier transforms.
+We therefore proceed via correlation analysis
+{{cite:26ed3c12-a630-46cf-a79a-e5930e332454}}.
+For most of the work, we assume
+local isotropy in the horizontal (FORMULA ) plane; this assumption is assessed in §.
+Correlation lengths obtained from comprehensive numerical simulations of the multi-phase ISM exhibit less diversity than the observational results.
+{{cite:14ec65a3-ba5c-4285-9da3-bce7cbb92a24}} obtain a gas density spectrum with a peak at FORMULA ,
+whereas most kinetic energy is contained at scales 20–FORMULA .
+{{cite:940cb7b3-62b1-416b-b71e-03c1e602884c}} calculate FORMULA  for the random velocity field in the mid-plane of the galaxy,
+also from hydrodynamic simulations.
+In the MHD simulations of {{cite:c6292880-e941-400c-81d6-d859ceb869b3}}, FORMULA  for the random velocity field. This scale fluctuates strongly with time.
+From correlation analysis of the vertical component of random velocity, {{cite:3382cfab-3281-401b-a385-e13375614c7a}} obtained an estimate of FORMULA 
+for the warm gas at all heights, whereas in the hot gas FORMULA  increases from FORMULA  in the mid-plane to FORMULA  at FORMULA .
+The paper is organized as follows. The simulations of the SN-driven ISM and averaging procedure used in our analysis are
+presented in §. The spatial correlations of the random magnetic field, density and velocity are
+discussed in §, whereas time correlations are the subject of §.
+The anisotropy of the random magnetic field in the simulated ISM is estimated and interpreted in §.
+The autocorrelation functions of such observable quantities as the Faraday depth and synchrotron intensity
+are obtained and discussed in §.
+Our results are summarized in §. Appendix
+
+presents a comparison with the results obtained in a larger
+computational domain.
+
+Simulations of the multi-phase ISM
+We use our earlier simulations of the ISM based on the
+Pencil Code (http://pencil-code.nordita.org/),
+described in detail by {{cite:de5f258a-749e-45ab-94c6-d676478e4930}} and {{cite:940cb7b3-62b1-416b-b71e-03c1e602884c}}.
+The simulations involve solving the full, compressible, non-ideal MHD equations with parameters generally typical of the
+solar neighborhood in a three-dimensional local Cartesian, shearing box
+with radial (FORMULA ) and azimuthal (FORMULA ) extents of FORMULA  and vertical (FORMULA ) extent FORMULA 
+on either side of the mid-plane at FORMULA .
+Our numerical resolution is FORMULA , using 256
+grid points in FORMULA  and FORMULA  and 544 in FORMULA .
+{{cite:940cb7b3-62b1-416b-b71e-03c1e602884c}} demonstrate that this resolution is sufficient to reproduce the known
+solutions for expanding SN remnants in the Sedov–Taylor and momentum-conserving phases.
+The basic equations are mass conservation, the Navier–Stokes equation, the heat equation, and the induction equation,
+solved for mass density FORMULA , velocity FORMULA , specific entropy FORMULA , and magnetic vector potential FORMULA  (such that FORMULA ).
+The Navier–Stokes equation includes a fixed vertical gravity force
+that includes contributions from the stellar disk and spherical dark halo.
+The initial state is an approximate hydrostatic equilibrium. The Galactic differential rotation
+is modelled by a background shear flow
+FORMULA , where FORMULA  is the shear parameter and FORMULA 
+is the Galactic angular velocity.
+Here we use FORMULA , as in a flat rotation curve, and FORMULA ,
+as in the Solar neighbourhood.
+The velocity FORMULA  is the perturbation velocity in the rotating
+frame, that remains after the subtraction of the background shear flow
+from the total velocity. However, it still contains a large-scale
+vertical component due to an outflow driven by the SN activity.
+Both Type II and Type I SNe are included in the simulations. These differ in their vertical distribution and frequency only.
+The frequencies used correspond to those in the Solar neighborhood.
+We introduce Type II SNe at a mean rate, per unit surface area, of FORMULA .
+Type I SNe have a mean rate, per unit surface area, of FORMULA .
+The SN sites are distributed randomly in the horizontal planes. Their vertical positions have Gaussian distributions with
+scale heights of FORMULA  and FORMULA 
+for SNII and SNI, respectively. No spatial clustering of the SNe is included.
+The thermal energy injected with each SN is FORMULA .
+Injected velocity and the uneven density within each explosion site
+randomly adds kinetic energy with mean FORMULA .
+We include radiative cooling with a parameterized cooling function.
+For FORMULA , we adopt a power-law fit to the `standard equilibrium' pressure-density curve of {{cite:841e6c47-8ec9-49fd-ac48-aa8301853e43}}, as given in
+{{cite:ec6a800b-27aa-43ca-8e4b-8ce395be0e62}}. For FORMULA , we use the cooling function of {{cite:31d13b84-f5a2-4ce4-a62e-558211bc209b}}.
+This cooling allows the ISM to separate into distinct hot, warm and cold phases identifiable as peaks in the
+joint probability distribution of gas in density and temperature.
+Photoelectric heating is also included as in {{cite:841e6c47-8ec9-49fd-ac48-aa8301853e43}}. The heating decreases with FORMULA  on a
+length scale comparable to the scale height of the disk near the Sun.
+Shock-capturing kinetic, thermal and magnetic diffusivities
+(in addition to constant small background diffusivities),
+are included to resolve shock discontinuities and maintain numerical stability in the Navier–Stokes, heat and induction equations.
+Periodic boundary conditions are used in FORMULA ,
+and sheared-periodic boundary conditions in FORMULA 
+(considered in more detail in §REF ).
+Open boundary conditions,
+permitting outflow and inflow,
+are used at the vertical (FORMULA ) boundaries.
+See {{cite:de5f258a-749e-45ab-94c6-d676478e4930}} and {{cite:940cb7b3-62b1-416b-b71e-03c1e602884c}}, {{cite:d6fbd5e6-b3f3-4401-8718-d2b9a9b2f812}}
+for further details on the boundary conditions used
+and on the other implementations described above.
+Our analysis is based on 12 snapshots of the computational volume in the range FORMULA ,
+by which time the system, including the large-scale magnetic field, has reached a
+statistically steady state. The interval between the snapshots, FORMULA ,
+is significantly longer than the correlation time of the random flow (see §),
+and is sufficient for the snapshots to be considered statistically independent.
+To test the influence of shear rate on the correlations, we also analyse data from a model with twice the rotation rate, as discussed in {{cite:d6fbd5e6-b3f3-4401-8718-d2b9a9b2f812}}.
+We use 12 snapshots in the range FORMULA , again with a separation of FORMULA , with the magnetic field saturated as for the main run. Any notable differences between the results for the different models will be reported throughout the text.
+The multi-phase structure
+The numerical model exhibits three distinct states of the gas corresponding to local
+maxima in the probability distribution function (PDF) of the specific entropy FORMULA .
+Gas parameters in those states are similar to the three main phases of the ISM.
+Following {{cite:940cb7b3-62b1-416b-b71e-03c1e602884c}}, the cold phase is defined
+as that having FORMULA ,
+the hot phase has FORMULA ,
+with the warm phase in between. The three phases have very different physical properties,
+including the random velocity and magnetic fields, as well as differing in their mean temperature and density.
+Therefore, our analysis is carried out for each phase separately.
+For this purpose, only grid points
+corresponding to a given phase are retained in the data cubes containing each physical variable,
+with the other points masked out. This allows us to do the averaging required in the computation
+of the structure functions over disjoint regions in the physical space.
+
+Averaging procedure
+Our analysis is conducted for the moduli of the random magnetic and velocity fields and the
+gas density fluctuations, denoted FORMULA , FORMULA  and FORMULA , respectively.
+The random velocity FORMULA  should be carefully distinguished from the velocity perturbation
+FORMULA , defined as the deviation from the background large-scale shear flow, since the
+latter contains a systematic vertical velocity.
+Since the mean vertical velocity and the large-scale magnetic field
+are not necessarily uniform
+across any horizontal plane, we do not use horizontal averages to define the mean magnetic field
+as is often done in the literature, but instead follow {{cite:d6fbd5e6-b3f3-4401-8718-d2b9a9b2f812}} and use Gaussian smoothing, within the framework of {{cite:b2281a8a-0102-41b9-8731-1b89451fb169}}.
+The mean (large-scale) component of
+a random field FORMULA , averaged over a scale FORMULA  and denoted FORMULA ,
+is defined by a convolution with a Gaussian kernel FORMULA ,
+FORMULA 
+
+where integration is extended to the volume occupied by a given ISM phase or the total volume
+as appropriate.
+The random velocity is then FORMULA 
+and similarly for the magnetic field,
+FORMULA 
+and the gas number density, FORMULA .
+Following {{cite:d6fbd5e6-b3f3-4401-8718-d2b9a9b2f812}}, we use FORMULA .
+As discussed by {{cite:d6fbd5e6-b3f3-4401-8718-d2b9a9b2f812}}, a significant fraction of the energy in the random field remains at length scales greater than FORMULA . To clarify the consequences of this,
+consider averaging a random field FORMULA  in wave number (FORMULA ) space,
+denoting FORMULA  the Fourier transform of FORMULA .
+By the convolution theorem, the mean field FORMULA  has the Fourier transform
+FORMULA ,
+where FORMULA  is the transform of the smoothing kernel.
+For the Gaussian kernel FORMULA , we have
+FORMULA , so
+FORMULA .
+Thus, for variations with wavenumber FORMULA  (and wavelength FORMULA ),
+a fraction FORMULA  of the original field energy is interpreted as that of the mean field,
+and the remainder goes into the random field. This fraction is half – i.e., the field energy
+is equally split between mean and random fields – at the wave number FORMULA , or
+the wavelength FORMULA . Thus, with FORMULA ,
+the field energy is equally split at the wavelength FORMULA 
+between the mean and random parts. Variations with wavelength FORMULA 
+go predominantly into the random field, and increasingly so as FORMULA  decreases;
+for features with FORMULA , only a fraction FORMULA 
+of the energy goes into the mean field.
+FIGURE 
+
+The structure and correlation functions
+We start the calculations with the second-order structure functions FORMULA ,
+which are more robust than the correlation functions, FORMULA , with respect to errors {{cite:26ed3c12-a630-46cf-a79a-e5930e332454}}:
+FORMULA 
+where FORMULA  a given position in the FORMULA -plane and FORMULA  a horizontal offset with
+FORMULA . Analysis is restricted to
+horizontal planes with no offsets
+in the FORMULA -direction, because of the stratification in FORMULA .
+Since we are dealing with periodic (or sheared periodic) functions in FORMULA  and FORMULA , the maximum
+offsets we can consider in the FORMULA  and FORMULA  directions are half the domain sizes in each direction.
+Hence, we consider offsets in the range FORMULA .
+Using FORMULA , the autocorrelation function FORMULA  is obtained as
+FORMULA 
+where FORMULA  is the value of FORMULA  at which the
+random function FORMULA 
+is no longer correlated,
+and FORMULA  is the dispersion (r.m.s. value) of FORMULA .
+The choice of FORMULA  in a finite domain
+is not always obvious (see below). In terms of FORMULA ,
+the correlation length FORMULA  is defined as
+FORMULA 
+The magnitude of the implied correlation length is very sensitive to the range of integration and to the behaviour of the correlation function at large FORMULA . An exponentially small tail in FORMULA  can make a significant contribution to FORMULA .
+To address this problem,
+we fit the structure functions obtained from equation (REF )
+to one of the following analytic forms (as discussed below),
+thereby obtaining estimates of FORMULA  and FORMULA  (and hence FORMULA ):
+FORMULA 
+
+Since the governing equations contain second-order derivatives in spatial coordinates,
+the spatial variations must be smooth random functions of position,
+so that FORMULA  at FORMULA  for spatial correlations.
+However, the fact that only the first time derivatives appear
+in the governing equations
+implies that the time variations only needs to be continuous,
+so that FORMULA  for FORMULA  may be expected
+for time correlations
+(as considered in §),
+with FORMULA  the time lag.
+We indeed observe this difference in the computed structure and correlation functions,
+and use form in equation (REF ) for time correlations
+and equation () for spatial correlations.
+Some of the spatial autocorrelation functions discussed below
+(most notably those for the density fluctuations)
+exhibit an oscillatory behavior;
+in such cases, equation () is augmented to
+FORMULA 
+with FORMULA ,
+where FORMULA  and FORMULA  are two additional parameters
+determined by the zeros in the correlation function.
+The correlation lengths FORMULA  are presented in Table REF .
+To confirm the importance of using fitted correlation functions,
+we also present in this table
+the correlation lengths FORMULA  obtained by integration
+of the directly calculated FORMULA ,
+over the range FORMULA .
+The values differ by up to a factor of 2,
+with the differences being greatest for density fluctuations
+(where the form in equation (REF ) was used);
+the agreement for random magnetic field and velocity
+(where the form in equation () was used) is closer.
+To improve the reliability of our statistics,
+the averaging involved in the calculation of the structure functions
+is performed over 26 grid planes within layers
+at FORMULA , FORMULA 
+and FORMULA  for each snapshot, and then the structure functions are further averaged
+over the snapshots.
+The uncertainty of the resulting values of the structure functions
+is rather small
+(of order FORMULA  in terms of the relative error)
+because of the large number
+of data-point pairs available even at large values of FORMULA .
+The structure and correlation functions in figures below are shown with
+error bars representing not their uncertainty but the standard
+deviation of the individual measurements around the mean.
+TABLE 
+FIGURE 
+
+Accounting for shearing boundaries
+When calculating the increments in the structure function, we use
+pairs of points separated by
+the periodic boundaries in FORMULA  and FORMULA .
+In the shearing box, the horizontal periodicity conditions
+{{cite:8674bada-ddfd-45da-82c3-dafa4f0128c4}} for a variable FORMULA  are
+FORMULA 
+where FORMULA 
+is the time-varying offset between the shearing boundaries in FORMULA 
+(mapped to the range FORMULA ).
+In order to conveniently include pairs of points located on different sides of the
+the periodic boundary in FORMULA , we extend the computational domain
+in the FORMULA -direction by
+its copy and shift it
+by FORMULA  to remove the discontinuity between the two domains, as shown in Figure REF .
+
+Spatial correlations
+FIGURE 
+FIGURE 
+As described above, we calculate the spatial structure- and correlation-functions for
+the random magnetic and velocity fields and the fluctuations in the gas number density
+separately for the warm and hot gas. The correlation functions are then used
+to estimate the correlation lengths of these variables. Spatial correlations of
+the Faraday depth and synchrotron emissivity are discussed in §.
+The results are shown in Table REF  and Figure REF  for the density fluctuations, Figure REF 
+for the random speed and Figure REF  for the magnitude of the random magnetic field. The structure functions used to
+obtain the autocorrelation functions are only shown in Figure REF a: those for the other variables have a similar form.
+The magnitudes of the fluctuations in the variables and their correlations lengths are discussed in the next two sections.
+The uncertainties of the root-mean-square (rms) values of various variables and their
+correlations lengths given in Tables REF ,
+REF  and REF  have been obtained as 95% confidence intervals from weighted least-squares fitting of equation (), or for the gas density equation (REF ).
+The weights used are the uncertainties of the values of the correlation function rather than the standard deviations shown in the figures.
+The uncertainties in the rms values and correlation lengths thus obtained are underestimates
+of the true uncertainty as they do not take into account any systematics errors,
+such as those arising from the uncertain value of the computed structure functions at FORMULA .
+Magnitude of the fluctuations
+The rms magnitudes of the fluctuations are shown in Table REF , together with the rms values of the relative fluctuations, FORMULA  for a variable FORMULA ; we stress that the mean value FORMULA  is a function of position.
+In the case of velocity fluctuations, the average velocity, FORMULA , refers to the sheared frame, that is, includes the systematic outflow velocity, but not the overall rotation or the shear due to the galactic differential rotation.
+In each phase, the standard deviation of the density fluctuations
+decreases with FORMULA  together with the average density. The relative
+magnitude of the fluctuations also decreases, but more slowly.
+As shown in Fig. REF , density fluctuations are weakly
+anti-correlated in the range of scales FORMULA  at
+each height, with the modulus of negativity for FORMULA  significantly
+exceeding its uncertainty (about FORMULA ).
+Therefore, the rms value and correlation length of the density
+fluctuations has been obtained by fitting the form in equation (REF ) to the structure function.
+The parameters used in the cosine function were FORMULA  at FORMULA  and FORMULA  at FORMULA .
+A possible cause of such anticorrelation may be random shock waves
+propagating through the ISM. Then the density fluctuations can be
+expected to be correlated within distances comparable to the shock
+thickness (about FORMULA  in the simulations), whereas the
+anticorrelation arises from the systematic rarefaction associated
+with a shock front.
+Another effect that may contribute to such anticorrelation is the
+presence of quasi-spherical supernova remnants (as are clearly
+visible in Fig. REF ), with gas density systematically
+lower than average within and around the bubbles and higher than
+average in their shells.
+The rms random speed decreases with FORMULA  between FORMULA  and FORMULA .
+This is understandable since the Type II supernovae,
+that drive most of the random flow, have a scale height of only FORMULA .
+At larger heights, the rms FORMULA  is FORMULA  in the warm phase and
+FORMULA  in the hot gas at FORMULA .
+The magnitude of FORMULA  in the simulations is below FORMULA  observed near the Sun or in external galaxies
+{{cite:ea99881c-a36d-4073-b1d9-c8793320b05f}}. There could be several
+reasons for this, including the relatively low magnetic Reynolds
+numbers in the simulations reducing fluctuation dynamo
+efficiency, or an underestimated averaging scale FORMULA .
+However, it is evident from Figure 6 of {{cite:d6fbd5e6-b3f3-4401-8718-d2b9a9b2f812}}, that its underestimation would not explain this.
+Applying horizontal averaging, which
+is analogous to extending FORMULA  to 1 kpc,
+yields an increase of only 50% in the saturated magnetic energy of the
+fluctuation field.
+
+Correlation scales
+The correlation length of the density fluctuations in the warm
+gas shown in Table REF  decreases with FORMULA  in
+the range FORMULA ,
+in contrast to the correlation lengths of the velocity and magnetic fields.
+In the simulations used here, shock-capturing diffusivities smooth
+shock fronts over five mesh points, i.e., FORMULA .
+This shock-capturing smoothing may affect the correlation lengths obtained,
+even though they are normally significantly larger than FORMULA .
+It may particularly affect the correlation length for the density fluctuations
+at FORMULA , which is only FORMULA .
+The correlation length of the random velocity at the same height is
+significantly larger. The corresponding correlation length of the
+random magnetic field is intermediate between the two.
+From the double rotation rate simulation, the results obtained for the correlation lengths and rms values are very similar to those in Table REF .
+
+Taylor microscale
+TABLE 
+FIGURE 
+FIGURE 
+TABLE 
+FIGURE 
+FIGURE 
+The Taylor microscale, FORMULA , characterizes the behavior of the correlation function
+at small scales, FORMULA , and can be obtained by fitting
+the correlation function near the origin to the form
+FORMULA 
+{{cite:d514ee98-6b90-4a85-8dbc-5cbf0eb39b5d}}.
+The associated equality FORMULA  at FORMULA  holds for the correlation functions
+of smooth (differentiable) random fields {{cite:26ed3c12-a630-46cf-a79a-e5930e332454}}. In numerical simulations, where the
+solutions at the smallest scales are controlled by the finite numerical resolution FORMULA ,
+one expects FORMULA  {{cite:a477d7a0-1813-465c-9939-3cb050a023e5}}.
+The Taylor microscale of the random speed can be used to estimate the effective Reynolds number, FORMULA , in the simulations {{cite:d514ee98-6b90-4a85-8dbc-5cbf0eb39b5d}},
+FORMULA 
+Such an estimate includes all dissipation effects in an averaged manner,
+which can be
+difficult to estimate otherwise because of the extreme inhomogeneity of the simulated ISM and
+numerical transport coefficients.
+We fit equation (REF ) to the correlation function FORMULA  of the random gas speed at the three smallest values of FORMULA , including FORMULA  at FORMULA , for bin width in FORMULA  of 6, 8, 10, and FORMULA . Figure REF  shows the correlation functions obtained at FORMULA  and the fits.
+The resulting estimates of FORMULA , shown in Table REF ,
+satisfy the inequalities FORMULA ,
+providing us some confidence in the estimates of the correlation lengths discussed above. For FORMULA  (Table REF ) and FORMULA , we obtain an estimate of the effective Reynolds number in the simulations of order 20.
+We also obtained similar results in a model with doubled velocity shear.
+
+Overall statistics and the cold and hot phases
+The results presented above are for the warm gas. The data for the cold gas at offsets beyond FORMULA , the typical scale of the cold gas clouds, are scarce because the cold gas occupies a small fraction of the volume. Figure REF  only shows the cold phase results for the mid-plane, since the cold gas is concentrated there, and results outside this region cannot be statistically meaningful {{cite:de5f258a-749e-45ab-94c6-d676478e4930}}, {{cite:940cb7b3-62b1-416b-b71e-03c1e602884c}}.
+The structure functions for the hot phase fluctuate wildly and have large error bars (see Figure REF ). This happens because the hot phase is extremely variable within the relatively small computational box that we have.
+A separate analysis for each ISM phase, feasible with simulated data, may not be possible in observations. Therefore, we briefly discuss the statistical properties of the simulated ISM without separation by phase. The results are shown in Table REF .
+As shown in Figure REF , the structure and correlation functions of magnetic fluctuations, FORMULA , for the whole ISM are almost identical to those in the warm phase. This is also true of the gas density fluctuations FORMULA . This similarity is reflected in the values of FORMULA , FORMULA , FORMULA ,
+and FORMULA .
+This is, of course, largely due to the large fractional volume of the warm phase.
+It is worth noting, however, that the density and magnetic field strength in the hot phase are both lower than in the warm phase.
+However, the values of FORMULA  and FORMULA  for the whole ISM are significantly higher than in the warm phase. The larger values of FORMULA  for the whole ISM can be attributed to the contribution of the hot gas that has higher speed of sound and, correspondingly, higher random velocities.
+
+Time correlation
+Unlike the correlation lengths of various observable quantities
+in the ISM, their correlation times cannot be obtained
+from observations. Because of this, the eddy turnover time
+FORMULA  is universally applied to interstellar turbulence.
+However, the dynamics of interstellar turbulence involves a range
+of physical processes having distinct time scales, which may make
+the eddy turnover time inappropriate as an estimate of the correlation time.
+Nonlinear Alfvén wave interactions, shock-wave turbulence and
+fluctuation dynamo action, among other phenomena, are likely to affect
+the correlation time and make it different for different variables.
+Similarly to correlation lengths, the correlation times can be different
+in the warm and hot phases. However, this difference is harder to capture
+since each parcel of warm or hot gas moves around. Therefore, we can only obtain correlation times averaged over the ISM phases.
+We consider arguably the most important of the time correlations,
+that of the random velocity. For this purpose, we use time series
+of the magnitude of the random velocity measured at an array of
+fixed points in 32 planes in FORMULA , separated by FORMULA ; within
+each plane, there are 64 positions separated by FORMULA  in FORMULA  or FORMULA .
+From this data, we can calculate the temporal
+structure function, and then autocorrelation function FORMULA ,
+from which we obtain the correlation time FORMULA ,
+FORMULA 
+We fit the form in equation (REF ) to FORMULA  to estimate FORMULA .
+The autocorrelation functions are shown in Figure REF 
+for four distances from the mid-plane, and the correlation times
+can be found in Table REF : FORMULA  with little variation with FORMULA .
+Since the fractional volumes of the warm and hot gas vary significantly
+with FORMULA , this suggests that both phases have similar correlation times.
+With the velocity correlation length and speed in the warm gas at FORMULA  of
+FORMULA  and FORMULA , respectively (from Table REF ) the
+kinematic time scale (`eddy turnover time') is of order
+FORMULA 
+At FORMULA , we similarly have FORMULA  in the warm gas.
+According to the model of interstellar shock-wave turbulence of {{cite:96fd6f00-21f7-46a7-aab5-6f18d0b75bd1}},
+the separation of primary shock fronts driven by supernova explosions depends on their
+Mach number FORMULA  as
+FORMULA 
+where the galactic supernova rate of FORMULA  has been adopted. The primary shocks dominate over weaker secondary shocks
+for FORMULA , which leads to FORMULA . The corresponding time between crossings of a given position
+by shock fronts, which is expected to destroy time correlations, then follows as
+FORMULA , where FORMULA  is the speed of sound in the warm gas.
+In the simulations with double rotation rate,
+the velocity correlation rate and speed at the mid-plane
+in the warm phase change to FORMULA  and FORMULA , resulting
+in the eddy turnover time of FORMULA ,
+whereas FORMULA  remains unchanged.
+Since the estimate of FORMULA  that we have does not distinguish between
+the hot and warm phases, it depends on both the kinematic and shock-crossing
+time scales in each phase (and also the Alfvén time scale, but this is close
+to the kinematic time scale since the magnetic and kinetic energy densities are comparable).
+All these time scales are of the same order of magnitude, so more careful estimates
+of the correlation time are required to clarify the physical nature of the time correlations in the simulated ISM.
+It is plausible that the correlation time reflects both time scales and
+FORMULA  with a certain constant FORMULA . With
+FORMULA , FORMULA  and FORMULA , we obtain FORMULA , so the shock
+waves contribute about 10% to the random flow in this sense.
+FIGURE 
+TABLE 
+FIGURE 
+
+Anisotropy of the magnetic field
+In the analysis above, we neglected any anisotropy of the random magnetic
+field in the horizontal planes.
+This is justifiable since, at the scales of interest (from a few parsecs to about FORMULA ), the expected anisotropy
+is only moderate (see below). However, the anisotropy of magnetic fields is of high physical significance as it
+reflects the dynamics of MHD turbulence with and without a global mean magnetic field
+({{cite:be74cbad-1e83-41b1-96b7-6d502090d887}}, {{cite:3266d848-0d89-4c4b-8dcd-be8fb299e8c7}} and references therein; see also {{cite:70af9e9a-3768-4783-8078-d80290ca98b2}}, {{cite:1536e34e-cbf9-46ad-800b-273dc1033c40}}, {{cite:52093371-196c-4c1b-99c6-169ff9d3d3d2}}, {{cite:ae1ff016-9a20-4393-a74a-f4916c157b84}}, {{cite:4f86d778-8d41-4149-9941-a6ee90484b06}}),
+the effect of galactic differential rotation and compression of the random magnetic field in shocks. The anisotropy of interstellar magnetic fields
+can contribute significantly to the polarized radio emission of galaxies , .
+In this section, using the structure and autocorrelation
+functions, we discuss
+individual components of the random magnetic field, FORMULA 
+denoting their rms values FORMULA , FORMULA  and FORMULA .
+TABLE 
+As shown in Table REF ,
+the three components of FORMULA  are somewhat different in magnitude. The vertical, FORMULA -components
+is the largest at all heights,
+whereas the radial (FORMULA ) random field is the weakest.
+An enhanced azimuthal (FORMULA ) component is a result of the large-scale velocity shear due to
+differential rotation that produces FORMULA  from the radial field FORMULA , so that
+FORMULA  and then
+{{cite:59786fba-3a45-44d8-92de-0ee0550ecbcc}}
+FORMULA 
+For FORMULA , FORMULA  and
+FORMULA , this yields FORMULA –FORMULA ,
+in agreement with the estimates of
+Table REF  at FORMULA .
+The vertical component of the magnetic field is similarly enhanced beyond isotropy
+due to the stretching of the horizontal magnetic field by vertical velocity FORMULA  that varies
+at a scale FORMULA  and yet has a mean part FORMULA  at FORMULA :
+FORMULA .
+Unlike the stretching of the radial magnetic field by the large-scale velocity shear, this is a
+random process, so the rms vertical magnetic field grows as FORMULA . With the radial field
+FORMULA  representing the isotropic background, this leads to the estimate
+FORMULA 
+FIGURE 
+in a reasonable agreement with the estimates of Table REF . Since the
+vertical component of the random magnetic field is produced from both of its horizontal components,
+the FORMULA -component is the strongest one.
+An important radio astronomical consequence of the magnetic anisotropy is polarization of the synchrotron
+emission. If our simulation domain was observed from the top or bottom (i.e., along the FORMULA  direction)
+the observed degree of polarization
+due to the random magnetic field alone
+would be {{cite:720ce799-971e-40af-9ab3-873560082747}}, {{cite:5b29252c-41ea-419d-b47f-4be61e819955}}, {{cite:4e88caf8-292a-4e81-b0c6-07e9e801befd}}
+FORMULA 
+where FORMULA  is the maximum intrinsic degree of polarization,
+and we have neglected, for the sake of the argument, both depolarization effects and the average magnetic
+field. Such a degree of polarization is comparable to that observed in spiral galaxies, suggesting
+that the anisotropy of the interstellar random magnetic fields needs to be allowed for in the interpretations
+of radio polarization observations of spiral galaxies {{cite:ea99881c-a36d-4073-b1d9-c8793320b05f}}.
+The correlation lengths of the magnetic field components are given in
+Table REF  (for comparison with Table REF ).
+Because of the stretching of radial magnetic field by differential rotation
+that produces a stronger azimuthal field,
+we might expect the azimuthal correlation length to be larger than the radial one
+{{cite:3af2f139-46a3-4c5a-9d8e-f0a629c29ee6}}, {{cite:68b79abb-0aba-49b3-8ede-74434697e6d0}}, contrary to the results in Table REF ,
+where the correlation lengths for FORMULA  and FORMULA  are of similar magnitude.
+However, the correlation lengths were calculated using isotropic horizontal position lags, whereas
+azimuthal (FORMULA ) and radial (FORMULA ) lags should be considered separately to detect the expected difference in
+the correlation lengths in the two directions. Such a refined calculation requires a larger
+data domain to provide sufficient statistics.
+{{cite:4e54df88-3306-4b80-b72c-d233826e2fb6}} find that
+FORMULA  for the random magnetic field,
+i.e., the magnetic correlation length
+approximately
+along the mean-field direction (FORMULA  in our case)
+is about twice that in the perpendicular direction, and this
+ratio is similar to
+the ratio of FORMULA  found by these authors from depolarization
+of the synchrotron emission.
+The vertical magnetic field component has significant anticorrelation at FORMULA , shown in Figure REF , which results in very different values of FORMULA  and FORMULA , similar to FORMULA .
+As shown in Figure REF , individual components of the random magnetic field
+vary differently with FORMULA .
+As with the mean magnetic field,
+the rms means first increase with distance from the mid-plane until FORMULA ,
+and only then decrease. As suggested above, both FORMULA  and FORMULA  are enhanced, in comparison with FORMULA , by the horizontal velocity shear and random vertical flows, respectively; correspondingly, FORMULA  and FORMULA  increase with FORMULA  faster than FORMULA 
+at FORMULA , but then decrease with FORMULA  following the decrease in FORMULA .
+At FORMULA , each component of FORMULA  decreases nearly exponentially with
+the scale height of about FORMULA .
+Simulations with double rotation rate produce similar results.
+
+Observable quantities
+The main observational tools employed in the analysis of interstellar MHD turbulence are
+Faraday rotation and synchrotron emission, both total and polarized. Their statistical properties and their relation to
+the underlying random distributions of magnetic fields, gas density and cosmic rays have received significant attention,
+both observationally and theoretically (see references in §). Here we discuss correlation
+properties of the observable quantities in the simulated ISM. Given that magnetic field and gas density can have different
+correlation functions, and can be correlated with each other {{cite:795c5cbf-e116-4a5c-8859-69eab0273d36}}, statistical properties of the observable
+quantities are difficult to predict with confidence.
+Both Faraday rotation and synchrotron emission depend on the relative orientation of the large-scale
+magnetic field and the line of sight. The mean magnetic field in the simulations used here is predominantly horizontal and
+its FORMULA -component is the strongest {{cite:940cb7b3-62b1-416b-b71e-03c1e602884c}}, {{cite:d6fbd5e6-b3f3-4401-8718-d2b9a9b2f812}}. Exploring the observational appearance of the
+simulated volume from various vantage points will be our goal elsewhere; here we only discuss the properties of
+fluctuations in Faraday rotation and synchrotron emission using just one direction of `observation'.
+Faraday depth
+The Faraday depth of a magneto-ionic region is an integral along the
+line of sight, assumed here to be along the FORMULA -direction for convenience:
+FORMULA 
+where FORMULA  is the number density of thermal electrons in cmFORMULA ,
+FORMULA  is the line-of-sight component of magnetic field in FORMULA G, distance FORMULA  is in pc, and FORMULA  is the half-size of the computational domain along FORMULA .
+Our simulations do not include gas ionization and only provide total gas density FORMULA . Since interstellar plasmas
+can be far from ionization equilibrium {{cite:e3dd5383-433d-48b5-99de-ff2920a2999c}}, {{cite:3149fc0b-52a4-4c81-95dd-cffcbcc4213d}}, we obtain thermal electron density from
+a heuristic relation that ensures that the mean electron number density is about FORMULA  and the gas
+is fully ionized at FORMULA :
+FORMULA 
+Since observations do not distinguish between different ISM phases, the Faraday depth has been computed for the whole
+computational domain.
+The autocorrelation function of the Faraday depth is shown in Figure REF .
+Its correlation length, FORMULA  is significantly greater
+than the correlation length of electron density, FORMULA  at the midplane
+increasing to FORMULA  at FORMULA  (Table REF ),
+and the vertical random magnetic field, FORMULA  (Table REF ).
+We note that the mean component of FORMULA  is negligible, so that the
+mean value of the Faraday depth is close to zero, FORMULA .
+As discussed by {{cite:795c5cbf-e116-4a5c-8859-69eab0273d36}}, the magnitude of Faraday rotation depends on the correlation between magnetic field and thermal electron density. To clarify their relation in our simulations, we computed the cross-correlation coefficient between FORMULA  and FORMULA  separately for the warm and hot gas:
+FORMULA 
+where the overbar denotes an average taken over the volume occupied by the phase.
+The results, averaged over the snapshots, confidently suggest that the two variables are uncorrelated: FORMULA  in the warm gas and FORMULA  in the hot phase.
+FIGURE 
+TABLE 
+FIGURE 
+FIGURE 
+
+Synchrotron intensity
+Statistical properties of the synchrotron intensity are sensitive to the relation between the distributions
+of cosmic ray electrons, FORMULA , and magnetic field.
+Cosmic rays {{cite:0f626de2-b03a-4261-ad80-9be986119d9a}} have a high diffusivity of order FORMULA , so their diffusion length
+over the confinement time of FORMULA  is of order FORMULA . Thus, it can be expected that cosmic rays are
+distributed much more homogeneously than magnetic fields, but the assumption
+of a local energy equipartition (or pressure balance) between cosmic rays and magnetic fields is often used
+in interpretations of synchrotron observations {{cite:b7043685-4718-44a0-b892-d74a6c8afdad}}.
+We note that analysis of synchrotron fluctuations in spiral galaxies
+suggest that cosmic ray electrons and magnetic fields can be slightly
+anti-correlated
+{{cite:59786fba-3a45-44d8-92de-0ee0550ecbcc}}. Fluctuations of synchrotron intensity can
+provide information about interstellar turbulence {{cite:72656f68-0c8a-4f51-a52c-b71a57af6ed9}}, {{cite:b2cc25ad-d106-437f-9997-eaa8a0c3eee9}}. Here we
+discuss the synchrotron intensity fluctuations implied by our ISM simulations.
+The synchrotron intensity, in arbitrary units, is obtained by integration along the FORMULA -axis (so that the mean magnetic field is mostly perpendicular to the line of sight),
+FORMULA 
+using two alternative assumptions about cosmic ray distribution FORMULA :
+FORMULA 
+and
+FORMULA 
+As with the Faraday depth, we do not consider other lines of sight through the computational domain.
+The Stokes parameters, at wavelengths short enough that Faraday rotation is
+negligible, are similarly obtained as
+FORMULA 
+
+where FORMULA  is the intrinsic polarization angle
+perpendicular to the local magnetic field in the FORMULA -plane,
+calculated as FORMULA .
+The polarized intensity follows as
+FORMULA 
+The structure functions of the total and polarized synchrotron intensities under both
+assumptions about the cosmic ray distribution are shown in Figures REF  and REF , respectively. They clearly have a more complicated
+form than those of the magnitude of the random magnetic field shown in Figure REF .
+This is not surprising since the mean field is a function of position, and hence contributes to the structure and
+correlation functions. In particular, the systematic increase of the structure function at large values of FORMULA 
+results from this contribution. The contribution from the mean field needs to
+be subtracted from the structure function before any further analysis could be done.
+We postpone such analysis to simulations that include cosmic rays.
+A notable feature of the results illustrated in Figures REF  and
+REF  is the rapid increase in the scatter of the data points and the deterioration of the accuracy of the structure function estimates as the lag FORMULA  becomes larger than about FORMULA .
+This is understandable since the synchrotron emissivity depends on relatively
+high power of the fluctuating magnetic field. Observations in the Milky Way can
+be especially strongly affected, because even within a narrow telescope beam
+the divergence of the lines of sight can be as wide as hundreds of parsecs
+at some distance from the Sun {{cite:bfeee496-62b0-4633-b96b-b2a4a04926a1}}, {{cite:90a6afe7-14a1-4f32-b913-f0154dcda4bb}}, {{cite:8e55e539-9ff0-4033-8ab8-2f22ec543a9b}}.
+In the case of external galaxies, a linear resolution of order a few hundred parsecs is typical of synchrotron observations.
+The increase in the uncertainty of the correlation function with FORMULA  can cause serious
+complications in the analysis of interstellar turbulence using power spectra of synchrotron fluctuations (the Fourier transforms of the correlation function)
+as suggested by {{cite:72656f68-0c8a-4f51-a52c-b71a57af6ed9}}, {{cite:b2cc25ad-d106-437f-9997-eaa8a0c3eee9}} and {{cite:bf62b185-c7d7-4f91-9994-568a0edecce3}}.
+This problem may not be evident when power spectra are considered because it is difficult to estimate their statistical accuracy. However, correlation analysis, with due attention to the errors, makes the problem evident.
+TABLE 
+
+Discussion
+We have performed detailed correlation analysis of the random physical fields in extensive ISM simulations,
+focusing mainly on the warm gas since it occupies a larger part of the volume. Statistical properties of the
+fluctuations in the gas properties are strongly non-Gaussian because of widespread filamentary and planar,
+small-scale structures. Such features cannot be captured by second-order correlation functions (or their equivalent,
+power spectra) and require other tools sensitive to all statistical moments of the random field, such as
+Minkowski functionals {{cite:925ed4e7-eafe-4fab-a752-45f7633826e2}}, {{cite:c1f74266-e924-4712-a503-b7901b064d00}} and topological data analysis
+{{cite:816c5fcb-705c-4eea-9343-ed8aa1ac92c3}}, {{cite:0b676adf-b4e2-440c-99b2-82efacf71673}}.
+However, careful correlation analysis remains a necessary first step in the exploration of statistical
+properties of random fields.
+There are two difficulties in correlation analysis (and its equivalent, power spectrum analysis)
+that deserve special attention as they also occur in any
+exploration of either simulated or observational data. Correlation analysis is only meaningful when applied to a random
+distribution. Therefore, random fluctuations in physical parameters need to be isolated first by subtracting their averaged
+distributions. Averaging is straightforward in infinite domains with statistically homogeneous fluctuations. However,
+in reality the domain can contain only a modest number of correlation volumes, and the mean distributions of
+physical variables are not necessarily uniform or describable via a simple trend. We obtain the averaged distributions
+using Gaussian smoothing at a scale (half-width of the Gaussian window) of FORMULA  chosen
+carefully as in {{cite:d6fbd5e6-b3f3-4401-8718-d2b9a9b2f812}} (see Section REF ). Simpler procedures, for example using
+a uniform mean value at a given FORMULA , distort the results because of the contamination of the structure and
+correlation functions by systematic and complicated non-random trends. In particular, the values of correlations
+lengths obtained under the assumption of horizontally uniform mean values are unphysically large, exceeding FORMULA .
+Even with a correlation lengths FORMULA  of less than FORMULA , the finite size of the domain (of order FORMULA  in our case)
+can significantly affect the estimated values of FORMULA , as the integration in Equation (REF ) extends to infinity.
+We resolve this problem by fitting the measured correlation functions with physically motivated forms,
+which can then be integrated over an infinite range. The difference between the correlations lengths obtained with and without
+this fitting can be as large as a factor of two.
+Given the complex structure of the simulated ISM, it is not surprising that different physical variables have
+different correlation functions and different correlation lengths FORMULA , as shown in Table REF .
+The observational estimates available for the correlations lengths in the ISM provide a wide range of values depending
+on the quantity observed. Conclusive comparison with observations requires detailed knowledge of the
+statistical properties of the random fields involved and their cross-correlations {{cite:59786fba-3a45-44d8-92de-0ee0550ecbcc}}. Interstellar turbulence
+cannot be characterized by a single correlation length.
+We have estimated the correlation time of the velocity fluctuations FORMULA .
+In the simulations used here,FORMULA  is close to both the eddy
+turnover time, FORMULA  and the estimated time
+interval between the passage of shock fronts through a given position, FORMULA . The correlation time is likely to be sensitive to the supernova rate (and then, star formation rate) and may be closer to FORMULA  when the supernova rate is higher.
+Further calculations with varying supernova rates are needed to explore under what conditions either physical process dominates the correlation time.
+The random magnetic field is noticeably anisotropic, with larger rms values for azimuthal (FORMULA ) and vertical (FORMULA ) components in comparison to the radial (FORMULA ) component, with FORMULA  the strongest component.
+The enhanced FORMULA -component is produced by the action of the large-scale velocity shear on the radial turbulent magnetic field FORMULA , with
+the enhanced FORMULA  component produced by stretching of the horizontal magnetic field by the random part of the vertical velocity FORMULA .
+From the rms values of FORMULA  and FORMULA ,
+we estimate a degree of polarization of FORMULA  that may be produced by the magnetic anisotropy.
+We also performed correlation analysis of the Faraday depth along the
+vertical direction through the computational domain. Its correlation scale,
+FORMULA , is significantly larger than the correlation scales of electron
+density (FORMULA ) and of vertical magnetic field (FORMULA ).
+This suggests that there is no simple and universal relationship between
+the correlation scales of electron density, vertical magnetic field and Faraday
+depth.
+Analysis of the total and polarized synchrotron intensities is hampered
+by a rapid increase of the scatter of data points around the average
+contributions to the structure and correlation functions. This difficulty
+is evident in the correlation analysis but would not be apparent in the power
+spectra, where statistical errors are difficult to estimate.
+
+Acknowledgements
+JFH acknowledges financial support from EPSRC (UK) Grant 1515172.
+Financial support from the Academy of Finland Centre of Excellence ReSoLVE
+(project number 272157) is acknowledged (FAG);
+Support: Grand Challenge project SNDYN, CSC-IT Center for Science Ltd. (FAG);
+AS, AF and GRS were supported by the Leverhulme Trust
+Grant RPG-2014-427 and STFC Grant ST/N000900/1 (Project 2).
+FIGURE 
+FIGURE 
+
+Comparison with larger domain
+The computational domain used to obtain our results, about FORMULA ,
+contains only about FORMULA  correlation cells and, in addition, may be too small to accommodate the most rapidly growing mode of the large-scale magnetic field.
+The large-scale dynamo remains in its kinematic stage in the larger domain, but otherwise the simulation has achieved a statistically steady state.
+Therefore, we verify the results using similar simulations in a larger domain, approximately FORMULA  in size.
+The velocity shear rate is that of the Solar neighborhood, FORMULA , and
+we analyze data from 12 snapshots in the range FORMULA , with a separation of FORMULA .
+The results from the larger domain are compared with those obtained from the kinematic stage of the large-scale dynamo in the main run discussed in the text. We use data from 21 snapshots in the range FORMULA , with a separation of FORMULA .
+We find very similar correlations in FORMULA  between the two runs (see Figure REF  and Table REF ),
+but there are more significant differences for FORMULA  (see Figure REF  and Table REF ;
+the latter also gives comparable statistics for a similar kinematic state in the standard domain).
+The correlation lengths of FORMULA  are actually smaller for the larger domain, so the difference does not simply result from velocity structures having been restricted in size. In light of the differences noted above, further simulations are needed before a direct comparison can be made.

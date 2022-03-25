@@ -1,0 +1,331 @@
+
+linktocpage
+matrix,arrows
+
+Invariants of 2-dimensional sheaves on local  FORMULA
+Amin Gholampour and Artan Sheshmani
+Generalized Donaldson-Thomas Invariants of 2-Dimensional sheaves on local  FORMULA
+Amin Gholampour and Artan Sheshmani
+
+December 11, 2018
+
+Introduction
+The study of abelian gauge theory on FORMULA  led string theorists to discover an interesting symmetry, the electric-magnetic duality, which inverts the coupling constant and extends to an action of FORMULA . This FORMULA  symmetry was later studied over the more general 4-manifolds, some with specific topological twists, where it was called FORMULA -duality , say in the context of FORMULA  supersymmetric Yang-Mills theories. The FORMULA -duality is roughly saying that certain 4-dimensional gauge theories are modular invariant under the action of the FORMULA . This modular invariance can be tested by studying the partition function of the theory, roughly speaking, measuring the Euler characteristic of the instanton moduli space of that theory. One of interesting results by string theorists in {{cite:04830ddb-aba5-4acb-b600-7280cee1d37e}} was to show that the topological quantum field theories obtained by the so-called (topologically) twisted super Yang-Mills theories over the four manifold and their associated partition functions are equivalent to Donaldson's theory of four manifolds and the associated partition function of Donaldson's invariants. These interesting consequences of S-duality, later set base for much further developments, such as the correspondence between the supersymmetric black hole entropies and FORMULA  super Yang-Mills theories {{cite:3dc41760-8f72-4741-97a2-40265528ea8c}}. Recently the study of the conjectural modular properties of the BPS partition functions of the supersymmetric D4-D2-D0 black holes {{cite:bb5e8e27-6703-4795-ad56-f98af992d3fb}}, {{cite:18f87c87-049b-4e49-96c0-3effe7daf8cd}} motivated algebraic geometers to construct a mathematical framework for modeling the D4-D2-D0 BPS states and prove the modularity properties of their associated partition functions, using purely algebraic-geometric techniques. The current article is the third in the sequel, after {{cite:564d5739-4651-4219-9574-3e20c783ab37}} and {{cite:a309edfe-f99e-46ee-afe1-2abfe823035a}}, of the authors' attempt to achieve this goal where here, the focus of the study is to specifically compute the D4-D2-D0 BPS invariants via computing their mathematical counterpart given by the Donaldson-Thomas invariants of torsion sheaves in an ambient Calabi-Yau threefold.
+Let FORMULA  be a smooth projective Calabi-Yau threefold. For a pure sheaf FORMULA  the Hilbert polynomial is defined to be FORMULA , and the reduced Hilbert polynomial of FORMULA  is
+FORMULA 
+
+FORMULA  is called Gieseker semistable if for any proper subsheaf FORMULA  we have FORMULA  for FORMULA . FORMULA  is called Gieseker stable if the equality never holds for any proper subsheaf FORMULA .
+
+FORMULA  is called FORMULA -semistable if for any proper subsheaf FORMULA  we have FORMULA . FORMULA  is called FORMULA -stable if the equality never holds for any proper subsheaf FORMULA .
+
+For a fixed FORMULA , a pair FORMULA , where FORMULA  is a nonzero section of FORMULA , is called stable ({{cite:abd3b8bf-3df4-4a67-89cc-07804e1673b7}}) if
+
+FORMULA  is Gieseker semistable,
+
+if FORMULA  factors through a proper subsheaf FORMULA  then FORMULA  for FORMULA .  FORMULA
+
+
+The stability of pairs has originated from the stability of the coherent systems defined by Le Potier {{cite:253cd090-8fa4-4011-a88e-f4f5b5e00865}}. The reduced Hilbert polynomial of the pair FORMULA  is defined to be
+FORMULA 
+where and FORMULA . Now if FORMULA , define FORMULA  to be the restriction of FORMULA  if FORMULA  factors through FORMULA , and otherwise define FORMULA . Now the pair FORMULA  is stable if and only if for any proper subsheaf FORMULA ,  FORMULA
+Suppose now that FORMULA  is a proper moduli space of Gieseker stable sheaves FORMULA  (or the moduli space of stable pairs FORMULA ) as above with fixed Hilbert polynomial FORMULA . The moduli space FORMULA  is usually singular and may have several components with different dimensions. To define (deformation invariant FORMULA -valued) invariants FORMULA  as integration over FORMULA  we need to have a virtual fundamental class of the moduli space constructed by means of a perfect obstruction theory on FORMULA . This can be obtained by studying the deformations and obstructions of the stable sheaves or the stable pairs {{cite:05e8bbe2-17bc-470e-bc6e-b8780c2d827c}}, {{cite:ed71d673-1e5e-4635-b76b-6d09aacb7e2a}}, {{cite:65b5a92c-89d6-48ec-acdf-3f15d1246835}}, {{cite:a4751472-c069-4c81-a423-d964f7a799a4}}.
+Moreover, the obstruction theory on FORMULA  is symmetric and the corresponding invariants are expressible as a weighted Euler characteristic of the moduli space {{cite:a75cb3eb-8f2a-43e7-b363-7f261b1257a9}}.
+If the moduli space of Gieseker semistable sheaves FORMULA  contains strictly semistable sheaves, then one cannot define the invariants FORMULA  by means of the virtual fundamental class.
+Joyce and Song {{cite:abd3b8bf-3df4-4a67-89cc-07804e1673b7}} instead define the FORMULA -valued invariants for FORMULA  called the generalized DT invariants FORMULA  which are given by the “stacky” weighted Euler characteristic of the moduli space of semistable sheaves. Joyce-Song stable pairs theory {{cite:abd3b8bf-3df4-4a67-89cc-07804e1673b7}} provides a tool to compute the so-called stacky Euler characteristics, by using the sophisticated motivic wall-crossing techniques developed by Joyce {{cite:63a47bdc-8a50-45a8-a9c5-5afd1038a1f9}}, as well as Kontsevich and Soibelman in {{cite:0a987661-956f-4b3d-8065-bd0dff7d0091}}. In other words, the main idea is to benefit from the, easier to calculate, Joyce Song pair invariants to compute the generalized DT invariants. The latter can be done by obtaining a wall-crossing identity between the the elements of the Hall algebra of the motivic ring of stack functions of the moduli space of stable pairs and the moduli space of semistable sheaves respectively. After taking the stacky Euler characteristics of both sides of this identity, one obtains the wall-crossing identity between the pair invariants and the generalized DT invariants. Note that, FORMULA  specializes to FORMULA  if there are no strictly semistable sheaves and moreover, FORMULA  is also deformation invariant.
+We study the case where FORMULA  is the total space of the canonical bundle of FORMULA  and FORMULA  is the moduli space of semistable sheaves with Hilbert polynomial FORMULA . Any semistable sheaf FORMULA  with Hilbert polynomial FORMULA  is (at least set theoretically) supported on the zero section of FORMULA , and FORMULA  is equal to FORMULA  times the class of the zero section. We relate FORMULA  to the topological invariants of the moduli space of torsion-free semistable sheaves on FORMULA . Using the wall-crossing formula of Joyce-Song {{cite:abd3b8bf-3df4-4a67-89cc-07804e1673b7}} and the toric methods of {{cite:37fc8816-4269-4d15-943f-7dff3c31b6c1}}, {{cite:bba9cb3f-ece1-436a-8191-98e6e833a364}} we find a formula for FORMULA  when FORMULA  in the presence of strictly semistable sheaves. To express the main result, let FORMULA  be the moduli space of rank 2 Gieseker semistable sheaves on FORMULA  with Hilbert polynomial FORMULA  and let FORMULA  be the open subset of stable sheaves. Denote by FORMULA  the Hilbert scheme of FORMULA  points on FORMULA . Then we prove
+Theorem 1 
+Let FORMULA  where FORMULA ,
+
+If FORMULA  is an odd number then FORMULA .
+
+If FORMULA  is an even number then
+FORMULA 
+
+where FORMULA  is a combinatorial expression (cf. Theorem REF ) taking into account the contribution of indecomposable strictly semistable sheaves.
+
+
+FORMULA  is in general a rational number in the presence of semistable sheaves. Joyce and Song in {{cite:abd3b8bf-3df4-4a67-89cc-07804e1673b7}} define the corresponding BPS invariants denoted by FORMULA  by the following formula:
+FORMULA 
+Joyce and Song conjecture that FORMULA  is an integer. In the case that there are no strictly semistable sheaves with Hilbert polynomial FORMULA  we have FORMULA .
+Corollary 2 Using the notation of Theorem REF , we assume that FORMULA  is an even number then By this result to show FORMULA  one needs to show that  FORMULA
+FORMULA 
+
+ FORMULA
+
+Acknowledgment
+We would like to thank Martijn Kool, Jan Manschot and Richard Thomas for many helpful discussions. The second author would like to thank Max Planck Institut für Mathemaik for hospitality.
+
+Proof of Theorem  REF
+Let FORMULA  be the total space of FORMULA  over FORMULA . Then FORMULA  is a quasiprojective Calabi-Yau threefold, called local FORMULA . Let FORMULA  be the pullback of FORMULA  from FORMULA , and let FORMULA  denote the zero section. We identify the compactly supported cohomology groups of FORMULA  with the cohomology groups of FORMULA :
+FORMULA 
+Using this identification, let FORMULA , FORMULA , FORMULA  be respectively the classes of FORMULA , a line and a point on FORMULA .
+The Hilbert polynomial (with respect to FORMULA ) of a 2-dimensional compactly supported coherent sheaf FORMULA  on FORMULA  with the compactly supported Chern character
+FORMULA 
+is given by
+FORMULA 
+Any such FORMULA  is set theoretically supported on FORMULA . Moreover, we have
+Lemma 2.1 
+If FORMULA  as above is semistable Whenever we mention (semi)stability of sheaves, unless otherwise is specified, we always mean Gieseker (semi)stability., then FORMULA  is scheme theoretically supported on FORMULA  and hence
+FORMULA 
+the moduli space of rank FORMULA  semistable sheaves on FORMULA  with Hilbert polynomial FORMULA .
+
+The ideal sheaf of FORMULA  in FORMULA  is isomorphic to FORMULA , hence we get the exact sequence
+FORMULA 
+Since FORMULA  is semistable, the first morphism in the sequence above is necessarily zero and hence FORMULA .
+Note that for any stable torsion-free sheaf FORMULA  on FORMULA  we have FORMULA  by Serre duality and the negativity of FORMULA . Therefore, if FORMULA  is such that there are no strictly semistable sheaves on FORMULA  with Hilbert polynomial FORMULA , then the moduli space FORMULA  is un-obstructed and smooth of dimension
+FORMULA 
+where as a sheaf on  FORMULA
+FORMULA 
+In this case the Behrend's function is determined by FORMULA  {{cite:a75cb3eb-8f2a-43e7-b363-7f261b1257a9}}, and hence
+FORMULA 
+The generating function of the Euler characteristic of the moduli space of FORMULA -stable torsion-free sheaves on FORMULA  is known for FORMULA , by the results of {{cite:f16dd2f3-4419-4584-8798-4c60eeb6a980}}, {{cite:f25109ec-1cd0-4234-870a-768c62d9f541}}, {{cite:d8dd9f70-6d47-4182-b653-65fd1af7dfb2}}, {{cite:29e94276-b7d7-4ee9-b688-7da9f6f61c20}}, {{cite:04830ddb-aba5-4acb-b600-7280cee1d37e}} and they all have modular properties. Here is the summary of these results:
+
+FORMULA . By tensoring with FORMULA  we can assume that FORMULA . So then FORMULA , the Hilbert scheme of FORMULA  points on FORMULA , which is smooth of dimension FORMULA . Note that in this case there are no strictly semistable sheaves on FORMULA  with Hilbert polynomial FORMULA , so by {{cite:d8dd9f70-6d47-4182-b653-65fd1af7dfb2}}
+FORMULA 
+
+FORMULA  By tensoring with FORMULA  we can assume that either FORMULA  or FORMULA . If FORMULA  then there are no strictly semistable sheaves with the corresponding Hilbert polynomial FORMULA  (and FORMULA -stability is equivalent to Gieseker stability) and hence FORMULA  is smooth of dimension FORMULA  so by {{cite:f16dd2f3-4419-4584-8798-4c60eeb6a980}}
+FORMULA 
+
+When FORMULA , there are strictly semistable sheaves with Hilbert polynomial FORMULA  only when FORMULA .
+If FORMULA  then FORMULA  is smooth of dimension FORMULA . So for  FORMULA
+FORMULA 
+We will study the case FORMULA  in more detail in what follows in this section.
+
+FORMULA  We can assume again that FORMULA  or 2. In the latter two cases FORMULA  has no strictly semistable sheaves (and FORMULA -stability is equivalent to Gieseker stability) and there is a modular formula for the generating function FORMULA  in terms of the generating function of the Euler characteristics of FORMULA  computed in {{cite:f16dd2f3-4419-4584-8798-4c60eeb6a980}}.
+
+In the following we compute FORMULA  in the presence of semistable sheaves when FORMULA . By the discussion above strictly semistable sheaves only occur if FORMULA  and FORMULA . Let
+FORMULA 
+be the corresponding Hilbert polynomial. We use the moduli space of stable pairs in the sense of {{cite:abd3b8bf-3df4-4a67-89cc-07804e1673b7}}.
+For FORMULA , let FORMULA  be the moduli space of stable pairs FORMULA  where FORMULA  is a semistable sheaf of rank 2 with Hilbert polynomial (REF ), and FORMULA  is a nonzero section of FORMULA . The stability of pairs further requires that if FORMULA  is a proper subsheaf of FORMULA , such that FORMULA  factors through FORMULA , then the Hilbert polynomial of FORMULA  is strictly less than the Hilbert polynomial of FORMULA . By {{cite:abd3b8bf-3df4-4a67-89cc-07804e1673b7}} FORMULA  admits a symmetric perfect obstruction theory. Let FORMULA  be the corresponding pair invariants. Note that, even though FORMULA  is not proper, FORMULA  is proper (as all the semistable sheaves are supported on FORMULA ) so FORMULA  is well defined. Alternatively, FORMULA .
+Lemma 2.2 
+ FORMULA
+
+This is a direct corollary of the wall-crossing formula {{cite:abd3b8bf-3df4-4a67-89cc-07804e1673b7}} by noting two facts. Firstly, the only decomposable semistable sheaves with Hilbert polynomial FORMULA  are of the form FORMULA  where FORMULA  and FORMULA  are the push forwards to FORMULA  of the ideal sheaves of the 0-dimensional subschemes FORMULA  of length FORMULA . Secondly, the Euler form FORMULA .
+Remark 2.3 Note the polynomial on the right hand side of Lemma REF  is a rational number independent of FORMULA .
+ FORMULA
+
+There is a natural morphism FORMULA  that sends a stable pair FORMULA  to the FORMULA -equivalence class of FORMULA . Note that FORMULA  is singular at a point corresponding to a strictly semistable sheaf. However, we have
+Proposition 2.4 
+FORMULA  is a smooth scheme of dimension FORMULA .
+
+We denote by FORMULA  the 2-term complex FORMULA  corresponding to a stable pair FORMULA . By the stability of pairs FORMULA  has to be a semistable sheaf and hence Lemma REF  implies that
+FORMULA 
+the moduli space of the stable pairs on FORMULA . The Zariski tangent space and the obstruction space at a FORMULA -point FORMULA  are then identified with FORMULA  and FORMULA  respectively. Consider the following natural exact sequence:
+FORMULA 
+
+Since FORMULA , we have FORMULA  for FORMULA .
+We also know that FORMULA  by Serre duality and the semistability of FORMULA . So the exact sequence above firstly implies that FORMULA  which means that FORMULA  is unobstructed and hence smooth, and secondly
+FORMULA 
+By Proposition REF , and noting that FORMULA  (see (REF )), we have
+Corollary 2.5 
+FORMULA .
+ FORMULA
+
+We will find FORMULA  using toric techniques. According to {{cite:f16dd2f3-4419-4584-8798-4c60eeb6a980}}, a torsion-free FORMULA -equivariant sheaf FORMULA  on FORMULA  corresponds to three compatible FORMULA -families, FORMULA  one for each of the standard FORMULA U1,U2,U3FORMULA P2FORMULA mFORMULA  identified with FORMULA , FORMULA , the eigenspace corresponding to FORMULA  in the space of sections of FORMULA  on FORMULA .
+A triple of FORMULA -families giving rise to a  FORMULAFORMULA A FORMULA IFORMULA P2FORMULA u,v,wFORMULA '1, '2, '3. FORMULAFORMULA I1, I2, I3FORMULA U1,U2,U3 FORMULA
+
+
+ FORMULA FORMULA FORMULA FORMULA FORMULA
+
+ FORMULA FORMULA
+
+ FORMULA FORMULA
+
+
+
+
+
+
+
+
+
+
+
+
+FORMULA -family for a  FORMULA
+
+For any FORMULA  we have FORMULA  if FORMULA  is below the horizontal axis, on the left of the vertical axis, or inside the partition FORMULA . Otherwise, FORMULA .
+Moreover, we have (see {{cite:bba9cb3f-ece1-436a-8191-98e6e833a364}})
+FORMULA 
+A FORMULA FFORMULA P2FORMULA -equivariant line bundle) is determined by a FORMULA -family given by
+
+an integer FORMULA ,
+
+three nonnegative integers FORMULA ,
+
+a 1-dimensional subspace FORMULA  one for each FORMULA  (if FORMULA  we set FORMULA ),
+
+six 2d partitions FORMULA  for FORMULA .
+
+Definition 2.6 We call a FORMULA -family corresponding to a FORMULA FFORMULA P2FORMULA p1,p2,p3 FORMULAFORMULA 
+Figure REF  indicates the corresponding FORMULA -family FORMULA  in the case FORMULA  are pairwise distinct each diagram corresponds to the FORMULA -family FORMULA  on FORMULA .. The points indicated by FORMULA  have the coordinates FORMULA , respectively. The partitions FORMULA  are placed respectively at the points (indicated by FORMULA ) with the coordinates
+FORMULA 
+FIGURE 
+Figure REF , indicates a typical degenerate case in which FORMULA . Everything is the same as in the non-degenerate case except that we reposition the partitions FORMULA  to respectively the points with the coordinates FORMULA  Similarly if FORMULA  (respectively FORMULA ) then we reposition the partitions FORMULA  (respectively FORMULA ) to the points with the coordinates FORMULA  (respectively FORMULA ). Finally, if FORMULA  then we bring all the partitions to the point with new coordinates (indicated by FORMULA ).
+FIGURE 
+For any FORMULA , we denote by FORMULA  the vertical and the horizontal strips made by two vertical and two horizontal lines in each diagram:
+FORMULA 
+etc. We also denote by FORMULA  the areas located above the horizontal strip and to the right of the vertical strip:
+FORMULA 
+etc. We then have (we use the convention FORMULA )
+
+FORMULA  if either FORMULA , FORMULA , FORMULA  is on the left of the strip FORMULA , or FORMULA  is below the strip FORMULA .
+
+FORMULA , FORMULA .
+
+FORMULA  if FORMULA  is in FORMULA .
+
+Suppose that FORMULA  then FORMULA  if FORMULA  or if FORMULA  belongs to a connected component of FORMULA  adjacent to a member of FORMULA ; and FORMULA  if FORMULA  or if FORMULA  belongs to a connected component of FORMULA  adjacent to a member of FORMULA .
+Suppose that FORMULA  then FORMULA  if FORMULA  or if FORMULA  belongs to a connected component of FORMULA  adjacent to a member of FORMULA .
+
+FORMULA  where FORMULA  is an arbitrary 1-dimensional subspace of FORMULA  for all FORMULA  in any connected component of FORMULA  other than the ones mentioned in (F4). We denote these connected components by FORMULA , and denote by FORMULA  the corresponding 1-dimensional subspaces.
+
+Remark 2.7 It can be seen that the FORMULA {p1,p2,p3, s1,...,sk}FORMULA -equivariant sheaf with non-degenerate FORMULA -family obviously satisfies this condition regardless of the subspaces FORMULA .
+ FORMULA
+
+Definition 2.8 By a FORMULA -family data FORMULA  we mean the collection of
+
+an integer FORMULA ,
+
+nonnegative integers FORMULA ,
+
+six possibly empty 2d partitions FORMULA ,
+
+the set FORMULA .
+
+Note that in a FORMULA -family data we do not specify FORMULA , but we only keep track of whether they are distinct or not. Given a FORMULA -family data FORMULA  we define FORMULA  to be the number of nonzero elements of the set FORMULA .
+ FORMULA
+
+In terms of FORMULA -family data (see {{cite:bba9cb3f-ece1-436a-8191-98e6e833a364}})
+FORMULA 
+
+As a result, the FORMULA -family of the FORMULA FFORMULA FFORMULA FFORMULA -equivariant sheaves FORMULA  for any nonzero FORMULA , to be the maximal subsheaves of FORMULA  respectively with
+FORMULA 
+
+Similarly, if FORMULA  is given by a degenerate FORMULA -family we can define FORMULA  to be the maximal rank 1 subsheaf generated by the FORMULA .
+We are only interested in the case where the Hilbert polynomial of FORMULA  is FORMULA , so we must have
+FORMULA 
+and
+FORMULA 
+Then one can see that FORMULA  is Gieseker (semi)stable if the Hilbert polynomial of FORMULA  is less than (less than or equal to) FORMULA  for FORMULA  (see {{cite:bba9cb3f-ece1-436a-8191-98e6e833a364}}). Similarly FORMULA  is FORMULA -(semi)stable if the linear term of the Hilbert polynomial of FORMULA  is less than (less than or equal to) to the linear term of FORMULA  for FORMULA .
+A closed point of  FORMULA
+For a fixed FORMULA  and FORMULA  (compatible with FORMULA ), any closed point of FORMULA  gives rise to a  FORMULA FORMULAFORMULA FFORMULA -equivariant sheaf with FORMULA -family data FORMULA  Note that 1-dimensional subspaces of FORMULA  can be identified with the closed points of  FORMULA.
+Example 2.9 
+In this example we consider a  FORMULA FORMULA FORMULA FORMULA FORMULA FORMULAFORMULA FFORMULA P(m)=m2+3m FORMULA FORMULA FORMULAFORMULA =(u,v,w) FORMULA FORMULA FORMULAFORMULA l(,)=0 FORMULAFORMULA l(,)=1 FORMULA FORMULAFORMULA P(5)=40FORMULA In order to determine the morphism FORMULA , we in addition need to specify a 1-dimensional subspace FORMULA .
+Note that FORMULA  given by this data is strictly semistable if the Hilbert polynomial of FORMULA  is equal to FORMULA . Therefore, the pair is stable if and only if FORMULA . This means that if FORMULA  then there is at most one choice for FORMULA ; but if FORMULA  then FORMULA  can be any point in FORMULA . So the space of possible FORMULA  can be either FORMULA , a point, or FORMULA . We assign the weight 0 or 1 to a lattice point FORMULA  depending on respectively the first or second possibility occurs, and we assign the weight 1 to each FORMULA . With these new weights, one can check that the count of FORMULA  and FORMULA  in each diagram is P(5)/2=20.
+
+FIGURE 
+ FORMULA
+In order to get a bijection between the closed points of  FORMULA
+We define FORMULA , and denote by FORMULA , FORMULA , and FORMULA  the locally closed subspaces of FORMULA  where the corresponding underlying sheaves FORMULA  are respectively decomposable, indecomposable strictly semistable, and stable. Given any two FORMULA -compatible triple of integers FORMULA , it is not hard to verify the following properties:
+
+FORMULA  is empty or an isolated point,
+
+FORMULA ; we denote the common value by FORMULA .
+
+FORMULA ; we denote the common value by FORMULA .
+
+In the following proposition we determine the contributions of each of the above items to the Euler characteristc FORMULA  (FORMULA  as in (REF )).
+Proposition 2.10
+
+If FORMULA , where FORMULA  are the ideal sheaves of the FORMULA Z1,Z2 P2FORMULA IZ1, IZ2FORMULA P/2FORMULA FFORMULA (Pn(P2,P)) FORMULA FORMULAFORMULA D(P) FORMULA FORMULAFORMULA D(P) FORMULA FORMULA FORMULA
+Given FORMULA  as in (1), the contribution of FORMULA  is equal to the Euler characteristic of the space of FORMULA F(n) FORMULA FORMULA FORMULAFORMULA l(,)+1FORMULA P1 FORMULA
+Remark 2.11 
+In the case that FORMULA  is a non-degenerate FORMULA -family and
+FORMULA 
+for any pairwise distinct FORMULA ,
+it is easy to find FORMULA  and FORMULA . Let FORMULA  be a FORMULA -compatible triple of integers with FORMULA . Since FORMULA  are nonzero and pairwise distinct by assumption FORMULA , and we have
+FORMULA 
+In fact in this case, FORMULA , and
+FORMULA  because by the FORMULA -action one can fix FORMULA  to be respectively FORMULA  and then
+FORMULA 
+can be arbitrary.  FORMULA
+
+Using Lemma REF  and Proposition REF , we prove the following result evaluating the DT invariants of FORMULA  corresponding to the rank 2 torsion-free sheaves on FORMULA :
+Theorem 2.12 
+Let FORMULA  where FORMULA , and let FORMULA  be the open subset of the stable sheaves.
+
+If FORMULA  is an odd number then FORMULA .
+
+If FORMULA  is an even number then
+FORMULA 
+
+
+(1) is already proven (see the discussion at the beginning of this section). It also follows from our toric description, as only FORMULA  is nonzero for any relevant FORMULA -family data FORMULA . We now prove (2).
+By Lemma  REF
+FORMULA 
+FORMULA  is the sum of the contributions of three types of  FORMULA FORMULA FORMULA
+FORMULA 
+Now the formula in the theorem is obtained by adding all these contributions.
+This also finishes the proof of Theorem REF .
+Remark 2.13  Let FORMULA  be the Hilbert polynomial corresponding to FORMULA  then by Remark REF  FORMULA  is the number of 9-tuples
+FORMULA 
+of positive integers FORMULA  and 2d partitions FORMULA  such that
+FORMULA 
+It is not hard to see that
+FORMULA 
+From this we get
+FORMULA 
+This is in agreement with {{cite:f16dd2f3-4419-4584-8798-4c60eeb6a980}} which uses a slightly different argument.
+In order to find FORMULA  appearing in Theorem REF  we need to add to the formula above the contribution of the Gieseker stable sheaves which are not FORMULA -stable. This means that one of the indequlaities in Remark REF  must turn into an equality FORMULA  and we must also allow for the degenerate FORMULA -families.  FORMULA
+
+In the following examples we compute FORMULA , FORMULA  and FORMULA  in the cases FORMULA , FORMULA , and FORMULA .
+Example 2.14  FORMULA. In this case the only semistable sheaf with Hilbert polynomial FORMULA  is isomorphic FORMULA . Therefore, by Proposition REF  part (1) we have FORMULA , and hence by Lemma REF  and noting that FORMULA  we get
+FORMULA 
+in agreement with the result of Theorem REF . We can easily see that
+FORMULA 
+ FORMULA
+
+Example 2.15 FORMULA . By Proposition REF  we have
+FORMULA 
+The first term is the sum of the contributions of FORMULA  where FORMULA , FORMULA  are two distinct FORMULA P2FORMULA IZIZFORMULA ZFORMULA -fixed point of FORMULA , and the last term is the contributions indecomposable Gieseker semistable sheaves obtained from Table REF .
+TABLE 
+Columns 2-5 give the FORMULA -family data FORMULA  giving rise to Hilbert polynomial FORMULA . We only consider the cases FORMULA , and the very last Column we assign a multiplicity to account for the other FORMULA -families obtained by reindexing FORMULA 's. See the next example in which we provide more details for a few rows of a similar table.
+Now using the fact that FORMULA  from (REF ), by Lemma REF  we get
+FORMULA 
+in agreement with the result of Theorem REF . We can easily see that
+FORMULA 
+ FORMULA
+
+Example 2.16 FORMULA . We have FORMULA  by (REF ), so decomposable FORMULA -equivariant sheaves in Table REF . Columns 2-5 give the FORMULA -family data FORMULA  giving rise to the Hilbert polynomial FORMULA . We only consider the cases FORMULA , and the very last Column we assign a multiplicity to account for the other FORMULA -families obtained by reindexing FORMULA s. From Table REF  we get FORMULA  and FORMULA 
+By the formula in Theorem  REF
+FORMULA 
+We can easily see that
+FORMULA 
+by Corollary REF .
+In the following we explain the details for four rows of Table REF . Figure REF  gives the FORMULA -family data FORMULA  corresponding to Row 1 of Table REF . We fix a FORMULA -compatible triple FORMULA  with FORMULA . We use the following notation
+FORMULA 
+This data and a point FORMULA  completely determine the FORMULA O(-n)F FORMULA
+
+FORMULA  and FORMULA  cannot both be equal to FORMULA  or FORMULA .
+
+FORMULA  or FORMULA  in which case FORMULA  is decomposable.
+
+FORMULA  or FORMULA  or FORMULA  or FORMULA  in which case FORMULA  is strictly semistable and indecomposable,
+
+if FORMULA  and FORMULA , in which case FORMULA  is Gieseker stable.
+
+From these facts we can conclude that FORMULA , and FORMULA  as claimed in the table.
+Figure REF  gives the FORMULA -family data FORMULA  corresponding to Row 7 of Table REF . We fix a FORMULA -compatible triple FORMULA  with FORMULA . We use the following notation FORMULA  This data and a point FORMULA  completely determine the FORMULA O(-n)FFORMULA c()st=1FORMULA c()ss=0 FORMULA
+Figure REF  gives the FORMULA -family data FORMULA  corresponding to Row 34 of Table REF . We fix a FORMULA -compatible triple FORMULA  with FORMULA . We use the following notation FORMULA  This data and a point FORMULA  completely determine the FORMULA O(-n)FFORMULA pq FORMULA  qrpFORMULA FFORMULA c()st=1FORMULA c()ss=0 FORMULA
+Figure REF  gives the FORMULA -family data FORMULA  corresponding to Row 68 of Table REF . We fix a FORMULA -compatible triple FORMULA  with FORMULA . We use the following notation
+FORMULA 
+This data and a point FORMULA  completely determine the FORMULA O(-n)F FORMULA
+
+FORMULA  and FORMULA .
+
+FORMULA  in which case FORMULA  is decomposable.
+
+if FORMULA  and FORMULA  in which case FORMULA  is Gieseker semistable and indecomposable.
+
+From these facts we can conclude that FORMULA , and FORMULA  as claimed in the table.
+ FORMULA
+
+FIGURE 
+FIGURE 
+FIGURE 
+FIGURE 
+TABLE 
+TABLE 
+TABLE 
+amingh@math.umd.edu                              sheshmani.1@math.osu.edu

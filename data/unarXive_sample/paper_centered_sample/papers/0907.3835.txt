@@ -1,0 +1,256 @@
+
+Supersonic Evershed flow outside Sunspots
+Martínez Pillet et al.
+Supersonic continuation of the Evershed flow outside a Sunspot as observed with Hinode
+V. Martínez Pillet
+Instituto de Astrofísica de Canarias,
+La Laguna, 38200, Spain
+vmp@iac.es
+Y. Katsukawa
+National Astronomical Observatories of Japan, 2-21-1, Osawa, Mitaka, Tokyo, 181-8588, Japan
+K. G. Puschmann and B. Ruiz Cobo1
+Instituto de Astrofísica de Canarias, La Laguna, 38200, Spain
+1University of La Laguna, La Laguna, Spain.
+We report on the discovery of mostly horizontal field channels just outside
+sunspot penumbrae (in the so-called `moat' region) that are seen to sustain
+supersonic flows (line-of-sight component of 6 km sFORMULA ). The spectral
+signature of these supersonic flows corresponds to circular polarization
+profiles with an additional, satellite, third lobe of the same sign as the
+parent sunspot' Stokes FORMULA  blue lobe, for both downflows and upflows. This is
+consistent with an outward directed flow that we interpret as the continuation
+of the magnetized Evershed flow outside sunspots at supersonic speeds. In
+Stokes FORMULA  and FORMULA , a clear signature of a transverse field connecting the two
+flow streams is observed. Such an easily detectable spectral signature should
+allow for a clear identification of these horizontal field channels in other
+spectropolarimetric sunspot data. For the spot analyzed in this paper, a
+total of 5 channels with this spectral signature have been unambiguously found.
+polarization – Sun: magnetic fields – Sun: photosphere – sunspots
+Introduction
+The supersonicWe use the term supersonic in a broad sense meaning
+velocities higher than 6 km sFORMULA . character of the Evershed flow inside
+sunspot penumbrae is well established {{cite:7a156573-8f86-4f60-8f34-3ef1ebd0e3f5}}, {{cite:849fb7ab-bdf7-42c0-b346-89ff5aa4bf65}}, {{cite:9fb21220-e313-41fe-b4f4-94e155302f3a}}.
+Already, {{cite:7a156573-8f86-4f60-8f34-3ef1ebd0e3f5}} measured velocities (from Stokes FORMULA  bisectors) larger
+than 5 km sFORMULA . More recent spectropolarimetric measurements have clearly
+established the existence of ubiquitous supersonic flows everywhere in the
+penumbra. Fe1 1.5FORMULA m infrared polarization spectra are particularly
+well suited for this purpose as the strong Zeeman sensitivity of these lines,
+and to some extent the associated lower formation heights, allow to separate
+the sub- and supersonic components {{cite:849fb7ab-bdf7-42c0-b346-89ff5aa4bf65}}, {{cite:9fb21220-e313-41fe-b4f4-94e155302f3a}}. Using Hinode/SP
+data (in the 6301.5 and 6302.5 Å Fe1 line pair) {{cite:bdc680e6-7848-49f9-8334-e6731df01138}}
+identified Stokes FORMULA  signals originated in the so-called penumbral dark cores
+{{cite:f345fe53-b4c5-420a-a1e0-190493b23a0b}} that display three lobe profiles with velocities in the
+range of 6-7 km sFORMULA . With similar Hinode data, speeds of up to 9.5 km
+sFORMULA  have been reported recently {{cite:b49e6430-928c-4bc3-bd9b-f41e8740fc67}}. For these profiles to
+show up, it is crucial that the spot displays a sizeable line-of-sight (LOS)
+component of the Evershed flow as helped by off disk center observations. These
+highly Doppler shifted signals observed in both infrared and visible data
+clearly point to a magnetized nature of the Evershed flow, which is compatible
+with the uncombed penumbral model of {{cite:e6720dc2-e54a-4e23-9415-51dfd02733e8}}. In this model, nearly
+horizontal flux tubes with weaker field strengths {{cite:baf5ba25-39e4-4fc3-8133-34ebea503ceb}}
+carry the Evershed flow. The horizontal tubes are embedded in a more vertical
+background field that has comparatively speaking smaller velocity flows. The
+dark core penumbral filaments have been solidly associated with the
+observational signature of horizontal penumbral flux tubes
+{{cite:8e9e0dc3-0b24-4a6e-8c03-97ea5de714c8}}, {{cite:7d949dda-86b0-49c2-9964-6506a933ec8d}}. The alternative proposal of a field free ambient
+where the Evershed flow is localized {{cite:7bfc8d5e-96f2-473d-b1f1-d3cad1758e9a}} faces the serious
+problem that no Doppler-shifted Stokes V signals are generated in this model.
+FIGURE 
+While the scenario in which penumbral flows take place has been clarified in
+recent years, the origin of the Evershed flow and its final fate remain
+unclear. According to the simulations of {{cite:824fc918-1dd4-4665-914d-66884d453007}}, the evolution of
+buoyant flux tubes inside the penumbra is such that an internal flow develops
+and attains speeds of up to 14 km sFORMULA . These high speed flows could propagate
+beyond the outer penumbral boundary in some of these simulations
+{{cite:47b55b28-dce1-48ea-a728-fc02c736fabd}}. In contrast, {{cite:a94b0d06-9116-4093-ab9d-f439abbc5e45}} found clear evidence
+that a large fraction of the flow is returning into the photosphere at the
+penumbral boundary, a well established result confirmed by a large number of
+modern observations. While this explains the signature of an abrupt end of the
+flow, it still does not answer the question of what happens to it once
+it dives down into the photosphere and outside of the main body of the spot. Two
+recent results are relevant to understand what could be going on. First of all,
+the sunspot surroundings (the `moat') have been seen to harbour horizontal
+filamentary magnetic fields as detected in SOHO/MDI magnetograms averaged over 10
+hours {{cite:eaab7d3e-1b59-476f-a7b0-b4200613120d}}. The bipolar Moving Magnetic Feature (MMF) activity is
+seen to start well inside the penumbra and propagate in a coherent manner
+away from the spot {{cite:eaab7d3e-1b59-476f-a7b0-b4200613120d}}, {{cite:68a01c3f-1baf-40ad-8a33-f3957adf05b8}}, {{cite:1ad5028f-0123-45b0-983c-5ba8583e5b21}}, {{cite:f42e711c-7615-41f3-8590-41cf6c167775}}. A second observational
+result of importance to ascertain the further evolution of the Evershed flow is
+the close relation found by the existence of radially oriented penumbral
+filaments and the moat flow {{cite:44037d59-a12a-4694-b3de-55f7cd306f94}}. This has led these authors to
+propose a link between the Evershed flow and the moat flow. All in all, the
+subsequent evolution of the flow beyond the penumbral border is unclear. In
+particular, it is not known whether it maintains the supersonic character that
+both observations and simulations suggest.
+Strong (supersonic) downflows have been detected by Hinode in the moat region
+and, to a smaller extent, in other solar regions {{cite:502b8f67-1ac5-49aa-afd6-96153e94aeb3}}. Similar
+large upflows have only been detected in the quiet sun by {{cite:f4b5afb4-bfc1-4d37-b92a-cd9ee057a9ea}}, who
+proposed that they represent evidence of a failed convective collapse process.
+All these flows have a clear spectral signature in Stokes FORMULA  profiles that
+display a strong Doppler-shifted third satellite lobe. In this Letter, we
+report evidence of horizontal magnetic links between supersonic
+downflows and upflows at and beyond the penumbral boundary. It is proposed that
+these signatures reveal sporadic continuations of the (supersonic) Evershed
+flow outside the spot.
+
+Observations and data selection
+In order to understand to what degree the moat region is pervaded by horizontal
+magnetic fields, Hinode/SP observations {{cite:18b827a4-2734-4b25-b00c-161b741d6e23}}, {{cite:717a7db6-2b23-4e9a-897b-78dc091c116e}} of a sunspot
+located very close to disk center were selected. It is important for this study
+that the moat region was located near disk center to maximize the sensitivity
+to horizontal fields in Stokes FORMULA  and FORMULA . Disk center observations also
+allow to sense deeper into the photosphere, something which we consider
+important to improve the visibility of any horizontal magnetic fields residing
+in the moat. The Hinode/SP map was obtained on the 28th of February of 2007 at
+18:25 UT in the main, positive polarity, sunspot of NOAA 10944, which was
+located only 1.2 degrees off disk center. This data set was included in the
+analysis of {{cite:ecfd5419-5bae-4ae5-90ec-54a732f32026}}.
+FIGURE 
+Figure REF  shows slit reconstructed images of the continuum intensity,
+Stokes FORMULA  magnetogramAs computed by the routine stksimages_
+sbsp.pro of the Hinode solarsoft package. (scaled to display longitudinal
+fields over the outer penumbra and the moat) and a total linear polarization
+map (scaled to provide good visibility of transverse fields in the moat
+region). Far-wing Stokes FORMULA  magnetograms at about 250 mÅ at each side of
+line center were also constructed to help identifying strong up/downflow
+regions in the moat {{cite:f7b679a9-52c5-4542-8f65-16b3be19032a}}, {{cite:502b8f67-1ac5-49aa-afd6-96153e94aeb3}}. The linear
+polarization map was used as a reference for the existence of filamentary field
+aggregations beyond the penumbra. In this map, a total of five regions were
+identified as transverse field concentrations that coincide along their
+length with flow signatures in the far-wing magnetograms (although a
+thorough study was not performed, in particular many more transverse extensions
+are easily seen in the LP map of Fig. REF ). In contrast to the results
+of {{cite:502b8f67-1ac5-49aa-afd6-96153e94aeb3}}, who detected only downflows, the use of the transverse
+fields as a reference has allowed the identification of both upflows and
+downflows in the moat. The experience gained from the use of the far-wing
+magnetograms showed that the upflows observed have a tendency to be slightly
+weaker than the downflows, but the example presented in this Letter has both
+flows of a similar magnitude.
+All of the five regions selected with transverse fields in the moat display a
+downflow/upflow spectral signature that we identify with a supersonic extension
+of the Evershed flow along mostly horizontal field lines outside the spot. In
+this Letter, we present a case example of this spectral signature and offer a
+simplified analysis of their quantitative implications. A more in depth study
+of all the regions in this map, including two-components SIR inversions
+{{cite:691ce9d2-91ea-4dc0-af78-4040d4168117}}, is postponed to a future paper. The location of the case
+selected for this work as representative of the spectral signature of the
+continuation of the Evershed flow in the moat region is marked by a sector in
+Fig. REF . As it is evident in the linear polarization frame of Fig.
+REF , this region is coexisting with transverse fields in the moat but is
+not particularly prominent in the longitudinal magnetogram (that mostly shows
+the well-known MMF activity). The Stokes profiles along the segment in Fig.
+REF  are shown in Figure REF  (note that this is a composite that
+does not corresponds to any actual slit position). This figure already displays
+the fingerprint of the Evershed flow continuation which is marked by the two
+arrows near the bottom of the frames. The Stokes FORMULA  profile shows the
+existence of a satellite third lobe at the red and blue sides of the rest
+position. The downflows and upflows are spatially separated by slightly less
+than 1 arcsec (the scale in this figure is FORMULA  0.15 arcsec/px).
+Interestingly, the flows are also evident in the Stokes FORMULA  and FORMULA  signals.
+The first downflow occurs within the penumbra {{cite:a94b0d06-9116-4093-ab9d-f439abbc5e45}}. The upflow occurs
+just outside the visible penumbra. Continuous FORMULA  and FORMULA  signals show that we
+are tracing an extension of horizontal field lines from within the penumbra. It
+is important to point out that these horizontal fields must reside at the line
+forming region but probably slightly above the FORMULA  layer as no darkening
+is seen in the continuum maps. This changes at coordinate #23 (ref. to Fig.
+REF ), where the penumbra reappears in continuum. A weaker downflow
+occurs at this location (not marked) and has a polarity opposite to that of the
+spot. The region where the penumbra is seen to reappear coincides also with
+weaker FORMULA , FORMULA  and FORMULA  signals indicating that the field lines are probably
+buried in deeper layers, filling more the continuum forming layer than the line
+forming region.
+Similar (albeit slightly less evident) penumbral reappearances
+are seen in two of the other four cases of flow extensions detected in
+this sunspot.
+
+Supersonic flows signatures
+In order to quantify the flow velocities that are needed to reproduce the
+spectral satellites seen in Fig. REF , a simplified analysis was made
+{{cite:502b8f67-1ac5-49aa-afd6-96153e94aeb3}}. It is based on fitting gaussians to the various lobes
+observed in Stokes FORMULA  and on referring their local maximums to a wavelength
+`rest' position. For this reference, we select the network point at coordinate
+#36 as it is well-known that these concentrations do not display large
+velocities {{cite:3cb5cb30-d4ba-4789-a5a5-1bf207188a5e}}. Two gaussians are first fitted to the network point
+obtaining the rest wavelengths for both the blue and red lobes. Then, a three
+gaussian combination is fitted to the profiles at coordinates #7 (downflow)
+and #10 (upflow). The resulting fits are shown in Figure REF . The
+maximum of the extreme red and blue lobes, once compared with the center of the
+corresponding network lobes, provide an estimate of the flow speed that must be
+present to produce these satellite spectral signatures. In the case of the
+downflow of point #7, the results are 6.7 km sFORMULA  for Fe1 6301.5
+Å  and of 6.3 km sFORMULA  for Fe1 6302.5 Å. In the upflowing stream
+of point #10, we obtain -5.9 km sFORMULA  and -6.3 km sFORMULA , for the same
+lines respectively. These velocities correspond to LOS components of the stream
+flow. As the flow signature is also seen in Stokes FORMULA  and FORMULA , it is clear
+that there is a significant inclination of the corresponding field lines
+indicating that the flow speeds could be considerably larger than 6 km
+sFORMULA . A four gaussian fit to the two non-network profiles in Fig.
+REF  was also attempted, but no convincing results were obtained. This
+indicates that the Stokes FORMULA  profile corresponding to the satellite profiles
+are well reproduced with only one lobe, something that indicates the presence
+of strong gradients in this component. While we postpone a more detailed
+discussion of these profiles to a future paper, we note that already the
+supersonic profiles observed by {{cite:f4b5afb4-bfc1-4d37-b92a-cd9ee057a9ea}} were explained with a
+single-lobe Doppler shifted component with very strong LOS gradients.
+As it can be seen in Fig. REF , the two blue and red satellite lobes are
+positive (which corresponds with the white signals at each side of the rest
+Stokes FORMULA  profile in Fig. REF ). It is important to understand the
+implications of these signs in the Doppler-shifted component as they readily
+show that the supersonic flow corresponds to an outward directed flow from the
+spot (as it should be for an extension of the Evershed flow outside the spot).
+The rationale is as follows. The parent sunspot positive polarity produces a
+Stokes FORMULA  profile with a positive blue lobe and a negative red lobe (see Fig.
+REF ). If these field lines have to return back into the photosphere, the
+polarity is reversed (positive red lobe). If, in addition, there is a redshift
+of the signal created by a downflowing stream, the lobe that will be seen
+further away from the rest wavelength will, then, be positive. Similarly, if
+the field lines reemerge to the surface, they preserve the spot polarity
+(positive blue lobe) which together with an upflowing stream (blue shifting the
+profile) produces a displaced positive Stokes FORMULA  lobe. The same arguments
+lead to the conclusion that a radial flow streaming into the spot would have
+had negative Doppler shifted lobes in Fig. REF  (or black satellites at
+both sides of the main profile in Fig. REF ). All five regions
+identified in the surroundings of this sunspot with strong transverse fields
+have shown positive satellite signals in Stokes FORMULA .
+FIGURE 
+
+Conclusions
+We report on the finding of highly Doppler-shifted Stokes FORMULA  satellite lobes
+at each side of the normal rest profiles, revealing the presence of downflowing
+and upflowing material moving away from the spot. The spectral signature of the
+Doppler shifted Stokes FORMULA  lobes is seen along extensions of the penumbra that
+display strong transverse fields.
+The flow speeds inferred by a simple gaussian fit show LOS directed speeds of
+FORMULA  6 km sFORMULA . The transverse field character of this signature
+(at Hinode/SP resolution)
+suggests that the real flow along the field lines would be considerably larger
+and is likely to be supersonic. Five such transverse field extensions with positive
+satellite Stokes FORMULA  lobes in the blue and red side of the rest spectral
+profile have been detected. The fact that the sign of the these lobes is
+positive (for a positive polarity spot) indicates that the local flow is
+directed in the radial direction away from the spot. This property,
+together with the high-speed (supersonic)
+character and the presence of, at least, five such
+channels all around the spot, strongly suggest that these profiles represent
+the continuation of the Evershed flow outside the spot, into the moat region.
+It is also clear that, being the Evershed flow ubiquitous within the penumbra,
+the finding of five cases of its extension outside the spot can hardly explain
+where the bulk of the penumbral flow ends. We hypothesize that a mechanism such
+as convective pumping {{cite:a223a1bb-4e0f-4b15-a0cb-b3bda2ea822d}} is able to submerge below the surface
+most of the (horizontal) field lines that carry the majority of the Evershed
+flow. However, it is clear that this mechanism will not always be perfect and
+often will fail to submerge a particular set of field lines that might become
+visible, corresponding to the cases detected in this work. It is also clear
+that our findings prove that the Evershed flow can continue beyond the
+penumbral boundary preserving the supersonic character it normally attains
+within the penumbra. It is unclear at present whether the preservation of this
+supersonic character is precisely the reason why these flows are not hidden
+below the surface, allowing them to be detected in the Hinode data. It could
+well be that if the flow remains supersonic, the convective pumping mechanism
+is less efficient at submerging the corresponding field lines. More systematic
+studies of how often one finds these satellite spectral signatures surrounding
+sunspots and their temporal evolution are needed to settle this point.
+Hinode is a Japanese mission developed and launched by
+ISAS/JAXA, with NAOJ as domestic partner and NASA and
+STFC (UK) as international partners. It is operated by these
+agencies in cooperation with ESA and NSC (Norway).
+This work has been partly funded through project ESP2006-13030-C06-01.
+Facilities: Hinode.

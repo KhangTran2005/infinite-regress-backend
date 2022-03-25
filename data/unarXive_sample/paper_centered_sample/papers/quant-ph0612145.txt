@@ -1,0 +1,278 @@
+
+A Study on the Sudden Death of Entanglement
+H. T. CuiE-mail: cuiht@student.dlut.edu.cn, K. Li, X. X. Yi
+Department of Physics, Dalian University of Technology,
+Dalian 116024, China
+2018/12/11 03:57:24
+
+The dynamics of entanglement and the phenomenon of entanglement
+sudden death (ESD) {{cite:db656bcf-40b2-4ef7-8a6b-b928ff6954e0}} are discussed in bipartite systems,
+measured by Wootters Concurrence. Our calculation shows that ESD
+appears whenever the system is open or closed and is dependent on
+the initial condition. The relation of the evolution of entanglement
+and energy transfer between the system and its surroundings is also
+studied.
+
+03.65.Yz, 03.65.Ud, 03.67.Mn
+introduction
+The dynamics of entanglement in bipartite systems has received great
+attention since the work of Yu and Eberly {{cite:afd991e8-af11-4333-9cdc-f3e051d9f32a}}, in which the
+entanglement between the two particles coupled with two independent
+environments became completely vanishing in a finite time. This
+surprising phenomenon, contrary to intuition based on experience
+about qubit decoherence, intrigues great interests {{cite:051069da-85fb-489c-963e-2dc404316933}}, {{cite:23e3cb7e-f45c-4b3e-86ee-e6daa69d8d81}}, {{cite:99597cc6-0dac-4218-bbf8-7e7796e4bd5a}}, {{cite:c58790a3-db3c-4f25-b1a3-72beb301fdd5}}, {{cite:de9e10b7-0cf8-47a6-8e71-8c83c0935a70}}, {{cite:000eae0c-9eb9-4ffc-bb91-ffce4a105b9b}}. Different from the original work of Yu
+and Eberly {{cite:afd991e8-af11-4333-9cdc-f3e051d9f32a}}, in which two independent particles embedded
+into its own dissipative environment and there is no any direct or
+indirect interaction, the effects of interaction between the
+particles and the couplings to the same environment have been
+discussed extensively in Ref. {{cite:23e3cb7e-f45c-4b3e-86ee-e6daa69d8d81}} and {{cite:99597cc6-0dac-4218-bbf8-7e7796e4bd5a}}. In
+{{cite:23e3cb7e-f45c-4b3e-86ee-e6daa69d8d81}}, the authors show that for a special initial state the
+entanglement disappeared in a finite time and then revived after a
+dark period because of the interaction between the particles.
+Furthermore the authors show that the entanglement sudden death
+(ESD) is sensitive to the initial condition, as proved in
+{{cite:99597cc6-0dac-4218-bbf8-7e7796e4bd5a}}. An important character in {{cite:23e3cb7e-f45c-4b3e-86ee-e6daa69d8d81}}, {{cite:99597cc6-0dac-4218-bbf8-7e7796e4bd5a}} is that the
+environment is dissipative and the transfer of energy between the
+system and environment is inevitable. Another important situation is
+the dephasing environment, in which energy transfer from the system
+to the environment does not occur. Some works have been devoted to
+this issue {{cite:051069da-85fb-489c-963e-2dc404316933}}, {{cite:de9e10b7-0cf8-47a6-8e71-8c83c0935a70}}. In {{cite:051069da-85fb-489c-963e-2dc404316933}}, the authors show
+that disentanglement is dependent on the initial condition and
+temperature of the enviroment.
+Although the extensive progress in understanding the
+disentanglement, it is still unclear what reason causes this
+phenomenon and what is the physics behind. In this paper we try to
+give an enlightening discussion by examining some examples. In the
+previous studies, the couplings with the environment has been
+considered as the critical point of disentanglement and ESD.
+However, as will find in this paper, ESD can also happen in closed
+systems. In our own point, the phenomena of disentanglement and ESD
+stem from the dissipative terms in the Hamiltonian, independent of
+the coupling with environment, and are sensitive to the initial
+conditions. Moreover the revival of entanglement can also be
+explained as the effect of the backaction terms in the Hamiltonian.
+The paper is organized as follows. In Sec. II, we first review the
+dynamics of entanglement in (a) Tavis-Cumming model {{cite:87eb8aac-de6d-4b9f-88dd-28f57e303d32}} and
+(b) dephasing system respectively. In Sec. III, the dynamics of
+entanglement in closed bipartite system has been discussed, and ESD
+and revivals of entanglement have also been observed in this system.
+The further discussions and conclusions is presented in the final
+section.
+
+disentanglement in open systems
+The dynamics of entanglement in open systems has been discussed
+extensively {{cite:db656bcf-40b2-4ef7-8a6b-b928ff6954e0}}, {{cite:afd991e8-af11-4333-9cdc-f3e051d9f32a}}, {{cite:23e3cb7e-f45c-4b3e-86ee-e6daa69d8d81}}, {{cite:99597cc6-0dac-4218-bbf8-7e7796e4bd5a}}, {{cite:c58790a3-db3c-4f25-b1a3-72beb301fdd5}}, {{cite:de9e10b7-0cf8-47a6-8e71-8c83c0935a70}}. However the physics
+behind the evolution of entanglement is rarely touched. In this
+section we try to present an physical interpretation for concurrence
+by examining two examples. The first is the Tavis-Cumming model
+{{cite:87eb8aac-de6d-4b9f-88dd-28f57e303d32}}, in which two non-interaction qubits couple with the same
+quantized field under the rotating-wave approximation. Another is
+the dephasing model, in which two qubits embed into a multimode
+quantized field and the interaction between the two qubits is also
+considered.
+Tavis-Cumming Model
+For two spin-1/2 particles coupled with a single-mode cavity field,
+the Hamiltonian is written as {{cite:87eb8aac-de6d-4b9f-88dd-28f57e303d32}},
+FORMULA 
+where FORMULA  is bosonic operator and FORMULA  are
+the rising and lowing operator for spin-1/2. We focus our discussion
+on the resonating case (FORMULA ), in that the spectrum of
+Hamiltonian can be obtained exactly. For the whole system (system +
+field), the evolution of the whole system is characterized by the
+interacion between the system and field. However from the point of
+the system (two spin-1/2 paricles), the energy transfer between the
+system and the field happens, which is described by the relaxation
+term FORMULA  and the backaction term FORMULA .
+This example is very different from Refs {{cite:afd991e8-af11-4333-9cdc-f3e051d9f32a}}, {{cite:de9e10b7-0cf8-47a6-8e71-8c83c0935a70}}, in which
+the two qubits couples with two independent environments separately.
+In fact the couplings with the same field could induce an effective
+interaction between two qubits, which manipulates the entanglement
+between the two qubites {{cite:847b0a7f-3b44-4a4c-9445-265025c62f4e}}. Furthermore, as will be shown
+in the following, the phenomenon of ESD is sensitive to the initial
+conditions, and the energy transfer because of the interaction is
+directly related to the disentanglement and revival of the
+entanglement.
+The evolution operator FORMULA  can be calculated exactly
+{{cite:42ca1614-3a75-4db8-9a43-53c9120e3eff}}. Choose the initial state FORMULA , in which
+FORMULA  with
+FORMULA  denoting two eigenstates of spin-1/2 particles, and
+FORMULA  is the vacuum state for the quantized field. The
+entanglement in the initial state is measured by the purity FORMULA  and
+mixing FORMULA . Then the density matrix for the system
+FORMULA  can be
+expressed in the basis FORMULA ,
+FORMULA 
+FIGURE 
+The concurrence FORMULA  has been calculated, as
+shown in Fig.REF , for different initial states. Obviously the
+concurrence is fluctuating with the rescaled time FORMULA  and can be
+zero in a finite time. We have highlight the points with red color
+that the concurrence is vanishing, as the so-called entanglement
+sudden death (ESD), in Fig.REF  in this plot. An important
+point is that ESD is sensitive to the initial state as displayed in
+Fig.REF . For the mixed initial state FORMULA , the ESD happens
+readily (Fig.REF b). However, for the pure initial states, the
+region with vanishing concurrence is compressed greatly
+(Fig.REF a). This phenomenon shows that ESD is completely
+initial-state sensitivity in this model.
+FIGURE 
+Another important character revealed by Fig.REF  is the
+fluctuation/revival of entanglement. This phenomenon have been
+discussed qualitatively in Ref. {{cite:23e3cb7e-f45c-4b3e-86ee-e6daa69d8d81}}. However a clearer
+interpretation is absent; How the entanglement is constructed by the
+interaction and why and where the entanglement decreases with the
+evolution? What is the physics behind the dynamics of entanglement?
+In this part we try to give an enlightening discussion for this
+problem based on this model. Let us first review the Hamiltonian Eq.
+(REF ); Obviously the dynamics of the two independent spin-1/2
+particles is determined by the interaction terms in Eq. (REF ),
+which is the charge of the energy transfer between the system and
+field. Hence it is natural to check simultaneously the variation of
+the energy FORMULA  and
+concurrence in the system. The analytical relation between FORMULA  and
+FORMULA  is complicated and it is convenient
+to plot for displaying their relation. One could find the variations
+of FORMULA  and concurrence is almost
+in-step, as shown in Fig.REF . At most cases, with the
+increment of FORMULA , the concurrence
+increases until the same value with the initial states. An
+exceptional situation appears in Fig.REF (b), in which the
+second wave peak accompanies with the opposite transfer of the
+energy to the other situations. However we could suggest that the
+dynamics of entanglement and its revival in this model stem from the
+energy transfer between the system and environment. Moreover we also
+note that the extreme points of the concurrence and those of
+FORMULA  are one-to-one. These phenomena show
+the intimate relation between the concurrence and the energy
+FORMULA  in this model.
+However the relation between ESD and the transfer of energy is not
+direct, as shown in Fig.REF . Originally ESD comes from the
+cutoff in the definition of concurrence. Although the physical
+explanation for the dynamics of concurrence can be available, ESD
+cannot be explained properly based on the transfer of energy in this
+model. A further discussion is needed beyond this model.
+
+Dephasing Model
+In the previous subsection we discuss the dynamics of entanglement
+and ESD in a dissipative two spin-1/2 system. A novel character is
+the direct relation between the evolution of the concurrence and
+energy transfer between the system and field. Another important
+situation for the open systems is the dephasing case, in which there
+is no energy transfer between the system and environment. A typical
+Hamiltonian for this case can be written as
+FORMULA 
+where two interacting qubits is coupling with a quantized
+environment by FORMULA . The evolution operator can be given by,
+FORMULA 
+in which FORMULA  is the eigenstate of spin-1/2 particle and
+FORMULA  and
+FORMULA . Choose the initial state
+FORMULA , in which
+FORMULA , and at time FORMULA 
+the reduced density matrix
+FORMULA  can be written
+in the basis FORMULA  as
+FORMULA 
+Obviously the off-diagonal terms is damping because of the
+decoherence factor FORMULA  {{cite:a07e9bea-9551-44ab-9dbd-f434357b1791}}.
+FIGURE 
+The concurrence for FORMULA  can be given exactly, as shown in
+Fig.REF  with a single mode for simplicity. One notes that the
+entanglement does not decrease, but have a damping
+fluctuation until the same entanglement contained in the initial
+state, as shown in Fig. (REF )(a). Another facet is that when
+the concurrence is zero for the initial state, it is possible for
+system to generate entanglement, the entanglement is also a
+damping-oscillating function of time, as shown in Fig.REF (b).
+The ESD can happen at some special times. However, for the entangled
+initial states, there is no ESD at any time {{cite:5cf9bfa3-fa2a-4906-a10e-ff56cb64057c}}.
+
+Entanglement in closed systems
+In the previous section, we discuss two models coupled with a field
+or environment. In both models the dynamics of entanglement is
+dominated by the coupling with the field or environment. Next we
+will show that ESD can also appear in closed quantum systems, in
+which the evolution of the system is insulated to its surroundings.
+Let consider two spin-1/2 particles with Ising-type interaction. The
+Hamiltonian is
+FORMULA 
+The time evolution FORMULA  is written in the basis
+FORMULA ,
+FORMULA 
+where FORMULA .
+FIGURE 
+It is convenient to choose the initial state FORMULA  with
+FORMULA . The
+entanglement for FORMULA  can be given
+easily, and the concurrence have been plotted in Fig.REF . It is
+clear that ESD happens for some special cases and then the
+entanglement revives at a later time. We also choose the initial
+state FORMULA  with
+FORMULA . However there is
+no ESD . These phenomenon show again that ESD is sensitive to the
+initial conditions.
+FIGURE 
+It is of great interest to check the relation between the
+concurrence and the energy transfer described by FORMULA . It is
+easily to note that the concurrenc FORMULA  of FORMULA  is FORMULA  and a figure has been drawn for
+showing their relation , displayed in Fig.REF . It is very
+interesting to note that the evolution of concurrence and FORMULA  is in-step and there is a one-to-one relation of
+the extreme points between the concurrence and FORMULA . This phenomenon is similar to the case discussed in
+Sec.IIA (see Fig.REF ) and show that the dynamics of
+entanglement can be related directly to the energy transfer in this
+model.
+
+discussions and conclusions
+Some conclusions and further discussions should be presented in this
+section. In this paper we discussed the dynamics of entanglement and
+ESD in bipartite systems . We found two very different types of the
+dynamics of entanglement. The first case is that there is the effect
+of the dissipation and vice versa, just as shown in Eq. (REF )
+and (REF ). Our calculation shows the intimate relation
+between the concurrence and the energy transfer described by FORMULA 
+in Eq. (REF ) and FORMULA  in Eq. (REF ); the extreme
+points of concurrence and the energy of FORMULA  or FORMULA  under the
+time evolution are one-to-one. In the case without ESD, the minimums
+of the energy corresponds to that of the concurrence , as shown in
+Fig. (REF )(a) and Fig. (REF )(b). However, when ESD
+happens, the correspondence is destroyed.
+In fact mathematically ESD stems from the cutoff in the definition
+of concurrence, and so it is difficult to find a physical
+interpretation. We suggest that the concurrence could be expressed
+as FORMULA , in which FORMULA  is a function of the energy
+transfer, e.g. FORMULA  in Sec.
+III. Then we could define a critical energy FORMULA , below which the
+system must be non-entangled , and above which the system must be
+entangled. When FORMULA  is the minimal of the energy of the system,
+then we immediately conclude there is no ESD. Contrarily ESD could
+happen. Unfortunately the critical energy may be complicated and be
+dependent on the state as shown in Fig.REF  and REF  and
+prevent us from giving a further analysis.
+Another interesting case is the dephasing model, which has been
+discussed extensively in the past as one of the standard decoherence
+models {{cite:778eca74-0d5c-40c2-9f35-56775b81d3a8}}. The evolution of concurrence in the model
+Eq. (REF ) is damping-oscillating with time until the same
+entanglement contained in the initial state (see Fig. REF ).
+Moreover the oscillation of concurrence seems not directly related
+to the energy transfer since there is no energy transfer between
+system and environment. From this phenomenon it may be frustrating
+that the connection of concurrence and the energy is not universal.
+What are the reasons of the dynamics of concurrence in the dephasing
+case is still an open question. The phenomenon of ESD does not
+appear in the dephasing model when the initial state is entangled.
+It seems to imply that ESD intrinsically originates from the energy
+transfer. However the correct understanding depends on the physical
+meanings of the concurrence.
+In conclusion we have discussed the dynamics of the entanglement and
+ESD in some special models. Some interesting phenomena have been
+presented with enlightening discussions. In our own points the main
+obstacle of explaining these phenomena is that it is unclear what
+the physical meanings of the concurrence are. Recently a great deal
+of works are denoted to the understanding from the energy of the
+system {{cite:099b5d3e-fb72-4f38-a4d9-573c8d329cf1}}. However, as shown in our paper, it maybe fail
+when there is ESD happening. More recently a physical
+interpretation of concurrence for the bipartite systems has been
+provided based on the Casimir operator in {{cite:e1253078-6ead-42c1-8b25-2c4fc2a2145d}}. It maybe
+opens another door to understand concurrence as a physical quantity.
+This work was supported by NSF of China under grants 10305002 and
+60578014.

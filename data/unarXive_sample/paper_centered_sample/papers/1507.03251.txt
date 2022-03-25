@@ -1,0 +1,292 @@
+
+SU(3) Quantum Hall Ferromagnetism in SnTe
+Xiao LiE-mail: lixiao@umd.edu
+Department of Physics, The University of Texas at Austin, Austin, Texas 78712, USA
+Condensed Matter Theory Center and Joint Quantum Institute, University of Maryland, College Park, Maryland 20742, USA
+Fan ZhangE-mail: zhang@utdallas.edu
+Department of Physics, The University of Texas at Dallas, Richardson, Texas 75080, USA
+A. H. MacDonald
+Department of Physics, The University of Texas at Austin, Austin, Texas 78712, USA
+The FORMULA  surface of SnTe hosts one isotropic FORMULA -centered and
+three degenerate anisotropic FORMULA -centered Dirac surface states.
+We predict that a nematic phase with spontaneously broken FORMULA  symmetry will occur in the presence of an external magnetic field when the FORMULA  Landau levels are FORMULA  or FORMULA  filled.
+The nematic state phase boundary is controlled by a competition between intravalley Coulomb interactions that favor a valley-polarized state,
+and weaker intervalley scattering processes that increase in relative strength with
+magnetic field.
+An in-plane Zeeman field alters the phase diagram by lifting the three-fold FORMULA  Landau level degeneracy, yielding a ground state energy with FORMULA  periodicity as a function of Zeeman-field orientation angle.
+Introduction.—
+Tin telluride (SnTe) is now attracting great attention
+as the first topological insulator (TI) protected purely by crystalline symmetry.
+Although its electronic band structure has been understood {{cite:102992d0-b0a9-48a5-acdb-c3e87f68a017}} for decades,
+the physical consequences of its band inversion have only recently been fully appreciated {{cite:f6a8b06a-e9a5-4f6d-9429-fc5824beb389}}.
+SnTe has a rocksalt crystal structure with two inter-penetrating face-centered cubic lattices,
+and its bulk bands are inverted due to spin-orbit coupling at four FORMULA  points.
+The mirror Chern number becomes nontrivial in mirror-invariant planes that each contains a pair of FORMULA  points.
+Based on this property, Dirac surface states on selected surfaces respecting mirror symmetries
+were first predicted {{cite:f6a8b06a-e9a5-4f6d-9429-fc5824beb389}} and later observed {{cite:4db84f8a-2804-440b-9ad3-f98f4063c409}}, {{cite:1ffb1efb-78ba-4d21-8b03-b849fe65c866}}, {{cite:946daf90-e073-46e1-9475-39aecb0dbd05}}.
+The FORMULA  surface of SnTe {{cite:9f04c354-74d5-4006-a07d-89fec40c524b}}, {{cite:5b3721ba-3ae6-40a5-862d-f669e9e69a96}}, {{cite:e36dca79-a921-43da-b99c-a6d61217d65b}}, {{cite:43ea546f-cdae-4b22-8542-7c7f7973e0d7}}, {{cite:3a1d167b-1215-4556-ab0c-f2e8e039c7d5}}, {{cite:d3f3bfc3-920f-49b1-9ca5-822ebde12061}}, {{cite:d26e1b93-e1da-4ddf-9a33-fc2e4384c296}}, {{cite:0e1ab0bb-80cf-4c47-9018-9d6bcad0a717}} respects three
+mirror symmetries, and each protects an anisotropic gapless Dirac surface state at FORMULA  and
+a partner isotropic state at FORMULA , as sketched in Fig. REF (a).
+In crystalline topological insulators the top and bottom surfaces of
+thin films can be electrically isolated {{cite:e36dca79-a921-43da-b99c-a6d61217d65b}} by
+breaking mirror symmetries on the side surfaces while leaving them time-reversal-invariant.
+This behavior contrasts with the case of strong TI thin films for which it is
+impossible to study single surface electrical properties because sidewalls can be gapped
+only by breaking time-reversal symmetry that generates Hall currents.
+The FORMULA  surface of SnTe therefore hosts a unique
+and relatively unexplored isolated two-dimensional electron gas (2DEG)
+system in which the interplay between topological surface properties, valleytronics,
+and many-body interactions is likely to yield unexpected phenomena.
+The integer quantum Hall (QH) effect is a hallmark of any 2DEG system.
+When a 2DEG has Landau-level degeneracies due to spin, valley,
+and/or layer degrees of freedom {{cite:9ccefbaa-b562-4494-8d8c-498ba1629106}}, {{cite:5c9ba51c-e5f8-47da-84f6-29fd72cc8ae2}}, {{cite:f3e2029e-ae25-4405-b460-edb02f4be651}}, the interplay between Landau quantization and electron-electron interactions
+often leads to ground states in which symmetries associated with the aforementioned degrees of freedom are spontaneously broken. Examples of broken symmetry states of this type, often referred to as
+QH ferromagnets, arise in GaAs and AlAs quantum wells {{cite:c227f98c-9486-42e7-a60c-cee3a84e48f1}}, {{cite:3708130a-9d00-491d-aa4f-13a2caec9ed8}},
+single and multilayer graphene sheets {{cite:cff26081-2e39-4217-bacb-b9c2bfdfc3c5}}, {{cite:9679bf79-d19b-474d-8bc4-1cd1e9db7592}}, {{cite:0b51d13b-1c80-4c6f-8732-c8b0cb03174c}},
+and on the surfaces of silicon {{cite:afcfa210-8341-44b4-a40d-073bcc592e58}}, {{cite:83d017b9-6c43-4097-ac0a-ef7eac310b38}} and bismuth {{cite:c9441793-2bd6-474b-878c-0d63a6821c82}}, {{cite:94b3a000-0b9a-4377-9b4c-fd94108c424b}}.
+In all instances of QH ferromagnetism studied to date, however, the noninteracting LL degeneracy FORMULA  has always been even.
+Thus one may wonder whether QH ferromagnetism with odd FORMULA  exists in some material, and how in this case the ground state breaks Hamiltonian symmetries.
+FIGURE 
+In this Letter, we show that the FORMULA  surface of SnTe provides
+a platform to explore FORMULA  QH ferromagnetism.
+As illustrated in Fig. REF , the four Dirac cones on the FORMULA  surface give rise to four LL sequences. The three FORMULA  LL sequences are degenerate and related
+by a FORMULA  rotational symmetry.
+The FORMULA -FORMULA  LL energy difference is not restricted
+by any symmetry, and can {{cite:d3f3bfc3-920f-49b1-9ca5-822ebde12061}} be tuned experimentally.
+Under a uniform perpendicular magnetic field, these LL sequences
+are interwoven in a non-universal fashion. We focus here on the case in
+which the FORMULA  FORMULA  triplet is at the Fermi level,
+well separated from all FORMULA  LLs,
+and FORMULA  or FORMULA  filled to yield an integer total filling factor.
+We find that when only the stronger intravalley Coulomb interactions
+are retained in the theory, valley symmetry is spontaneously broken to
+create a nematic state in which only one valley is occupied.
+When the weaker intervalley scattering processes are retained, a
+broken translational symmetry state with coherence among three valleys appears
+beyond a critical magnetic field value.
+An in-plane Zeeman field couples to the
+nematic order parameter and influences the competition between broken rotational and
+translational symmetry states.
+Surface state LLs.—
+The SnTe FORMULA  Dirac surface states are described by the FORMULA 
+Hamiltonians {{cite:e36dca79-a921-43da-b99c-a6d61217d65b}}:
+FORMULA 
+where FORMULA  m/s and FORMULA  m/s {{cite:d3f3bfc3-920f-49b1-9ca5-822ebde12061}}
+are surface Fermi velocities, FORMULA  labels the three inequivalent FORMULA  valleys,
+and FORMULA  is a surface Dirac pseudospin.
+Microscopically the pseudospins {{cite:e36dca79-a921-43da-b99c-a6d61217d65b}}, {{cite:7b11133b-d111-49af-8ce5-00ee3decfd5e}} are valley-dependent
+linear combinations of spin and orbital operators that
+transform like spin under time reversal, spatial inversion, and mirror reflection.
+FORMULA  and FORMULA  are explicitly defined in Fig. REF (a) for the FORMULA  valley;
+local momentum-space coordinates in other valleys are obtained by
+appropriate FORMULA  rotations.
+In the presence of a uniform perpendicular magnetic field, the 2D kinetic momenta FORMULA  in Eq. (REF )
+are replaced by FORMULA , where FORMULA .
+The FORMULA  LL energies are  FORMULA FORMULAFORMULA ,
+reminiscent of the massless Dirac fermion LLs in graphene and on cleavage surfaces of FORMULA .
+Because the FORMULA  surface states have anisotropic dispersions with valley-dependent
+orientations, we define valley-dependent raising operators
+ FORMULA FORMULAFORMULA , where  FORMULA FORMULAFORMULA  is the magnetic length,
+ FORMULA FORMULAFORMULA ,
+ FORMULA FORMULAFORMULA ,  FORMULA FORMULAFORMULA ,
+and FORMULA . With these definitions
+FORMULA  becomes
+FORMULA 
+
+so that the FORMULA  LL energies and wavefunctions
+are  FORMULA FORMULAFORMULA ,
+and
+FORMULA 
+
+Here  FORMULA FORMULAFORMULA  is a normalization
+factor,  FORMULA FORMULAFORMULA , and FORMULA  is the Hermite polynomial.
+Also note that  FORMULA FORMULAFORMULA  and  FORMULAFORMULA 0. In Fig. REF  we plot LL spectra as a function of FORMULA  for cases with
+the FORMULA  Dirac point energy above and below the
+FORMULA  Dirac point energy.
+All the FORMULA  LLs are non degenerate, whereas all the FORMULA  LLs are threefold degenerate because of the FORMULA  symmetry.
+QH ferromagnetism in the FORMULA  FORMULA  0 triplet.—
+We focus here on the case in which the FORMULA  LL triplet is FORMULA  or FORMULA  filled,
+and ask whether Hamiltonian symmetries are spontaneously broken and whether broken symmetries give rise to charged excitation gaps which would yield an integer QH effect.
+Because Coulomb interaction matrix elements are sensitive to the valley-dependent orientations of
+the anisotropic cyclotron orbits, the Hamiltonian is not invariant under rotations in the valley-space.
+However, the small size of the momentum-space cyclotron orbits
+relative to their separation
+implies that the number of electrons in each pocket is conserved; the only
+allowed large momentum transfer processes simply exchange electrons between valleys.
+Broken symmetry ground states are either Ising-like states in which the three symmetry equivalent
+valleys are occupied by different numbers of electrons, or XY-like states in which coherence
+is spontaneously established among three valleys
+oriented along different directions.
+The Ising-like state is a nematic one which
+lowers rotational symmetry, and the XY-like state is a commensurate charge-density-wave state which breaks the crystal translational symmetry.
+Interesting new physics is most likely to be experimentally accessible
+when the FORMULA  FORMULA  0 triplet is partially filled because of the
+large gap separating FORMULA  FORMULA  0 and FORMULA  LLs in Dirac systems. After projecting to the FORMULA  FORMULA  0 triplet, states at
+FORMULA  and FORMULA  fillings are related by particle-hole symmetry within the triplet,
+allowing us to focus on the FORMULA  case. In addition, we neglect the possibility of an accidental degeneracy between the FORMULA  FORMULA 
+triplet and a FORMULA  LL.
+We employ the unrestricted Hartree-Fock (HF) approximation {{cite:fba8e80f-b73d-42e6-bf08-1ce76cedb704}}
+which is accurate {{cite:b4a4c168-c670-4c66-ab83-77a19d84b220}} at the integer total filling factors of interest.
+We therefore minimize the energy of Slater determinant trial wavefunctions
+by solving self-consistent field equations with FORMULA  mean-field Hamiltonians of the form:
+FORMULA 
+
+where FORMULA  is the single-particle LL energy which is an irrelevant constant that is subsequently set to 0, and
+FORMULA  is the triplet density matrix.
+In Eq. (REF ) FORMULA , FORMULA , and FORMULA 
+are respectively intravalley exchange, intervalley Hartree, and intervalley exchange integrals.
+We use an envelope function approximation for intravalley processes,
+which are enhanced by the long-range tail of the Coulomb interactions and therefore dominant, and approximate
+intervalley processes using a phenomenological interaction constant
+FORMULA  where FORMULA  is a primitive reciprocal lattice vector.
+It follows that the Hartree integral is FORMULA ,
+and that the exchange integrals are
+[4]
+FORMULA 
+where FORMULA  {{cite:b5023332-ac8f-4fa8-824c-bb777d427459}}
+is the effective dielectric constant,
+and FORMULA  is a form factor that accounts for the system's valley-dependent
+cyclotron-orbit shape:
+FORMULA 
+In the above integrals FORMULA  and
+FORMULA ,
+with FORMULA  and
+FORMULA .
+If the surface states were isotropic (i.e., FORMULA  and FORMULA ),
+FORMULA  would reduce to the circular cyclotron orbit
+form-factor FORMULA  {{cite:fba8e80f-b73d-42e6-bf08-1ce76cedb704}} that accounts for the quantum-smeared FORMULA  orbit size and shape. The corrections in Eq. (REF ) account for the anisotropy of the triplet
+cyclotron-orbits, and for the FORMULA  differences in anisotropy orientation
+illustrated in Fig. REF , which play an essential role in the interaction physics.
+Because of the FORMULA  symmetry, the intravalley
+exchange integral matrix FORMULA 
+only has two inequivalent matrix elements, larger exchange integrals for electrons in the same valley (FORMULA )
+on its diagonal and smaller exchange integrals for electrons in different valleys (FORMULA ) for its off-diagonal elements.
+Because we take the interaction responsible for valley-exchange electron-electron scattering to
+be short-range, the intervalley integrals have only off-diagonal matrix elements all of which
+have the same value (FORMULA  and FORMULA ).
+The broken symmetry ground state minimizes the total energy with respect
+to the five parameters that characterize the valley spinor,
+FORMULA ,
+shared by all LL orbitals.
+Up to a spinor-independent constant, the energy per electron is
+FORMULA 
+
+The FORMULA  filling ground state therefore depends on the sign of
+a linear combination of the interaction parameters calculated above.
+The energy is independent of FORMULA  and FORMULA  because
+of separate particle number conservation in each valley.
+The spinor-dependent factor on the right hand side of Eq. (REF )
+reaches its minimum value 0 when the spinor is a single-valley state
+FORMULA , FORMULA , or FORMULA  and its maximum value
+FORMULA  when the ground state is an equal-weight three-valley state, FORMULA .
+Exchange energies are always stronger between orbitals that are more similar.
+Accordingly, the exchange integrals between electrons in the same valley are
+stronger than those between electrons in different valleys (FORMULA )
+because of the difference in cyclotron orbit orientations.
+It follows that the ground state is completely valley polarized
+unless intervalley scattering plays a role.
+LL interaction physics in SnTe surface 2DEGs therefore contrasts strongly
+with the case of graphene 2DEGs which has identical isotropic Dirac cones in
+two different valleys, implying that FORMULA . Broken valley
+symmetry states at FORMULA  in graphene {{cite:c1534bb2-e4eb-49b2-b1de-ebaaff2f2b96}}, {{cite:f5bba251-b940-499a-8ab6-e3ca6c801c02}}, {{cite:f4ff5ccf-1aee-454e-be4e-09e13ad3649d}}, {{cite:1c1815cc-68e2-4dd5-a628-858bba56a834}} therefore have Heisenberg character when valley-exchange processes are neglected.
+For the relatively modest anisotropy parameter FORMULA  of SnTe we find that
+the difference between the same-valley and different-valley exchange energies is
+small, FORMULA  FORMULA  FORMULA . The short-range
+valley-exchange scattering processes are approximated by a momentum-independent interaction with strength FORMULA  we find that FORMULA  is positive and scales as FORMULA . This allows the weak valley-exchange scattering to play a role at stronger fields,
+favoring a ground state which has coherence between all three valleys, and is therefore a charge-density-wave state with broken translational symmetry.
+For FORMULA  = 0.85 eVFORMULA nmFORMULA , a first-order quantum phase transition between nematic valley-polarized and
+valley-coherent charge-density-wave states occurs at FORMULA .
+In graphene {{cite:c1534bb2-e4eb-49b2-b1de-ebaaff2f2b96}}, {{cite:f5bba251-b940-499a-8ab6-e3ca6c801c02}}, {{cite:f4ff5ccf-1aee-454e-be4e-09e13ad3649d}}, {{cite:1c1815cc-68e2-4dd5-a628-858bba56a834}} and
+monolayer MoSFORMULA  {{cite:f5c24f44-1926-465f-99c1-e7f2323b60aa}}, however, there is no competition with valley-dependent exchange, and the same mechanism induces a charge-density-wave ground state
+at all field strengths at filling factors FORMULA .
+FIGURE 
+Zeeman field effects.—
+We have so far neglected Zeeman coupling,
+which greatly enriches the interaction induced integer QH effect of
+SnTe. We write the total magnetic field as
+FORMULA 
+
+using the coordinate frame defined in Fig. REF (a) for the crucial
+in-plane-field orientation FORMULA . For general FORMULA  the Zeeman field breaks mirror symmetries and
+couples to the order parameter by producing valley-dependent single-particle energies {{cite:e36dca79-a921-43da-b99c-a6d61217d65b}}, {{cite:50e36916-1829-49d2-a00f-bcbe9f635f6d}}, i.e., FORMULA  in the HF Hamiltonian (REF ) with
+FORMULA 
+
+where FORMULA  is an electron FORMULA -factor,
+FORMULA  is the Bohr magneton, and FORMULA  is the
+real spin weight of the surface pseudospin {{cite:e36dca79-a921-43da-b99c-a6d61217d65b}}, {{cite:50e36916-1829-49d2-a00f-bcbe9f635f6d}}.
+The perpendicular field FORMULA  does not break the FORMULA  symmetry and
+contributes only an irrelevant {{cite:eba50c01-001c-48af-a645-72f1141c5eab}} valley-independent energy shift of the FORMULA  triplet.
+In contrast, the in-plane field FORMULA  breaks
+FORMULA  symmetry and lifts the FORMULA  triplet degeneracy.
+It follows that in-plane fields can yield an integer QH effect at FORMULA  and FORMULA  filling of the FORMULA  triplet
+even in the absence of interactions, as illustrated in Fig. REF (a).
+When FORMULA  is parallel (anti-parallel) to FORMULA -FORMULA , the
+triplet level degeneracy is reduced to a two-fold degeneracy
+at FORMULA  (FORMULA ) filling.
+When FORMULA  is (anti)parallel to FORMULA -FORMULA , the single-particle
+gaps at FORMULA  and FORMULA  filling are non-zero and identical.
+Valley dependent Zeeman coupling competes with electron-electron interactions,
+and greatly enriches the phase diagram by adding
+FORMULA  to Eq. (REF ),
+favoring complete valley polarized states.
+The phase diagram at FORMULA  is illustrated in Fig. REF (b).
+For FORMULA ,
+interactions prefer a valley polarized state and FORMULA  simply selects which valley is occupied.
+First-order phase transitions occur at FORMULA .
+When Zeeman coupling to a parallel field is included, the abrupt transition from valley-polarized to three-valley coherent states
+is interrupted by a region in which FORMULA -dependent two-valley coherent states are stable.
+The stability range of the two-valley coherent state is widest when
+FORMULA . Finally,
+when FORMULA  is further increased,
+three-valley coherent states finally
+emerge, but with FORMULA -dependent and unequal valley populations.
+Valley coherence can therefore be modified and continuously tuned by the in-plane Zeeman field.
+The shape of the phase diagram in Fig. REF (b) is only weakly dependent on the
+numerical value of FORMULA .
+The three first-order transition lines and FORMULA  are independent of FORMULA  changes.
+A larger value of FORMULA  expands the areas with two-valley coherent states
+to larger FORMULA .
+Stronger short range interactions shift FORMULA  to smaller values because
+intervalley interactions increase in importance.
+On the other hand larger surface state anisotropy would
+increase the critical perpendicular field FORMULA .
+Discussion.—
+We have shown that because of valley-dependent anisotropic cyclotron orbits,
+intravalley electron-electron interactions in SnTe can reduce rotational symmetries
+and lift the three-fold degeneracy of the FORMULA  valley FORMULA  LLs.
+The physics which drives this broken symmetry
+is similar to that {{cite:b438a352-ccb7-427d-8d6e-05cc0b99da2c}}, {{cite:29af6ce8-62b7-4e7d-92a1-b3e745833ce1}} responsible for valley
+polarized nematic states in parabolic spinful band systems
+with an even number of valleys. The triplet case discussed here
+is distinguished by its FORMULA  order parameter space, and by the way Zeeman interactions
+with parallel fields couple to the order parameter. Zeeman interactions play a key role because
+parallel fields break the mirror and FORMULA  symmetries
+that protect the three FORMULA  valley surface Dirac states.
+Our theory can be extended to study QH effects on the surfaces of silicon {{cite:afcfa210-8341-44b4-a40d-073bcc592e58}}, {{cite:83d017b9-6c43-4097-ac0a-ef7eac310b38}} and bismuth {{cite:c9441793-2bd6-474b-878c-0d63a6821c82}}, {{cite:94b3a000-0b9a-4377-9b4c-fd94108c424b}}.
+We predict that, intervalley interactions will become important at sufficiently strong fields and drive a transition from a valley-polarized nematic state to a commensurate
+charge-density-wave state with intervalley coherence, and that the phase boundary between
+them is enriched by in-plane field Zeeman coupling.
+In the thin-film case {{cite:01c09b48-657b-48e0-b7e4-92fa78b133db}}, Coulomb interactions between 2DEGs
+localized on top and bottom surfaces are important.
+We expect that in this case integer QH effects at total filling factor FORMULA  will be spatially indirect exciton condensates.
+Our theory can also be extended to study FORMULA  symmetry breaking in FORMULA  LL triplets.
+In this case, we expect similar competing ordered states but smaller exchange interactions, and the Zeeman-coupling effect is enriched but will still retain the
+FORMULA  periodicity in FORMULA  orientations.
+The first step experimentally in studying the interaction physics we address would be to verify the LL
+structure we predict using field-angle dependent magnetoresistance or magnetic torque magnetometry {{cite:c9441793-2bd6-474b-878c-0d63a6821c82}}, {{cite:94b3a000-0b9a-4377-9b4c-fd94108c424b}}.
+The energies of FORMULA  and FORMULA  valley LLs are FORMULA  and FORMULA , respectively.
+Their crossings, illustrated in Fig. REF , should lead to pronounced peaks in longitudinal magnetoresistance.
+We note the LL crossing fields may be controllable by varying the surface potential {{cite:d3f3bfc3-920f-49b1-9ca5-822ebde12061}}, which tunes the energy difference between the FORMULA  and FORMULA  Dirac points.
+An in-plane Zeeman field splits the FORMULA -invariant triplets, with FORMULA  periodicity as a function of
+Zeeman-field orientation.
+Since Shubnikov-de Haas oscillations have recently been observed on the FORMULA  surface of
+SnTe {{cite:c3d1addf-7bb3-4932-9c32-61088c8d8174}}, we expect future progress to be rapid.
+The phase diagram Fig. REF (b) is expected to be observable only in low-disorder samples,
+since the transport activation gaps associated with broken symmetry states are of the order of FORMULA  meV. The collective modes {{cite:72272148-5b68-4461-a328-7e1dce6d458d}} of valley coherent states are expected to be gapless,
+while those of valley polarized states are expected to be gapped.
+Acknowledgments.—
+We thank Qian Niu for helpful discussions.
+X.L. was supported by DOE (DE-FG03-02ER45958, Division of Materials Science and Engineering) and Welch Foundation (F-1255) in Austin, and is currently supported by NSF-JQI-PFC and LSP-CMTC in Maryland.
+X.L. also acknowledges discussions with Fengcheng Wu, Rohit Hegde and Ming Xie in Austin.
+F.Z. is supported by UT Dallas research enhancement funds. F.Z. also thanks the Aspen Center for Physics (the NSF Grant #1066293 and the Trustee’s Fund) for hospitality during the finalization of this work.
+A.H.M. is supported by DOE Division of Materials Sciences and Engineering grant DE-FG03-02ER45958, and by Welch foundation grant TBF1473.

@@ -1,0 +1,1310 @@
+
+Excessive Backlog Probabilities of Two Parallel QueuesKamil Demirberk ÜnlüAnkara University, Department of Statistics and Middle East Technical University, Institute of Applied Mathematics,   Ali Devin SezerMiddle East Technical University, Institute of Applied Mathematics, Ankara, Turkey2019/02/18 18:30:28Let FORMULA  be the constrained random walk on FORMULA  with increments FORMULA , FORMULA , FORMULA  and FORMULA ; FORMULA  represents, at arrivals
+and service completions, the lengths of two queues (or two stacks in computer science applications) working in parallel
+whose service and interarrival times are exponentially distributed
+with arrival rates FORMULA  and service rates FORMULA , FORMULA ;
+we assume FORMULA , FORMULA , i.e., FORMULA  is assumed stable. Without loss of generality we assume FORMULA .
+Let FORMULA  be the first time FORMULA  hits the line FORMULA , i.e., when the sum of the components of FORMULA  equals FORMULA  for the first time. Let FORMULA  be the same random walk as FORMULA  but only constrained on FORMULA  and its jump probabilities for the first component reversed. Let FORMULA  and let FORMULA  be the first time FORMULA  hits FORMULA . The probability FORMULA  is a key performance measure of the queueing system (or the two stacks) represented by FORMULA  (if the queues/stacks share a common buffer, then FORMULA  is the probability that this buffer overflows during the system's first busy cycle). Stability of the process implies that FORMULA  decays exponentially in FORMULA  when the process starts off the exit boundary FORMULA  We show that, for FORMULA , FORMULA , FORMULA , FORMULA , FORMULA  approximates FORMULA  with exponentially vanishing relative error. Let FORMULA ; for FORMULA  and FORMULA , we construct a class of harmonic functions from single and conjugate points on a related characteristic surface for FORMULA  with which the probability FORMULA  can be approximated with bounded relative error. For FORMULA , we obtain the exact formula  FORMULA
+Keywords:
+approximation of probabilities of rare events,
+exit probabilities,
+constrained random walks,
+queueing systems,
+large deviations
+Introduction
+This work concerns the random walk
+FORMULA  with independent and identically distributed increments
+FORMULA ,
+constrained to remain in FORMULA :
+FORMULA 
+FORMULA 
+
+The dynamics of FORMULA  are depicted in Figure REF .
+FIGURE 
+We denote the constraining boundaries by
+FORMULA , FORMULA .
+A well known interpretation for FORMULA  is as the embedded random walk of two parallel queues with Poisson arrivals and independent
+and exponentially distributed service times. This random walk appears
+in computer science as a model of two
+stacks running together {{cite:e79dcaba-7904-41d9-b833-1a436254dafa}}, {{cite:f0f9f72b-d2ed-4081-91ba-4ad7d33f730d}}, {{cite:a0a5de9f-fa22-4f8b-9d9b-a7d59d71cfc0}}, {{cite:7019744f-737f-49ff-a494-e389b0b4ccc4}}.
+Define the region
+FORMULA 
+
+and its boundary
+FORMULA 
+Let FORMULA  be the first time FORMULA  hits FORMULA :
+FORMULA 
+When FORMULA  is stable, i.e., when FORMULA , a well known performance measure
+associated with FORMULA  is the probability
+FORMULA ; if the queues
+share a common buffer, then FORMULA  is the probability that this buffer overflows during
+the system's first busy cycle. The stability assumption implies that FORMULA  decays exponentially
+in FORMULA , when the walk starts away from the exit boundary FORMULA .
+Hence FORMULA  is a rare event for FORMULA  large.
+There is no closed form formula for FORMULA  in terms of the parameters of the problem; the approximation of probabilities of the type FORMULA  and of related probabilities and expectations for constrained processes has been a challenge for many years and there is a wide literature on this subject using techniques including large deviations analysis and rare event simulation, see, {{cite:877683d7-92d0-4d29-8750-ca3e03024a63}}, {{cite:2e47c52e-6811-4611-8ca7-3e4ba7f7863e}}, {{cite:936006a7-cfd6-4d89-acbe-aca8048fdbe9}}, {{cite:50b09bd9-8787-46ee-920f-f58769dc77c2}}, {{cite:18dd0423-06c5-4329-b7b4-877694aa4666}}, {{cite:ef31ac39-a071-4c83-a223-900e5d248647}}, {{cite:e385cdda-062c-40b0-889d-bd8b113effd2}}, {{cite:b5ed71a8-34ba-450b-8c0d-4dc0de0e8f63}}, {{cite:3e54c036-2728-4ee1-ac75-15fbd0f797d1}}, {{cite:7c3dfdb2-84ee-4d22-a7ca-ac0798210621}}, {{cite:7d0cc872-4566-49f3-ac28-3edd7db677c6}}, {{cite:4f2608f6-0924-4657-a430-6c1307e15960}}, {{cite:428cba6f-2bed-449f-b79f-742b21dd88b0}}, {{cite:d748e777-656b-497e-9061-cfdd49d319fd}}, {{cite:9fae381b-15ea-4f80-b1cb-d520e6f42a33}}, {{cite:37fcc02b-0e77-4c0f-b977-51c6edd88f38}}, {{cite:6d0f02d0-9ad0-4fb2-a434-7b2c6453b644}}, {{cite:2c253ec9-52e3-415e-9b00-641995061f15}}, {{cite:2ed89ba8-844f-48cc-bd97-97f20afd2f2a}}, {{cite:8e5a9dcc-cf4f-4dcc-8abc-1de8d58ae90e}}, {{cite:25cc733c-f88f-42f4-bd68-c5bcb4533a87}}, {{cite:92cfbdc8-ebb1-467e-82d2-32b0ad7e2213}}, {{cite:a0a5de9f-fa22-4f8b-9d9b-a7d59d71cfc0}}, {{cite:5456be7d-d757-45f9-b343-6679b8b5b8cd}}, {{cite:24f24eb6-c4e6-4850-90b1-822ac5fd7e63}}, {{cite:1a387068-2dd3-47d6-bc5f-f3dbbd825ba9}}, {{cite:bb53cd54-9f6c-4c67-b6d4-a641c9202f78}}, {{cite:353a3729-9d2d-4a13-ad08-6445b8c00f67}}, {{cite:ff580fb0-5d6d-4aa4-877a-e043af65e461}}, {{cite:dbca0501-dd73-498c-a6b1-2d2ff381fb15}}, {{cite:5a3a9c70-293d-46bb-863c-4293521f348c}}, {{cite:44727799-9c00-44b6-934e-2e398b2e7cfb}}, {{cite:3d4d8fb1-efd6-4cde-b70e-db89ce174349}}, {{cite:1313d499-06dc-4eef-a1f3-5948040c2674}}, {{cite:8c911780-8dad-4251-9936-dfb9f5c8b4b6}}, {{cite:c9499313-bfe2-471e-a562-e9d3eaeb651c}}, {{cite:75ade52f-a963-4af9-8b5f-13c25090858d}}, {{cite:f53e9c82-4adb-4d48-9a4f-ea248ee96dc0}}, {{cite:56167960-30c5-4920-9af8-a89cb3f99af7}}, {{cite:e9bc8fc1-8973-4cda-a5fc-5fdf51c2a45b}}, {{cite:7019744f-737f-49ff-a494-e389b0b4ccc4}}, {{cite:c5d8a46a-a001-4d91-8902-c484a951c3ca}}, {{cite:5ced6f9f-85dc-4d70-8f2a-07c8d6d15a91}}, {{cite:485e3d8a-37e2-49be-bb24-08e9970fb88b}}, {{cite:9b968954-899b-465b-bd2a-14f87d3b0705}}, {{cite:47152e6d-e252-4007-bc22-91c85580dd22}}, {{cite:3bf9deb1-9088-4b0c-9df5-7822f88dd0e6}}, {{cite:c465d64d-9b4e-4f8c-9a50-663b6598ddac}}, {{cite:f82a5706-fa04-4a95-8546-f410d1273939}}, {{cite:9feee064-e31b-40e2-9220-701683010c93}}, {{cite:1d8fa704-6710-4c0d-83c8-ea10d78bf4f8}}, {{cite:f46b2548-16e6-44f6-b7e1-163e7ec4fa9b}}, {{cite:394c9855-5609-4a3d-ac18-a9ec61069460}}, {{cite:23cdeab1-99f2-4f96-88cd-9ddb51dad811}}, {{cite:4819869c-0a1a-48d7-aaa3-c9508597f019}}, {{cite:cc76bdd5-1742-43ee-8f4b-f964757709e3}}, {{cite:246f7055-e28a-403d-8718-24be8cb9d3b9}}, {{cite:b1fa6f81-f475-4f04-894e-1ad1adcd5179}}, {{cite:f0f9f72b-d2ed-4081-91ba-4ad7d33f730d}}, {{cite:d4d0bb2a-8f09-4bcf-aeb4-870f5749fa4a}}.
+The goal of the present work is to prove, for the constrained
+random walk FORMULA  defined above, that the approximation approach used in
+{{cite:4e5e1ff0-f4d5-4b82-bd00-0afedd3baa09}}, {{cite:ecbf0785-25bd-4ffa-bb75-8c6451f97f5f}} gives approximations of FORMULA  with exponentially decaying relative error
+when the initial position FORMULA  of the random walk is off the boundary FORMULA 
+The work {{cite:ecbf0785-25bd-4ffa-bb75-8c6451f97f5f}} reviews many of the works cited above and points out the relations between the approach of the current paper and {{cite:4e5e1ff0-f4d5-4b82-bd00-0afedd3baa09}}, {{cite:ecbf0785-25bd-4ffa-bb75-8c6451f97f5f}}
+and the range of methods and approaches used in these works.
+The approximation technique and the proof method
+are reviewed below (see subsection REF ). Although the main approach of the present work is parallel to that of
+{{cite:4e5e1ff0-f4d5-4b82-bd00-0afedd3baa09}}, {{cite:ecbf0785-25bd-4ffa-bb75-8c6451f97f5f}}, new challenges and ideas appear in the treatment of the
+present case; there are also differences in the assumptions
+made and the results obtained.
+These are reviewed in Section .
+First, several definitions; the utilization rates of the nodes are:
+FORMULA 
+We assume that FORMULA  is stable, i.e.,
+FORMULA 
+The following quantity plays a central role in our analysis:
+FORMULA 
+Without loss of generality we can assume
+FORMULA 
+(if this doesn't hold, rename the nodes).
+We will make two further technical assumptions:
+FORMULA 
+The first of these is needed in the construction of the FORMULA -harmonic
+functions in Section , see (REF ).
+The second is useful
+both in the computation of FORMULA  (see the proof of
+Proposition REF ) and in the limit analysis
+(see the proof of Proposition REF ). We further
+comment on these assumptions in the Conclusion (Section ).
+Define
+the linear transformation
+FORMULA 
+and the affine transformation
+FORMULA 
+where FORMULA  is the standard basis for FORMULA 
+Furthermore, define the constraining map
+FORMULA 
+Define FORMULA  to be a constrained random walk on
+FORMULA 
+with increments
+FORMULA 
+FORMULA 
+FORMULA  has the same
+increments as FORMULA , but the probabilities of the increments FORMULA  and FORMULA  are reversed.
+Define
+FORMULA 
+and the hitting time  FORMULA
+Summary of our analysis
+{{cite:4e5e1ff0-f4d5-4b82-bd00-0afedd3baa09}} asserts,
+in a more general framework than the model given above,
+that for any FORMULA , FORMULA ,
+FORMULA .
+The approximation idea connecting these two probabilities is
+shown in Figure REF : by applying FORMULA ,
+we move the origin of the coordinate
+system to FORMULA  and take limits, which leads to the limit problem
+of computing FORMULA  where the limit FORMULA  process is
+the same process as FORMULA  (observed from the point FORMULA )
+but not constrained on
+ FORMULA
+FIGURE 
+A more interesting
+convergence analysis is when the initial point is given in
+FORMULA  coordinates. A convergence analysis from this point of view has only
+been performed so far for the constrained random walk with increments
+FORMULA , FORMULA  and FORMULA  (representing two tandem queues)
+in {{cite:4e5e1ff0-f4d5-4b82-bd00-0afedd3baa09}}, {{cite:ecbf0785-25bd-4ffa-bb75-8c6451f97f5f}}. The goal of the present work is to extend this analysis to
+the simple random walk FORMULA .
+Our main result is the following theorem:
+Theorem (Theorem REF ) 
+For any
+FORMULA ,
+FORMULA , FORMULA ,
+there exists FORMULA  and FORMULA  such that
+FORMULA 
+for FORMULA , where FORMULA .
+
+Thus, as FORMULA  increases FORMULA 
+approximates FORMULA  very well (with exponentially
+decaying relative error in FORMULA ) if FORMULA 
+In the tandem case there is a simple explicit formula for FORMULA .
+In the parallel walk
+case a simple explicit formula exists under the additional condition
+FORMULA 
+The formula for FORMULA  under this condition is
+FORMULA 
+This is derived in Proposition REF  and is based on the
+class of FORMULA -harmonic functions constructed
+in Section 
+from single and conjugate
+points on a characteristic surface associated with FORMULA .
+A generalization of (REF ) can be used
+to find upper and lower bounds for FORMULA 
+when (REF ) doesn't hold, see Propositions REF 
+and REF . Subsection REF 
+illustrates how one can use these results to construct
+finer approximations of FORMULA  with diminishing relative
+error using superposition of FORMULA -harmonic functions defined by single
+and conjugate points on the characteristic surface.
+Define the stopping times
+FORMULA 
+If we set the initial position of FORMULA  to FORMULA , we have
+FORMULA 
+The main argument in the proof of Theorem REF 
+is this: most of the probability of the events
+FORMULA  and FORMULA  come from the events
+FORMULA  and FORMULA  respectively, if the initial position
+FORMULA  of FORMULA  is away from FORMULA  The full implementation
+of this argument will require the following steps:
+
+Construction of FORMULA -harmonic functions, FORMULA  harmonic
+functions and bounds on
+FORMULA  for FORMULA 
+(Sections  and ),
+
+Large deviations (LD) analysis of FORMULA  (Section ),
+
+LD analysis of FORMULA  (Section ),
+
+LD analysis of FORMULA 
+(Subsection REF ).
+
+These steps are put together in Section .
+Section  treats the problem of computing
+FORMULA  from the FORMULA -harmonic functions of Section .
+Section  points out the parallels and differences between
+the analysis of the constrained walk FORMULA  treated in the present
+work and the tandem walk treated in
+{{cite:4e5e1ff0-f4d5-4b82-bd00-0afedd3baa09}}, {{cite:ecbf0785-25bd-4ffa-bb75-8c6451f97f5f}}.
+We comment on future work in the conclusion
+(Section ).
+
+Harmonic functions of  FORMULA
+A function FORMULA  on FORMULA 
+is said to be FORMULA -harmonic if
+FORMULA 
+Following {{cite:4e5e1ff0-f4d5-4b82-bd00-0afedd3baa09}}, introduce the
+the interior characteristic polynomial of FORMULA :
+FORMULA 
+and characteristic polynomial of FORMULA  on FORMULA :
+FORMULA 
+As in {{cite:4e5e1ff0-f4d5-4b82-bd00-0afedd3baa09}},
+we will construct FORMULA -harmonic functions from solutions of FORMULA ;
+the set of all solutions of this
+equation defines the characteristic surface
+FORMULA 
+define, similarly, the characteristic surface for FORMULA :
+FORMULA 
+Multiplying both sides of FORMULA  by FORMULA 
+transforms it to the quadratic equation
+FORMULA 
+Define
+FORMULA 
+if for a fixed FORMULA , FORMULA  and FORMULA  are distinct roots of (REF ),
+they will satisfy
+FORMULA 
+by simple algebra;
+we will call the points FORMULA  and FORMULA 
+arising from such roots conjugate.
+Following {{cite:4e5e1ff0-f4d5-4b82-bd00-0afedd3baa09}} we refer to the function FORMULA  as the conjugator.
+An example of two conjugate points are shown in Figure REF .
+FIGURE 
+For any point FORMULA  define the following
+FORMULA -valued function on FORMULA :
+FORMULA 
+FORMULA 
+Lemma 1 
+FORMULA  is FORMULA -harmonic on FORMULA 
+when FORMULA . In addition FORMULA , FORMULA , is FORMULA -harmonic on  FORMULA
+
+As in {{cite:4e5e1ff0-f4d5-4b82-bd00-0afedd3baa09}}, the first claim follows from the definitions involved:
+FORMULA 
+and the second
+claim follows from the first and the fact that FORMULA 
+(see (REF )).
+Define
+FORMULA 
+Proceeding parallel to {{cite:4e5e1ff0-f4d5-4b82-bd00-0afedd3baa09}},
+one can define the following class of FORMULA -harmonic functions from
+the functions FORMULA :
+Proposition 2.1 
+Suppose FORMULA .
+Then FORMULA  is FORMULA -harmonic.
+
+Lemma REF  says that for FORMULA ,
+FORMULA  is FORMULA -harmonic on FORMULA 
+An argument parallel to the one given in the proof of Lemma REF 
+shows that
+FORMULA  is FORMULA -harmonic on FORMULA  when FORMULA 
+These two facts imply the statement of the proposition.
+The next proposition gives us another class of FORMULA -harmonic functions
+constructed from conjugate points on FORMULA , it is
+a special case of {{cite:4e5e1ff0-f4d5-4b82-bd00-0afedd3baa09}}:
+Proposition 2.2 
+Suppose FORMULA , are conjugate points
+on FORMULA .
+Then
+FORMULA 
+is FORMULA -harmonic.
+
+For sake of completeness and easy reference, let us reproduce the argument given in
+the proof of {{cite:4e5e1ff0-f4d5-4b82-bd00-0afedd3baa09}}:
+
+That FORMULA  is FORMULA -harmonic on FORMULA 
+follows from Lemma REF . For FORMULA 
+a direct computation gives:
+FORMULA 
+It follows that
+FORMULA 
+i.e., FORMULA  is FORMULA -harmonic on FORMULA  as well.
+The intersection of
+FORMULA  and FORMULA  consists
+of the points
+FORMULA , FORMULA  and FORMULA . The last of these gives us our first
+nontrivial loglinear FORMULA -harmonic function:
+Lemma 2 
+FORMULA  is FORMULA -harmonic.
+
+The proof follows from Proposition REF  and the
+fact that  FORMULA
+Fixing FORMULA  and solving (REF ) gives us the two conjugate
+points corresponding to FORMULA . It is also natural to start the computation
+from a fixed FORMULA  and find its FORMULA  and its conjugate. For this,
+one rewrites FORMULA , now as a polynomial in FORMULA :
+FORMULA 
+For FORMULA  fixed, the roots of (REF ) are
+FORMULA 
+where
+FORMULA 
+and for FORMULA , FORMULA  is the square root of FORMULA  satisfying  FORMULA
+The function FORMULA  takes the value 1 on FORMULA ; therefore,
+of special significance to us is the solution of (REF ) with FORMULA . The roots
+(REF ) for FORMULA  are
+FORMULA 
+That FORMULA  implies
+FORMULA .
+The assumption FORMULA  implies
+FORMULA 
+Therefore, by Proposition REF , the root FORMULA  above defines the
+FORMULA -harmonic function
+FORMULA 
+For this function to be useful in our analysis,
+we need FORMULA  (see Proposition REF ),
+therefore, we assume:
+FORMULA 
+Finally, the following scalar multiple of FORMULA  is frequently used
+in the calculations, therefore, we will denote it in bold thus:
+FORMULA 
+the assumption
+FORMULA  ensures that the denominator
+FORMULA  is nonzero.
+
+Laplace transform of  FORMULA
+To bound approximation errors we will have to argue that we can
+truncate time without losing much probability. For this, it will
+be useful to know that there exists FORMULA  such that
+FORMULA 
+In {{cite:4e5e1ff0-f4d5-4b82-bd00-0afedd3baa09}}, {{cite:0083602b-c25e-4059-88dd-6230a130fff3}}, bounds similar to this are obtained
+using large deviations arguments, which are based on the ergodicity
+of the underlying chain. In {{cite:239d24fc-6b36-4d30-b58f-419a5fb69d19}}, again a similar bound is
+obtained invoking the geometric ergodicity of the underlying process.
+The process underlying (REF ) is not stationary. For this reason,
+these arguments do not immediately generalize to the analysis of
+(REF ). To prove the existence of FORMULA  such
+that (REF ) holds, we will extend the
+characteristic surface an additional dimension
+to include a new parameter;
+points on the generalized surface will correspond to discounted
+(in our case we are in fact interested in inflated costs)
+expected cost functions of the process FORMULA , i.e., points on this
+surface will give us functions of the form
+FORMULA 
+We will use these functions to find our desired FORMULA .
+ FORMULA -level characteristic surfaces and
+FORMULA -FORMULA -harmonic functions
+The development in this subsection is parallel to Section
+ with an additional variable FORMULA .
+A function FORMULA  on FORMULA  is said to be
+FORMULA -harmonic if
+FORMULA 
+As before, let FORMULA  denote the characteristic polynomial
+of FORMULA ;
+the set of all solutions of the
+equation
+FORMULA 
+defines the FORMULA -level characteristic surface
+FORMULA 
+Similarly, define
+FORMULA 
+the FORMULA -level characteristic surface on FORMULA 
+These surfaces reduce to the ordinary characteristic surfaces
+when FORMULA .
+Multiplying both sides of FORMULA  by FORMULA 
+transforms it to the quadratic (in FORMULA ) equation
+FORMULA 
+whose discriminant is
+FORMULA 
+Let FORMULA  be the conjugator defined in (REF ).
+If FORMULA  and FORMULA 
+then
+FORMULA 
+for FORMULA ;
+if FORMULA 
+FORMULA  and FORMULA  will be distinct points on
+FORMULA  and we will call them conjugate.
+Lemma 3 
+FORMULA  is FORMULA 
+harmonic on FORMULA 
+when FORMULA .
+In addition FORMULA , FORMULA , is FORMULA -harmonic
+on  FORMULA
+
+The proof is parallel to that of Lemma REF 
+and follows from the definitions.
+Define
+FORMULA 
+Parallel to Section ,
+the above definitions give us the following class of FORMULA -harmonic functions;
+Proposition 3.1 
+Suppose FORMULA .
+Then FORMULA  is FORMULA -harmonic.
+
+Proposition 3.2 
+Suppose FORMULA , are conjugate points
+on FORMULA  Then
+FORMULA 
+is FORMULA -harmonic.
+
+The proofs are the same as those of the corresponding Propositions REF  and REF 
+of the previous section.
+
+Existence of the Laplace transform of  FORMULA
+We next use the FORMULA  harmonic functions constructed in Propositions
+REF  and REF  to get our existence result.
+Proposition 3.3 
+There exist FORMULA  and FORMULA  such that
+FORMULA 
+for all  FORMULA
+
+Let us first prove the following:
+if we can find, for some FORMULA  and FORMULA ,
+a FORMULA -FORMULA  harmonic function FORMULA 
+satisfying FORMULA  on FORMULA  and FORMULA  on FORMULA 
+we are done.
+The reason is as follows:
+that FORMULA  is FORMULA -harmonic and the option sampling
+theorem imply that FORMULA  is
+a martingale.
+It follows that
+FORMULA 
+
+Finally, FORMULA  on FORMULA  and FORMULA  give
+(REF ).
+To get our desired FORMULA  we start from the points
+FORMULA  and FORMULA 
+on FORMULA .
+The first point gives us the root FORMULA  of the equation
+FORMULA 
+That
+FORMULA 
+and the implicit function theorem give us a differentiable
+function FORMULA  on an open interval FORMULA 
+around FORMULA  that satisfies
+FORMULA 
+The conjugate of FORMULA  on FORMULA  is
+FORMULA 
+(whenever possible,
+we will omit the FORMULA  variable and simply write FORMULA ;
+similarly, we will write FORMULA  for FORMULA .
+These points give us
+the FORMULA -harmonic function
+FORMULA 
+where we used
+FORMULA 
+That FORMULA 
+(Assumption REF )implies that
+FORMULA  if we choose
+FORMULA  close enough to 1. FORMULA  will almost serve as our FORMULA ,
+except that it does take negative values on a small section of FORMULA .
+To get a positive function we will add to FORMULA  a constant
+multiple of the FORMULA -harmonic function defined by a
+point on FORMULA  that is the continuation
+of FORMULA  on FORMULA  This point is
+FORMULA  where FORMULA  is the root of the
+the equation
+FORMULA 
+satisfying FORMULA  The implicit function theorem
+(or direct calculation) shows that FORMULA  is smooth in
+an open interval FORMULA  containing FORMULA  Now
+FORMULA 
+and Proposition REF 
+imply that FORMULA 
+is a FORMULA  harmonic function. Now define
+FORMULA 
+By its definition FORMULA  is FORMULA  harmonic.
+We would like to choose FORMULA  large enough so that FORMULA  is bounded
+below by 1 on FORMULA  and is nonnegative on FORMULA 
+By our assumption (REF ),
+FORMULA ;
+therefore, for FORMULA  close enough to
+1, we will still have FORMULA ; let us
+assume that FORMULA  and FORMULA  are tight enough that this holds.
+By definition,
+FORMULA 
+FORMULA  implies that FORMULA 
+takes its most negative value for FORMULA ,
+i.e., on FORMULA  and if we can choose FORMULA  so that FORMULA  is nonnegative on FORMULA ,
+it will be so on all of FORMULA . On FORMULA , FORMULA  reduces to
+FORMULA 
+If FORMULA , then setting
+FORMULA 
+would imply FORMULA  on FORMULA ; FORMULA  imply
+FORMULA 
+then, FORMULA  can serve as our desired FORMULA  harmonic function FORMULA  with
+ FORMULA
+Now let us consider the case
+FORMULA  :ordinary calculus implies that if we choose
+FORMULA  large enough we can make the minimum FORMULA  over FORMULA  of
+FORMULA 
+arbitrarily close to 0; then choosing FORMULA  gives
+us a FORMULA  harmonic function that satisfies FORMULA  on FORMULA ,
+FORMULA  on FORMULA  and FORMULA  on FORMULA  where  FORMULA
+We now use (REF )
+to derive an upper bound on the probability that FORMULA  is finite
+but too large:
+Proposition 3.4 For any FORMULA , there exists FORMULA  such that
+FORMULA 
+for any FORMULA , FORMULA 
+and FORMULA .
+
+Let FORMULA  and FORMULA  be as in (REF ).
+For any FORMULA , Chebyshev's inequality gives
+FORMULA 
+
+Choosing FORMULA  gives (REF ).
+
+LD limit for  FORMULA
+Define
+FORMULA 
+Assumption (REF ) implies
+FORMULA 
+and therefore
+FORMULA 
+The level curves of FORMULA  for
+for FORMULA , FORMULA , FORMULA , FORMULA 
+are shown in Figure REF .
+FIGURE 
+The goal of this section is to prove
+Theorem 4.1 FORMULA  is the LD limit of FORMULA , i.e.,
+FORMULA 
+for FORMULA ,  FORMULA
+
+Propositions REF  and REF  state
+FORMULA 
+and
+FORMULA 
+These imply (REF ).
+
+Next two subsections prove (REF )
+and (REF ).
+To prove the first, we will proceed parallel to
+{{cite:5b1fa825-0bcd-4085-ba31-f734a823d823}}, {{cite:0083602b-c25e-4059-88dd-6230a130fff3}}, {{cite:4e5e1ff0-f4d5-4b82-bd00-0afedd3baa09}}
+and construct a sequence of supermartingales FORMULA 
+starting from a subsolution of a limit Hamilton Jacobi Bellman (HJB)
+equation associated with the problem.
+To prove the bound (REF ) we will directly construct a
+sequence of subharmonic functions of the process FORMULA .
+LD lowerbound for  FORMULA
+For FORMULA  define the Hamiltonian function
+FORMULA 
+We will denote FORMULA  by FORMULA . FORMULA  is convex in FORMULA .
+For FORMULA , define
+FORMULA 
+Following {{cite:fdbacfba-225e-4f2e-b7c8-8a5a82aafe64}} one can represent FORMULA  as the value function
+of a continuous time deterministic control problem; the
+HJB equation associated with this control problem
+is
+FORMULA 
+a function FORMULA  is said to be a classical subsolution
+of (REF ) if
+FORMULA 
+supersolutions are defined by replacing FORMULA  in (REF )
+with  FORMULA
+To prove (REF )
+will proceed parallel to {{cite:4e5e1ff0-f4d5-4b82-bd00-0afedd3baa09}}:
+find an upperbound on FORMULA  by constructing
+a supermartingale
+associated with the process FORMULA .
+To construct our supermartingale we will proceed parallel to
+{{cite:5b1fa825-0bcd-4085-ba31-f734a823d823}}, {{cite:0083602b-c25e-4059-88dd-6230a130fff3}} and use a subsolution of (REF ), i.e.,
+a solution of (REF ).
+Define
+FORMULA 
+and
+FORMULA 
+
+and
+FORMULA 
+A direct calculation gives
+Lemma 4 
+The gradients defined in (REF ) satisfy
+FORMULA 
+
+The 0-level curve of the Hamiltonians and the
+gradients FORMULA  are shown in Figure  REF
+FIGURE 
+Define
+FORMULA 
+FORMULA  implies
+FORMULA 
+The functions FORMULA , FORMULA  meet at
+FORMULA 
+i.e.,
+FORMULA 
+We assume that FORMULA  is small enough so that FORMULA 
+satisfies
+FORMULA 
+FORMULA  equals FORMULA  in
+the region
+FORMULA 
+these regions are shown in Figure REF .
+As in {{cite:5b1fa825-0bcd-4085-ba31-f734a823d823}}, {{cite:0083602b-c25e-4059-88dd-6230a130fff3}},
+we will mollify FORMULA  with
+FORMULA 
+to get our smooth subsolution of (REF ):
+FORMULA 
+Lemma 5 
+The function
+FORMULA  of (REF ) satisfies (REF ) and
+FORMULA 
+where FORMULA  is independent of FORMULA 
+Furthermore,
+FORMULA 
+
+The proof is parallel to that of {{cite:5b1fa825-0bcd-4085-ba31-f734a823d823}}.
+FORMULA  is the minimum of four affine functions and hence is Lipschitz continuous
+and has a bounded (piecewise constant) gradient almost everywhere.
+This implies
+FORMULA 
+
+where
+FORMULA 
+This shows that FORMULA 
+To show
+FORMULA 
+one considers
+FORMULA ,
+FORMULA  and FORMULA  separately.
+We will provide the details only for the first two.
+For FORMULA ,
+FORMULA 
+By Lemma REF  we know that all FORMULA  satisfy FORMULA 
+That FORMULA  is a convex function and Jensen's inequality imply that
+the FORMULA  satisfies
+FORMULA ; this proves (REF ) for
+ FORMULA
+We know by (REF ) that FORMULA ; therefore,
+by (REF )
+FORMULA 
+
+This implies that the region FORMULA  intersects all of the
+FORMULA , FORMULA  and FORMULA  and in particular that the strip
+FORMULA  lies in
+FORMULA .
+Then, for FORMULA , the ball FORMULA 
+lies completely in FORMULA , which implies
+FORMULA 
+By Lemma REF  we know that FORMULA  and FORMULA 
+These and the convexity of FORMULA  imply (REF ) for  FORMULA
+The bound (REF ) follows from the Lipschitz continuity
+of FORMULA , differentiation under the
+integral sign in (REF ) and bounds on the first derivative of
+FORMULA .
+Finally, (REF ) follows from
+FORMULA 
+To get our upperbound on the probability FORMULA  we define
+FORMULA 
+where FORMULA  is as in (REF ).
+Lemma 6 FORMULA  is a supermartingale.
+
+The Markov property of FORMULA  implies that it suffices to show
+FORMULA 
+
+The expression on the left equals
+FORMULA 
+A Taylor expansion and the bound (REF ) imply
+FORMULA 
+Then, the expression in (REF ) is bounded below by
+FORMULA 
+The FORMULA  term above equals FORMULA , which
+by Lemma REF  is nonnegative. This proves (REF ).
+Proposition 4.1 
+Let FORMULA  with
+FORMULA , FORMULA  and let FORMULA  be as in (REF ). Then for any FORMULA 
+there exists an integer FORMULA  such that for  FORMULA
+FORMULA 
+In particular,
+FORMULA 
+
+The proof is parallel to that of {{cite:ecbf0785-25bd-4ffa-bb75-8c6451f97f5f}}.
+
+The inequality (REF ) follows from (REF ) upon taking limits. The rest of the
+proof focuses on (REF ).
+Let FORMULA  be a sequence satisfying FORMULA 
+and FORMULA  Let FORMULA  The optional sampling theorem ({{cite:a81cd1aa-b401-41e3-85fc-b4acad161fab}}) applied to the supermartingale FORMULA 
+at time FORMULA  gives
+FORMULA 
+Restricting the expectation on the left to FORMULA  makes it
+smaller:
+FORMULA 
+
+By the definitions involved we have
+FORMULA 
+This, FORMULA 
+and taking the FORMULA  of both sides in
+(REF ) gives
+FORMULA 
+Now suppose that (REF ) doesn't hold, i.e., there exists
+FORMULA  and a sequence FORMULA  such that
+FORMULA 
+for all FORMULA ; we pass to this subsequence and omit the subscript FORMULA .
+{{cite:5b1fa825-0bcd-4085-ba31-f734a823d823}} implies that there is a FORMULA  such
+that
+FORMULA 
+for FORMULA  large.
+Then
+FORMULA 
+
+Now taking FORMULA  of both sides gives
+FORMULA 
+This contradicts (REF ). Therefore, the assumption (REF ) is false and
+there does exist FORMULA  such that (REF ) holds for FORMULA .
+This finishes the proof of this proposition.
+
+LD upperbound for  FORMULA
+The LD upperbound corresponds (because of the FORMULA  transform) to a lowerbound on
+the probability FORMULA  To get a lower bound on this probability,
+it suffices to have a submartingale of FORMULA  with the right values when FORMULA  hits
+FORMULA .
+As opposed to the analysis of the previous section
+(where we constructed a supermartingale from a subsolution to a limit HJB equation),
+one can directly construct a subharmonic function of FORMULA  to get the desired submartingale.
+The next proposition gives this explicit subharmonic function.
+In its proof the following fact will be useful: if FORMULA  and FORMULA  are
+subharmonic functions of FORMULA  at a point FORMULA , then so is
+FORMULA , this follows from the definitions involved.
+Proposition 4.2
+FORMULA 
+is a subharmonic function of FORMULA  on  FORMULA
+
+We note
+FORMULA 
+Furthermore, FORMULA .
+It follows from these and Lemma REF  that
+FORMULA  is FORMULA -harmonic for
+FORMULA 
+A parallel argument proves the same for
+FORMULA  The constant function
+FORMULA  is trivially FORMULA -harmonic for
+all FORMULA  It follows that their maximum,
+FORMULA  is subharmonic on  FORMULA
+It remains to prove that FORMULA  is subharmonic on FORMULA  and
+FORMULA  FORMULA  for
+FORMULA 
+Both FORMULA  and
+FORMULA  are FORMULA -harmonic on FORMULA 
+It follows from these that FORMULA  is subharmonic on  FORMULA
+For FORMULA 
+we have FORMULA  By Lemma REF 
+and by fact that FORMULA  we know
+FORMULA  is harmonic on FORMULA ;
+the same trivially holds for FORMULA ; therefore,
+FORMULA  is subharmonic on
+FORMULA 
+Furthermore, by definition FORMULA .
+These imply that
+FORMULA  is subharmonic on
+ FORMULA
+The last three paragraphs together imply the statement of the proposition.
+Proposition 4.3
+FORMULA 
+and in particular
+FORMULA 
+for FORMULA , FORMULA ,  FORMULA
+
+By Proposition REF , we know that FORMULA  is a subharmonic
+function of FORMULA . It follows that FORMULA  is a submartingale. This and
+the optional sampling theorem imply:
+FORMULA 
+
+where we have used FORMULA  for FORMULA ; this gives
+(REF ). Taking FORMULA  of both sides
+and applying FORMULA  gives (REF ).
+
+LD limit of  FORMULA
+To implement the argument given in the introduction we need an LD
+lowerbound for the probability
+FORMULA 
+We will obtain the desired bound through a subsolution of the
+limit HJB
+equation associated with FORMULA .
+This is parallel to the construction given in
+{{cite:ecbf0785-25bd-4ffa-bb75-8c6451f97f5f}} and the argument of Section REF .
+The main difference is in the construction of the subsolution.
+Bounding (REF ) requires a subsolution
+consisting of two pieces, one piece for before FORMULA  and one for after.
+For the first piece we need the following additional root of the limit Hamiltonian:
+FORMULA 
+Now define
+FORMULA 
+
+and
+FORMULA 
+
+where the
+vectors FORMULA  are as in (REF ).
+Now define the smoothed subsolution:
+FORMULA 
+The function FORMULA  is obtained from FORMULA  by striking
+out FORMULA  from the minimum and replacing FORMULA  with FORMULA  In particular,
+the components FORMULA  and FORMULA  are common to both
+FORMULA  and FORMULA ;
+this ensures that these functions
+overlap around an open region along FORMULA , which implies in particular that
+FORMULA 
+for  FORMULA
+Remark 1 The condition (REF ) allows one to think of
+FORMULA  as a subsolution of the HJB equation on
+a manifold; the manifold consists of two copies of FORMULA ,
+glued to each other along FORMULA 
+
+
+We use FORMULA  to construct the supermartingale
+FORMULA 
+where FORMULA  is an upperbound on the second derivative of FORMULA , which can be obtained by an argument
+parallel to the one used
+in the proof of (REF ) of Lemma REF .
+The main difference from subsection REF  is that the smooth subsolution has an additional
+parameter FORMULA  to keep track of whether FORMULA  has touched FORMULA ; this appears as the
+FORMULA  term in the definition of the supermartingale FORMULA .
+A three stage version of this argument appears in {{cite:ecbf0785-25bd-4ffa-bb75-8c6451f97f5f}} to bound
+another related probability arising from the analysis of the two dimensional tandem random walk.
+The main result of this section is the following:
+Proposition 5.1 
+For any FORMULA , there exists FORMULA  such that
+FORMULA 
+for FORMULA , where FORMULA , FORMULA ,  FORMULA
+
+Parallel to the proof of Proposition REF ,
+we choose a sequence FORMULA  with FORMULA ;
+(REF ) follows
+from an application of
+the optional sampling theorem to the supermartingale FORMULA  and the
+bound (REF ).
+LD limit for  FORMULA
+For this subsection and the next section it will be convenient to express
+the FORMULA  process in FORMULA  coordinates, we do this by setting,
+FORMULA ; FORMULA  has the following dynamics:
+FORMULA 
+FORMULA  of (REF ) in terms of FORMULA  is
+FORMULA 
+The processes FORMULA  and FORMULA  have the same dynamics except that FORMULA 
+is not constrained on FORMULA . By definition, FORMULA .
+Note the following: FORMULA  hits FORMULA  exactly when FORMULA  hits FORMULA ; i.e., if we define
+FORMULA 
+then  FORMULA
+Proposition 5.2 
+For any FORMULA , there exists FORMULA  such that
+FORMULA 
+for FORMULA , where FORMULA , FORMULA ,  FORMULA
+
+The two stage subsolution FORMULA  of (REF )
+is a subsolution for the FORMULA  process as well because, FORMULA 
+has identical dynamics as FORMULA  with one less constraint. Therefore,
+the proof of Proposition REF 
+applies verbatim to the current setup with one change: in the
+proof of (REF ) we truncate time with
+the bound (REF ) for FORMULA . We replace this with
+the corresponding bound (REF ) for FORMULA .
+
+Completion of the limit analysis
+We now combine Propositions REF , REF  and
+REF  to get the main approximation result
+of this work:
+Theorem 6.1 
+For any
+FORMULA ,
+FORMULA , FORMULA ,
+there exists FORMULA  and FORMULA  such that
+FORMULA 
+for FORMULA , where FORMULA .
+
+That
+FORMULA 
+follows from the the definitions in subsection REF .
+
+The definitions (REF ) and (REF ) imply that
+FORMULA 
+for FORMULA , FORMULA , FORMULA .
+Choose FORMULA 
+The processes FORMULA  and FORMULA  follow exactly the same path until they
+hit FORMULA . It follows that
+FORMULA 
+By Propositions REF , REF 
+and REF 
+there exists FORMULA  such that
+FORMULA 
+and
+FORMULA 
+for FORMULA .
+The bounds (REF ), (REF ) and (REF )
+give
+FORMULA 
+for  FORMULA
+
+Computation of  FORMULA
+Theorem REF  tells us that
+FORMULA , FORMULA , approximates
+FORMULA  with exponentially decaying relative error
+for FORMULA 
+To complete our analysis, it remains to compute FORMULA .
+As a function of FORMULA , FORMULA  is a FORMULA -harmonic function.
+Furthermore, it is FORMULA -determined, i.e., it has the representation
+FORMULA 
+for some function FORMULA  on FORMULA  (for FORMULA ,
+FORMULA  equals 1 identically).
+We will try to compute FORMULA  as a superposition of the FORMULA -harmonic functions expounded in Section
+; because FORMULA  is 1 for FORMULA , we would like the
+superposition to be as close to 1 as possible on FORMULA .
+We have two classes of FORMULA -harmonic functions given
+in Propositions REF 
+(constructed from a single point on FORMULA )
+and REF  (constructed from conjugate points on FORMULA ).
+The first class gives us only one nontrivial FORMULA -harmonic function, computed
+in Lemma REF : FORMULA  Remember that we have assumed
+FORMULA . This implies that,
+among the functions
+in the second class, the most relevant for the computation of FORMULA  is
+FORMULA 
+because this FORMULA -harmonic function exponentially converges to 1 for FORMULA  and
+FORMULA 
+A simple criterion to check whether
+a FORMULA -harmonic function of the form FORMULA 
+is FORMULA -determined is given in {{cite:4e5e1ff0-f4d5-4b82-bd00-0afedd3baa09}}:
+Proposition 7.1 
+A FORMULA -harmonic function of the form FORMULA  is FORMULA  determined
+if FORMULA  and FORMULA ,  FORMULA
+
+Our first theoretical result on FORMULA 
+arises from a linear combination
+of FORMULA  and FORMULA :
+Proposition 7.2 
+If
+FORMULA 
+then
+FORMULA 
+for  FORMULA
+
+The right side of (REF ) is FORMULA -harmonic by construction. Furthermore,
+FORMULA  implies
+FORMULA 
+for FORMULA  Therefore, to prove (REF ) it suffices
+to prove that
+FORMULA 
+is FORMULA -determined. For this we will use Proposition REF ;
+in the present case,
+the FORMULA  are FORMULA  and the FORMULA  are 1 and FORMULA . It follows
+that (REF ) is FORMULA -determined.
+
+If (REF ) doesn't hold, i.e., if FORMULA  then
+one can proceed in several ways.
+As a first step, one can use the functions FORMULA  and
+FORMULA  to construct lower and upper bounds on FORMULA :
+Proposition 7.3 
+There exists positive constants FORMULA , FORMULA , and  FORMULA
+FORMULA 
+where
+FORMULA 
+In particular, FORMULA  approximates FORMULA  with bounded
+relative error.
+
+If FORMULA , one can set FORMULA  and FORMULA  since, for these values
+FORMULA 
+on FORMULA . Both FORMULA  and FORMULA ;
+this and (REF ) imply FORMULA  for
+FORMULA . To get the second bound on (REF ) set
+FORMULA 
+With this choice of FORMULA  we get the second bound in (REF )
+on FORMULA ; that both FORMULA  and
+FORMULA  are FORMULA -determined implies the same bound on all of
+FORMULA .
+If FORMULA , first choose FORMULA  so that
+FORMULA 
+Then
+FORMULA 
+for FORMULA , from which the first bound in (REF )
+follows.
+To get the second bound, set
+FORMULA 
+and proceed as above.
+
+Our choice of the constant FORMULA  in (REF ) is arbitrary,
+any value between FORMULA  would suffice for the argument. Therefore,
+the constants FORMULA  and FORMULA  are not unique and they can be optimized
+to reduce relative error.
+Proposition 7.4 For FORMULA , FORMULA , FORMULA ,
+FORMULA , and for FORMULA  large,
+FORMULA  of (REF ) evaluated at
+FORMULA  approximates FORMULA  with
+bounded relative error.
+
+We know by Theorem REF  that, for FORMULA ,
+FORMULA  and FORMULA ,
+FORMULA  approximates FORMULA 
+with vanishing relative error. On the other hand,
+the above Proposition tells us that FORMULA  of (REF )
+approximates FORMULA  with bounded relative error.
+These imply that FORMULA  approximates
+FORMULA  with bounded
+relative error.
+Proposition REF  gives not one but a one-complex-parameter family of
+FORMULA -harmonic functions. A natural question is whether one can obtain
+finer approximations of FORMULA  than what FORMULA  provides.
+In this, we need FORMULA -determined FORMULA -harmonic functions. The
+next proposition (an adaptation of {{cite:4e5e1ff0-f4d5-4b82-bd00-0afedd3baa09}}
+to the current setting) identifies a class of these which are naturally
+suitable for the approximation
+of  FORMULA
+Proposition 7.5 
+There exists FORMULA  such that for all FORMULA 
+with FORMULA  , FORMULA ; in particular
+FORMULA  is FORMULA -determined.
+
+We know by {{cite:4e5e1ff0-f4d5-4b82-bd00-0afedd3baa09}} that
+FORMULA  for all FORMULA  Then
+FORMULA 
+where the last inequality is the assumption (REF ).
+The functions FORMULA  and FORMULA  are continuous; it follows that
+the inequality above holds also for FORMULA  if FORMULA 
+is sufficiently close to 1. That FORMULA  is FORMULA -determined
+follows from these and Proposition REF .
+We can now use as many of the FORMULA -determined FORMULA -harmonic
+functions identified in Propositions REF  and
+REF  as we like to
+construct finer approximations of FORMULA . Once the
+approximation is constructed upperbounds on
+its relative error can be computed from
+the maximum and the minimum of the approximation
+on FORMULA - as was done in the proof of Proposition REF :
+Proposition 7.6 
+Let FORMULA  be as in Proposition REF .
+For FORMULA  and
+FORMULA 
+FORMULA 
+define
+FORMULA 
+Then FORMULA  is FORMULA -harmonic and FORMULA -determined.
+Furthermore, for
+FORMULA 
+FORMULA  approximates FORMULA  with relative error bounded
+by FORMULA .
+
+We know by Propositions REF  and REF  that
+FORMULA  is FORMULA -harmonic. That FORMULA  and
+Proposition REF  imply that FORMULA  is also
+FORMULA -determined, i.e.,
+FORMULA 
+Taking the real part of both sides gives:
+FORMULA 
+i.e, FORMULA  is FORMULA -harmonic and FORMULA -determined.
+That FORMULA  follows from
+FORMULA 
+(see Proposition REF ).
+The inequality
+FORMULA 
+follows from (REF ), FORMULA 
+for any FORMULA 
+It follows from (REF ) and (REF ) that
+FORMULA 
+
+This implies that FORMULA  approximates FORMULA  with
+relative error bounded by FORMULA .
+
+One of the key aspects of Proposition REF  is that
+it shows us how to compute an upper bound on the relative error
+of an approximation of the form (REF ) from the values
+it takes on FORMULA . We can use this to choose the
+FORMULA  and the FORMULA  to reduce relative error, the next subsection
+illustrates this procedure.
+Finer approximations when  FORMULA
+To illustrate how one can use approximations of the form
+(REF ) to improve on the approximation provided
+by Proposition REF , let us assign
+values to the parameters
+FORMULA  and FORMULA  satisfying the assumptions (REF ),
+(REF ):
+FORMULA 
+for these choice of parameters we have
+FORMULA 
+We note FORMULA ;
+therefore, we don't have an explicit formula for FORMULA 
+But Proposition REF  implies that
+FORMULA 
+approximates
+FORMULA  with relative error bounded by
+FORMULA 
+
+where FORMULA  is computed as in (REF ). Then, by Theorem
+REF , FORMULA  approximates FORMULA 
+with relative error converging to a level bounded by FORMULA  .
+We can reduce this error
+by using further FORMULA -harmonic functions given by Propositions
+REF  and REF  and constructing
+an approximation of the form (REF ).
+We note FORMULA  and therefore, by an argument parallel
+to the proof of Proposition REF , we infer that
+FORMULA  ,
+FORMULA 
+for FORMULA . Thus, FORMULA  is
+FORMULA -harmonic and FORMULA -determined
+for all FORMULA , and we can use this class of functions
+in improving our approximation of FORMULA 
+Let us begin with using
+FORMULA  additional FORMULA -harmonic functions of this form in our approximation:
+for the FORMULA 's let us take
+FORMULA 
+The resulting harmonic functions are
+FORMULA 
+(see (REF ) and (REF )).
+Our approximation FORMULA  will be of the form
+FORMULA 
+One can choose the coefficients FORMULA , FORMULA  in a number
+of ways, for example, by
+minimizing FORMULA  errors. Here we will proceed in the following simple way:
+the ideal situation would be FORMULA  for all FORMULA , which
+would mean FORMULA , but this will not hold in
+general. We will instead
+require that this identity holds for FORMULA , FORMULA . This leads
+to the following four dimensional linear equation:
+FORMULA 
+FORMULA ;
+Solving (REF ) gives
+FORMULA 
+
+Once the approximation is computed, following Proposition REF 
+one can easily compute its
+relative error in approximating FORMULA  by computing
+FORMULA 
+That
+FORMULA 
+implies
+FORMULA 
+is finite. For FORMULA  computed above, the maximizer turns out to be
+FORMULA  and the maximum approximation error is
+FORMULA 
+The graph of the approximation
+error FORMULA , FORMULA  is shown in Figure REF .
+FIGURE 
+By Proposition  REF
+FORMULA 
+Theorem REF  now implies that FORMULA  approximates
+FORMULA  with relative error bounded by
+FORMULA  for FORMULA  large.
+Therefore, in improving our approximation from FORMULA  of
+(REF ) to FORMULA  by adding three FORMULA -harmonic functions
+of the form FORMULA  to the approximating basis,
+the relative error decreases from FORMULA  to FORMULA .
+Figure REF  shows the level curves of
+FORMULA  and
+FORMULA  (the latter computed numerically
+via iteration of the harmonic equation satisfied by FORMULA )
+for FORMULA ;
+the level curves overlap completely except along
+FORMULA , as suggested by our analysis.
+To illustrate how the approximation error decreases when FORMULA  increases,
+let us repeat the computation above with FORMULA . The resulting
+maximum relative error turns out to be:
+FORMULA 
+The probability FORMULA , computed numerically,
+equals FORMULA , the best approximation of this
+quantity computed above is
+FORMULA  The discrepancy arises from
+the proximity of FORMULA  to FORMULA  As we move away from the
+FORMULA , these quantities get closer
+FORMULA ,
+FORMULA , compatible with
+the maximum relative error computed above.
+Figure REF  shows how approximation improves
+as FORMULA  increases:
+FIGURE 
+
+
+Comparison with the tandem case
+This section compares the analysis and results of the current work
+to those of {{cite:ecbf0785-25bd-4ffa-bb75-8c6451f97f5f}} treating the approximation
+of the probability FORMULA  for the
+constrained random walk representing two tandem queues,
+which has the increments FORMULA , FORMULA  and FORMULA  The main
+idea is the same for both walks: i.e., approximation of
+FORMULA  by FORMULA  and computing/ approximating
+the latter via harmonic functions constructed out of single and
+conjugate points on the
+characteristic surface. However, the assumptions, the results and the analysis
+manifest nontrivial differences.
+Let us begin with the assumptions:
+Assumption  FORMULA
+In the tandem case FORMULA  and
+the conjugate point of FORMULA  is FORMULA ,
+therefore, the stability assumption automatically implies
+FORMULA . For the parallel case, FORMULA  can indeed
+be greater than 1 if FORMULA  and FORMULA  are close and FORMULA  is small;
+we therefore explicitly assume FORMULA  This assumption appears
+in two places: 1) in the convergence analysis, in the derivation of the bound
+(REF ) and 2) in the computation of FORMULA 
+in Section . We think that the use of the assumption
+FORMULA 
+in the first case can be removed without much change from the arguments
+of the present and earlier works; the details remain for future work.
+We think that
+the computation of FORMULA  when
+FORMULA  presents genuine difficulties,
+the treatment of which also remains for future work.
+Next we point out the differences in results:
+
+Region where FORMULA  is a good approximation
+for  FORMULA
+That the tandem walk involves no jumps of the form FORMULA 
+implies that
+FORMULA  provides an approximation of
+FORMULA  with exponentially decaying
+relative error for all FORMULA  away from 0;
+in contrast, the presence of the jump FORMULA  in the parallel case,
+implies that the same
+approximation works only away from FORMULA  for the
+parallel walk case treated in the present work. This difference
+shows itself in the proofs of exponential
+decay of relative error, too, this is discussed below.
+
+Explicit formula for  FORMULA
+In the case of the tandem walk, the probability FORMULA 
+can be explicitly represented as a linear combination
+of the harmonic functions
+FORMULA  and FORMULA  for all stable parameter values
+as long as FORMULA ; in the parallel case this only happens
+when FORMULA  (see Proposition REF ).
+When FORMULA , FORMULA  and FORMULA  can only provide
+an approximation of FORMULA  with bounded relative
+error (Proposition REF ). This relative error can be
+reduced by adding into the approximation further FORMULA -determined
+FORMULA -harmonic functions (Proposition REF  and
+subsection REF ).
+The changes in argument from the tandem walk to the parallel walk
+are as follows:
+
+Analysis of  FORMULA
+In prior works {{cite:5b1fa825-0bcd-4085-ba31-f734a823d823}}, {{cite:0083602b-c25e-4059-88dd-6230a130fff3}}, {{cite:246f7055-e28a-403d-8718-24be8cb9d3b9}}, {{cite:4e5e1ff0-f4d5-4b82-bd00-0afedd3baa09}}
+the LD analysis of FORMULA 
+and similar quantities
+are based on sub and supersolutions of the limit HJB equation, similar to
+the analysis given in subsection REF . In the present work, a novelty
+is the use of explicit subharmonic functions (Proposition REF )
+of the constrained random walk FORMULA 
+in the proof of the upperbound Proposition REF .
+
+Analysis of  FORMULA
+The probability corresponding to
+FORMULA  in the tandem case
+is FORMULA .
+For the proof of the exponential decay of the relative error,
+we need upperbound on these probabilities. Both papers develop
+these upperbound from subsolutions to a limit HJB equation.
+The subsolution consists of three
+pieces (one for each of the stopping times FORMULA , FORMULA 
+and FORMULA ) for the tandem walk, and two pieces for the parallel walk
+(one for each of the times FORMULA  and FORMULA ). In the tandem case,
+the pieces of the subsolution are constructed from the subsolution for
+the probability FORMULA , whereas in the parallel case
+a new piece is introduced based on the gradient FORMULA  of
+(REF ).
+
+Analysis of  FORMULA
+The probability corresponding to
+FORMULA  in the tandem case
+is FORMULA .
+The special nature of the tandem walk allowed us to find upperbounds
+on this probability from the explicit formula we have
+for FORMULA ; this significantly simplified the analysis
+of the tandem walk case. For the parallel walk, we extended the
+analysis of FORMULA , based on subsolutions,
+to
+FORMULA . In this, the most significant
+novelty is the analysis given Section , where we
+prove the existence of FORMULA  such that
+FORMULA .
+For this, we introduce what we call FORMULA -harmonic
+functions and provide methods of construction of classes of them
+from points on FORMULA -level characteristic surfaces, which are
+generalizations of characteristic surfaces.
+
+Conclusion
+The probability FORMULA  approximates
+FORMULA  well when FORMULA  is away from FORMULA ;
+as noted in the previous section, this is in contrast to the tandem case,
+where the approximation is good away from the origin.
+How can one extend the approximation to the region along FORMULA ?
+A natural idea, already pointed out in {{cite:4e5e1ff0-f4d5-4b82-bd00-0afedd3baa09}} is to
+repeat the same analysis, but this time taking the corner
+FORMULA  as the origin of the FORMULA  process, i.e., to use the change of
+coordinate FORMULA  to construct the FORMULA  process.
+Numerical calculations
+indicate
+that the resulting approximation will be accurate (i.e., exponentially
+decaying relative error) along FORMULA 
+between the points FORMULA 
+and FORMULA  (see (REF )
+for the definition of FORMULA ).
+We believe that arguments and computations
+parallel to the ones given in the present work would imply these results;
+the details are left for future work. We think that
+the extension of the approximation
+to the region along the line
+segment between FORMULA  and FORMULA  requires further ideas and computations.
+We expect the analysis linking FORMULA  to
+FORMULA  when FORMULA 
+to be parallel to the analysis given in the current work.
+For the computation of FORMULA , when FORMULA ,
+the case FORMULA , FORMULA  appears to be
+particularly simple. In this case, upon taking limits in (REF )
+one obtains
+FORMULA 
+where FORMULA .
+A complete analysis of the computation of
+FORMULA  when FORMULA  remains for future
+work.
+In subsection REF ,
+the computation of FORMULA  when FORMULA 
+proceeds as follows: 1) we first construct a candidate approximation
+FORMULA 
+of FORMULA  2) we find an upperbound on the relative
+error of the approximation by finding the maximum of
+FORMULA  on FORMULA 
+A natural question is the following: given a relative error bound,
+can we know apriori that an approximation having that maximum relative
+error can be constructed? If that is possible, how many
+FORMULA -harmonic functions of the form given by Proposition REF 
+would we need? To answer these questions require a fine
+understanding of the functional analytic properties of
+the span of the FORMULA -determined FORMULA -harmonic
+functions given by Propositions REF  and REF .
+This appears to be a difficult problem because the functions
+given in these propositions don't have simple geometric properties,
+such as the orthogonality of the Fourier basis in FORMULA .
+A study of this problem remains for future work.
+The exact formula for FORMULA 
+for the tandem case has a remarkable
+extension to FORMULA  dimensions; this is derived in
+{{cite:4e5e1ff0-f4d5-4b82-bd00-0afedd3baa09}} and is based on harmonic-systems, a concept
+defined in that work.
+We think that it is also possible, in the case of parallel queues,
+to obtain nontrivial harmonic systems
+in higher dimensions. A complete characterization of such systems
+and the question of under what conditions
+they would give a rich class of FORMULA -harmonic functions to approximate
+FORMULA  also remain challenging problems for future research.
+ FORMULA

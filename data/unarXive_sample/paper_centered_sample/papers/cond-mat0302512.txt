@@ -1,0 +1,512 @@
+
+Effects of anticipatory driving in a traffic flow model
+Nils Eissfeldt1 Peter Wagner2
+ZAIK – Center for Applied Informatics, Universität zu
+Köln, 50931 Köln, Germany
+Institute for Transportation Research, German Aerospace Center, 12489
+Berlin, Germany
+
+N. Eissfeldt and P. Wagner
+Effects of anticipatory driving in a traffic flow model
+
+Anticipation in traffic means that drivers
+estimate their leaders' velocities for future timesteps. In the
+article a specific stochastic car–following model with non–unique
+flow–density relation is investigated with respect to anticipatory
+driving. It is realized by next–nearest–neighbour interaction
+which leads to large flows and short temporal headways. The
+underlying mechanism that causes these effects is explained
+by the headways of the cars which organize in an
+alternating structure with a short headway following a long one,
+thereby producing a strong anti-correlation in the gaps or in the
+headways of subsequent cars. For the investigated model the
+corresponding time headway distributions display the short headways
+observed in reality. Even though these effects are discussed for a
+specific model, the mechanism described is in general present in
+any traffic flow models that work with anticipation.
+02.50.EyStochastic processes – 45.70.Vn Granular models
+of complex systems; traffic flow – 89.75.Fb Structures and
+organization in complex systems
+Introduction
+The basic mechanisms that are responsible for traffic flow breakdown
+are still not very well understood and discussed controversial
+{{cite:9725e40e-af35-4e40-bdd0-164f7d185bda}}, {{cite:c083d736-0b27-4590-b483-1417246db70d}}, {{cite:bce4880a-e4c9-4901-b51b-a292773e60b0}}, {{cite:ef76eb3e-4c79-4c82-937b-d0691630cd6f}}. One reason for it is, that the
+microscopic models in use nowadays still have deficiencies, however it is not
+obvious which ones. Therefore it is not clear whether the mechanisms
+of breakdown displayed by a certain model have a counterpart in
+reality.
+Sometimes, even the inner working of those models is not very well
+understood. This is true, e.g., for the models that work with
+so-called anticipation {{cite:8c0677bc-416c-46a8-9190-85b48ebab55b}}, {{cite:794f757a-0d7e-4801-86eb-68b54b92aa14}}. Here, anticipation means
+that drivers estimate the velocity of preceding cars for future time
+steps. With respect to safe car motion this driving strategy avoids
+abrupt braking and therefore leads to a stabilization of the flow in
+dense traffic {{cite:8c0677bc-416c-46a8-9190-85b48ebab55b}}. As a result, these models display
+small temporal headways that are similar to the ones observed in
+reality. Although the mechanism of stabilization of the flow
+seems to be necessary with respect to the reproduction of real–world
+traffic data {{cite:8621cfc5-f3c7-4ce8-bdac-ac6706823b4a}}, the changes in the model's dynamics in
+consequence of anticipatory driving are not known in detail.
+Therefore, it is the aim of this article to clarify the role of
+anticipation in microscopic traffic flow models.
+This will be done for a certain well–known microscopic traffic flow
+model which is described in section . In this model,
+anticipation is introduced via next–nearest–neighbour
+interaction. The consequences on the model's dynamics is explored by
+simulation as well as analytical calculations
+(cf. section ). Leaping ahead, it is stated that by virtue
+of anticipation the system organizes the headways of the cars in an
+alternating structure which allows for the observed small temporal
+headways. As will become clear from the discussion, most of the results
+found in the following should be at work in other models, too.
+
+A car–following model with anticipation
+As stated above, the effects of anticipation will be investigated
+using a specific car following–model. The model described in
+{{cite:6b4d7cad-5350-4d53-82d3-ff7ab53ae610}}, {{cite:d63f9077-20d6-4544-8e90-8f3e2cf437d4}}, {{cite:491cfec9-c44e-45d6-9352-8d6925ea76c9}} is used as reference model and is
+referred to as SKM in the following.
+It is based on an approach by Gipps {{cite:e71c93c3-e3ed-4b50-bae2-6692c727c651}} and three basic
+assumptions, namely
+
+that vehicles move collision–free,
+
+not faster than a maximum velocity FORMULA  and
+
+individual car acceleration FORMULA  and deceleration FORMULA  are
+bounded.
+
+Based on the requirement of collision–freeness a safety–condition
+can be derived. Assume one car (driver–vehicle unit)
+with velocity FORMULA  is following another car
+(driving with velocity FORMULA ) within a distance FORMULA . Here, FORMULA 
+is the free space between vehicles, i.e., the distance between the
+cars at positions FORMULA , FORMULA  minus the cars' length
+FORMULA . Safety, i.e., crash–free motion is guaranteed if
+FORMULA 
+holds, with FORMULA  being the braking distance needed to stop when
+driving with velocity FORMULA  and FORMULA  a finite reaction time.
+For braking with constant deceleration FORMULA , i.e., FORMULA 
+the braking distance is given by FORMULA . The
+equation (REF ) then leads to
+FORMULA 
+In order to complete the definition of the model's dynamics it is
+assumed that every car moves at the highest velocity compatible with the
+assumptions. Based on these assumptions an update scheme can be
+formulated in the manner of the well–known Nagel–Schreckenberg model
+(NaSch) {{cite:96e437ec-acd7-4080-b0d0-f2fe1be1b673}}.
+FIGURE 
+The SKM is defined with continuous state variables FORMULA  and
+discrete timesteps FORMULA . In each timestep every car is updated
+after calculating its FORMULA  according to the following scheme
+FORMULA 
+The update (REF ) is done in parallel. The random
+fluctuation of strength FORMULA  is introduced to mimic
+deviations from the optimal driving strategy given by FORMULA . FORMULA  is
+a random number uniformly distributed in the interval FORMULA  and the
+parameter FORMULA  determines the fluctuation strength in units
+of FORMULA .
+Before introducing anticipation into the model it should be
+stated that the formulation of FORMULA  in equation (REF ) differs
+from that given in {{cite:d63f9077-20d6-4544-8e90-8f3e2cf437d4}}. The reason is mostly that the
+calculation of the update scheme (REF ) becomes more
+easy. However, due to its structure we could not
+find a proof for crash-freeness analytically (as is possible for the
+original formulation). But extensive simulations with FORMULA  This conditions simply states that safe driving is
+possible, if the “true” reaction time, i.e., one timestep, is
+smaller or equal to the reaction time each driver assumes. neither
+gave a hint for collisions nor had we found a crucial difference in
+the model's dynamics.
+We recall that in the SKM each car only takes into account the
+car in front to deduce its optimal driving strategy. It is common experience that such assumption is unrealistic, especially in
+dense traffic situations. In order to bring anticipation into the
+model the update scheme is modified by an intermediate step: Each
+driver predicts the worst–case strategy FORMULA  her predecessor will
+choose in the next timestep. Assuming that there is a car in front of
+the predecessor within a distance FORMULA  driving with velocity
+FORMULA  (see figure REF ), then
+FORMULA 
+with
+FORMULA 
+The calculated FORMULA  will then be used to determine the safe velocity.
+Therefore, the safety condition equation (REF ) is
+restated with the assumption that the leading car will choose
+FORMULA  as driving strategy,
+FORMULA 
+The function FORMULA  has been introduced to take into
+account “unexpected” fluctuations in the predecessor's driving
+behaviour. Then, the new expression equation (REF ) leads
+to a new expression for the safe velocity,
+FORMULA 
+In the following,
+FORMULA 
+will be chosen where FORMULA  is constant. Since
+FORMULA  can be interpreted as an effective gap
+FORMULA , where equation (REF ) forces FORMULA .
+The idea of the effective gap is similar to the
+cellular–automaton model in {{cite:8c0677bc-416c-46a8-9190-85b48ebab55b}} (BL–CA).
+The major difference is that in the modified SKM anticipation
+enters into the model by velocity and the effective gap
+(cf. equation (REF )) while in the
+BL–CA it does just via the latter.
+Besides the new definition of FORMULA  the update scheme
+(REF ) is used.
+
+The role of anticipation
+FIGURE 
+In this section, by means of computer simulations, the SKM with
+anticipation (SKA) will be compared to the original model. For this
+purpose, a fixed set of parameters is used, namely
+FORMULA 
+As time scale FORMULA  is chosen.
+With respect to these parameters jam formation (wide moving jams) and
+stable high-flow states exist in the corresponding SKM {{cite:d63f9077-20d6-4544-8e90-8f3e2cf437d4}}, {{cite:130d7248-7273-4d56-bced-bd8d88486d9b}} (cf. following subsection).
+Flow–density relation
+To get started both models were simulated using periodic boundary
+conditions, i.e., on a one-lane loop. In order to measure the
+flow-density relation the loop was initialized homogeneously at
+different global densities. After relaxation of the system mean
+density FORMULA , mean velocity FORMULA  and
+flow FORMULA  were measured at a fixed location using
+FORMULA  intervals for sampling. The local density for a car FORMULA 
+passing the counting location is defined as
+FORMULA 
+Comparing the flow-density relations of the models
+(figure REF ) they both display a high-flow state and a
+capacity drop at intermediate densities. The latter indicates
+slow-to-start behaviour. Note that there is no explicit rule
+introducing this effect and it results from
+the the asymmetry in the randomization process for small speeds.
+As can be seen, this mechanism is not changed by the introduction of
+next-nearest-neighbour interactions. Moreover, the "optimized" driving
+strategy even leads to a stabilization of the high-flow branch towards
+higher densities compared to the SKM as already stated.
+In the closed system the jam state co–exists with the free–flow
+state for densities FORMULA . Time-series at a fixed
+density in that regime therefore display free-flow and jammed states
+alternately (figure REF ). At densities where the
+homogeneous free-flow state is unstable, small clusters of cars are
+generated due to intrinsic fluctuations. In the long run, this number
+of jams decreases until only one jam is left (figure REF ).
+Recalling the arguments of {{cite:d63f9077-20d6-4544-8e90-8f3e2cf437d4}} the jamming transition in the
+SKA is a phase transition and one finds a
+phase-separated system at equilibrium using periodic boundary
+conditions.
+FIGURE 
+In {{cite:130d7248-7273-4d56-bced-bd8d88486d9b}} a classification for stochastic traffic flow models is
+provided based on the breakdown mechanism. To be more precise, in the
+density regime where the jam solution co–exists with the high–flow
+state one distinguishes two classes. Models are said to have a
+“stable outflow” if intrinsic fluctuations are not able to trigger
+the transition from homogeneous flow to the congested phase. With
+respect to the chosen parameters, the SKM belongs to that class of
+models. In contrast, models like the VDR-model {{cite:8291de8b-b2c1-4b01-a626-0e447340c72a}} display
+real metastability in that density regime and are said to have
+“unstable outflow”. In figure REF  the waiting time
+until the first stopped car is found is
+shown versus the
+system's density. For each run a system with 5000 cars was initialised
+homogeneously. The values presented are means of 20 realisation per
+density. As can be seen, at FORMULA  this time
+diverges, i.e., homogeneous states corresponding to FORMULA 
+are stable. These state correspond to the high-flow branch in
+the flow-density relation (figure REF ) and therefore , the
+SKA owns the same type of bistability {{cite:130d7248-7273-4d56-bced-bd8d88486d9b}} as the SKM does.
+FIGURE 
+By virtue of the anticipatory driving strategy, the maximum attainable
+flow in the SKA is unrealistically high, which is a known
+feature for some extensions of the NaSch–model as well{{cite:8621cfc5-f3c7-4ce8-bdac-ac6706823b4a}}.
+In that case the
+high flows only occur, if anticipatory driving as
+defined in {{cite:8c0677bc-416c-46a8-9190-85b48ebab55b}} is switched on in, e.g. the VDR–model
+{{cite:8291de8b-b2c1-4b01-a626-0e447340c72a}}, without changing the model's parameters.
+Even though such states only appear for special initial conditions,
+i.e., highly ordered homogeneous configurations, modifications are
+necessary to use it in reasonable applications. However, it is a
+different question whether these flows can be attained in a realistic
+settings with macroscopic disturbances from lane-changing, on- and
+off-ramps etc. Additionally, by introducing a diversified driver
+behaviour also might lower the maximum flow to realistic values. For
+example this might be done is by using a distribution FORMULA 
+for the parameter FORMULA  so that each driver has her individual
+FORMULA  drawn from that distribution. Another way of doing it
+is to increase
+FORMULA . Nevertheless, we will not take into account such problem
+since we concentrate
+at discussing the effects of anticipatory driving on
+the SKM.
+Apart from these unrealistic high flows, it can be concluded that the
+all–over macroscopic properties of the SKA under periodic boundary
+conditions (i.e., the global fundamental diagram, the spontaneous jam
+formation or the existence of compact jams) are similar to the
+corresponding SKM.
+
+Time–headway distribution
+Several empirical studies have analyzed single vehicle data from
+counting loops {{cite:b9ec6035-4538-44b8-b2f2-32481edecfa4}}, {{cite:6d04f2d7-096e-4fb5-a783-d8924154636e}}, {{cite:2ffc0138-e0c8-4005-b97f-886803555139}}, {{cite:ec36114d-a139-4cf4-9471-28e8bda7bc59}}, {{cite:355e5242-ef3a-4e3f-ad31-9772b28ea932}}. Such measurements
+provide information about the microscopic structure of traffic
+streams. The investigation of the corresponding observables in
+stochastic traffic flow models can therefore justify their quality.
+FIGURE 
+The time-headway is the microscopic analogue of the inverse flow. In
+real data, it is simply measured by the time-difference FORMULA  between the times of two cars passing the observer. Since this
+model has a time-step of FORMULA , a different approach has
+to be used to measure the time headway between two cars. This is
+done by using the relation
+FORMULA 
+The closed loop still serves as the computer-experimental setup. It is
+initialized at different densities and the time-headway distribution
+is measured after a sufficient relaxation time.
+In figure REF  the time-headway distribution of the free
+flow phase at different densities is presented. From empirical
+investigation it is known that
+in free flow extremely small time-headways exist (FORMULA ). Moreover, the maximum of the distribution and its shape at
+short times are independent of the density {{cite:2ffc0138-e0c8-4005-b97f-886803555139}}, {{cite:ec36114d-a139-4cf4-9471-28e8bda7bc59}}, {{cite:355e5242-ef3a-4e3f-ad31-9772b28ea932}}.
+Figure REF  (top) shows that the original SKM is not able to
+reproduce such small time-headways in the free flow phase. There
+exist a sharp cut-off at FORMULA , i.e.,
+the model's dynamics leads to FORMULA .
+The maximum of the distributions is
+located at FORMULA . Since in free flow FORMULA  this corresponds to FORMULA , i.e., the SKM owns a fix point in its dynamics (for more
+details see next subsection)
+In contrast, the time-headway distribution of the SKA shows a
+broader peak structure (figure REF  (bottom)) and headways
+noticeable smaller than FORMULA  exist, just as in empirical
+observations. Even more, the distribution at short times is
+independent of the density.
+However, the broadness of the peaks is not found in real–world
+observations.
+The occurrence of short time-headways stems
+from the introduction of the velocity anticipation. Drivers can
+optimize their gap to the leading vehicle since they have an idea
+about its future behaviour.
+Smaller gaps at FORMULA  than in the SKM are therefore
+allowed.
+Moreover, the broadness of the peaks indicates that in the SKA a
+range of gaps can be taken by cars driving at FORMULA  in the
+free flow phase, i.e., there is no such strong fixed–point in the
+car-following dynamics as is in the SKM (leaping ahead, this results
+from the fact that in the SKA two consecutive cars share their
+common gap FORMULA ). With increasing density the peak in the
+distribution becomes more and more pronounced and is shifted towards
+smaller time-headways. The position of the peak correspond to the mean
+gap, given by the initial conditions, FORMULA . Moving towards higher densities along the
+free-flow branch of the flow–density relation the possible range of
+gaps between cars decreases.
+Comparing the time-headway distributions in the congested state
+(figure REF ), they are for both models almost independent of
+the density. The exponential decay of the distribution results from
+the fact that for large headways cars can be regarded as almost
+independent from each other, implying a Poissonian distribution.
+They have their maximum around FORMULA  which agrees with
+empirical findings. Unlike reality the peak is fixed and not as broad.
+From this we conclude that concerning the dynamics inside jams both
+models behave similarly.
+The appearance of FORMULA  in the case of the SKA is due to the
+experimental setup. In the closed loop the system is separated into
+two phases, one wide moving jam and a region of free-flow
+(figure REF ). As demonstrated before, time–headways smaller
+than FORMULA  can be found in the free–flow phase. Therefore, cars that
+are not in the jammed state generate these time-headways. Since the
+number of cars in the free phase decreases with increasing density the
+weight of small time–headways also reduces.
+FIGURE 
+
+Optimal velocity curve
+Neglecting fluctuations, the optimal velocity curve (OVC) of both
+models can be derived analytically. This relation is helpful in order
+to characterize the microscopic structure of the traffic phases
+{{cite:2ffc0138-e0c8-4005-b97f-886803555139}}, {{cite:ec36114d-a139-4cf4-9471-28e8bda7bc59}}, {{cite:355e5242-ef3a-4e3f-ad31-9772b28ea932}}.
+FIGURE 
+The OVC of the SKM results from its safety-condition
+(REF ), i.e.
+FORMULA 
+Equation (REF ) is solved by FORMULA , therefore the OVC
+of the SKM reads
+FORMULA 
+From equation (REF ) it follows that FORMULA  for the
+deterministic case. The OVC asserts the results that time-headways
+smaller than FORMULA  can not be modeled by the SKM since FORMULA  is required due to safety constraints and the
+stochasticity leads to a lowering of FORMULA .
+Regarding the SKA two cases have to be distinguished (cf.
+equation (REF )). The OVC is derived from the condition
+FORMULA 
+with
+FORMULA 
+.
+In the case of FORMULA , i.e. FORMULA , equation (REF ) is
+solved by FORMULA  and the OVC reads
+FORMULA 
+If FORMULA , i.e., FORMULA  the known expression of
+the SKM follows,
+FORMULA 
+Therefore, in the high density regime, the SKA behaves like the SKM as already stated with respect to the flow-density relation.
+
+Follow–the–leader behaviour
+Finally, we investigate the differences in the follow–the–leader behaviour between
+the two models. For this purpose we use a chain of 1000 cars
+that follow the first car whose speed is fixed to
+FORMULA . The system is initialized by all cars
+standing (FORMULA ). The zeroth car accelerates until the
+constant velocity FORMULA  is reached.
+Since then the system can be assumed to be stationary,
+quantities start to be measured once for the last car of the chain
+FORMULA . Before
+presenting the
+simulation results this set-up will be analysed more closely.
+FIGURE 
+In the following just the deterministic case will be regarded. Then,
+all the speeds can be eliminated to yield an update equation just for
+the gaps. In order to keep the equations concise we adopt the
+following notation: If a quantity is labeled with a prime FORMULA  it
+means timestep FORMULA , all others are to be taken at timestep
+FORMULA . For the same reason FORMULA  is used in the following.
+Assuming a lead car driving at constant speed FORMULA , the
+behaviour of the SKM is then determined by the
+equations
+FORMULA 
+Equation (REF ) has a fixed-point at FORMULA  and FORMULA . Since this result can be expanded to the full chain of cars it
+follows that
+FORMULA 
+The lower index denotes the position FORMULA  of the car in the chain.
+The result explains the independence of the peak in the time–headway
+distribution at low densities (cf. figure REF ). Moreover, it
+follows that the stochasticity of the SKM is not able to destroy the
+fixed–point entirely. It is worth to say that the robustness of the
+fixed–point in continuous car–following models is hard to overcome
+and causes problems to model the synchronized state.
+Now, the same situation is investigated for the SKA. Again, the lead
+car drives constantly with FORMULA  which is also FORMULA  for the first
+following car. Regarding the deterministic case, that car then
+drives with FORMULA  and with constant headway FORMULA . This is because
+FORMULA 
+and
+FORMULA 
+whose fixed–point FORMULA  is just
+FORMULA .
+For the second car this procedure can be carried out to give
+FORMULA 
+where the stationary state of the first car FORMULA  and
+FORMULA  has been assumed. This equation has a simple
+fixed–point, namely FORMULA . Obviously FORMULA  holds
+alike.
+For the third car the computation leads to
+FORMULA 
+and FORMULA . Generalized, the latter
+equation reads
+FORMULA 
+leading to the following expression for the stationary state
+FORMULA , FORMULA :
+FORMULA 
+FIGURE 
+This result, equation (REF ), shows that asymptotically the gaps of
+the FORMULA –th
+and FORMULA –th car are anti-correlated. In figure REF  time
+series FORMULA  vs. FORMULA  are displayed for different values of
+FORMULA . With increasing FORMULA  the corresponding line moves away from
+the origin, therefore the corresponding flow decreases.
+The result helps to understand the plateau structure found in the
+time–headway distribution of the SKA at low densities
+(cf. figure REF ). With respect to equation (REF ) the
+time–headways of two consecutive cars cover the boundary–points of
+the interval FORMULA . Compared to the distribution of time
+headways measured in simulation the lower bound will hardly be reached
+due to stochasticity in the latter case.
+As in the SKM stochasticity is not able to destroy
+the fixed–point structure of the model, but two cars can exchange
+their role in that structure, i.e., two cars share a gap given by mean
+density but the share between FORMULA  and FORMULA  is not
+fixed. Figure REF  displays a time series of two cars sharing a
+common gap.
+FIGURE 
+Before the correlation structure of the models is investigated in more
+detail, the role of FORMULA  is shown. Looking at equation (REF )
+one could wonder why the anticorrelation does not lead to states with
+FORMULA .
+Assume that a car FORMULA  has closed in on its predecessor
+FORMULA . Recalling equation (REF ), the gap FORMULA  develops as
+FORMULA 
+Setting FORMULA  and FORMULA  the following approximation
+of FORMULA  holds,
+FORMULA 
+FORMULA 
+Equation (REF ) shows, that once FORMULA , FORMULA  tends to
+zero, but is finally stopped at FORMULA . A car that starts with FORMULA 
+is drawn towards FORMULA , which is the fixed-point. Therefore,
+setting FORMULA  safe driving can not be assured. This will get even
+more clear if one determines the minimal gap that occurs over the full
+range of densities dependent on the stochastic noise strength
+FORMULA  and FORMULA , cf. figure REF .
+On the one hand, it can be seen clearly that the minimal gap found
+increases with increasing FORMULA . On the other hand, the dependence on
+FORMULA  is not so explicit. This results from the fact, that
+FORMULA  does enter the model two–fold. Once, it acts similar as in
+the SKM (cf. equation (REF )) but it also determines FORMULA .
+With respect to the crash–free motion it can nevertheless been stated
+that there is always a minimal FORMULA  which assures safe driving
+if FORMULA  is chosen. But, the value of FORMULA 
+depends on the system parameters in a complicated way. It has to be
+determined by simulation.
+A closer look at the correlation function between two arbitrary
+observables FORMULA  and FORMULA  at car FORMULA , FORMULA  respectively,
+FORMULA 
+finally explains the effects of anticipation on the system's state. In
+equation (REF ) FORMULA  stands for the standard deviation of
+observable FORMULA  taken at car FORMULA .
+FIGURE 
+In figure REF  the correlation functions FORMULA  and
+FORMULA  are shown. In contrast to the SKMIn SKM FORMULA . The same holds for FORMULA .
+there exist a platoon of cars behind the leading car which display a
+strong anticorrelation between two consecutive gaps, cf.
+equation (REF ). Note, that this structure is not destroyed if the
+lead car also drives stochastically around FORMULA . In the regime of strong anticorrelation FORMULA  a car is somehow free to choose a gap FORMULA  independent of the speed
+of the leading car. Therefore, this state reminds one of synchronized
+flow{{cite:9725e40e-af35-4e40-bdd0-164f7d185bda}}, {{cite:c9de1166-65b4-4536-b9c2-212233845677}}, {{cite:1ce62f3e-7044-4c41-86d5-61686e4e3845}}, {{cite:1a01ec2f-f545-4c7c-becc-d4aa68d57ad6}}, a traffic state that mostly occurs at
+bottlenecks. However, further exploration of the simulated data show
+that the velocity only displays fluctuations of strength FORMULA  around
+its mean speed FORMULA , therefore
+anticipation alone is not able to generate a synchronized
+state. Moreover, the strong anticorrelation found in the SKA is not present in measured data, cf. figure REF .
+
+Conlusions
+The effects of anticipatory driving are investigated by means of
+simulation as well as analytical calculations. As a reference for
+comparison a well–understood traffic flow model
+{{cite:6b4d7cad-5350-4d53-82d3-ff7ab53ae610}}, {{cite:d63f9077-20d6-4544-8e90-8f3e2cf437d4}}, {{cite:491cfec9-c44e-45d6-9352-8d6925ea76c9}} was enhanced by next–nearest–neighbour
+interaction and investigated under certain aspects. Simulation results
+show that the introduction of anticipation does not lead to changes in
+the mechanism that generates wide moving jams nor does the
+dynamics inside a jam changes. However, one observes a stabilization
+of the flow in dense traffic, which is "crucial to overcome the
+difficulties in describing the empirically observed phases and their
+transitions" {{cite:761a9475-36a1-40dc-9f7d-5f01d650ad88}}. Moreover, as one could have been
+expecting, the “optimized” driving strategy leads to very short
+temporal headways under free flow conditions. Such short headways are
+also found in measurements on streets. Their existence can be
+explained quite general by exploring the mechanism that is introduced
+in the model by next–nearest–neighbour interaction.
+In the present article it is shown
+that this general mechanism works by
+coupling three cars
+together to share their two respective headways: if one car is fairly
+close to the car in front, then its follower has to hold a distance
+that is roughly equal to the average speed of the car-ensemble.
+Obviously, this can be generalized to many cars in front, leading in
+principle to a situation that has been envisioned already by the
+automobile industry: platoons of cars that are electronically coupled
+to optimize the energy consumption by driving with very small headways
+at very large speeds. There, this goal is achieved by very small
+reaction times of the control system, while an approach based on the
+ansatz chosen for car-following with anticipation just needs
+communication to more than one car ahead, but more human-like reaction
+times.
+Surprisingly, despite the fact that the approach of sharing headways
+sounds fairly natural, it is not easy to show that it happens in
+reality also. Single-car data (figure REF ) show no sign of
+anticorrelation in car headways, whereas all models working with
+anticipation display clearly. Beside the SKA we investigated the
+BL–CA {{cite:8c0677bc-416c-46a8-9190-85b48ebab55b}} as a representative for a cellular–automaton
+approach in the same way in order to confirm that assertion.
+Therefore, anticipation alone is not able to explain all traffic
+states and their microscopic behaviour found in observations.
+The authors like to thank Andreas Schadschneider for useful
+discussions.

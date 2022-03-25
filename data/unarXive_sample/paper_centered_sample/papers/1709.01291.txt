@@ -1,0 +1,254 @@
+
+T-duality invariant effective actions
+at orders FORMULA 
+
+Hamid Razaghianrazaghian.hamid@gmail.com and Mohammad R. Garousigarousi@um.ac.ir
+Department of Physics, Faculty of Science, Ferdowsi University of Mashhad
+P.O. Box 1436, Mashhad, Iran
+
+
+We use compatibility of the FORMULA -dimensional effective actions for diagonal metric and for dilaton with the T-duality when theory is compactified on a circle, to find the the FORMULA -dimensional couplings of curvatures and dilaton as well as the higher derivative corrections to the FORMULA -dimensional Buscher rules at orders FORMULA  and FORMULA . We observe that the T-duality constraint on the effective actions not only fixes the covariant effective actions at each order of FORMULA  up to field redefinitions and up to an overall factor, but also it fixes the corresponding higher covariant derivative corrections to the Buscher rules. This indicates that the FORMULA -dimensional effective actions at any order of FORMULA  are consistent with the standard Buscher rules provided that one uses covariant field redefinitions in the corresponding reduced FORMULA -dimensional effective actions.
+Introduction
+String theory is a field theory with a finite number of massless fields and a tower of infinite number of massive fields. An efficient way to study different phenomena in this theory is to use an effective action in which effects of the massive fields appear in higher derivatives of the massless fields. There are verity of methods for finding such higher derivative couplings. S-matrix element approach {{cite:9a532da4-5089-416b-a197-73af93021c3b}}, {{cite:464a1751-ea26-422b-852b-b272c4afc741}}, sigma-model approach {{cite:54814572-69af-473a-b51a-9fb8950d89c0}}, {{cite:c8f4ecb2-c679-446d-b2b9-92fb2d0c5932}}, {{cite:7752a2a3-9c77-47ae-b8ac-a1ee10e486d8}}, supersymmetry approach {{cite:c8e48fe5-a3b5-42d6-9816-d065596e8878}}, {{cite:0578ae7a-a163-4e24-a177-67e430434402}}, {{cite:4b8fbe0b-805f-41ed-84a6-34cfde93b235}}, Double Field Theory (DFT) approach {{cite:d48786ab-6a6f-4bc5-96f1-a3ea542e49c1}}, {{cite:94153a1e-c0cc-45b4-b06f-0d3bdd8660dc}}, {{cite:8d42a812-6859-4ab3-be51-c372e9a8e76e}}, and duality approach {{cite:b408d5ad-d79b-4814-a342-60aaa5ded5a3}}, {{cite:d218c6c2-d39d-45cc-b82d-aa555de3a902}}, {{cite:8271e4a0-0ac2-4da4-92c8-69608518c27f}}. In the duality approach, the consistency of the effective actions with duality transformations are imposed to find the higher derivative couplings {{cite:8271e4a0-0ac2-4da4-92c8-69608518c27f}}. In this paper, we are interested in constraining the couplings to be consistent with T-duality transformations.
+The T-duality in string theory is realized by studying the spectrum of the closed string on a tours. The spectrum is invariant under the transformation in which the Kaluza-Kelin modes and the winding modes are interchanged, and at the same time the set of scalar fields parametrizing the tours transforms to another set of scalar fields parametrizing the dual tours. The transformations on the scalar fields have been extended to curved spacetime with background fields by Buscher {{cite:3e9a2b44-f93f-47ef-a45a-53828e5dce64}}, {{cite:5a1e60d8-e724-4d01-af35-eef12672bde7}}. It has been observed that the effective actions at the leading order of FORMULA  are invariant under the Buscher rules {{cite:6ac33022-478b-4f88-9fce-3ba253555b5b}}. When this idea is going to be implemented on the higher derivative corrections to the effective actions, however, one runs into the problem that the Buscher rules should receive higher derivative corrections as well {{cite:82416b08-eae7-4d58-92e9-eced21b243db}}.
+There are covariant and non-covariant approaches for implementing the T-duality on the effective actions at the higher order of FORMULA  {{cite:8271e4a0-0ac2-4da4-92c8-69608518c27f}}. In the non-covariant approach, non-covariant effective actions are constrained to be invariant under the standard Buscher rules with no higher derivative correction {{cite:d0a6d105-bb50-4162-a966-4730794206c1}}, {{cite:30d5854d-5bba-4151-bc38-015d917bfab6}}. Since the effective actions are not covariant under the general coordinate transformations, some non-covariant field redefinitions are required to convert the effective actions to the covariant forms. The field redefinitions may cause the Buscher rules to receive higher covariant derivative corrections as well. Alternatively, in the covariant approach in which we are interested in this paper, one considers covariant effective actions and then requires them to be invariant under the appropriate T-duality transformations which are the Buscher rules plus their corresponding higher covariant derivative corrections.
+In the bosonic and in the heterotic string theories, the higher derivative corrections to the effective actions begin at order FORMULA , whereas, in type II superstring theory, the higher derivative corrections begin at order FORMULA . As a result, the corrections to the Buscher rules in the covariant approach begin at order FORMULA  in the bosonic and heterotic theories, and begin at order FORMULA  in the superstring theory. Using the fact that there is no higher derivative correction at order FORMULA  to the Buscher rules in the superstring theory, a covariant effective action for OFORMULA -plane at order FORMULA  has been found in {{cite:b49b8bab-1192-4961-82cf-3c96a487b853}}, {{cite:4b05c87c-cecd-4c38-bd2b-60945860e28c}} by requiring it to be consistent with the standard Buscher rule. In this paper, we are interested in FORMULA  corrections to the bulk effective actions of the bosonic and heterotic theories. Hence, in the covariant approach, we have to work with the Buscher rules plus their FORMULA  and FORMULA  corrections.
+Using effective action of the bosonic and heterotic string theories at order FORMULA  in an specific field variables, Kaloper and Meissner have found corrections at order FORMULA  to the Buscher rules that make the effective action to be consistent with T-duality {{cite:82416b08-eae7-4d58-92e9-eced21b243db}}. In this paper, we are going to answer the following question: If one considers an effective action with all possible independent covariant couplings at each order of FORMULA  with unknown coefficients and considers the Buscher rules plus all possible higher covariant derivative corrections at the same order of FORMULA , then, is the requirement that the action to be consistent with the T-duality transformation is strong enough to fix the coefficients in the effective action and in the T-duality transformations? At orders FORMULA  and FORMULA , and for the simple case that there is no B-field and the metric is diagonal that we have done the calculations, we have found that the T-duality constraint fixes the action up to field redefinitions and up to an overall factor. It also fixes the unknown coefficients in the T-duality transformations.
+The T-duality transformations at the leading order of FORMULA  are given by the Buscher rules. They form a FORMULA  group. One may impose this condition on the T-duality transformation at the higher order of FORMULA  to constrain the higher derivative corrections to the Buscher rules. As we will see, this condition excludes many covariant derivative terms in the T-duality transformations and interrelate coefficients of many other terms. Furthermore, the criterion that the effective actions are invariant under the T-duality transformations relate the non-zero coefficients in the T-duality transformations to the coefficients of the effective actions. Using these conditions, one may find both the effective actions and the T-duality transformations at any order of FORMULA .
+In general, apart from coefficients of the Riemann curvature couplings which are independent of field redefinitions, the coefficients of all other couplings in the effective actions are a priori ambiguous. The ambiguous coefficients transform under the field redefinitions FORMULA  and FORMULA . So there are a large number of effective actions, which all are physically identical, i.e., all correspond to the same S-matrix elements. At order FORMULA , it has been shown in {{cite:3910ca7a-f4e0-42b4-aaae-c08927ea88ca}} that there are 8 ambiguous coefficients and they satisfy one relation which is invariant under the field redefinitions. So one can set all the ambiguous coefficients to arbitrary numbers except one of them. The S-matrix calculation can fix the remaining coefficient. At order FORMULA , there are 42 ambiguous coefficients. They satisfy 5 relations which are invariant under the field redefinitions {{cite:9e79e6ca-fa78-421a-bc63-0c5b86f87a99}}, {{cite:174ca8c8-00a8-4978-92c5-ebdf2d9efe22}}, {{cite:a6891ce8-d9c1-49d1-8b07-4f9907c6d366}}. So one can fix all ambiguous coefficients to arbitrary numbers except 5 of them. The unfixed coefficients can be found from the corresponding S-matrix elements. Similarly for couplings at higher order of FORMULA . The combinations of the ambiguous coefficients that remain invariant under the field redefinitions may be functions of the coefficients of the Riemann curvature terms which are also invariant under the field redefinitions. Theses functions may be found from the S-matrix calculations. In this paper, among other things, we are going to find these functions from the T-duality constraints on the effective actions. We will find that these functions are all in fact zero. That is, there is no combination of the coefficients of the T-duality invariant theory which remains invariant under field redefinitions. This indicates that the T-duality transformations do not relate the coefficients of the Riemann curvature couplings to all other couplings. For example, as we will see, the T-duality fixes the effective action at order FORMULA  to be
+FORMULA 
+
+where the coefficients FORMULA  are arbitrary. The corresponding T-duality transformations when theory is compactified on a circle along the FORMULA -direction, are
+FORMULA 
+
+where FORMULA  and FORMULA  are the (D-1)-dimensional dilaton and metric, respectively. Note that in the effective action (REF ), the coefficient of the Riemann curvature coupling does not relate to any other coupling. Moreover, there are
+no ambiguous coefficients in the action any more, i.e., there is no combination of the coefficients FORMULA  which is invariant nuder the field redefinitions. Different choices for these coefficients give the effective action in different schemes. For example, the effective action in the “Gauss-Bonnet" scheme is
+FORMULA 
+
+and its corresponding T-duality transformation is
+FORMULA 
+
+The action (REF ) is consistent with the S-matrix calculation {{cite:11c80db6-7cd1-4b72-9b63-d945738e45db}}.
+One may consider the higher covariant derivative corrections to the Buscher rules (REF ) as field redefinition in the reduced FORMULA -dimensional effective action. It is known that if one is not interested in the explicit form of field redefinition, one may impose, instead, the equations of motion at order FORMULA  to the effective action at order FORMULA . We will find the T-duality invariant effective action (REF ) in this way as well. Therefore, our calculations indicate that the FORMULA -dimensional effective actions at any order of FORMULA  should be consistent with the standard FORMULA -dimensional Buscher rules provided that one uses covariant field redefinition in the reduced FORMULA -dimensional effective actions. This can be used as a constrain to find the FORMULA -dimensional effective actions at higher orders of FORMULA .
+The outline of the paper is as follows: In section 2, we consider the most general T-duality transformations at order FORMULA , and use the fact that the T-duality transformations must form a FORMULA  group, to exclude some of the terms in the transformations and to find some relations between the non-zero terms. In section 3, we use the compatibility of a priori unknown effective actions with the T-duality transformations to fix both the effective actions and their corresponding T-duality transformations. In subsection 3.1, we show that the effective action at the leading order of FORMULA  is fixed up to an overall factor. In subsection 3.2, we show that the effective action at order FORMULA  is fixed up to an overall factor and up to field redefinitions. The corresponding T-duality transformations at order FORMULA  are also found in this section. We show that for one particular field variables, the effective action and its corresponding T-duality transformations are those appear in the literature. In subsection 3.3, we repeat the calculations to the order FORMULA  and find the effective action and its corresponding T-duality transformations. The effective action is again fixed up to an overall factor and up to field redefinitions. In two particular field variables, we show that the effective actions are those appear in the literature which have been found from the S-matrix and the sigma-model calculations.
+
+FORMULA -constraint on T-duality transformations
+In this section, we are going to consider the T-duality transformations which include all higher derivative terms at each order of FORMULA  with unknown coefficients and constrain the coefficients such that they form a FORMULA  group. To simplify the calculations, we are going to consider the case that the theory is compactified on a circle with the killing coordinate FORMULA  and radius FORMULA , i.e., FORMULA  where FORMULA  is the dimension of spacetime. In this case, the Buscher rules which are the T-duality transformations at the leading order of FORMULA , are {{cite:3e9a2b44-f93f-47ef-a45a-53828e5dce64}}, {{cite:5a1e60d8-e724-4d01-af35-eef12672bde7}}
+FORMULA 
+where FORMULA  denote any direction other than FORMULA . In above transformation, the metric is in the string frame. It is easy to verify that the above transformations form a FORMULA  group, i.e.,
+FORMULA 
+This property must be carried out by all the higher derivative corrections to the Buscher rules.
+The Buscher rules are the T-duality transformations corresponding to the effective action at the leading order of FORMULA . The T-duality transformations corresponding to the effective action at all orders of FORMULA  may have the following FORMULA -expansion:
+FORMULA 
+where FORMULA  is the above Buscher rules, FORMULA  is correction to the Buscher rules at order FORMULA , and so on. The fact that the T-duality transformation (REF ) must form a FORMULA  group, produces schematically the following constraints:
+FORMULA 
+The first relation is the FORMULA -constraint at order FORMULA , the second one is the FORMULA -constraint at order FORMULA , the third one is the FORMULA -constraint at order FORMULA , and so on. One can write the correction FORMULA  in terms of all possible d-dimensional tensors at order FORMULA  with unknown coefficients. Then the above relations may be used to constrain the unknown coefficients in FORMULA .
+For the simple case that the metric is diagonal and B-field is zero, the Buscher rules become
+FORMULA 
+and the d-dimensional metric FORMULA  is invariant. Parametrizing the d-dimensional scalar FORMULA  as FORMULA , then the Buscher rules simplify to
+FORMULA 
+where FORMULA  is the d-dimensional dilaton, i.e., FORMULA .
+The corrections at order FORMULA  to the Buscher rules in general are:
+FORMULA 
+where FORMULA  and FORMULA  are functions of FORMULA  which have two d-dimensional covariant derivatives. To impose the constraint (REF ), it is convenient to separate FORMULA  and FORMULA  to FORMULA -odd and FORMULA -even parts. We then define the class A in which FORMULA  has even number of FORMULA  and FORMULA  have odd number of FORMULA . All other terms are defind to be in class B, i.e.,
+FORMULA 
+The corrections to the Buscher rule at order FORMULA  in class A are:
+FORMULA 
+where FORMULA  are some unknown coefficients. The tilde sign over the covariant derivatives means the metric in them is the d-dimensional metric FORMULA .
+Using the FORMULA -constraints at order FORMULA , one finds FORMULA  are all zero That is, the FORMULA -constraints are
+FORMULA 
+
+where we have used the fact that
+FORMULA 
+So the only non-zero terms at order FORMULA  are those in (REF ).
+We extend the above calculations to one higher order of FORMULA , i.e.,
+FORMULA 
+where FORMULA  and FORMULA  are functions of FORMULA  which have four d-dimensional covariant derivatives.
+Using the symmetries (REF ), the FORMULA -constraint now leaves FORMULA  arbitrary and fixes FORMULA  as
+FORMULA 
+Using (REF ), one can write FORMULA  in terms of product of two FORMULA .
+The arbitrary corrections FORMULA  are:
+FORMULA 
+
+where FORMULA  are some unknown coefficients.
+The FORMULA -constraint for the higher order terms leaves the corrections in the class A to be arbitrary and the corrections in class B to be written in terms of corrections in class A. In the next section we fix the arbitrary coefficients by requiring the effective action to be invariant under the above T-duality transformations.
+
+ T-duality constraint on effective actions
+In the covariant approach for constructing the effective action from T-duality constraint, one considers a D-dimensional covariant effective action FORMULA  which has the following FORMULA -expansion:
+FORMULA 
+where FORMULA  is the leading order of the effective action which contains all covariant couplings at 2-derivative level with unknown coefficients, FORMULA  contains all covariant couplings at 4-derivative level with unknown coefficients, and so on. The invariance of the effective action (REF ) under the T-duality
+means the following: One should reduce the theory on a circle with the killing direction FORMULA  to produce d-dimensional action FORMULA . Then one should transform this reduced action under the T-duality transformation (REF ) to produce FORMULA . The T-duality constraint is FORMULA . In other words,
+FORMULA 
+This constraint is expected to be held at each order of FORMULA . That is , the action at the leading order of FORMULA  must be invariant under the Buscher rules, i.e.,
+FORMULA 
+At order FORMULA , the invariance means
+FORMULA 
+where FORMULA  is at order FORMULA  and dots refer to the terms at higher orders of FORMULA  which are produced by applying the T-duality transformation FORMULA  on the reduced action FORMULA . At order FORMULA , the invariance means
+FORMULA 
+where FORMULA  is at order FORMULA . At order FORMULA , the invariance means
+FORMULA 
+where FORMULA  is at order FORMULA . Similarly for the higher orders of FORMULA . Since the constraint (REF ) is on the effective actions, one is free to add any total derivative term to the d-dimensional Lagrangian in (REF ).
+The T-duality transformations in FORMULA  are in fact the higher derivative transformations to the FORMULA -dimensional fields FORMULA . As a result, the transformations in the second lines in (REF ), (REF ) and (REF ) are the transformations of FORMULA , FORMULA  and FORMULA , respectively, under field redefinitions of FORMULA . So, one may write the T-duality constraint (REF ) as
+FORMULA 
+up to FORMULA -dimensional field redefinitions.
+The unknown coefficients in the reduced action FORMULA  are inherited from the original action FORMULA , as a result, the constraint (REF ) may fix the coefficients in FORMULA . Let us check this for the trivial case at order FORMULA  in the next subsection.
+Effective action at order  FORMULA
+We begin with the effective action at order FORMULA , which has 2-derivative couplings.
+The only 2-derivative couplings are:
+FORMULA 
+However, using the fact that the effective action in the string frame has an overall factor of FORMULA , one realizes that the coupling FORMULA  is related to FORMULA  by using integration by parts, so one can eliminate this coupling in the effective action. As a result, the most general covariant action at order FORMULA  is
+FORMULA 
+where FORMULA  are two unknown constants.
+The reduction of different terms in this action to d-dimensional spacetime is
+FORMULA 
+
+where we have assumed that the fields are independent of the killing coordinate FORMULA . The reduction of the action (REF ) is then
+FORMULA 
+
+where we have also used the integration by parts in d-dimensional spacetime to write FORMULA . Now under the T-duality transformation (REF ), it transforms to the following action:
+FORMULA 
+
+Requiring the two d-dimensionl actions to be identical, i.e., (REF ), one finds FORMULA . This fixes the original D-dimensional action (REF ) up to an overall constant factor to be
+FORMULA 
+
+This is the know effective action at order FORMULA  in absence of FORMULA -fields when the overall factor is FORMULA . In the next subsection, we continue the above calculations for the couplings at order FORMULA .
+
+Effective action at order  FORMULA
+The covariant couplings at order FORMULA  have the following structures:
+FORMULA 
+
+where FORMULA  stands for the Riemann curvature. One should consider all contractions in each structure. Using the Bianchi identities, one finds that there are only 16 independent couplings in the Lagrangian. However, in the action, one should consider all terms that are independent up to total derivative terms. In fact, seven terms in the Lagrangian are related to the other terms by some total derivative terms. They are
+FORMULA 
+
+where we have used the fact that the effective action has the overall factor of FORMULA . These seven identities, reduce the number of independent couplings to 9 couplings, i.e.,
+FORMULA 
+
+where FORMULA  are unknown coefficients.
+Apart from the coefficient of the Riemann squared term, all other 8 coefficients are a priori ambiguous because they are changed under field redefinition.
+Consider transformation of effective action FORMULA  under the general field redefinitions FORMULA  and FORMULA , i.e.,
+FORMULA 
+
+Under the above transformation, all the FORMULA -coefficients (except FORMULA ) in (REF ) are changed to FORMULA  such that one particular combination of these terms is invariant {{cite:3910ca7a-f4e0-42b4-aaae-c08927ea88ca}}, i.e.,
+FORMULA 
+where FORMULA . In other words, if one defines
+FORMULA 
+
+Then FORMULA  is invariant under field redefinitions. One may write FORMULA  because the coefficient of the Riemann curvature is also invariant under the field redefinitions.
+Since FORMULA  is invariant under the field redefinition, one can find this function from the S-matrix calculation. The field redefinition allows us to choose seven coefficients among the coefficients FORMULA  to be arbitrary, so one may choose FORMULA . Then FORMULA . For this choice for the coefficients, on the other hand, the S-matrix calculation fixes FORMULA  {{cite:11c80db6-7cd1-4b72-9b63-d945738e45db}}, so FORMULA . Therefore, the effective action (REF ) is consistent with S-matrix for any value for coefficients FORMULA .
+We are going, however, to find this function from the T-duality constraint (REF ). To this end, one first needs to reduce the effective action (REF ) to the FORMULA -dimensional spacetime, i.e.,
+FORMULA 
+
+Using the Buscher rule (REF ), one can easily find the d-dimensional dual action. It can be written as FORMULA  where FORMULA  is twice the terms in (REF ) that have one order of FORMULA , i.e.,
+FORMULA 
+On the other hand, the d-dimensional effective action at the leading order of FORMULA  that we have found in the previous subsection is
+FORMULA 
+Variation of this action under the T-duality transformation (REF ) at order FORMULA  is
+FORMULA 
+
+where FORMULA  are given in (REF ).
+According to (REF ), by equating the right hand sides of the equations (REF ) and (REF ), one finds the following constraint:
+FORMULA 
+Not all the above 18 terms are independent. One should subtract total derivative terms to find independent constraints. There are nine FORMULA -dimensional total derivative terms, i.e.,
+FORMULA 
+
+Using the above total derivative terms, one finds the following constraint in which all terms are independent:
+FORMULA 
+
+Solving the above 9 independent constraints, one finds effective action at order FORMULA  and its corresponding T-duality transformation.
+One finds the following solution for the constraints (REF ):
+FORMULA 
+
+where FORMULA  is the combination of the coefficients in (REF ) that appears in (REF ). The last equation in (REF ) gives exactly the value for FORMULA  which is fixed by the S-matrix calculation. Using this value for FORMULA , one finds the T-duality invariant effective action at order FORMULA  to be (REF ) for the arbitrary coefficients FORMULA .
+The corresponding T-duality transformations are
+FORMULA 
+
+The terms with coefficients FORMULA  are the transformations at order FORMULA  which leave the leading FORMULA -dimensional effective action (REF ) to be invariant, e.g., the FORMULA -dimensional coordinate transformations. We had to exclude such transformations from the list of all possible covariant derivative terms in previous section. Excluding them, the T-duality transformations are those appear in (REF ). Therefore, the T-duality constraint on the effective action fixes the effective action up to FORMULA -dimensional field redefinitions and
+up to the overall factor of FORMULA . The S-matrix calculations fix FORMULA  for the bosonic theory, FORMULA  for heterotic theory, and FORMULA  for the superstring theory {{cite:11c80db6-7cd1-4b72-9b63-d945738e45db}}.
+For the particular choice of FORMULA , the T-duality invariant action (REF ) becomes
+FORMULA 
+and the corresponding T-duality transformations (REF ) become
+FORMULA 
+
+The effective action (REF ) is the one considered in {{cite:82416b08-eae7-4d58-92e9-eced21b243db}}, and the T-duality transformations (REF ) are those have been found in {{cite:82416b08-eae7-4d58-92e9-eced21b243db}}.
+For the particular choice of FORMULA , FORMULA , FORMULA , FORMULA  and FORMULA , the T-duality transformations become (REF ) and the effective action, after using some integrations by part, becomes
+FORMULA 
+
+where FORMULA  and FORMULA  are
+FORMULA 
+It has been shown in {{cite:30d5854d-5bba-4151-bc38-015d917bfab6}} that in the superstring theory, the T-duality invariant effective action of OFORMULA -plane at order FORMULA  can be written in terms of FORMULA . The reason for the extra factor of 2 for the dilaton in FORMULA  with respect to FORMULA , is that the overall dilaton factor in the bulk action is FORMULA  whereas in the brane action is FORMULA . Similarly, in the bosonic string theory, the T-duality invariant effective action of OFORMULA -plane at order FORMULA  which has been found in {{cite:3d817c31-7323-4ac0-bcc7-8579315f56ec}} can be written in terms of FORMULA , after using an integration by part.
+If one is not interested in the form of the T-duality transformations, the T-duality invariant action can more easily be found by replacing the FORMULA -dimensional equations of motion of (REF ),
+into (REF ). Using the equations one can write FORMULA , FORMULA  and FORMULA  in (REF ) in terms of other terms, i.e.,
+FORMULA 
+
+Using the total derivative terms (REF ) to write independent terms, one finds
+FORMULA 
+
+Requiring FORMULA , one finds the last equation in (REF ).
+
+Effective action at order  FORMULA
+In this subsection, we continue the calculations to find the effective action at order FORMULA .
+The covariant effective action at order FORMULA  is constructed from the combinations of the following terms:
+FORMULA 
+
+Each term must have six derivatives. There are 203 such couplings!
+Some of them are related by the Bianchi identities.
+For example:
+FORMULA 
+
+So each independent term should not contain FORMULA . Using these identities, one finds there are only 100 independent terms in the Lagrangian. In the action, however, we are free to drop total derivative terms. So many of these independent terms are related by total derivative terms.
+For example, up to a total derivative term, we have the following relation:
+FORMULA 
+
+Using all such relations and the Bianchi identities, one finds there are only 44 independent couplings in the effective action, i.e.,
+FORMULA 
+
+where FORMULA  are the unknown coefficients.
+Apart from the coefficients FORMULA  which are invariant under field redefinitions, all other coefficients are a priori ambiguous because they are changed under the field redefinitions. It has been shown in {{cite:9e79e6ca-fa78-421a-bc63-0c5b86f87a99}}, {{cite:174ca8c8-00a8-4978-92c5-ebdf2d9efe22}} that there are five different combinations of the ambiguous coefficients that are invariant under the field redefinitions. Considering the transformation of effective action FORMULA  under the general field redefinitions FORMULA  and FORMULA , i.e.,
+FORMULA 
+where FORMULA  and FORMULA  are the effective actions at order FORMULA  and FORMULA  , respectively, then one finds the following combinations of the coefficients remain invariantThere is an extra factor of FORMULA  in the fifth equation in {{cite:9e79e6ca-fa78-421a-bc63-0c5b86f87a99}} that our calculation does not produce it. We think it should be a typo in {{cite:9e79e6ca-fa78-421a-bc63-0c5b86f87a99}}.:
+FORMULA 
+Hence, the field redefinition freedom allows one to set 37 ambiguous coefficients zero. The S-matrix calculation, then fixes FORMULA  and the other 5 coefficients that are invariant under the field redefinition {{cite:9e79e6ca-fa78-421a-bc63-0c5b86f87a99}}, {{cite:174ca8c8-00a8-4978-92c5-ebdf2d9efe22}}. The values of these constants depend on which effective action is used at order FORMULA . When one uses the effective action (REF ), the S-matrix fixes FORMULA  and all other FORMULA -coefficients to be zero {{cite:174ca8c8-00a8-4978-92c5-ebdf2d9efe22}}. Replacing the corresponding FORMULA -coefficients, i.e., FORMULA , in (REF ), one finds FORMULA . Since these functions are invariant under the field redefinitions, in any other field variables these functions are also zero.
+We are going, however, to find the effective action from the T-duality constraint (REF ). So we calculate FORMULA  which is FORMULA -terms resulted from the transformation of d-dimensional action FORMULA  where FORMULA  is (REF ) and FORMULA  is reduction of action (REF ), under the T-duality transformation FORMULA . They must be equated with FORMULA  where FORMULA  is reduction of the action (REF ) and FORMULA  is its transformation under the Buscher rules. This equality which is extension of (REF ) to order FORMULA , produces some constraints on the coefficients in (REF ). After subtracting some total derivative terms to finds independent constraints, we have found that there are 67 relations. One of them is
+FORMULA 
+which is a relation between the unambiguous coefficients. There are five relations between the ambiguous coefficients,i.e.,
+FORMULA 
+
+The relations (REF ) and (REF ) are exactly the relations that one finds from the S-matrix calculations. There are also 61 relations which relate some of the FORMULA -coefficients in terms of other 37 FORMULA -coefficients, FORMULA -coefficients , FORMULA -coefficients and dimension of spacetime. The 37 free FORMULA -coefficients leave the FORMULA -dimensional action FORMULA  invariant, e.g., some of them are FORMULA -dimensional coordinate transformations, so we have to eliminate them from the list of transformations in (REF ).
+They are:
+FORMULA 
+
+Even after eliminating the free FORMULA -coefficients, the 61 remaining FORMULA -coefficients are very lengthy expressions in terms of FORMULA -coefficients , FORMULA -coefficients and dimension of spacetime, so we do not write here the form of the T-duality transformations for the general field variables.
+If one uses the relations (REF ) to write FORMULA  in terms of all other ambiguous coefficients, and set all the remaining FORMULA -coefficients to be zero, the T-duality invariant effective action becomes
+FORMULA 
+Note that the coefficients FORMULA  become zero. The corresponding T-duality transformations are still lengthy expressions that we do not write them. As can be seen, the form of the T-duality invariant action FORMULA  depends on the form of action at order FORMULA .
+To compare the above action with the actions at order FORMULA  in the literature, we choose the T-duality invariant action FORMULA  to be {{cite:2d88344c-2621-421c-8168-c14eab09c554}}
+FORMULA 
+The corresponding T-duality invariant action at order FORMULA  is given by (REF ) in which
+FORMULA 
+These coefficients are exactly those found in {{cite:2d88344c-2621-421c-8168-c14eab09c554}} by S-matrix and FORMULA -model calculations.
+The T-duality transformations at order FORMULA  corresponding to the above action in class FORMULA  are:
+FORMULA 
+
+and in class FORMULA  are:
+FORMULA 
+If one chooses the action at order FORMULA  to be (REF ), then the action at order FORMULA  becomes
+FORMULA 
+The corresponding T-duality transformations at order FORMULA  corresponding to the above action in class FORMULA  are:
+FORMULA 
+
+and in class  FORMULA
+FORMULA 
+
+The action (REF ) is exactly the action that has been found in {{cite:3910ca7a-f4e0-42b4-aaae-c08927ea88ca}}, {{cite:f35aff73-3921-44dc-940f-d160d904b89b}} from the S-matrix calculation. The S-matrix fixes FORMULA  in the bosonic theory and FORMULA  in the heterotic and the superstring theories. In the heterotic theory, however, there are couplings at order FORMULA  which are resulted from the Green-Schwarz mechanism {{cite:4449e241-c88d-411a-8c82-ac67b3c6e52b}}. In the supergravity at the leading order of FORMULA , the B-field
+strength FORMULA  must be replaced by the improved field
+strength FORMULA  that includes the Chern-Simons term built from the Christoffel connection:
+FORMULA 
+
+with the Chern-Simons three-form
+FORMULA 
+
+Reducing FORMULA  from 10-dimensional to 9-dimensional spacetime, one would find no term which has FORMULA .
+As a result, one finds, when metric is diagonal and B-field is zero, FORMULA  is invariant under the Buscher rules.
+We have seen that the T-duality does not transform the Riemann curvature couplings to the couplings involving the Ricci curvature, scalar curvature or the dilaton, i.e., FORMULA 's are zero. We expect this property for the T-duality at all higher orders of FORMULA . This may indicate that in the string frame there is a scheme in which there is no Ricci or the scalar curvatures and the dilaton appears in the effective action only through the overall dilaton factor . In this scheme, one may use the T-duality invariance of the effective action that we have used in this paper, to find only the Riemann curvature couplings. It would be interesting to perform this calculation at order FORMULA  to find the Riemann curvature couplings at order FORMULA  that are known in the literature.
+We have assumed in this paper that the B-field is zero and the metric is diagonal. The covariance form of the gravity couplings ensures that they are correct couplings for the general metric. It would be interesting to extend the T-duality invariant effective actions that we have found in this paper to include the B-field. The B-field corrections at order FORMULA  to the action (REF ) and its corresponding T-duality transformations have been found in {{cite:82416b08-eae7-4d58-92e9-eced21b243db}}. The DFT formulation of the effective action at order FORMULA  has been also found in {{cite:7ce01a67-dde2-4721-ac80-5de6020a0e89}}, {{cite:8c9a5c50-80dc-48cf-9b1d-8787e52d98c4}}.
+Acknowledgments: H.R. would like to thank G. Jafari for helping with “xAct" package. This work is supported by Ferdowsi University of Mashhad under grant 3/31999(1393/07/02).
