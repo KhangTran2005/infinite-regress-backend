@@ -90,6 +90,8 @@ if __name__ == '__main__':
     lp = pickle.load(open('../ref-iden-models/label-propagation', 'rb'))
     stc = pickle.load(open('../name-extrac/stc', 'rb'))
     marked, G = get_graph_multi(user_in, lp, stc, depth=depth, out_n=out_n)
-    print(get_clustered_graph(G, depth_level))
-    print('------------Graph Info------------')
-    print(marked)
+    graph_data = get_clustered_graph(G, depth_level)
+    print({
+      'graph_data': graph_data,
+      'marked': marked
+    })
