@@ -301,6 +301,7 @@ if __name__ == '__main__':
     else:
         depth_level = 5
     
+    shutil.rmtree('paper-cache')
     lpp = os.path.abspath('label-propagation')
     stcp = os.path.abspath('stc')
     lp = pickle.load(open(lpp, 'rb'))
