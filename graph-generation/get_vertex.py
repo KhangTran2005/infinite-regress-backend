@@ -50,11 +50,13 @@ def get_citations(text, refimodel, naexmodel, nlp):
   #Processing the reference chunks and finding valid chunks
   ref_list = get_ref_list(ref)
   refs = clean_ref(ref_list)  
-  X_refs = get_X(refs, nlp)
-  refs = refs[refimodel.predict(X_refs) == 1]
   refs[refs.str.match('^\s*?\[\d+?\]')] = refs[refs.str.match('^\s*?\[\d+?\]')].str.rsplit(r']').apply(lambda x: ']'.join(x).strip())
   refs[refs.str.match('\s*?\d+?\.\s+?')] = refs[refs.str.match('\s*?\d+?\.\s+?')].str.split(r'\. ').apply(lambda x: '. '.join(x)).str.strip()
   refs[refs.str.match('\s*?\d+?\s+?')] = refs[refs.str.match('\s*?\d+?\s+?')].str.split(r'^\s*?\d+?\s+?').apply(lambda x: ' '.join(x)).str.strip()
+  X_refs = get_X(refs, nlp)
+  refs = refs[refimodel.predict(X_refs) == 1]
+  print(refimodel.predict(X_refs))
+  print(refs)
 
   #Identifying the paper names in each reference chunk
   sent = get_sent(refs)
@@ -83,9 +85,10 @@ def get_paper(title, walker = 1):
     print(count)
     count += 1
   try:
-    paper.download_pdf(filename=f'{title}.pdf')
-    text = parser.from_file(f'{title}.pdf')
+    paper.download_pdf(filename=f'out/{title}.pdf')
+    text = parser.from_file(f'out/{title}.pdf')
   except:
+    print('died at download in get_paper')
     text = {'content': ''}
   return paper.title, paper.summary, text['content']
 

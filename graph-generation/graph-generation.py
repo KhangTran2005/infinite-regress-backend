@@ -15,7 +15,7 @@ from paper import Paper
 import numpy as np
 import pandas as pd
 import pickle
-from get_vertex import get_vertex
+from get_vertex import *
 from multiprocessing.pool import ThreadPool
 
 import spacy
@@ -44,6 +44,7 @@ def get_graph_multi(s_title, refimodel, naexmodel, depth=5, out_n = 5):
   return marked, G
 
 def get_graph_recur_multi(s_title, G, marked, refimodel, naexmodel, nlp, depth=5, out_n=5):
+    
   if depth == 0:
     return
 
@@ -59,6 +60,7 @@ def get_graph_recur_multi(s_title, G, marked, refimodel, naexmodel, nlp, depth=5
   results = pool.map(task, zip(citations[:n], [refimodel] * n, [naexmodel] * n, [nlp] * n))
   pool.close()
   pool.join()
+  print(results)
   for paper, cites in results:
     marked[paper.title] = paper, cites
     G.add_node(paper.title)
