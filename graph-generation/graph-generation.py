@@ -4,6 +4,8 @@
 # !pip install infomap
 #Installs
 
+# Query format: python -m clustering "[User query here]" depth out_n depth_level <- optional
+
 #Imports
 
 #Custom Imports
