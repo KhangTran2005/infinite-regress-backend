@@ -26,9 +26,9 @@ from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer
-nltk.download('stopwords')
+#nltk.download('stopwords')
 stop_words = set(stopwords.words('english'))
-nltk.download('punkt')
+#nltk.download('punkt')
 
 #Ignore warnings
 import warnings
@@ -300,8 +300,8 @@ if __name__ == '__main__':
         depth_level = arg[4]
     else:
         depth_level = 5
-    
-    shutil.rmtree('paper-cache')
+    if os.path.exists('paper-cache'):
+        shutil.rmtree('paper-cache')
     lpp = os.path.abspath('label-propagation')
     stcp = os.path.abspath('stc')
     lp = pickle.load(open(lpp, 'rb'))
@@ -310,8 +310,9 @@ if __name__ == '__main__':
 
     marked, G = get_graph_multi(user_in, lp, stc, depth=depth, out_n=out_n)
     graph_data = get_clustered_graph(G, depth_level)
-    print({
-      'graph_data': graph_data,
+    print(graph_data)
+    #print({
+    #  'graph_data': graph_data,
     #  'marked': marked
-    })
+    #})
     shutil.rmtree('paper-cache')
