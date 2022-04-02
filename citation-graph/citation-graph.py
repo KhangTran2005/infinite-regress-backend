@@ -3,6 +3,7 @@ import numpy as np
 import pandas as pd
 import pickle
 import re
+from infomap import Infomap
 from functools import reduce
 from multiprocessing.pool import ThreadPool
 import networkx as nx
@@ -69,20 +70,26 @@ def get_graph_recur_multi(s_title, G, marked, refimodel, naexmodel, nlp, depth=5
 
   #Perhaps we can add another function here to add all leaf nodes into the thing
 
+  if citations is None:
+      return
   def task(arg):
     return get_vertex(*arg)
-
   n = out_n if out_n != -1 else len(citations)
+
   pool = ThreadPool(n)
   results = pool.map(task, zip(citations[:n], [refimodel] * n, [naexmodel] * n, [nlp] * n))
   pool.close()
   pool.join()
+
   for paper, cites in results:
+    if not paper:
+        continue
     marked[paper.title] = paper, cites
     G.add_node(paper.title)
     w = get_weight_count(root, paper)
     G.add_edge(s_title, paper.title, weight=w)
     get_graph_recur_multi(paper.title, G, marked, refimodel, naexmodel, nlp, depth-1, out_n)
+    
 
 #Take 2 paper nodes and returns a weight
 def get_weight_tfidf(p1, p2):
@@ -102,17 +109,21 @@ def get_weight_count(p1, p2):
   return float(f'{1/(1 + (t1/len(t1)) @ (t2/len(t2)) + (a1/len(a1)) @ (a2/len(a2))):.3f}')
 
 #Given paper title, output citation list and paper node
-def get_vertex(title, refimodel, naexmodel, nlp):
-  res = get_paper(title)
+def get_vertex(title, refimodel, naexmodel, nlp,pos=1):
+  res = get_paper(title,pos=pos)
   if res != -1:
     title, abstract, text = res
   else:
+    if pos < 10: 
+        return get_vertex(title,refimodel,naexmodel,nlp,pos=pos+1)
     return Paper('not found', 'not found'), pd.Series()
   node = Paper(title, abstract)
   try:
     citations = get_citations(text, refimodel, naexmodel, nlp)
   except:
     citations = text
+  if citations is None:
+      return get_vertex(title,refimodel,naexmodel,nlp,pos=pos+1)
   return node, citations
 
 #Given raw text get citation list
@@ -126,7 +137,6 @@ def get_citations(text, refimodel, naexmodel, nlp):
   refs[refs.str.match('\s*?\d+?\.\s+?')] = refs[refs.str.match('\s*?\d+?\.\s+?')].str.split(r'\. ').apply(lambda x: '. '.join(x)).str.strip()
   refs[refs.str.match('\s*?\d+?\s+?')] = refs[refs.str.match('\s*?\d+?\s+?')].str.split(r'^\s*?\d+?\s+?').apply(lambda x: ' '.join(x)).str.strip()
   X_refs = get_X(refs, nlp)
-  print(refimodel.predict(X_refs))
   refs = refs[refimodel.predict(X_refs) == 1]
 
   #Identifying the paper names in each reference chunk
@@ -142,18 +152,17 @@ def get_sent(refs):
   return pd.Series(reduce(lambda x, y: x + y, refs.apply(lambda x: x.split('. '))))
 
 #Given a title, get a paper's title, abstract, and text from an API
-def get_paper(title, walker = 1):
+def get_paper(title, walker = 1,pos=1):
   try:
     res = arxiv.Search(query=f'{title}', max_results=walker).results()
-    paper = next(res)
+    while pos:
+        paper = next(res)
+        pos -= 1
   except Exception as e:
-    print(e)
     return -1
-
   count = 1
   while paper.title.lower() != title.lower() and count < walker:
     paper = next(res)
-    print(count)
     count += 1
   try:
     paper.download_pdf(filename=f'../paper-cache/{title}.pdf')
@@ -274,7 +283,7 @@ def get_clustered_graph(G, depth_level=5):
     im = Infomap(silent=True)
     mapping = im.add_networkx_graph(G)
     im.run()
-    clustering = im.get_modules(depth_level=depth_level)
+    clustering = im.get_modules()
     id = mapping.values()
     clust = clustering.values()
     graph_data = {}
@@ -292,15 +301,16 @@ if __name__ == '__main__':
     else:
         depth_level = 5
     
-    lpp = os.path.abspath('citation-graph/label-propagation')
-    stcp = os.path.abspath('citation-graph/stc')
+    lpp = os.path.abspath('label-propagation')
+    stcp = os.path.abspath('stc')
     lp = pickle.load(open(lpp, 'rb'))
     stc = pickle.load(open(stcp, 'rb'))
     os.mkdir('paper-cache')
+
     marked, G = get_graph_multi(user_in, lp, stc, depth=depth, out_n=out_n)
     graph_data = get_clustered_graph(G, depth_level)
     print({
       'graph_data': graph_data,
-      'marked': marked
+    #  'marked': marked
     })
     shutil.rmtree('paper-cache')
