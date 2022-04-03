@@ -34,9 +34,12 @@ stop_words = set(stopwords.words('english'))
 import warnings
 warnings.filterwarnings('ignore')
 
+def escape_quotes(x):
+    return x.replace('"','').replace("'","").replace(',',"").replace(':',"")
+
 class Paper:
   def __init__(self, title, abstract, text=None):
-    self.title = title
+    self.title = escape_quotes(title)
     self.abstract = abstract
     self.text = text
   
@@ -48,6 +51,11 @@ class Paper:
 
   def __str__(self):
     return self.title
+
+def __repr__(self):
+    return str({'title': title,
+            'abstract': abstract})
+
 
 #Constructs the graph given a starting title
 def get_graph_multi(s_title, refimodel, naexmodel, depth=5, out_n = 5):
@@ -133,11 +141,15 @@ def get_citations(text, refimodel, naexmodel, nlp):
   #Processing the reference chunks and finding valid chunks
   ref_list = get_ref_list(ref)
   refs = clean_ref(ref_list)  
-  refs[refs.str.match('^\s*?\[\d+?\]')] = refs[refs.str.match('^\s*?\[\d+?\]')].str.rsplit(r']').apply(lambda x: ']'.join(x).strip())
-  refs[refs.str.match('\s*?\d+?\.\s+?')] = refs[refs.str.match('\s*?\d+?\.\s+?')].str.split(r'\. ').apply(lambda x: '. '.join(x)).str.strip()
-  refs[refs.str.match('\s*?\d+?\s+?')] = refs[refs.str.match('\s*?\d+?\s+?')].str.split(r'^\s*?\d+?\s+?').apply(lambda x: ' '.join(x)).str.strip()
+  refs[refs.str.match('^\s*?\[\d+?\]')] = refs[refs.str.match('^\s*?\[\d+?\]')].str.rsplit(r']').apply(lambda x: ']'.join(x[1:]).strip())
+  refs[refs.str.match('\s*?\d+?\.\s+?')] = refs[refs.str.match('\s*?\d+?\.\s+?')].str.split(r'\. ').apply(lambda x: '. '.join(x[1:])).str.strip()
+  refs[refs.str.match('\s*?\d+?\s+?')] = refs[refs.str.match('\s*?\d+?\s+?')].str.split(r'^\s*?\d+?\s+?').apply(lambda x: ' '.join(x[1:])).str.strip()
   X_refs = get_X(refs, nlp)
-  refs = refs[refimodel.predict(X_refs) == 1]
+  y_pred = refimodel.predict(X_refs) == 0
+  #print(refs)
+  #print('---cum---')
+  #print(refs[y_pred])
+  refs = refs[y_pred]
 
   #Identifying the paper names in each reference chunk
   sent = get_sent(refs)
@@ -227,8 +239,8 @@ def clean_ref(ref_list):
   return refs
 
 #Function to return the features
-def get_features(text, nlp):
-  doc = nlp(text)
+def get_features(doc):
+  #doc = nlp(text)
   person = 0
   others = 0
   for i in doc.ents:
@@ -271,11 +283,12 @@ def get_features(text, nlp):
 
 #Getting the characteristic matrix (matrix where each column is a feature)
 def get_X(ref4s, nlp):
-  features = get_features(ref4s[0], nlp)
+  pipe = nlp.pipe(ref4s)
+  features = get_features(next(pipe))
   X = [list(features.values())]
   feature_names = list(features.keys())
-  for i in ref4s[1:]:
-    X.append(list(get_features(i, nlp).values()))
+  for doc in pipe:
+    X.append(list(get_features(doc).values()))
   return pd.DataFrame(np.array(X), columns=feature_names)
 
 #Given a networkx graph, return a clustered representation
@@ -287,8 +300,8 @@ def get_clustered_graph(G, depth_level=5):
     id = mapping.values()
     clust = clustering.values()
     graph_data = {}
-    graph_data["nodes"] = [{"id": a, "group": b} for a, b in zip(id, clust)]
-    graph_data["links"] = [{"source": a, "target": b, "value": 1} for a, b in G.edges]
+    graph_data["nodes"] = [{"id": escape_quotes(a), "group": b} for a, b in zip(id, clust)]
+    graph_data["links"] = [{"source": escape_quotes(a), "target": escape_quotes(b), "value": 1} for a, b in G.edges]
     return graph_data
 
 if __name__ == '__main__':
@@ -306,13 +319,22 @@ if __name__ == '__main__':
     stcp = os.path.abspath('stc')
     lp = pickle.load(open(lpp, 'rb'))
     stc = pickle.load(open(stcp, 'rb'))
-    os.mkdir('paper-cache')
+    try:
+        os.mkdir('paper-cache')
+    except:
+        shutil.rmtree('paper-cache')
+        os.mkdir('paper-cache')
 
     marked, G = get_graph_multi(user_in, lp, stc, depth=depth, out_n=out_n)
     graph_data = get_clustered_graph(G, depth_level)
-    print(graph_data)
-    #print({
-    #  'graph_data': graph_data,
-    #  'marked': marked
-    #})
+    paper_data = {}
+    for v in marked:
+        paper, _ = marked[v]
+        paper_data[v] = escape_quotes(paper.abstract)
+    #print(graph_data)
+    print({
+      'graph_data': graph_data,
+      'paper_data': paper_data
+    })
     shutil.rmtree('paper-cache')
+
