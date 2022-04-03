@@ -26,6 +26,10 @@ from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer
+from transformers import T5Tokenizer, T5ForConditionalGeneration
+t5model = T5ForConditionalGeneration.from_pretrained('t5-base')
+t5tokenizer = T5Tokenizer.from_pretrained("t5-base")
+
 #nltk.download('stopwords')
 stop_words = set(stopwords.words('english'))
 #nltk.download('punkt')
@@ -56,6 +60,14 @@ def __repr__(self):
     return str({'title': title,
             'abstract': abstract})
 
+def summarize_corpus(corpus):
+    txt = " ".join(corpus)
+    tokens = t5tokenizer.encode(txt,return_tensors='pt',max_length=512,truncation=True)
+    summary_ids = t5model.generate(tokens,min_length=60,max_length=180,length_penalty=4.0)
+    try:
+        return tokenizer.decode(summary_ids[0])
+    except:
+        return 'Unable to generate abstract'
 
 #Constructs the graph given a starting title
 def get_graph_multi(s_title, refimodel, naexmodel, depth=5, out_n = 5):
@@ -328,13 +340,27 @@ if __name__ == '__main__':
     marked, G = get_graph_multi(user_in, lp, stc, depth=depth, out_n=out_n)
     graph_data = get_clustered_graph(G, depth_level)
     paper_data = {}
+    id2abstract = dict()
     for v in marked:
         paper, _ = marked[v]
         paper_data[v] = escape_quotes(paper.abstract)
+        id2abstract[paper.id] = paper.abstract
+    clusters = [[] for _ in range(len(graph_data['nodes']))]
+    for node in graph_data['nodes']:
+        clusters[node['group']].append(id2abstract[node['id']])
+    summaries = []
+    for i,c in enumerate(clusters):
+        if len(c) > 0:
+            summaries.append({
+                'cluster': i,
+                'summary': summarize_corpus(c)
+                })
     #print(graph_data)
     print({
       'graph_data': graph_data,
-      'paper_data': paper_data
+      'paper_data': paper_data,
+      'cluster_data': summaries
     })
+    
     shutil.rmtree('paper-cache')
 
